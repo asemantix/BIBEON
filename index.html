@@ -1,1 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIBEON — Profitez du moment</title>
+  <meta name="description" content="BIBEON, le biberon nomade pensé pour simplifier la vie des parents." />
+  <style>
+    :root {
+      --navy: #0F2437;
+      --sage: #A7B59A;
+      --sage-dark: #68775D;
+      --cream: #F5F3EE;
+      --warm: #FBFAF7;
+      --text: #2f3a33;
+      --line: #ddd6cb;
+      --white: #ffffff;
+      --shadow: 0 12px 30px rgba(15, 36, 55, 0.08);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --container: 1200px;
+    }
 
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--warm);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 12px;
+      color: var(--sage-dark);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      color: var(--sage-dark);
+      line-height: 1.08;
+      margin-bottom: 16px;
+    }
+
+    .section-text {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #586259;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--sage-dark);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--navy);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      border-color: #bcc5b6;
+    }
+
+    .btn-secondary:hover {
+      background: #f0ede6;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(251, 250, 247, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(221, 214, 203, 0.7);
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      color: var(--navy);
+      font-size: 1.8rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.95rem;
+      color: #49524b;
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      background: white;
+      font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 44px 0 30px;
+      background:
+        radial-gradient(circle at top left, rgba(167, 181, 154, 0.18), transparent 28%),
+        linear-gradient(to bottom, #fcfbf8, #f6f2ea);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.4rem, 5vw, 5rem);
+      line-height: 1.02;
+      color: var(--sage-dark);
+      margin-bottom: 18px;
+    }
+
+    .hero-copy p.lead {
+      font-size: 1.6rem;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .hero-copy p.text {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.05rem;
+      color: #59635c;
+      max-width: 520px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5f695f;
+      font-size: 0.95rem;
+    }
+
+    .hero-badges span {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 560px;
+    }
+
+    .hero-card {
+      position: absolute;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      background: #f7f3ec;
+    }
+
+    .hero-card.main {
+      top: 0;
+      right: 70px;
+      width: 420px;
+      height: 520px;
+    }
+
+    .hero-card.main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-card.product {
+      bottom: 10px;
+      right: 0;
+      width: 280px;
+      background: rgba(255,255,255,0.88);
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,0.8);
+    }
+
+    .hero-card.product img {
+      border-radius: 18px;
+    }
+
+    .floating-bottle {
+      position: absolute;
+      left: 10px;
+      bottom: 60px;
+      width: 170px;
+      filter: drop-shadow(0 20px 35px rgba(15,36,55,0.15));
+    }
+
+    /* How it works */
+    .how {
+      padding: 34px 0 24px;
+      background: var(--warm);
+    }
+
+    .how-head {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.03);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eef1ea;
+      color: var(--sage-dark);
+      display: grid;
+      place-items: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    .step h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+      font-size: 1.35rem;
+    }
+
+    .step p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5f695f;
+      font-size: 0.96rem;
+    }
+
+    .feature-strip {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+    }
+
+    .feature-pill {
+      border: 1px solid var(--line);
+      background: #fbfaf7;
+      border-radius: 18px;
+      padding: 18px 16px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 0.94rem;
+      color: #5f695f;
+    }
+
+    .feature-pill strong {
+      display: block;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+
+    /* Commitment */
+    .split-section {
+      padding: 56px 0;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .image-box,
+    .content-box,
+    .testimonial,
+    .newsletter,
+    .product-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.03);
+    }
+
+    .image-box {
+      overflow: hidden;
+      min-height: 420px;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content-box {
+      padding: 42px;
+    }
+
+    .content-box p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5b645d;
+      margin-bottom: 22px;
+      max-width: 520px;
+    }
+
+    /* Products */
+    .shop {
+      padding: 20px 0 60px;
+    }
+
+    .shop-head {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .product-card {
+      padding: 18px;
+    }
+
+    .product-image {
+      background: #f7f5ef;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 1 / 1;
+      margin-bottom: 16px;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 18px;
+    }
+
+    .product-card h3 {
+      color: var(--navy);
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .product-card p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #687169;
+      font-size: 0.95rem;
+      margin-bottom: 12px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .price {
+      color: var(--sage-dark);
+      font-size: 1.2rem;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Testimonial */
+    .testimonial-wrap {
+      padding-bottom: 42px;
+    }
+
+    .testimonial {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      overflow: hidden;
+    }
+
+    .testimonial-copy {
+      padding: 34px;
+    }
+
+    .testimonial-copy blockquote {
+      font-size: 1.5rem;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+
+    .testimonial-copy p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5d675f;
+    }
+
+    .testimonial-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Newsletter */
+    .newsletter-wrap {
+      padding-bottom: 60px;
+    }
+
+    .newsletter {
+      padding: 28px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+      background: linear-gradient(to right, #fbfaf7, #f3efe7);
+    }
+
+    .newsletter h3 {
+      color: var(--navy);
+      margin-bottom: 6px;
+      font-size: 1.55rem;
+    }
+
+    .newsletter p {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #667068;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .newsletter-form input {
+      min-width: 280px;
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: white;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* Footer */
+    footer {
+      background: #f5f2ec;
+      border-top: 1px solid var(--line);
+      padding: 48px 0 24px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      gap: 28px;
+      margin-bottom: 26px;
+    }
+
+    .footer-col h4 {
+      color: var(--navy);
+      font-family: Arial, Helvetica, sans-serif;
+      margin-bottom: 12px;
+    }
+
+    .footer-col p,
+    .footer-col li,
+    .footer-col a {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #5d675f;
+      font-size: 0.95rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #6c756d;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .split-grid,
+      .testimonial,
+      .newsletter,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature-strip {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-visual {
+        min-height: 500px;
+      }
+
+      .hero-card.main {
+        right: 20px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 14px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .steps,
+      .feature-strip,
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card.main {
+        position: relative;
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: 400px;
+      }
+
+      .hero-card.product,
+      .floating-bottle {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        width: 100%;
+        margin-top: 16px;
+      }
+
+      .hero-visual {
+        min-height: auto;
+      }
+
+      .newsletter-form {
+        width: 100%;
+      }
+
+      .newsletter-form input {
+        min-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="#" class="logo">BIBEON</a>
+
+      <ul class="nav-links">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#produit">Le biberon</a></li>
+        <li><a href="#comment">Comment ça marche</a></li>
+        <li><a href="#engagement">Nos engagements</a></li>
+        <li><a href="#boutique">Boutique</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#" class="icon-btn">👤</a>
+        <a href="#" class="icon-btn">🛒</a>
+        <a href="#boutique" class="btn btn-primary">Découvrir BIBEON</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="produit">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Biberon nomade premium</div>
+          <h1>Profitez du moment.</h1>
+          <p class="lead">Préparez ici. Nourrissez partout.</p>
+          <p class="text">
+            Le biberon nomade pensé pour simplifier la vie des parents et le bien-être des bébés.
+            Avant de sortir, vous préparez votre dose. Au moment du repas, vous dépliez, ajoutez l’eau et c’est prêt.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#boutique" class="btn btn-primary">Découvrir BIBEON</a>
+            <a href="#comment" class="btn btn-secondary">Voir comment ça marche</a>
+          </div>
+
+          <div class="hero-badges">
+            <span>🌿 Préparation en 3 étapes</span>
+            <span>🍼 Pratique et nomade</span>
+            <span>🛡 Sans BPA</span>
+            <span>💚 Conçu avec amour</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <!-- Remplacer par ton image lifestyle -->
+          <div class="hero-card main">
+            <img src="assets/hero-mom-baby.jpg" alt="Parent tenant son bébé" />
+          </div>
+
+          <!-- Remplacer par ton visuel produit debout -->
+          <img class="floating-bottle" src="assets/bottle-standing.png" alt="Biberon BIBEON debout" />
+
+          <!-- Remplacer par ton sachet / packaging -->
+          <div class="hero-card product">
+            <img src="assets/packaging-front.png" alt="Packaging BIBEON" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="how" id="comment">
+      <div class="container">
+        <div class="how-head">
+          <div class="eyebrow">Comment ça marche ?</div>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">1</div>
+            <h3>Dosez</h3>
+            <p>Placez la quantité de lait en poudre nécessaire dans le biberon replié avant de sortir.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">2</div>
+            <h3>Dépliez</h3>
+            <p>Au moment du repas, dépliez le biberon BIBEON pour le préparer rapidement.</p>
+          </article>
+
+          <article class="step">
+            <div class="step-number">3</div>
+            <h3>Ajoutez l’eau</h3>
+            <p>Ajoutez l’eau, mélangez et donnez le biberon à bébé en quelques secondes.</p>
+          </article>
+        </div>
+
+        <div class="feature-strip">
+          <div class="feature-pill"><strong>Compact</strong> Ultra-compact, il se glisse partout.</div>
+          <div class="feature-pill"><strong>Pratique</strong> Préparation rapide en 3 étapes.</div>
+          <div class="feature-pill"><strong>Sans BPA</strong> Matériaux sûrs pour votre bébé.</div>
+          <div class="feature-pill"><strong>50 % végétal</strong> Une composition plus responsable.</div>
+          <div class="feature-pill"><strong>Nomade</strong> Léger et facile à emporter.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMITMENT -->
+    <section class="split-section" id="engagement">
+      <div class="container split-grid">
+        <div class="image-box">
+          <img src="assets/lifestyle-outdoor.jpg" alt="Parent nourrissant son bébé à l’extérieur" />
+        </div>
+
+        <div class="content-box">
+          <div class="eyebrow">Notre engagement</div>
+          <h2 class="section-title">Plus de liberté,<br>plus de moments ensemble.</h2>
+          <p>
+            BIBEON est né d’une envie simple : offrir aux parents une solution nomade, saine et responsable
+            pour nourrir leur bébé en toute sérénité, où qu’ils soient.
+          </p>
+          <a href="#" class="btn btn-primary">En savoir plus sur BIBEON</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOP -->
+    <section class="shop" id="boutique">
+      <div class="container">
+        <div class="shop-head">
+          <div class="eyebrow">Notre boutique</div>
+          <h2 class="section-title">Les essentiels BIBEON</h2>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/product-bottle.png" alt="Biberon nomade 330 ml" />
+            </div>
+            <h3>Biberon nomade 330 ml</h3>
+            <p>Le biberon pliable BIBEON pour vos sorties.</p>
+            <div class="price-row">
+              <span class="price">29,90 €</span>
+              <a href="#" class="btn btn-primary">Ajouter</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/product-packaging.png" alt="Pack découverte BIBEON" />
+            </div>
+            <h3>Pack découverte</h3>
+            <p>Biberon + sachet + support imprimé.</p>
+            <div class="price-row">
+              <span class="price">39,90 €</span>
+              <a href="#" class="btn btn-primary">Ajouter</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/product-refills.png" alt="Accessoires BIBEON" />
+            </div>
+            <h3>Accessoires</h3>
+            <p>Éléments complémentaires pour simplifier vos sorties.</p>
+            <div class="price-row">
+              <span class="price">14,90 €</span>
+              <a href="#" class="btn btn-primary">Ajouter</a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="assets/product-pouch.png" alt="Pochette BIBEON" />
+            </div>
+            <h3>Pochette de transport</h3>
+            <p>Une pochette douce et pratique pour tout emporter.</p>
+            <div class="price-row">
+              <span class="price">14,90 €</span>
+              <a href="#" class="btn btn-primary">Ajouter</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIAL -->
+    <section class="testimonial-wrap">
+      <div class="container">
+        <div class="testimonial">
+          <div class="testimonial-copy">
+            <div class="eyebrow">Ils en parlent</div>
+            <blockquote>
+              “Enfin une solution simple et saine pour préparer le biberon partout.
+              BIBEON nous accompagne désormais dans toutes nos aventures.”
+            </blockquote>
+            <p>Marion, maman de Léo, 7 mois</p>
+          </div>
+          <div class="testimonial-media">
+            <img src="assets/testimonial-baby.jpg" alt="Bébé avec un biberon BIBEON" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter-wrap">
+      <div class="container">
+        <div class="newsletter">
+          <div>
+            <h3>Restez informé(e) des nouveautés et conseils</h3>
+            <p>Inscrivez-vous à notre newsletter.</p>
+          </div>
+
+          <form class="newsletter-form">
+            <input type="email" placeholder="Votre adresse e-mail" />
+            <button type="submit" class="btn btn-primary">S’inscrire</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo" style="font-size:1.5rem; margin-bottom:12px;">BIBEON</div>
+          <p>Le biberon nomade pensé pour simplifier la vie des parents et le bien-être des bébés.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#produit">Le biberon</a></li>
+            <li><a href="#comment">Comment ça marche</a></li>
+            <li><a href="#engagement">Nos engagements</a></li>
+            <li><a href="#boutique">Boutique</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Aide & infos</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Livraison & retours</a></li>
+            <li><a href="#">Conditions générales</a></li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Politique de confidentialité</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li>hello@bibeon.fr</li>
+            <li>01 84 25 32 10</li>
+            <li>Du lundi au vendredi</li>
+            <li>9h à 18h</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © BIBEON — Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
