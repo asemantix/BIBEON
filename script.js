@@ -1,35 +1,21 @@
-const menuButton = document.querySelector('.menu-button');
-const navigation = document.querySelector('.main-nav');
-
-menuButton?.addEventListener('click', () => {
-  const open = navigation.classList.toggle('open');
-  menuButton.setAttribute('aria-expanded', String(open));
-});
-
-document.querySelectorAll('.main-nav a').forEach(link => {
-  link.addEventListener('click', () => {
-    navigation.classList.remove('open');
-    menuButton?.setAttribute('aria-expanded', 'false');
+const menu = document.querySelector(".menu");
+const nav = document.querySelector("#navlinks");
+if (menu && nav) {
+  menu.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(open));
   });
-});
-
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      observer.unobserve(entry.target);
-    }
+  nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menu.setAttribute("aria-expanded", "false");
+  }));
+}
+document.querySelector("#year").textContent = new Date().getFullYear();
+const form = document.querySelector("#waitlist");
+if (form) {
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    form.querySelector(".message").textContent =
+      "Merci ! Cette démonstration doit être reliée à votre outil d’e-mailing avant la mise en ligne.";
   });
-}, { threshold: 0.12 });
-
-document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
-
-document.getElementById('year').textContent = new Date().getFullYear();
-
-document.getElementById('newsletter-form')?.addEventListener('submit', event => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const message = form.querySelector('.form-message');
-  message.textContent = 'Merci ! Le formulaire est une démonstration visuelle. Il faudra le relier à votre outil d’e-mailing.';
-  form.reset();
-});
+}
