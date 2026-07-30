@@ -1,1 +1,0 @@
-Version retravaillée avec une hero plus propre : photo parent-bébé + dessins du fonctionnement à droite.\n
