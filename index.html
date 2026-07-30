@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- BIBEON — page autonome (CSS et JS intégrés). Version du 30/07/2026. -->
+<!-- BIBEON — page autonome (CSS et JS intégrés). Version du 30/07/2026, 10 h. -->
 <html lang="fr">
 <head>
 <meta charset="utf-8">
@@ -215,15 +215,15 @@ h1,h2,h3,blockquote,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-w
 
 /* ---------- vidéo ---------- */
 .demo{padding:74px 0;background:var(--beige)}
-.demo-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.demo-grid{display:grid;grid-template-columns:1fr .92fr;gap:52px;align-items:center}
 .demo h2{margin-bottom:16px}
 .demo p{margin:0 0 14px}
 .video-frame{
-  border-radius:var(--radius);overflow:hidden;
-  border:1px solid var(--line);box-shadow:var(--shadow-m);background:#000;
+  border-radius:var(--radius);overflow:hidden;max-width:520px;margin-inline:auto;
+  border:1px solid var(--line);box-shadow:var(--shadow-m);background:var(--beige-2);
 }
 .video-frame video{width:100%;display:block}
-.video-note{margin-top:12px;font-size:12.5px;color:#7b8579}
+.video-note{margin:12px auto 0;max-width:520px;font-size:12.5px;color:#7b8579;text-align:center}
 
 /* ---------- preuves ---------- */
 .preuves{padding:80px 0;background:var(--cream)}
