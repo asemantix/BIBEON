@@ -1,0 +1,892 @@
+<!doctype html>
+<!-- BIBEON — mode d’emploi. Page autonome (CSS et JS intégrés). Version du 30/07/2026. -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mode d’emploi BIBEON — doser, déplier, ajouter l’eau</title>
+<meta name="description" content="Mode d’emploi du biberon pliable BIBEON 330 ml : doser, déplier, ajouter l’eau. Quantités d’eau par dose, réchauffage, nettoyage.">
+<meta name="theme-color" content="#f9f4ef">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://bibeon.fr/mode-demploi.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="BIBEON">
+<meta property="og:url" content="https://bibeon.fr/mode-demploi.html">
+<meta property="og:title" content="Mode d’emploi BIBEON — doser, déplier, ajouter l’eau">
+<meta property="og:description" content="Les trois gestes, les quantités d’eau selon le nombre de doses, le réchauffage et le nettoyage du biberon pliable 330 ml.">
+<meta property="og:image" content="https://bibeon.fr/assets/packaging-bibeon.webp">
+<meta property="og:image:alt" content="Le sachet BIBEON « Toujours prêt »">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Mode d’emploi BIBEON">
+<meta name="twitter:description" content="Doser, déplier, ajouter l’eau — et les quantités d’eau selon le nombre de doses.">
+<meta name="twitter:image" content="https://bibeon.fr/assets/packaging-bibeon.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   BIBEON — feuille de style
+   Charte : Cormorant Garamond (titres) + Montserrat (textes)
+            crème, sauge, bleu nuit
+   ========================================================= */
+
+:root{
+  --cream:#fdfbf9;        /* fond général, très clair */
+  --beige:#f9f4ef;        /* bande beige rosé : hero, vidéo */
+  --beige-2:#f6f1ea;      /* bandes tintées : inscription, pied de page */
+  --cream-deep:#f6f1ea;
+  --white:#ffffff;
+  --card:#ffffff;
+
+  --sage:#6e7e61;          /* vert de la marque : boutons, sur-titres */
+  --sage-dark:#55614b;     /* titres */
+  --sage-soft:#a9b79c;
+  --sage-tint:#eef1ea;
+
+  --navy:#11253a;          /* logotype, sous-titres */
+  --text:#5b655d;
+  --line:#ddd6cb;
+
+  --shadow-s:0 6px 18px rgba(17,37,58,.05);
+  --shadow-m:0 18px 44px rgba(17,37,58,.09);
+  --radius:26px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:Montserrat,-apple-system,Segoe UI,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+
+.shell{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.center{text-align:center}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ---------- typographie ---------- */
+h1,h2,h3,blockquote,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+
+.overline{
+  margin:0 0 14px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sage);
+}
+.section-title{
+  font-size:clamp(38px,4.6vw,58px);
+  line-height:1.04;
+  color:var(--sage-dark);
+  margin:0 0 18px;
+}
+.section-head{max-width:640px;margin:0 auto 44px}
+.section-head p{margin:0;font-size:16px}
+.lead{font-size:17px;max-width:56ch}
+
+/* ---------- boutons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid transparent;border-radius:999px;
+  padding:14px 26px;font-size:14px;font-weight:600;letter-spacing:.02em;
+  cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-primary{background:var(--sage);color:#fff}
+.btn-primary:hover{background:var(--sage-dark)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage-dark)}
+.btn-sm{padding:10px 18px;font-size:13px}
+.btn-link{font-weight:600;color:var(--navy);border-bottom:1px solid var(--sage-soft);padding-bottom:2px}
+.btn-link:hover{color:var(--sage-dark)}
+
+/* ---------- entête ---------- */
+.header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{min-height:78px;display:flex;align-items:center;gap:22px}
+.brand{
+  display:inline-flex;align-items:baseline;gap:4px;
+  font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;
+  letter-spacing:.16em;color:var(--navy);white-space:nowrap;
+}
+.brand svg{width:13px;height:13px;color:var(--sage);transform:translateY(-9px)}
+.nav-links{display:flex;gap:21px;margin-left:auto;font-size:13.5px;white-space:nowrap}
+.nav-links a{padding:6px 0;border-bottom:1px solid transparent}
+.nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
+.nav-outils{display:flex;align-items:center;gap:14px}
+.icone{
+  display:grid;place-items:center;width:38px;height:38px;border-radius:50%;
+  border:1px solid transparent;color:var(--navy);transition:background .2s,border-color .2s;
+}
+.icone svg{width:21px;height:21px}
+.icone:hover{background:var(--beige-2);border-color:var(--line);color:var(--sage-dark)}
+.nav .btn{flex:none}
+.burger{
+  display:none;margin-left:auto;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:9px 16px;font-size:13px;font-weight:600;color:var(--navy);cursor:pointer;
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:64px 0 54px;background:var(--beige)}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(1000px 520px at 76% 20%,#eef1e9 0%,rgba(238,241,233,0) 64%);
+  pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:.94fr 1.06fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(52px,6.4vw,86px);line-height:.94;color:var(--sage-dark);margin:0 0 12px}
+.hero h2{font-size:clamp(24px,2.4vw,31px);line-height:1.15;color:var(--navy);margin:0 0 20px}
+.hero .lead{margin:0 0 28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:30px}
+
+.assurances{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;color:#6b7a6c}
+.assurances span{display:inline-flex;align-items:center;gap:7px}
+.assurances svg{width:14px;height:14px;color:var(--sage);flex:none}
+
+.hero-copy{position:relative}
+.leaf-deco{position:absolute;left:-118px;top:6px;width:132px;opacity:.9;z-index:0;pointer-events:none}
+.hero-copy > *:not(.leaf-deco){position:relative;z-index:1}
+
+/* scène produit : la photo se fond dans le crème, les vrais biberons à sa droite */
+.hero-scene{
+  position:relative;min-height:500px;
+  display:grid;grid-template-columns:1fr;align-items:center;
+}
+.hero-photo{
+  grid-area:1/1;margin:0;width:72%;justify-self:start;align-self:center;
+}
+.hero-photo img{
+  width:100%;
+  -webkit-mask-image:radial-gradient(54% 60% at 48% 47%,#000 32%,rgba(0,0,0,.5) 66%,rgba(0,0,0,0) 100%);
+          mask-image:radial-gradient(54% 60% at 48% 47%,#000 32%,rgba(0,0,0,.5) 66%,rgba(0,0,0,0) 100%);
+}
+.hero-produits{
+  grid-area:1/1;margin:0;width:41%;justify-self:end;align-self:end;padding-bottom:4px;
+}
+.hero-produits img{
+  width:100%;
+  filter:drop-shadow(0 22px 20px rgba(17,37,58,.12));
+}
+.hero-produits figcaption{
+  margin-top:12px;padding-top:10px;border-top:1px solid var(--line);
+  font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);
+  text-align:center;line-height:1.5;
+}
+
+/* ---------- bandeau d'atouts ---------- */
+.atouts{padding:16px 0 8px}
+.atouts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.atout{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:20px 16px;text-align:center;box-shadow:var(--shadow-s);
+}
+.atout svg{width:26px;height:26px;color:var(--sage);margin:0 auto 10px}
+.atout b{display:block;color:var(--navy);font-size:14px;margin-bottom:4px}
+.atout span{display:block;font-size:12.5px;line-height:1.5}
+
+/* ---------- comment ça marche ---------- */
+.etapes{padding:80px 0 70px}
+.etapes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.etape{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 26px 30px;text-align:center;box-shadow:var(--shadow-s);
+  display:flex;flex-direction:column;
+}
+.etape-visuel{
+  height:310px;
+  background:var(--sage-tint);border-radius:18px;margin-bottom:20px;padding:14px;
+}
+.etape-visuel img{display:block;height:100%;width:100%;object-fit:contain}
+.etape-num{
+  width:34px;height:34px;margin:0 auto 10px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--sage);color:#fff;font-size:13px;font-weight:700;
+}
+.etape h3{font-size:27px;color:var(--navy);margin:0 0 8px}
+.etape p{margin:0;font-size:14.5px}
+
+/* ---------- vidéo ---------- */
+.demo{padding:74px 0;background:var(--beige)}
+.demo-grid{display:grid;grid-template-columns:1fr .92fr;gap:52px;align-items:center}
+.demo h2{margin-bottom:16px}
+.demo p{margin:0 0 14px}
+.video-frame{
+  border-radius:var(--radius);overflow:hidden;max-width:520px;margin-inline:auto;
+  border:1px solid var(--line);box-shadow:var(--shadow-m);background:var(--beige-2);
+}
+.video-frame video{width:100%;display:block}
+.video-note{margin:12px auto 0;max-width:520px;font-size:12.5px;color:#7b8579;text-align:center}
+
+/* ---------- preuves ---------- */
+.preuves{padding:80px 0;background:var(--cream)}
+.preuves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:16px}
+.preuve{
+  border:1px solid var(--line);border-radius:20px;padding:26px 22px;background:#fff;
+}
+.preuve .marque{
+  display:inline-grid;place-items:center;min-width:52px;height:52px;padding:0 12px;
+  border-radius:50px;background:var(--sage-tint);color:var(--sage-dark);
+  font-weight:700;font-size:15px;letter-spacing:.06em;margin-bottom:14px;
+}
+.preuve h3{font-size:23px;color:var(--navy);margin:0 0 8px;line-height:1.15}
+.preuve p{margin:0;font-size:14px}
+
+/* ---------- histoire ---------- */
+.histoire{padding:84px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.histoire-photo{
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m);
+  aspect-ratio:16/10;
+}
+.histoire-photo img{width:100%;height:100%;object-fit:cover}
+.histoire p{max-width:52ch}
+
+/* ---------- coloris ---------- */
+.coloris{padding:68px 0;background:var(--cream);text-align:center}
+.coloris-visuel{max-width:940px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 24px;box-shadow:var(--shadow-s)}
+
+/* ---------- boutique ---------- */
+.boutique{padding:80px 0;background:var(--cream)}
+.boutique .shell{border:1px solid var(--line);border-radius:30px;padding:52px 42px;background:rgba(255,255,255,.5)}
+.produits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.produit{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;display:flex;flex-direction:column;box-shadow:var(--shadow-s);
+}
+.produit-image{
+  height:240px;border-radius:18px;background:var(--cream);
+  padding:14px;overflow:hidden;
+}
+.produit-image img{display:block;height:100%;width:100%;object-fit:contain}
+.produit h3{font-size:26px;color:var(--navy);margin:18px 0 6px;line-height:1.15}
+.produit p{margin:0 0 18px;font-size:14px}
+.produit .bas{
+  margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--line);padding-top:16px;
+}
+.prix{font-weight:600;color:var(--sage-dark);font-size:14px}
+
+/* ---------- moyens de paiement ---------- */
+.paiement{margin-top:36px;padding-top:26px;border-top:1px solid var(--line);text-align:center}
+.paiement-titre{
+  margin:0 0 14px;font-size:11.5px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);
+}
+.paiement-marques{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;
+}
+.pm{
+  display:grid;place-items:center;min-width:62px;height:38px;padding:0 12px;
+  background:#fff;border:1px solid var(--line);border-radius:9px;
+  font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:.02em;
+}
+.pm-visa{color:#1a1f71;font-style:italic;letter-spacing:.06em}
+.pm-mc svg{width:40px;height:24px}
+.pm-pp{gap:0;display:inline-flex;align-items:center;font-size:13.5px;font-style:italic}
+.pm-pp span:first-child{color:#003087}
+.pm-pp span:last-child{color:#009cde}
+.pm-ap{color:#111;font-weight:600}
+.paiement-note{margin:16px 0 0;font-size:12.5px;color:#7b8579}
+
+/* ---------- signature ---------- */
+.signature{padding:70px 0;background:var(--cream)}
+.signature-carte{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-s);
+}
+.signature-texte{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+.signature blockquote{
+  margin:0 0 18px;font-size:clamp(26px,2.9vw,36px);line-height:1.2;color:var(--navy);
+}
+.signature-note{margin:0;font-size:14.5px;max-width:46ch;color:var(--text)}
+.signature img{width:100%;height:100%;object-fit:cover;min-height:300px}
+
+/* ---------- inscription ---------- */
+.inscription{padding:60px 0}
+.inscription-carte{
+  background:var(--beige-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:44px 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+}
+.inscription h2{font-size:clamp(28px,3vw,38px);color:var(--sage-dark);margin:0 0 6px}
+.inscription p{margin:0;font-size:14.5px}
+.form-mail{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.form-mail input{
+  min-width:290px;padding:14px 20px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;color:var(--navy);
+}
+.form-mail input:focus{outline:2px solid var(--sage-soft);outline-offset:1px}
+.form-message{flex-basis:100%;font-size:13px;color:var(--sage-dark);margin:0}
+
+/* ---------- pied de page ---------- */
+footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
+.footer-grid h3{
+  font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin:0 0 14px;
+}
+.footer-col{display:flex;flex-direction:column;gap:9px;font-size:13.5px}
+.footer-col a:hover{color:var(--sage-dark)}
+.footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0}
+.copyright{
+  border-top:1px solid var(--line);margin-top:40px;padding-top:18px;
+  display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;font-size:12px;
+}
+
+/* =========================================================
+   Adaptations écran moyen / téléphone
+   ========================================================= */
+@media (max-width:1020px){
+  .nav-links{
+    display:none;position:absolute;left:22px;right:22px;top:72px;
+    flex-direction:column;gap:14px;
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:22px 24px;box-shadow:var(--shadow-m);
+  }
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav-outils .btn{display:none}
+  .nav-outils{margin-left:8px;gap:6px}
+  .icone{width:34px;height:34px}
+
+  .hero-grid,.demo-grid,.split{grid-template-columns:1fr;gap:40px}
+  .hero-scene{max-width:640px;margin-inline:auto;width:100%;min-height:420px}
+  .hero-photo{width:66%}
+  .hero-produits{width:42%}
+  .leaf-deco{display:none}
+  .atouts-grid{grid-template-columns:repeat(3,1fr)}
+  .preuves-grid{grid-template-columns:repeat(2,1fr)}
+  .produits{grid-template-columns:repeat(2,1fr)}
+  .signature-carte{grid-template-columns:1fr}
+  .signature-texte{padding:40px 32px}
+  .inscription-carte{grid-template-columns:1fr;padding:36px 30px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:660px){
+  body{font-size:15.5px}
+  .shell{width:calc(100% - 34px)}
+  .hero{padding:40px 0 24px}
+  .hero-scene{min-height:330px}
+  .hero-photo{width:63%}
+  .hero-produits{width:41%}
+  .hero-produits figcaption{font-size:10px;letter-spacing:.03em}
+  .hero-actions{gap:12px}
+  .hero-actions .btn{width:100%}
+  .atouts-grid{grid-template-columns:repeat(2,1fr)}
+  .etapes,.boutique,.preuves,.histoire{padding:56px 0}
+  .boutique .shell{padding:30px 16px;border-radius:22px}
+  .pm{min-width:56px;padding:0 9px;font-size:12px}
+  .paiement-marques{gap:8px}
+  .etapes-grid,.produits,.preuves-grid{grid-template-columns:1fr}
+  .etape-visuel{height:290px}
+  .form-mail input{min-width:100%}
+  .form-mail .btn{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .copyright{justify-content:flex-start}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+/* ================= page mode d'emploi ================= */
+.notice-hero{background:var(--beige);padding:56px 0 50px;position:relative;overflow:hidden}
+.notice-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.notice-hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(38px,4.8vw,60px);line-height:1.02;color:var(--sage-dark);margin:0 0 10px}
+.notice-hero h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(21px,2.2vw,28px);color:var(--navy);margin:0 0 20px}
+.filet{width:56px;height:1px;background:var(--sage-soft);margin:0 0 20px}
+.notice-photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-m);border:1px solid var(--line);background:#fff;padding:14px}
+.notice-photo img{width:100%;border-radius:16px}
+
+.dosage{padding:64px 0;background:var(--cream)}
+.dosage-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;
+  padding:38px 34px;display:grid;grid-template-columns:.85fr 1.25fr .7fr;gap:34px;align-items:center}
+.dosage-carte h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(26px,2.6vw,34px);line-height:1.12;color:var(--sage-dark);margin:0}
+.table-eau{list-style:none;margin:0;padding:0;border-left:1px solid var(--line);padding-left:30px}
+.table-eau li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(221,214,203,.7);font-size:15px}
+.table-eau li:last-child{border-bottom:0}
+.table-eau b{min-width:74px;color:var(--navy);font-weight:600}
+.echelle{text-align:center}
+.echelle svg{width:100%;max-width:158px;margin:0 auto 10px;color:var(--sage-dark)}
+.echelle p{margin:0;font-size:13px;line-height:1.6}
+
+.pratique{padding:64px 0;background:var(--white)}
+.pratique-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0}
+.pratique-item{padding:8px 22px;text-align:center;border-right:1px solid var(--line)}
+.pratique-item:last-child{border-right:0}
+.pratique-item svg{width:52px;height:52px;color:var(--sage-dark);margin:0 auto 14px}
+.pratique-item h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:23px;
+  color:var(--navy);margin:0 0 6px;line-height:1.15}
+.pratique-item p{margin:0;font-size:13.5px}
+.interdit{color:#a6564b}
+
+.matieres{padding:64px 0;background:var(--cream)}
+.matieres-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;padding:40px 30px}
+.matieres-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:26px}
+.matieres-item{text-align:center}
+.matieres-item svg{width:46px;height:46px;color:var(--sage-dark);margin:0 auto 12px}
+.matieres-item h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:22px;
+  color:var(--navy);margin:0 0 6px}
+.matieres-item p{margin:0;font-size:13px;line-height:1.6}
+.drapeau{display:inline-flex;margin-top:8px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.drapeau span{width:12px;height:9px}
+
+.astuce{padding:16px 0 64px;background:var(--cream)}
+.astuce-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;
+  padding:32px 34px;display:grid;grid-template-columns:120px 1fr;gap:30px;align-items:center}
+.astuce-carte svg{width:110px;height:auto;color:var(--sage-dark)}
+.astuce-carte h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:27px;
+  color:var(--sage-dark);margin:0 0 8px}
+.astuce-carte p{margin:0;font-size:14.5px;max-width:64ch}
+
+.aide{padding:56px 0;background:var(--white);border-top:1px solid var(--line)}
+.aide-carte{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.aide-carte h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(25px,2.6vw,33px);color:var(--sage-dark);margin:0 0 6px}
+.aide-carte p{margin:0;font-size:14.5px}
+
+@media(max-width:1020px){
+  .notice-grid{grid-template-columns:1fr;gap:34px}
+  .dosage-carte{grid-template-columns:1fr;gap:26px}
+  .table-eau{border-left:0;padding-left:0}
+  .echelle svg{max-width:132px}
+  .pratique-item{border-right:0;border-bottom:1px solid var(--line);padding:22px}
+  .pratique-item:last-child{border-bottom:0}
+  .astuce-carte{grid-template-columns:1fr;text-align:center}
+  .astuce-carte svg{margin:0 auto}
+}
+@media(max-width:660px){
+  .dosage-carte,.matieres-carte,.astuce-carte{padding:26px 20px}
+}
+
+.notice-page .etape-visuel{height:350px}
+
+
+.etape-video{margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--beige-2)}
+.etape-video{aspect-ratio:960/500}
+.etape-video video{display:block;width:100%;height:100%;object-fit:contain;background:var(--beige-2)}
+.sterilisation{max-width:720px;margin:30px auto 0;padding:16px 22px;background:var(--white);
+               border:1px solid var(--line);border-radius:18px;font-size:14.5px;text-align:center}
+.entretien-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:26px}
+.entretien-videos figure{margin:0}
+.entretien-videos video{display:block;width:100%;aspect-ratio:960/500;object-fit:contain;
+                        border:1px solid var(--line);border-radius:18px;background:var(--beige-2)}
+.entretien-videos figcaption{margin-top:10px;text-align:center;font-size:13px;color:#7b8579}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://bibeon.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mode d’emploi",
+          "item": "https://bibeon.fr/mode-demploi.html"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "@id": "https://bibeon.fr/mode-demploi.html#howto",
+      "name": "Préparer un biberon nomade pliable BIBEON",
+      "description": "Les trois gestes du biberon pliable BIBEON : doser le lait en poudre dans le biberon replié, déplier les soufflets, ajouter l’eau par-dessus la poudre.",
+      "inLanguage": "fr-FR",
+      "totalTime": "PT2M",
+      "image": "https://bibeon.fr/assets/packaging-bibeon.webp",
+      "supply": [
+        {
+          "@type": "HowToSupply",
+          "name": "Lait infantile en poudre (non fourni)"
+        },
+        {
+          "@type": "HowToSupply",
+          "name": "Eau (non fournie)"
+        }
+      ],
+      "tool": [
+        {
+          "@type": "HowToTool",
+          "name": "Biberon nomade pliable BIBEON 330 ml"
+        },
+        {
+          "@type": "HowToTool",
+          "name": "Tétine silicone débit 6 mois (fournie)"
+        }
+      ],
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "name": "Doser",
+          "text": "Avant de sortir, versez les doses de lait en poudre dans le biberon totalement replié, puis refermez : la poudre reste à l’abri de l’air. Jusqu’à 8 doses tiennent à l’intérieur.",
+          "url": "https://bibeon.fr/mode-demploi.html#les-3-gestes"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "name": "Déplier",
+          "text": "Au moment du repas, dépliez les soufflets en commençant par le bas : la contenance se mesure depuis le fond. Le biberon retrouve ses 330 ml, gradués jusqu’à 300 ml par paliers de 30 ml.",
+          "url": "https://bibeon.fr/mode-demploi.html#les-3-gestes"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "name": "Ajouter l’eau",
+          "text": "Ajoutez l’eau par-dessus la poudre : 2 doses, un quart de soufflet ; 4 doses, un demi-soufflet ; 6 doses, trois quarts de soufflet ; 8 doses, jusqu’à 270 ml. Secouez, le biberon est prêt.",
+          "url": "https://bibeon.fr/mode-demploi.html#les-3-gestes"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="notice-page">
+
+<header class="header">
+  <div class="shell nav">
+    <a class="brand" href="index.html#accueil">BIBEON
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 22c0-8 4-13 10-14-1 8-5 12-10 14Z"/><path d="M12 22C7 20 3 16 2 8c6 1 10 6 10 14Z"/>
+      </svg>
+    </a>
+
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+
+        <nav class="nav-links" id="menu" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="voyage.html">Voyager avec bébé</a>
+      <a href="mode-demploi.html" aria-current="page">Mode d’emploi</a>
+      <a href="migration.html">Migration</a>
+      <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html#boutique">Boutique</a>
+    </nav>
+
+    <div class="nav-outils">
+      <a class="icone" href="contact.html" aria-label="Nous contacter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.8 4-6 7.5-6s6.6 2.2 7.5 6"/>
+        </svg>
+      </a>
+      <a class="icone" href="index.html#boutique" aria-label="Voir la boutique">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M5.5 8h13l-1.1 11.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L5.5 8Z"/>
+          <path d="M9 8V6.4A3 3 0 0 1 12 3.4a3 3 0 0 1 3 3V8"/>
+        </svg>
+      </a>
+      <a class="btn btn-primary btn-sm" href="index.html#boutique">Découvrir BIBEON</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="notice-hero">
+  <div class="shell notice-grid">
+    <div>
+      <p class="overline">Mode d’emploi</p>
+      <h1>Doser, déplier,<br>ajouter l’eau.</h1>
+      <h2>Préparez ici. Nourrissez partout.</h2>
+      <div class="filet"></div>
+      <p class="lead">Vous placez la dose de lait en poudre dans le biberon replié avant de partir. Au moment du repas, vous dépliez, vous ajoutez l’eau, vous secouez. Le biberon est prêt.</p>
+      <p class="lead">Un mode d’emploi est fourni avec chaque biberon. Cette page en est la version complète.</p>
+    </div>
+    <figure class="notice-photo">
+      <img src="assets/packaging-bibeon.webp" width="1050" height="1400" alt="Le sachet BIBEON « Toujours prêt »" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+
+<section class="etapes" id="les-3-gestes">
+  <div class="shell">
+    <div class="section-head center">
+      <p class="overline">Les trois gestes</p>
+      <h2 class="section-title">Comment ça marche.</h2>
+      <p>Le biberon est vendu vide. Le lait en poudre et l’eau ne sont pas fournis.</p>
+    </div>
+    <div class="etapes-grid">
+      <article class="etape">
+        <div class="etape-visuel"><img src="assets/etape-1.webp" width="601" height="937" alt="Le biberon totalement replié et la dose de lait versée à l’intérieur" loading="lazy"></div>
+        <div class="etape-num">1</div>
+        <h3>Dosez</h3>
+        <p>Versez vos doses de lait en poudre dans le biberon <strong>totalement replié</strong>, puis refermez : la poudre reste à l’abri de l’air. Jusqu’à 8 doses tiennent à l’intérieur.</p>
+        <div class="etape-video">
+          <video width="960" height="500" poster="assets/geste-doser.jpg" controls muted loop playsinline preload="none"
+                 aria-label="Le lait en poudre versé dans le biberon replié">
+            <source src="assets/geste-doser.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <article class="etape">
+        <div class="etape-visuel"><img src="assets/etape-2.webp" width="601" height="937" alt="Le biberon que l’on déplie en commençant par les soufflets du bas" loading="lazy"></div>
+        <div class="etape-num">2</div>
+        <h3>Dépliez</h3>
+        <p>Dépliez le corps à soufflets <strong>en commençant par le bas</strong> : la contenance se remplit depuis le fond, c’est ce qui rend les graduations justes.</p>
+        <div class="etape-video">
+          <video width="960" height="500" poster="assets/geste-deplier.jpg" controls muted loop playsinline preload="none"
+                 aria-label="Le dépliage des soufflets, en commençant par le bas">
+            <source src="assets/geste-deplier.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      <article class="etape">
+        <div class="etape-visuel"><img src="assets/etape-3.webp" width="601" height="937" alt="De l’eau versée dans le biberon entièrement déplié" loading="lazy"></div>
+        <div class="etape-num">3</div>
+        <h3>Ajoutez l’eau</h3>
+        <p>Ajoutez l’eau par-dessus la poudre selon le tableau ci-dessous, secouez, et donnez le biberon à bébé.</p>
+        <div class="etape-video">
+          <video width="960" height="500" poster="assets/geste-ajouter-eau.jpg" controls muted loop playsinline preload="none"
+                 aria-label="L’eau ajoutée par-dessus le lait en poudre">
+            <source src="assets/geste-ajouter-eau.mp4" type="video/mp4">
+          </video>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="dosage" id="quantites">
+  <div class="shell">
+    <div class="dosage-carte">
+      <h2>Quantité d’eau à ajouter par-dessus le lait en poudre</h2>
+      <ul class="table-eau">
+        <li><b>2 doses</b><span>+ un quart de soufflet d’eau en plus</span></li>
+        <li><b>4 doses</b><span>+ un demi-soufflet d’eau en plus</span></li>
+        <li><b>6 doses</b><span>+ trois quarts de soufflet d’eau en plus</span></li>
+        <li><b>8 doses</b><span>remplir jusqu’à 270 ml</span></li>
+      </ul>
+      <div class="echelle">
+        <svg viewBox="0 0 200 244" fill="none" stroke="currentColor" aria-hidden="true"><path d="M109 24 L109 17 Q109 9 118 6 Q127 9 127 17 L127 24" stroke-width="1.6" stroke-linejoin="round"/><rect x="98" y="24" width="40" height="14" rx="3" stroke-width="1.6"/><path d="M 100 38 L 78 52 L 87 60 L 78 68 L 87 76 L 78 84 L 87 92 L 78 100 L 87 108 L 78 116 L 87 124 L 78 132 L 87 140 L 78 148 L 87 156 L 78 164 L 87 172 L 78 180 L 87 188 L 78 196 L 80 200 L 80 219 Q 80 228 89 228 L 147 228 Q 156 228 156 219 L 156 200 L 158 196 L 149 188 L 158 180 L 149 172 L 158 164 L 149 156 L 158 148 L 149 140 L 158 132 L 149 124 L 158 116 L 149 108 L 158 100 L 149 92 L 158 84 L 149 76 L 158 68 L 149 60 L 158 52 L 136 38" stroke-width="1.8" stroke-linejoin="round"/><path d="M80 200H156" stroke-width="1.2" opacity=".5"/><g stroke-width="1" opacity=".35"><path d="M83 52H153"/><path d="M83 68H153"/><path d="M83 84H153"/><path d="M83 100H153"/><path d="M83 116H153"/><path d="M83 132H153"/><path d="M83 148H153"/><path d="M83 164H153"/><path d="M83 180H153"/><path d="M83 196H153"/></g><g stroke-width="1" opacity=".6"><path d="M56 52H74"/><path d="M56 68H74"/><path d="M56 84H74"/><path d="M56 100H74"/><path d="M56 116H74"/><path d="M56 132H74"/><path d="M56 148H74"/><path d="M56 164H74"/><path d="M56 180H74"/><path d="M56 196H74"/></g><g font-family="Montserrat,sans-serif" font-size="9" fill="currentColor" stroke="none" text-anchor="end" opacity=".9"><text x="50" y="55">300</text><text x="50" y="71">270</text><text x="50" y="87">240</text><text x="50" y="103">210</text><text x="50" y="119">180</text><text x="50" y="135">150</text><text x="50" y="151">120</text><text x="50" y="167">90</text><text x="50" y="183">60</text><text x="50" y="199">30</text></g></svg>
+        <p>Biberon gradué jusqu’à <strong>300 ml</strong>, par paliers de 30 ml — un soufflet, une graduation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pratique" id="entretien">
+  <div class="shell">
+    <div class="section-head center">
+      <p class="overline">Utilisation &amp; entretien</p>
+      <h2 class="section-title">Réchauffer, nettoyer.</h2>
+      <p>La bague et le capuchon se retirent avant tout réchauffage.</p>
+    </div>
+    <div class="pratique-grid">
+      <article class="pratique-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4" y="11" width="40" height="26" rx="3"/><rect x="9" y="16" width="21" height="16" rx="2"/><path d="M36 17v2M36 23v2M36 29v2"/></svg><h3>Micro-ondes</h3><p>Sans la bague ni le capuchon.</p></article>
+      <article class="pratique-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 22h30v11a7 7 0 0 1-7 7H16a7 7 0 0 1-7-7V22Z"/><path d="M39 25h4a3 3 0 0 1 0 6h-4"/><path d="M18 15c0-3 3-4 3-7M25 15c0-3 3-4 3-7M32 15c0-3-3-4-3-7" opacity=".6"/></svg><h3>Bain-marie</h3><p>Sans la bague ni le capuchon.</p></article>
+      <article class="pratique-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 6h8v5h-8z"/><path d="M16 11h16v27a4 4 0 0 1-4 4h-8a4 4 0 0 1-4-4V11Z"/><circle cx="24" cy="27" r="5"/><path d="M24 24v3l2 1.5"/></svg><h3>Chauffe-biberon</h3><p>Sans la bague ni le capuchon.</p></article>
+      <article class="pratique-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M14 34 34 14"/><circle cx="12" cy="36" r="5"/><g opacity=".7"><path d="M31 9l3 3M35 13l3 3M27 13l3 3M39 17l3 3M23 17l3 3"/></g></svg><h3>Goupillon</h3><p>Utilisez le goupillon fourni, soufflet par soufflet.</p></article>
+      <article class="pratique-item interdit"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 20h24v14a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8V20Z"/><path d="M19 13c0-3 3-4 3-7M27 13c0-3 3-4 3-7" opacity=".6"/><path d="M10 42 38 6" stroke-width="2.1"/></svg><h3>Eau bouillante</h3><p>Interdite. Ne stérilisez jamais le biberon par ébullition.</p></article>
+      <article class="pratique-item interdit"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="8" y="7" width="32" height="34" rx="3"/><path d="M8 15h32"/><circle cx="24" cy="28" r="7" opacity=".6"/><path d="M10 42 38 6" stroke-width="2.1"/></svg><h3>Lave-vaisselle</h3><p>Interdit. Lavage à la main uniquement.</p></article>
+    </div>
+
+    <p class="sterilisation"><strong>Stérilisation.</strong> Uniquement à froid, avec des pastilles
+    de stérilisation, ou par une méthode au micro-ondes. Jamais par ébullition.</p>
+
+    <div class="entretien-videos">
+      <figure>
+        <video width="960" height="500" poster="assets/geste-fermer.jpg" controls muted loop playsinline preload="none"
+               aria-label="La fermeture du capuchon sur le biberon">
+          <source src="assets/geste-fermer.mp4" type="video/mp4">
+        </video>
+        <figcaption>Fermer le capuchon.</figcaption>
+      </figure>
+      <figure>
+        <video width="960" height="500" poster="assets/geste-nettoyage.jpg" controls muted loop playsinline preload="none"
+               aria-label="Le nettoyage du biberon au goupillon, puis le séchage">
+          <source src="assets/geste-nettoyage.mp4" type="video/mp4">
+        </video>
+        <figcaption>Nettoyer, puis sécher.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="matieres" id="matieres">
+  <div class="shell">
+    <div class="section-head center">
+      <p class="overline">Qualité &amp; matières</p>
+      <h2 class="section-title">Ce qu’il y a dedans.</h2>
+    </div>
+    <div class="matieres-carte">
+      <div class="matieres-grid">
+        <article class="matieres-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M24 42V18"/><path d="M24 24c0-7 5-11 13-12-1 8-6 11-13 12Z"/><path d="M24 32c0-6-4-9-11-10 1 7 5 9 11 10Z"/></svg><h3>50 % végétal</h3><p>La part végétale de la matière du biberon.</p></article>
+        <article class="matieres-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="24" cy="24" r="15"/><path d="m17 24 5 5 10-10"/></svg><h3>Testé par le LNE</h3><p>Testé et contrôlé par le Laboratoire national de métrologie et d’essais. Dossier de conformité sur demande.</p></article>
+        <article class="matieres-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M24 6 10 11v12c0 9 6 15 14 18 8-3 14-9 14-18V11L24 6Z"/><path d="m18 24 5 5 9-10"/></svg><h3>Sans aucun bisphénol</h3><p>Aucune substance de migration détectée dans le lait lors des essais.</p></article>
+        <article class="matieres-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M15 8l7 3 8-2 6 5-2 7 4 6-5 5 1 6-8 2-5-4-7 1-2-7 3-6-4-6 1-8 0 0Z"/></svg><h3>Fabriqué en France</h3><p>Conçu et fabriqué en région lyonnaise.<span class="drapeau" aria-hidden="true"><span style="background:#0055a4"></span><span style="background:#fff"></span><span style="background:#ef4135"></span></span></p></article>
+        <article class="matieres-item"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M24 40c9-4 13-11 13-20-9 0-13 4-13 12"/><path d="M24 40c-8-3-11-8-11-15 7 0 11 3 11 9"/><path d="M35 10l4 3-4 3"/><path d="M13 13a14 14 0 0 1 26 0" opacity=".55"/></svg><h3>Bague et capuchon</h3><p>En matière végétale, donc compostables.</p></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="astuce">
+  <div class="shell">
+    <div class="astuce-carte">
+      <svg viewBox="0 0 120 96" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M50 20h20v8H50z"/><path d="M44 28h32v44a6 6 0 0 1-6 6H50a6 6 0 0 1-6-6V28Z"/><g opacity=".7"><path d="M44 40h32M44 50h32M44 60h32"/></g><path d="M34 44c-6 0-10 3-12 8M86 44c6 0 10 3 12 8" opacity=".8"/><path d="M28 40l-6 4 6 4M92 40l6 4-6 4" opacity=".8"/></svg>
+      <div>
+        <h3>Le geste anti-air</h3>
+        <p>Au fur et à mesure que bébé boit, repliez doucement le biberon sur le liquide : l’air sort, et il n’en reste plus à avaler. C’est l’air avalé pendant la tétée que l’on met en cause dans les coliques du nourrisson.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aide">
+  <div class="shell aide-carte">
+    <div>
+      <h2>Une question sur l’utilisation ?</h2>
+      <p>Écrivez-nous, nous répondons à chaque message.</p>
+    </div>
+    <a class="btn btn-primary" href="mailto:contact@bibeon.fr">Nous écrire</a>
+  </div>
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="shell footer-grid">
+    <div class="footer-col">
+      <a class="brand" href="index.html#accueil">BIBEON
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 22c0-8 4-13 10-14-1 8-5 12-10 14Z"/><path d="M12 22C7 20 3 16 2 8c6 1 10 6 10 14Z"/>
+        </svg>
+      </a>
+      <p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Le produit</h3>
+      <a href="index.html#fonctionnement">Comment ça marche</a>
+      <a href="index.html#uniques">Nos différences</a>
+      <a href="index.html#preuves">Nos garanties</a>
+      <a href="index.html#avis">Les avis</a>
+      <a href="index.html#faq">Questions fréquentes</a>
+      <a href="index.html#histoire">Notre engagement</a>
+      <a href="index.html#boutique">Boutique</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Informations</h3>
+      <span>Mentions légales — à venir</span>
+      <span>Conditions de vente — à venir</span>
+      <span>Confidentialité — à venir</span>
+    </div>
+
+    <div class="footer-col">
+      <h3>Nous contacter</h3>
+      <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
+      <a href="tel:+33611768407">06 11 76 84 07</a>
+      <span>Du lundi au vendredi, 9 h – 18 h</span>
+    </div>
+  </div>
+
+  <div class="shell copyright">
+    <span>© <span id="annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
+    <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
+  </div>
+</footer>
+
+<script>
+/* BIBEON — comportements de la page */
+(function () {
+  "use strict";
+
+  /* --- menu du téléphone --- */
+  var burger = document.querySelector(".burger");
+  var menu = document.querySelector("#menu");
+
+  if (burger && menu) {
+    burger.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+    menu.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        menu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        menu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* --- année du copyright --- */
+  var annee = document.querySelector("#annee");
+  if (annee) annee.textContent = new Date().getFullYear();
+
+  /* --- formulaire d'inscription ---
+     À relier à votre outil d'e-mailing (Brevo, Mailchimp…) avant la mise en ligne.
+     Pour l'instant, il confirme simplement la saisie sans rien envoyer.            */
+  var form = document.querySelector("#form-mail");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var champ = form.querySelector("input[type=email]");
+      var msg = form.querySelector(".form-message");
+      var valeur = (champ.value || "").trim();
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valeur)) {
+        msg.textContent = "Merci de vérifier votre adresse e-mail.";
+        champ.focus();
+        return;
+      }
+      msg.textContent = "Merci ! Ce formulaire doit encore être relié à votre outil d'e-mailing.";
+      form.reset();
+    });
+  }
+
+  /* --- la vidéo ne tourne que lorsqu'elle est visible --- */
+  var video = document.querySelector(".video-frame video");
+  if (video && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!video.getAttribute("src-loaded")) {
+            video.setAttribute("src-loaded", "1");
+            video.load();
+          }
+          video.play().catch(function () {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    obs.observe(video);
+  }
+})();
+
+</script>
+</body>
+</html>
