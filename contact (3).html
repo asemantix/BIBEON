@@ -1,0 +1,892 @@
+<!doctype html>
+<!-- BIBEON — Contact. Page autonome (CSS et JS intégrés). -->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact BIBEON — téléphone, e-mail et demandes revendeurs</title>
+<meta name="description" content="Contacter BIBEON : 06 11 76 84 07, contact@bibeon.fr, ou le formulaire ci-dessous. Questions produit, commandes, revendeurs, volumes et presse.">
+<meta name="theme-color" content="#f9f4ef">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://bibeon.fr/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BIBEON">
+<meta property="og:url" content="https://bibeon.fr/contact.html">
+<meta property="og:title" content="Contacter BIBEON">
+<meta property="og:description" content="06 11 76 84 07 · contact@bibeon.fr · questions produit, commandes, revendeurs et presse.">
+<meta property="og:image" content="https://bibeon.fr/assets/packaging-bibeon.webp">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Contacter BIBEON">
+<meta name="twitter:description" content="06 11 76 84 07 · contact@bibeon.fr">
+<meta name="twitter:image" content="https://bibeon.fr/assets/packaging-bibeon.webp">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* =========================================================
+   BIBEON — feuille de style
+   Charte : Cormorant Garamond (titres) + Montserrat (textes)
+            crème, sauge, bleu nuit
+   ========================================================= */
+
+:root{
+  --cream:#fdfbf9;        /* fond général, très clair */
+  --beige:#f9f4ef;        /* bande beige rosé : hero, vidéo */
+  --beige-2:#f6f1ea;      /* bandes tintées : inscription, pied de page */
+  --cream-deep:#f6f1ea;
+  --white:#ffffff;
+  --card:#ffffff;
+
+  --sage:#6e7e61;          /* vert de la marque : boutons, sur-titres */
+  --sage-dark:#55614b;     /* titres */
+  --sage-soft:#a9b79c;
+  --sage-tint:#eef1ea;
+
+  --navy:#11253a;          /* logotype, sous-titres */
+  --text:#5b655d;
+  --line:#ddd6cb;
+
+  --shadow-s:0 6px 18px rgba(17,37,58,.05);
+  --shadow-m:0 18px 44px rgba(17,37,58,.09);
+  --radius:26px;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--cream);
+  color:var(--text);
+  font-family:Montserrat,-apple-system,Segoe UI,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+
+.shell{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.center{text-align:center}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+
+/* ---------- typographie ---------- */
+h1,h2,h3,blockquote,.serif{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500}
+
+.overline{
+  margin:0 0 14px;
+  font-size:12px;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;
+  color:var(--sage);
+}
+.section-title{
+  font-size:clamp(38px,4.6vw,58px);
+  line-height:1.04;
+  color:var(--sage-dark);
+  margin:0 0 18px;
+}
+.section-head{max-width:640px;margin:0 auto 44px}
+.section-head p{margin:0;font-size:16px}
+.lead{font-size:17px;max-width:56ch}
+
+/* ---------- boutons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  border:1px solid transparent;border-radius:999px;
+  padding:14px 26px;font-size:14px;font-weight:600;letter-spacing:.02em;
+  cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease;
+}
+.btn-primary{background:var(--sage);color:#fff}
+.btn-primary:hover{background:var(--sage-dark)}
+.btn-ghost{background:transparent;border-color:var(--line);color:var(--navy)}
+.btn-ghost:hover{border-color:var(--sage);color:var(--sage-dark)}
+.btn-sm{padding:10px 18px;font-size:13px}
+.btn-link{font-weight:600;color:var(--navy);border-bottom:1px solid var(--sage-soft);padding-bottom:2px}
+.btn-link:hover{color:var(--sage-dark)}
+
+/* ---------- entête ---------- */
+.header{
+  position:sticky;top:0;z-index:40;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.nav{min-height:78px;display:flex;align-items:center;gap:22px}
+.brand{
+  display:inline-flex;align-items:baseline;gap:4px;
+  font-family:Montserrat,sans-serif;font-weight:700;font-size:26px;
+  letter-spacing:.16em;color:var(--navy);white-space:nowrap;
+}
+.brand svg{width:13px;height:13px;color:var(--sage);transform:translateY(-9px)}
+.nav-links{display:flex;gap:21px;margin-left:auto;font-size:13.5px;white-space:nowrap}
+.nav-links a{padding:6px 0;border-bottom:1px solid transparent}
+.nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
+.nav-outils{display:flex;align-items:center;gap:14px}
+.icone{
+  display:grid;place-items:center;width:38px;height:38px;border-radius:50%;
+  border:1px solid transparent;color:var(--navy);transition:background .2s,border-color .2s;
+}
+.icone svg{width:21px;height:21px}
+.icone:hover{background:var(--beige-2);border-color:var(--line);color:var(--sage-dark)}
+.nav .btn{flex:none}
+.burger{
+  display:none;margin-left:auto;
+  background:#fff;border:1px solid var(--line);border-radius:999px;
+  padding:9px 16px;font-size:13px;font-weight:600;color:var(--navy);cursor:pointer;
+}
+
+/* ---------- hero ---------- */
+.hero{position:relative;overflow:hidden;padding:64px 0 54px;background:var(--beige)}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(1000px 520px at 76% 20%,#eef1e9 0%,rgba(238,241,233,0) 64%);
+  pointer-events:none;
+}
+.hero-grid{position:relative;display:grid;grid-template-columns:.94fr 1.06fr;gap:52px;align-items:center}
+.hero h1{font-size:clamp(52px,6.4vw,86px);line-height:.94;color:var(--sage-dark);margin:0 0 12px}
+.hero h2{font-size:clamp(24px,2.4vw,31px);line-height:1.15;color:var(--navy);margin:0 0 20px}
+.hero .lead{margin:0 0 28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-bottom:30px}
+
+.assurances{display:flex;flex-wrap:wrap;gap:10px 22px;font-size:13px;color:#6b7a6c}
+.assurances span{display:inline-flex;align-items:center;gap:7px}
+.assurances svg{width:14px;height:14px;color:var(--sage);flex:none}
+
+.hero-copy{position:relative}
+.leaf-deco{position:absolute;left:-118px;top:6px;width:132px;opacity:.9;z-index:0;pointer-events:none}
+.hero-copy > *:not(.leaf-deco){position:relative;z-index:1}
+
+/* scène produit : la photo se fond dans le crème, les vrais biberons à sa droite */
+.hero-scene{
+  position:relative;min-height:500px;
+  display:grid;grid-template-columns:1fr;align-items:center;
+}
+.hero-photo{
+  grid-area:1/1;margin:0;width:72%;justify-self:start;align-self:center;
+}
+.hero-photo img{
+  width:100%;
+  -webkit-mask-image:radial-gradient(54% 60% at 48% 47%,#000 32%,rgba(0,0,0,.5) 66%,rgba(0,0,0,0) 100%);
+          mask-image:radial-gradient(54% 60% at 48% 47%,#000 32%,rgba(0,0,0,.5) 66%,rgba(0,0,0,0) 100%);
+}
+.hero-produits{
+  grid-area:1/1;margin:0;width:41%;justify-self:end;align-self:end;padding-bottom:4px;
+}
+.hero-produits img{
+  width:100%;
+  filter:drop-shadow(0 22px 20px rgba(17,37,58,.12));
+}
+.hero-produits figcaption{
+  margin-top:12px;padding-top:10px;border-top:1px solid var(--line);
+  font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--sage);
+  text-align:center;line-height:1.5;
+}
+
+/* ---------- bandeau d'atouts ---------- */
+.atouts{padding:16px 0 8px}
+.atouts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.atout{
+  background:#fff;border:1px solid var(--line);border-radius:18px;
+  padding:20px 16px;text-align:center;box-shadow:var(--shadow-s);
+}
+.atout svg{width:26px;height:26px;color:var(--sage);margin:0 auto 10px}
+.atout b{display:block;color:var(--navy);font-size:14px;margin-bottom:4px}
+.atout span{display:block;font-size:12.5px;line-height:1.5}
+
+/* ---------- comment ça marche ---------- */
+.etapes{padding:80px 0 70px}
+.etapes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.etape{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 26px 30px;text-align:center;box-shadow:var(--shadow-s);
+  display:flex;flex-direction:column;
+}
+.etape-visuel{
+  height:310px;
+  background:var(--sage-tint);border-radius:18px;margin-bottom:20px;padding:14px;
+}
+.etape-visuel img{display:block;height:100%;width:100%;object-fit:contain}
+.etape-num{
+  width:34px;height:34px;margin:0 auto 10px;border-radius:50%;
+  display:grid;place-items:center;
+  background:var(--sage);color:#fff;font-size:13px;font-weight:700;
+}
+.etape h3{font-size:27px;color:var(--navy);margin:0 0 8px}
+.etape p{margin:0;font-size:14.5px}
+
+/* ---------- vidéo ---------- */
+.demo{padding:74px 0;background:var(--beige)}
+.demo-grid{display:grid;grid-template-columns:1fr .92fr;gap:52px;align-items:center}
+.demo h2{margin-bottom:16px}
+.demo p{margin:0 0 14px}
+.video-frame{
+  border-radius:var(--radius);overflow:hidden;max-width:520px;margin-inline:auto;
+  border:1px solid var(--line);box-shadow:var(--shadow-m);background:var(--beige-2);
+}
+.video-frame video{width:100%;display:block}
+.video-note{margin:12px auto 0;max-width:520px;font-size:12.5px;color:#7b8579;text-align:center}
+
+/* ---------- preuves ---------- */
+.preuves{padding:80px 0;background:var(--cream)}
+.preuves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(196px,1fr));gap:16px}
+.preuve{
+  border:1px solid var(--line);border-radius:20px;padding:26px 22px;background:#fff;
+}
+.preuve .marque{
+  display:inline-grid;place-items:center;min-width:52px;height:52px;padding:0 12px;
+  border-radius:50px;background:var(--sage-tint);color:var(--sage-dark);
+  font-weight:700;font-size:15px;letter-spacing:.06em;margin-bottom:14px;
+}
+.preuve h3{font-size:23px;color:var(--navy);margin:0 0 8px;line-height:1.15}
+.preuve p{margin:0;font-size:14px}
+
+/* ---------- histoire ---------- */
+.histoire{padding:84px 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:52px;align-items:center}
+.histoire-photo{
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m);
+  aspect-ratio:16/10;
+}
+.histoire-photo img{width:100%;height:100%;object-fit:cover}
+.histoire p{max-width:52ch}
+
+/* ---------- coloris ---------- */
+.coloris{padding:68px 0;background:var(--cream);text-align:center}
+.coloris-visuel{max-width:940px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 24px;box-shadow:var(--shadow-s)}
+
+/* ---------- boutique ---------- */
+.boutique{padding:80px 0;background:var(--cream)}
+.boutique .shell{border:1px solid var(--line);border-radius:30px;padding:52px 42px;background:rgba(255,255,255,.5)}
+.produits{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.produit{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;display:flex;flex-direction:column;box-shadow:var(--shadow-s);
+}
+.produit-image{
+  height:240px;border-radius:18px;background:var(--cream);
+  padding:14px;overflow:hidden;
+}
+.produit-image img{display:block;height:100%;width:100%;object-fit:contain}
+.produit h3{font-size:26px;color:var(--navy);margin:18px 0 6px;line-height:1.15}
+.produit p{margin:0 0 18px;font-size:14px}
+.produit .bas{
+  margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  border-top:1px solid var(--line);padding-top:16px;
+}
+.prix{font-weight:600;color:var(--sage-dark);font-size:14px}
+
+/* ---------- moyens de paiement ---------- */
+.paiement{margin-top:36px;padding-top:26px;border-top:1px solid var(--line);text-align:center}
+.paiement-titre{
+  margin:0 0 14px;font-size:11.5px;font-weight:600;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);
+}
+.paiement-marques{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;
+}
+.pm{
+  display:grid;place-items:center;min-width:62px;height:38px;padding:0 12px;
+  background:#fff;border:1px solid var(--line);border-radius:9px;
+  font-family:Montserrat,sans-serif;font-size:13px;font-weight:700;letter-spacing:.02em;
+}
+.pm-visa{color:#1a1f71;font-style:italic;letter-spacing:.06em}
+.pm-mc svg{width:40px;height:24px}
+.pm-pp{gap:0;display:inline-flex;align-items:center;font-size:13.5px;font-style:italic}
+.pm-pp span:first-child{color:#003087}
+.pm-pp span:last-child{color:#009cde}
+.pm-ap{color:#111;font-weight:600}
+.paiement-note{margin:16px 0 0;font-size:12.5px;color:#7b8579}
+
+/* ---------- signature ---------- */
+.signature{padding:70px 0;background:var(--cream)}
+.signature-carte{
+  display:grid;grid-template-columns:1.05fr .95fr;
+  background:var(--white);border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-s);
+}
+.signature-texte{padding:52px 48px;display:flex;flex-direction:column;justify-content:center}
+.signature blockquote{
+  margin:0 0 18px;font-size:clamp(26px,2.9vw,36px);line-height:1.2;color:var(--navy);
+}
+.signature-note{margin:0;font-size:14.5px;max-width:46ch;color:var(--text)}
+.signature img{width:100%;height:100%;object-fit:cover;min-height:300px}
+
+/* ---------- inscription ---------- */
+.inscription{padding:60px 0}
+.inscription-carte{
+  background:var(--beige-2);border:1px solid var(--line);border-radius:var(--radius);
+  padding:44px 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center;
+}
+.inscription h2{font-size:clamp(28px,3vw,38px);color:var(--sage-dark);margin:0 0 6px}
+.inscription p{margin:0;font-size:14.5px}
+.form-mail{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.form-mail input{
+  min-width:290px;padding:14px 20px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;color:var(--navy);
+}
+.form-mail input:focus{outline:2px solid var(--sage-soft);outline-offset:1px}
+.form-message{flex-basis:100%;font-size:13px;color:var(--sage-dark);margin:0}
+
+/* ---------- pied de page ---------- */
+footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
+.footer-grid h3{
+  font-family:Montserrat,sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--navy);margin:0 0 14px;
+}
+.footer-col{display:flex;flex-direction:column;gap:9px;font-size:13.5px}
+.footer-col a:hover{color:var(--sage-dark)}
+.footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0}
+.copyright{
+  border-top:1px solid var(--line);margin-top:40px;padding-top:18px;
+  display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;font-size:12px;
+}
+
+/* =========================================================
+   Adaptations écran moyen / téléphone
+   ========================================================= */
+@media (max-width:1020px){
+  .nav-links{
+    display:none;position:absolute;left:22px;right:22px;top:72px;
+    flex-direction:column;gap:14px;
+    background:#fff;border:1px solid var(--line);border-radius:20px;
+    padding:22px 24px;box-shadow:var(--shadow-m);
+  }
+  .nav-links.open{display:flex}
+  .burger{display:block}
+  .nav-outils .btn{display:none}
+  .nav-outils{margin-left:8px;gap:6px}
+  .icone{width:34px;height:34px}
+
+  .hero-grid,.demo-grid,.split{grid-template-columns:1fr;gap:40px}
+  .hero-scene{max-width:640px;margin-inline:auto;width:100%;min-height:420px}
+  .hero-photo{width:66%}
+  .hero-produits{width:42%}
+  .leaf-deco{display:none}
+  .atouts-grid{grid-template-columns:repeat(3,1fr)}
+  .preuves-grid{grid-template-columns:repeat(2,1fr)}
+  .produits{grid-template-columns:repeat(2,1fr)}
+  .signature-carte{grid-template-columns:1fr}
+  .signature-texte{padding:40px 32px}
+  .inscription-carte{grid-template-columns:1fr;padding:36px 30px}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+
+@media (max-width:660px){
+  body{font-size:15.5px}
+  .shell{width:calc(100% - 34px)}
+  .hero{padding:40px 0 24px}
+  .hero-scene{min-height:330px}
+  .hero-photo{width:63%}
+  .hero-produits{width:41%}
+  .hero-produits figcaption{font-size:10px;letter-spacing:.03em}
+  .hero-actions{gap:12px}
+  .hero-actions .btn{width:100%}
+  .atouts-grid{grid-template-columns:repeat(2,1fr)}
+  .etapes,.boutique,.preuves,.histoire{padding:56px 0}
+  .boutique .shell{padding:30px 16px;border-radius:22px}
+  .pm{min-width:56px;padding:0 9px;font-size:12px}
+  .paiement-marques{gap:8px}
+  .etapes-grid,.produits,.preuves-grid{grid-template-columns:1fr}
+  .etape-visuel{height:290px}
+  .form-mail input{min-width:100%}
+  .form-mail .btn{width:100%}
+  .footer-grid{grid-template-columns:1fr}
+  .copyright{justify-content:flex-start}
+}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{animation:none!important;transition:none!important}
+}
+/* ================= page mode d'emploi ================= */
+.notice-hero{background:var(--beige);padding:56px 0 50px;position:relative;overflow:hidden}
+.notice-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+.notice-hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(38px,4.8vw,60px);line-height:1.02;color:var(--sage-dark);margin:0 0 10px}
+.notice-hero h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(21px,2.2vw,28px);color:var(--navy);margin:0 0 20px}
+.filet{width:56px;height:1px;background:var(--sage-soft);margin:0 0 20px}
+.notice-photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow-m);border:1px solid var(--line);background:#fff;padding:14px}
+.notice-photo img{width:100%;border-radius:16px}
+
+.dosage{padding:64px 0;background:var(--cream)}
+.dosage-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;
+  padding:38px 34px;display:grid;grid-template-columns:.85fr 1.25fr .7fr;gap:34px;align-items:center}
+.dosage-carte h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(26px,2.6vw,34px);line-height:1.12;color:var(--sage-dark);margin:0}
+.table-eau{list-style:none;margin:0;padding:0;border-left:1px solid var(--line);padding-left:30px}
+.table-eau li{display:flex;gap:14px;align-items:baseline;padding:13px 0;border-bottom:1px solid rgba(221,214,203,.7);font-size:15px}
+.table-eau li:last-child{border-bottom:0}
+.table-eau b{min-width:74px;color:var(--navy);font-weight:600}
+.echelle{text-align:center}
+.echelle svg{width:100%;max-width:158px;margin:0 auto 10px;color:var(--sage-dark)}
+.echelle p{margin:0;font-size:13px;line-height:1.6}
+
+.pratique{padding:64px 0;background:var(--white)}
+.pratique-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:0}
+.pratique-item{padding:8px 22px;text-align:center;border-right:1px solid var(--line)}
+.pratique-item:last-child{border-right:0}
+.pratique-item svg{width:52px;height:52px;color:var(--sage-dark);margin:0 auto 14px}
+.pratique-item h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:23px;
+  color:var(--navy);margin:0 0 6px;line-height:1.15}
+.pratique-item p{margin:0;font-size:13.5px}
+.interdit{color:#a6564b}
+
+.matieres{padding:64px 0;background:var(--cream)}
+.matieres-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;padding:40px 30px}
+.matieres-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:26px}
+.matieres-item{text-align:center}
+.matieres-item svg{width:46px;height:46px;color:var(--sage-dark);margin:0 auto 12px}
+.matieres-item h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:22px;
+  color:var(--navy);margin:0 0 6px}
+.matieres-item p{margin:0;font-size:13px;line-height:1.6}
+.drapeau{display:inline-flex;margin-top:8px;border-radius:3px;overflow:hidden;border:1px solid var(--line)}
+.drapeau span{width:12px;height:9px}
+
+.astuce{padding:16px 0 64px;background:var(--cream)}
+.astuce-carte{background:var(--beige-2);border:1px solid var(--line);border-radius:26px;
+  padding:32px 34px;display:grid;grid-template-columns:120px 1fr;gap:30px;align-items:center}
+.astuce-carte svg{width:110px;height:auto;color:var(--sage-dark)}
+.astuce-carte h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:27px;
+  color:var(--sage-dark);margin:0 0 8px}
+.astuce-carte p{margin:0;font-size:14.5px;max-width:64ch}
+
+.aide{padding:56px 0;background:var(--white);border-top:1px solid var(--line)}
+.aide-carte{display:flex;flex-wrap:wrap;gap:22px;align-items:center;justify-content:space-between}
+.aide-carte h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+  font-size:clamp(25px,2.6vw,33px);color:var(--sage-dark);margin:0 0 6px}
+.aide-carte p{margin:0;font-size:14.5px}
+
+@media(max-width:1020px){
+  .notice-grid{grid-template-columns:1fr;gap:34px}
+  .dosage-carte{grid-template-columns:1fr;gap:26px}
+  .table-eau{border-left:0;padding-left:0}
+  .echelle svg{max-width:132px}
+  .pratique-item{border-right:0;border-bottom:1px solid var(--line);padding:22px}
+  .pratique-item:last-child{border-bottom:0}
+  .astuce-carte{grid-template-columns:1fr;text-align:center}
+  .astuce-carte svg{margin:0 auto}
+}
+@media(max-width:660px){
+  .dosage-carte,.matieres-carte,.astuce-carte{padding:26px 20px}
+}
+
+.notice-page .etape-visuel{height:350px}
+
+
+.etape-video{margin-top:14px;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--beige-2)}
+.etape-video{aspect-ratio:960/500}
+.etape-video video{display:block;width:100%;height:100%;object-fit:contain;background:var(--beige-2)}
+.sterilisation{max-width:720px;margin:30px auto 0;padding:16px 22px;background:var(--white);
+               border:1px solid var(--line);border-radius:18px;font-size:14.5px;text-align:center}
+.entretien-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;margin-top:26px}
+.entretien-videos figure{margin:0}
+.entretien-videos video{display:block;width:100%;aspect-ratio:960/500;object-fit:contain;
+                        border:1px solid var(--line);border-radius:18px;background:var(--beige-2)}
+.entretien-videos figcaption{margin-top:10px;text-align:center;font-size:13px;color:#7b8579}
+
+/* ---------- page contact ---------- */
+.contact-tete{padding:56px 0 10px;background:var(--cream)}
+.contact-tete .lead{max-width:70ch}
+.contact-grille{display:grid;grid-template-columns:1fr .84fr;gap:44px;align-items:start;
+                padding:34px 0 78px;background:var(--cream)}
+@media (max-width:900px){.contact-grille{grid-template-columns:1fr;gap:30px}}
+.carte-form{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+            padding:34px 32px;box-shadow:var(--shadow-s)}
+.carte-form h2{margin:0 0 6px;font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;
+               font-size:30px;color:var(--sage-dark)}
+.carte-form > p{margin:0 0 22px;font-size:14px}
+.champ{margin-bottom:16px}
+.champ label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.champ input,.champ select,.champ textarea{
+  width:100%;padding:12px 14px;font:inherit;font-size:14.5px;color:var(--navy);
+  background:var(--beige-2);border:1px solid var(--line);border-radius:12px}
+.champ textarea{min-height:150px;resize:vertical}
+.champ input:focus,.champ select:focus,.champ textarea:focus{
+  outline:2px solid var(--sage);outline-offset:1px;background:var(--white)}
+.form-pied{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:6px}
+.mention{margin:16px 0 0;font-size:12px;color:#7b8579;line-height:1.6}
+.reponse{margin:14px 0 0;font-size:14px;color:var(--sage-dark);min-height:1.2em}
+.coordonnees{display:grid;gap:18px}
+.coord-carte{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+             padding:26px 28px;box-shadow:var(--shadow-s)}
+.coord-carte p.surtitre{margin:0 0 8px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
+.coord-carte a.gros{font-family:"Cormorant Garamond",Georgia,serif;font-size:30px;color:var(--sage-dark);
+                    text-decoration:none;letter-spacing:.02em;white-space:nowrap;display:inline-block}
+.coord-carte a.gros:hover{text-decoration:underline;text-underline-offset:5px}
+.coord-carte p.detail{margin:8px 0 0;font-size:14px}
+
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://bibeon.fr/" },
+        { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://bibeon.fr/contact.html" }
+      ]
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://bibeon.fr/contact.html#page",
+      "name": "Contacter BIBEON",
+      "url": "https://bibeon.fr/contact.html",
+      "inLanguage": "fr-FR",
+      "about": { "@id": "https://bibeon.fr/#organisation" }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://bibeon.fr/#organisation",
+      "name": "BIBEON",
+      "url": "https://bibeon.fr/",
+      "email": "contact@bibeon.fr",
+      "telephone": "+33611768407",
+      "areaServed": "FR",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "service client",
+        "telephone": "+33611768407",
+        "email": "contact@bibeon.fr",
+        "availableLanguage": "fr"
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body class="notice-page">
+
+<header class="header">
+  <div class="shell nav">
+    <a class="brand" href="index.html#accueil">BIBEON
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="M12 22c0-8 4-13 10-14-1 8-5 12-10 14Z"/><path d="M12 22C7 20 3 16 2 8c6 1 10 6 10 14Z"/>
+      </svg>
+    </a>
+
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+
+    <nav class="nav-links" id="menu" aria-label="Navigation principale">
+      <a href="index.html#fonctionnement">Comment ça marche</a>
+      <a href="voyage.html">Voyager avec bébé</a>
+      <a href="mode-demploi.html">Mode d’emploi</a>
+      <a href="migration.html">Ce que nous mesurons</a>
+      <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+      <a href="index.html#preuves">Nos garanties</a>
+      <a href="index.html#histoire">Notre engagement</a>
+      <a href="index.html#boutique">Boutique</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <div class="nav-outils">
+      <a class="icone" href="contact.html" aria-label="Nous contacter">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.9-3.8 4-6 7.5-6s6.6 2.2 7.5 6"/>
+        </svg>
+      </a>
+      <a class="icone" href="index.html#boutique" aria-label="Voir la boutique">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+          <path d="M5.5 8h13l-1.1 11.2a2 2 0 0 1-2 1.8H8.6a2 2 0 0 1-2-1.8L5.5 8Z"/>
+          <path d="M9 8V6.4A3 3 0 0 1 12 3.4a3 3 0 0 1 3 3V8"/>
+        </svg>
+      </a>
+      <a class="btn btn-primary btn-sm" href="index.html#boutique">Découvrir BIBEON</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="fil" aria-label="Fil d’Ariane">
+  <div class="shell"><a href="index.html">Accueil</a> · Contact</div>
+</section>
+
+<section class="contact-tete">
+  <div class="shell">
+    <p class="overline">Contact</p>
+    <h1>Parlons-en.</h1>
+    <p class="lead">Une question sur le produit, une demande de revendeur, une commande en volume, une sollicitation presse : écrivez ou appelez, la réponse vient de la personne qui a conçu le biberon.</p>
+  </div>
+</section>
+
+<section class="contact-grille shell">
+
+  <div class="carte-form">
+    <h2>Nous écrire</h2>
+    <p>Tous les champs marqués d’une étoile sont nécessaires pour vous répondre.</p>
+
+    <form id="form-contact" novalidate>
+      <div class="champ">
+        <label for="nom">Votre nom *</label>
+        <input id="nom" name="nom" type="text" autocomplete="name" required>
+      </div>
+
+      <div class="champ">
+        <label for="courriel">Votre adresse e-mail *</label>
+        <input id="courriel" name="courriel" type="email" autocomplete="email" required>
+      </div>
+
+      <div class="champ">
+        <label for="tel">Votre téléphone</label>
+        <input id="tel" name="tel" type="tel" autocomplete="tel">
+      </div>
+
+      <div class="champ">
+        <label for="sujet">Votre demande *</label>
+        <select id="sujet" name="sujet" required>
+          <option value="">Choisissez…</option>
+          <option>Une question sur le produit</option>
+          <option>Une commande</option>
+          <option>Devenir revendeur</option>
+          <option>Une commande en volume</option>
+          <option>Presse et médias</option>
+          <option>Autre</option>
+        </select>
+      </div>
+
+      <div class="champ">
+        <label for="message">Votre message *</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <div class="form-pied">
+        <button class="btn btn-primary" type="submit">Envoyer</button>
+        <a class="btn btn-ghost" href="tel:+33611768407">Ou appeler</a>
+      </div>
+
+      <p class="reponse" role="status"></p>
+
+      <p class="mention">Les informations saisies servent uniquement à traiter votre demande. Elles ne sont ni revendues ni utilisées à d’autres fins. Vous pouvez demander leur suppression à tout moment en écrivant à contact@bibeon.fr.</p>
+    </form>
+  </div>
+
+  <div class="coordonnees">
+    <div class="coord-carte">
+      <p class="surtitre">Par téléphone</p>
+      <a class="gros" href="tel:+33611768407">06 11 76 84 07</a>
+      <p class="detail">Du lundi au vendredi, 9 h – 18 h. C’est le plus rapide, et souvent le plus simple.</p>
+    </div>
+
+    <div class="coord-carte">
+      <p class="surtitre">Par e-mail</p>
+      <a class="gros" style="font-size:24px" href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
+      <p class="detail">Réponse sous un jour ouvré.</p>
+    </div>
+
+    <div class="coord-carte">
+      <p class="surtitre">Revendeurs et volumes</p>
+      <p class="detail">Stations-service, campings, boutiques de plage, pharmacies, magasins de puériculture : dites-nous votre volume et votre région, nous revenons vers vous avec les conditions.</p>
+    </div>
+
+    <div class="coord-carte">
+      <p class="surtitre">Presse</p>
+      <p class="detail">Visuels en haute définition, vidéos et dossier de conformité LNE disponibles sur demande.</p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<footer id="contact">
+  <div class="shell footer-grid">
+    <div class="footer-col">
+      <a class="brand" href="index.html#accueil">BIBEON
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M12 22c0-8 4-13 10-14-1 8-5 12-10 14Z"/><path d="M12 22C7 20 3 16 2 8c6 1 10 6 10 14Z"/>
+        </svg>
+      </a>
+      <p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Le produit</h3>
+      <a href="index.html#fonctionnement">Comment ça marche</a>
+      <a href="voyage.html">Voyager avec bébé</a>
+      <a href="mode-demploi.html">Mode d’emploi</a>
+      <a href="index.html#preuves">Nos garanties</a>
+      <a href="index.html#histoire">Notre engagement</a>
+      <a href="index.html#boutique">Boutique</a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Informations</h3>
+      <span>Mentions légales — à venir</span>
+      <span>Conditions de vente — à venir</span>
+      <span>Confidentialité — à venir</span>
+    </div>
+
+    <div class="footer-col">
+      <h3>Nous contacter</h3>
+      <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
+      <a href="tel:+33611768407">06 11 76 84 07</a>
+      <span>Du lundi au vendredi, 9 h – 18 h</span>
+    </div>
+  </div>
+
+  <div class="shell copyright">
+    <span>© <span id="annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
+    <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
+  </div>
+</footer>
+
+<script>
+/* BIBEON — comportements de la page */
+(function () {
+  "use strict";
+
+  /* --- menu du téléphone --- */
+  var burger = document.querySelector(".burger");
+  var menu = document.querySelector("#menu");
+
+  if (burger && menu) {
+    burger.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      burger.setAttribute("aria-expanded", String(open));
+    });
+    menu.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", function () {
+        menu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") {
+        menu.classList.remove("open");
+        burger.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
+
+  /* --- année du copyright --- */
+  var annee = document.querySelector("#annee");
+  if (annee) annee.textContent = new Date().getFullYear();
+
+  /* --- formulaire d'inscription ---
+     À relier à votre outil d'e-mailing (Brevo, Mailchimp…) avant la mise en ligne.
+     Pour l'instant, il confirme simplement la saisie sans rien envoyer.            */
+  var form = document.querySelector("#form-mail");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var champ = form.querySelector("input[type=email]");
+      var msg = form.querySelector(".form-message");
+      var valeur = (champ.value || "").trim();
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valeur)) {
+        msg.textContent = "Merci de vérifier votre adresse e-mail.";
+        champ.focus();
+        return;
+      }
+      msg.textContent = "Merci ! Ce formulaire doit encore être relié à votre outil d'e-mailing.";
+      form.reset();
+    });
+  }
+
+  /* --- la vidéo ne tourne que lorsqu'elle est visible --- */
+  var video = document.querySelector(".video-frame video");
+  if (video && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          if (!video.getAttribute("src-loaded")) {
+            video.setAttribute("src-loaded", "1");
+            video.load();
+          }
+          video.play().catch(function () {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+    obs.observe(video);
+  }
+})();
+
+</script>
+
+<script>
+/* ------------------------------------------------------------------
+   Formulaire de contact.
+
+   GitHub Pages n'exécute aucun code côté serveur : une page seule ne
+   peut pas envoyer un e-mail toute seule. Deux modes ici :
+
+   1) Par défaut (ENDPOINT vide) : le formulaire ouvre votre logiciel
+      de messagerie avec le message déjà rédigé. Rien à installer.
+
+   2) Envoi direct : créez un formulaire gratuit sur formspree.io,
+      copiez l'adresse qu'ils vous donnent et collez-la ci-dessous
+      entre les guillemets. Le message arrivera alors directement
+      dans votre boîte, sans que le visiteur ait à ouvrir la sienne.
+------------------------------------------------------------------ */
+var ENDPOINT = "";
+
+(function () {
+  var form = document.getElementById("form-contact");
+  if (!form) return;
+  var reponse = form.querySelector(".reponse");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var nom = form.nom.value.trim();
+    var courriel = form.courriel.value.trim();
+    var tel = form.tel.value.trim();
+    var sujet = form.sujet.value;
+    var message = form.message.value.trim();
+
+    if (!nom || !courriel || !sujet || !message) {
+      reponse.textContent = "Merci de compléter les champs marqués d’une étoile.";
+      return;
+    }
+    if (courriel.indexOf("@") < 1) {
+      reponse.textContent = "Cette adresse e-mail semble incomplète.";
+      form.courriel.focus();
+      return;
+    }
+
+    if (ENDPOINT) {
+      reponse.textContent = "Envoi en cours…";
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      }).then(function (r) {
+        if (r.ok) {
+          form.reset();
+          reponse.textContent = "Merci, votre message est parti. Réponse sous un jour ouvré.";
+        } else {
+          reponse.textContent = "L’envoi a échoué. Vous pouvez appeler le 06 11 76 84 07.";
+        }
+      }).catch(function () {
+        reponse.textContent = "L’envoi a échoué. Vous pouvez appeler le 06 11 76 84 07.";
+      });
+      return;
+    }
+
+    var corps =
+      "Nom : " + nom + "\n" +
+      "E-mail : " + courriel + "\n" +
+      (tel ? "Téléphone : " + tel + "\n" : "") +
+      "Demande : " + sujet + "\n\n" + message;
+
+    window.location.href = "mailto:contact@bibeon.fr"
+      + "?subject=" + encodeURIComponent("BIBEON — " + sujet)
+      + "&body=" + encodeURIComponent(corps);
+
+    reponse.textContent = "Votre logiciel de messagerie s’ouvre avec le message. S’il ne s’ouvre pas, appelez le 06 11 76 84 07.";
+  });
+})();
+</script>
+
+</body>
+</html>
