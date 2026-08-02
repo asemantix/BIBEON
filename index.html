@@ -216,6 +216,16 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .matiere-corps strong{color:var(--navy);font-weight:600}
 .matiere .chute{margin-inline:0;text-align:left;max-width:26ch}
 
+/* ---------- sortir léger ---------- */
+.leger{padding:104px 0 96px;background:var(--cream)}
+.leger-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+.leger .section-title em{font-style:italic;color:var(--sage)}
+.leger-texte p{font-size:16.5px;line-height:1.8;margin:0 0 16px;max-width:52ch}
+.leger .chute{margin:34px 0 0;text-align:left;max-width:22ch}
+.leger-image{margin:0}
+.leger-image img{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-m)}
+@media (max-width:900px){.leger-grid{grid-template-columns:1fr;gap:36px}.leger .chute{margin-inline:auto;text-align:center}}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -1003,6 +1013,23 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   </div>
 </section>
 
+<!-- ================= SORTIR LÉGER ================= -->
+<section class="leger" aria-label="Sortir léger">
+  <div class="shell leger-grid">
+    <div class="leger-texte">
+      <p class="overline">Sortir léger</p>
+      <h2 class="section-title">Un sac à main.<br>Le biberon dedans.<br><em>C’est tout.</em></h2>
+      <p>L’aéroport, l’avion, la salle d’attente du pédiatre, le week-end chez des amis, la chambre d’hôtel. Partout où il fallait s’organiser, il n’y a plus rien à organiser : vos affaires tiennent en un goupillon et cinq biberons de poche.</p>
+      <p>La dose de lait est déjà à l’intérieur, mise chez vous. Dehors, vous dépliez, vous ajoutez l’eau.</p>
+      <p class="chute">Ce n’est pas un biberon de plus.<br><em>C’est une sortie de moins à préparer.</em></p>
+    </div>
+    <figure class="leger-image">
+      <img src="assets/sortir-leger.webp" width="1500" height="844" loading="lazy"
+           alt="Un biberon BIBEON posé dans une prairie, des biberons colorés tombant autour">
+    </figure>
+  </div>
+</section>
+
 <!-- ================= ATOUTS ================= -->
 <section class="atouts" id="entonnoir" aria-label="Cinq raisons de partir léger">
   <div class="shell">
@@ -1030,7 +1057,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       <li class="atout">
         <span class="atout-num">04</span>
         <b>Il se plie</b>
-        <span>Moins de 30 grammes à vide. Replié, il tient dans une poche ; déplié, il fait 330 ml.</span>
+        <span>30 grammes à vide, tétine et capuchon compris. Replié, il tient dans une poche ; déplié, il fait 330 ml.</span>
       </li>
       <li class="atout">
         <span class="atout-num">05</span>
@@ -1523,7 +1550,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
         <p class="unique-num">01</p>
         <div>
           <h3>Nomade, vraiment</h3>
-          <p>Nomade veut dire quatre choses à la fois. <strong>Peu encombrant</strong> : replié, il tient dans une poche. <strong>Léger</strong> : moins de 30 grammes à vide. <strong>Sans boîte doseuse</strong> : le lait en poudre voyage <em>dans</em> le biberon, dosé chez vous — c’est un objet de moins dans le sac, et un geste de moins dehors. Et <strong>gain de place</strong> : trois biberons prêts occupent le volume d’un seul biberon rigide, vide.</p>
+          <p>Nomade veut dire quatre choses à la fois. <strong>Peu encombrant</strong> : replié, il tient dans une poche. <strong>Léger</strong> : 30 grammes à vide, tétine et capuchon compris. <strong>Sans boîte doseuse</strong> : le lait en poudre voyage <em>dans</em> le biberon, dosé chez vous — c’est un objet de moins dans le sac, et un geste de moins dehors. Et <strong>gain de place</strong> : trois biberons prêts occupent le volume d’un seul biberon rigide, vide.</p>
         </div>
       </article>
 
@@ -1549,7 +1576,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       <article class="unique">
         <p class="unique-num">04</p>
         <div>
-          <h3>Moins de 30 grammes à vide</h3>
+          <h3>30 grammes à vide, tétine et capuchon compris</h3>
           <p>Le poids d’une lettre. C’est ce qui change tout dans un sac déjà plein — et ce qui permet à un bébé de le porter jusqu’à sa bouche sans que le poids ne décide à sa place.</p>
         </div>
       </article>
@@ -1572,7 +1599,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
     <div class="section-head center">
       <p class="overline">Entre leurs mains</p>
       <h2 class="section-title">Ils le tiennent tout seuls.</h2>
-      <p>Moins de 30 grammes à vide, un corps qui se resserre là où les doigts se posent. C’est ce que les parents testeurs citent avant tout le reste : leur enfant le prend, le tient, le repose.</p>
+      <p>30 grammes à vide, tétine et capuchon compris, un corps qui se resserre là où les doigts se posent. C’est ce que les parents testeurs citent avant tout le reste : leur enfant le prend, le tient, le repose.</p>
     </div>
 
     <div class="mains-grille">
