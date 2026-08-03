@@ -284,6 +284,25 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
   font-size:12.5px;font-weight:600;line-height:1.4;
 }
 
+/* ---------- familles d’arguments ---------- */
+.familles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;
+          border-top:1px solid var(--line)}
+.famille{padding:32px 26px 34px;border-right:1px solid var(--line)}
+.famille:last-child{border-right:0}
+.famille-titre{
+  margin:0 0 20px;font-size:11px;font-weight:600;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--sage);
+}
+.famille ul{margin:0;padding:0;list-style:none}
+.famille li{margin:0 0 16px;font-size:14px;line-height:1.65}
+.famille li:last-child{margin-bottom:0}
+.famille li b{color:var(--navy);font-weight:600}
+@media (max-width:900px){
+  .familles{grid-template-columns:1fr}
+  .famille{border-right:0;border-bottom:1px solid var(--line)}
+  .famille:last-child{border-bottom:0}
+}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -722,7 +741,11 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 .essai-grid{display:grid;grid-template-columns:1fr .88fr;gap:52px;align-items:start}
 @media (max-width:900px){.essai-grid{grid-template-columns:1fr;gap:32px}}
 .essai-note{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--sage)}
-.essai-scene video{display:block;width:100%;max-width:290px;height:auto;border-radius:14px}
+.bib-sprite{
+  width:100%;max-width:290px;aspect-ratio:600/750;margin:0 auto;border-radius:14px;
+  background-image:url("assets/depliage-sprite.webp");
+  background-repeat:no-repeat;background-size:100% 1000%;background-position:0 0;
+}
 .essai-verrou{max-width:400px;margin-top:26px;padding:2px 0 2px 16px;border-left:2px solid var(--sage)}
 .essai-verrou h3{margin:0 0 6px;font-size:16px;line-height:1.3;color:var(--navy)}
 .essai-verrou p{margin:0;font-size:14px}
@@ -1120,45 +1143,44 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 </section>
 
 <!-- ================= ATOUTS ================= -->
-<section class="atouts" id="entonnoir" aria-label="Six raisons de partir léger">
+<section class="atouts" id="entonnoir" aria-label="Les arguments BIBEON">
   <div class="shell">
     <div class="section-head center">
-      <p class="overline">Six raisons</p>
-      <h2 class="section-title">Six raisons.<br>Une seule <em>conséquence.</em></h2>
+      <p class="overline">Ce qu’il fait, ce qu’il est, ce qui est prouvé</p>
+      <h2 class="section-title">Trois familles.<br>Une seule <em>conséquence.</em></h2>
     </div>
 
-    <ol class="atouts-grid">
-      <li class="atout">
-        <span class="atout-num">01</span>
-        <b>Végétal</b>
-        <span>La bague et le capuchon sont en matière végétale, sans OGM ni gluten — c’est précisément ce qui les rend compostables.</span>
-      </li>
-      <li class="atout">
-        <span class="atout-num">02</span>
-        <b>Contrôlé par le LNE</b>
-        <span>Essais NF EN 1186-1, dix jours à 40 °C, trois simulants — sur le corps du biberon dans les cinq coloris, sur la bague et sur le capuchon.</span>
-      </li>
-      <li class="atout">
-        <span class="atout-num">03</span>
-        <b>Zéro résidu mesuré</b>
-        <span>Migration globale inférieure à 6 milligrammes par kilogramme d’aliment : au moins dix fois en dessous de la limite applicable aux articles de puériculture.</span>
-      </li>
-      <li class="atout">
-        <span class="atout-num">04</span>
-        <b>Il se plie</b>
-        <span>En se repliant, il chasse l’air et prend moins de place : 9,5 × 6,5 cm dans une poche, 23 grammes à vide, tétine et capuchon compris. Déplié, il fait 330 ml.</span>
-      </li>
-      <li class="atout">
-        <span class="atout-num">05</span>
-        <b>Il remplace la boîte doseuse</b>
-        <span>La poudre est déjà dedans, dosée chez vous. C’est l’objet que vous laissez à la maison.</span>
-      </li>
-      <li class="atout">
-        <span class="atout-num">06</span>
-        <b>Le capuchon plat</b>
-        <span>Là où les autres capuchons sont bombés, celui-ci se pose à l’envers, stable, sur n’importe quelle table : la bague ne touche rien. Et vos doigts ne touchent jamais l’intérieur.</span>
-      </li>
-    </ol>
+    <div class="familles">
+      <section class="famille">
+        <p class="famille-titre">Ce qu’il fait</p>
+        <ul>
+          <li><b>Il chasse l’air.</b> À mesure que le lait descend, on abaisse les soufflets vides jusqu’au niveau restant : moins d’air dans le biberon, moins d’air avalé inutilement.</li>
+          <li><b>Rien ne touche l’intérieur.</b> Tout se fait avec le capuchon — même la tétine se déloge avec son bord. Un biberon aussi propre qu’à la maison, même avec les mains d’un pneu changé sur l’autoroute.</li>
+          <li><b>Le capuchon plat travaille.</b> Il se pose à l’envers sans salir la tétine, il tient stable sur n’importe quelle table, et il obture l’orifice de la tétine : aucune fuite en déplacement, et le lait en poudre se conserve à l’abri de l’air.</li>
+          <li><b>La paroi accidentée sert deux fois.</b> Elle brise les grumeaux au secouage, et les doigts de bébé se logent dans le creux des soufflets.</li>
+        </ul>
+      </section>
+
+      <section class="famille">
+        <p class="famille-titre">Ce qu’il est</p>
+        <ul>
+          <li><b>23 grammes à vide</b>, tétine et capuchon compris.</li>
+          <li><b>9,5 × 6,5 cm replié</b> — il tient dans une poche ou un sac à main.</li>
+          <li><b>330 ml déplié</b>, gradué jusqu’à 300 ml par paliers de 30.</li>
+          <li><b>Nomade par construction</b>, et non par accessoire.</li>
+        </ul>
+      </section>
+
+      <section class="famille">
+        <p class="famille-titre">Ce qui est prouvé</p>
+        <ul>
+          <li><b>Testé par le LNE.</b> Essais de migration NF EN 1186-1, dix jours à 40 °C, trois simulants, sur le corps dans les cinq coloris, la bague et le capuchon.</li>
+          <li><b>Aucun résidu détecté</b> au-dessus de 6 milligrammes par kilogramme d’aliment — au moins dix fois sous la limite applicable aux articles de puériculture.</li>
+          <li><b>Bague et capuchon végétaux</b>, sans OGM ni gluten, compostables.</li>
+          <li><b>Flacon en polypropylène</b>, sans bisphénol — le PP n’en contient pas.</li>
+        </ul>
+      </section>
+    </div>
 
     <p class="chute">Rien de plus à emporter.<br><em>Rien de plus à faire.</em></p>
   </div>
@@ -1186,9 +1208,8 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 
     <div class="essai-demo">
       <div class="essai-scene">
-        <video id="bibVideo" src="assets/depliage-scrub.mp4" poster="assets/depliage.jpg"
-               muted playsinline preload="auto" disablepictureinpicture
-               aria-label="Le biberon BIBEON qui se déplie au fil du curseur"></video>
+        <div id="bibSprite" class="bib-sprite" role="img"
+             aria-label="Le biberon BIBEON qui se déplie au fil du curseur"></div>
       </div>
 
       <p class="essai-lecture"><span id="bibVol">150</span><small> ml</small></p>
@@ -1936,39 +1957,23 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 })();
 
 
-/* --- « Essayez le geste » : la vidéo se déplie au curseur --- */
+/* --- « Essayez le geste » : la planche se déplace au curseur --- */
 (function () {
-  var vid   = document.getElementById("bibVideo"),
+  var vue   = document.getElementById("bibSprite"),
       range = document.getElementById("bibFold"),
       vol   = document.getElementById("bibVol"),
       nb    = document.getElementById("bibNb");
-  if (!vid || !range) return;
-
-  var N = 9, duree = 1.84, pret = false;
-
-  vid.addEventListener("loadedmetadata", function () {
-    if (isFinite(vid.duration) && vid.duration > 0) duree = vid.duration;
-    pret = true;
-    placer();
-  });
-
-  function placer() {
-    if (!pret) return;
-    var n = parseInt(range.value, 10);
-    var t = (n / N) * duree;
-    if (t >= duree) t = duree - 0.02;
-    try { vid.currentTime = t; } catch (e) {}
-  }
+  if (!vue || !range) return;
+  var N = 9;
 
   function maj() {
     var n = parseInt(range.value, 10);
+    vue.style.backgroundPosition = "0 " + (n / N * 100) + "%";
     vol.textContent = (n + 1) * 30;
     nb.textContent  = n === 0 ? "biberon repli\u00e9"
                     : n === 1 ? "1 soufflet d\u00e9pli\u00e9"
                               : n + " soufflets d\u00e9pli\u00e9s";
-    placer();
   }
-
   range.addEventListener("input", maj);
   range.addEventListener("change", maj);
   maj();
