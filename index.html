@@ -155,8 +155,8 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 /* ---------- hero pleine hauteur ---------- */
 .hero{
   position:relative;overflow:hidden;isolation:isolate;
-  min-height:min(86vh,760px);display:flex;align-items:flex-end;
-  padding:0 0 76px;background:var(--navy);
+  min-height:min(94vh,880px);display:flex;align-items:flex-end;
+  padding:0 0 64px;background:var(--navy);
 }
 .hero-fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
 .hero-voile{
@@ -189,7 +189,7 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .rassure-avis{display:inline-flex;align-items:baseline;gap:10px;text-decoration:none}
 .rassure-avis b{font-family:"Playfair Display",Georgia,serif;font-size:26px;font-weight:600;color:var(--navy)}
 .rassure-avis span{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage)}
-@media (max-width:700px){.hero{min-height:74vh;padding-bottom:52px}}
+@media (max-width:700px){.hero{min-height:82vh;padding-bottom:44px}}
 
 /* ---------- le renversement ---------- */
 .renversement{background:var(--navy);color:rgba(255,255,255,.82);padding:132px 0 116px;text-align:center}
@@ -278,6 +278,11 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
   text-transform:uppercase;color:var(--sage)
 }
 .produit-rare h3{margin-top:4px}
+.rare-note{
+  margin:0 0 16px;padding:8px 12px;border-radius:10px;
+  background:var(--sage-tint);color:var(--sage-dark);
+  font-size:12.5px;font-weight:600;line-height:1.4;
+}
 
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
@@ -1455,12 +1460,23 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       </article>
 
       <article class="produit produit-rare">
-        <div class="produit-image"><img src="assets/collector-1.webp" width="1400" height="495" alt="Les deux Bibeo côte à côte : l’un rose, l’autre vert, flacon et capuchon de la même couleur, bague jaune" loading="lazy"></div>
+        <div class="produit-image"><img src="assets/collector-2.webp" width="1100" height="1100" alt="Un Bibeo, flacon et capuchon de la même couleur, bague jaune" loading="lazy"></div>
         <p class="rare-etiquette">Édition limitée</p>
         <h3>Le Bibeo</h3>
-        <p>Même biberon, même matière végétale. Un Bibeo rose a un flacon et un capuchon roses ; un Bibeo vert, un flacon et un capuchon verts. Dans les deux cas, <strong>la bague est jaune</strong>. Il tient son nom de la marque gravée sur le capuchon : <strong>un colibri qui tient le O</strong>.</p>
-        <p class="lot-note">Rose ou vert, ou les deux · douze exemplaires · jamais réédités</p>
-        <div class="bas"><span class="prix">45 €<small>à l’unité · 85 € le duo rose + vert · port compris · hors tarif de lancement</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <p>Là où la gamme est en blanc translucide, le Bibeo est coloré de haut en bas, dans des teintes acidulées. Un Bibeo rose a un flacon et un capuchon roses ; un Bibeo vert, un flacon et un capuchon verts. Dans les deux cas, <strong>la bague est jaune</strong>. Il tient son nom de la marque gravée sur le capuchon : <strong>un colibri qui tient le O</strong>.</p>
+        <p class="lot-note">Au choix, rose ou vert · produits en bien plus petit nombre que le reste de la gamme</p>
+        <p class="rare-note">Le Bibeo ne fait pas partie de l’offre de lancement.</p>
+        <div class="bas"><span class="prix">45 €<small>port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+      </article>
+
+      <article class="produit produit-rare">
+        <div class="produit-image"><img src="assets/collector-1.webp" width="1400" height="495" alt="Les deux Bibeo côte à côte : l’un rose, l’autre vert, flacon et capuchon de la même couleur, bague jaune" loading="lazy"></div>
+        <p class="rare-etiquette">Édition limitée</p>
+        <h3>Le duo Bibeo</h3>
+        <p>Un rose et un vert, les deux teintes acidulées réunies. C’est la seule façon d’avoir les deux, et la plus jolie à poser sur une étagère.</p>
+        <p class="lot-note">Un de chaque · produits en bien plus petit nombre que le reste de la gamme</p>
+        <p class="rare-note">Le Bibeo ne fait pas partie de l’offre de lancement.</p>
+        <div class="bas"><span class="prix">85 €<small>soit 42,50 € l’unité · port compris</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
     </div>
 
