@@ -242,6 +242,28 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
   font-family:"Playfair Display",Georgia,serif;font-size:clamp(19px,2vw,26px);line-height:1.35;color:#fff;
 }
 
+/* ---------- barre service clients ---------- */
+.service{background:var(--navy);color:rgba(255,255,255,.72);font-size:12.5px}
+.service-in{display:flex;flex-wrap:wrap;align-items:center;gap:6px 26px;padding:9px 0}
+.service-titre{font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:#c9d3bd}
+.service a{color:rgba(255,255,255,.82);text-decoration:none;white-space:nowrap}
+.service a:hover{color:#fff}
+.service a b{font-weight:600;color:#c9d3bd;margin-right:6px}
+@media (max-width:700px){.service-in{gap:4px 18px;padding:8px 0;font-size:12px}}
+
+/* ---------- retour en haut ---------- */
+.haut{
+  position:fixed;right:22px;bottom:22px;z-index:60;
+  display:grid;place-items:center;width:46px;height:46px;border-radius:50%;
+  background:var(--navy);color:#fff;box-shadow:var(--shadow-m);
+  opacity:0;pointer-events:none;transform:translateY(10px);
+  transition:opacity .25s ease,transform .25s ease;
+}
+.haut svg{width:20px;height:20px}
+.haut.visible{opacity:1;pointer-events:auto;transform:none}
+.haut:hover{background:var(--sage-dark)}
+@media (max-width:600px){.haut{right:16px;bottom:16px;width:42px;height:42px}}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -962,6 +984,16 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 </head>
 
 <body>
+
+<!-- ================= SERVICE CLIENTS ================= -->
+<div class="service">
+  <div class="shell service-in">
+    <span class="service-titre">Service clients</span>
+    <a href="tel:+33611768632"><b>Utilisation</b> 06 11 76 86 32</a>
+    <a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
+    <a href="tel:+33427024415"><b>Fixe</b> 04 27 02 44 15</a>
+  </div>
+</div>
 
 <!-- ================= ENTÊTE ================= -->
 <div class="bandeau">
@@ -1963,5 +1995,19 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 })();
 
 </script>
+<a class="haut" href="#accueil" aria-label="Revenir en haut de la page">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+    <path d="M12 19V5"/><path d="m5 12 7-7 7 7"/>
+  </svg>
+</a>
+
+<script>
+(function(){
+  var b=document.querySelector('.haut'); if(!b) return;
+  function maj(){ b.classList.toggle('visible', window.scrollY > 700); }
+  window.addEventListener('scroll', maj, {passive:true}); maj();
+})();
+</script>
+
 </body>
 </html>
