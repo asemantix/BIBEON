@@ -224,7 +224,8 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .leger-texte p{font-size:16.5px;line-height:1.8;margin:0 0 16px;max-width:52ch}
 .leger .chute{margin:34px 0 0;text-align:left;max-width:22ch}
 .leger-image{margin:0}
-.leger-image img{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-m)}
+.leger-image img,.leger-image video{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-m)}
+.leger-image figcaption{margin-top:12px;text-align:center;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--sage)}
 @media (max-width:900px){.leger-grid{grid-template-columns:1fr;gap:36px}.leger .chute{margin-inline:auto;text-align:center}}
 
 /* ---------- bandeau de lancement ---------- */
@@ -1138,12 +1139,15 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       <p class="overline">Sortir léger</p>
       <h2 class="section-title">Un sac à main.<br>Le biberon dedans.<br><em>C’est tout.</em></h2>
       <p>L’aéroport, l’avion, la salle d’attente du pédiatre, le week-end chez des amis, la chambre d’hôtel. Partout où il fallait s’organiser, il n’y a plus rien à organiser : vos affaires tiennent en un goupillon et cinq biberons de poche.</p>
-      <p>La dose de lait est déjà à l’intérieur, mise chez vous. Dehors, vous dépliez, vous ajoutez l’eau.</p>
-      <p class="chute">Ce n’est pas un biberon de plus.<br><em>C’est une sortie de moins à préparer.</em></p>
+      <p>Comptez ce que vous emportiez : un biberon rigide, une boîte doseuse, un sac à langer pour aller à la pharmacie. Trois objets, et une sortie qui se prépare comme un voyage.</p>
+      <p>Comptez maintenant : trois repas déjà dosés, dans un sac à main. La poudre y est depuis la maison. Il ne reste que l’eau à trouver, et on en trouve partout.</p>
+      <p class="chute">Avant, c’était le sac à langer.<br><em>Maintenant, c’est le sac à main.</em></p>
     </div>
     <figure class="leger-image">
-      <img src="assets/sac-a-main.webp" width="1376" height="768" loading="lazy"
-           alt="Des biberons BIBEON repliés que l’on range dans un petit sac à main">
+      <video src="assets/demo-nomade.mp4" poster="assets/sac-a-main.webp"
+             autoplay muted loop playsinline preload="metadata"
+             aria-label="Des biberons BIBEON repliés que l’on range dans un petit sac à main"></video>
+      <figcaption>Trois repas déjà dosés, dans un sac à main.</figcaption>
     </figure>
   </div>
 </section>
@@ -1231,29 +1235,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   </div>
 </section>
 
-<!-- ================= L'ÉCHELLE ================= -->
-<section class="echelle-preuve" aria-label="L’encombrement du biberon">
-  <div class="shell">
-    <div class="section-head center">
-      <p class="overline">L’encombrement</p>
-      <h2 class="section-title">Une journée de shopping<br>ou de balade.</h2>
-      <p>Trois repas, un sac à main. Trois biberons pliables déjà dosés occupent la place d’un seul biberon rigide — et l’heure du retour ne dépend plus du biberon.</p>
-    </div>
-    <div class="echelle-duo">
-      <figure>
-        <img src="assets/lot-de-trois.webp" width="1400" height="678" alt="Trois biberons BIBEON repliés, chacun rempli de sa dose de lait en poudre" loading="lazy">
-        <figcaption>Trois biberons, trois doses, préparés chez vous.</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/voyage-passeport.webp" width="1070" height="1070" alt="Deux biberons BIBEON, un passeport et un sac à main posés ensemble" loading="lazy">
-        <figcaption>Et ils partent dans le sac à main.</figcaption>
-      </figure>
-    </div>
-
-    <p class="chute">Avant, c’était le sac à langer.<br><em>Maintenant, c’est le sac à main.</em></p>
-  </div>
-</section>
-
 <!-- ================= COMMENT ÇA MARCHE ================= -->
 <section class="etapes" id="fonctionnement">
   <div class="shell">
@@ -1299,31 +1280,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       <p class="signature-note">Au cours de la tétée, quand le niveau baisse, on abaisse les soufflets vides jusqu’au niveau du lait restant. Moins d’air dans le biberon, c’est moins d’air avalé inutilement. Et en fin de tétée, couder le biberon remplit la tétine de lait.</p>
     </div>
     <img src="assets/biberon-main.webp" width="1024" height="1024" alt="Le biberon BIBEON déplié, tenu dans une main" loading="lazy">
-  </div>
-</section>
-
-<!-- ================= VIDÉO ================= -->
-<section class="demo" aria-label="Démonstration">
-  <div class="shell demo-grid">
-    <div>
-      <p class="overline">En vrai, dans la vraie vie</p>
-      <h2 class="section-title">Replié, il tient<br>dans un sac à main.</h2>
-      <p>Comptez ce que vous emportiez : un biberon rigide, une boîte doseuse, un sac à langer pour aller à la pharmacie. Trois objets, et une sortie qui se prépare comme un voyage.</p>
-      <p>Comptez maintenant : trois repas déjà dosés, dans un sac à main. La poudre y est depuis la maison. Il ne reste que l’eau à trouver, et on en trouve partout.</p>
-      <p class="chute">Ce n’est pas un objet de plus.<br><em>C’est deux objets de moins.</em></p>
-    </div>
-
-    <div>
-      <div class="video-frame">
-        <video poster="assets/demo-nomade.jpg" width="860" height="860"
-               autoplay muted loop playsinline preload="none"
-               aria-label="Trois biberons BIBEON déjà dosés que l’on range dans un sac à main">
-          <source src="assets/demo-nomade.mp4" type="video/mp4">
-        </video>
-      </div>
-        <p class="video-note">Trois biberons déjà dosés, rangés dans un sac à main.</p>
-
-    </div>
   </div>
 </section>
 
