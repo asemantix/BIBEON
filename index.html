@@ -1488,13 +1488,13 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       </article>
 
       <article class="produit produit-rare">
-        <div class="produit-image"><img src="assets/collector-2.webp" width="1200" height="900" alt="Un Bibeo, flacon et capuchon de la même couleur, bague jaune" loading="lazy"></div>
+        <div class="produit-image"><img src="assets/bibeo-rose.webp" width="1200" height="900" alt="Un Bibeo rose : flacon et capuchon roses, bague jaune" data-coloris-img="1" loading="lazy"></div>
         <p class="rare-etiquette">Édition limitée</p>
         <h3>Le Bibeo</h3>
         <p>Là où la gamme est en blanc translucide, le Bibeo est coloré de haut en bas, dans des teintes acidulées. Un Bibeo rose a un flacon et un capuchon roses ; un Bibeo vert, un flacon et un capuchon verts. Dans les deux cas, <strong>la bague est jaune</strong>. Il tient son nom de la marque gravée sur le capuchon : <strong>un colibri qui tient le O</strong>.</p>
-        <div class="nuancier" data-max="1">
+        <div class="nuancier" data-max="1" data-image="1" data-prefixe="bibeo-">
           <p class="nuancier-titre">Coloris <span class="nuancier-choix">Rose</span></p>
-          <div class="pastilles"><button type="button" class="pastille" data-coloris="Rose" style="--teinte:#efb4c2" aria-label="Rose" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="false"></button></div>
+          <div class="pastilles"><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#efb4c2" aria-label="Rose" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="false"></button></div>
         </div>
         <p class="lot-note">Produits en bien plus petit nombre que le reste de la gamme</p>
         <p class="rare-note">Le Bibeo ne fait pas partie de l’offre de lancement.</p>
@@ -1502,7 +1502,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       </article>
 
       <article class="produit produit-rare">
-        <div class="produit-image"><img src="assets/collector-1.webp" width="1200" height="900" alt="Les deux Bibeo côte à côte : l’un rose, l’autre vert, flacon et capuchon de la même couleur, bague jaune" loading="lazy"></div>
+        <div class="produit-image"><img src="assets/bibeo-duo.webp" width="1200" height="900" alt="Les deux Bibeo côte à côte : l’un rose, l’autre vert, bague jaune" loading="lazy"></div>
         <p class="rare-etiquette">Édition limitée</p>
         <h3>Le duo Bibeo</h3>
         <p>Un rose et un vert, les deux teintes acidulées réunies. C’est la seule façon d’avoir les deux, et la plus jolie à poser sur une étagère.</p>
@@ -2007,7 +2007,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
     function maj() {
       var c = choisis().map(function (b) { return b.dataset.coloris; });
       etiquette.textContent = c.length ? c.join(", ") : (max === 1 ? "à choisir" : "aucun choisi");
-      if (image && c.length) image.src = "assets/biberon-" + choisis()[0].dataset.fichier + ".webp";
+      if (image && c.length) image.src = "assets/" + (n.dataset.prefixe || "biberon-") + choisis()[0].dataset.fichier + ".webp";
       var sel = carte && carte.querySelector('select[name^="os"], select[name^="on"]');
       if (sel && c.length) {
         for (var i = 0; i < sel.options.length; i++) {
