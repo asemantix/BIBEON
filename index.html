@@ -307,10 +307,19 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 }
 .pedigree-signe a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft)}
 
+.baseline{
+  margin:8px 0 14px;font-family:"Playfair Display",Georgia,serif;font-style:italic;
+  font-size:20px;color:var(--sage);
+}
 .prix-avant{
   margin-right:8px;font-size:.62em;font-weight:400;color:var(--sage-soft);
   text-decoration:line-through;text-decoration-thickness:1.5px;
 }
+
+.rose-vue{margin:34px auto 40px;max-width:820px}
+.rose-vue video{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-m)}
+.rose-vue figcaption{margin-top:12px;text-align:center;font-size:12px;letter-spacing:.06em;
+                     text-transform:uppercase;color:var(--sage)}
 
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
@@ -1363,7 +1372,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
           <p class="nuancier-titre">Coloris <span class="nuancier-choix">Vert</span></p>
           <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
         </div>
-        <div class="bas"><span class="prix"><s class="prix-avant">33 €</s> 25 €<small>tarif de lancement · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix">25 €<small>tarif de lancement · 33 € à partir du 1<sup>er</sup> octobre · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
 
       <article class="produit">
@@ -1610,6 +1619,13 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
       <p>Il existe de très bons biberons. Aucun ne réunit ces cinq points.</p>
     </div>
 
+    <figure class="rose-vue">
+      <video src="assets/rose.mp4" poster="assets/rose-tetine.webp"
+             autoplay muted loop playsinline preload="metadata"
+             aria-label="Le biberon BIBEON qui tourne, se découvre de bas en haut, puis dont le capuchon se retire pour dévoiler la tétine"></video>
+      <figcaption>Le corps, les soufflets, la bague, la tétine. Tout se voit.</figcaption>
+    </figure>
+
     <div class="uniques-liste">
 
       <article class="unique">
@@ -1772,6 +1788,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   <div class="shell footer-grid">
     <div class="footer-col">
       <a class="brand" href="#accueil">BIBEON</a>
+      <p class="baseline">Toujours prêt.</p>
       <p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
     </div>
 
