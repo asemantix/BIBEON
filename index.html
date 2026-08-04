@@ -307,6 +307,11 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 }
 .pedigree-signe a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft)}
 
+.prix-avant{
+  margin-right:8px;font-size:.62em;font-weight:400;color:var(--sage-soft);
+  text-decoration:line-through;text-decoration-thickness:1.5px;
+}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -1341,10 +1346,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 <!-- ================= BOUTIQUE ================= -->
 <section class="boutique" id="boutique">
   <div class="shell">
-    <p class="lancement">
-      <b>Tarif de lancement</b>
-      <span>25 € l’unité — le prix du lot de cinq, dès un seul biberon. Jusqu’au 30 septembre, ou jusqu’aux 500 premiers biberons commandés, au premier des deux termes atteint.</span>
-    </p>
+
 
     <div class="section-head center">
       <p class="overline">Notre boutique</p>
@@ -1361,7 +1363,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
           <p class="nuancier-titre">Coloris <span class="nuancier-choix">Vert</span></p>
           <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
         </div>
-        <div class="bas"><span class="prix">25 €<small>tarif de lancement · 33 € ensuite · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix"><s class="prix-avant">33 €</s> 25 €<small>tarif de lancement · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
 
       <article class="produit">
@@ -1372,7 +1374,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
           <p class="nuancier-titre">Choisissez 2 coloris <span class="nuancier-choix">aucun choisi</span></p>
           <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
         </div>
-        <div class="bas"><span class="prix">50 €<small>soit 25 € l’unité · tarif de lancement · 62 € ensuite · port compris</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix">62 €<small>soit 31 € l’unité · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
 
       <article class="produit">
@@ -1383,7 +1385,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
           <p class="nuancier-titre">Choisissez 3 coloris <span class="nuancier-choix">aucun choisi</span></p>
           <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
         </div>
-        <div class="bas"><span class="prix">75 €<small>soit 25 € l’unité · tarif de lancement · 87 € ensuite · port compris</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix">87 €<small>soit 29 € l’unité · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
 
       <article class="produit">
@@ -1391,7 +1393,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
         <h3>Le lot de cinq</h3>
         <p>Un biberon partout où va bébé : un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt. Ou les cinq déjà dosés dans le sac, pour un long trajet en avion.</p>
         <p class="lot-note">La dotation complète · les cinq coloris, un de chaque</p>
-        <div class="bas"><span class="prix">125 €<small>soit 25 € l’unité · port compris · le tarif ne change pas</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix">125 €<small>soit 25 € l’unité · port compris</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
       </article>
 
       <article class="produit produit-rare">
