@@ -337,6 +337,11 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
   border:1px solid rgba(255,255,255,.55);color:#fff;text-decoration:none;font-size:14.5px}
 .btn-clair-sombre:hover{background:rgba(255,255,255,.12);border-color:#fff;color:#fff}
 
+.coloris-consigne{
+  margin:-8px 0 16px;font-size:13px;line-height:1.6;color:var(--sage-dark);
+  font-weight:600;
+}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -1451,11 +1456,12 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <div class="produit-image"><img src="assets/biberon-vert.webp" width="1200" height="900" alt="Le biberon nomade BIBEON en coloris vert, capuchon fermé et tétine montée" data-coloris-img="1" loading="lazy"></div>
         <h3>Un BIBEON</h3>
         <p>Le biberon nomade, préparé par vous. Avec sa tétine en silicone alimentaire, débit 6 mois. Vendu vide.</p>
+        <p class="coloris-consigne">Indiquez votre coloris dans le message à la commande.</p>
         <div class="nuancier" data-max="1" data-image="1">
           <p class="nuancier-titre">Coloris <span class="nuancier-choix">Vert</span></p>
-          <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
+          <div class="pastilles"><button type="button" class="pastille" data-coloris="Vert" data-fichier="vert" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" aria-label="Vert" aria-pressed="true"></button><button type="button" class="pastille" data-coloris="Orange" data-fichier="orange" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" aria-label="Orange" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Violet" data-fichier="violet" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" aria-label="Violet" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Rose" data-fichier="rose" style="--teinte:#d0a7bc" aria-label="Rose" aria-pressed="false"></button><button type="button" class="pastille" data-coloris="Bleu" data-fichier="bleu" style="--teinte:#a5c2d4" aria-label="Bleu" aria-pressed="false"></button></div>
         </div>
-        <div class="bas"><span class="prix">25 €<small>tarif de lancement · 35 € à partir du 1<sup>er</sup> octobre · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="#inscription">Nous contacter</a></div>
+        <div class="bas"><span class="prix">25 €<small>tarif de lancement · 35 € à partir du 1<sup>er</sup> octobre · port compris</small></span><a class="btn btn-primary btn-sm" href="https://py.pl/IDHpe" target="_blank" rel="noopener" id="lienBibeon">Commander</a></div>
       </article>
 
       <article class="produit">
@@ -2072,6 +2078,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       var c = choisis().map(function (b) { return b.dataset.coloris; });
       etiquette.textContent = c.length ? c.join(", ") : (max === 1 ? "à choisir" : "aucun choisi");
       if (image && c.length) image.src = "assets/" + (n.dataset.prefixe || "biberon-") + choisis()[0].dataset.fichier + ".webp";
+      var lien = document.getElementById("lienBibeon");
+      if (lien && c.length && c[0].dataset.lien) lien.href = c[0].dataset.lien;
       var sel = carte && carte.querySelector('select[name^="os"], select[name^="on"]');
       if (sel && c.length) {
         for (var i = 0; i < sel.options.length; i++) {
