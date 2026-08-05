@@ -156,24 +156,41 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .hero{
   position:relative;overflow:hidden;isolation:isolate;
   min-height:min(94vh,880px);display:flex;align-items:flex-end;
-  padding:0 0 64px;background:var(--navy);
+  padding:0 0 72px;background:var(--navy);
 }
-.hero-fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.hero-fond{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:35% center;z-index:-2;
+}
 .hero-voile{
   position:absolute;inset:0;z-index:-1;
-  background:linear-gradient(180deg,rgba(14,28,53,.40) 0%,rgba(14,28,53,.62) 45%,rgba(14,28,53,.90) 100%);
+  background:
+    linear-gradient(100deg,
+      rgba(14,28,53,.90) 0%,
+      rgba(14,28,53,.72) 26%,
+      rgba(14,28,53,.34) 50%,
+      rgba(14,28,53,.06) 74%,
+      rgba(14,28,53,0)  100%),
+    linear-gradient(180deg, rgba(14,28,53,.34) 0%, rgba(14,28,53,0) 26%);
 }
-.hero-contenu{position:relative}
+.hero-contenu{position:relative;max-width:900px}
 .hero .overline{color:#c9d3bd;margin-bottom:20px}
 .hero h1{
-  font-size:clamp(40px,5.8vw,86px);line-height:.94;letter-spacing:-.015em;
-  color:#fff;margin:0 0 24px;max-width:17ch;
+  font-size:clamp(40px,5.8vw,86px);line-height:1.0;letter-spacing:-.015em;
+  color:#fff;margin:0 0 28px;max-width:17ch;
+  text-shadow:0 2px 34px rgba(14,28,53,.5);
 }
 .hero h1 em{font-style:italic;color:#cfe0b8}
+@media (max-width:700px){
+  .hero{min-height:84vh;padding-bottom:48px}
+  .hero-voile{background:linear-gradient(180deg,rgba(14,28,53,.30) 0%,rgba(14,28,53,.55) 40%,rgba(14,28,53,.88) 100%)}
+}
+@media (prefers-reduced-motion:reduce){ .hero-fond{display:none} }
 .hero-phrase{
-  margin:0 0 36px;max-width:44ch;
+  margin:0 0 38px;max-width:44ch;
   font-family:"Playfair Display",Georgia,serif;font-style:italic;
-  font-size:clamp(18px,1.9vw,25px);line-height:1.35;color:rgba(255,255,255,.88);
+  font-size:clamp(18px,1.9vw,25px);line-height:1.35;color:rgba(255,255,255,.9);
+  text-shadow:0 2px 24px rgba(14,28,53,.5);
 }
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .btn-clair{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
@@ -1451,7 +1468,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="histoire" id="histoire">
   <div class="shell split">
     <div class="histoire-photo">
-      <img src="assets/moment-parc.webp" width="830" height="720" alt="Une mère donnant le biberon à son bébé sur un plaid, au parc, en fin de journée" loading="lazy">
+      <img src="assets/bibeon-chaine-production-historique.webp" width="1400" height="1400" alt="Chaîne industrielle produisant des corps de biberons pliables BIBEON, au début des années 2000" loading="lazy">
     </div>
     <div>
       <p class="overline">Notre histoire</p>
@@ -1469,22 +1486,23 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="coloris" aria-label="Les coloris BIBEON">
   <div class="shell">
     <p class="overline">Les coloris</p>
-    <h2 class="section-title">Cinq teintes.<br>Et un prénom <em>sur le capuchon.</em></h2>
+    <h2 class="section-title">Cinq coloris, cinq biberons<br><em>toujours au bon endroit.</em></h2>
     <div class="coloris-visuel">
-      <img src="assets/coloris-strip.webp" width="1352" height="383" alt="Les cinq coloris du biberon BIBEON : menthe, lin, lilas, rose et abricot" loading="lazy">
+      <img src="assets/coloris-strip.webp" width="1352" height="383" alt="Les cinq coloris du biberon BIBEON : menthe, abricot, lilas, rose et lin" loading="lazy">
     </div>
     <div class="coloris-corps">
-      <p>Cinq couleurs, parce qu’un biberon qui passe la journée dans un sac à main n’a aucune raison d’être laid. À la maison, elles suffisent à ne pas confondre celui de l’aîné et celui du petit.</p>
-      <p>Dehors, c’est autre chose : rien ne garantit qu’un autre parent n’aura pas apporté la même. C’est là que le capuchon plat sert une fois de plus — on y colle une étiquette avec le prénom de l’enfant et le niveau à atteindre. <strong>Une couleur se confond, un prénom non.</strong></p>
-      <p>Et l’essentiel est déjà à l’intérieur : votre marque de lait, votre dose. La personne qui garde votre enfant n’a rien à mesurer ni à mémoriser — elle ajoute l’eau jusqu’au trait.</p>
+      <p>Un chez Mamie, un chez la nounou, un à la crèche, un dans la voiture et un dans le sac à main. Chaque coloris permet d’identifier immédiatement le biberon prévu pour chaque moment de la journée, sans oubli ni confusion.</p>
+      <p>Propre, sec et replié, il peut être préparé à l’avance avec la juste dose de lait en poudre. Au moment du repas, la personne qui s’occupe de bébé n’a rien à mesurer ni à mémoriser : elle déplie le biberon et ajoute simplement l’eau jusqu’au repère indiqué.</p>
+      <p>Et parce qu’à la crèche ou chez la nounou plusieurs biberons peuvent se ressembler, <strong>le capuchon plat peut accueillir une étiquette</strong> avec le prénom de l’enfant et le niveau d’eau à atteindre.</p>
     </div>
+
     <figure class="capuchon-figure">
       <img src="assets/capuchon-prenom.webp" width="1152" height="864" loading="lazy"
            alt="Le capuchon plat d’un biberon BIBEON portant une étiquette manuscrite : le prénom Léa et la mention 270 ml">
       <figcaption>Une étiquette sur le capuchon plat : le prénom de l’enfant et le niveau à atteindre.</figcaption>
     </figure>
 
-    <p class="chute">Le prénom dit à qui il est.<br><em>Le trait dit jusqu’où le remplir.</em></p>
+    <p class="chute">Cinq couleurs pour cinq lieux de vie.<br><em>Où que bébé soit, son biberon est déjà prêt.</em></p>
   </div>
 </section>
 
@@ -1840,7 +1858,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <p class="unique-num">05</p>
         <div>
           <h3>Toutes les tailles dans un seul biberon</h3>
-          <p>De 30 à 300 ml, par paliers de 30. Aucun autre biberon ne change de contenance : on en achète un de 150 pour les débuts, un de 260 ensuite, un de 330 pour finir. <strong>Celui-ci les remplace tous les trois.</strong></p>
+          <p>De 30 à 300 ml, par paliers de 30 — <strong>une graduation gravée dans le moule, jamais imprimée</strong> : elle ne s’effacera pas au lavage. Aucun autre biberon ne change de contenance : on en achète un de 150 pour les débuts, un de 260 ensuite, un de 330 pour finir. <strong>Celui-ci les remplace tous les trois.</strong></p>
         </div>
       </article>
 
@@ -2045,6 +2063,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 </footer>
 
 <script>
+/* --- le film du hero, ralenti --- */
+(function(){ var f=document.querySelector(".hero-fond"); if (f) f.playbackRate = 0.6; })();
+
 /* BIBEON — comportements de la page */
 (function () {
   "use strict";
