@@ -356,6 +356,13 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .film-nettoyage{margin:22px 0;padding:20px 24px;border-radius:16px;
   background:var(--sage-tint);border:1px solid var(--sage-soft);font-size:15.5px;line-height:1.75}
 
+.capuchon-figure{max-width:520px;margin:30px auto 0}
+.capuchon-figure img{display:block;width:100%;height:auto;border-radius:20px;border:1px solid var(--line)}
+.capuchon-figure figcaption{margin-top:12px;text-align:center;font-size:13.5px;line-height:1.6;color:#7b8579}
+
+.definition{margin:16px 0 18px;padding:16px 20px;border-left:3px solid var(--sage-soft);
+  background:rgba(255,255,255,.55);font-size:14.5px;line-height:1.7}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -670,13 +677,20 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 .entretien-note{margin:10px 0 0;font-size:12.5px;color:#7b8579;line-height:1.55}
 /* ---------- nuancier ---------- */
 .nuancier{margin:14px 0 4px}
-.nuancier-titre{margin:0 0 10px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--sage)}
+.nuancier-titre{margin:0 0 12px;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 .nuancier-choix{color:var(--navy);font-weight:600;text-transform:none;letter-spacing:0}
-.pastilles{display:flex;gap:9px;flex-wrap:wrap}
-.pastille{width:26px;height:26px;border-radius:50%;border:2px solid var(--line);cursor:pointer;
-          background:var(--teinte);padding:0;transition:transform .15s,border-color .15s,box-shadow .15s}
-.pastille:hover{transform:scale(1.1)}
-.pastille[aria-pressed="true"]{border-color:var(--sage-dark);box-shadow:0 0 0 3px var(--white),0 0 0 4px var(--sage-dark)}
+.pastilles{display:flex;gap:13px;flex-wrap:wrap;padding:3px 0}
+.pastille{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;padding:0;
+          background:var(--teinte);position:relative;
+          box-shadow:inset 0 -3px 7px rgba(0,0,0,.10), inset 0 3px 6px rgba(255,255,255,.55),
+                     0 1px 3px rgba(17,37,58,.14);
+          transition:transform .18s ease, box-shadow .18s ease}
+.pastille::after{content:"";position:absolute;inset:5px 5px auto 7px;height:7px;border-radius:50%;
+          background:linear-gradient(rgba(255,255,255,.72), rgba(255,255,255,0));pointer-events:none}
+.pastille:hover{transform:translateY(-2px) scale(1.06)}
+.pastille[aria-pressed="true"]{transform:translateY(-2px) scale(1.06);
+          box-shadow:inset 0 -3px 7px rgba(0,0,0,.10), inset 0 3px 6px rgba(255,255,255,.55),
+                     0 0 0 3px var(--white), 0 0 0 4.5px var(--navy), 0 3px 8px rgba(17,37,58,.18)}
 .pastille:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
 .fiche{margin-top:34px;background:var(--white);border:1px solid var(--line);
        border-radius:var(--radius);overflow:hidden;display:grid;
@@ -1355,15 +1369,14 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="matiere" aria-label="Le référentiel applicable">
   <div class="shell matiere-carte">
     <p class="overline">La matière</p>
-    <h2 class="section-title">Le bon essai,<br>pas le <em>beau mot.</em></h2>
+    <h2 class="section-title">Conçu pour le <em>lait de bébé.</em></h2>
     <div class="matiere-corps">
-      <p>La question que se pose un parent n’est pas de quelle matière est fait le biberon. C’est ce qui passe de cette matière dans le lait.</p>
-      <p>On lit souvent « silicone médical » sur une boîte de biberon. C’est un vrai agrément — mais pour autre chose. Il mesure la tolérance d’un tissu vivant à un matériau posé contre lui. Il ne dit rien de ce qui migre dans un lait chauffé, deux fois par jour, pendant deux ans. <strong>Un matériau peut détenir les deux. Le second n’établit jamais le premier.</strong></p>
-      <p>Car un biberon n’est pas un dispositif médical : c’est un matériau au contact des denrées alimentaires. Ce qui s’y vérifie, ce sont des essais de migration sous simulants, sur l’objet fini, prêt à l’emploi — pas sur la matière première.</p>
-      <p>Et personne ne délivre de tampon : il n’existe aucun agrément d’autorité en la matière, la conformité est déclarée par le fabricant lui-même. C’est précisément pourquoi nous ne vous demandons pas de nous croire.</p>
-      <p>La tétine fournie avec BIBEON est en silicone <strong>alimentaire</strong>. Le corps du biberon, la bague et le capuchon ont été soumis aux essais de migration du LNE, dans les cinq coloris, sous trois simulants. <a href="tests-migration-lne-bibeon.html">Lire le détail des mesures</a>.</p>
+      <p>Un biberon n’est ni un implant ni un dispositif médical — <strong>fût-il donné à un enfant malade, à l’hôpital.</strong> C’est un matériau au contact des denrées alimentaires, et le référentiel qui s’y applique est celui des MCDA.</p>
+      <p class="definition">Un <strong>dispositif médical</strong> est un objet destiné à soigner, diagnostiquer ou surveiller : une seringue, un cathéter, une prothèse. Un <strong>implant</strong> est celui qu’on pose à l’intérieur du corps et qui y reste. Leur conformité s’évalue sur la tolérance des tissus vivants — pas sur ce qui migre dans un aliment.</p>
+      <p>Chez BIBEON, <strong>aucune pièce n’est agréée pour le contact médical : toutes le sont pour le contact alimentaire</strong>, comme la réglementation l’exige — le flacon en polypropylène, la bague et le capuchon en matière végétale, la tétine en silicone alimentaire.</p>
+      <p>Et nous l’avons fait vérifier plutôt que de l’affirmer. Le LNE, le laboratoire qui fait autorité en France, a mesuré la migration du flacon dans les cinq coloris, de la bague et du capuchon. Verdict : zéro résidu détecté. Le seuil de détection est de 6 milligrammes par kilo — six millionièmes. En dessous, il n’y a plus rien à mesurer.</p>
+      <p><a class="btn btn-primary btn-sm" href="tests-migration-lne-bibeon.html">Voir les mesures du LNE</a></p>
     </div>
-    <p class="chute">Nous ne disons pas que la matière est saine.<br><em>Nous publions ce que le LNE a attesté.</em></p>
   </div>
 </section>
 
@@ -1453,6 +1466,12 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <p>Dehors, c’est autre chose : rien ne garantit qu’un autre parent n’aura pas apporté la même. C’est là que le capuchon plat sert une fois de plus — on y colle une étiquette avec le prénom de l’enfant et le niveau à atteindre. <strong>Une couleur se confond, un prénom non.</strong></p>
       <p>Et l’essentiel est déjà à l’intérieur : votre marque de lait, votre dose. La personne qui garde votre enfant n’a rien à mesurer ni à mémoriser — elle ajoute l’eau jusqu’au trait.</p>
     </div>
+    <figure class="capuchon-figure">
+      <img src="assets/capuchon-prenom.webp.jpg" width="1152" height="864" loading="lazy"
+           alt="Le capuchon plat d’un biberon BIBEON portant une étiquette manuscrite : le prénom Léa et la mention 270 ml">
+      <figcaption>Une étiquette sur le capuchon plat : le prénom de l’enfant et le niveau à atteindre.</figcaption>
+    </figure>
+
     <p class="chute">Le prénom dit à qui il est.<br><em>Le trait dit jusqu’où le remplir.</em></p>
   </div>
 </section>
@@ -1780,10 +1799,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <article class="unique">
         <p class="unique-num">02</p>
         <div>
-          <h3>Végétal, et zéro résidu mesuré</h3>
-          <p>La bague et le capuchon sont en matière d’origine végétale, ce qui les rend compostables. Et surtout : le Laboratoire national de métrologie et d’essais a analysé le lait à la recherche de substances de migration. Il n’en a trouvé aucune.</p>
-          <p>Le flacon, lui, est en polypropylène : une matière qui ne contient aucun bisphénol — sa fabrication n’en emploie pas — et qui se plie sans le moindre assouplissant ajouté. Elle a un défaut, son aspect laiteux. Nous l’avons préférée à un plastique plus joli qu’il aurait fallu attendrir chimiquement. <a href="migration.html">Pourquoi ce choix</a>.</p>
-          <p>La nuance est de taille. Un nom de matière annonce ce qu’un matériau est censé être. Un rapport de migration dit ce qui est réellement passé dans le lait. Nous avons fait tester le biberon fini, pas la matière première. <a href="migration.html">Lire le détail des mesures</a>.</p>
+          <h3>Végétal, et rien de détecté</h3>
+          <p>La bague et le capuchon sont en matière d’origine végétale, ce qui les rend compostables. Le flacon est en polypropylène : aucun bisphénol, et il se plie <strong>sans le moindre assouplissant ajouté</strong>. C’est cette sobriété de matière que le LNE n’a pas réussi à retrouver dans le lait. <a href="tests-migration-lne-bibeon.html">Lire le détail des mesures</a>.</p>
         </div>
       </article>
 
@@ -1796,19 +1813,22 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         </div>
       </article>
 
+      
+
       <article class="unique">
         <p class="unique-num">04</p>
         <div>
-          <h3>23 grammes à vide, tétine et capuchon compris</h3>
-          <p>Le poids d’une lettre. C’est ce qui change tout dans un sac déjà plein — et ce qui permet à un bébé de le porter jusqu’à sa bouche sans que le poids ne décide à sa place.</p>
+          <h3>Le capuchon plat</h3>
+          <p>Dehors, vos doigts ne touchent jamais l’intérieur du biberon. Tout se fait par le capuchon : posé à l’envers, il tient à plat et stable sur n’importe quelle surface — table de restaurant, aire d’autoroute — sans que la bague ni l’intérieur ne rencontrent quoi que ce soit. Et si la tétine s’est enfoncée, on la déloge avec le bord du capuchon, sans y porter la main.</p>
+          <p><strong>Quand il n’y a ni eau ni savon à portée, le capuchon fait le reste.</strong></p>
         </div>
       </article>
 
       <article class="unique">
         <p class="unique-num">05</p>
         <div>
-          <h3>Fait pour des mains de bébé</h3>
-          <p>Les doigts de bébé se logent dans le creux des soufflets : le biberon ne lui glisse pas des mains. Un enfant de six mois l’attrape, le tient, le repose. Les parents qui l’ont testé le disent avant tout le reste : leur bébé le prend tout seul.</p>
+          <h3>Toutes les tailles dans un seul biberon</h3>
+          <p>De 30 à 300 ml, par paliers de 30. Aucun autre biberon ne change de contenance : on en achète un de 150 pour les débuts, un de 260 ensuite, un de 330 pour finir. <strong>Celui-ci les remplace tous les trois.</strong></p>
         </div>
       </article>
 
@@ -1822,7 +1842,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <div class="section-head center">
       <p class="overline">Entre leurs mains</p>
       <h2 class="section-title">Ils le tiennent tout seuls.</h2>
-      <p>23 grammes à vide, tétine et capuchon compris. Assez léger pour de petits bras, et des soufflets dont le creux retient les doigts. C’est ce que les parents testeurs citent avant tout le reste : leur enfant le prend, le tient, le repose.</p>
+      <p>Vingt-trois grammes : assez léger pour de petits bras. Et les doigts de bébé se logent dans le creux des soufflets, si bien que le biberon ne leur glisse pas des mains. Un enfant de six mois l’attrape, le tient, le repose.</p>
     </div>
 
     <div class="mains-grille">
@@ -1830,6 +1850,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <figure><img src="assets/bebe-2.webp" width="900" height="900" alt="Un enfant tient le biberon BIBEON violet à deux mains, les doigts posés sur les soufflets" loading="lazy"></figure>
       <figure><img src="assets/bebe-3.webp" width="900" height="900" alt="Une enfant boit au biberon BIBEON vert, installée dans des coussins" loading="lazy"></figure>
     </div>
+
+    <p class="chute">Il n’a rien eu à apprendre.<br><em>Il l’a simplement pris.</em></p>
   </div>
 </section>
 
@@ -1839,7 +1861,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <div class="section-head center">
       <p class="overline">Les avis des parents</p>
       <h2 class="section-title">65 familles l’ont testé.</h2>
-      <p>BIBEON a été soumis aux mères testeuses de ConsoBaby&amp;Kid, premier site français d’avis de parents. Les avis y sont vérifiés et publiés sans que nous puissions les modifier.</p>
+      <p>BIBEON a été soumis aux mères testeuses de ConsoBaby&amp;Kid, premier site français d’avis de parents. Les avis y sont vérifiés et publiés sans que nous puissions les modifier — <strong>y compris les critiques que vous lirez plus bas</strong>.</p>
     </div>
 
     <p class="avis-badge">Badge <strong>ConsoBaby&amp;Kid</strong> — attribué aux seuls produits notés au moins 4,2 sur 5, avec un minimum de 30 avis.</p>
@@ -1876,7 +1898,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
           <li><b>8 avis sur 65</b> — le dépliage, qui réclame un peu d’habitude les premières fois.</li>
           <li><b>5 avis sur 65</b> — la tétine : ces parents souhaiteraient d’autres débits selon l’âge.</li>
           <li><b>4 avis sur 65</b> — le goulot, jugé étroit au moment de verser la dose de poudre.</li>
-          <li><b>3 avis sur 65</b> — le prix, jugé élevé. Trois sur soixante-cinq, quand la note du rapport qualité-prix reste à 4,2 sur 5.</li>
+          <li><b>3 avis sur 65</b> — le prix, jugé élevé.</li>
         </ul>
         <p class="avis-reponse">Nous publions ces retours tels quels, avec leur nombre. Ce sont eux qui guident la suite : le mode d’emploi vidéo de ce site répond aux deux premiers points.</p>
       </article>
@@ -1905,6 +1927,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <p class="center avis-lien">
       <a class="btn btn-ghost" href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">Lire les 65 avis sur ConsoBaby&amp;Kid</a>
     </p>
+  
+    <p class="chute">Nous publions aussi ce qu’ils nous reprochent.<br><em>Ce sont eux qui écrivent la suite.</em></p>
   </div>
 </section>
 
@@ -1978,6 +2002,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
         <a href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser</a>
         <a href="biberon-entame-refrigerateur.html">Biberon entamé : que faire du reste ?</a>
+        <a href="silicone-medical-alimentaire-biberon.html">Silicone médical ou alimentaire ?</a>
       <a href="index.html#preuves">Nos garanties</a>
       <a href="index.html#avis">Les avis</a>
       <a href="index.html#faq">Questions fréquentes</a>
