@@ -380,6 +380,10 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .definition{margin:16px 0 18px;padding:16px 20px;border-left:3px solid var(--sage-soft);
   background:rgba(255,255,255,.55);font-size:14.5px;line-height:1.7}
 
+.grad-vue{margin:18px 0 0;max-width:340px}
+.grad-vue video{display:block;width:100%;height:auto;border-radius:16px;background:var(--navy)}
+.grad-vue figcaption{margin-top:9px;font-size:13px;line-height:1.55;color:#7b8579}
+
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
 .chute{
@@ -1854,11 +1858,17 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         </div>
       </article>
 
-      <article class="unique">
+      <article class="unique unique-video">
         <p class="unique-num">05</p>
         <div>
           <h3>Toutes les tailles dans un seul biberon</h3>
           <p>De 30 à 300 ml, par paliers de 30 — <strong>une graduation gravée dans le moule, jamais imprimée</strong> : elle ne s’effacera pas au lavage. Aucun autre biberon ne change de contenance : on en achète un de 150 pour les débuts, un de 260 ensuite, un de 330 pour finir. <strong>Celui-ci les remplace tous les trois.</strong></p>
+          <figure class="grad-vue">
+            <video src="assets/graduation-gravee.mp4" poster="assets/graduation-gravee.webp"
+                   autoplay muted loop playsinline preload="none"
+                   aria-label="Gros plan sur les soufflets du biberon : les volumes gravés dans la matière à chaque palier"></video>
+            <figcaption>Les volumes gravés dans la matière, un par soufflet.</figcaption>
+          </figure>
         </div>
       </article>
 
