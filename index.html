@@ -160,7 +160,7 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 }
 .hero-fond{
   position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:35% center;z-index:-2;
+  object-fit:cover;object-position:center center;z-index:-2;
   filter:saturate(.72) contrast(1.03) sepia(.05);
 }
 .hero-voile{
@@ -392,6 +392,11 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .grad-vue figcaption{margin-top:10px;font-size:12.5px;color:#7b8579}
 
 .renv-image-2{margin-top:18px}
+
+.essai-film{margin:22px 0 0;max-width:420px}
+.essai-film video{display:block;width:100%;height:auto;border-radius:18px;
+  border:1px solid var(--line);background:var(--navy)}
+.essai-film figcaption{margin-top:10px;font-size:12.5px;line-height:1.6;color:#7b8579}
 
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
@@ -1236,7 +1241,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="accueil">
-  <video class="hero-fond" src="assets/hero-prairie-boucle.mp4" poster="assets/hero-prairie.jpg"
+  <video class="hero-fond" src="assets/hero-serre.mp4" poster="assets/hero-serre.webp"
          autoplay muted loop playsinline preload="metadata" aria-hidden="true" tabindex="-1"></video>
   <div class="hero-voile" aria-hidden="true"></div>
 
@@ -1313,6 +1318,13 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <p>Trente millilitres d’eau pour un médicament. Quatre-vingt-dix pour un petit appétit. Deux cent quarante pour un grand. Trois cents pour un potage. Vous ne choisissez plus entre un biberon de 150, un de 260 et un de 330 : <strong>vous donnez à celui-ci la taille dont vous avez besoin</strong>, au moment où vous en avez besoin.</p>
       <p>La graduation n’est pas imprimée, elle est gravée dans le moule — un repère par soufflet. Elle n’est juste qu’à une condition : <strong>que tous les soufflets situés en dessous soient dépliés.</strong> Chaque soufflet resté fermé retire 30 ml à ce que le trait annonce.</p>
       <p class="essai-note">Faites glisser le curseur : le biberon se déplie, et le volume s’affiche.</p>
+
+      <figure class="essai-film">
+        <video src="assets/depliage-plan.mp4" poster="assets/depliage-plan.webp"
+               autoplay muted loop playsinline preload="metadata"
+               aria-label="Le biberon BIBEON qui se déplie soufflet après soufflet, du format replié à sa hauteur complète"></video>
+        <figcaption>Le dépliage complet, en un seul geste.</figcaption>
+      </figure>
 
       <div class="essai-verrou">
         <h3>Des soufflets qui tiennent la position.</h3>
