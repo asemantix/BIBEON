@@ -161,6 +161,7 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .hero-fond{
   position:absolute;inset:0;width:100%;height:100%;
   object-fit:cover;object-position:35% center;z-index:-2;
+  filter:saturate(.72) contrast(1.03) sepia(.05);
 }
 .hero-voile{
   position:absolute;inset:0;z-index:-1;
@@ -341,7 +342,7 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .defi p{margin:0 0 15px;font-size:16px;line-height:1.75}
 .defi .chute{margin:26px auto 0;text-align:center;max-width:24ch}
 
-.rose-vue{margin:34px auto 40px;max-width:820px}
+.rose-vue{margin:30px auto 36px;max-width:460px}
 .rose-vue video{display:block;width:100%;height:auto;border-radius:var(--radius);box-shadow:var(--shadow-m)}
 .rose-vue figcaption{margin-top:12px;text-align:center;font-size:12px;letter-spacing:.06em;
                      text-transform:uppercase;color:var(--sage)}
@@ -381,9 +382,16 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .definition{margin:16px 0 18px;padding:16px 20px;border-left:3px solid var(--sage-soft);
   background:rgba(255,255,255,.55);font-size:14.5px;line-height:1.7}
 
-.grad-vue{margin:22px 0 0;max-width:100%}
-.grad-vue video{display:block;width:100%;height:auto;border-radius:16px;background:var(--navy)}
-.grad-vue figcaption{margin-top:9px;font-size:13px;line-height:1.55;color:#7b8579}
+.grad-vue{margin:18px 0 0}
+.grad-vue video{
+  display:block;width:100%;aspect-ratio:5/3;
+  object-fit:cover;object-position:72% center;
+  border-radius:18px;border:1px solid var(--line);
+  filter:contrast(1.06);
+}
+.grad-vue figcaption{margin-top:10px;font-size:12.5px;color:#7b8579}
+
+.renv-image-2{margin-top:18px}
 
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
@@ -1268,6 +1276,10 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <img src="assets/monde-davant.webp" width="1400" height="777" loading="lazy"
            alt="Des biberons rigides classiques disposés autour d’une boîte doseuse de lait en poudre">
     </figure>
+    <figure class="renv-image renv-image-2">
+      <img src="assets/sortir-leger.webp" width="1500" height="844" loading="lazy"
+           alt="Un biberon BIBEON debout au milieu de biberons classiques qui s’effondrent autour de lui">
+    </figure>
     <p class="chute chute-claire">On n’a pas amélioré le biberon.<br><em>On a supprimé tout le reste.</em></p>
   </div>
 </section>
@@ -1566,7 +1578,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <h3>Le lot de trois BIBEON</h3>
         <p>Trois repas dosés la veille : la journée entière tient dans le sac à main, et rien d’autre à emporter.</p>
         <p class="lot-note">Menthe, abricot et lilas — un de chaque</p>
-        <div class="bas"><span class="prix">87 €<small>soit 29 € l’unité · port compris · coloris au choix</small></span><a class="btn btn-primary btn-sm" href="https://py.pl/2Oc3yYLWaB7" target="_blank" rel="noopener">Commander</a></div>
+        <div class="bas"><span class="prix">87 €<small>soit 29 € l’unité · port compris</small></span><a class="btn btn-primary btn-sm" href="https://py.pl/2Oc3yYLWaB7" target="_blank" rel="noopener">Commander</a></div>
       </article>
 
       <article class="produit">
@@ -1866,7 +1878,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
           <p>De 30 à 300 ml, par paliers de 30 — <strong>une graduation gravée dans le moule, jamais imprimée</strong> : elle ne s’effacera pas au lavage. Aucun autre biberon ne change de contenance : on en achète un de 150 pour les débuts, un de 260 ensuite, un de 330 pour finir. <strong>Celui-ci les remplace tous les trois.</strong></p>
           <figure class="grad-vue">
             <video src="assets/graduation-gravee.mp4" poster="assets/graduation-gravee.webp"
-                   autoplay muted loop playsinline preload="none"
+                   autoplay muted loop playsinline preload="metadata"
                    aria-label="Gros plan sur les soufflets du biberon : les volumes gravés dans la matière à chaque palier"></video>
             <figcaption>Les volumes gravés dans la matière, un par soufflet.</figcaption>
           </figure>
@@ -2053,9 +2065,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
     <div class="footer-col">
       <h3>Informations</h3>
-      <span>Mentions légales — à venir</span>
-      <span>Conditions de vente — à venir</span>
-      <span>Confidentialité — à venir</span>
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="cgv.html">Conditions générales de vente</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
     </div>
 
     <div class="footer-col">
@@ -2075,7 +2087,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
 <script>
 /* --- le film du hero, ralenti --- */
-(function(){ var f=document.querySelector(".hero-fond"); if (f) f.playbackRate = 0.6; })();
+(function(){ document.querySelectorAll(".hero-fond, .grad-vue video").forEach(function(v){ v.playbackRate = 0.6; }); })();
 
 /* BIBEON — comportements de la page */
 (function () {
