@@ -206,9 +206,9 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .rassure-points > span{white-space:nowrap}
 .rassure-points span{display:inline-flex;align-items:center}
 .rassure-points span+span::before{content:"·";margin-right:20px;color:var(--sage);font-weight:700}
-.rassure-avis{display:inline-flex;align-items:center;gap:7px;text-decoration:none;white-space:nowrap}
-.rassure-avis b{font-family:"Playfair Display",Georgia,serif;font-size:16px;font-weight:600;color:var(--navy);line-height:1}
-.rassure-avis span{font-size:10px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#8d968a;white-space:nowrap}
+.rassure-avis{display:inline-flex;align-items:center;gap:9px;text-decoration:none;white-space:nowrap;margin-left:4px}
+.rassure-avis b{font-family:"Playfair Display",Georgia,serif;font-size:24px;font-weight:600;color:var(--navy);line-height:1}
+.rassure-avis span{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);white-space:nowrap}
 @media (max-width:700px){.hero{min-height:82vh;padding-bottom:44px}}
 
 /* ---------- le renversement ---------- */
@@ -321,7 +321,6 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
   color:var(--sage-dark);
 }
 
-
 .pedigree-signe{
   margin:26px 0 0;padding-top:22px;border-top:1px solid var(--line);
   text-align:center;font-size:15px;color:var(--text);
@@ -365,14 +364,18 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 
 .boutique-note{max-width:70ch;margin:26px auto 0;text-align:center;font-size:14px;line-height:1.7;color:#7b8579}
 
-.usage-avion{margin:0 0 26px;padding:32px 38px;border-radius:var(--radius);background:var(--navy);
+.usage-avion{display:grid;grid-template-columns:0.95fr 1fr;gap:34px;align-items:center;margin:0 0 26px;padding:30px 34px;border-radius:var(--radius);background:var(--navy);
   color:rgba(255,255,255,.86)}
 .usage-avion h3{margin:0 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
   font-size:clamp(23px,2.4vw,30px);color:#fff;line-height:1.2}
 .usage-avion p{margin:0 0 13px;font-size:16px;line-height:1.75}
 .usage-pratique{padding-top:13px;border-top:1px solid rgba(255,255,255,.22);font-size:14.5px;color:#cfe0b8}
-.usage-avion p{max-width:72ch}
-@media (max-width:820px){.usage-avion{padding:24px}}
+.avion-duo{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.usage-avion figure{margin:0}
+.usage-avion img{display:block;width:100%;height:auto;border-radius:14px}
+.usage-avion figcaption{margin-top:8px;text-align:center;font-size:11px;font-weight:600;
+  letter-spacing:.18em;text-transform:uppercase;color:#cfe0b8}
+@media (max-width:820px){.usage-avion{grid-template-columns:1fr;padding:24px}}
 
 .film-nettoyage{margin:22px 0;padding:20px 24px;border-radius:16px;
   background:var(--sage-tint);border:1px solid var(--sage-soft);font-size:15.5px;line-height:1.75}
@@ -399,6 +402,16 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 .gestes-film video{display:block;width:100%;height:auto;border-radius:20px;
   border:1px solid var(--line);background:var(--navy)}
 .gestes-film figcaption{margin-top:11px;text-align:center;font-size:13px;line-height:1.6;color:#7b8579}
+
+.matiere-lien{margin-top:16px;font-size:15px}
+.matiere-lien a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft);text-decoration:none}
+
+.citation-suzanne{max-width:62ch;margin:30px auto 0;padding:24px 30px;border-left:3px solid var(--sage-soft);
+  background:rgba(255,255,255,.06);font-family:"Playfair Display",Georgia,serif;font-style:italic;
+  font-size:19px;line-height:1.55}
+.citation-suzanne strong{font-style:normal;font-weight:500}
+.citation-suzanne cite{display:block;margin-top:14px;font-family:Montserrat,sans-serif;font-size:11.5px;
+  font-style:normal;letter-spacing:.12em;text-transform:uppercase;opacity:.75}
 
 /* ---------- chute de section ---------- */
 .demo-grid .chute{margin-inline:0;text-align:left;max-width:20ch}
@@ -660,20 +673,15 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   *{animation:none!important;transition:none!important}
 }
 
-
-
 .film-frame{margin-top:22px;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
             background:var(--beige-2);aspect-ratio:1280/666}
 .film-frame video{width:100%;height:100%;display:block;object-fit:contain;background:var(--beige-2)}
-
 
 .contact-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:flex-end}
 .tel-lien{font-family:"Playfair Display",Georgia,serif;font-size:30px;color:var(--sage-dark);
           letter-spacing:.02em;white-space:nowrap;text-decoration:none}
 .tel-lien:hover{text-decoration:underline;text-underline-offset:5px}
 @media (max-width:760px){.contact-actions{justify-content:flex-start}}
-
-
 
 .lot-note{margin:14px 0 6px;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--sage)}
 
@@ -767,7 +775,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   .fiche span:last-child{border-bottom:0!important}
 }
 
-
 /* ---------- ils en parlent (section désactivée par défaut) ---------- */
 .presse{padding:70px 0;background:var(--white)}
 .presse-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:34px}
@@ -776,8 +783,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 .presse-extrait{margin:0 0 14px;font-family:"Playfair Display",Georgia,serif;font-size:21px;
                 color:var(--navy);line-height:1.35}
 .presse-item a{font-size:13px;text-decoration:underline;text-underline-offset:3px}
-
-
 
 /* ---------- le film ---------- */
 .film{padding:70px 0;background:var(--beige-2)}
@@ -854,8 +859,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 @media (max-width:700px){.bonus{grid-template-columns:1fr;gap:14px}
   .bonus-etiquette{justify-self:start}}
 
-
-
 /* ---------- vidéo verticale bornée ---------- */
 .video-compacte{width:min(100%,500px);margin-inline:auto;margin-top:26px}
 .video-compacte video{display:block;width:100%;height:auto;max-height:70vh;object-fit:contain;
@@ -912,7 +915,6 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
        padding:26px 24px;box-shadow:var(--shadow-s)}
 .usage h3{margin:0 0 10px;font-size:23px;color:var(--sage-dark);line-height:1.25}
 .usage p{margin:0;font-size:14.5px}
-
 
 .usage-photo{margin:34px 0 0;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
              background:var(--white);box-shadow:var(--shadow-s)}
@@ -1075,6 +1077,11 @@ footer .brand svg.brand-logo{height:30px}
       "@type": "FAQPage",
       "@id": "https://bibeon.fr/#faq",
       "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Mon b\u00e9b\u00e9 acceptera-t-il cette t\u00e9tine ?",
+          "acceptedAnswer": {"@type": "Answer", "text": "C\u2019est la question que se posent la plupart des parents avant d\u2019acheter. Les t\u00e9moignages vont dans le m\u00eame sens : des enfants habitu\u00e9s \u00e0 une seule marque depuis un an l\u2019ont adopt\u00e9e sans difficult\u00e9. La t\u00e9tine est en silicone alimentaire, \u00e0 d\u00e9bit 6 mois."}
+        },
         {
           "@type": "Question",
           "name": "Comment emporter un biberon en voyage sans encombrer le sac ?",
@@ -1252,8 +1259,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
   <div class="shell hero-contenu">
     <p class="overline">Fabriqué en France · Testé par le LNE</p>
-    <h1>Le biberon nomade sans rien à transporter <em>de plus.</em></h1>
-    <p class="hero-phrase">Il tient dans la poche. Préparez ici, nourrissez partout.</p>
+    <h1>Le biberon nomade.<br>Sans rien à transporter, <em>de plus.</em></h1>
+    <p class="hero-phrase">Il tient dans la poche, la poudre déjà dedans. Préparez ici, nourrissez partout.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="#boutique">Découvrir BIBEON</a>
       <a class="btn btn-clair" href="#fonctionnement">Voir comment ça marche</a>
@@ -1278,9 +1285,11 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <p class="overline">L’ancien monde</p>
     <h2 class="renv-titre">Pour une heure dehors,<br>on <em>déménage.</em></h2>
     <div class="renv-corps">
-      <p>Ils sont beaux. Le grand biberon — de verre, de plastique épais ou de silicone — la boîte doseuse à étages, le sac assorti : de beaux objets, bien faits, choisis avec soin. À la maison, ils ne posent aucun problème.</p>
-      <p>C’est dehors qu’ils se paient. Lourds, encombrants, et trois objets à sortir pour un seul repas — avec des gestes à faire debout, sans table, un bébé dans les bras. Une course de vingt minutes se prépare comme un départ.</p>
+      <p>Ils sont beaux. Le grand biberon, la boîte doseuse à étages, le sac assorti : des objets bien faits, choisis avec soin. À la maison, ils ne posent aucun problème.</p>
+      <p><strong>C’est dehors qu’ils se paient.</strong> Trois objets à sortir pour un seul repas, debout, sans table, un bébé dans les bras.</p>
       <p>BIBEON ne s’ajoute pas à cette liste. <strong>Il la remplace.</strong></p>
+
+      <blockquote class="citation-suzanne">« Quinze jours après la naissance, BIBEON a commencé à germer. Plus tard, quand bébé a eu six mois et plus, je ne sortais plus. Faire les grands magasins avec six grands biberons vides dans la poussette, en plus des couches — non.<br><strong>BIBEON est né de cette perte de liberté.</strong> »<cite>Suzanne de Bégon, inventrice</cite></blockquote>
     </div>
     <figure class="renv-image">
       <img src="assets/monde-davant.webp" width="1400" height="777" loading="lazy"
@@ -1300,9 +1309,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <div class="leger-texte">
       <p class="overline">Une journée dehors</p>
       <h2 class="section-title">Un sac à main.<br>Le biberon dedans,<br>déjà dosé. <em>C’est tout.</em></h2>
-      <p>Une balade, des courses, la salle d’attente du pédiatre. Le week-end chez des amis, la chambre d’hôtel, et jusqu’à l’avion. Partout où il fallait s’organiser, il n’y a plus rien à organiser : vos affaires tiennent en un goupillon et trois biberons de poche.</p>
-      <p>Comptez ce que vous emportiez : un biberon rigide, une boîte doseuse, un sac à langer pour un aller-retour au parc. Trois objets, et une sortie qui se prépare comme un voyage.</p>
-      <p>Comptez maintenant : trois repas déjà dosés, dans un sac à main. La poudre y est depuis la maison. Il ne reste que l’eau à trouver, et on en trouve partout.</p>
+      <p>Une balade, des courses, la salle d’attente du pédiatre. Le week-end chez des amis, la chambre d’hôtel, et jusqu’à l’avion.</p>
+      <p><strong>Avant :</strong> un biberon rigide, une boîte doseuse, un sac à langer — pour un aller-retour au parc.</p>
+      <p><strong>Maintenant :</strong> trois repas déjà dosés, dans un sac à main. Il ne reste que l’eau, et on en trouve partout.</p>
       <p class="chute">Avant, c’était le sac à langer.<br><em>Maintenant, c’est le sac à main.</em></p>
     </div>
     <figure class="leger-image">
@@ -1321,14 +1330,12 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <p class="overline">Essayez le geste</p>
       <h2 class="section-title">Toutes les tailles,<br><em>un seul biberon.</em></h2>
       <p>Trente millilitres d’eau pour un médicament. Quatre-vingt-dix pour un petit appétit. Deux cent quarante pour un grand. Trois cents pour un potage. Vous ne choisissez plus entre un biberon de 150, un de 260 et un de 330 : <strong>vous donnez à celui-ci la taille dont vous avez besoin</strong>, au moment où vous en avez besoin.</p>
-      <p>La graduation n’est pas imprimée, elle est gravée dans le moule — un repère par soufflet. Elle n’est juste qu’à une condition : <strong>que tous les soufflets situés en dessous soient dépliés.</strong> Chaque soufflet resté fermé retire 30 ml à ce que le trait annonce.</p>
       <p class="essai-note">Faites glisser le curseur : le biberon se déplie, et le volume s’affiche.</p>
 
       <div class="essai-verrou">
         <h3>Des soufflets qui tiennent la position.</h3>
         <p>Chaque soufflet reste où on le laisse. Il faut une vraie pression pour le déplier ou le replier : c’est un effort demandé au parent, et il est voulu. <strong>Le biberon ne peut pas se refermer inopinément</strong> — ni dans le sac, ni pendant la tétée.</p>
       </div>
-
 
     </div>
 
@@ -1354,9 +1361,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="etapes" id="fonctionnement">
   <div class="shell">
     <div class="section-head center">
-      <p class="overline">Comment ça marche ?</p>
+      <p class="overline">Dosez, dépliez, versez</p>
       <h2 class="section-title">Trois gestes, et rien de plus.</h2>
-      <p>BIBEON est vendu vide. Le lait en poudre et l’eau ne sont pas fournis.</p>
+      
     </div>
 
     <div class="etapes-grid">
@@ -1364,21 +1371,21 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <div class="etape-visuel"><img src="assets/etape-1.webp" width="454" height="482" alt="Le biberon replié, ouvert, et la dose de lait en poudre versée à l’intérieur" loading="lazy"></div>
         <div class="etape-num">1</div>
         <h3>Dosez</h3>
-        <p>Avant de sortir, versez vos doses de lait en poudre dans le biberon <strong>totalement replié</strong>, puis refermez. Capuchon vissé, il est <strong>hermétique</strong> : ni air ni humidité n’entrent. Conservez-le à l’abri de la lumière, dans un sac à main ou un placard. Jusqu’à 8 doses tiennent à l’intérieur, de quoi couvrir les plus gros appétits.</p>
+        <p>Chez vous, versez vos doses de lait en poudre dans le biberon replié. Capuchon vissé, il est <strong>hermétique</strong> : jusqu’à huit doses y attendent, à l’abri de l’air et de l’humidité.</p>
       </article>
 
       <article class="etape">
         <div class="etape-visuel"><img src="assets/etape-2.webp" width="454" height="482" alt="Le biberon que l’on déplie pour retrouver sa contenance" loading="lazy"></div>
         <div class="etape-num">2</div>
         <h3>Dépliez</h3>
-        <p>Au moment du repas, dépliez le corps à soufflets <strong>en totalité</strong>, quel que soit le volume à préparer. Un seul soufflet resté replié sous la graduation visée, et il manque 30 ml : le dosage ne correspond plus à la réalité de ce qui est indiqué.</p>
+        <p>Au moment du repas, dépliez le corps <strong>en totalité</strong>, quel que soit le volume à préparer.</p>
       </article>
 
       <article class="etape">
         <div class="etape-visuel"><img src="assets/etape-3.webp" width="454" height="482" alt="De l’eau versée dans le biberon déplié" loading="lazy"></div>
         <div class="etape-num">3</div>
         <h3>Ajoutez l’eau</h3>
-        <p>Ajoutez l’eau, secouez, et le biberon est prêt. Déplié, le relief des soufflets brise les grumeaux au secouage : aucun accessoire n’est nécessaire. Plus de boîte doseuse à transporter à côté.</p>
+        <p>Ajoutez l’eau, secouez, c’est prêt. Le relief des soufflets brise les grumeaux : <strong>aucun accessoire</strong>.</p>
       </article>
     </div>
 
@@ -1417,28 +1424,28 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     </div>
 
     <div>
-      <p class="overline">Le film</p>
+      <p class="overline">Une minute, tout est dit</p>
       <h2 class="section-title">Le biberon en main,<br>du dosage au repas.</h2>
-      <p>Une minute pour voir ce qu’aucun texte ne montre vraiment : le dépliage, la poudre versée dans le biberon replié, l’eau ajoutée par-dessus, les soufflets qu’on abaisse à mesure que le lait descend — puis le nettoyage et le séchage. <strong>Plus rien ne vous échappera.</strong></p>
-      <p>BIBEON ne prétend pas remplacer votre biberon du quotidien. Il a été conçu pour tout ce qui commence quand vous fermez la porte. <strong>Chez vous, gardez vos biberons. Dehors, c’est son territoire.</strong></p>
-      <p class="film-nettoyage"><strong>Des soufflets qui rendent tout l’intérieur accessible.</strong> La forme de BIBEON peut sembler plus difficile à nettoyer qu’un biberon rigide. En réalité, ses soufflets pliables permettent un geste impossible avec un flacon rigide : <strong>accéder directement avec les doigts au fond du biberon et à chacun de ses plis.</strong></p>
-      <p>Une question ? Nous sommes là pour y répondre.</p>
+      <p>Le dépliage, le dosage, l’eau, les soufflets qu’on abaisse à mesure que le lait descend. Puis le nettoyage et le séchage.</p>
+      <p>Il n’a pas été conçu pour remplacer votre biberon du quotidien. <strong>Chez vous, gardez vos biberons. Dehors, c’est son territoire.</strong></p>
+      <p class="film-nettoyage"><strong>Le biberon à contre-courant.</strong> Difficile à nettoyer ? C’est l’inverse : il se déplie pour donner accès au fond et à tous les recoins — un geste impossible avec un flacon rigide.</p>
+      
       <p><a class="btn btn-ghost" href="mode-demploi.html">Voir le mode d’emploi détaillé</a></p>
     </div>
+  
+    <p class="chute">« Je n’ai eu aucun complexe à concevoir un biberon à contre-courant.<br><em>On ne peut pas emporter la maison chaque fois qu’on franchit la porte. »</em></p>
   </div>
 </section>
 
 <!-- ================= LA MATIÈRE ================= -->
 <section class="matiere" aria-label="Le référentiel applicable">
   <div class="shell matiere-carte">
-    <p class="overline">La matière</p>
-    <h2 class="section-title">Conçu pour le <em>lait de bébé.</em></h2>
+    <p class="overline">Conçu pour le lait de bébé</p>
+    <h2 class="section-title">Zéro résidu <em>détecté.</em></h2>
     <div class="matiere-corps">
-      <p>Un biberon n’est ni un implant ni un dispositif médical — <strong>fût-il donné à un enfant malade, à l’hôpital.</strong> C’est un matériau au contact des denrées alimentaires, et le référentiel qui s’y applique est celui des MCDA.</p>
-      <p class="definition">Un <strong>dispositif médical</strong> est un objet destiné à soigner, diagnostiquer ou surveiller : une seringue, un cathéter, une prothèse. Un <strong>implant</strong> est celui qu’on pose à l’intérieur du corps et qui y reste. Leur conformité s’évalue sur la tolérance des tissus vivants — pas sur ce qui migre dans un aliment.</p>
-      <p>Chez BIBEON, <strong>aucune pièce n’est agréée pour le contact médical : toutes le sont pour le contact alimentaire</strong>, comme la réglementation l’exige — le flacon en polypropylène, la bague et le capuchon en matière végétale, la tétine en silicone alimentaire.</p>
-      <p>Et nous l’avons fait vérifier plutôt que de l’affirmer. Le LNE, le laboratoire qui fait autorité en France, a mesuré la migration du flacon dans les cinq coloris, de la bague et du capuchon. Verdict : zéro résidu détecté. Le seuil de détection est de 6 milligrammes par kilo — six millionièmes. En dessous, il n’y a plus rien à mesurer.</p>
-      <p><a class="btn btn-primary btn-sm" href="tests-migration-lne-bibeon.html">Voir les mesures du LNE</a></p>
+      <p>Tous les matériaux sont agréés au contact alimentaire, sans aucune exception, comme l’exige la réglementation des matériaux au contact des aliments — dont relèvent les biberons et les tétines.</p>
+      <p>Le <strong>Laboratoire national de métrologie et d’essais</strong> — le LNE, qui fait autorité en France — a réalisé les examens de migration globale obligatoires avant toute mise sur le marché.</p>
+      <p><a class="btn btn-primary btn-sm" href="tests-migration-lne-bibeon.html">Voir les résultats du LNE</a></p>
     </div>
   </div>
 </section>
@@ -1447,51 +1454,51 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="preuves" id="preuves">
   <div class="shell">
     <div class="section-head center">
-      <p class="overline">Nos garanties</p>
+      <p class="overline">Documents à disposition</p>
       <h2 class="section-title">Ce que nous pouvons prouver.</h2>
-      <p>Le rapport d’essais du LNE et l’attestation du fournisseur de matière vous sont remis sur simple demande.</p>
+      <p>Rapport d’essais du LNE et attestation du fournisseur, sur simple demande.</p>
     </div>
     <div class="preuves-grid">
       <article class="preuve">
         <div class="marque">50 %</div>
         <h3>Matière végétale</h3>
-        <p>La bague et le capuchon sont en matière d’origine végétale, ce qui les rend compostables. Douze grammes sur les vingt-trois du biberon : la moitié se vérifie sur une balance.</p>
+        <p>Bague et capuchon d’origine végétale, compostables. Douze grammes sur vingt-trois : <strong>la moitié se vérifie sur une balance.</strong></p>
       </article>
       <article class="preuve">
         <div class="marque">Sans</div>
         <h3>OGM ni gluten</h3>
-        <p>Cette matière végétale ne contient ni organisme génétiquement modifié, ni gluten. Attestation du fournisseur à disposition.</p>
+        <p>Ni organisme génétiquement modifié, ni gluten. Attestation du fournisseur à disposition.</p>
       </article>
       <article class="preuve">
         <div class="marque">LNE</div>
         <h3>Testé et contrôlé</h3>
-        <p>Le biberon a été testé par le Laboratoire national de métrologie et d’essais. Rapport d’essais de migration disponible sur demande.</p>
+        <p>Par le Laboratoire national de métrologie et d’essais. Rapport d’essais disponible sur demande.</p>
       </article>
       <article class="preuve">
         <div class="marque">0</div>
         <h3>Résidu de migration</h3>
-        <p>Aucune substance de migration n’a été détectée dans le lait. La mesure reste sous 6 mg par kilo d’aliment — le seuil en deçà duquel la méthode ne détecte plus rien — quand la limite autorisée pour un matériau au contact des denrées alimentaires est de 60.</p>
+        <p>Aucune substance détectée dans le lait. <strong>Sous 6 mg par kilo</strong>, quand la réglementation en autorise 60.</p>
         <p><a href="tests-migration-lne-bibeon.html">Consulter les essais de migration réalisés par le LNE</a></p>
       </article>
       <article class="preuve">
         <div class="marque">Sans</div>
         <h3>Bisphénol</h3>
-        <p>Le flacon est en polypropylène, une matière qui n’en contient pas — aucun essai bisphénol n’est d’ailleurs réalisé sur le polypropylène, pour cette raison même. Et il se plie sans le moindre assouplissant ajouté.</p>
+        <p>Le flacon est en polypropylène, une matière qui n’en contient pas. Et il se plie <strong>sans le moindre assouplissant ajouté</strong>.</p>
       </article>
       <article class="preuve">
         <div class="marque">330</div>
         <h3>Millilitres utiles</h3>
-        <p>Le corps est gradué jusqu’à 300 ml par paliers de 30 — un soufflet, une graduation. Les 30 ml situés au-dessus du dernier soufflet ne sont pas gradués.</p>
+        <p>Gradué jusqu’à 300 ml par paliers de 30 — un soufflet, une graduation.</p>
       </article>
       <article class="preuve">
         <div class="marque">Tétine</div>
         <h3>Silicone alimentaire</h3>
-        <p>La tétine fournie est en silicone alimentaire, à débit 6 mois. Une matière destinée au contact avec les aliments, et rien d’autre.</p>
+        <p>Tétine en silicone alimentaire, débit 6 mois. Une matière destinée au contact des aliments, et rien d’autre.</p>
       </article>
       <article class="preuve">
         <div class="marque">FR</div>
         <h3>Fabriqué en France</h3>
-        <p>Conçu et fabriqué en région lyonnaise, du moule au flacon. Une production locale, dans un secteur où elle est devenue rare.</p>
+        <p>Conçu et fabriqué en région lyonnaise, du moule au flacon.</p>
       </article>
     </div>
     <p class="chute">Nous n’affirmons rien<br><em>que le LNE n’ait mesuré.</em></p>
@@ -1507,9 +1514,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     <div>
       <p class="overline">Notre histoire</p>
       <h2 class="section-title">Ce biberon s’est déjà vendu<br><em>par millions.</em></h2>
-      <p>Tout commence en 1996. Trente ans plus tard, presque jour pour jour, il est encore là. Le corps à soufflets a fait l’objet d’un brevet en 1999. Entre 2002 et 2004, il est sorti de nos machines à raison d’un million d’exemplaires par mois, vendus par deux enseignes nationales — dans une version à usage unique, sous sachet scellé.</p>
-      <p>Puis il s’est arrêté. Pas faute d’acheteurs : à cause d’une affaire de sécurité sanitaire que nous avons nous-mêmes portée sur la place publique, et qui nous a coûté ce qu’elle devait coûter.</p>
-      <p>Vingt ans plus tard, les moules sont toujours là — mais le flacon, lui, a changé. Celui de 1996 ne devait se déplier qu’une seule fois : il était à usage unique. Il a fallu reprendre son architecture et la consolider pour qu’il supporte des centaines de dépliages sans que la matière ne fatigue, ni que la graduation ne dérive. C’est cette version-là qui revient : réutilisable, bague et capuchon en matière végétale, et mesurée sous les normes d’aujourd’hui.</p>
+      <p>Tout commence en 1996. Le corps à soufflets est breveté en 1999. Entre 2002 et 2004, il sort de nos machines à <strong>un million d’exemplaires par mois</strong>, vendus par deux enseignes nationales — en version à usage unique.</p>
+      <p>Puis il s’arrête. Pas faute d’acheteurs : à cause d’une affaire de sécurité sanitaire que nous avons nous-mêmes portée sur la place publique.</p>
+      <p>Vingt ans plus tard, les moules sont toujours là. Le flacon, lui, a changé : il fallait qu’il supporte des centaines de dépliages sans que la matière ne fatigue ni que la graduation ne dérive.</p>
       <a class="btn btn-primary" href="qui-sommes-nous.html">Lire l’histoire de BIBEON</a>
       <p class="chute">Le premier ne servait qu’une fois.<br><em>Celui-ci en supporte des centaines.</em></p>
     </div>
@@ -1519,15 +1526,14 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <!-- ================= COLORIS ================= -->
 <section class="coloris" aria-label="Les coloris BIBEON">
   <div class="shell">
-    <p class="overline">Les coloris</p>
+    <p class="overline">Une couleur par lieu de vie</p>
     <h2 class="section-title">Cinq coloris, cinq biberons<br><em>toujours au bon endroit.</em></h2>
     <div class="coloris-visuel">
       <img src="assets/coloris-strip.webp" width="1352" height="383" alt="Les cinq coloris du biberon BIBEON : menthe, abricot, lilas, rose et lin" loading="lazy">
     </div>
     <div class="coloris-corps">
-      <p>Un chez Mamie, un chez la nounou, un à la crèche, un dans la voiture et un dans le sac à main. Chaque coloris permet d’identifier immédiatement le biberon prévu pour chaque moment de la journée, sans oubli ni confusion.</p>
-      <p>Propre, sec et replié, il peut être préparé à l’avance avec la juste dose de lait en poudre. Au moment du repas, la personne qui s’occupe de bébé n’a rien à mesurer ni à mémoriser : elle déplie le biberon et ajoute simplement l’eau jusqu’au repère indiqué.</p>
-      <p>Et parce qu’à la crèche ou chez la nounou plusieurs biberons peuvent se ressembler, <strong>le capuchon plat peut accueillir une étiquette</strong> avec le prénom de l’enfant et le niveau d’eau à atteindre.</p>
+      <p><strong>Pour ne jamais tomber en panne de biberon :</strong> un chez Mamie, un chez la nounou, un à la crèche, un dans la voiture, un dans le sac à main.</p>
+      <p>Chacun attend déjà dosé. Sur le capuchon plat, une étiquette : le prénom de l’enfant, le niveau à atteindre. La personne qui le garde n’a rien à mesurer.</p>
     </div>
 
     <figure class="capuchon-figure">
@@ -1536,14 +1542,14 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <figcaption>Une étiquette sur le capuchon plat : le prénom de l’enfant et le niveau à atteindre.</figcaption>
     </figure>
 
-    <p class="chute">Cinq couleurs pour cinq lieux de vie.<br><em>Où que bébé soit, son biberon est déjà prêt.</em></p>
+    <p class="chute">Une couleur par lieu.<br><em>Un prénom sur le capuchon.</em></p>
   </div>
 </section>
 
 <!-- ================= AVANT LA BOUTIQUE ================= -->
 <section class="avant-boutique" aria-label="Pourquoi ce prix">
   <div class="shell">
-    <p class="overline">Avant de choisir</p>
+    <p class="overline">Pourquoi ce prix</p>
     <h2 class="section-title">Il ne pèse rien.<br>Et pourtant <em>il coûte.</em></h2>
     <p>Vingt-trois grammes, le poids d’une lettre : on se dit qu’un objet si léger ne peut pas valoir cher. Pour un biberon qui se plie, c’est l’inverse.</p>
     <p>Trop épais, il ne se plie plus — c’est un biberon ordinaire, et il pèse comme les autres. Trop fin, il cède à la troisième manipulation. Entre les deux, il n’existe qu’une seule épaisseur où les soufflets travaillent des centaines de fois sans que la graduation ne dérive. C’est celle-là qu’il a fallu trouver — et c’est cette même finesse qui met si peu de matière au contact du lait.</p>
@@ -1555,9 +1561,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="boutique" id="boutique">
   <div class="shell">
 
-
     <div class="section-head center">
-      <p class="overline">Notre boutique</p>
+      <p class="overline">Port compris, expédié sous 24 h</p>
       <h2 class="section-title">Les essentiels BIBEON.</h2>
       <p>Paiement par carte ou PayPal, expédition depuis la France, retour sous 14 jours. Pour un lot particulier ou une commande en volume, appelez-nous.</p>
     </div>
@@ -1714,7 +1719,6 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
   </div>
 </section>
 
-
 <!-- ================= VOYAGES / USAGES ================= -->
 <section class="usages" id="voyages">
   <div class="shell">
@@ -1729,10 +1733,23 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
     </figure>
 
     <div class="usage-avion">
+      <div class="avion-duo">
+        <figure>
+          <img src="assets/avion-arsenal.webp" width="832" height="832" loading="lazy"
+               alt="Une tablette d’avion encombrée : un grand biberon vide, une boîte doseuse ouverte, un sac à langer et une bouteille d’eau">
+          <figcaption>Avant</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/avion-bibeon.webp" width="900" height="900" loading="lazy"
+               alt="La même tablette d’avion : un sac à main, un biberon BIBEON replié et une bouteille d’eau">
+          <figcaption>Maintenant</figcaption>
+        </figure>
+      </div>
       <div>
         <h3>Biberon en avion</h3>
         <p>Le dossier du siège devant vous ne laisse rien. La tablette prend toute la place, un passager est assis à dix centimètres, et vous avez le bébé sur un bras. C’est le moment où il faudrait sortir l’arsenal — le grand biberon, la boîte doseuse, l’eau — et transvaser au-dessus de vos genoux.</p>
         <p>À la place, vous prenez dans votre sac à main, posée à côté du passeport, une petite chose pliée. Tout est déjà dedans. Il ne manque que l’eau, et l’hôtesse vous l’apporte.</p>
+        <p><strong>Cinq biberons dosés couvrent un long-courrier</strong>, selon l’appétit de bébé. Le grand sac à langer reste en soute — vous n’en avez plus besoin.</p>
         <p class="usage-pratique">Replié, il passe en bagage cabine : le lait en poudre voyage à sec, l’eau s’ajoute une fois côté embarquement.</p>
       </div>
     </div>
@@ -1783,11 +1800,15 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="faq" id="faq">
   <div class="shell">
     <div class="section-head center">
-      <p class="overline">Questions fréquentes</p>
+      <p class="overline">Ce qui revient le plus souvent</p>
       <h2 class="section-title">Ce que les parents nous demandent.</h2>
     </div>
 
     <div class="faq-liste">
+      <details class="faq-item">
+        <summary>Mon bébé acceptera-t-il cette tétine ?</summary>
+        <p>C’est la question que se posent la plupart des parents avant d’acheter. Les témoignages vont dans le même sens : des enfants habitués à une seule marque depuis un an l’ont adoptée sans difficulté. La tétine est en silicone alimentaire, à débit 6 mois.</p>
+      </details>
       <details class="faq-item">
         <summary>Comment emporter un biberon en voyage sans encombrer le sac ?</summary>
         <p>BIBEON se replie à la taille d’un petit pot : replié, il tient dans une poche de sac à main. Vous y placez les doses de lait en poudre avant de partir, vous le dépliez au moment du repas et vous ajoutez l’eau. Plus de boîte doseuse à transporter à côté, et plus de sac à langer à sortir pour une course d’une heure.</p>
@@ -1837,8 +1858,8 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <p class="overline">Le défi</p>
       <h3>Vingt-trois grammes, et ce fut le plus dur.</h3>
       <p>Moins de matière au contact du lait, et une matière qui se plie sans le moindre assouplissant ajouté : c’est ainsi que le laboratoire n’a détecté aucun résidu. La paroi fine n’est pas une économie de plastique, c’est une condition.</p>
-      <p>Mais une paroi trop fine cède à la troisième manipulation. Et une paroi épaisse ne se plie plus : le biberon redevient ordinaire, et pèse comme les autres. Plus épais encore, sur une architecture qui doit passer au chauffe-biberon, le plastique devient instable — il ne retrouve plus sa forme après chaque pliage, et <strong>la graduation se déplace</strong>. On croit verser 30 ml, il n’y en a que cinq.</p>
-      <p>Il fallait donc l’épaisseur exacte où tout tient ensemble : assez fine pour que les soufflets travaillent et que le dosage reste juste, assez solide pour supporter des centaines de dépliages. Et une géométrie qui contourne l’hystérésis du matériau — cette tendance du plastique à ne pas revenir à sa forme. Ce fut l’objet d’un brevet.</p>
+      <p>Une paroi trop fine cède à la troisième manipulation. Une paroi épaisse ne se plie plus : le biberon redevient ordinaire. Plus épaisse encore, elle devient instable au chauffe-biberon — la forme ne revient pas, et <strong>la graduation se déplace</strong>. On croit verser 30 ml, il n’y en a que cinq.</p>
+      <p>Il fallait l’épaisseur exacte où tout tient : assez fine pour que les soufflets travaillent, assez solide pour des centaines de dépliages. Et une géométrie qui contourne l’hystérésis du matériau. <strong>Ce fut l’objet d’un brevet.</strong></p>
       <p class="chute">Ce que vous soupesez n’est pas du plastique en moins.<br><em>C’est de la valeur en plus.</em></p>
     </div>
 
@@ -1855,10 +1876,11 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <p class="unique-num">01</p>
         <div>
           <h3>Nomade, vraiment</h3>
-          <p>Nomade veut dire quatre choses à la fois. <strong>Peu encombrant</strong> : replié, il tient dans une poche. <strong>Léger</strong> : 23 grammes à vide, tétine et capuchon compris. <strong>Sans boîte doseuse</strong> : le lait en poudre voyage <em>dans</em> le biberon, dosé chez vous — c’est un objet de moins dans le sac, et un geste de moins dehors. Et <strong>gain de place</strong> : trois biberons prêts occupent le volume d’un seul biberon rigide, vide.</p>
-          <p>À lui seul, il remplace <strong>trois accessoires</strong> : la boîte doseuse, l’écrase-grumeaux — le relief des soufflets s’en charge — et l’obturateur, ce disque plat qu’on glisse entre le flacon et la bague pour empêcher la tétine de fuir en transport. Ici, le capuchon plat obture lui-même l’orifice de la tétine : il n’y a rien à ajouter.</p>
-        </div>
-      </article>
+          <p><strong>Peu encombrant</strong> : replié, il tient dans une poche. <strong>Léger</strong> : 23 grammes à vide. <strong>Sans boîte doseuse</strong> : la poudre voyage dedans, dosée chez vous. <strong>Gain de place</strong> : trois biberons prêts occupent le volume d’un seul biberon rigide, vide.</p>
+          <p>À lui seul, il remplace <strong>trois accessoires</strong> : la boîte doseuse, l’écrase-grumeaux — le relief des soufflets s’en charge — et l’obturateur, ce disque plat qui empêche la tétine de fuir en transport. Le capuchon plat obture lui-même l’orifice.</p>
+          <p><strong>Et rien à poser.</strong> Un biberon classique demande une table et des mains lavées : il faut saisir chaque pièce. Ici, tout se fait par le capuchon.</p>
+          <p>C’est là que se joue le vrai test. <strong>Quand bébé pleure de faim, chaque objet à chercher dure deux fois plus longtemps</strong> — et tout le monde entend. Moins d’objets, moins de gestes : le repas arrive plus vite, et la tension retombe.</p>
+        </article>
 
       <article class="unique">
         <p class="unique-num">02</p>
@@ -1872,12 +1894,10 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <p class="unique-num">03</p>
         <div>
           <h3>Zéro air à l’intérieur</h3>
-          <p>C’est la conséquence directe du pliage, et personne d’autre ne peut l’offrir. Une fois replié sur la dose de lait en poudre, le biberon ne contient <strong>aucun volume d’air résiduel</strong> : les parois viennent au contact de la poudre. La tétine, repliée sur elle-même, voit son orifice obturé par le capuchon enfoncé bien à la verticale dans sa base.</p>
-          <p>Résultat : rien n’entre, rien ne sort. Pas d’air, pas d’humidité, et aucune fuite pendant les déplacements — même au fond d’un sac.</p>
+          <p>Replié sur la dose de poudre, le biberon ne contient <strong>aucun volume d’air</strong> : les parois viennent au contact. La tétine repliée voit son orifice obturé par le capuchon.</p>
+          <p>Rien n’entre, rien ne sort — ni air, ni humidité, ni fuite au fond d’un sac.</p>
         </div>
       </article>
-
-      
 
       <article class="unique">
         <p class="unique-num">04</p>
@@ -1929,7 +1949,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <section class="avis" id="avis" aria-label="Les avis des parents">
   <div class="shell">
     <div class="section-head center">
-      <p class="overline">Les avis des parents</p>
+      <p class="overline">Ils l’ont eu en main</p>
       <h2 class="section-title">65 familles l’ont testé.</h2>
       <p>BIBEON a été soumis aux mères testeuses de ConsoBaby&amp;Kid, premier site français d’avis de parents. Les avis y sont publiés sans que nous puissions les modifier — <strong>y compris les critiques que vous lirez plus bas</strong>.</p>
     </div>
@@ -1976,7 +1996,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
     <div class="temoignages">
       <figure>
-        <p>Une belle découverte, dont l’atout principal est la matière. Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup. Très pratique, il prend peu de place, et un service client au top.</p>
+        <p>Une belle découverte, dont l’atout principal est la matière. <strong>Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci</strong> — je crois que la forme y est pour beaucoup. Très pratique, il prend peu de place, et un service client au top.</p>
         <figcaption>Chloé G. · février 2025 · <span>Un super biberon innovant</span></figcaption>
       </figure>
       <figure>
@@ -2073,6 +2093,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
         <a href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser</a>
         <a href="biberon-entame-refrigerateur.html">Biberon entamé : que faire du reste ?</a>
         <a href="silicone-medical-alimentaire-biberon.html">Silicone médical ou alimentaire ?</a>
+        <a href="preparer-biberon-avion.html">Préparer un biberon en avion</a>
       <a href="index.html#preuves">Nos garanties</a>
       <a href="index.html#avis">Les avis</a>
       <a href="index.html#faq">Questions fréquentes</a>
@@ -2178,7 +2199,6 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
   }
 })();
 
-
 /* --- « Essayez le geste » : la planche se déplace au curseur --- */
 (function () {
   var vue   = document.getElementById("bibSprite"),
@@ -2200,7 +2220,6 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
   range.addEventListener("change", maj);
   maj();
 })();
-
 
 /* --- nuancier : choix du ou des coloris, image et menu PayPal suivent --- */
 (function () {
