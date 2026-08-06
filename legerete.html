@@ -23,7 +23,7 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
 
@@ -613,6 +613,70 @@ footer .brand svg.brand-logo{height:30px}
 .guide a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft);text-decoration:none}
 .guide a:hover{color:var(--navy)}
 
+.guide a.btn{
+  border-bottom:1px solid transparent;
+  text-decoration:none;
+}
+.guide a.btn-primary{
+  color:#fff;
+}
+.guide a.btn-primary:hover{
+  color:#fff;
+}
+.guide a.btn-ghost{
+  color:var(--navy);
+  border-color:var(--line);
+}
+.guide a.btn-ghost:hover{
+  color:var(--sage-dark);
+  border-color:var(--sage);
+}
+
+.price-box .big{
+  margin-bottom:10px;
+  font-family:"Playfair Display",Georgia,serif;
+  font-size:clamp(25px,3vw,34px);
+  line-height:1.2;
+  color:var(--navy);
+}
+
+.cost-item{
+  display:grid;
+  gap:4px;
+  min-width:220px;
+  flex:1 1 220px;
+}
+.cost-item b{
+  display:block;
+}
+.cost-item span{
+  font-size:13px;
+  line-height:1.5;
+}
+
+.review-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin:16px 0 20px;
+}
+.review-chips span{
+  padding:8px 12px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:var(--white);
+  font-size:13px;
+  line-height:1.4;
+}
+
+.link-panel p:last-child{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+}
+
+
 .article-summary{margin:34px 0 10px;padding:24px 28px;border-radius:var(--radius);
                  background:var(--cream);border:1px solid var(--line)}
 .article-summary strong{display:block;margin-bottom:12px;font-size:11px;letter-spacing:.22em;
@@ -647,19 +711,6 @@ footer .brand svg.brand-logo{height:30px}
 .conclusion{margin-top:46px;padding:32px 36px;border-radius:var(--radius);
             background:var(--cream);border:1px solid var(--line)}
 @media (max-width:700px){.article-summary ul{columns:1}}
-.guide a.btn{border-bottom:1px solid transparent;text-decoration:none}
-.guide a.btn-primary,.guide a.btn-primary:hover{color:#fff}
-.guide a.btn-ghost{color:var(--navy);border-color:var(--line)}
-.guide a.btn-ghost:hover{color:var(--sage-dark);border-color:var(--sage)}
-.price-box .big{margin-bottom:10px;font-family:"Playfair Display",Georgia,serif;
-  font-size:clamp(25px,3vw,34px);line-height:1.2;color:var(--navy)}
-.cost-item{display:grid;gap:4px;min-width:220px;flex:1 1 220px}
-.cost-item b{display:block}
-.cost-item span{font-size:13px;line-height:1.5}
-.review-chips{display:flex;flex-wrap:wrap;gap:10px;margin:16px 0 20px}
-.review-chips span{padding:8px 12px;border:1px solid var(--line);border-radius:999px;
-  background:var(--white);font-size:13px;line-height:1.4}
-.link-panel p:last-child{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
 </style>
 </head>
 
@@ -801,7 +852,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
       <div class="pack-box">
         <p class="overline">Une liberté inscrite dans son histoire</p>
         <h2>En l’an 2000, on l’appelait déjà le « Pack Liberté »</h2>
-        <p>Au début des années 2000, la première génération de Bibéon a été commercialisée sous licence par l’un des grands groupes français de l’alimentation infantile, sous l’appellation « Pack Liberté ».</p>
+        <p>Au début des années 2000, la première génération de Bibéon, commercialisée sous licence, était présentée sous l’appellation « Pack Liberté ».</p>
         <p>Ce nom disait déjà l’essentiel : libérer le parent d’une partie du poids, de l’encombrement et des contraintes associés au repas de bébé hors de la maison. Le BIBEON réutilisable d’aujourd’hui prolonge cette idée dans une architecture nouvelle, avec davantage de fonctions et une conception pensée pour plusieurs centaines d’utilisations.</p>
       </div>
 
