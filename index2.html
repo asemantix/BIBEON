@@ -25,7 +25,7 @@ font-family:Montserrat,-apple-system,Segoe UI,Arial,sans-serif;font-size:16px;li
 -webkit-font-smoothing:antialiased}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-.shell{width:min(1180px,calc(100% - 44px));margin-inline:auto}
+.shell{width:min(1320px,calc(100% - 64px));margin-inline:auto}
 .center{text-align:center}
 h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-weight:500}
 .overline{margin:0 0 18px;font-size:11px;font-weight:500;letter-spacing:.32em;
@@ -137,8 +137,9 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
    Trois niveaux, jamais plus : eyebrow Montserrat · titre Playfair · billets Playfair.
    Mêmes tailles, mêmes espacements, mêmes couleurs dans TOUTES les sections.
    Seuls les mots et le côté du visuel changent.                        */
-.bloc{padding:104px 0 96px}
-.bloc-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:center}
+/* Chaque bloc occupe l'écran. Le contenu reste centré, le vide fait le reste. */
+.bloc{padding:clamp(64px,9vh,112px) 0;min-height:100vh;display:flex;align-items:center}
+.bloc-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:80px;align-items:center}
 .bloc-grid .bloc-visuel{order:2}
 .bloc-grid.visuel-gauche{grid-template-columns:1.05fr 1fr}
 .bloc-grid.visuel-gauche .bloc-visuel{order:0}
@@ -159,24 +160,25 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
    libre  : le produit détouré vit directement sur le fond de section.
    demo   : le biberon est le sujet, le curseur est second. */
 .bloc-visuel{margin:0;display:flex;align-items:center;justify-content:center}
-.bloc-visuel.photo{height:440px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m)}
-.bloc-visuel.photo.ample{height:540px}
+.bloc-visuel.photo{height:min(620px,66vh);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m)}
+.bloc-visuel.photo.ample{height:min(700px,70vh)}
 .bloc-visuel.photo img,.bloc-visuel.photo video{display:block;width:100%;height:100%;object-fit:cover}
 .bloc-visuel.libre{height:auto;background:none;box-shadow:none;border-radius:0;overflow:visible}
-.bloc-visuel.libre img{display:block;width:auto;max-width:100%;height:auto;max-height:525px;
+.bloc-visuel.libre img{display:block;width:auto;max-width:100%;height:auto;max-height:min(640px,68vh);
   margin:0 auto;filter:drop-shadow(0 30px 44px rgba(17,37,58,.13))}
-.bloc-visuel.libre.elance img{max-height:505px}
+.bloc-visuel.libre.elance img{max-height:min(615px,66vh)}
 .bloc-visuel.demo{height:auto;background:none;box-shadow:none;border-radius:0;overflow:visible}
-.bloc-visuel.demo .bib-sprite{width:auto;max-width:none;height:520px;aspect-ratio:243/544;
+.bloc-visuel.demo .bib-sprite{width:auto;max-width:none;height:min(600px,54vh);aspect-ratio:243/544;
   border-radius:0;background-image:url("assets/depliage-sprite-large.webp")}
 .bloc-visuel.demo .essai-lecture{font-size:31px;margin-top:24px}
 .bloc-visuel.demo .essai-sous{margin-bottom:16px}
 @media (max-width:900px){
+  .bloc{min-height:0;display:block;padding:88px 0}
   .bloc-grid,.bloc-grid.visuel-gauche{grid-template-columns:1fr;gap:36px}
   .bloc-grid .bloc-visuel,.bloc-grid.visuel-gauche .bloc-visuel{order:0}
   .bloc-grid.visuel-gauche .bloc-texte{order:0}
   .bloc-visuel.photo,.bloc-visuel.photo.ample{height:360px}
-  .bloc-visuel.libre img,.bloc-visuel.libre.elance img{max-height:420px}
+  .bloc-visuel.libre img,.bloc-visuel.libre.elance img{max-height:440px}
   .bloc-visuel.demo .bib-sprite{height:400px}
 }
 
@@ -213,14 +215,16 @@ font-size:clamp(20px,2.2vw,27px);line-height:1.25;color:rgba(255,255,255,.9)}
 .visuel-produit.sur-blanc img{background:#fff}
 
 /* 7 · le grand film */
-.film-plein{padding:86px 0 78px;background:var(--navy);text-align:center}
-.film-plein .film-titre{margin:0 auto 34px;max-width:18ch;
+.film-plein{padding:clamp(64px,9vh,112px) 0;min-height:100vh;display:flex;align-items:center;
+background:var(--navy);text-align:center}
+.film-plein .film-titre{margin:0 auto 44px;max-width:18ch;
 font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(32px,4vw,54px);line-height:1.06;color:#fff}
 .film-plein .film-titre em{font-style:italic;color:#cfe0b8}
 .film-plein figure{margin:0}
-.film-plein figure{border-radius:var(--radius);overflow:hidden;background:var(--navy);line-height:0}
-.film-plein video{display:block;width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;
+.film-plein figure{border-radius:var(--radius);overflow:hidden;background:var(--navy);line-height:0;
+height:min(760px,62vh)}
+.film-plein video{display:block;width:100%;height:100%;object-fit:cover;
 border-radius:0;background:var(--navy)}
 
 /* 10 · réchauffage */
