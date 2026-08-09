@@ -412,6 +412,36 @@ font-size:clamp(17px,1.5vw,21px);line-height:1.45;color:var(--sage-dark)}
   .main-item:nth-child(2){transform:none}
   .mains-chute{margin-top:56px}
 }
+
+/* ═══════════ LE VERDICT DES 65 PARENTS ═══════════ */
+.avis-bande{margin-top:clamp(70px,9vh,124px);background:var(--beige-2);
+padding:clamp(56px,7.5vh,108px) 0}
+.avis-grid{display:grid;grid-template-columns:.86fr 1.14fr;
+gap:clamp(40px,5vw,88px);align-items:center}
+.avis-score{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(78px,10vw,156px);line-height:.84;letter-spacing:-.03em;color:var(--sage-dark)}
+.avis-score span{font-size:.25em;letter-spacing:.01em;margin-left:.1em;color:var(--sage)}
+.avis-sur{margin:20px 0 0;font-family:Montserrat,sans-serif;font-size:11px;font-weight:500;
+letter-spacing:.3em;text-transform:uppercase;color:var(--sage)}
+.avis-preuve{margin:clamp(26px,3.4vh,42px) 0 0;background:var(--white);padding:18px 22px}
+.avis-preuve img{display:block;width:100%;height:auto}
+.avis-preuve figcaption{margin-top:12px;font-family:Montserrat,sans-serif;font-size:10.5px;
+letter-spacing:.16em;text-transform:uppercase;color:var(--sage-soft)}
+.avis-badge-txt{margin:0;max-width:36ch;font-family:"Playfair Display",Georgia,serif;
+font-weight:400;font-style:italic;font-size:clamp(19px,1.8vw,26px);line-height:1.45;color:var(--sage-dark)}
+.avis-badge-txt b{font-style:normal;font-weight:500}
+.avis-details{list-style:none;margin:clamp(28px,3.6vh,46px) 0 0;padding:0;
+border-top:1px solid var(--line)}
+.avis-details li{display:flex;justify-content:space-between;align-items:baseline;
+padding:14px 2px;border-bottom:1px solid var(--line)}
+.avis-details span{font-family:Montserrat,sans-serif;font-size:12px;font-weight:500;
+letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+.avis-details b{font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:25px;color:var(--sage-dark)}
+.avis-source{margin:26px 0 0;font-family:Montserrat,sans-serif;font-size:13px;
+line-height:1.75;color:var(--text)}
+.avis-source a{color:var(--sage-dark);border-bottom:1px solid rgba(110,126,97,.34)}
+@media (max-width:860px){.avis-grid{grid-template-columns:1fr;gap:40px}}
 </style>
 </head>
 <body>
@@ -748,11 +778,11 @@ font-size:clamp(17px,1.5vw,21px);line-height:1.45;color:var(--sage-dark)}
 <h2 class="chapitre-titre">Et s’il refusait la tétine ?</h2>
 <blockquote class="reponse">
 <p>«&#8239;Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup.&#8239;»</p>
-<footer>Chloé G. <i>·</i> février 2025</footer>
+<footer>Chloé G. <i>·</i> février 2025 <i>·</i> Un super biberon innovant</footer>
 </blockquote>
 </div>
 
-<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
+<div class="shell">
 <h3 class="mains-titre">Pensé pour leurs mains aussi.</h3>
 <div class="mains-grid">
 <figure class="main-item">
@@ -773,6 +803,33 @@ font-size:clamp(17px,1.5vw,21px);line-height:1.45;color:var(--sage-dark)}
 </div>
 
 <p class="chute mains-chute">Il n’a rien eu à apprendre.<br/><em>Il l’a pris spontanément.</em></p>
+</div>
+
+<!-- le verdict collectif : 65 familles -->
+<div class="avis-bande">
+<div class="shell avis-grid">
+<div>
+<p class="avis-score">4,4<span>/ 5</span></p>
+<p class="avis-sur">sur 65 avis de parents</p>
+<figure class="avis-preuve">
+<img alt="La fiche ConsoBaby&amp;Kid du BIBEON : 65 avis, note de 4,4 sur 5, répartition des notes" height="272" loading="lazy" src="assets/consobaby-note.webp" width="1308"/>
+<figcaption>Relevé ConsoBaby&amp;Kid</figcaption>
+</figure>
+</div>
+<div>
+<p class="avis-badge-txt">Badge <b>ConsoBaby&amp;Kid</b> — attribué aux seuls produits notés au moins 4,2 sur 5, avec un minimum de 30 avis.</p>
+<ul class="avis-details">
+<li><span>Qualité</span><b>4,5</b></li>
+<li><span>Attrait pour bébé</span><b>4,5</b></li>
+<li><span>Praticité et hygiène</span><b>4,2</b></li>
+<li><span>Prix</span><b>4,2</b></li>
+</ul>
+<p class="avis-source">Avis publiés sur <a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">ConsoBaby&amp;Kid</a>, premier site français d’avis de parents, sans que nous puissions les modifier — y compris les critiques.</p>
+</div>
+</div>
+</div>
+
+<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <p class="lien-discret lien-centre"><a href="avis-parents.html">Voir les enfants &amp; les avis des parents</a></p>
 </div>
 </section>
