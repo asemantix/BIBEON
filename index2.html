@@ -442,9 +442,70 @@ font-size:25px;color:var(--sage-dark)}
 line-height:1.75;color:var(--text)}
 .avis-source a{color:var(--sage-dark);border-bottom:1px solid rgba(110,126,97,.34)}
 @media (max-width:860px){.avis-grid{grid-template-columns:1fr;gap:40px}}
+
+/* ═══════════ ENTÊTE — reprise fidèle d'index2, plus le seul ajout : ACHAT RAPIDE ═══════════ */
+.header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;gap:22px}
+.brand{display:inline-flex;align-items:center;color:var(--navy)}
+.brand img{display:block;height:26px;width:auto}
+.nav-links{display:flex;gap:21px;margin-left:auto;font-size:13.5px;white-space:nowrap}
+.nav-links a{padding:6px 0;border-bottom:1px solid transparent;color:var(--text);text-decoration:none}
+.nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
+.nav-outils{display:flex;align-items:center;gap:14px}
+/* le seul élément nouveau */
+.nav-achat{display:inline-flex;align-items:center;padding:10px 22px;border-radius:999px;
+background:var(--sage-dark);color:#fff;text-decoration:none;
+font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;
+letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
+transition:background .2s ease}
+.nav-achat:hover{background:var(--sage)}
+@media (max-width:1080px){.nav-links{display:none}}
+@media (max-width:520px){.nav-achat{padding:9px 16px;font-size:10.5px;letter-spacing:.1em}}
+
+/* le CTA principal du hero */
+.hero-cta{margin:clamp(26px,3.4vh,40px) 0 0}
+.hero-cta a{display:inline-flex;align-items:center;gap:12px;padding:15px 30px;border-radius:999px;
+background:#fff;color:var(--navy);text-decoration:none;
+font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;
+letter-spacing:.14em;text-transform:uppercase;
+transition:background .2s ease,color .2s ease}
+.hero-cta a span{font-size:15px;line-height:1;transform:translateY(-1px)}
+.hero-cta a:hover{background:#cfe0b8;color:var(--navy)}
+
+/* ═══════════ Le raccourci pour qui est déjà convaincu ═══════════ */
+.conversion{padding:clamp(84px,12vh,156px) 0;background:var(--white);text-align:center}
+.conversion-titre{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(28px,3.2vw,44px);line-height:1.1;color:var(--sage-dark)}
+.conversion-cta{margin:clamp(30px,4vh,48px) 0 0}
+.conversion-cta a{display:inline-flex;align-items:center;gap:12px;padding:15px 32px;
+border-radius:999px;background:var(--sage-dark);color:#fff;text-decoration:none;
+font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;
+letter-spacing:.14em;text-transform:uppercase;transition:background .2s ease}
+.conversion-cta a span{font-size:15px;line-height:1;transform:translateY(-1px)}
+.conversion-cta a:hover{background:var(--sage)}
 </style>
 </head>
 <body>
+
+<!-- ══════════ 0 · ENTÊTE ══════════ -->
+<header class="header">
+<div class="shell nav">
+<a aria-label="BIBEON — accueil" class="brand" href="#accueil"><img alt="BIBEON" height="26" src="assets/logo-bibeon.svg" width="103"/></a>
+<nav aria-label="Navigation principale" class="nav-links" id="menu">
+<a aria-current="page" href="index.html">Accueil</a>
+<a href="voyage.html">Voyager avec bébé</a>
+<a href="mode-demploi.html">Mode d’emploi</a>
+<a href="legerete.html">La légèreté</a>
+<a href="migration.html">Migration</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous</a>
+<a href="contact.html">Contact</a>
+</nav>
+<div class="nav-outils">
+<a class="nav-achat" href="#boutique">Achat rapide</a>
+</div>
+</div>
+</header>
 
 <!-- ══════════ 1 · HERO ══════════ -->
 <section class="hero" id="accueil">
@@ -457,6 +518,7 @@ line-height:1.75;color:var(--text)}
 <a class="capsule" href="composition.html">50 % végétal</a>
 <a class="capsule" href="tests-migration-lne-bibeon.html">0 résidu détecté</a>
 </div>
+<p class="hero-cta"><a href="#boutique">Voir les BIBEONS <span>→</span></a></p>
 </div>
 </section>
 
@@ -810,7 +872,7 @@ line-height:1.75;color:var(--text)}
 <div class="shell avis-grid">
 <div>
 <p class="avis-score">4,4<span>/ 5</span></p>
-<p class="avis-sur">sur 65 avis de parents</p>
+<p class="avis-sur">65 parents testeurs</p>
 <figure class="avis-preuve">
 <img alt="La fiche ConsoBaby&amp;Kid du BIBEON : 65 avis, note de 4,4 sur 5, répartition des notes" height="272" loading="lazy" src="assets/consobaby-note.webp" width="1308"/>
 <figcaption>Relevé ConsoBaby&amp;Kid</figcaption>
@@ -824,13 +886,21 @@ line-height:1.75;color:var(--text)}
 <li><span>Praticité et hygiène</span><b>4,2</b></li>
 <li><span>Prix</span><b>4,2</b></li>
 </ul>
-<p class="avis-source">Avis publiés sur <a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">ConsoBaby&amp;Kid</a>, premier site français d’avis de parents, sans que nous puissions les modifier — y compris les critiques.</p>
+<p class="avis-source">Avis publiés sur <a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">ConsoBaby&amp;Kid</a>, premier site français d’avis de parents, sans que nous puissions les modifier.</p>
 </div>
 </div>
 </div>
 
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <p class="lien-discret lien-centre"><a href="avis-parents.html">Voir les enfants &amp; les avis des parents</a></p>
+</div>
+</section>
+
+<!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
+<section aria-label="Achat rapide" class="conversion">
+<div class="shell">
+<p class="conversion-titre">Prêt à partir léger ?</p>
+<p class="conversion-cta"><a href="#boutique">Achat rapide <span>→</span></a></p>
 </div>
 </section>
 
