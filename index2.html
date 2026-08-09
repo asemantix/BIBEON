@@ -446,7 +446,7 @@ line-height:1.75;color:var(--text)}
 
 /* ═══════════ ENTÊTE — reprise fidèle d'index2, plus le seul ajout : ACHAT RAPIDE ═══════════ */
 html{scroll-behavior:smooth}
-#preuve-vegetal,#preuve-residu{scroll-margin-top:118px}
+#preuve-vegetal,#preuve-residu,#boutique,#avis,#faq,#fonctionnement{scroll-margin-top:100px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);
 backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -573,6 +573,9 @@ background:var(--sage-dark);color:#fff;text-decoration:none;font-family:Montserr
 font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
 transition:background .2s ease}
 .offre-cta a:hover{background:var(--sage)}
+.offre-cta a[aria-disabled="true"]{background:transparent;color:var(--sage);
+border:1px solid var(--sage-soft);cursor:default}
+.offre-cta a[aria-disabled="true"]:hover{background:transparent}
 .offre-note{margin:clamp(34px,4.4vh,54px) auto 0;max-width:70ch;text-align:center;
 font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--text)}
 /* l'édition limitée : même famille, deux colonnes seulement */
@@ -601,7 +604,8 @@ margin:clamp(34px,4.4vh,54px) auto 0;border-top:1px solid var(--line)}
 /* le nuancier, repris tel quel de votre index2 */
 .nuancier{margin:16px 0 4px}
 .nuancier-titre{margin:0 0 12px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark)}
+letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);line-height:1.7}
+.nuancier-choix{font-weight:500;letter-spacing:.1em;color:var(--sage)}
 .pastilles{display:flex;gap:14px;flex-wrap:wrap;padding:4px 0}
 .pastille{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;padding:0;
 position:relative;overflow:hidden;
@@ -873,7 +877,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <p class="overline">Bonus · l’anti-air</p>
 <h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
 <p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
-<p class="lien-discret"><a href="systeme-anti-air.html">Comprendre le système anti-air</a></p>
+<p class="lien-discret"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
 </div>
 <figure class="bloc-visuel photo">
 <img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
@@ -918,7 +922,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 </a>
 
-<a class="cartel cartel-retour" href="bibeon-aujourdhui.html">
+<a class="cartel cartel-retour" href="#boutique">
 <div class="shell cartel-grid">
 <div>
 <p class="cartel-num">03</p>
@@ -948,7 +952,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <div class="preuves">
-<a class="preuve" href="composition.html" id="preuve-vegetal">
+<a class="preuve" href="legerete.html" id="preuve-vegetal">
 <p class="preuve-hero">50 %</p>
 <p class="preuve-mot">végétal</p>
 <p class="preuve-note">Sur les 23 g du BIBEON, 12 g sont d’origine végétale.</p>
@@ -966,7 +970,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier P143418.</p>
 <p class="preuve-lien"><span>Voir les tests de migration LNE</span></p>
 </a>
-<a class="preuve" href="composition.html#matieres">
+<a class="preuve" href="legerete.html#matieres">
 <p class="preuve-hero mot">Composition</p>
 <p class="preuve-mot">trois matières</p>
 <p class="preuve-note">Polypropylène · matière d’origine végétale · silicone alimentaire.</p>
@@ -1012,7 +1016,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 
 <!-- le verdict collectif : 65 familles -->
-<div class="avis-bande">
+<div class="avis-bande" id="avis">
 <div class="shell avis-grid">
 <div>
 <p class="avis-score">4,4<span>/ 5</span></p>
@@ -1036,7 +1040,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
-<p class="lien-discret lien-centre"><a href="avis-parents.html">Voir les enfants &amp; les avis des parents</a></p>
+<p class="lien-discret lien-centre"><a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">Voir tous les avis des parents</a></p>
 </div>
 </section>
 
@@ -1146,7 +1150,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <h3>Un BIBEON</h3>
 <p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois. Vendu vide.</p>
 <div class="nuancier" data-image="1" data-max="1">
-<p class="nuancier-titre">Coloris <span class="nuancier-choix">Menthe</span></p>
+<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Menthe</span></p>
 <div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="vert" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="orange" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="violet" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="bleu" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
 </div>
 <div class="offre-bas">
@@ -1160,12 +1164,12 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <h3>Le duo</h3>
 <p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
 <div class="nuancier" data-max="2">
-<p class="nuancier-titre">2 coloris parmi 3 <span class="nuancier-choix">aucun choisi</span></p>
+<p class="nuancier-titre">Choisissez deux coloris<br/><span class="nuancier-choix">aucun choisi</span></p>
 <div class="pastilles" data-paires='{"Lilas+Abricot":"https://py.pl/7rI7klD11nU","Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9"}'><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="vert" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="orange" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="violet" style="--teinte:#b7a0c7" type="button"></button></div>
 </div>
 <div class="offre-bas">
 <span class="offre-prix">62 €<small>soit 31 € l’unité · port compris</small></span>
-<p class="offre-cta"><a href="#inscription">Choisir deux coloris</a></p>
+<p class="offre-cta"><a aria-disabled="true">Choisissez deux coloris</a></p>
 </div>
 </article>
 
@@ -1201,7 +1205,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <h3>Le BIBEO</h3>
 <p>Coloré de haut en bas, bague jaune.</p>
 <div class="nuancier" data-image="1" data-max="1" data-prefixe="bibeo-">
-<p class="nuancier-titre">Coloris <span class="nuancier-choix">Rose</span></p>
+<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Rose</span></p>
 <div class="pastilles"><button aria-label="Rose" aria-pressed="true" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1j34kp" style="--teinte:#efb4c2" type="button"></button><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="vert" data-lien="https://py.pl/vS3Tl" style="--teinte:#acd7c0" type="button"></button></div>
 </div>
 <div class="offre-bas">
@@ -1281,8 +1285,17 @@ range.addEventListener("input",maj);range.addEventListener("change",maj);maj();
       if (bouton && paires) {
         var noms = choisis().map(function (b) { return b.dataset.coloris; }),
             url = paires[noms.join("+")] || paires[noms.slice().reverse().join("+")];
-        if (noms.length === max && url) { bouton.href = url; bouton.textContent = "Commander"; }
-        else { bouton.href = "#boutique"; bouton.textContent = "Choisir deux coloris"; }
+        if (noms.length === max && url) {
+          bouton.href = url;
+          bouton.setAttribute("target", "_blank");
+          bouton.removeAttribute("aria-disabled");
+          bouton.textContent = "Commander";
+        } else {
+          bouton.removeAttribute("href");
+          bouton.removeAttribute("target");
+          bouton.setAttribute("aria-disabled", "true");
+          bouton.textContent = noms.length === 1 ? "Encore un coloris" : "Choisissez deux coloris";
+        }
       } else if (bouton && premier && premier.dataset.lien) {
         bouton.href = premier.dataset.lien;
       }
