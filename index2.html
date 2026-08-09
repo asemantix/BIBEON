@@ -149,17 +149,23 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
 .bloc-texte .billets{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
   font-size:clamp(20px,1.9vw,25px);line-height:1.5;color:var(--sage);font-style:italic}
 .bloc-texte .billets b{font-style:normal;font-weight:500;color:var(--sage-dark)}
+.lien-discret{margin:32px 0 0}
+.lien-discret a{font-family:Montserrat,sans-serif;font-size:13px;font-weight:500;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--sage);text-decoration:none;
+  padding-bottom:5px;border-bottom:1px solid rgba(110,126,97,.34);transition:color .2s,border-color .2s}
+.lien-discret a:hover{color:var(--sage-dark);border-color:var(--sage-dark)}
 /* Deux natures de visuel, une seule grille. Aucun cadre imposé.
    photo  : la photographie remplit son espace.
    libre  : le produit détouré vit directement sur le fond de section.
    demo   : le biberon est le sujet, le curseur est second. */
 .bloc-visuel{margin:0;display:flex;align-items:center;justify-content:center}
 .bloc-visuel.photo{height:440px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m)}
+.bloc-visuel.photo.ample{height:540px}
 .bloc-visuel.photo img,.bloc-visuel.photo video{display:block;width:100%;height:100%;object-fit:cover}
 .bloc-visuel.libre{height:auto;background:none;box-shadow:none;border-radius:0;overflow:visible}
-.bloc-visuel.libre img{display:block;width:auto;max-width:100%;height:auto;max-height:600px;
-  margin:0 auto;filter:drop-shadow(0 32px 46px rgba(17,37,58,.13))}
-.bloc-visuel.libre.tres-haut img{max-height:700px}
+.bloc-visuel.libre img{display:block;width:auto;max-width:100%;height:auto;max-height:525px;
+  margin:0 auto;filter:drop-shadow(0 30px 44px rgba(17,37,58,.13))}
+.bloc-visuel.libre.elance img{max-height:505px}
 .bloc-visuel.demo{height:auto;background:none;box-shadow:none;border-radius:0;overflow:visible}
 .bloc-visuel.demo .bib-sprite{width:auto;max-width:none;height:520px;aspect-ratio:243/544;
   border-radius:0;background-image:url("assets/depliage-sprite-large.webp")}
@@ -169,8 +175,8 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
   .bloc-grid,.bloc-grid.visuel-gauche{grid-template-columns:1fr;gap:36px}
   .bloc-grid .bloc-visuel,.bloc-grid.visuel-gauche .bloc-visuel{order:0}
   .bloc-grid.visuel-gauche .bloc-texte{order:0}
-  .bloc-visuel.photo{height:340px}
-  .bloc-visuel.libre img,.bloc-visuel.libre.tres-haut img{max-height:460px}
+  .bloc-visuel.photo,.bloc-visuel.photo.ample{height:360px}
+  .bloc-visuel.libre img,.bloc-visuel.libre.elance img{max-height:420px}
   .bloc-visuel.demo .bib-sprite{height:400px}
 }
 
@@ -213,8 +219,9 @@ font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(32px,4vw,54px);line-height:1.06;color:#fff}
 .film-plein .film-titre em{font-style:italic;color:#cfe0b8}
 .film-plein figure{margin:0}
-.film-plein video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;
-border-radius:var(--radius)}
+.film-plein figure{border-radius:var(--radius);overflow:hidden;background:var(--navy);line-height:0}
+.film-plein video{display:block;width:100%;height:100%;aspect-ratio:16/9;object-fit:cover;
+border-radius:0;background:var(--navy)}
 
 /* 10 · réchauffage */
 .rechauffage{padding:74px 0;background:var(--beige-2)}
@@ -305,7 +312,7 @@ font-size:21px;color:var(--navy)}
 <h2 class="bloc-titre">La dose dedans.</h2>
 <p class="billets">L’eau au moment du repas.</p>
 </div>
-<figure class="bloc-visuel photo">
+<figure class="bloc-visuel photo ample">
 <video aria-label="Des biberons BIBEON pré-dosés que l’on range dans un sac à main" autoplay="" loop="" muted="" playsinline="" poster="assets/sac-a-main.webp" preload="metadata" src="assets/demo-nomade.mp4"></video>
 </figure>
 </div>
@@ -330,21 +337,21 @@ font-size:21px;color:var(--navy)}
 <div class="shell">
 <h2 class="film-titre">Pré-dosé ici.<br/><em>Nourrissez partout.</em></h2>
 <figure>
-<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan.webp" preload="metadata" src="assets/depliage-plan.mp4"></video>
+<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
 </figure>
 </div>
 </section>
 
 <!-- ══════════ 8 · LA POUDRE D'ABORD ══════════ -->
-<section aria-label="Sans grumeaux" class="bloc" style="background:var(--cream)">
+<section aria-label="Les soufflets" class="bloc" style="background:var(--cream)">
 <div class="shell bloc-grid visuel-gauche">
 <div class="bloc-texte">
-<p class="overline">Sans grumeaux</p>
+<p class="overline">Les soufflets</p>
 <h2 class="bloc-titre">Un design fonctionnel.</h2>
-<p class="billets">Les soufflets.</p>
+<p class="billets">Sans grumeaux.<br/>Tout simplement.</p>
 </div>
-<figure class="bloc-visuel libre tres-haut">
-<img alt="Un biberon BIBEON entièrement déplié, rempli de lait reconstitué homogène" height="1632" loading="lazy" src="assets/bibeon-lait-libre.png" width="545"/>
+<figure class="bloc-visuel libre elance">
+<img alt="Un biberon BIBEON entièrement déplié, rempli de lait reconstitué homogène" height="1320" loading="lazy" src="assets/bibeon-lait-libre.png" width="444"/>
 </figure>
 </div>
 </section>
@@ -424,7 +431,7 @@ font-size:21px;color:var(--navy)}
 <p class="overline">Facile à nettoyer</p>
 <h2 class="bloc-titre">Son design facilite le nettoyage.</h2>
 <p class="billets">Replié, le fond est à portée de main.<br/>Chaque recoin aussi.</p>
-<p style="margin:30px 0 0"><a class="btn btn-ghost" href="mode-demploi.html">Voir le mode d’emploi complet</a></p>
+<p class="lien-discret"><a href="mode-demploi.html">Voir le mode d’emploi complet</a></p>
 </div>
 <figure class="bloc-visuel photo">
 <video aria-label="Le goupillon engagé dans les soufflets, puis la main qui atteint le fond" autoplay="" loop="" muted="" playsinline="" poster="assets/poster-nettoyage.webp" preload="metadata" src="assets/geste-nettoyage-loop.mp4"></video>
