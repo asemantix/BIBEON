@@ -288,6 +288,101 @@ font-size:21px;color:var(--navy)}
 .rechauffe-lien{margin:34px 0 0;text-align:center;font-size:14px}
 .rechauffe-lien a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft)}
 @media (max-width:660px){.rechauffe-grille{grid-template-columns:1fr;gap:28px}}
+
+/* ═══════════ SUITE ÉDITORIALE — des cartels, jamais des cartes ═══════════
+   Aucune boîte, aucune ombre, aucun coin arrondi, aucun pictogramme.
+   La typographie et le vide font tout le travail. Mêmes variables qu'au-dessus. */
+
+/* une section qui respire au lieu d'occuper l'écran entier */
+.bloc.respiration{min-height:76vh}
+.bloc.respiration .bloc-visuel.photo{height:min(560px,60vh)}
+
+/* en-tête de chapitre */
+.chapitre{padding:clamp(80px,11vh,140px) 0 clamp(30px,4vh,54px);text-align:center}
+.chapitre .overline{margin:0 0 20px}
+.chapitre-titre{margin:0 auto;max-width:22ch;font-family:"Playfair Display",Georgia,serif;
+font-weight:500;font-size:clamp(32px,4vw,54px);line-height:1.06;color:var(--sage-dark)}
+.chapitre-note{margin:24px auto 0;max-width:46ch;font-family:"Playfair Display",Georgia,serif;
+font-style:italic;font-weight:400;font-size:clamp(18px,1.7vw,24px);line-height:1.5;color:var(--sage)}
+
+/* le cartel : tout le bloc est cliquable, rien ne l'encadre */
+.cartel{display:block;text-decoration:none;color:inherit;
+padding:clamp(52px,8vh,104px) 0;border-top:1px solid var(--line)}
+.cartel-grid{display:grid;gap:clamp(34px,4.5vw,72px);align-items:center}
+.cartel-num{margin:0 0 20px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:500;
+letter-spacing:.34em;text-transform:uppercase;color:var(--sage-soft)}
+.cartel-chiffre{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(58px,9vw,138px);line-height:.9;letter-spacing:-.025em;color:var(--sage-dark)}
+.cartel-mot{margin:14px 0 0;font-family:Montserrat,sans-serif;font-size:12px;font-weight:500;
+letter-spacing:.34em;text-transform:uppercase;color:var(--sage)}
+.cartel-texte{margin:30px 0 0;max-width:36ch;font-family:"Playfair Display",Georgia,serif;
+font-weight:400;font-style:italic;font-size:clamp(19px,1.8vw,25px);line-height:1.45;color:var(--sage)}
+.cartel-lien{margin:30px 0 0;font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:500;
+letter-spacing:.09em;text-transform:uppercase;color:var(--sage-dark)}
+.cartel-lien span{padding-bottom:5px;border-bottom:1px solid rgba(110,126,97,.32);
+transition:border-color .2s ease}
+.cartel:hover .cartel-lien span{border-color:var(--sage-dark)}
+.cartel-image{margin:0;overflow:hidden}
+.cartel-image img{display:block;width:100%;height:auto}
+
+/* 01 · l'industrie — la photo mène, le chiffre répond */
+.cartel-industrie .cartel-grid{grid-template-columns:1.12fr .88fr}
+/* 02 · l'IGAS — aucune image, le sigle EST l'image */
+.cartel-igas{background:var(--beige-2)}
+.cartel-igas .cartel-grid{grid-template-columns:.86fr 1.14fr}
+.cartel-sigle{font-size:clamp(56px,8vw,118px);letter-spacing:.05em}
+/* 03 · le retour au présent */
+.cartel-retour .cartel-grid{grid-template-columns:1fr .82fr}
+.cartel-retour .cartel-image{order:2}
+.cartel-retour .cartel-image img{max-height:520px;width:auto;margin-left:auto}
+.cartel-retour .cartel-chiffre{font-size:clamp(34px,4.2vw,58px);line-height:1.04;letter-spacing:-.01em}
+.cartel-liste{margin:22px 0 0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-style:italic;font-size:clamp(20px,1.9vw,26px);line-height:1.5;color:var(--sage)}
+@media (max-width:860px){
+  .cartel-industrie .cartel-grid,.cartel-igas .cartel-grid,
+  .cartel-retour .cartel-grid{grid-template-columns:1fr;gap:28px}
+  .cartel-retour .cartel-image{order:0}
+  .cartel-retour .cartel-image img{margin-inline:auto;max-height:440px}
+  .cartel{padding:56px 0}
+}
+
+/* la citation de la fondatrice — plus basse que le témoignage du prologue */
+.citation{margin:clamp(30px,4vh,52px) auto 0;max-width:790px;text-align:center}
+.citation p{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-style:italic;
+font-size:clamp(19px,1.8vw,26px);line-height:1.5;color:var(--sage-dark)}
+.citation footer{margin-top:clamp(24px,3vh,36px);font-family:Montserrat,sans-serif;font-size:11px;
+font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--sage)}
+.citation footer i{font-style:normal;padding:0 6px;color:var(--sage-soft)}
+
+/* les preuves — une grille rigoureuse, tenue par des filets et rien d'autre */
+.preuves{display:grid;grid-template-columns:repeat(4,1fr);
+margin-top:clamp(56px,7vh,96px);border-top:1px solid var(--line)}
+.preuve{display:block;text-decoration:none;color:inherit;
+padding:clamp(36px,4.6vh,58px) clamp(18px,2vw,32px);border-left:1px solid var(--line)}
+.preuve:first-child{border-left:0}
+.preuve-hero{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(42px,4.4vw,66px);line-height:.94;letter-spacing:-.02em;color:var(--sage-dark)}
+.preuve-hero.sigle{letter-spacing:.04em;font-size:clamp(38px,3.8vw,56px)}
+.preuve-hero.mot{letter-spacing:.01em;font-size:clamp(28px,2.9vw,42px);line-height:1.05}
+.preuve-mot{margin:14px 0 0;font-family:Montserrat,sans-serif;font-size:11px;font-weight:500;
+letter-spacing:.3em;text-transform:uppercase;color:var(--sage)}
+.preuve-note{margin:18px 0 0;font-family:Montserrat,sans-serif;font-size:13.5px;line-height:1.75;
+color:var(--text)}
+.preuve-lien{margin:22px 0 0;font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:500;
+letter-spacing:.09em;text-transform:uppercase;color:var(--sage-dark)}
+.preuve-lien span{padding-bottom:4px;border-bottom:1px solid rgba(110,126,97,.3);
+transition:border-color .2s ease}
+.preuve:hover .preuve-lien span{border-color:var(--sage-dark)}
+@media (max-width:1040px){
+  .preuves{grid-template-columns:1fr 1fr}
+  .preuve:nth-child(3){border-left:0}
+  .preuve:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:620px){
+  .preuves{grid-template-columns:1fr}
+  .preuve{border-left:0;border-top:1px solid var(--line);padding:34px 0}
+  .preuve:first-child{border-top:0}
+}
 </style>
 </head>
 <body>
@@ -300,8 +395,8 @@ font-size:21px;color:var(--navy)}
 <p class="overline">Fabriqué en France · Testé par le LNE</p>
 <h1>Le biberon<br/>nomade.<br/><em class="hero-promesse">Sans rien à transporter, <span>de plus.</span></em></h1>
 <div class="hero-capsules">
-<a class="capsule" href="#matiere">50 % végétal</a>
-<a class="capsule" href="#matiere">0 résidu détecté</a>
+<a class="capsule" href="composition.html">50 % végétal</a>
+<a class="capsule" href="tests-migration-lne-bibeon.html">0 résidu détecté</a>
 </div>
 </div>
 </section>
@@ -504,6 +599,118 @@ font-size:21px;color:var(--navy)}
 </figure>
 </div>
 </section>
+
+
+<!-- ══════════ 12 · BONUS · L'ANTI-AIR — une respiration ══════════ -->
+<section aria-label="Bonus, l’anti-air" class="bloc respiration" style="background:var(--beige-2)">
+<div class="shell bloc-grid visuel-gauche">
+<div class="bloc-texte">
+<p class="overline">Bonus · l’anti-air</p>
+<h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
+<p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
+<p class="lien-discret"><a href="systeme-anti-air.html">Comprendre le système anti-air</a></p>
+</div>
+<figure class="bloc-visuel photo">
+<img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
+</figure>
+</div>
+</section>
+
+
+<!-- ══════════ 13 · NOTRE HISTOIRE — trois temps, jamais trois clones ══════════ -->
+<section aria-label="Notre histoire" style="background:var(--white)">
+<div class="shell chapitre">
+<p class="overline">Notre histoire</p>
+<h2 class="chapitre-titre">Ce biberon s’est déjà vendu par millions.</h2>
+<p class="chapitre-note">30 000 à l’heure. Puis une autre urgence s’impose.</p>
+</div>
+
+<a class="cartel cartel-industrie" href="premiere-vie-bibeon.html">
+<div class="shell cartel-grid">
+<figure class="cartel-image">
+<img alt="Chaîne industrielle produisant des corps de biberons pliables BIBEON, au début des années 2000" height="788" loading="lazy" src="assets/production-historique.webp" width="1300"/>
+</figure>
+<div>
+<p class="cartel-num">01</p>
+<p class="cartel-chiffre">30 000</p>
+<p class="cartel-mot">à l’heure</p>
+<p class="cartel-texte">Une fabrication passée à l’échelle industrielle.</p>
+<p class="cartel-lien"><span>Découvrir la première vie de BIBEON</span></p>
+</div>
+</div>
+</a>
+
+<a class="cartel cartel-igas" href="suzanne-de-begon-histoire-bibeon.html">
+<div class="shell cartel-grid">
+<div>
+<p class="cartel-num">02</p>
+<p class="cartel-chiffre cartel-sigle">IGAS</p>
+</div>
+<div>
+<p class="cartel-texte">L’IGAS s’empare de l’alerte.<br/>Dans ce dossier, elle reconnaît Suzanne de Bégon comme lanceuse d’alerte.</p>
+<p class="cartel-lien"><span>Découvrir le parcours de Suzanne de Bégon</span></p>
+</div>
+</div>
+</a>
+
+<a class="cartel cartel-retour" href="bibeon-aujourdhui.html">
+<div class="shell cartel-grid">
+<div>
+<p class="cartel-num">03</p>
+<p class="cartel-chiffre">BIBEON revient.</p>
+<p class="cartel-liste">Durable.<br/>Végétal.<br/>Testé par le LNE.</p>
+<p class="cartel-texte">La même idée. Une nouvelle exigence.</p>
+<p class="cartel-lien"><span>Découvrir le BIBEON d’aujourd’hui</span></p>
+</div>
+<figure class="cartel-image">
+<img alt="Trois BIBEON verts, du replié au déplié, dont un pré-dosé en lait en poudre" height="1246" loading="lazy" src="assets/trio-reel.webp" width="838"/>
+</figure>
+</div>
+</a>
+</section>
+
+
+<!-- ══════════ 14 · COMPOSITION & SÉCURITÉ ATTESTÉE ══════════ -->
+<section aria-label="Composition et sécurité attestée" id="matiere" style="background:var(--cream)">
+<div class="shell chapitre">
+<p class="overline">Composition &amp; sécurité attestée</p>
+<h2 class="chapitre-titre">J’ai voulu aller au bout.</h2>
+<blockquote class="citation">
+<p>«&#8239;Un biberon n’est pas un jouet. En l’absence d’AMM — d’autorisation de mise sur le marché — la conformité repose sur la responsabilité du fabricant, sa déclaration et les preuves qui l’étayent. J’ai voulu aller au bout de cette responsabilité.&#8239;»</p>
+<footer>Suzanne de Bégon <i>·</i> Fondatrice de BIBEON</footer>
+</blockquote>
+</div>
+
+<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
+<div class="preuves">
+<a class="preuve" href="composition.html">
+<p class="preuve-hero">50 %</p>
+<p class="preuve-mot">végétal</p>
+<p class="preuve-note">Bague et capuchon en matière d’origine végétale.</p>
+<p class="preuve-lien"><span>Découvrir la composition</span></p>
+</a>
+<a class="preuve" href="tests-migration-lne-bibeon.html#resultats">
+<p class="preuve-hero">0</p>
+<p class="preuve-mot">résidu détecté</p>
+<p class="preuve-note">Essais de migration globale : résultats inférieurs au seuil analytique indiqué dans le rapport.</p>
+<p class="preuve-lien"><span>Voir les résultats</span></p>
+</a>
+<a class="preuve" href="tests-migration-lne-bibeon.html">
+<p class="preuve-hero sigle">LNE</p>
+<p class="preuve-mot">testé et contrôlé</p>
+<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier P143418.</p>
+<p class="preuve-lien"><span>Voir les tests de migration LNE</span></p>
+</a>
+<a class="preuve" href="composition.html#matieres">
+<p class="preuve-hero mot">Composition</p>
+<p class="preuve-mot">trois matières</p>
+<p class="preuve-note">Polypropylène · matière d’origine végétale · silicone alimentaire.</p>
+<p class="preuve-lien"><span>Découvrir les matières</span></p>
+</a>
+</div>
+</div>
+</section>
+
 
 <script>
 (function(){
