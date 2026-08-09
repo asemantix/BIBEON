@@ -484,6 +484,31 @@ font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;
 letter-spacing:.14em;text-transform:uppercase;transition:background .2s ease}
 .conversion-cta a span{font-size:15px;line-height:1;transform:translateY(-1px)}
 .conversion-cta a:hover{background:var(--sage)}
+
+/* ═══════════ VOYAGER AVEC BÉBÉ — la vraie vie, pas le mode d'emploi ═══════════ */
+.voyage-photo{margin:clamp(40px,5.5vh,74px) 0 0;overflow:hidden}
+.voyage-photo img{display:block;width:100%;height:clamp(320px,52vh,570px);
+object-fit:cover;object-position:50% 46%}
+.libertes{display:grid;grid-template-columns:repeat(3,1fr);
+margin-top:clamp(50px,6.5vh,88px);border-top:1px solid var(--line)}
+.liberte{padding:clamp(32px,4.2vh,54px) clamp(18px,2vw,34px);border-left:1px solid var(--line)}
+.liberte:first-child{border-left:0}
+.liberte-mot{margin:0 0 13px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:500;
+letter-spacing:.3em;text-transform:uppercase;color:var(--sage)}
+.liberte-billet{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-style:italic;font-size:clamp(18px,1.6vw,23px);line-height:1.45;color:var(--sage-dark)}
+.cta-ligne{margin:clamp(44px,5.5vh,74px) 0 0;text-align:center}
+.cta-ligne a{display:inline-flex;align-items:center;gap:12px;padding:14px 30px;border-radius:999px;
+border:1px solid var(--sage-soft);color:var(--sage-dark);text-decoration:none;
+font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;
+text-transform:uppercase;transition:background .2s ease,border-color .2s ease}
+.cta-ligne a span{font-size:15px;line-height:1;transform:translateY(-1px)}
+.cta-ligne a:hover{background:var(--sage-tint);border-color:var(--sage)}
+@media (max-width:820px){
+  .libertes{grid-template-columns:1fr}
+  .liberte{border-left:0;border-top:1px solid var(--line);padding:28px 0}
+  .liberte:first-child{border-top:0}
+}
 </style>
 </head>
 <body>
@@ -901,6 +926,39 @@ letter-spacing:.14em;text-transform:uppercase;transition:background .2s ease}
 <div class="shell">
 <p class="conversion-titre">Prêt à partir léger ?</p>
 <p class="conversion-cta"><a href="#boutique">Achat rapide <span>→</span></a></p>
+</div>
+</section>
+
+
+<!-- ══════════ 17 · VOYAGER AVEC BÉBÉ ══════════ -->
+<section aria-label="Voyager avec bébé" style="background:var(--cream)">
+<div class="shell chapitre">
+<p class="overline">Voyager avec bébé</p>
+<h2 class="chapitre-titre">Du parc au long-courrier.</h2>
+<p class="chapitre-note">Une sortie au parc, une journée chez la nounou ou un long-courrier : les gestes que l’on ne fait plus sont les mêmes.</p>
+</div>
+
+<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
+<figure class="voyage-photo">
+<img alt="Un BIBEON déplié posé sur une table de jardin, un enfant qui joue au fond, au soleil" height="753" loading="lazy" src="assets/parc-en-vrai.webp" width="1138"/>
+</figure>
+
+<div class="libertes">
+<div class="liberte">
+<p class="liberte-mot">Pas de doseur</p>
+<p class="liberte-billet">La dose est déjà dans le BIBEON.</p>
+</div>
+<div class="liberte">
+<p class="liberte-mot">Pas de transvasement</p>
+<p class="liberte-billet">On ajoute l’eau au moment du repas.</p>
+</div>
+<div class="liberte">
+<p class="liberte-mot">Moins à emporter</p>
+<p class="liberte-billet">Replié, BIBEON se glisse dans le sac.</p>
+</div>
+</div>
+
+<p class="cta-ligne"><a href="voyage.html">Voyager avec bébé <span>→</span></a></p>
 </div>
 </section>
 
