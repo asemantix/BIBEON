@@ -500,7 +500,19 @@ font-size:21px;color:var(--navy)}
 </section>
 
 <script>
-(function(){ document.querySelectorAll(".hero-fond").forEach(function(v){ v.playbackRate = 0.6; }); })();
+(function(){
+  /* Vitesse de lecture des films. Une seule valeur à changer par ligne. */
+  var vitesses = { ".hero-fond": 0.6, "video[src*=\'geste-nettoyage\']": 0.65 };
+  Object.keys(vitesses).forEach(function(sel){
+    document.querySelectorAll(sel).forEach(function(v){
+      var r = vitesses[sel];
+      var pose = function(){ try { v.playbackRate = r; } catch(e){} };
+      pose();
+      v.addEventListener("loadedmetadata", pose);
+      v.addEventListener("play", pose);
+    });
+  });
+})();
 (function () {
 var vue=document.getElementById("bibSprite"),range=document.getElementById("bibFold"),
 vol=document.getElementById("bibVol"),nb=document.getElementById("bibNb");
