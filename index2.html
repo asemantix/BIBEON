@@ -64,13 +64,26 @@ line-height:1.03;letter-spacing:-.012em}
 .rassure{background:var(--white);border-bottom:1px solid var(--line)}
 .rassure-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
 gap:10px 22px;padding:22px 0;text-align:center}
-.rassure-points{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-gap:8px 17px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--sage-dark)}
-.rassure-points > span{white-space:nowrap}
-.rassure-points span+span::before{content:"·";margin-right:20px;color:var(--sage);font-weight:700}
-.rassure-avis{display:inline-flex;align-items:center;gap:9px;white-space:nowrap;margin-left:4px}
-.rassure-avis b{font-family:"Playfair Display",Georgia,serif;font-size:24px;font-weight:600;color:var(--navy);line-height:1}
-.rassure-avis span{font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
+/* Les deux lignes s'alignent sur le point, pas sur elles-mêmes :
+   une seule grille de trois colonnes, partagée par les deux paires. */
+.rassure-paires{display:grid;width:100%;grid-template-columns:1fr auto 1fr;align-items:center;
+row-gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.1em;
+text-transform:uppercase;color:var(--sage-dark)}
+.rassure-paires > span{white-space:nowrap}
+.rassure-paires > span:nth-child(3n+1){text-align:right}
+.rassure-paires > span:nth-child(3n){text-align:left}
+.rassure-paires > i{font-style:normal;font-weight:700;color:var(--sage);padding:0 22px}
+@media (max-width:560px){
+  .rassure-paires{font-size:11px;letter-spacing:.07em}
+  .rassure-paires > i{padding:0 12px}
+}
+.rassure-avis{display:contents;text-decoration:none}
+.rassure-avis b{grid-column:1;justify-self:end;margin-top:16px;
+font-family:"Playfair Display",Georgia,serif;font-size:24px;font-weight:600;
+color:var(--navy);line-height:1;letter-spacing:0;text-transform:none}
+.rassure-avis i{grid-column:2;margin-top:16px}
+.rassure-avis span{grid-column:3;justify-self:start;margin-top:16px;
+font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
 
 /* renversement */
 .renversement{background:var(--navy);color:rgba(255,255,255,.82);padding:132px 0 116px;text-align:center}
@@ -78,6 +91,14 @@ gap:8px 17px;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform
 .renv-titre{font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(34px,4.4vw,62px);line-height:1.02;letter-spacing:-.01em;color:#fff;margin:0 0 30px}
 .renv-titre em{font-style:italic;color:#cfe0b8}
+/* Le témoignage : une confidence dans le crème, énormément d'air, rien d'autre. */
+.temoignage{background:var(--cream);padding:clamp(96px,16vh,180px) 0;
+display:flex;align-items:center;min-height:70vh}
+.temoignage-mot{margin:0 auto;max-width:26ch;text-align:center}
+.temoignage-mot p{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-style:italic;font-size:clamp(26px,3.1vw,40px);line-height:1.32;color:var(--sage-dark)}
+.renversement-reponse{padding-top:clamp(72px,10vh,116px)}
+.renv-image-seule{margin-top:0}
 .renv-image{margin:48px auto 0;max-width:880px}
 .renv-image img{display:block;width:100%;height:auto;border-radius:var(--radius)}
 .renv-image-2{margin-top:18px}
@@ -120,7 +141,9 @@ background:var(--sage-dark);border:4px solid var(--white);box-shadow:0 2px 8px r
 font-size:11px;letter-spacing:.04em;color:#7b8579}
 
 /* étapes */
-.etapes{padding:80px 0 70px}
+.etapes{padding:clamp(64px,9vh,112px) 0;min-height:100vh;display:flex;align-items:center}
+.etapes>.shell{width:min(1320px,calc(100% - 64px))}
+@media (max-width:900px){.etapes{min-height:0;display:block;padding:80px 0}}
 .etapes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .etape{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
 padding:26px 26px 30px;text-align:center;box-shadow:var(--shadow-s);display:flex;flex-direction:column}
@@ -193,8 +216,7 @@ transition:background .2s ease,border-color .2s ease}
 .capsule:hover{background:rgba(207,224,184,.12);border-color:#cfe0b8}
 
 /* 2 · bandeau sur deux lignes */
-.rassure-lignes{display:flex;flex-direction:column;align-items:center;gap:7px}
-.rassure-lignes .rassure-avis{margin:5px 0 0}
+.rassure-lignes{display:flex;flex-direction:column;align-items:center}
 
 /* 3 · billet dans le prologue */
 .billets{margin:0;font-family:Montserrat,sans-serif;font-size:16.5px;line-height:2.05;color:var(--text)}
@@ -261,13 +283,10 @@ font-size:21px;color:var(--navy)}
 <section aria-label="Caractéristiques" class="rassure">
 <div class="shell rassure-grid">
 <div class="rassure-lignes">
-<div class="rassure-points">
-<span>330 ml</span><span>Tétine débit 6 mois</span>
-</div>
-<div class="rassure-points">
-<span>Fabriqué en France</span><span>Sans BPA</span>
-</div>
-<a class="rassure-avis" href="#avis"><b>4,4 / 5</b><span>65 parents testeurs</span></a>
+<div class="rassure-paires">
+<span>330 ml</span><i>·</i><span>Tétine débit 6 mois</span>
+<span>Fabriqué en France</span><i>·</i><span>Sans BPA</span>
+<a class="rassure-avis" href="#avis"><b>4,4 / 5</b><i></i><span>65 parents testeurs</span></a>
 </div>
 </div>
 </section>
@@ -282,7 +301,22 @@ font-size:21px;color:var(--navy)}
 <figure class="renv-image">
 <img alt="Des biberons rigides classiques disposés autour d’une boîte doseuse de lait en poudre" height="777" loading="lazy" src="assets/monde-davant.webp" width="1400"/>
 </figure>
-<figure class="renv-image renv-image-2">
+</div>
+</section>
+
+<!-- ══════════ 3 bis · LE TÉMOIGNAGE — ni titre, ni surtitre, ni photo ══════════ -->
+<section aria-label="Témoignage" class="temoignage">
+<div class="shell">
+<blockquote class="temoignage-mot">
+<p>[ TÉMOIGNAGE — texte exact à coller ici ]</p>
+</blockquote>
+</div>
+</section>
+
+<!-- ══════════ 3 ter · LA RÉPONSE ══════════ -->
+<section aria-label="Un biberon, tout le reste en moins" class="renversement renversement-reponse">
+<div class="shell">
+<figure class="renv-image renv-image-seule">
 <img alt="Un biberon BIBEON doré au milieu de biberons classiques expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
 </figure>
 <p class="chute chute-claire">Un biberon.<br/><em>Tout le reste, en moins.</em></p>
@@ -310,7 +344,7 @@ font-size:21px;color:var(--navy)}
 
 <!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
 <section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
-<div class="shell bloc-grid visuel-gauche">
+<div class="shell bloc-grid">
 <div class="bloc-texte">
 <p class="overline">Toujours prêt</p>
 <h2 class="bloc-titre">La dose dedans.</h2>
@@ -327,8 +361,8 @@ font-size:21px;color:var(--navy)}
 <div class="shell bloc-grid">
 <div class="bloc-texte">
 <p class="overline">Replié</p>
-<h2 class="bloc-titre">La dose préservée.</h2>
-<p class="billets">Contenant hermétique.<br/>Conservée à l’abri de la lumière.</p>
+<h2 class="bloc-titre">Contenant hermétique.</h2>
+<p class="billets">La dose préservée.<br/>Conservée à l’abri de la lumière.</p>
 </div>
 <figure class="bloc-visuel libre">
 <img alt="Un biberon BIBEON replié contenant la dose de lait en poudre, à l’abri de l’air" height="884" loading="lazy" src="assets/bibeon-poudre-libre.png" width="600"/>
@@ -351,8 +385,8 @@ font-size:21px;color:var(--navy)}
 <div class="shell bloc-grid visuel-gauche">
 <div class="bloc-texte">
 <p class="overline">Les soufflets</p>
-<h2 class="bloc-titre">Un design fonctionnel.</h2>
-<p class="billets">Sans grumeaux.<br/>Tout simplement.</p>
+<h2 class="bloc-titre">Une paroi accidentée.</h2>
+<p class="billets">Un lait sans grumeaux.<br/>Tout simplement.</p>
 </div>
 <figure class="bloc-visuel libre elance">
 <img alt="Un biberon BIBEON entièrement déplié, rempli de lait reconstitué homogène" height="1320" loading="lazy" src="assets/bibeon-lait-libre.png" width="444"/>
@@ -364,8 +398,8 @@ font-size:21px;color:var(--navy)}
 <section aria-label="En trois gestes" class="etapes" id="fonctionnement">
 <div class="shell">
 <div class="section-head center">
-<p class="overline">En trois gestes</p>
-<h2 class="bloc-titre" style="margin-bottom:0">Et rien de plus.</h2>
+<p class="overline">Les 3 gestes</p>
+<h2 class="bloc-titre" style="margin-bottom:0">Un biberon prêt-à-donner.</h2>
 </div>
 <div class="etapes-grid">
 <article class="etape">
@@ -430,11 +464,11 @@ font-size:21px;color:var(--navy)}
 
 <!-- ══════════ 11 · NETTOYAGE ══════════ -->
 <section aria-label="Nettoyage" class="bloc" style="background:var(--white)">
-<div class="shell bloc-grid">
+<div class="shell bloc-grid visuel-gauche">
 <div class="bloc-texte">
-<p class="overline">Facile à nettoyer</p>
-<h2 class="bloc-titre">Son design facilite le nettoyage.</h2>
-<p class="billets">Replié, le fond est à portée de main.<br/>Chaque recoin aussi.</p>
+<p class="overline">Design fonctionnel</p>
+<h2 class="bloc-titre">À portée de main.</h2>
+<p class="billets">Le fond.<br/>Chaque recoin.</p>
 <p class="lien-discret"><a href="mode-demploi.html">Voir le mode d’emploi complet</a></p>
 </div>
 <figure class="bloc-visuel photo">
