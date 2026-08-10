@@ -58,7 +58,7 @@ margin:0 0 28px;max-width:13.5ch;text-shadow:0 2px 34px rgba(14,28,53,.5)}
 .hero-promesse{display:block;margin-top:.12em;color:#fff;font-style:italic;font-size:.84em;
 line-height:1.03;letter-spacing:-.012em}
 .hero h1 em.hero-promesse{color:#fff}
-.hero-promesse span{color:#cfe0b8;font-style:italic}
+.hero-promesse span{color:#cfe0b8;font-style:italic;white-space:nowrap}
 
 /* bandeau */
 .rassure{background:var(--white);border-bottom:1px solid var(--line)}
@@ -107,6 +107,10 @@ font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;col
 .renv-image{margin:48px auto 0;max-width:880px}
 .renv-image img{display:block;width:100%;height:auto;border-radius:var(--radius)}
 .renv-image-2{margin-top:18px}
+.renv-chute{margin:clamp(46px,6.4vh,78px) auto 0;max-width:24ch;
+font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(27px,3.3vw,46px);line-height:1.08;letter-spacing:-.01em;color:#fff}
+.renv-chute em{font-style:italic;color:#cfe0b8}
 .chute{margin:52px auto 0;max-width:23ch;padding-top:26px;border-top:1px solid var(--line);
 font-family:"Playfair Display",Georgia,serif;font-size:clamp(22px,2.6vw,33px);line-height:1.12;
 color:var(--sage-dark);text-align:center}
@@ -394,10 +398,11 @@ font-size:clamp(18px,1.7vw,23px);line-height:1.5;color:var(--sage-dark)}
 letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dark)}
 .reponse footer i{font-style:normal;padding:0 6px;color:var(--sage-soft)}
 
-.tetine-specs{margin:clamp(26px,3.4vh,40px) auto 0;max-width:70ch;text-align:center;
+.tetine-specs{margin:clamp(26px,3.4vh,40px) auto 0;max-width:none;text-align:center;
 font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.16em;
 text-transform:uppercase;line-height:2;color:var(--sage-dark);text-indent:.16em}
 .tetine-specs i{font-style:normal;padding:0 4px;color:var(--sage-soft)}
+.tetine-specs b{font-weight:inherit;white-space:nowrap}
 .mains-titre{margin:clamp(64px,8.5vh,116px) 0 clamp(34px,4.4vh,58px);text-align:center;
 font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(28px,3.2vw,42px);line-height:1.08;color:var(--sage-dark)}
@@ -695,7 +700,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <div aria-hidden="true" class="hero-voile"></div>
 <div class="shell hero-contenu">
 <p class="overline">Fabriqué en France · Testé par le LNE</p>
-<h1>Le biberon<br/>nomade.<br/><em class="hero-promesse">Sans rien à transporter, <span>de plus.</span></em></h1>
+<h1>Le biberon<br/>nomade.<br/><em class="hero-promesse">Rien d’autre <span>à transporter.</span></em></h1>
 <div class="hero-capsules">
 <a class="capsule" href="#preuve-vegetal">50 % végétal</a>
 <a class="capsule" href="#preuve-residu">0 résidu détecté</a>
@@ -756,14 +761,14 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <figure class="renv-image renv-image-seule">
 <img alt="Un biberon BIBEON doré au milieu de biberons classiques expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
 </figure>
+<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
 </div>
 </section>
 
-<!-- ══════════ 3 quater · LA PHRASE DE MARQUE ══════════ -->
-<section aria-label="Le biberon toujours prêt" class="usp">
+<!-- ══════════ 3 quater · LE CONCEPT ══════════ -->
+<section aria-label="Tout dedans, rien autour" class="usp">
 <div class="shell">
-<p class="usp-marque">Le biberon toujours prêt</p>
-<p class="usp-phrase">Pré-dosé ici.<br/><em>Nourrissez partout.</em></p>
+<p class="usp-phrase">Tout dedans.<br/><em>Rien autour.</em></p>
 </div>
 </section>
 
@@ -800,12 +805,21 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </figure>
 </div>
 </section>
+
+<!-- ══════════ 6 bis · LA PROPOSITION DE VALEUR ══════════ -->
+<section aria-label="Le biberon toujours prêt" class="usp">
+<div class="shell">
+<p class="usp-marque">Le biberon toujours prêt</p>
+<p class="usp-phrase">Pré-dosé ici.<br/><em>Nourrissez partout.</em></p>
+</div>
+</section>
+
 <!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
 <section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
 <div class="shell bloc-grid">
 <div class="bloc-texte">
-<p class="overline">Toujours prêt</p>
-<h2 class="bloc-titre">La dose dedans.</h2>
+<p class="overline">Rien d’autre</p>
+<h2 class="bloc-titre">Le biberon qui emporte la dose.</h2>
 <p class="billets">L’eau au moment du repas.</p>
 </div>
 <figure class="bloc-visuel photo ample">
@@ -1067,7 +1081,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <p>«&#8239;Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup.&#8239;»</p>
 <footer>Chloé G. <i>·</i> février 2025 <i>·</i> Un super biberon innovant</footer>
 </blockquote>
-<p class="tetine-specs">Tétine en silicone alimentaire <i>·</i> col étroit interchangeable <i>·</i> débit 6 mois+</p>
+<p class="tetine-specs"><b>Tétine en silicone alimentaire</b> <i>·</i> <b>col étroit interchangeable</b> <i>·</i> <b>débit 6 mois+</b></p>
 </div>
 
 <div class="shell">
