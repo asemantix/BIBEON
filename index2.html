@@ -446,7 +446,7 @@ line-height:1.75;color:var(--text)}
 
 /* ═══════════ ENTÊTE — reprise fidèle d'index2, plus le seul ajout : ACHAT RAPIDE ═══════════ */
 html{scroll-behavior:smooth}
-#preuve-vegetal,#preuve-residu,#boutique,#avis,#faq,#fonctionnement{scroll-margin-top:100px}
+#preuve-vegetal,#preuve-residu,#boutique,#avis,#faq,#fonctionnement,#film-complet{scroll-margin-top:100px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);
 backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -622,6 +622,26 @@ background:radial-gradient(ellipse at center,rgba(255,255,255,.92) 0%,rgba(255,2
 box-shadow:0 0 0 2px var(--cream),0 0 0 4px var(--sage-dark),
 inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 .pastille:focus-visible{outline:2px solid var(--sage-dark);outline-offset:4px}
+
+/* ═══════════ LA PHRASE DE MARQUE — une respiration, rien d'autre ═══════════ */
+.usp{min-height:72vh;display:flex;align-items:center;text-align:center;
+padding:clamp(90px,13vh,180px) 0;background:var(--white)}
+.usp-marque{margin:0 0 clamp(28px,3.6vh,46px);font-family:Montserrat,sans-serif;
+font-size:clamp(12px,1.1vw,14px);font-weight:600;letter-spacing:.34em;
+text-transform:uppercase;color:var(--sage)}
+.usp-phrase{margin:0 auto;max-width:20ch;font-family:"Playfair Display",Georgia,serif;
+font-weight:500;font-size:clamp(34px,4.6vw,64px);line-height:1.06;
+letter-spacing:-.01em;color:var(--sage-dark)}
+.usp-phrase em{font-style:italic;color:var(--sage)}
+@media (max-width:700px){.usp{min-height:0;padding:88px 0}}
+
+/* ═══════════ LE FILM COMPLET — un raccourci pour qui veut tout voir ═══════════ */
+.film-complet{background:var(--beige-2)}
+.film-complet-cadre{margin:clamp(34px,4.4vh,58px) auto 0;max-width:1100px;
+border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m);background:#000}
+.film-complet-cadre video{display:block;width:100%;height:auto}
+.film-complet-note{margin:clamp(24px,3vh,36px) auto 0;max-width:56ch;text-align:center;
+font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--text)}
 </style>
 </head>
 <body>
@@ -656,7 +676,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <a class="capsule" href="#preuve-vegetal">50 % végétal</a>
 <a class="capsule" href="#preuve-residu">0 résidu détecté</a>
 </div>
-<p class="hero-cta"><a href="#boutique">Voir les BIBEONS <span>→</span></a></p>
+<p class="hero-cta"><a href="#film-complet">Découvrir BIBEON en 30 secondes <span>→</span></a></p>
 </div>
 </section>
 
@@ -716,6 +736,15 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 </section>
 
+<!-- ══════════ 3 quater · LA PHRASE DE MARQUE ══════════ -->
+<section aria-label="Le biberon toujours prêt" class="usp">
+<div class="shell">
+<p class="usp-marque">Le biberon toujours prêt</p>
+<p class="usp-phrase">Pré-dosé ici.<br/><em>Nourrissez partout.</em></p>
+</div>
+</section>
+
+
 <!-- ══════════ 4 · TOUTES LES TAILLES ══════════ -->
 <section aria-label="Évolutif" class="bloc" style="background:var(--beige)">
 <div class="shell bloc-grid">
@@ -735,20 +764,6 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 </section>
 
-<!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
-<section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
-<div class="shell bloc-grid">
-<div class="bloc-texte">
-<p class="overline">Toujours prêt</p>
-<h2 class="bloc-titre">La dose dedans.</h2>
-<p class="billets">L’eau au moment du repas.</p>
-</div>
-<figure class="bloc-visuel photo ample">
-<video aria-label="Des biberons BIBEON pré-dosés que l’on range dans un sac à main" autoplay="" loop="" muted="" playsinline="" poster="assets/sac-a-main.webp" preload="metadata" src="assets/demo-nomade.mp4"></video>
-</figure>
-</div>
-</section>
-
 <!-- ══════════ 6 · PRÉSERVÉE JUSQU'AU REPAS ══════════ -->
 <section aria-label="Replié" class="bloc" style="background:var(--beige-2)">
 <div class="shell bloc-grid">
@@ -759,6 +774,19 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 </div>
 <figure class="bloc-visuel libre">
 <img alt="Un biberon BIBEON replié contenant la dose de lait en poudre, à l’abri de l’air" height="884" loading="lazy" src="assets/bibeon-poudre-libre.png" width="600"/>
+</figure>
+</div>
+</section>
+<!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
+<section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
+<div class="shell bloc-grid">
+<div class="bloc-texte">
+<p class="overline">Toujours prêt</p>
+<h2 class="bloc-titre">La dose dedans.</h2>
+<p class="billets">L’eau au moment du repas.</p>
+</div>
+<figure class="bloc-visuel photo ample">
+<video aria-label="Des biberons BIBEON pré-dosés que l’on range dans un sac à main" autoplay="" loop="" muted="" playsinline="" poster="assets/sac-a-main.webp" preload="metadata" src="assets/demo-nomade.mp4"></video>
 </figure>
 </div>
 </section>
@@ -779,7 +807,7 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <div class="bloc-texte">
 <p class="overline">Une paroi accidentée</p>
 <h2 class="bloc-titre">La poudre d’abord.</h2>
-<p class="billets">Un lait sans grumeaux.<br/>Tout simplement.</p>
+<p class="billets">Mélangée vigoureusement.<br/>Un lait sans grumeaux.<br/>Tout simplement.</p>
 </div>
 <figure class="bloc-visuel photo mesure">
 <video aria-label="Le lait versé du BIBEON traverse un tamis fin : la maille reste propre" autoplay="" loop="" muted="" playsinline="" poster="assets/preuve-tamis.webp" preload="metadata" src="assets/preuve-tamis.mp4"></video>
@@ -866,6 +894,23 @@ inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 <figure class="bloc-visuel photo">
 <video aria-label="Le goupillon engagé dans les soufflets, puis la main qui atteint le fond" autoplay="" loop="" muted="" playsinline="" poster="assets/poster-nettoyage.webp" preload="metadata" src="assets/geste-nettoyage-loop.mp4"></video>
 </figure>
+</div>
+</section>
+
+
+<!-- ══════════ 11 bis · LE FILM COMPLET ══════════ -->
+<section aria-label="Tout comprendre en 30 secondes" class="film-complet" id="film-complet">
+<div class="shell chapitre">
+<p class="overline">Tout comprendre en 30 secondes</p>
+<h2 class="chapitre-titre">BIBEON, du premier geste au nettoyage.</h2>
+</div>
+<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
+<figure class="film-complet-cadre">
+<video aria-label="Démonstration complète du biberon BIBEON : dépliage, dosage, tétine, repliage et nettoyage" controls="" height="500" playsinline="" poster="assets/demo-bibeon.jpg" preload="none" width="960">
+<source src="assets/demo-bibeon.mp4" type="video/mp4"/>
+</video>
+</figure>
+<p class="film-complet-note">Le dépliage, la dose, l’eau, la tétine, le repliage et le nettoyage — dans l’ordre, sans coupure.</p>
 </div>
 </section>
 
