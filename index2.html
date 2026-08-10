@@ -548,7 +548,9 @@ font-family:Montserrat,sans-serif;font-size:16px;line-height:1.8;color:var(--tex
 .faq-item summary:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
 
 /* ═══════════ BOUTIQUE — la fin du parcours, sans un argument de plus ═══════════ */
-.boutique-offre{margin:clamp(26px,3.4vh,42px) auto 0;max-width:60ch;text-align:center;
+.boutique-service{margin:clamp(22px,2.8vh,34px) 0 0;font-family:Montserrat,sans-serif;
+font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.boutique-offre{margin:clamp(18px,2.4vh,28px) auto 0;max-width:60ch;text-align:center;
 font-family:"Playfair Display",Georgia,serif;font-weight:400;font-style:italic;
 font-size:clamp(18px,1.6vw,23px);line-height:1.5;color:var(--sage-dark)}
 .boutique-offre b{font-style:normal;font-weight:500}
@@ -642,6 +644,23 @@ border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-m);backgroun
 .film-complet-cadre video{display:block;width:100%;height:auto}
 .film-complet-note{margin:clamp(24px,3vh,36px) auto 0;max-width:56ch;text-align:center;
 font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--text)}
+
+/* ═══ Centrage optique des textes interlettrés ═══
+   Un interlettrage ajoute une espace APRÈS la dernière lettre. Centré, le bloc
+   se décale donc vers la gauche de la moitié de cette espace. On la compense
+   par un retrait d'entrée égal à l'interlettrage. */
+.usp-marque{text-indent:.34em}
+.chapitre .overline{text-indent:.28em}
+.temoignage .overline{text-indent:.28em}
+.boutique-service{text-indent:.24em}
+.parole-sign{text-indent:.16em}
+.citation footer{text-indent:.22em}
+.reponse footer{text-indent:.2em}
+.avis-preuve figcaption{text-indent:.14em}
+.lien-centre a{text-indent:.08em}
+.cta-ligne a,.conversion-cta a,.hero-cta a,.nav-achat,.offre-cta a{text-indent:.13em}
+.etapes-suite .rechauffe-item b{text-indent:.08em}
+.main-mot,.liberte-mot,.preuve-mot{text-indent:.24em}
 </style>
 </head>
 <body>
@@ -727,12 +746,11 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </section>
 
 <!-- ══════════ 3 ter · LA RÉPONSE ══════════ -->
-<section aria-label="Un biberon, tout le reste en moins" class="renversement renversement-reponse">
+<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
 <div class="shell">
 <figure class="renv-image renv-image-seule">
 <img alt="Un biberon BIBEON doré au milieu de biberons classiques expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
 </figure>
-<p class="chute chute-claire">Un biberon.<br/><em>Tout le reste, en moins.</em></p>
 </div>
 </section>
 
@@ -792,9 +810,9 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </section>
 
 <!-- ══════════ 7 · LE GRAND FILM ══════════ -->
-<section aria-label="Pré-dosé ici, nourrissez partout" class="film-plein">
+<section aria-label="Un biberon, tout le reste en moins" class="film-plein">
 <div class="shell">
-<h2 class="film-titre">Pré-dosé ici.<br/><em>Nourrissez partout.</em></h2>
+<h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
 <figure>
 <video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
 </figure>
@@ -906,11 +924,11 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </div>
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <figure class="film-complet-cadre">
-<video aria-label="Démonstration complète du biberon BIBEON : dépliage, dosage, tétine, repliage et nettoyage" controls="" height="500" playsinline="" poster="assets/demo-bibeon.jpg" preload="none" width="960">
+<video aria-label="Démonstration complète du biberon BIBEON : dépliage, dosage, tétine, repliage, nettoyage et séchage" controls="" height="500" playsinline="" poster="assets/demo-bibeon.jpg" preload="none" width="960">
 <source src="assets/demo-bibeon.mp4" type="video/mp4"/>
 </video>
 </figure>
-<p class="film-complet-note">Le dépliage, la dose, l’eau, la tétine, le repliage et le nettoyage — dans l’ordre, sans coupure.</p>
+<p class="film-complet-note">Le dépliage, la dose, l’eau, la tétine, le repliage, le nettoyage et le séchage — dans l’ordre, sans coupure.</p>
 </div>
 </section>
 
@@ -927,6 +945,15 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <figure class="bloc-visuel photo">
 <img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
 </figure>
+</div>
+</section>
+
+
+<!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
+<section aria-label="Achat rapide" class="conversion">
+<div class="shell">
+<p class="conversion-titre">Prêt à partir léger ?</p>
+<p class="conversion-cta"><a href="#boutique">Achat rapide <span>→</span></a></p>
 </div>
 </section>
 
@@ -1089,14 +1116,6 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </div>
 </section>
 
-<!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
-<section aria-label="Achat rapide" class="conversion">
-<div class="shell">
-<p class="conversion-titre">Prêt à partir léger ?</p>
-<p class="conversion-cta"><a href="#boutique">Achat rapide <span>→</span></a></p>
-</div>
-</section>
-
 
 <!-- ══════════ 17 · VOYAGER AVEC BÉBÉ ══════════ -->
 <section aria-label="Voyager avec bébé" style="background:var(--cream)">
@@ -1144,6 +1163,10 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <p>C’est la question que se posent la plupart des parents avant d’acheter. Les témoignages vont dans le même sens : des enfants habitués à une seule marque depuis un an l’ont adoptée sans difficulté. La tétine est en silicone alimentaire, à débit 6 mois.</p>
 </details>
 <details class="faq-item">
+<summary>De quoi est faite la tétine ? Peut-on la changer ?</summary>
+<p>Elle est en silicone alimentaire. Aucun silicone médical n’est utilisé dans BIBEON. Elle est à col étroit et interchangeable : on la retire, et on peut la remplacer par une autre tétine à col étroit. Son débit est de 6 mois et plus.</p>
+</details>
+<details class="faq-item">
 <summary>Comment emporter un biberon en voyage sans encombrer le sac ?</summary>
 <p>BIBEON se replie à la taille d’un petit pot : replié, il tient dans une poche de sac à main. Vous y placez les doses de lait en poudre avant de partir, vous le dépliez au moment du repas et vous ajoutez l’eau. Plus de boîte doseuse à transporter à côté, et plus de sac à langer à sortir pour une course d’une heure.</p>
 </details>
@@ -1183,8 +1206,8 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <!-- ══════════ 19 · BOUTIQUE ══════════ -->
 <section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--cream)">
 <div class="shell chapitre">
-<p class="overline">Port compris · Expédié le jour même</p>
-<h2 class="chapitre-titre">Prêt à partir léger ?</h2>
+<h2 class="chapitre-titre">Choisissez votre BIBEON</h2>
+<p class="boutique-service">Port compris · Commande avant midi, expédiée le jour même</p>
 <p class="boutique-offre"><b>Offre de lancement</b> — 25 € l’unité jusqu’au 30 septembre inclus, port compris. Au 1<sup>er</sup> octobre, l’unité passe à 35 €.</p>
 </div>
 
@@ -1270,7 +1293,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </article>
 </div>
 
-<p class="offre-note">Commande passée avant midi, expédiée le jour même depuis la France. Paiement par carte ou PayPal, retour sous 14 jours.</p>
+<p class="offre-note">Toute commande passée avant midi part le jour même, depuis la France. Paiement par carte ou PayPal, retour sous 14 jours.</p>
 </div>
 </section>
 
