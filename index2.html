@@ -3,9 +3,33 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="cprnlOhR7L-R36k8b0GaA6DEHPfjImWCG6ehsmtnJks" name="google-site-verification"/>
+<meta content="#f7f4ee" name="theme-color"/>
+<meta content="BIBEON" name="author"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" name="robots"/>
+<meta content="BIBEON" property="og:site_name"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="true" name="pinterest-rich-pin"/>
+<link href="/assets/favicon-bibeon.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon"/>
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <title>BIBEON — Le biberon a changé : il s’élève et se replie à la demande</title>
 <meta content="Replié et hermétique, BIBEON emporte directement son lait en poudre sans doseur. Dépliez, ajoutez l’eau. 50 % végétal, 0 résidu détecté par le LNE, fabriqué en France." name="description"/>
 <link href="https://bibeon.fr/" rel="canonical"/>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bibeon.fr/">
+<meta property="og:title" content="BIBEON — Le biberon a changé">
+<meta property="og:description" content="Il s’élève et se replie à la demande. Replié, il emporte son lait en poudre sans doseur.">
+<meta property="og:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
+<meta property="og:image:width" content="1731">
+<meta property="og:image:height" content="909">
+<meta property="og:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BIBEON — Le biberon a changé">
+<meta name="twitter:description" content="Il s’élève et se replie à la demande. Replié, il emporte son lait en poudre sans doseur.">
+<meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
+<meta name="twitter:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -71,14 +95,14 @@ gap:10px 22px;padding:22px 0;text-align:center}
 /* Les deux lignes s'alignent sur le point, pas sur elles-mêmes :
    une seule grille de trois colonnes, partagée par les deux paires. */
 .rassure-paires{display:grid;width:100%;grid-template-columns:1fr auto 1fr;align-items:center;
-row-gap:9px;font-size:12.5px;font-weight:600;letter-spacing:.1em;
+row-gap:9px;font-size:13.5px;font-weight:600;letter-spacing:.1em;
 text-transform:uppercase;color:var(--sage-dark)}
 .rassure-paires > span{white-space:nowrap}
 .rassure-paires > span:nth-child(3n+1){text-align:right}
 .rassure-paires > span:nth-child(3n){text-align:left}
 .rassure-paires > i{font-style:normal;font-weight:700;color:var(--sage);padding:0 22px}
 @media (max-width:560px){
-  .rassure-paires{font-size:11px;letter-spacing:.07em}
+  .rassure-paires{font-size:12px;letter-spacing:.07em}
   .rassure-paires > i{padding:0 12px}
 }
 .rassure-avis{display:contents;text-decoration:none}
@@ -158,8 +182,29 @@ font-size:11px;letter-spacing:.04em;color:#7b8579}
 .etapes{padding:clamp(56px,7vh,96px) 0;min-height:100vh;display:flex;align-items:center;
 background:var(--beige-2)}
 .etapes>.shell{width:min(1320px,calc(100% - 64px))}
-.etapes .etape-visuel{height:clamp(150px,20vh,280px);margin-bottom:16px}
-.etapes .etape{padding:22px 22px 26px}
+.etapes .etape-visuel{height:clamp(240px,31vh,340px);margin-bottom:20px}
+.etapes .etape{padding:26px 26px 34px}
+
+/* ═══════════ LA RÈGLE — agrément au contact alimentaire ═══════════ */
+.regle{background:var(--sage-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+padding:clamp(58px,8.5vh,104px) 0}
+.regle-inner{text-align:center}
+.regle-sur{margin:0 0 22px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
+letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.regle p.regle-phrase{margin:0 auto 26px;max-width:20ch;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(30px,4vw,54px);line-height:1.14;letter-spacing:-.012em;color:var(--sage-dark)}
+.regle p.regle-phrase em{font-style:italic}
+.regle-note{max-width:56ch;margin:0 auto 28px;font-family:Montserrat,sans-serif;
+font-size:15.5px;line-height:1.75;color:var(--text)}
+.regle-liens{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:0}
+.regle-liens a{display:inline-flex;align-items:center;font-family:Montserrat,sans-serif;font-size:12.5px;
+font-weight:600;letter-spacing:.13em;text-transform:uppercase;text-decoration:none;
+padding:14px 26px;border-radius:999px;border:1px solid rgba(110,126,97,.45);color:var(--sage-dark);
+transition:background .2s ease}
+.regle-liens a:hover{background:rgba(110,126,97,.1)}
+.regle-liens a.plein{background:var(--sage-dark);color:#fff;border-color:var(--sage-dark)}
+.regle-liens a.plein:hover{background:var(--sage)}
+@media (max-width:600px){.regle p.regle-phrase{max-width:14ch}}
 .etapes .etape h3{font-size:clamp(20px,1.9vw,26px);margin-bottom:6px}
 .etapes .etape p{font-size:15.5px}
 .etapes .section-head{margin-bottom:clamp(24px,3.6vh,48px)}
@@ -177,7 +222,7 @@ font-size:clamp(19px,1.6vw,23px);line-height:1.1;color:var(--sage-dark)}
 letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dark)}
 @media (max-width:900px){
   .etapes{min-height:0;display:block;padding:76px 0}
-  .etapes .etape-visuel{height:300px}
+  .etapes .etape-visuel{height:340px}
 }
 .etapes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
 .etape{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
@@ -571,13 +616,17 @@ font-size:13px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;col
 font-family:"Playfair Display",Georgia,serif;font-weight:400;font-style:italic;
 font-size:clamp(18px,1.6vw,23px);line-height:1.5;color:var(--sage-dark)}
 .boutique-offre b{font-style:normal;font-weight:500}
+.boutique-gamme{margin:clamp(14px,1.8vh,20px) auto 0;max-width:56ch;text-align:center;
+font-family:Montserrat,sans-serif;font-size:14px;line-height:1.6;color:var(--sage-dark);opacity:.85}
 .offres{display:grid;grid-template-columns:repeat(4,1fr);
 margin-top:clamp(50px,6.5vh,88px);border-top:1px solid var(--line)}
 .offre{display:flex;flex-direction:column;
 padding:clamp(30px,3.8vh,46px) clamp(16px,1.8vw,30px);border-left:1px solid var(--line)}
 .offre:first-child{border-left:0}
-.offre-image{margin:0 0 clamp(20px,2.6vh,30px);aspect-ratio:4/3;overflow:hidden;background:var(--white)}
-.offre-image img{display:block;width:100%;height:100%;object-fit:contain}
+.offre-image{margin:0 0 clamp(18px,2.4vh,28px);aspect-ratio:4/3;overflow:hidden;
+background:none;display:flex;align-items:flex-end;justify-content:center}
+.offre-image img{display:block;width:auto;max-width:92%;height:auto;max-height:100%;
+object-fit:contain;mix-blend-mode:multiply}
 .offre h3{margin:0 0 10px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(21px,1.9vw,26px);line-height:1.15;color:var(--sage-dark)}
 .offre p{margin:0 0 18px;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.7;color:var(--text)}
@@ -679,6 +728,58 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 .etapes-suite .rechauffe-item b{text-indent:.08em}
 .main-mot,.liberte-mot,.preuve-mot{text-indent:.24em}
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://bibeon.fr/#organisation",
+   "name": "BIBEON",
+   "url": "https://bibeon.fr/",
+   "email": "contact@bibeon.fr",
+   "logo": {
+    "@type": "ImageObject",
+    "url": "https://bibeon.fr/assets/bibeon-logo-carre-512.png",
+    "width": 512,
+    "height": 512
+   },
+   "description": "BIBEON conçoit et fabrique en France un biberon nomade pliable de 330 ml, pensé pour les sorties et les voyages avec bébé.",
+   "areaServed": "FR",
+   "sameAs": [
+    "https://www.instagram.com/bibeon.fr",
+    "https://www.tiktok.com/@bibeon.fr",
+    "https://www.pinterest.fr/bibeonfr",
+    "https://www.facebook.com/bibeon.fr"
+   ]
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://bibeon.fr/#site",
+   "url": "https://bibeon.fr/",
+   "name": "BIBEON",
+   "inLanguage": "fr-FR",
+   "publisher": {
+    "@id": "https://bibeon.fr/#organisation"
+   }
+  },
+  {
+   "@type": "VideoObject",
+   "@id": "https://bibeon.fr/#demo",
+   "name": "BIBEON, le biberon nomade pliable — démonstration",
+   "description": "Démonstration du biberon nomade pliable BIBEON 330 ml : le dosage du lait en poudre dans le biberon replié, le dépliage des soufflets et l’ajout de l’eau au moment du repas.",
+   "thumbnailUrl": "https://bibeon.fr/assets/demo-bibeon.jpg",
+   "contentUrl": "https://bibeon.fr/assets/demo-bibeon.mp4",
+   "uploadDate": "2026-07-31",
+   "duration": "PT1M12S",
+   "inLanguage": "fr-FR",
+   "publisher": {
+    "@id": "https://bibeon.fr/#organisation"
+   }
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -1065,7 +1166,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <a class="preuve" href="tests-migration-lne-bibeon.html">
 <p class="preuve-hero sigle">LNE</p>
 <p class="preuve-mot">testé et contrôlé</p>
-<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier P143418.</p>
+<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier PI43418.</p>
 <p class="preuve-lien"><span>Voir les tests de migration LNE</span></p>
 </a>
 <a class="preuve" href="legerete.html#matieres">
@@ -1074,6 +1175,19 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <p class="preuve-note">Polypropylène · matière d’origine végétale · silicone alimentaire.</p>
 <p class="preuve-lien"><span>Découvrir les matières</span></p>
 </a>
+</div>
+</div>
+
+<div class="regle">
+<div class="shell"><div class="regle-inner">
+<p class="regle-sur">La règle qui commande tout</p>
+<p class="regle-phrase">Un matériau au contact du lait doit être <em>agréé pour le contact alimentaire.</em></p>
+<p class="regle-note">Le LNE le rappelle en note de son rapport. C’est cette exigence qui a dicté le choix de chacune des trois matières du BIBEON — et la tétine ne fait pas exception : elle est en silicone alimentaire.</p>
+<p class="regle-liens">
+<a class="plein" href="silicone-medical-alimentaire-biberon.html">Alimentaire ou médical : la différence</a>
+<a href="tests-migration-lne-bibeon.html">La déclaration de conformité</a>
+</p>
+</div>
 </div>
 </div>
 </section>
@@ -1225,6 +1339,38 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <summary>Où est-il fabriqué ?</summary>
 <p>En France, en région lyonnaise, du moule au flacon. La bague et le capuchon sont en matière d’origine végétale.</p>
 </details>
+<details class="faq-item">
+<summary>Comment le déplier ?</summary>
+<p>En deux temps, et le premier soufflet est le seul qui demande un geste. Arrondissez le flacon comme une banane : le premier soufflet se libère d’un côté. Recommencez de l’autre côté, il est déplié. Ensuite c’est toujours le même mouvement — vous pincez le soufflet voisin, les doigts tout près de lui, et vous l’étirez d’un côté puis de l’autre. Le pliage suit exactement la même logique, en plus facile.</p>
+</details>
+<details class="faq-item">
+<summary>Comment le laver ?</summary>
+<p>Comme un biberon ordinaire. Et mieux qu’un biberon ordinaire : s’il reste une particule, repliez les soufflets et le fond remonte à portée de doigt. Vous atteignez directement ce que la brosse d’un biberon rigide n’atteint jamais.</p>
+</details>
+<details class="faq-item">
+<summary>Comment le sécher rapidement ?</summary>
+<p>Le séchage compte, parce que le pré-dosage suppose un flacon parfaitement sec — et cela peut devenir urgent en vacances ou à l’hôtel, quand le biberon doit repartir tout de suite. Là encore, repliez les soufflets : les dernières gouttelettes deviennent accessibles au doigt, et un tissu propre à usage unique suffit à les prendre.</p>
+</details>
+<details class="faq-item">
+<summary>Pourquoi la poudre avant l’eau, alors qu’on conseille l’inverse ?</summary>
+<p>Parce que la paroi n’est pas lisse. On recommande habituellement de verser la poudre en second pour éviter les grumeaux dans un flacon lisse. Ici, le soufflet travaille pour vous : en mélangeant, la poudre rencontre le creux de chaque anneau et s’y désagrège. L’architecture de la paroi fait le travail que le geste devait faire.</p>
+</details>
+<details class="faq-item">
+<summary>Comment conserver la poudre à l’intérieur ?</summary>
+<p>Trois conditions, et elles ne se négocient pas. Le flacon doit être <b>parfaitement sec</b>. La bague doit être <b>vissée à fond</b>. Et la tétine doit être placée <b>verticalement, son orifice contre le toit du capuchon</b>. Le pochon opaque fourni protège ensuite l’ensemble de la lumière.</p>
+</details>
+<details class="faq-item">
+<summary>Comment fermer le capuchon sur la tétine ?</summary>
+<p>Posez le capuchon directement sur l’orifice de la tétine, sans le lâcher. Puis enfoncez la tétine à l’intérieur d’elle-même, en tenant le capuchon bien vertical et d’un geste franc. C’est la fermeté du geste qui fait tout — hésiter ne marche pas.</p>
+</details>
+<details class="faq-item">
+<summary>Peut-on changer la tétine ?</summary>
+<p>Oui, à une seule condition : le diamètre. La bague est à <b>col étroit</b>, la tétine de remplacement doit l’être aussi. Une tétine à col large ne peut pas s’y insérer. Son débit est de 6 mois et plus.</p>
+</details>
+<details class="faq-item">
+<summary>Que deviennent les pièces en fin de vie ?</summary>
+<p>Le flacon est recyclable. La bague et le capuchon sont en matière d’origine végétale. La tétine, elle, ne se recycle pas : le silicone ne se recycle pas.</p>
+</details>
 </div>
 </div>
 </section>
@@ -1236,17 +1382,18 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <h2 class="chapitre-titre">Choisissez votre BIBEON</h2>
 <p class="boutique-service">Port compris · Commande avant midi, expédiée le jour même</p>
 <p class="boutique-offre"><b>Offre de lancement</b> — 25 € l’unité jusqu’au 30 septembre inclus, port compris. Au 1<sup>er</sup> octobre, l’unité passe à 35 €.</p>
+<p class="boutique-gamme">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images — voici les cinq coloris disponibles.</p>
 </div>
 
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <div class="offres">
 <article class="offre">
-<figure class="offre-image"><img alt="Le biberon nomade BIBEON en coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/biberon-vert.webp" width="1200"/></figure>
+<figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
 <h3>Un BIBEON</h3>
 <p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois. Vendu vide.</p>
 <div class="nuancier" data-image="1" data-max="1">
 <p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Menthe</span></p>
-<div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="vert" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="orange" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="violet" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="bleu" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
+<div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="lin" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
 </div>
 <div class="offre-bas">
 <span class="offre-prix">25 €<small>tarif de lancement · port compris</small></span>
@@ -1255,12 +1402,12 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </article>
 
 <article class="offre">
-<figure class="offre-image"><img alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/duo-biberons.webp" width="1200"/></figure>
+<figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
 <h3>Le duo</h3>
 <p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
 <div class="nuancier" data-max="2">
 <p class="nuancier-titre">Choisissez deux coloris<br/><span class="nuancier-choix">aucun choisi</span></p>
-<div class="pastilles" data-paires='{"Lilas+Abricot":"https://py.pl/7rI7klD11nU","Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9"}'><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="vert" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="orange" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="violet" style="--teinte:#b7a0c7" type="button"></button></div>
+<div class="pastilles" data-paires='{"Lilas+Abricot":"https://py.pl/7rI7klD11nU","Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9"}'><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
 </div>
 <div class="offre-bas">
 <span class="offre-prix">62 €<small>soit 31 € l’unité · port compris</small></span>
@@ -1269,7 +1416,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </article>
 
 <article class="offre">
-<figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/trio-coloris.webp" width="1200"/></figure>
+<figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
 <h3>Le lot de trois</h3>
 <p>Trois repas dosés la veille : la journée entière tient dans le sac à main.</p>
 <div class="offre-bas">
@@ -1279,7 +1426,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </article>
 
 <article class="offre">
-<figure class="offre-image"><img alt="Les cinq coloris BIBEON : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/coloris-reels.webp" width="1200"/></figure>
+<figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
 <h3>Le lot de cinq</h3>
 <p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p>
 <div class="offre-bas">
@@ -1296,12 +1443,12 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 
 <div class="offres offres-rare">
 <article class="offre">
-<figure class="offre-image"><img alt="Un BIBEO rose : flacon et capuchon roses, bague jaune" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeo-rose.webp" width="1200"/></figure>
+<figure class="offre-image"><img alt="Un BIBEO replié, coloris rose : flacon et capuchon roses, bague jaune" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-rose.webp" width="1200"/></figure>
 <h3>Le BIBEO</h3>
 <p>Coloré de haut en bas, bague jaune.</p>
-<div class="nuancier" data-image="1" data-max="1" data-prefixe="bibeo-">
+<div class="nuancier" data-image="1" data-max="1" data-prefixe="bibeo-biberon-pliable-">
 <p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Rose</span></p>
-<div class="pastilles"><button aria-label="Rose" aria-pressed="true" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1j34kp" style="--teinte:#efb4c2" type="button"></button><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="vert" data-lien="https://py.pl/vS3Tl" style="--teinte:#acd7c0" type="button"></button></div>
+<div class="pastilles"><button aria-label="Rose" aria-pressed="true" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1j34kp" style="--teinte:#efb4c2" type="button"></button><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/vS3Tl" style="--teinte:#acd7c0" type="button"></button></div>
 </div>
 <div class="offre-bas">
 <span class="offre-prix">45 €<small>port compris · coloris au choix</small></span>
@@ -1310,7 +1457,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </article>
 
 <article class="offre">
-<figure class="offre-image"><img alt="Les deux BIBEO côte à côte : l’un rose, l’autre vert, bague jaune" height="900" loading="lazy" src="assets/bibeo-duo.webp" width="1200"/></figure>
+<figure class="offre-image"><img alt="Les deux BIBEO repliés côte à côte : l’un rose, l’autre menthe, bague jaune" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1200"/></figure>
 <h3>Le duo BIBEO</h3>
 <p>Un rose et un menthe. La seule façon d’avoir les deux.</p>
 <div class="offre-bas">
@@ -1372,7 +1519,17 @@ range.addEventListener("input",maj);range.addEventListener("change",maj);maj();
     function maj() {
       var c = choisis().map(function (b) { return b.dataset.coloris; });
       etiquette.textContent = c.length ? c.join(", ") : (max === 1 ? "à choisir" : "aucun choisi");
-      if (image && c.length) image.src = "assets/" + (n.dataset.prefixe || "biberon-") + choisis()[0].dataset.fichier + ".webp";
+      if (image && c.length) {
+        if (max === 2 && c.length === 2) {
+          /* duo : nom composé des deux coloris, dans l'ordre fixe menthe, abricot, lilas, rose, lin */
+          var ordre = ["menthe", "abricot", "lilas", "rose", "lin"];
+          var f = choisis().map(function (b) { return b.dataset.fichier; })
+                  .sort(function (x, y) { return ordre.indexOf(x) - ordre.indexOf(y); });
+          image.src = "assets/bibeon-biberon-pliable-duo-" + f[0] + "-" + f[1] + ".webp";
+        } else {
+          image.src = "assets/" + (n.dataset.prefixe || "bibeon-biberon-pliable-") + choisis()[0].dataset.fichier + ".webp";
+        }
+      }
       var bouton = carte && carte.querySelector(".offre-cta a"),
           premier = choisis()[0],
           pastilles = n.querySelector(".pastilles"),
