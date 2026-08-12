@@ -102,8 +102,8 @@ text-transform:uppercase;color:var(--sage-dark)}
 .rassure-paires > span:nth-child(3n){text-align:left}
 .rassure-paires > i{font-style:normal;font-weight:700;color:var(--sage);padding:0 22px}
 @media (max-width:560px){
-  .rassure-paires{font-size:12px;letter-spacing:.07em}
-  .rassure-paires > i{padding:0 12px}
+  .rassure-paires{font-size:11.5px;letter-spacing:.04em}
+  .rassure-paires > i{padding:0 9px}
 }
 .rassure-avis{display:contents;text-decoration:none}
 .rassure-avis b{grid-column:1;justify-self:end;margin-top:16px;
@@ -184,6 +184,42 @@ background:var(--beige-2)}
 .etapes>.shell{width:min(1320px,calc(100% - 64px))}
 .etapes .etape-visuel{height:clamp(240px,31vh,340px);margin-bottom:20px}
 .etapes .etape{padding:26px 26px 34px}
+
+/* ═══════════ LA PLANCHE DU COFFRET ═══════════ */
+.planche{background:var(--beige);border-top:1px solid var(--line);
+padding:clamp(56px,8vh,100px) 0 0;text-align:center}
+.planche-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
+letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.planche-titre{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(30px,3.7vw,52px);line-height:1.12;color:var(--sage-dark)}
+.planche-titre em{font-style:italic}
+.planche-image{margin:clamp(38px,5vh,64px) 0 0}
+.planche-image img{display:block;width:100%;height:auto}
+
+/* ═══════════ LE TEASER BOUTIQUE ═══════════ */
+.teaser{background:var(--cream);border-top:1px solid var(--line)}
+.teaser-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,5vw,76px);
+align-items:center;padding:clamp(60px,9vh,116px) 0}
+.teaser-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
+letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.teaser h2{margin:0 0 24px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(32px,3.8vw,54px);line-height:1.1;color:var(--sage-dark)}
+.teaser h2 em{font-style:italic}
+.teaser-texte{margin:0 0 22px;max-width:44ch;font-family:Montserrat,sans-serif;
+font-size:16px;line-height:1.75;color:var(--text)}
+.teaser-prix{margin:0 0 32px;font-family:"Playfair Display",Georgia,serif;font-style:italic;
+font-size:clamp(19px,1.7vw,24px);color:var(--sage-dark)}
+.teaser-prix b{font-style:normal;font-weight:500}
+.teaser-cta{margin:0}
+.teaser-cta a{display:inline-flex;align-items:center;gap:10px;
+font-family:Montserrat,sans-serif;font-size:13.5px;font-weight:600;letter-spacing:.13em;
+text-transform:uppercase;text-decoration:none;padding:17px 34px;border-radius:999px;
+background:var(--sage-dark);color:#fff;transition:background .2s ease}
+.teaser-cta a:hover{background:var(--sage)}
+.teaser-image{margin:0}
+.teaser-image img{display:block;width:100%;height:auto}
+@media (max-width:900px){.teaser-grid{grid-template-columns:1fr;gap:34px;padding:52px 0}
+.teaser-image{order:-1}}
 
 /* ═══════════ LA RÈGLE — agrément au contact alimentaire ═══════════ */
 .regle{background:var(--sage-tint);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -797,7 +833,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <a href="contact.html">Contact</a>
 </nav>
 <div class="nav-outils">
-<a class="nav-achat" href="#boutique">Achat rapide</a>
+<a class="nav-achat" href="boutique.html">Achat rapide</a>
 </div>
 </div>
 </header>
@@ -822,7 +858,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <div class="shell rassure-grid">
 <div class="rassure-lignes">
 <div class="rassure-paires">
-<span>330 ml</span><i>·</i><span>Tétine débit 6 mois</span>
+<span>330 ml</span><i>·</i><span>Tétine débit 6 mois et plus</span>
 <span>Fabriqué en France</span><i>·</i><span>Sans BPA</span>
 <a class="rassure-avis" href="#avis"><b>4,4 / 5</b><i></i><span>65 avis ConsoBaby</span></a>
 </div>
@@ -906,7 +942,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <div class="bloc-texte">
 <p class="overline">Replié</p>
 <h2 class="bloc-titre">Contenant hermétique.</h2>
-<p class="billets">La dose préservée.<br/>Conservée à l’abri de la lumière.</p>
+<p class="billets">À conserver à l’abri de la lumière.</p>
 </div>
 <figure class="bloc-visuel libre">
 <img alt="Un biberon BIBEON replié contenant la dose de lait en poudre, à l’abri de l’air" height="884" loading="lazy" src="assets/bibeon-poudre-libre.png" width="600"/>
@@ -1076,11 +1112,23 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </section>
 
 
+<!-- ══════════ 15 bis · LE COFFRET ══════════ -->
+<section aria-label="Le coffret" class="planche">
+<div class="shell">
+<p class="planche-sur">Ce que vous recevez</p>
+<h2 class="planche-titre">Un coffret qu’on garde,<br/><em>pas un carton qu’on jette.</em></h2>
+</div>
+<figure class="planche-image">
+<img alt="Le coffret Trio Nomade BIBEON ouvert : trois biberons enveloppés de papier ivoire, le pochon, la notice et le goupillon" height="1000" loading="lazy" src="assets/bibeon-coffret-ouvert.webp" width="1600"/>
+</figure>
+</section>
+
+
 <!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
 <section aria-label="Achat rapide" class="conversion">
 <div class="shell">
 <p class="conversion-titre">Prêt à partir léger ?</p>
-<p class="conversion-cta"><a href="#boutique">Achat rapide <span>→</span></a></p>
+<p class="conversion-cta"><a href="boutique.html">Achat rapide <span>→</span></a></p>
 </div>
 </section>
 
@@ -1121,7 +1169,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 </div>
 </a>
 
-<a class="cartel cartel-retour" href="#boutique">
+<a class="cartel cartel-retour" href="boutique.html">
 <div class="shell cartel-grid">
 <div>
 <p class="cartel-num">03</p>
@@ -1166,7 +1214,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <a class="preuve" href="tests-migration-lne-bibeon.html">
 <p class="preuve-hero sigle">LNE</p>
 <p class="preuve-mot">testé et contrôlé</p>
-<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier PI43418.</p>
+<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier P143418.</p>
 <p class="preuve-lien"><span>Voir les tests de migration LNE</span></p>
 </a>
 <a class="preuve" href="legerete.html#matieres">
@@ -1202,7 +1250,7 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <p>«&#8239;Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup.&#8239;»</p>
 <footer>Chloé G. <i>·</i> février 2025 <i>·</i> Un super biberon innovant</footer>
 </blockquote>
-<p class="tetine-specs"><b>Tétine en silicone alimentaire</b> <i>·</i> <b>col étroit interchangeable</b> <i>·</i> <b>débit 6 mois+</b></p>
+<p class="tetine-specs"><b>Tétine en silicone alimentaire</b> <i>·</i> <b>col étroit interchangeable</b> <i>·</i> <b>débit 6 mois et plus</b></p>
 </div>
 
 <div class="shell">
@@ -1377,97 +1425,19 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 
 
 <!-- ══════════ 19 · BOUTIQUE ══════════ -->
-<section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--cream)">
-<div class="shell chapitre">
-<h2 class="chapitre-titre">Choisissez votre BIBEON</h2>
-<p class="boutique-service">Port compris · Commande avant midi, expédiée le jour même</p>
-<p class="boutique-offre"><b>Offre de lancement</b> — 25 € l’unité jusqu’au 30 septembre inclus, port compris. Au 1<sup>er</sup> octobre, l’unité passe à 35 €.</p>
-<p class="boutique-gamme">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images — voici les cinq coloris disponibles.</p>
+<!-- ══════════ 19 · LA BOUTIQUE — teaser ══════════ -->
+<section aria-label="La boutique" class="teaser" id="boutique">
+<div class="shell teaser-grid">
+<div>
+<p class="teaser-sur">La boutique</p>
+<h2>Six façons<br/><em>de commencer.</em></h2>
+<p class="teaser-texte">À l’unité, en duo, en lot de cinq — ou en Trio Nomade, dans son étui. Cinq coloris, port compris, expédié de France le jour même.</p>
+<p class="teaser-prix">De <b>25 €</b> à <b>125 €</b></p>
+<p class="teaser-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
 </div>
-
-<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
-<div class="offres">
-<article class="offre">
-<figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
-<h3>Un BIBEON</h3>
-<p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois. Vendu vide.</p>
-<div class="nuancier" data-image="1" data-max="1">
-<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Menthe</span></p>
-<div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="lin" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
-</div>
-<div class="offre-bas">
-<span class="offre-prix">25 €<small>tarif de lancement · port compris</small></span>
-<p class="offre-cta"><a href="https://py.pl/IDHpe" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
-<h3>Le duo</h3>
-<p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
-<div class="nuancier" data-max="2">
-<p class="nuancier-titre">Choisissez deux coloris<br/><span class="nuancier-choix">aucun choisi</span></p>
-<div class="pastilles" data-paires='{"Lilas+Abricot":"https://py.pl/7rI7klD11nU","Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9"}'><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
-</div>
-<div class="offre-bas">
-<span class="offre-prix">62 €<small>soit 31 € l’unité · port compris</small></span>
-<p class="offre-cta"><a aria-disabled="true">Choisissez deux coloris</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
-<h3>Le lot de trois</h3>
-<p>Trois repas dosés la veille : la journée entière tient dans le sac à main.</p>
-<div class="offre-bas">
-<span class="offre-prix">87 €<small>soit 29 € l’unité · port compris</small></span>
-<p class="offre-cta"><a href="https://py.pl/2Oc3yYLWaB7" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
-<h3>Le lot de cinq</h3>
-<p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p>
-<div class="offre-bas">
-<span class="offre-prix">125 €<small>soit 25 € l’unité · port compris</small></span>
-<p class="offre-cta"><a href="https://py.pl/1XG8bj" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-</div>
-
-<div class="rare-tete">
-<p class="overline">Édition limitée</p>
-<p>Le BIBEO porte la marque d’origine : un colibri qui tient le O. Il ne fait pas partie de l’offre de lancement.</p>
-</div>
-
-<div class="offres offres-rare">
-<article class="offre">
-<figure class="offre-image"><img alt="Un BIBEO replié, coloris rose : flacon et capuchon roses, bague jaune" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-rose.webp" width="1200"/></figure>
-<h3>Le BIBEO</h3>
-<p>Coloré de haut en bas, bague jaune.</p>
-<div class="nuancier" data-image="1" data-max="1" data-prefixe="bibeo-biberon-pliable-">
-<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Rose</span></p>
-<div class="pastilles"><button aria-label="Rose" aria-pressed="true" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1j34kp" style="--teinte:#efb4c2" type="button"></button><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/vS3Tl" style="--teinte:#acd7c0" type="button"></button></div>
-</div>
-<div class="offre-bas">
-<span class="offre-prix">45 €<small>port compris · coloris au choix</small></span>
-<p class="offre-cta"><a href="https://py.pl/1j34kp" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img alt="Les deux BIBEO repliés côte à côte : l’un rose, l’autre menthe, bague jaune" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1200"/></figure>
-<h3>Le duo BIBEO</h3>
-<p>Un rose et un menthe. La seule façon d’avoir les deux.</p>
-<div class="offre-bas">
-<span class="offre-prix">79 €<small>soit 39,50 € l’unité · port compris</small></span>
-<p class="offre-cta"><a href="https://py.pl/185CXp" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-</div>
-
-<p class="offre-note">Toute commande passée avant midi part le jour même, depuis la France. Paiement par carte ou PayPal, retour sous 14 jours.</p>
+<figure class="teaser-image">
+<img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="1600" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1600"/>
+</figure>
 </div>
 </section>
 
