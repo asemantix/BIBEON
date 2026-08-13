@@ -548,23 +548,23 @@ backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 /* ═══════════ BANDEAU D'ANNONCE ═══════════ */
 .annonce{background:var(--sage-dark);color:#fff}
 .annonce-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-gap:6px 18px;padding:11px 0;text-align:center;
-font-family:Montserrat,sans-serif;font-size:12.5px;line-height:1.5}
+gap:6px 20px;padding:12px 0;text-align:center;
+font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5}
 .annonce-in b{font-weight:600}
 .annonce-in i{font-style:normal;color:#cfe0b8}
 .annonce-in span{color:rgba(255,255,255,.9)}
-@media (max-width:700px){.annonce-in{font-size:11.5px;gap:4px 12px;padding:9px 0}
+@media (max-width:700px){.annonce-in{font-size:12.5px;gap:4px 12px;padding:10px 0}
 .annonce-in i{display:none}}
 
 /* ═══════════ TÉLÉPHONES DE L'ENTÊTE ═══════════ */
-.nav-tel{display:flex;align-items:center;gap:16px;
-font-family:Montserrat,sans-serif;font-size:12px;white-space:nowrap}
+.nav-tel{display:flex;align-items:center;gap:18px;
+font-family:Montserrat,sans-serif;font-size:14px;white-space:nowrap}
 .nav-tel a{display:flex;align-items:baseline;gap:7px;color:var(--text);text-decoration:none}
 .nav-tel a:hover{color:var(--sage-dark)}
-.nav-tel b{font-size:10.5px;font-weight:600;letter-spacing:.13em;
+.nav-tel b{font-size:11.5px;font-weight:600;letter-spacing:.11em;
 text-transform:uppercase;color:var(--sage)}
 @media (max-width:1500px){.nav-tel{display:none}}
-.nav-links{display:flex;gap:19px;margin-left:auto;font-size:13.5px;white-space:nowrap}
+.nav-links{display:flex;gap:20px;margin-left:auto;font-size:15px;white-space:nowrap}
 .nav-links a{padding:6px 0;border-bottom:1px solid transparent;color:var(--text);text-decoration:none}
 .nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
 .nav-outils{display:flex;align-items:center;gap:14px}
@@ -812,11 +812,23 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-image{order:-1}}
 
 /* ── bande de réassurance commerce ── */
-.bande{background:var(--beige-2);border-bottom:1px solid var(--line);padding:clamp(24px,3.4vh,38px) 0}
-.bande-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,34px);text-align:center}
-.bande-grid span{font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark)}
-@media (max-width:700px){.bande-grid{grid-template-columns:repeat(2,1fr);gap:18px}}
+.bande{background:var(--beige-2);border-bottom:1px solid var(--line);padding:clamp(30px,4.2vh,48px) 0}
+.bande-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.4vw,40px);text-align:center}
+.bande-item{display:flex;flex-direction:column;align-items:center}
+.bande-item svg{width:30px;height:30px;color:var(--sage);margin-bottom:12px}
+.bande-item b{font-family:Montserrat,sans-serif;font-size:13px;font-weight:600;
+letter-spacing:.12em;text-transform:uppercase;color:var(--sage-dark);margin-bottom:6px}
+.bande-item span{max-width:24ch;font-family:Montserrat,sans-serif;font-size:13.5px;
+line-height:1.6;color:var(--text)}
+@media (max-width:700px){.bande-grid{grid-template-columns:repeat(2,1fr);gap:26px}
+.bande-item svg{width:26px;height:26px}}
+
+.service{background:var(--white);border-bottom:1px solid var(--line);padding:15px 0}
+.service-in{display:flex;align-items:center;justify-content:center;gap:11px;text-align:center;
+font-family:Montserrat,sans-serif;font-size:13px;color:var(--text)}
+.service-in svg{width:19px;height:19px;color:var(--sage);flex:0 0 auto}
+.service-in b{font-weight:600;color:var(--sage-dark)}
+@media (max-width:700px){.service-in{font-size:12px;align-items:flex-start}}
 
 /* ── Ce que vous recevez ── */
 .recevez{background:var(--beige);border-top:1px solid var(--line)}
@@ -880,6 +892,7 @@ border:1px solid rgba(110,126,97,.4);border-radius:999px;padding:7px 14px}
 /* ── réassurance ── */
 .reass{background:var(--beige-2);border-top:1px solid var(--line);padding:clamp(40px,6vh,68px) 0}
 .reass-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,44px);text-align:center}
+.reass-grid svg{width:28px;height:28px;color:var(--sage);margin:0 auto 12px;display:block}
 .reass-grid h3{margin:0 0 7px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.17em;text-transform:uppercase;color:var(--sage-dark)}
 .reass-grid p{margin:0;font-family:Montserrat,sans-serif;font-size:13.5px;line-height:1.6;color:var(--text)}
@@ -957,11 +970,14 @@ letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 
 <div class="bande">
 <div class="shell bande-grid">
-<span>Port compris</span>
-<span>Expédié le jour même</span>
-<span>Retour sous 14 jours</span>
-<span>Fabriqué en France</span>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><path d="M16 8 2 22"/></svg><b>Léger et compact</b><span>23 g, tétine et capuchon compris</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><b>Pré-dosé ici</b><span>La poudre voyage dans le biberon</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4"/><path d="M11 2v3"/><path d="M13 2v3"/><path d="M8.5 8h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><path d="M9.5 5h5l1 3h-7z"/><path d="M10 12h4M10 15h4"/></svg><b>Nourrissez partout</b><span>Dépliez, ajoutez l’eau, c’est prêt</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Sûr et sain</b><span>Sans BPA, testé par le LNE</span></div>
 </div>
+</div>
+<div class="service">
+<div class="shell service-in"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v9a2 2 0 0 1-1.2 1.8l-7 3a2 2 0 0 1-1.6 0l-7-3A2 2 0 0 1 3 17V8"/><path d="m3.3 7.3 8-3.4a2 2 0 0 1 1.4 0l8 3.4L12 11z"/><path d="M12 11v10"/></svg><span><b>Port compris</b> · Commande avant midi, expédiée le jour même · Retour sous 14 jours</span></div>
 </div>
 <section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
 
@@ -1059,29 +1075,29 @@ letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 </div>
 <div class="shell recevez-grid">
 <article class="recevez-item">
-<figure><img alt="L’étui triangulaire BIBEON fermé" height="900" loading="lazy" src="assets/bibeon-coffret-etui-ferme.webp" width="1200"/></figure>
+<figure><img alt="L’étui triangulaire BIBEON fermé, marqué du logo" height="1200" loading="lazy" src="assets/bibeon-coffret-etui-ferme.webp" width="1200"/></figure>
 <h3>L’étui</h3>
 <p>Rigide, en forme de triangle. Il vous arrive par la poste et il reste ensuite — dans un sac, sur une étagère, en voyage.</p>
 </article>
 <article class="recevez-item">
-<figure><img alt="Un BIBEON enveloppé dans son papier ivoire scellé d’un B" height="1000" loading="lazy" src="assets/bibeon-coffret-biberon-enveloppe.webp" width="1000"/></figure>
+<figure><img alt="Un BIBEON enveloppé dans son papier ivoire" height="1200" loading="lazy" src="assets/bibeon-coffret-biberon-enveloppe.webp" width="1200"/></figure>
 <h3>Vos trois BIBEON</h3>
-<p>Chacun enveloppé dans un papier ivoire et scellé d’un B. On ne les déballe qu’une fois.</p>
+<p>Chacun enveloppé à la main dans un papier ivoire. On ne les déballe qu’une fois.</p>
 </article>
 <article class="recevez-item">
-<figure><img alt="Le pochon à cordon BIBEON" height="1000" loading="lazy" src="assets/bibeon-coffret-pochon.webp" width="1000"/></figure>
-<h3>Trois pochons <em>compris</em></h3>
-<p>Livrés à plat dans leur enveloppe. Un pochon opaque protège BIBEON des salissures pendant le transport et le garde à l’abri de la lumière.</p>
-</article>
-<article class="recevez-item">
-<figure><img alt="La notice accordéon BIBEON et sa planche d’étiquettes" height="1000" loading="lazy" src="assets/bibeon-coffret-notice.webp" width="1000"/></figure>
+<figure><img alt="La notice accordéon BIBEON et sa planche d’étiquettes, rangées dans le couvercle" height="1200" loading="lazy" src="assets/bibeon-coffret-notice.webp" width="1200"/></figure>
 <h3>La notice et les étiquettes</h3>
-<p>Les trois gestes sur une notice accordéon, et des étiquettes pour reconnaître le biberon de chacun.</p>
+<p>Les gestes sur une notice accordéon, rangée dans le couvercle, et des étiquettes pour reconnaître le biberon de chacun.</p>
 </article>
 <article class="recevez-item">
-<figure><img alt="Le goupillon à embout mousse BIBEON" height="1000" loading="lazy" src="assets/bibeon-coffret-goupillon.webp" width="1000"/></figure>
-<h3>Le goupillon <em>offert</em></h3>
-<p>Rangé devant les biberons. Poils souples pour les soufflets, embout mousse pour absorber les dernières gouttes.</p>
+<figure><img alt="Le sceau de sécurité BIBEON sur le rabat de l’étui" height="1125" loading="lazy" src="assets/bibeon-coffret-sceau.webp" width="1125"/></figure>
+<h3>Le sceau <em>de sécurité</em></h3>
+<p>Il se déchire à l’ouverture. Vous savez que personne n’est passé avant vous.</p>
+</article>
+<article class="recevez-item">
+<figure><img alt="La pochette d’expédition BIBEON, opaque et résistante" height="1200" loading="lazy" src="assets/bibeon-coffret-pochette.webp" width="1200"/></figure>
+<h3>La pochette d’expédition</h3>
+<p>Elle protège l’étui pendant le transport. Vous ouvrez un colis, pas un carton abîmé.</p>
 </article>
 </div>
 </section>
@@ -1095,42 +1111,22 @@ letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 <h2>Un coffret qu’on garde,<br/><em>pas un carton qu’on jette.</em></h2>
 <ul class="coffret-liste">
 <li><b>Rien n’est en vrac.</b> Chaque biberon a sa place, rien ne s’entrechoque pendant le trajet.</li>
-<li><b>Une pastille d’inviolabilité</b> sur le rabat : elle se déchire à l’ouverture. Vous savez que personne n’est passé avant vous.</li>
+<li><b>Un sceau de sécurité</b> sur le rabat : il se déchire à l’ouverture. Vous savez que personne n’est passé avant vous.</li>
 <li><b>Papiers et cartons responsables,</b> recyclables. L’étui est fait pour durer, pas pour finir dans la poubelle jaune le jour même.</li>
 <li><b>Conçu et fabriqué en France</b>, comme le biberon.</li>
 </ul>
-<p class="coffret-note">Le Trio Nomade est le seul lot livré dans son étui. L’unité et le duo partent dans un emballage simple, et le pochon peut y être ajouté.</p>
+<p class="coffret-note">Le Trio Nomade est le seul lot livré dans son étui. L’unité, le duo et le lot de cinq partent dans un emballage simple, protégé par la même pochette d’expédition.</p>
 </div>
-</div>
-</section>
-
-<!-- ══════════ ACCESSOIRES ══════════ -->
-<section aria-label="Accessoires" class="acc" id="accessoires">
-<div class="shell acc-tete">
-<h2>Ce qui accompagne</h2>
-<p>Deux objets seulement, et ils ne partent pas avec vous : ils restent dans le sac ou près de l’évier, et ils durent.</p>
-</div>
-<div class="shell acc-grid">
-<article class="acc-carte">
-<h3>Le pochon</h3>
-<p>Tissu doux, résistant et lavable, fermé par un cordon. Il protège BIBEON des salissures pendant le transport et le garde à l’abri de la lumière. Les trois sont compris dans le Trio Nomade.</p>
-<span class="acc-etat">Bientôt vendu seul</span>
-</article>
-<article class="acc-carte">
-<h3>Le goupillon à embout mousse</h3>
-<p>Des poils souples pour la paroi et les soufflets, un embout mousse qui absorbe les gouttes restées au fond. Plus d’essuie-tout à usage unique. Offert avec le Trio Nomade.</p>
-<span class="acc-etat">Bientôt vendu seul</span>
-</article>
 </div>
 </section>
 
 <!-- ══════════ RÉASSURANCE ══════════ -->
 <section aria-label="Nos engagements" class="reass">
 <div class="shell reass-grid">
-<div><h3>Fabriqué en France</h3><p>Du moule au flacon, en région lyonnaise.</p></div>
-<div><h3>50 % végétal</h3><p>Bague et capuchon en matière d’origine végétale.</p></div>
-<div><h3>Sans BPA</h3><p>Le polypropylène n’en contient pas.</p></div>
-<div><h3>0 résidu détecté</h3><p>Essais de migration réalisés par le LNE.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Fabriqué en France</h3><p>Du moule au flacon, en région lyonnaise.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg><h3>50 % végétal</h3><p>Bague et capuchon en matière d’origine végétale.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><h3>Sans BPA</h3><p>Le polypropylène n’en contient pas.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.6 17.2A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.8-2.8L15 8.5V2"/><path d="M8 2h8"/><path d="M6.8 14h10.4"/></svg><h3>0 résidu détecté</h3><p>Essais de migration réalisés par le LNE.</p></div>
 </div>
 </section>
 
