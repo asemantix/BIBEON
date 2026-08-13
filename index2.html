@@ -549,8 +549,29 @@ html{scroll-behavior:smooth}
 backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:78px;display:flex;align-items:center;gap:22px}
 .brand{display:inline-flex;align-items:center;color:var(--navy)}
-.brand img{display:block;height:26px;width:auto}
-.nav-links{display:flex;gap:21px;margin-left:auto;font-size:13.5px;white-space:nowrap}
+.brand img{display:block;height:34px;width:135px;flex:0 0 auto}
+@media (max-width:700px){.brand img{height:28px;width:111px}}
+
+/* ═══════════ BANDEAU D'ANNONCE ═══════════ */
+.annonce{background:var(--sage-dark);color:#fff}
+.annonce-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
+gap:6px 18px;padding:11px 0;text-align:center;
+font-family:Montserrat,sans-serif;font-size:12.5px;line-height:1.5}
+.annonce-in b{font-weight:600}
+.annonce-in i{font-style:normal;color:#cfe0b8}
+.annonce-in span{color:rgba(255,255,255,.9)}
+@media (max-width:700px){.annonce-in{font-size:11.5px;gap:4px 12px;padding:9px 0}
+.annonce-in i{display:none}}
+
+/* ═══════════ TÉLÉPHONES DE L'ENTÊTE ═══════════ */
+.nav-tel{display:flex;align-items:center;gap:16px;
+font-family:Montserrat,sans-serif;font-size:12px;white-space:nowrap}
+.nav-tel a{display:flex;align-items:baseline;gap:7px;color:var(--text);text-decoration:none}
+.nav-tel a:hover{color:var(--sage-dark)}
+.nav-tel b{font-size:10.5px;font-weight:600;letter-spacing:.13em;
+text-transform:uppercase;color:var(--sage)}
+@media (max-width:1500px){.nav-tel{display:none}}
+.nav-links{display:flex;gap:19px;margin-left:auto;font-size:13.5px;white-space:nowrap}
 .nav-links a{padding:6px 0;border-bottom:1px solid transparent;color:var(--text);text-decoration:none}
 .nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
 .nav-outils{display:flex;align-items:center;gap:14px}
@@ -820,9 +841,19 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <body>
 
 <!-- ══════════ 0 · ENTÊTE ══════════ -->
+<div class="annonce">
+<div class="shell annonce-in">
+<b>À l’occasion de l’ouverture de la boutique</b>
+<i>·</i>
+<span>L’unité au prix unitaire du lot de cinq, jusqu’au 30 septembre</span>
+<i>·</i>
+<span>Port compris</span>
+</div>
+</div>
+
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand" href="#accueil"><img alt="BIBEON" height="26" src="assets/logo-bibeon.svg" width="103"/></a>
+<a aria-label="BIBEON — accueil" class="brand" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a aria-current="page" href="index.html">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
@@ -831,7 +862,12 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <a href="migration.html">Migration</a>
 <a href="qui-sommes-nous.html">Qui sommes-nous</a>
 <a href="contact.html">Contact</a>
+<a href="boutique.html">Boutique</a>
 </nav>
+<div class="nav-tel">
+<a href="tel:+33611768632"><b>Utilisation</b> 06 11 76 86 32</a>
+<a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
+</div>
 <div class="nav-outils">
 <a class="nav-achat" href="boutique.html">Achat rapide</a>
 </div>
@@ -1430,8 +1466,8 @@ font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--te
 <div class="shell teaser-grid">
 <div>
 <p class="teaser-sur">La boutique</p>
-<h2>Six façons<br/><em>de commencer.</em></h2>
-<p class="teaser-texte">À l’unité, en duo, en lot de cinq — ou en Trio Nomade, dans son étui. Cinq coloris, port compris, expédié de France le jour même.</p>
+<h2>Quatre façons<br/><em>de commencer.</em></h2>
+<p class="teaser-texte">Un BIBEON seul, un duo, le Trio Nomade dans son étui, ou les cinq coloris réunis. Port compris, expédié de France le jour même.</p>
 <p class="teaser-prix">De <b>25 €</b> à <b>125 €</b></p>
 <p class="teaser-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
 </div>
