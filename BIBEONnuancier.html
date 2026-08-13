@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="noindex, nofollow" name="robots"/>
+<title>BIBEON — Nuancier</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --navy:#11253A; --sage:#6E7E61; --sage-dark:#55614B;
+  --ivoire:#F6F4F0; --creme:#F9F4EF; --line:#DDD6CB;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--navy);
+  font-family:Montserrat,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+.shell{width:min(1280px,calc(100% - 56px));margin:0 auto}
+
+header{padding:clamp(54px,8vh,104px) 0 clamp(30px,4vh,48px);text-align:center}
+.sur{margin:0 0 18px;font-size:12px;font-weight:600;letter-spacing:.26em;
+  text-transform:uppercase;color:var(--sage)}
+h1{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(36px,4.6vw,64px);line-height:1.08;color:var(--sage-dark)}
+h1 em{font-style:italic}
+.chapo{margin:22px auto 0;max-width:56ch;font-size:15.5px;line-height:1.75;color:#5b655d}
+
+h2{margin:0 0 6px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(25px,2.6vw,34px);color:var(--sage-dark)}
+.section{padding:clamp(40px,6vh,70px) 0}
+.section-note{margin:0 0 34px;font-size:14px;line-height:1.7;color:#5b655d;max-width:62ch}
+
+.grille{display:grid;gap:clamp(14px,1.8vw,26px)}
+.g5{grid-template-columns:repeat(5,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+@media (max-width:1000px){.g5,.g4{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.g5,.g4{grid-template-columns:1fr}}
+
+/* la carte : un fond de scène, une pastille dessus */
+.carte{aspect-ratio:3/4;border-radius:2px;padding:clamp(16px,1.6vw,24px);
+  display:flex;flex-direction:column;justify-content:space-between;
+  box-shadow:0 1px 0 rgba(17,37,58,.04)}
+.echantillon{flex:1;border-radius:1px;margin-bottom:16px;
+  box-shadow:0 10px 26px rgba(17,37,58,.10)}
+.nom{font-family:"Playfair Display",Georgia,serif;font-size:clamp(17px,1.5vw,21px);
+  line-height:1.2;margin:0 0 8px}
+.ref{margin:0;font-size:11.5px;line-height:1.75;letter-spacing:.02em;opacity:.72}
+.ref b{font-weight:600;letter-spacing:.06em}
+.epuise{display:inline-block;margin-top:9px;font-size:10px;font-weight:600;
+  letter-spacing:.16em;text-transform:uppercase;padding:5px 10px;border-radius:999px;
+  border:1px solid currentColor;opacity:.65}
+
+.clair{color:var(--navy)}
+.sombre{color:#fff}
+
+footer{border-top:1px solid var(--line);margin-top:clamp(40px,6vh,70px);
+  padding:clamp(38px,5vh,60px) 0 clamp(54px,7vh,84px)}
+.regles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px)}
+@media (max-width:800px){.regles{grid-template-columns:1fr;gap:24px}}
+.regles h3{margin:0 0 8px;font-size:12px;font-weight:600;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--sage)}
+.regles p{margin:0;font-size:14px;line-height:1.75;color:#5b655d}
+.sign{margin:34px 0 0;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sage);text-align:center}
+</style>
+</head>
+<body>
+
+<header>
+<div class="shell">
+<p class="sur">Charte couleur</p>
+<h1>Le nuancier BIBEON.<br/><em>Cinq coloris, trois encres, un papier.</em></h1>
+<p class="chapo">Document de référence pour les fournisseurs — imprimeur, façonnier textile, mouliste. Les valeurs écran sont indicatives : toute encre se valide sur nuancier Pantone Uncoated, tout papier se choisit sur échantillon physique.</p>
+</div>
+</header>
+
+<section class="section">
+<div class="shell">
+<h2>Les coloris du biberon</h2>
+<p class="section-note">Teintes de la matière, translucides. Elles ne s’impriment pas — elles se donnent au mouliste comme cible, et se valident sur pièce injectée. La matière étant transparente, la teinte varie avec l’épaisseur : la valeur en gras est la <b>teinte du coloris, relevée sur paroi fine</b> — c’est elle qui nomme le coloris. La seconde valeur donne le creux du soufflet, là où la matière est la plus épaisse. Relevées le 13 août 2026 sur les rendus de gamme.</p>
+
+<div class="grille g5">
+
+<article class="carte clair" style="background:#edf8f3">
+<div class="echantillon" style="background:#e4f3ec"></div>
+<div>
+<p class="nom">Menthe</p>
+<p class="ref"><b>#E4F3EC</b><br/>C6 M0 J3 N5<br/><span style="opacity:.8">creux du soufflet #98C9AD</span></p>
+</div>
+</article>
+
+<article class="carte clair" style="background:#faeee6">
+<div class="echantillon" style="background:#f2c7a8"></div>
+<div>
+<p class="nom">Abricot</p>
+<p class="ref"><b>#F2C7A8</b><br/>C0 M18 J31 N5<br/><span style="opacity:.8">creux du soufflet #D2866F</span></p>
+</div>
+</article>
+
+<article class="carte clair" style="background:#f5ebf7">
+<div class="echantillon" ></div>
+<div>
+<p class="nom">Lilas</p>
+<p class="ref"><b>#E9C5EF</b><br/>C3 M18 J0 N6<br/><span style="opacity:.8">creux du soufflet #CF84E9</span></p>
+</div>
+</article>
+
+<article class="carte clair" style="background:#f8ecf1">
+<div class="echantillon" style="background:#f6d6e2"></div>
+<div>
+<p class="nom">Rose</p>
+<p class="ref"><b>#F6D6E2</b><br/>C0 M13 J8 N4<br/><span style="opacity:.8">creux du soufflet #EA98BC</span></p>
+</div>
+</article>
+
+<article class="carte clair" style="background:#dcedf5">
+<div class="echantillon" style="background:#bbd5e4"></div>
+<div>
+<p class="nom">Lin</p>
+<p class="ref"><b>#BBD5E4</b><br/>C18 M7 J0 N11<br/><span style="opacity:.8">creux du soufflet #00638A</span></p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="shell">
+<h2>Les couleurs de la marque</h2>
+<p class="section-note">Deux encres imprimées, un papier choisi. L’ivoire ne s’imprime jamais : à 4 % de couverture, un aplat moutonne sur non couché. Il se choisit en papier teinté dans la masse.</p>
+
+<div class="grille g4">
+
+<article class="carte sombre" style="background:#0b1926">
+<div class="echantillon" style="background:#11253A"></div>
+<div>
+<p class="nom">Bleu nuit</p>
+<p class="ref"><b>#11253A</b><br/>C71 M36 J0 N77<br/>Encre — à valider sur Pantone U</p>
+</div>
+</article>
+
+<article class="carte sombre" style="background:#3d4636">
+<div class="echantillon" style="background:#55614B"></div>
+<div>
+<p class="nom">Vert sauge</p>
+<p class="ref"><b>#55614B</b><br/>C12 M0 J23 N62<br/>Encre — à valider sur Pantone U</p>
+</div>
+</article>
+
+<article class="carte sombre" style="background:#5b6a4f">
+<div class="echantillon" style="background:#6E7E61"></div>
+<div>
+<p class="nom">Sauge clair</p>
+<p class="ref"><b>#6E7E61</b><br/>C13 M0 J23 N51<br/>Écran uniquement</p>
+</div>
+</article>
+
+<article class="carte clair" style="background:#e4ded4">
+<div class="echantillon" style="background:#F6F4F0"></div>
+<div>
+<p class="nom">Ivoire</p>
+<p class="ref"><b>#F6F4F0</b><br/>C0 M1 J2 N4<br/>Papier teinté masse — ne pas imprimer</p>
+</div>
+</article>
+
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="shell">
+<h2>Le coloris retiré</h2>
+<p class="section-note">Il apparaît encore sur certaines images d’archive. Il ne fait plus partie de la gamme.</p>
+
+<div class="grille g5">
+<article class="carte clair" style="background:#f4f1e4">
+<div class="echantillon" style="background:#dcd88f;opacity:.55"></div>
+<div>
+<p class="nom">Jonquille</p>
+<p class="ref">Teinte d’origine, non relevée<br/>sur pièce actuelle.</p>
+<span class="epuise">Épuisé</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="shell">
+<div class="regles">
+<div>
+<h3>L’écran ne fait pas foi</h3>
+<p>Aucune valeur de ce document ne remplace un nuancier physique. Les encres se valident sur Pantone Uncoated, les papiers sur échantillon, les teintes de matière sur pièce injectée.</p>
+</div>
+<div>
+<h3>L’ivoire se choisit, ne s’imprime pas</h3>
+<p>Un aplat à 4 % de couverture, tiré sur toute la surface d’un carton non couché, sort inégal. Demandez des papiers de couvrure teintés dans la masse, cible #F6F4F0.</p>
+</div>
+<div>
+<h3>Deux encres, jamais plus</h3>
+<p>Bleu nuit et vert sauge suffisent à tout : logo, textes, pastilles. Un troisième ton coûte une passe machine et n’ajoute rien.</p>
+</div>
+</div>
+<p class="sign">BIBEON · Document de référence fournisseurs</p>
+</div>
+</footer>
+
+</body>
+</html>
