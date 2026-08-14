@@ -803,12 +803,18 @@ line-height:1.8;color:var(--sage);opacity:.9}
 padding:clamp(44px,6vh,80px) 0}
 .livraison-grid{display:grid;grid-template-columns:minmax(0,.86fr) 1.14fr;
 gap:clamp(30px,4.5vw,70px);align-items:center}
-.livraison-titre{margin:14px 0 26px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+.livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
 .livraison-titre em{font-style:italic;color:var(--sage)}
+.livraison-sous{margin:0 0 26px;font-family:"Playfair Display",Georgia,serif;font-style:italic;
+font-size:clamp(17px,1.5vw,22px);line-height:1.4;color:var(--sage)}
 .livraison-points{margin:0;max-width:46ch;font-family:Montserrat,sans-serif;
 font-size:15px;line-height:2.2;color:var(--text)}
 .livraison-points span{white-space:nowrap}
+.livraison-plus{margin:22px 0 0;max-width:46ch;font-family:Montserrat,sans-serif;
+font-size:13.5px;line-height:1.85;color:var(--sage)}
+.livraison-plus b{font-weight:600;color:var(--sage-dark)}
+.livraison-plus a{color:var(--sage-dark);border-bottom:1px solid var(--line)}
 .livraison-points b{font-weight:600;color:var(--sage-dark)}
 .livraison-points i{font-style:normal;padding:0 4px;color:var(--sage-soft)}
 .livraison-liste{list-style:none;margin:0;padding:0;max-width:44ch}
@@ -828,20 +834,27 @@ line-height:1.7;color:var(--sage)}
   .livraison-image{order:-1}
 }
 .bhero{position:relative;border-bottom:1px solid var(--line);
-background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center center/100% auto;
-aspect-ratio:1872 / 1056}
+background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 66%/cover;
+aspect-ratio:1872 / 1056;
+/* le biberon doit être visible sans scroller : on plafonne sur la hauteur d'écran restante */
+max-height:calc(100svh - 178px);min-height:430px}
 /* le voile : bleu nuit au bord gauche, disparu à 45 % — sans rectangle perceptible */
 .bhero::before{content:"";position:absolute;inset:0;pointer-events:none;
-background:linear-gradient(90deg,
- rgba(17,37,58,.80) 0%,
- rgba(17,37,58,.72) 12%,
- rgba(17,37,58,.54) 24%,
- rgba(17,37,58,.28) 35%,
- rgba(17,37,58,.08) 41%,
- rgba(17,37,58,0) 45%)}
-.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,442px) 1fr;
-gap:clamp(22px,2.6vw,44px);align-items:center;
-min-height:0;padding:clamp(36px,5vh,64px) 0}
+background:
+ linear-gradient(90deg,
+  rgba(17,37,58,.78) 0%,
+  rgba(17,37,58,.70) 12%,
+  rgba(17,37,58,.52) 24%,
+  rgba(17,37,58,.26) 35%,
+  rgba(17,37,58,.07) 41%,
+  rgba(17,37,58,0) 46%),
+ linear-gradient(0deg,
+  rgba(17,37,58,.34) 0%,
+  rgba(17,37,58,.14) 22%,
+  rgba(17,37,58,0) 42%)}
+.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,460px) 1fr;
+gap:clamp(22px,2.6vw,44px);align-items:end;
+height:100%;min-height:0;padding:clamp(30px,4vh,52px) 0 clamp(34px,4.6vh,58px)}
 .bhero-sur{margin:0 0 18px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.28em;text-transform:uppercase;color:rgba(253,251,249,.72)}
 .bhero h1{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
@@ -1090,22 +1103,22 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <div class="bande">
 <div class="shell bande-grid">
-<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><path d="M16 8 2 22"/></svg><b>Léger et compact</b><span>23 g, tétine et capuchon compris</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><path d="M16 8 2 22"/></svg><b>Léger et compact</b><span>23 g, tétine et capuchon compris — tient dans une poche</span></div>
 <div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><b>Pré-dosé ici</b><span>La poudre voyage dans le biberon</span></div>
 <div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg><b>50 % végétal</b><span>Bague et capuchon — sans OGM, ni gluten, ni BPA</span></div>
 <div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.6 17.2A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.8-2.8L15 8.5V2"/><path d="M8 2h8"/><path d="M6.8 14h10.4"/></svg><b>0 résidu détecté</b><span>Essais de migration du LNE</span></div>
 </div>
 </div>
-<div class="service">
-<div class="shell service-in"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v9a2 2 0 0 1-1.2 1.8l-7 3a2 2 0 0 1-1.6 0l-7-3A2 2 0 0 1 3 17V8"/><path d="m3.3 7.3 8-3.4a2 2 0 0 1 1.4 0l8 3.4L12 11z"/><path d="M12 11v10"/></svg><span><b>Port compris</b> · Commande avant midi, expédiée le jour même · Retour sous 14 jours</span></div>
-</div>
+<!-- Bande « Port compris · avant midi · retour » retirée le 14 août :
+     elle répétait mot pour mot la section Livraison, quatre écrans plus bas. -->
 
 <!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
 <section aria-label="Ce que vous recevez et comment" class="livraison">
 <div class="shell livraison-grid">
 <div class="livraison-texte">
 <p class="overline">La livraison</p>
-<h2 class="livraison-titre">Rien de plus.<br/><em>Tout dedans.</em></h2>
+<h2 class="livraison-titre">Le biberon nomade,<br/><em>toujours prêt.</em></h2>
+<p class="livraison-sous">Pré-dosé ici. Nourrissez partout.</p>
 <p class="livraison-points">
 <span><b>PayPal</b></span> <i>·</i>
 <span>Paiement sécurisé</span> <i>·</i>
@@ -1113,6 +1126,11 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <span><b>Livraison Mondial Relay offerte</b></span> <i>·</i>
 <span>France métropolitaine</span> <i>·</i>
 <span>Retour sous 30 jours</span>
+</p>
+<p class="livraison-plus">
+<b>À domicile ou en point relais</b>, au choix — hôtel compris, si vous commandez en voyage.<br/>
+<b>Hors France métropolitaine</b> : le colis complet — trois biberons, trois pochons et l’étui — pèse moins de 700&nbsp;g.
+<a href="contact.html">Écrivez-nous</a>, nous vous donnons le tarif exact pour votre pays sous 24&nbsp;h.
 </p>
 </div>
 <figure class="livraison-image">
@@ -1205,7 +1223,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </article>
 </div>
 
-<p class="offre-note">Toute commande passée avant midi part le jour même, depuis la France. Paiement par carte ou PayPal, retour sous 14 jours.</p>
+<p class="offre-note">Toute commande passée avant midi part le jour même, depuis la France. Paiement par carte ou PayPal, retour sous 30 jours.</p>
 </div>
 </section>
 <!-- ══════════ LES CINQ COLORIS ══════════ -->
