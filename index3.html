@@ -130,7 +130,11 @@ font-style:italic;font-size:clamp(23px,2.5vw,35px);line-height:1.38;color:var(--
 .temoignage-mot footer{margin-top:clamp(34px,5vh,58px);font-family:Montserrat,sans-serif;
 font-size:11px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--sage)}
 .temoignage-mot footer i{font-style:normal;padding:0 6px;color:var(--sage-soft)}
-.renversement-reponse{padding-top:clamp(72px,10vh,116px)}
+.renversement-reponse{background:var(--beige);color:var(--text);
+padding:clamp(96px,14vh,132px) 0 clamp(84px,12vh,116px);
+border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.renversement-reponse .renv-chute{color:var(--sage-dark)}
+.renversement-reponse .renv-chute em{color:var(--sage)}
 .renv-image-seule{margin-top:0}
 .renv-image{margin:48px auto 0;max-width:880px}
 .renv-image img{display:block;width:100%;height:auto;border-radius:var(--radius)}
@@ -391,13 +395,10 @@ font-size:clamp(20px,2.2vw,27px);line-height:1.25;color:rgba(255,255,255,.9)}
 /* 7 · le grand film */
 .film-plein{padding:clamp(64px,9vh,112px) 0;min-height:100vh;display:flex;align-items:center;
 background:var(--navy);text-align:center}
-.film-plein .film-titre{margin:0 auto 18px;max-width:18ch;
+.film-plein .film-titre{margin:0 auto 44px;max-width:18ch;
 font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(32px,4vw,54px);line-height:1.06;color:#fff}
 .film-plein .film-titre em{font-style:italic;color:#cfe0b8}
-.film-plein .film-sous{margin:0 auto 44px;font-family:"Playfair Display",Georgia,serif;
-font-style:italic;font-weight:400;font-size:clamp(19px,2vw,27px);line-height:1.3;
-color:rgba(255,255,255,.72)}
 .film-plein figure{margin:0}
 .film-plein figure{border-radius:var(--radius);overflow:hidden;background:var(--navy);line-height:0;
 height:min(760px,62vh)}
@@ -863,14 +864,6 @@ font-size:15px;line-height:1.7;color:var(--sage)}
 .renv-image-pleine{margin:clamp(48px,7vh,84px) 0 0;max-width:none;
 width:100vw;margin-left:calc(50% - 50vw)}
 .renv-image-pleine img{border-radius:0}
-
-/* ═══════════ LE NOM — la lettre qui manque ═══════════ */
-.nom-mot{max-width:none;letter-spacing:.06em;font-size:clamp(40px,6.6vw,96px)}
-.nom-r{color:var(--sage-soft);opacity:.42}
-.nom-lettre{font-style:normal;letter-spacing:.04em}
-.nom-chute{margin:clamp(30px,4vh,48px) auto 0;max-width:24ch;line-height:1.28;
-font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:400;
-font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </style>
 <script type="application/ld+json">
 {
@@ -906,8 +899,22 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
    "publisher": {
     "@id": "https://bibeon.fr/#organisation"
    }
+  },
+  {
+   "@type": "VideoObject",
+   "@id": "https://bibeon.fr/#demo",
+   "name": "BIBEON, le biberon nomade pliable — démonstration",
+   "description": "Démonstration du biberon nomade pliable BIBEON 330 ml : le dosage du lait en poudre dans le biberon replié, le dépliage des soufflets et l’ajout de l’eau au moment du repas.",
+   "thumbnailUrl": "https://bibeon.fr/assets/demo-bibeon.jpg",
+   "contentUrl": "https://bibeon.fr/assets/demo-bibeon.mp4",
+   "uploadDate": "2026-07-31",
+   "duration": "PT1M12S",
+   "inLanguage": "fr-FR",
+   "publisher": {
+    "@id": "https://bibeon.fr/#organisation"
+   }
   }
-]
+ ]
 }
 </script>
 </head>
@@ -985,90 +992,15 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </div>
 </section>
 
-<!-- ══════════ LA RUPTURE ══════════ -->
-<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
-<div class="shell">
-<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
-<figure class="renv-image renv-image-pleine">
-<img alt="Un biberon BIBEON doré au centre, les biberons rigides expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
-</figure>
-</div>
-</section>
-
-<!-- ══════════ LE NOM — la lettre qui manque ══════════ -->
-<section aria-label="Le nom" class="usp nom">
-<div class="shell">
-<p class="usp-marque">Le nom</p>
-<p class="usp-phrase nom-mot">BIBE<span class="nom-r">R</span>ON</p>
-<p class="nom-chute">L’<span class="nom-lettre">R</span> en moins.</p>
-</div>
-</section>
-
-<!-- ══════════ 12 · BONUS · L'ANTI-AIR — une respiration ══════════ -->
-<section aria-label="Bonus, l’anti-air" class="bloc respiration" style="background:var(--beige-2)">
-<div class="shell bloc-grid visuel-gauche">
-<div class="bloc-texte">
-<p class="overline">Bonus · l’anti-air</p>
-<h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
-<p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
-<p class="lien-discret"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
-</div>
-<figure class="bloc-visuel photo">
-<img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
-</figure>
-</div>
-</section>
-
-<!-- ══════════ 3 quater · LE CONCEPT ══════════ -->
-<section aria-label="Tout dedans, le doseur en moins" class="usp">
-<div class="shell">
-<p class="usp-phrase">Tout dedans.<br/><em>Le doseur en moins.</em></p>
-</div>
-</section>
-
-
-
-<section aria-label="Replié" class="bloc" style="background:var(--beige-2)">
-<div class="shell bloc-grid pose-large">
-<div class="bloc-texte">
-<p class="overline">Replié</p>
-<h2 class="bloc-titre">Contenant hermétique.</h2>
-<p class="billets">À l’abri de la lumière :<br/>dans un sac à main,<br/>ou dans son pochon.</p>
-</div>
-<figure class="bloc-visuel libre pose-duo">
-<img alt="Le biberon BIBEON replié, capuchon vissé, contenant la dose de lait en poudre, et son pochon de mousseline de coton" height="1400" loading="lazy" src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400"/>
-</figure>
-</div>
-</section>
-
-<!-- ══════════ 6 · PRÉSERVÉE JUSQU'AU REPAS ══════════ -->
-<section aria-label="Le biberon toujours prêt" class="usp">
-<div class="shell">
-<p class="usp-marque">Le biberon toujours prêt</p>
-<p class="usp-phrase">Pré-dosé ici.<br/><em>Nourrissez partout.</em></p>
-</div>
-</section>
-
-
-
-<!-- ══════════ 3 bis · LA DÉMONSTRATION — charnière du renversement ══════════ -->
-<section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
-<div class="shell bloc-grid">
-<div class="bloc-texte">
-<p class="overline">Sans doseur</p>
-<h2 class="bloc-titre">Le biberon<br/>qui emporte <span class="nb">sa dose de lait.</span></h2>
-<p class="billets">L’eau au moment du repas.</p>
-</div>
-<figure class="bloc-visuel photo ample">
-<video aria-label="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main" autoplay="" loop="" muted="" playsinline="" poster="assets/sac-a-main.webp" preload="metadata" src="assets/demo-nomade.mp4"></video>
-</figure>
-</div>
-</section>
-
-
-
 <!-- ══════════ LA RÉPONSE, TOUT DE SUITE ══════════ -->
-
+<section aria-label="Un biberon, tout le reste en moins" class="film-plein">
+<div class="shell">
+<h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
+<figure>
+<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
+</figure>
+</div>
+</section>
 
 <!-- ══════════ 3 bis · LE TÉMOIGNAGE — ni titre, ni surtitre, ni photo ══════════ -->
 <section aria-label="Témoignage" class="temoignage">
@@ -1091,11 +1023,38 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </div>
 </section>
 
+<!-- ══════════ LA RÉPONSE MÉCANIQUE — juste après les parents ══════════ -->
 
+<!-- ══════════ 3 ter · LA RÉPONSE ══════════ -->
+<!-- ══════════ 3 bis · LA DÉMONSTRATION — charnière du renversement ══════════ -->
+<section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
+<div class="shell bloc-grid">
+<div class="bloc-texte">
+<p class="overline">Sans doseur</p>
+<h2 class="bloc-titre">Le biberon<br/>qui emporte <span class="nb">sa dose de lait.</span></h2>
+<p class="billets">L’eau au moment du repas.</p>
+</div>
+<figure class="bloc-visuel photo ample">
+<video aria-label="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main" autoplay="" loop="" muted="" playsinline="" poster="assets/sac-a-main.webp" preload="metadata" src="assets/demo-nomade.mp4"></video>
+</figure>
+</div>
+</section>
 
+<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
+<div class="shell">
+<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
+<!-- Visuel retiré à la demande de Suzanne, 14 août : redondant avec le hero de la boutique.
+     Ne pas remettre bibeon-packaging-accueil.webp ici. -->
+<p class="renv-note">Chaque BIBEON arrive dans son pochon de mousseline de coton.</p>
+</div>
+</section>
 
-
-
+<!-- ══════════ 3 quater · LE CONCEPT ══════════ -->
+<section aria-label="Tout dedans, rien autour" class="usp">
+<div class="shell">
+<p class="usp-phrase">Tout dedans.<br/><em>Rien autour.</em></p>
+</div>
+</section>
 
 
 <!-- ══════════ 4 · TOUTES LES TAILLES ══════════ -->
@@ -1117,7 +1076,32 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </div>
 </section>
 
+<!-- ══════════ 6 · PRÉSERVÉE JUSQU'AU REPAS ══════════ -->
+<section aria-label="Le biberon toujours prêt" class="usp">
+<div class="shell">
+<p class="usp-marque">Le biberon toujours prêt</p>
+<p class="usp-phrase">Pré-dosé ici.<br/><em>Nourrissez partout.</em></p>
+</div>
+</section>
 
+<section aria-label="Replié" class="bloc" style="background:var(--beige-2)">
+<div class="shell bloc-grid pose-large">
+<div class="bloc-texte">
+<p class="overline">Replié</p>
+<h2 class="bloc-titre">Contenant hermétique.</h2>
+<p class="billets">À l’abri de la lumière :<br/>dans un sac à main,<br/>ou dans son pochon.</p>
+</div>
+<figure class="bloc-visuel libre pose-duo">
+<img alt="Le biberon BIBEON replié, capuchon vissé, contenant la dose de lait en poudre, et son pochon de mousseline de coton" height="1400" loading="lazy" src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400"/>
+</figure>
+</div>
+</section>
+
+<!-- ══════════ 6 bis · LA PROPOSITION DE VALEUR ══════════ -->
+
+<!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
+
+<!-- ══════════ 7 · LE GRAND FILM ══════════ -->
 
 <!-- ══════════ 8 · LA POUDRE D'ABORD ══════════ -->
 <section aria-label="Une paroi accidentée" class="bloc" style="background:var(--cream)">
@@ -1134,17 +1118,6 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 <!-- ══════════ 9 · COMMENT ÇA MARCHE ══════════ -->
-<!-- ══════════ LE GRAND FILM ══════════ -->
-<section aria-label="Un biberon, tout le reste en moins" class="film-plein">
-<div class="shell">
-<h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
-<p class="film-sous">Le doseur et l’air.</p>
-<figure>
-<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
-</figure>
-</div>
-</section>
-
 <section aria-label="Les 3 gestes, puis le réchauffage" class="etapes" id="fonctionnement">
 <div class="shell">
 <div class="section-head center">
@@ -1227,13 +1200,53 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 
-<!-- Le film complet a rejoint la page mode d’emploi. -->
+<!-- ══════════ 11 bis · LE FILM COMPLET ══════════ -->
+<section aria-label="Tout comprendre en 30 secondes" class="film-complet" id="film-complet">
+<div class="shell chapitre">
+<p class="overline">Tout comprendre en 30 secondes</p>
+<h2 class="chapitre-titre">BIBEON, du premier geste au nettoyage.</h2>
+</div>
+<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
+<figure class="film-complet-cadre">
+<video aria-label="Démonstration complète du biberon BIBEON : dépliage, dosage, tétine, repliage, nettoyage et séchage" controls="" height="500" playsinline="" poster="assets/demo-bibeon.jpg" preload="none" width="960">
+<source src="assets/demo-bibeon.mp4" type="video/mp4"/>
+</video>
+</figure>
+<p class="film-complet-note">Le dépliage, la dose, l’eau, la tétine, le repliage, le nettoyage et le séchage — dans l’ordre, sans coupure.</p>
+</div>
+</section>
 
 
+<!-- ══════════ 12 · BONUS · L'ANTI-AIR — une respiration ══════════ -->
+<section aria-label="Bonus, l’anti-air" class="bloc respiration" style="background:var(--beige-2)">
+<div class="shell bloc-grid visuel-gauche">
+<div class="bloc-texte">
+<p class="overline">Bonus · l’anti-air</p>
+<h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
+<p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
+<p class="lien-discret"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
+</div>
+<figure class="bloc-visuel photo">
+<img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
+</figure>
+</div>
+</section>
 
 
-
-
+<!-- ══════════ 15 bis · LE COFFRET — RETIRÉ LE 13 AOÛT ══════════
+     La planche montrait l'intérieur de l'étui triangulaire. Le design
+     du calage n'est pas arrêté : la page n'engage rien tant qu'il ne l'est pas.
+     Pour la remettre : rétablir ce bloc et redéposer bibeon-coffret-trio-nomade.webp.
+<section aria-label="Le coffret" class="planche">
+<div class="shell">
+<p class="planche-sur">Ce que vous recevez</p>
+<h2 class="planche-titre">On ouvre un coffret,<br/><em>pas un carton.</em></h2>
+</div>
+<figure class="planche-image">
+<img alt="Le coffret Trio Nomade BIBEON" height="1048" loading="lazy" src="assets/bibeon-coffret-trio-nomade.webp" width="1800"/>
+</figure>
+</section>
+-->
 
 <!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
 <section aria-label="Achat rapide" class="conversion">
@@ -1535,19 +1548,10 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 
-<!-- ══════════ 18 bis · LE SOIN JUSQU'À L'EMBALLAGE ══════════ -->
-<section aria-label="L’emballage" class="planche">
-<div class="shell">
-<p class="planche-sur">Le soin du détail</p>
-<h2 class="planche-titre">Le même soin,<br/><em>jusqu’à l’emballage.</em></h2>
-<p class="planche-note">Chaque BIBEON arrive dans son pochon de mousseline de coton.</p>
-</div>
-<figure class="planche-image">
-<img alt="Le biberon nomade BIBEON capuchon vissé, son pochon de mousseline de coton et l’étui triangulaire, sur fond ivoire" height="1120" loading="lazy" src="assets/bibeon-packaging-accueil.webp" width="2400"/>
-</figure>
-</section>
+<!-- ══════════ 18 bis · LE SOIN JUSQU’À L’EMBALLAGE ══════════ -->
 
 
+<!-- ══════════ 19 · BOUTIQUE ══════════ -->
 <!-- ══════════ 19 · LA BOUTIQUE — teaser ══════════ -->
 <section aria-label="La boutique" class="teaser" id="boutique">
 <div class="shell teaser-grid">
