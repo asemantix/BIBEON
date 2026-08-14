@@ -783,13 +783,18 @@ font-family:Montserrat,sans-serif;font-size:11.5px;letter-spacing:.2em;text-tran
 .bout-fil a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(110,126,97,.35)}
 
 /* ── HERO DE BOUTIQUE ── */
-.bhero{position:relative;border-bottom:1px solid var(--line);
-background:#f6f2ee url("assets/bibeon-coffret-hero.webp") no-repeat right center/cover}
-.bhero::before{content:"";position:absolute;inset:0;
-background:linear-gradient(100deg,rgba(246,242,238,.97) 0%,rgba(246,242,238,.93) 33%,rgba(246,242,238,.40) 51%,rgba(246,242,238,0) 66%)}
-.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.95fr) 1.05fr;
+/* la bannière : l'image entière, pleine largeur, jamais recadrée */
+.banniere{margin:0;padding:0;background:var(--beige)}
+.banniere img{display:block;width:100%;height:auto}
+.bhero{position:relative;border-bottom:1px solid var(--line);background:#f6f2ee}
+/* la scène prend le pas sur le texte : elle déborde jusqu'au bord droit de l'écran */
+.bhero-carre{margin:0;margin-right:calc(50% - 50vw)}
+.bhero-carre img{display:block;width:100%;height:auto}
+@media (max-width:900px){.bhero-carre{margin:30px calc(50% - 50vw) 0}}
+.bhero::before{content:none}
+.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.74fr) 1.5fr;
 gap:clamp(30px,5vw,74px);align-items:center;
-min-height:clamp(470px,60vh,690px);padding:clamp(52px,8vh,96px) 0}
+min-height:0;padding:0 0 clamp(40px,6vh,72px)}
 .bhero-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
 .bhero h1{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
@@ -812,7 +817,7 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-cta a.creux:hover{background:rgba(110,126,97,.08)}
 .bhero-image{display:none}
 @media (max-width:900px){
-  .bhero{background-position:center bottom;background-size:100% auto;padding-bottom:50vw}
+  .bhero{padding-bottom:clamp(36px,6vh,60px)}
   .bhero::before{background:linear-gradient(180deg,rgba(246,242,238,.97) 0%,rgba(246,242,238,.94) 50%,rgba(246,242,238,.20) 76%,rgba(246,242,238,0) 100%)}
   .bhero-grid{grid-template-columns:1fr;gap:28px;min-height:0;padding:44px 0 20px}
 }
@@ -923,7 +928,7 @@ border:1px solid rgba(110,126,97,.4);border-radius:999px;padding:7px 14px}
 
 /* ── réassurance ── */
 .reass{background:var(--beige-2);border-top:1px solid var(--line);padding:clamp(40px,6vh,68px) 0}
-.reass-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(20px,3vw,44px);text-align:center}
+.reass-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,44px);text-align:center}
 .reass-grid svg{width:28px;height:28px;color:var(--sage);margin:0 auto 12px;display:block}
 .reass-grid h3{margin:0 0 7px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.17em;text-transform:uppercase;color:var(--sage-dark)}
@@ -1002,20 +1007,24 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <div class="bout-fil"><div class="shell"><a href="index.html">BIBEON</a> · Boutique</div></div>
 
+
 <!-- ══════════ HERO DE BOUTIQUE ══════════ -->
 <section aria-label="La boutique" class="bhero">
 <div class="shell bhero-grid">
 <div>
 <p class="bhero-sur">La boutique</p>
 <h1>Allégez<br/>vos sorties.</h1>
-<p class="bhero-chapo">Le biberon nomade pliable, fabriqué en France.</p>
-<!-- Phrase jonquille retirée le 14 août : les visuels définitifs ne montrent plus ce coloris,
-     l'avertissement n'a plus d'objet. À remettre si un visuel jonquille revient. -->
+<p class="bhero-chapo">Le biberon nomade pliable, fabriqué en France. Vingt-trois grammes, tétine et capuchon compris.</p>
+<p class="bhero-offre">La dose de lait voyage dans le biberon. Vous partez avec, <b>vous nourrissez partout</b>.</p>
+<p class="bhero-gamme">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images — voici les cinq coloris disponibles.</p>
 <p class="bhero-cta">
 <a href="#offres">Voir les offres</a>
 <a class="creux" href="#japon">Livraison au Japon</a>
 </p>
 </div>
+<figure class="bhero-carre">
+<img alt="Un BIBEON lilas posé sur la table de marbre d’un café parisien, à côté d’une chaise haute" height="2048" src="assets/bibeon-banniere-cafe.webp" width="2048"/>
+</figure>
 </div>
 </section>
 
@@ -1023,8 +1032,8 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="shell bande-grid">
 <div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><path d="M16 8 2 22"/></svg><b>Léger et compact</b><span>23 g, tétine et capuchon compris</span></div>
 <div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg><b>Pré-dosé ici</b><span>La poudre voyage dans le biberon</span></div>
-<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2h4"/><path d="M11 2v3"/><path d="M13 2v3"/><path d="M8.5 8h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z"/><path d="M9.5 5h5l1 3h-7z"/><path d="M10 12h4M10 15h4"/></svg><b>Nourrissez partout</b><span>Dépliez, ajoutez l’eau, c’est prêt</span></div>
-<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Sûr et sain</b><span>Sans BPA, testé par le LNE</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg><b>50 % végétal</b><span>Bague et capuchon — sans OGM, ni gluten, ni BPA</span></div>
+<div class="bande-item"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.6 17.2A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.8-2.8L15 8.5V2"/><path d="M8 2h8"/><path d="M6.8 14h10.4"/></svg><b>0 résidu détecté</b><span>Essais de migration du LNE</span></div>
 </div>
 </div>
 <div class="service">
@@ -1214,9 +1223,8 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <section aria-label="Nos engagements" class="reass">
 <div class="shell reass-grid">
 <div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><h3>Fabriqué en France</h3><p>Du moule au flacon, en région lyonnaise.</p></div>
-<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6"/></svg><h3>50 % végétal</h3><p>Bague et capuchon en matière d’origine végétale.</p></div>
-<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><h3>Sans BPA</h3><p>Le polypropylène n’en contient pas.</p></div>
-<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v6.5L4.6 17.2A2 2 0 0 0 6.4 20h11.2a2 2 0 0 0 1.8-2.8L15 8.5V2"/><path d="M8 2h8"/><path d="M6.8 14h10.4"/></svg><h3>0 résidu détecté</h3><p>Essais de migration réalisés par le LNE.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><h3>Testé par le LNE</h3><p>Dossier P143418 : les cinq coloris, la bague et le capuchon.</p></div>
+<div><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/><path d="M12 18a4 4 0 0 0 4-4"/></svg><h3>Teinté dans la masse</h3><p>La couleur est dans la matière, elle ne s’efface pas au lavage.</p></div>
 </div>
 </section>
 
