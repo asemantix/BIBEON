@@ -864,7 +864,8 @@ width:100vw;margin-left:calc(50% - 50vw)}
 /* ═══════════ LE NOM — la lettre qui manque ═══════════ */
 .nom-mot{max-width:none;letter-spacing:.06em;font-size:clamp(40px,6.6vw,96px)}
 .nom-r{color:var(--sage-soft);opacity:.42}
-.nom-chute{margin:clamp(30px,4vh,48px) auto 0;max-width:24ch;
+.nom-lettre{font-style:normal;letter-spacing:.04em}
+.nom-chute{margin:clamp(30px,4vh,48px) auto 0;max-width:24ch;line-height:1.28;
 font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:400;
 font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </style>
@@ -902,22 +903,8 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
    "publisher": {
     "@id": "https://bibeon.fr/#organisation"
    }
-  },
-  {
-   "@type": "VideoObject",
-   "@id": "https://bibeon.fr/#demo",
-   "name": "BIBEON, le biberon nomade pliable — démonstration",
-   "description": "Démonstration du biberon nomade pliable BIBEON 330 ml : le dosage du lait en poudre dans le biberon replié, le dépliage des soufflets et l’ajout de l’eau au moment du repas.",
-   "thumbnailUrl": "https://bibeon.fr/assets/demo-bibeon.jpg",
-   "contentUrl": "https://bibeon.fr/assets/demo-bibeon.mp4",
-   "uploadDate": "2026-07-31",
-   "duration": "PT1M12S",
-   "inLanguage": "fr-FR",
-   "publisher": {
-    "@id": "https://bibeon.fr/#organisation"
-   }
   }
- ]
+]
 }
 </script>
 </head>
@@ -1010,7 +997,22 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <div class="shell">
 <p class="usp-marque">Le nom</p>
 <p class="usp-phrase nom-mot">BIBE<span class="nom-r">R</span>ON</p>
-<p class="nom-chute">L’air en moins.</p>
+<p class="nom-chute">L’<span class="nom-lettre">R</span> en moins.</p>
+</div>
+</section>
+
+<!-- ══════════ 12 · BONUS · L'ANTI-AIR — une respiration ══════════ -->
+<section aria-label="Bonus, l’anti-air" class="bloc respiration" style="background:var(--beige-2)">
+<div class="shell bloc-grid visuel-gauche">
+<div class="bloc-texte">
+<p class="overline">Bonus · l’anti-air</p>
+<h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
+<p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
+<p class="lien-discret"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
+</div>
+<figure class="bloc-visuel photo">
+<img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
+</figure>
 </div>
 </section>
 
@@ -1210,37 +1212,12 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 
-<!-- ══════════ 11 bis · LE FILM COMPLET ══════════ -->
-<section aria-label="Tout comprendre en 30 secondes" class="film-complet" id="film-complet">
-<div class="shell chapitre">
-<p class="overline">Tout comprendre en 30 secondes</p>
-<h2 class="chapitre-titre">BIBEON, du premier geste au nettoyage.</h2>
-</div>
-<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
-<figure class="film-complet-cadre">
-<video aria-label="Démonstration complète du biberon BIBEON : dépliage, dosage, tétine, repliage, nettoyage et séchage" controls="" height="500" playsinline="" poster="assets/demo-bibeon.jpg" preload="none" width="960">
-<source src="assets/demo-bibeon.mp4" type="video/mp4"/>
-</video>
-</figure>
-<p class="film-complet-note">Le dépliage, la dose, l’eau, la tétine, le repliage, le nettoyage et le séchage — dans l’ordre, sans coupure.</p>
-</div>
-</section>
+<!-- Le film complet a rejoint la page mode d’emploi. -->
 
 
-<!-- ══════════ 12 · BONUS · L'ANTI-AIR — une respiration ══════════ -->
-<section aria-label="Bonus, l’anti-air" class="bloc respiration" style="background:var(--beige-2)">
-<div class="shell bloc-grid visuel-gauche">
-<div class="bloc-texte">
-<p class="overline">Bonus · l’anti-air</p>
-<h2 class="bloc-titre">Le lait descend.<br/>L’air prend sa place.</h2>
-<p class="billets">On abaisse les soufflets vides jusqu’au niveau du lait.<br/>Moins d’air dans le biberon.</p>
-<p class="lien-discret"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
-</div>
-<figure class="bloc-visuel photo">
-<img alt="Le biberon BIBEON déplié, tenu dans une main, les soufflets abaissés au niveau du lait" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
-</figure>
-</div>
-</section>
+
+
+
 
 
 <!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
