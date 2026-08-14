@@ -860,6 +860,13 @@ font-size:15px;line-height:1.7;color:var(--sage)}
 .renv-image-pleine{margin:clamp(48px,7vh,84px) 0 0;max-width:none;
 width:100vw;margin-left:calc(50% - 50vw)}
 .renv-image-pleine img{border-radius:0}
+
+/* ═══════════ LE NOM — la lettre qui manque ═══════════ */
+.nom-mot{max-width:none;letter-spacing:.06em;font-size:clamp(40px,6.6vw,96px)}
+.nom-r{color:var(--sage-soft);opacity:.42}
+.nom-chute{margin:clamp(30px,4vh,48px) auto 0;max-width:24ch;
+font-family:"Playfair Display",Georgia,serif;font-style:italic;font-weight:400;
+font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </style>
 <script type="application/ld+json">
 {
@@ -988,15 +995,28 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </div>
 </section>
 
-<!-- ══════════ LA RÉPONSE, TOUT DE SUITE ══════════ -->
-<section aria-label="Un biberon, tout le reste en moins" class="film-plein">
+<!-- ══════════ LA RUPTURE ══════════ -->
+<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
 <div class="shell">
-<h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
-<figure>
-<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
+<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
+<figure class="renv-image renv-image-pleine">
+<img alt="Un biberon BIBEON doré au centre, les biberons rigides expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
 </figure>
 </div>
 </section>
+
+<!-- ══════════ LE NOM — la lettre qui manque ══════════ -->
+<section aria-label="Le nom" class="usp nom">
+<div class="shell">
+<p class="usp-marque">Le nom</p>
+<p class="usp-phrase nom-mot">BIBE<span class="nom-r">R</span>ON</p>
+<p class="nom-chute">L’air en moins.</p>
+</div>
+</section>
+
+
+<!-- ══════════ LA RÉPONSE, TOUT DE SUITE ══════════ -->
+
 
 <!-- ══════════ 3 bis · LE TÉMOIGNAGE — ni titre, ni surtitre, ni photo ══════════ -->
 <section aria-label="Témoignage" class="temoignage">
@@ -1019,9 +1039,6 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </div>
 </section>
 
-<!-- ══════════ LA RÉPONSE MÉCANIQUE — juste après les parents ══════════ -->
-
-<!-- ══════════ 3 ter · LA RÉPONSE ══════════ -->
 <!-- ══════════ 3 bis · LA DÉMONSTRATION — charnière du renversement ══════════ -->
 <section aria-label="Pré-dosé avant de partir" class="bloc" style="background:var(--cream)">
 <div class="shell bloc-grid">
@@ -1036,14 +1053,7 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </div>
 </section>
 
-<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
-<div class="shell">
-<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
-<figure class="renv-image renv-image-pleine">
-<img alt="Un biberon BIBEON doré au centre, les biberons rigides expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
-</figure>
-</div>
-</section>
+
 
 <!-- ══════════ 3 quater · LE CONCEPT ══════════ -->
 <section aria-label="Tout dedans, rien autour" class="usp">
@@ -1093,12 +1103,6 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </div>
 </section>
 
-<!-- ══════════ 6 bis · LA PROPOSITION DE VALEUR ══════════ -->
-
-<!-- ══════════ 5 · PRÉ-DOSÉ AVANT DE PARTIR ══════════ -->
-
-<!-- ══════════ 7 · LE GRAND FILM ══════════ -->
-
 <!-- ══════════ 8 · LA POUDRE D'ABORD ══════════ -->
 <section aria-label="Une paroi accidentée" class="bloc" style="background:var(--cream)">
 <div class="shell bloc-grid visuel-gauche">
@@ -1114,6 +1118,16 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </section>
 
 <!-- ══════════ 9 · COMMENT ÇA MARCHE ══════════ -->
+<!-- ══════════ LE GRAND FILM ══════════ -->
+<section aria-label="Un biberon, tout le reste en moins" class="film-plein">
+<div class="shell">
+<h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
+<figure>
+<video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
+</figure>
+</div>
+</section>
+
 <section aria-label="Les 3 gestes, puis le réchauffage" class="etapes" id="fonctionnement">
 <div class="shell">
 <div class="section-head center">
@@ -1228,21 +1242,6 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </div>
 </section>
 
-
-<!-- ══════════ 15 bis · LE COFFRET — RETIRÉ LE 13 AOÛT ══════════
-     La planche montrait l'intérieur de l'étui triangulaire. Le design
-     du calage n'est pas arrêté : la page n'engage rien tant qu'il ne l'est pas.
-     Pour la remettre : rétablir ce bloc et redéposer bibeon-coffret-trio-nomade.webp.
-<section aria-label="Le coffret" class="planche">
-<div class="shell">
-<p class="planche-sur">Ce que vous recevez</p>
-<h2 class="planche-titre">On ouvre un coffret,<br/><em>pas un carton.</em></h2>
-</div>
-<figure class="planche-image">
-<img alt="Le coffret Trio Nomade BIBEON" height="1048" loading="lazy" src="assets/bibeon-coffret-trio-nomade.webp" width="1800"/>
-</figure>
-</section>
--->
 
 <!-- ══════════ 16 · ACHAT RAPIDE ══════════ -->
 <section aria-label="Achat rapide" class="conversion">
@@ -1544,9 +1543,6 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </section>
 
 
-<!-- ══════════ 18 bis · LE SOIN JUSQU’À L’EMBALLAGE ══════════ -->
-
-
 <!-- ══════════ 18 bis · LE SOIN JUSQU'À L'EMBALLAGE ══════════ -->
 <section aria-label="L’emballage" class="planche">
 <div class="shell">
@@ -1560,7 +1556,6 @@ width:100vw;margin-left:calc(50% - 50vw)}
 </section>
 
 
-<!-- ══════════ 19 · BOUTIQUE ══════════ -->
 <!-- ══════════ 19 · LA BOUTIQUE — teaser ══════════ -->
 <section aria-label="La boutique" class="teaser" id="boutique">
 <div class="shell teaser-grid">
