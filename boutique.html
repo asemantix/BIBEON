@@ -800,9 +800,9 @@ line-height:1.8;color:var(--sage);opacity:.9}
 .bhero-texte{background:none;padding:0;box-shadow:none;color:#fdfbf9;max-width:22ch}
 /* la bande livraison : le coffret à droite, les conditions à gauche */
 .livraison{background:#f7f2ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-padding:clamp(44px,6vh,80px) 0}
-.livraison-grid{display:grid;grid-template-columns:minmax(0,.86fr) 1.14fr;
-gap:clamp(30px,4.5vw,70px);align-items:center}
+padding:clamp(40px,5.4vh,72px) 0}
+.livraison-grid{display:grid;grid-template-columns:minmax(0,.78fr) 1.22fr;
+gap:clamp(16px,2vw,34px);align-items:center}
 .livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
 .livraison-titre em{font-style:italic;color:var(--sage)}
@@ -835,9 +835,11 @@ line-height:1.7;color:var(--sage)}
 }
 .bhero{position:relative;border-bottom:1px solid var(--line);
 background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 66%/cover;
-aspect-ratio:1872 / 1056;
-/* le biberon doit être visible sans scroller : on plafonne sur la hauteur d'écran restante */
-max-height:calc(100svh - 178px);min-height:430px}
+/* JAMAIS d'aspect-ratio ici : combiné à une hauteur plafonnée, il rétrécit AUSSI la largeur
+   et laisse une bande blanche à droite. On règle la hauteur seule, la largeur reste à 100 %. */
+width:100%;
+height:min(calc(100vw / 1.7727), calc(100svh - 178px));
+min-height:430px}
 /* le voile : bleu nuit au bord gauche, disparu à 45 % — sans rectangle perceptible */
 .bhero::before{content:"";position:absolute;inset:0;pointer-events:none;
 background:
