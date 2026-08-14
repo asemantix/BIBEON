@@ -784,20 +784,24 @@ font-family:Montserrat,sans-serif;font-size:11.5px;letter-spacing:.2em;text-tran
 
 /* ── HERO DE BOUTIQUE ── */
 /* la bannière : l'image entière, pleine largeur, jamais recadrée */
-.banniere{margin:0;padding:0;background:var(--beige)}
-.banniere img{display:block;width:100%;height:auto}
+/* les bannières : image entière, jamais recadrée, jamais plus haute que le hero */
+.banniere{margin:0;padding:0;background:var(--beige);display:flex;justify-content:center}
+.banniere img{display:block;width:100%;height:auto;max-width:1400px}
 /* le bandeau de texte : posé dans l'image, crème très transparent */
 .bhero-texte{background:rgba(253,251,249,.90);
 -webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
 padding:clamp(30px,4.4vh,48px) clamp(24px,2.4vw,36px);
 box-shadow:0 1px 40px rgba(17,37,58,.06)}
-.banniere-packaging{background:var(--beige-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.banniere-packaging{background:#f7f2ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(30px,4vh,56px) 24px}
+.banniere-packaging img{max-width:680px}
+@media (max-width:700px){.banniere-packaging{padding:22px 16px}}
 .bhero{position:relative;border-bottom:1px solid var(--line);
-background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 46%/cover}
+background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center center/100% auto;
+aspect-ratio:1872 / 1056}
 .bhero::before{content:none}
 .bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,442px) 1fr;
 gap:clamp(22px,2.6vw,44px);align-items:center;
-min-height:clamp(620px,86vh,880px);padding:clamp(36px,5vh,64px) 0}
+min-height:0;padding:clamp(36px,5vh,64px) 0}
 .bhero-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
 .bhero h1{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
@@ -820,8 +824,10 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-cta a.creux:hover{background:rgba(110,126,97,.08)}
 .bhero-image{display:none}
 @media (max-width:900px){
-  .bhero{background-position:34% 70%;padding-bottom:0}
-  .bhero-grid{grid-template-columns:1fr;gap:0;min-height:96vh;padding:20px 0;align-items:start}
+  /* sur téléphone : le bandeau sur l'ivoire, la scène entière juste dessous */
+  .bhero{aspect-ratio:auto;background-size:100% auto;background-position:center bottom;
+  padding-bottom:calc(100vw / 1.7727)}
+  .bhero-grid{grid-template-columns:1fr;gap:0;min-height:0;padding:22px 0 14px;align-items:start}
   .bhero-texte{padding:26px 20px;background:rgba(253,251,249,.93)}
   .bhero-gamme{display:none}
 }
@@ -961,8 +967,10 @@ font-family:Montserrat,sans-serif;color:var(--text)}
 .footer-col a:hover{color:var(--sage-dark)}
 footer h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
-.baseline{margin:8px 0 14px;font-family:"Playfair Display",Georgia,serif;font-style:italic;
-font-size:20px;color:var(--sage)}
+/* la signature de marque : mêmes capitales que le logo, le R en vert sauge */
+.baseline{margin:10px 0 16px;font-family:Montserrat,sans-serif;font-weight:500;
+font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.baseline .r{color:var(--sage-soft)}
 .footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0;line-height:1.7}
 .brand-logo{display:block;width:auto;height:34px;color:var(--navy);transform:translateY(-2px)}
 .footer-fournisseurs{display:block;margin-top:12px;padding-top:12px;
@@ -1030,10 +1038,11 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </section>
 
 
-<!-- ══════════ PREUVE DU BÉNÉFICE — l'image de Suzanne, entière, jamais recadrée ══════════ -->
-<figure class="banniere">
-<img alt="Deux BIBEON pré-dosés en lait en poudre posés près d’un sac à main, et une main qui en range un troisième — Tout dedans, rien d’autre à transporter" height="1260" loading="lazy" src="assets/bibeon-banniere-sac-a-main.webp" width="2400"/>
-</figure>
+<!-- Bannière « sac à main » retirée le 14 août : une seule scène de vie sur la boutique,
+     celle du café. Le fichier bibeon-banniere-sac-a-main.webp reste dans assets/.
+     Pour la remettre ici, recoller :
+     <figure class="banniere"><img alt="…" height="1260" loading="lazy"
+     src="assets/bibeon-banniere-sac-a-main.webp" width="2400"/></figure> -->
 
 <div class="bande">
 <div class="shell bande-grid">
@@ -1424,7 +1433,7 @@ l-365 0 0 160 0 160 309 0 c262 0 310 2 321 15 18 22 15 151 -5 181 l-15 24
 17 14 119 14 633 l0 614 -25 24 c-22 23 -32 25 -115 25 -83 0 -93 -2 -115 -25
 l-25 -24 0 -396 0 -396 -167 203 c-303 369 -456 552 -497 596 l-40 42 -81 -1
 c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
-<p class="baseline">Pré-dosé ici. Nourrissez partout.</p>
+<p class="baseline">Le bibe<span class="r">r</span>on, l’R en moins.</p>
 <p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
 </div>
 <div class="footer-col">
