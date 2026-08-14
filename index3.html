@@ -391,10 +391,13 @@ font-size:clamp(20px,2.2vw,27px);line-height:1.25;color:rgba(255,255,255,.9)}
 /* 7 · le grand film */
 .film-plein{padding:clamp(64px,9vh,112px) 0;min-height:100vh;display:flex;align-items:center;
 background:var(--navy);text-align:center}
-.film-plein .film-titre{margin:0 auto 44px;max-width:18ch;
+.film-plein .film-titre{margin:0 auto 18px;max-width:18ch;
 font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(32px,4vw,54px);line-height:1.06;color:#fff}
 .film-plein .film-titre em{font-style:italic;color:#cfe0b8}
+.film-plein .film-sous{margin:0 auto 44px;font-family:"Playfair Display",Georgia,serif;
+font-style:italic;font-weight:400;font-size:clamp(19px,2vw,27px);line-height:1.3;
+color:rgba(255,255,255,.72)}
 .film-plein figure{margin:0}
 .film-plein figure{border-radius:var(--radius);overflow:hidden;background:var(--navy);line-height:0;
 height:min(760px,62vh)}
@@ -1124,6 +1127,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <section aria-label="Un biberon, tout le reste en moins" class="film-plein">
 <div class="shell">
 <h2 class="film-titre">Un biberon.<br/><em>Tout le reste, en moins.</em></h2>
+<p class="film-sous">Le doseur et l’air.</p>
 <figure>
 <video aria-label="Plusieurs BIBEON pré-dosés, puis le dépliage et l’arrivée de l’eau" autoplay="" loop="" muted="" playsinline="" poster="assets/depliage-plan-net.webp" preload="metadata" src="assets/depliage-plan-net.mp4"></video>
 </figure>
