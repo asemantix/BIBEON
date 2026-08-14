@@ -18,7 +18,7 @@
 <link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon"/>
 <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 
-<title>Boutique BIBEON — acheter le biberon nomade pliable, 35 € port compris</title>
+<title>Boutique BIBEON — le biberon nomade pliable, 35 € port compris</title>
 <meta content="Achetez le biberon nomade pliable BIBEON : à l’unité, en duo, en Trio Nomade dans son étui, ou en lot de cinq. Cinq coloris, 35 € l’unité port compris, expédié de France le jour même." name="description"/>
 <link href="https://bibeon.fr/boutique.html" rel="canonical"/>
 
@@ -785,30 +785,71 @@ font-family:Montserrat,sans-serif;font-size:11.5px;letter-spacing:.2em;text-tran
 /* ── HERO DE BOUTIQUE ── */
 /* la bannière : l'image entière, pleine largeur, jamais recadrée */
 /* les bannières : image entière, jamais recadrée, jamais plus haute que le hero */
+/* la phrase de marque, juste sous le hero */
+.sous-hero{background:var(--cream);border-bottom:1px solid var(--line);
+padding:clamp(38px,5.5vh,66px) 0;text-align:center}
+.sous-hero-mot{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(19px,1.9vw,27px);line-height:1.4;color:var(--sage-dark)}
+.sous-hero-mot em{font-style:italic;color:var(--sage)}
+.sous-hero-note{margin:20px 0 0;font-family:Montserrat,sans-serif;font-size:12.5px;
+line-height:1.8;color:var(--sage);opacity:.9}
+.sous-hero-note a{color:var(--sage-dark)}
 .banniere{margin:0;padding:0;background:var(--beige);display:flex;justify-content:center}
 .banniere img{display:block;width:100%;height:auto;max-width:1400px}
-/* le bandeau de texte : posé dans l'image, crème très transparent */
-.bhero-texte{background:rgba(253,251,249,.90);
--webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
-padding:clamp(30px,4.4vh,48px) clamp(24px,2.4vw,36px);
-box-shadow:0 1px 40px rgba(17,37,58,.06)}
-.banniere-packaging{background:#f7f2ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:clamp(30px,4vh,56px) 24px}
-.banniere-packaging img{max-width:680px}
-@media (max-width:700px){.banniere-packaging{padding:22px 16px}}
+/* le texte est posé directement dans l'image : aucun panneau, aucun bord */
+.bhero-texte{background:none;padding:0;box-shadow:none;color:#fdfbf9;max-width:22ch}
+/* la bande livraison : le coffret à droite, les conditions à gauche */
+.livraison{background:#f7f2ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+padding:clamp(44px,6vh,80px) 0}
+.livraison-grid{display:grid;grid-template-columns:minmax(0,.86fr) 1.14fr;
+gap:clamp(30px,4.5vw,70px);align-items:center}
+.livraison-titre{margin:14px 0 26px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
+.livraison-titre em{font-style:italic;color:var(--sage)}
+.livraison-points{margin:0;max-width:46ch;font-family:Montserrat,sans-serif;
+font-size:15px;line-height:2.2;color:var(--text)}
+.livraison-points span{white-space:nowrap}
+.livraison-points b{font-weight:600;color:var(--sage-dark)}
+.livraison-points i{font-style:normal;padding:0 4px;color:var(--sage-soft)}
+.livraison-liste{list-style:none;margin:0;padding:0;max-width:44ch}
+.livraison-liste li{position:relative;padding:0 0 0 24px;margin:0 0 14px;
+font-family:Montserrat,sans-serif;font-size:15px;line-height:1.62;color:var(--text)}
+.livraison-liste li::before{content:"";position:absolute;left:0;top:.72em;
+width:11px;height:1px;background:var(--sage)}
+.livraison-liste b{font-weight:600;color:var(--sage-dark)}
+.livraison-note{margin:24px 0 0;font-family:Montserrat,sans-serif;font-size:13px;
+line-height:1.7;color:var(--sage)}
+.livraison-note a{color:var(--sage-dark)}
+.livraison-note b{font-weight:600;color:var(--sage-dark)}
+.livraison-image{margin:0}
+.livraison-image img{display:block;width:100%;height:auto}
+@media (max-width:900px){
+  .livraison-grid{grid-template-columns:1fr;gap:26px}
+  .livraison-image{order:-1}
+}
 .bhero{position:relative;border-bottom:1px solid var(--line);
 background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center center/100% auto;
 aspect-ratio:1872 / 1056}
-.bhero::before{content:none}
+/* le voile : bleu nuit au bord gauche, disparu à 45 % — sans rectangle perceptible */
+.bhero::before{content:"";position:absolute;inset:0;pointer-events:none;
+background:linear-gradient(90deg,
+ rgba(17,37,58,.80) 0%,
+ rgba(17,37,58,.72) 12%,
+ rgba(17,37,58,.54) 24%,
+ rgba(17,37,58,.28) 35%,
+ rgba(17,37,58,.08) 41%,
+ rgba(17,37,58,0) 45%)}
 .bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,442px) 1fr;
 gap:clamp(22px,2.6vw,44px);align-items:center;
 min-height:0;padding:clamp(36px,5vh,64px) 0}
-.bhero-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.bhero-sur{margin:0 0 18px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
+letter-spacing:.28em;text-transform:uppercase;color:rgba(253,251,249,.72)}
 .bhero h1{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-size:clamp(34px,3.5vw,54px);line-height:1.04;letter-spacing:-.012em;color:var(--sage-dark)}
+font-size:clamp(34px,3.6vw,58px);line-height:1.05;letter-spacing:-.012em;color:#fdfbf9;
+text-shadow:0 1px 24px rgba(17,37,58,.35)}
 .bhero h1 em{display:block;font-style:italic;font-size:.68em;line-height:1.15;margin-top:.16em;color:var(--sage)}
-.bhero-chapo{margin:0 0 22px;max-width:30ch;font-family:Montserrat,sans-serif;
-font-size:16px;line-height:1.75;color:var(--text)}
+.bhero-chapo{margin:16px 0 34px;max-width:24ch;font-family:"Playfair Display",Georgia,serif;
+font-style:italic;font-size:clamp(19px,1.85vw,27px);line-height:1.3;color:rgba(253,251,249,.92)}
 .bhero-offre{margin:0 0 14px;max-width:30ch;font-family:"Playfair Display",Georgia,serif;
 font-style:italic;font-size:clamp(17px,1.5vw,21px);line-height:1.5;color:var(--sage-dark)}
 .bhero-offre b{font-style:normal;font-weight:500}
@@ -820,16 +861,16 @@ font-family:Montserrat,sans-serif;font-size:13.5px;font-weight:600;letter-spacin
 text-transform:uppercase;text-decoration:none;padding:16px 30px;border-radius:999px;
 background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-cta a:hover{background:var(--sage)}
-.bhero-cta a.creux{background:transparent;color:var(--sage-dark);border:1px solid rgba(110,126,97,.45)}
+.bhero-cta a.creux{background:transparent;color:#fdfbf9;border:1px solid rgba(253,251,249,.55)}
 .bhero-cta a.creux:hover{background:rgba(110,126,97,.08)}
 .bhero-image{display:none}
 @media (max-width:900px){
-  /* sur téléphone : le bandeau sur l'ivoire, la scène entière juste dessous */
-  .bhero{aspect-ratio:auto;background-size:100% auto;background-position:center bottom;
-  padding-bottom:calc(100vw / 1.7727)}
-  .bhero-grid{grid-template-columns:1fr;gap:0;min-height:0;padding:22px 0 14px;align-items:start}
-  .bhero-texte{padding:26px 20px;background:rgba(253,251,249,.93)}
-  .bhero-gamme{display:none}
+  /* sur téléphone : le voile descend du haut, le texte est posé dessus */
+  .bhero{aspect-ratio:3 / 4;background-size:cover;background-position:64% center}
+  .bhero::before{background:linear-gradient(180deg,
+   rgba(17,37,58,.82) 0%, rgba(17,37,58,.62) 28%, rgba(17,37,58,.24) 46%, rgba(17,37,58,0) 62%)}
+  .bhero-grid{grid-template-columns:1fr;gap:0;min-height:0;padding:26px 0;align-items:start}
+  .bhero-texte{padding:0;max-width:none}
 }
 
 /* ── bande de réassurance commerce ── */
@@ -1025,17 +1066,20 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="shell bhero-grid">
 <div class="bhero-texte">
 <p class="bhero-sur">La boutique</p>
-<h1>Allégez<br/>vos sorties.</h1>
-<p class="bhero-chapo">Le biberon nomade pliable, fabriqué en France. Vingt-trois grammes, tétine et capuchon compris.</p>
-<p class="bhero-offre">La dose de lait voyage dans le biberon. Vous partez avec, <b>vous nourrissez partout</b>.</p>
-<p class="bhero-gamme">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images — voici les cinq coloris disponibles.</p>
-<p class="bhero-cta">
-<a href="#offres">Voir les offres</a>
-<a class="creux" href="#japon">Livraison au Japon</a>
-</p>
+<h1>BIBEON<br/>vous attend.</h1>
+<p class="bhero-chapo">Le monde n’attend que vous.</p>
+<p class="bhero-cta"><a href="#offres">Voir les offres</a></p>
 </div>
 </div>
 </section>
+
+<!-- la phrase de marque et la mention jonquille, sorties du hero pour le laisser respirer -->
+<div class="sous-hero">
+<div class="shell">
+<p class="sous-hero-mot">Petit quand vous partez, grand quand bébé en a besoin.<br/><em>BIBEON voyage léger et suit vos découvertes.</em></p>
+<p class="sous-hero-note">Le biberon nomade pliable, fabriqué en France · <a href="#japon">Livraison au Japon</a> · Le coloris jonquille est épuisé, il apparaît encore sur quelques images.</p>
+</div>
+</div>
 
 
 <!-- Bannière « sac à main » retirée le 14 août : une seule scène de vie sur la boutique,
@@ -1057,9 +1101,25 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </div>
 
 <!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
-<figure class="banniere banniere-packaging">
-<img alt="Le coffret BIBEON ouvert : l’étui triangulaire, le biberon nomade et son pochon de mousseline de coton" height="1150" loading="lazy" src="assets/bibeon-packaging-catalogue.webp" width="1352"/>
+<section aria-label="Ce que vous recevez et comment" class="livraison">
+<div class="shell livraison-grid">
+<div class="livraison-texte">
+<p class="overline">La livraison</p>
+<h2 class="livraison-titre">Rien de plus.<br/><em>Tout dedans.</em></h2>
+<p class="livraison-points">
+<span><b>PayPal</b></span> <i>·</i>
+<span>Paiement sécurisé</span> <i>·</i>
+<span>Expédition le jour même avant 12&nbsp;h</span> <i>·</i>
+<span><b>Livraison Mondial Relay offerte</b></span> <i>·</i>
+<span>France métropolitaine</span> <i>·</i>
+<span>Retour sous 30 jours</span>
+</p>
+</div>
+<figure class="livraison-image">
+<img alt="Le coffret BIBEON ouvert : l’étui triangulaire, le biberon nomade pré-dosé et son pochon de mousseline de coton" height="1150" loading="lazy" src="assets/bibeon-packaging-catalogue.webp" width="1352"/>
 </figure>
+</div>
+</section>
 
 <section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
 
