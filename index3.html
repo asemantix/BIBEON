@@ -13,21 +13,21 @@
 <link href="/assets/favicon-bibeon.png" rel="icon" sizes="512x512" type="image/png"/>
 <link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon"/>
 <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<title>BIBEON — Le biberon a changé : il s’élève et se replie à la demande</title>
-<meta content="Replié et hermétique, BIBEON emporte directement son lait en poudre sans doseur. Dépliez, ajoutez l’eau. 50 % végétal, 0 résidu détecté par le LNE, fabriqué en France." name="description"/>
+<title>BIBEON — Le biberon, l’R en moins : il s’abaisse à la demande</title>
+<meta content="Le biberon nomade pliable qui s’abaisse au niveau du liquide : moins d’air à avaler, moins d’air à transporter, moins d’accessoires à emporter." name="description"/>
 <link href="https://bibeon.fr/" rel="canonical"/>
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://bibeon.fr/">
-<meta property="og:title" content="BIBEON — Le biberon a changé">
-<meta property="og:description" content="Il s’élève et se replie à la demande. Replié, il emporte son lait en poudre sans doseur.">
+<meta property="og:title" content="BIBEON — Le biberon, l’R en moins">
+<meta property="og:description" content="Le biberon nomade pliable qui s’abaisse au niveau du liquide : moins d’air à avaler, moins d’air à transporter, moins d’accessoires à emporter.">
 <meta property="og:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
 <meta property="og:image:width" content="1731">
 <meta property="og:image:height" content="909">
 <meta property="og:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="BIBEON — Le biberon a changé">
-<meta name="twitter:description" content="Il s’élève et se replie à la demande. Replié, il emporte son lait en poudre sans doseur.">
+<meta name="twitter:title" content="BIBEON — Le biberon, l’R en moins">
+<meta name="twitter:description" content="Le biberon nomade pliable qui s’abaisse au niveau du liquide : moins d’air à avaler, moins d’air à transporter, moins d’accessoires à emporter.">
 <meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
 <meta name="twitter:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -326,13 +326,51 @@ letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
 .change-mot{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(21px,2.1vw,29px);line-height:1.24;color:var(--navy)}
 .change-mot em{font-style:italic;color:var(--sage-dark)}
+.change-intro{margin:0 auto clamp(38px,5vh,60px);max-width:44ch;font-family:Montserrat,sans-serif;
+font-size:16px;line-height:1.8;color:var(--text)}
+.change-note{margin:12px 0 0;font-family:Montserrat,sans-serif;font-size:14px;
+line-height:1.7;color:var(--text)}
+.change-fil{margin:clamp(42px,5.6vh,68px) auto 0;max-width:52ch;text-align:center;
+font-family:Montserrat,sans-serif;font-size:15px;line-height:1.85;color:var(--sage)}
+.change-fil em{font-style:normal;font-weight:600;color:var(--sage-dark)}
+/* le visuel du manifeste : il revient sous la phrase qu'il illustre */
+.change-image{margin:clamp(42px,5.6vh,72px) 0 0;width:100vw;margin-left:calc(50% - 50vw)}
+.change-image img{display:block;width:100%;height:auto}
 .change-lien{margin:16px 0 0;font-family:Montserrat,sans-serif;font-size:12px;
 letter-spacing:.14em;text-transform:uppercase}
 .change-lien a{color:var(--sage);border-bottom:1px solid var(--line);padding-bottom:2px}
+.change-chute{margin:clamp(30px,4vh,48px) auto 0;text-align:center;
+font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(26px,3vw,42px);line-height:1.15;color:var(--navy)}
+.change-chute em{font-style:italic;color:var(--sage)}
 @media (max-width:860px){
   .change-grid{grid-template-columns:1fr;gap:30px}
   .change-item{padding-left:18px}
 }
+
+/* ── composition & preuves : une idée forte, puis les preuves ── */
+.preuve-tete{text-align:center;padding-top:clamp(70px,10vh,120px)}
+.preuve-amorce{margin:18px auto 30px;max-width:30ch;font-family:"Playfair Display",Georgia,serif;
+font-size:clamp(19px,1.9vw,26px);line-height:1.35;color:var(--sage-dark)}
+.preuve-amorce em{font-style:italic;color:var(--sage)}
+.preuve-titre{margin:0 auto;max-width:16ch;font-family:"Playfair Display",Georgia,serif;
+font-weight:500;font-size:clamp(38px,5.4vw,78px);line-height:1.04;letter-spacing:-.012em;
+color:var(--sage-dark)}
+.preuve-titre .zero{font-style:normal;font-variant-numeric:lining-nums}
+.preuve-chute{margin:28px auto 0;font-family:Montserrat,sans-serif;font-size:13px;
+font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
+.preuve-chute em{font-style:normal;color:var(--sage-dark)}
+.preuves-trois{grid-template-columns:repeat(3,1fr)}
+.preuve-pied{text-align:center;padding-bottom:clamp(80px,11vh,140px)}
+.preuve-final{margin:34px auto 0;max-width:28ch;font-family:"Playfair Display",Georgia,serif;
+font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage-dark)}
+.preuve-final em{font-style:italic;color:var(--sage)}
+.preuve-cta{margin:30px 0 0}
+.preuve-cta a{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border-radius:999px;
+background:var(--sage-dark);color:#fff;font-family:Montserrat,sans-serif;font-size:12.5px;
+font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
+.preuve-cta a:hover{background:var(--sage)}
+@media (max-width:860px){.preuves-trois{grid-template-columns:1fr}}
 .billets{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
   font-size:clamp(20px,1.9vw,25px);line-height:1.5;color:var(--sage);font-style:italic}
 .bloc-texte .billets b{font-style:normal;font-weight:500;color:var(--sage-dark)}
@@ -913,7 +951,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
     "width": 512,
     "height": 512
    },
-   "description": "BIBEON conçoit et fabrique en France un biberon nomade pliable de 330 ml, pensé pour les sorties et les voyages avec bébé.",
+   "description": "BIBEON conçoit et fabrique en France un biberon nomade pliable de 330 ml qui s’abaisse au niveau du liquide à mesure que bébé boit : moins d’air à avaler, moins d’air à transporter. Pensé pour les sorties et les voyages avec bébé.",
    "areaServed": "FR",
    "sameAs": [
     "https://www.instagram.com/bibeon.fr",
@@ -1011,14 +1049,10 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 <!-- ══════════ LA RUPTURE ══════════ -->
-<section aria-label="La réponse BIBEON" class="renversement renversement-reponse">
-<div class="shell">
-<p class="renv-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
-<figure class="renv-image renv-image-pleine">
-<img alt="Un biberon BIBEON doré au centre, les biberons rigides expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
-</figure>
-</div>
-</section>
+<!-- « On a changé le biberon. On a supprimé tout le reste. » n'est plus un bloc autonome :
+     la phrase est devenue la chute de « Ce que BIBEON change ». L'image sortir-leger.webp
+     reste dans assets/ si on veut la replacer ailleurs. -->
+
 
 <!-- ══════════ LE NOM — la lettre qui manque ══════════ -->
 <section aria-label="Le nom" class="usp nom">
@@ -1033,22 +1067,31 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <section aria-label="Ce que BIBEON change" class="change">
 <div class="shell">
 <h2 class="change-titre">Ce que BIBEON change.</h2>
+<p class="change-intro">BIBEON est le biberon qui s’abaisse à la demande, au niveau du liquide.</p>
 <div class="change-grid">
 <div class="change-item">
 <p class="change-sur">Moins d’air à avaler</p>
-<p class="change-mot">Le lait descend.<br/><em>BIBEON aussi.</em></p>
+<p class="change-mot">Le liquide descend.<br/><em>BIBEON aussi.</em></p>
+<p class="change-note">Les soufflets s’abaissent jusqu’au niveau du liquide. Moins d’air à avaler pour bébé.</p>
 <p class="change-lien"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
 </div>
 <div class="change-item">
 <p class="change-sur">Moins d’air à transporter</p>
-<p class="change-mot">Pas besoin<br/><em>de transporter du vide.</em></p>
+<p class="change-mot">Voyage petit.</p>
+<p class="change-note">Il se replie au volume utile, au lieu de garder celui d’un grand biberon vide. Vingt-trois grammes : il tient dans une poche.</p>
 </div>
 <div class="change-item">
-<p class="change-sur">Plus rien à transporter</p>
-<p class="change-mot">Fini les grands biberons vides<br/><em>et leurs accessoires encombrants.</em></p>
+<p class="change-sur">Emportez seulement l’utile</p>
+<p class="change-mot">Rien autour.</p>
+<p class="change-note">Fini les grands biberons vides et leurs accessoires encombrants. BIBEON ne se contente pas d’être petit : il évite de déménager à chaque sortie.</p>
 </div>
 </div>
+<p class="change-fil">Moins d’air dans le biberon, moins d’air dans le sac, moins de choses autour. <em>Le biberon devient nomade.</em></p>
+<p class="change-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
 </div>
+<figure class="change-image">
+<img alt="Un biberon BIBEON doré au centre, les biberons rigides et leurs accessoires expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
+</figure>
 </section>
 
 <!-- ══════════ ÉVOLUTIF — le curseur remonté ici le 14 août :
@@ -1058,11 +1101,11 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <div class="bloc-texte">
 <p class="overline">Évolutif</p>
 <h2 class="bloc-titre">Un seul biberon.</h2>
-<p class="billets">Il s’élève à la demande.</p>
+<p class="billets">Il s’élève et s’abaisse à la demande.</p>
 </div>
 <div class="bloc-visuel demo">
 <div style="text-align:center;width:100%">
-<div class="essai-scene"><div aria-label="Le biberon BIBEON qui se déplie au fil du curseur" class="bib-sprite" id="bibSprite" role="img"></div></div>
+<div class="essai-scene"><div aria-label="Le biberon BIBEON qui s’élève et s’abaisse au fil du curseur, de 30 à 300 ml" class="bib-sprite" id="bibSprite" role="img"></div></div>
 <p class="essai-lecture"><span id="bibVol">150</span><small> ml</small></p>
 <p class="essai-sous"><span id="bibNb">4 soufflets dépliés</span></p>
 <input aria-label="Déplier le biberon, de 30 à 300 millilitres par paliers de 30" id="bibFold" max="9" min="0" step="1" type="range" value="4"/>
@@ -1260,6 +1303,21 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 
 
+
+<!-- ══════════ ET S'IL REFUSAIT LA TÉTINE ? — remontée le 14 août :
+     c'est un frein à l'achat, il doit tomber avant le nettoyage et avant le bouton. ══════════ -->
+<section aria-label="Et s’il refusait la tétine" style="background:var(--white)">
+<div class="shell chapitre">
+<p class="overline">La question qu’on se pose</p>
+<h2 class="chapitre-titre">Et s’il refusait la tétine ?</h2>
+<blockquote class="reponse">
+<p>«&#8239;Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup.&#8239;»</p>
+<footer>Chloé G. <i>·</i> février 2025 <i>·</i> Un super biberon innovant</footer>
+</blockquote>
+<p class="tetine-specs"><b>Tétine en silicone alimentaire</b> <i>·</i> <b>col étroit interchangeable</b> <i>·</i> <b>débit 6 mois et plus</b></p>
+</div>
+</section>
+
 <!-- ══════════ 11 · NETTOYAGE ══════════ -->
 <section aria-label="Nettoyage" class="bloc" style="background:var(--white)">
 <div class="shell bloc-grid visuel-gauche">
@@ -1347,43 +1405,44 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 
 <!-- ══════════ 14 · COMPOSITION & SÉCURITÉ ATTESTÉE ══════════ -->
-<section aria-label="Composition et sécurité attestée" id="matiere" style="background:var(--cream)">
-<div class="shell chapitre">
-<p class="overline">Composition &amp; sécurité attestée</p>
-<h2 class="chapitre-titre">J’ai voulu aller au bout.</h2>
+<section aria-label="Composition et preuves" id="matiere" style="background:var(--cream)">
+<div class="shell preuve-tete">
+<p class="overline">Composition &amp; preuves</p>
+<p class="preuve-amorce">Un biberon n’est pas un jouet.<br/><em>Alors nous avons voulu savoir.</em></p>
+<h2 class="preuve-titre">50 % végétal.<br/><span class="zero">0</span> résidu détecté.</h2>
+<p class="preuve-chute">Pas une promesse. <em>Une preuve.</em></p>
+</div>
+
+<div class="shell" style="padding-bottom:clamp(40px,6vh,72px)">
+<div class="preuves preuves-trois">
+<a class="preuve" href="legerete.html" id="preuve-vegetal">
+<p class="preuve-hero">50 %</p>
+<p class="preuve-mot">végétal</p>
+<p class="preuve-note">12 g sur les 23 g du BIBEON sont d’origine végétale. Bague et capuchon <i>·</i> sans OGM ni gluten.</p>
+<p class="preuve-lien"><span>Découvrir la composition</span></p>
+</a>
+<a class="preuve" href="tests-migration-lne-bibeon.html#resultats" id="preuve-residu">
+<p class="preuve-hero"><span class="zero">0</span></p>
+<p class="preuve-mot">résidu détecté</p>
+<p class="preuve-note">Les cinq coloris du corps, la bague et le capuchon ont été soumis aux essais de migration du LNE. Résultats inférieurs au seuil analytique indiqué dans le rapport <i>·</i> dossier P143418.</p>
+<p class="preuve-lien"><span>Voir les résultats</span></p>
+</a>
+<a class="preuve" href="legerete.html#matieres">
+<p class="preuve-hero mot">France</p>
+<p class="preuve-mot">fabriqué ici</p>
+<p class="preuve-note">Du moule au flacon, en région lyonnaise. Une exigence que l’on peut documenter.</p>
+<p class="preuve-lien"><span>Découvrir les matières</span></p>
+</a>
+</div>
+</div>
+
+<div class="shell preuve-pied">
 <blockquote class="citation">
 <p>«&#8239;Un biberon n’est pas un jouet. En l’absence d’AMM — d’autorisation de mise sur le marché — la conformité repose sur la responsabilité du fabricant, sa déclaration et les preuves qui l’étayent. J’ai voulu aller au bout de cette responsabilité.&#8239;»</p>
 <footer>Suzanne de Bégon <i>·</i> Fondatrice de BIBEON</footer>
 </blockquote>
-</div>
-
-<div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
-<div class="preuves">
-<a class="preuve" href="legerete.html" id="preuve-vegetal">
-<p class="preuve-hero">50 %</p>
-<p class="preuve-mot">végétal</p>
-<p class="preuve-note">Sur les 23 g du BIBEON, 12 g sont d’origine végétale. Sans OGM ni gluten.</p>
-<p class="preuve-lien"><span>Découvrir la composition</span></p>
-</a>
-<a class="preuve" href="tests-migration-lne-bibeon.html#resultats" id="preuve-residu">
-<p class="preuve-hero">0</p>
-<p class="preuve-mot">résidu détecté</p>
-<p class="preuve-note">Essais de migration globale : résultats inférieurs au seuil analytique indiqué dans le rapport.</p>
-<p class="preuve-lien"><span>Voir les résultats</span></p>
-</a>
-<a class="preuve" href="tests-migration-lne-bibeon.html">
-<p class="preuve-hero sigle">LNE</p>
-<p class="preuve-mot">testé et contrôlé</p>
-<p class="preuve-note">Laboratoire national de métrologie et d’essais · dossier P143418.</p>
-<p class="preuve-lien"><span>Voir les tests de migration LNE</span></p>
-</a>
-<a class="preuve" href="legerete.html#matieres">
-<p class="preuve-hero mot">Composition</p>
-<p class="preuve-mot">trois matières</p>
-<p class="preuve-note">Polypropylène · matière d’origine végétale · silicone alimentaire.</p>
-<p class="preuve-lien"><span>Découvrir les matières</span></p>
-</a>
-</div>
+<p class="preuve-final">Nous ne vous demandons pas de nous croire.<br/><em>Regardez les résultats.</em></p>
+<p class="preuve-cta"><a href="tests-migration-lne-bibeon.html#resultats">Voir les résultats du LNE <span>→</span></a></p>
 </div>
 
 <div class="regle">
@@ -1403,17 +1462,9 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <!-- ══════════ 15 · ENTRE LEURS MAINS ══════════ -->
 <section aria-label="Entre leurs mains" style="background:var(--white)">
-<div class="shell chapitre">
-<p class="overline">Entre leurs mains</p>
-<h2 class="chapitre-titre">Et s’il refusait la tétine ?</h2>
-<blockquote class="reponse">
-<p>«&#8239;Mon fils d’un an n’était habitué qu’à une seule marque, et il a très bien accepté celui-ci — je crois que la forme y est pour beaucoup.&#8239;»</p>
-<footer>Chloé G. <i>·</i> février 2025 <i>·</i> Un super biberon innovant</footer>
-</blockquote>
-<p class="tetine-specs"><b>Tétine en silicone alimentaire</b> <i>·</i> <b>col étroit interchangeable</b> <i>·</i> <b>débit 6 mois et plus</b></p>
-</div>
 
 <div class="shell">
+<p class="overline" style="text-align:center">Entre leurs mains</p>
 <h3 class="mains-titre">Pensé pour leurs mains aussi.</h3>
 <div class="mains-grid">
 <figure class="main-item">
