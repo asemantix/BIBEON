@@ -786,26 +786,29 @@ font-family:Montserrat,sans-serif;font-size:11.5px;letter-spacing:.2em;text-tran
 /* la bannière : l'image entière, pleine largeur, jamais recadrée */
 .banniere{margin:0;padding:0;background:var(--beige)}
 .banniere img{display:block;width:100%;height:auto}
-.bhero{position:relative;border-bottom:1px solid var(--line);background:#f6f2ee}
-/* la scène prend le pas sur le texte : elle déborde jusqu'au bord droit de l'écran */
-.bhero-carre{margin:0;margin-right:calc(50% - 50vw)}
-.bhero-carre img{display:block;width:100%;height:auto}
-@media (max-width:900px){.bhero-carre{margin:30px calc(50% - 50vw) 0}}
+/* le bandeau de texte : posé dans l'image, crème très transparent */
+.bhero-texte{background:rgba(253,251,249,.90);
+-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px);
+padding:clamp(30px,4.4vh,48px) clamp(24px,2.4vw,36px);
+box-shadow:0 1px 40px rgba(17,37,58,.06)}
+.banniere-packaging{background:var(--beige-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.bhero{position:relative;border-bottom:1px solid var(--line);
+background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 46%/cover}
 .bhero::before{content:none}
-.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,.74fr) 1.5fr;
-gap:clamp(30px,5vw,74px);align-items:center;
-min-height:0;padding:0 0 clamp(40px,6vh,72px)}
+.bhero-grid{position:relative;display:grid;grid-template-columns:minmax(0,442px) 1fr;
+gap:clamp(22px,2.6vw,44px);align-items:center;
+min-height:clamp(620px,86vh,880px);padding:clamp(36px,5vh,64px) 0}
 .bhero-sur{margin:0 0 16px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
 .bhero h1{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-size:clamp(38px,4.6vw,66px);line-height:1.06;letter-spacing:-.012em;color:var(--sage-dark)}
+font-size:clamp(34px,3.5vw,54px);line-height:1.04;letter-spacing:-.012em;color:var(--sage-dark)}
 .bhero h1 em{display:block;font-style:italic;font-size:.68em;line-height:1.15;margin-top:.16em;color:var(--sage)}
-.bhero-chapo{margin:0 0 26px;max-width:44ch;font-family:Montserrat,sans-serif;
+.bhero-chapo{margin:0 0 22px;max-width:30ch;font-family:Montserrat,sans-serif;
 font-size:16px;line-height:1.75;color:var(--text)}
-.bhero-offre{margin:0 0 12px;max-width:46ch;font-family:"Playfair Display",Georgia,serif;
+.bhero-offre{margin:0 0 14px;max-width:30ch;font-family:"Playfair Display",Georgia,serif;
 font-style:italic;font-size:clamp(17px,1.5vw,21px);line-height:1.5;color:var(--sage-dark)}
 .bhero-offre b{font-style:normal;font-weight:500}
-.bhero-gamme{margin:0 0 30px;max-width:50ch;font-family:Montserrat,sans-serif;
+.bhero-gamme{margin:0 0 26px;max-width:32ch;font-family:Montserrat,sans-serif;
 font-size:13.5px;line-height:1.6;color:var(--sage-dark);opacity:.85}
 .bhero-cta{margin:0;display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .bhero-cta a{display:inline-flex;align-items:center;justify-content:center;
@@ -817,9 +820,10 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-cta a.creux:hover{background:rgba(110,126,97,.08)}
 .bhero-image{display:none}
 @media (max-width:900px){
-  .bhero{padding-bottom:clamp(36px,6vh,60px)}
-  .bhero::before{background:linear-gradient(180deg,rgba(246,242,238,.97) 0%,rgba(246,242,238,.94) 50%,rgba(246,242,238,.20) 76%,rgba(246,242,238,0) 100%)}
-  .bhero-grid{grid-template-columns:1fr;gap:28px;min-height:0;padding:44px 0 20px}
+  .bhero{background-position:34% 70%;padding-bottom:0}
+  .bhero-grid{grid-template-columns:1fr;gap:0;min-height:96vh;padding:20px 0;align-items:start}
+  .bhero-texte{padding:26px 20px;background:rgba(253,251,249,.93)}
+  .bhero-gamme{display:none}
 }
 
 /* ── bande de réassurance commerce ── */
@@ -1011,7 +1015,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <!-- ══════════ HERO DE BOUTIQUE ══════════ -->
 <section aria-label="La boutique" class="bhero">
 <div class="shell bhero-grid">
-<div>
+<div class="bhero-texte">
 <p class="bhero-sur">La boutique</p>
 <h1>Allégez<br/>vos sorties.</h1>
 <p class="bhero-chapo">Le biberon nomade pliable, fabriqué en France. Vingt-trois grammes, tétine et capuchon compris.</p>
@@ -1022,11 +1026,14 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <a class="creux" href="#japon">Livraison au Japon</a>
 </p>
 </div>
-<figure class="bhero-carre">
-<img alt="Un BIBEON lilas posé sur la table de marbre d’un café parisien, à côté d’une chaise haute" height="2048" src="assets/bibeon-banniere-cafe.webp" width="2048"/>
-</figure>
 </div>
 </section>
+
+
+<!-- ══════════ PREUVE DU BÉNÉFICE — l'image de Suzanne, entière, jamais recadrée ══════════ -->
+<figure class="banniere">
+<img alt="Deux BIBEON pré-dosés en lait en poudre posés près d’un sac à main, et une main qui en range un troisième — Tout dedans, rien d’autre à transporter" height="1260" loading="lazy" src="assets/bibeon-banniere-sac-a-main.webp" width="2400"/>
+</figure>
 
 <div class="bande">
 <div class="shell bande-grid">
@@ -1039,6 +1046,12 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="service">
 <div class="shell service-in"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.15" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8v9a2 2 0 0 1-1.2 1.8l-7 3a2 2 0 0 1-1.6 0l-7-3A2 2 0 0 1 3 17V8"/><path d="m3.3 7.3 8-3.4a2 2 0 0 1 1.4 0l8 3.4L12 11z"/><path d="M12 11v10"/></svg><span><b>Port compris</b> · Commande avant midi, expédiée le jour même · Retour sous 14 jours</span></div>
 </div>
+
+<!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
+<figure class="banniere banniere-packaging">
+<img alt="Le coffret BIBEON ouvert : l’étui triangulaire, le biberon nomade et son pochon de mousseline de coton" height="1150" loading="lazy" src="assets/bibeon-packaging-catalogue.webp" width="1352"/>
+</figure>
+
 <section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
 
 <div class="shell" id="offres" style="padding:clamp(20px,3vh,40px) 0 clamp(80px,11vh,140px)">
