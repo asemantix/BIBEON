@@ -20,16 +20,16 @@
 <meta property="og:url" content="https://bibeon.fr/">
 <meta property="og:title" content="BIBEON — Le biberon, l’R en moins">
 <meta property="og:description" content="Le biberon nomade pliable qui s’abaisse au niveau du liquide : moins d’air à avaler, moins d’air à transporter, moins d’accessoires à emporter.">
-<meta property="og:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
-<meta property="og:image:width" content="1731">
-<meta property="og:image:height" content="909">
-<meta property="og:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
+<meta property="og:image" content="https://bibeon.fr/assets/bibeon-og-sac-beige.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Un BIBEON replié coloris menthe devant un sac à main, illustrant son faible encombrement en déplacement.">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="BIBEON — Le biberon, l’R en moins">
 <meta name="twitter:description" content="Le biberon nomade pliable qui s’abaisse au niveau du liquide : moins d’air à avaler, moins d’air à transporter, moins d’accessoires à emporter.">
-<meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-biberon-nomade-sac-tout-dedans.jpg">
-<meta name="twitter:image:alt" content="Des biberons BIBEON pré-dosés en lait en poudre que l’on range dans un sac à main">
+<meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-og-sac-beige.jpg">
+<meta name="twitter:image:alt" content="Un BIBEON replié coloris menthe devant un sac à main, illustrant son faible encombrement en déplacement.">
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
@@ -437,12 +437,16 @@ letter-spacing:.16em;text-transform:uppercase}
 .tableau-lien a{color:var(--sage-dark);text-decoration:none;
 border-bottom:1px solid var(--line);padding-bottom:3px}
 .tableau-lien span{padding-left:6px}
+/* la chute n'est plus une légende : c'est un manifeste, et il occupe
+   sa propre plage. Le blanc autour fait la moitié du travail. */
+.change-manifeste{display:flex;align-items:center;justify-content:center;
+min-height:min(72svh,648px);padding:clamp(70px,11vh,150px) 0}
 .change-chute{margin:0 auto;text-align:center;font-family:"Playfair Display",Georgia,serif;
 font-weight:400;font-size:clamp(30px,3.8vw,54px);line-height:1.12;color:var(--navy)}
 .change-chute em{font-style:italic;color:var(--sage)}
 .change-mention{margin:26px auto 0;max-width:56ch;text-align:center;
 font-family:Montserrat,sans-serif;font-size:11.5px;line-height:1.7;color:var(--sage);opacity:.8}
-.change-image{margin:clamp(56px,8vh,100px) 0 0;width:100%}
+.change-image{margin:clamp(76px,11.5vh,140px) 0 0;width:100%}
 .change-image img{display:block;width:100%;height:auto}
 @media (max-width:900px){
   .change-tableaux{gap:56px;padding:52px 0 44px}
@@ -1235,8 +1239,10 @@ font-size:clamp(24px,4.2vw,60px);line-height:1.1;color:var(--sage);white-space:n
 
 </div>
 
+<div class="change-manifeste">
 <div class="shell">
 <p class="change-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
+</div>
 </div>
 <figure class="change-image">
 <img alt="Un biberon BIBEON doré au centre, les biberons rigides et leurs accessoires expulsés autour de lui" height="844" loading="lazy" src="assets/sortir-leger.webp" width="1500"/>
