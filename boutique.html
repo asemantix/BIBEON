@@ -681,6 +681,8 @@ object-fit:contain;mix-blend-mode:multiply}
 font-size:clamp(21px,1.9vw,26px);line-height:1.15;color:var(--sage-dark)}
 .offre p{margin:0 0 18px;font-family:Montserrat,sans-serif;font-size:14px;line-height:1.7;color:var(--text)}
 .offre-bas{margin-top:auto}
+.offre-occasion{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:11px;font-weight:600;
+letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
 .offre-prix{display:block;font-family:"Playfair Display",Georgia,serif;font-weight:500;
 font-size:clamp(30px,2.9vw,40px);line-height:1;color:var(--sage-dark)}
 .offre-prix small{display:block;margin-top:9px;font-family:Montserrat,sans-serif;font-size:12.5px;
@@ -798,6 +800,17 @@ line-height:1.8;color:var(--sage);opacity:.9}
 .banniere img{display:block;width:100%;height:auto;max-width:1400px}
 /* le texte est posé directement dans l'image : aucun panneau, aucun bord */
 .bhero-texte{background:none;padding:0;box-shadow:none;color:#fdfbf9;max-width:22ch}
+
+/* ── du replié au déplié : l'information produit qui manquait ── */
+.pliage{background:var(--cream);border-top:1px solid var(--line);
+padding:clamp(56px,8vh,96px) 0;text-align:center}
+.pliage-titre{margin:14px 0 clamp(30px,4vh,50px);font-family:"Playfair Display",Georgia,serif;
+font-weight:400;font-size:clamp(28px,3.2vw,46px);line-height:1.1;color:var(--sage-dark)}
+.pliage-titre em{font-style:italic;color:var(--sage)}
+.pliage-image{margin:0 auto;max-width:1000px}
+.pliage-image img{display:block;width:100%;height:auto}
+.pliage-note{margin:clamp(26px,3.4vh,42px) auto 0;max-width:52ch;
+font-family:Montserrat,sans-serif;font-size:15px;line-height:1.85;color:var(--text)}
 /* la bande livraison : la photo est le berceau, le texte est posé dessus */
 .livraison{position:relative;overflow:hidden;
 background:#f7f2ef url("assets/bibeon-packaging-catalogue.webp") no-repeat right center/auto 132%;
@@ -1122,8 +1135,19 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
      elle répétait mot pour mot la section Livraison, quatre écrans plus bas. -->
 
 <!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
+<section aria-label="Du replié au déplié" class="pliage">
+<div class="shell">
+<p class="overline">Un seul biberon</p>
+<h2 class="pliage-titre">De 30 à 300 ml,<br/><em>sans rien ajouter.</em></h2>
+<figure class="pliage-image">
+<img alt="Le BIBEON à cinq états de pliage, du replié au complètement déplié, avec sa bague et son capuchon" height="1006" loading="lazy" src="assets/bibeon-etats-de-pliage.webp" width="2000"/>
+</figure>
+<p class="pliage-note">Il s’élève quand bébé a faim, il s’abaisse à mesure qu’il boit. Replié, il tient dans une poche : 23 g, tétine et capuchon compris.</p>
+</div>
+</section>
+
 <section aria-label="Ce que vous recevez et comment" class="livraison">
-<p class="livraison-legende">Biberon nomade, <b>vendu vide</b><br/>avec sa tétine en silicone alimentaire<br/>et son capuchon d’origine végétale.</p>
+<p class="livraison-legende">Biberon nomade, <b>vendu vide</b><br/>flacon, tétine, bague et capuchon.</p>
 <figure class="livraison-duo">
 <img alt="Deux BIBEON repliés, coloris menthe et lilas" height="1155" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-lilas.webp" width="1155"/>
 </figure>
@@ -1155,6 +1179,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="offres">
 <article class="offre">
 <figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
+<p class="offre-occasion">La petite course</p>
 <h3>Un BIBEON</h3>
 <p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois et plus. Vendu vide.</p>
 <div class="nuancier" data-image="1" data-max="1">
@@ -1169,6 +1194,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <article class="offre">
 <figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
+<p class="offre-occasion">L’après-midi</p>
 <h3>Le duo</h3>
 <p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
 <div class="nuancier" data-max="2">
@@ -1183,6 +1209,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <article class="offre">
 <figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
+<p class="offre-occasion">Le week-end</p>
 <h3>Le lot de trois</h3>
 <p>Trois repas dosés la veille : la journée entière tient dans le sac à main.</p>
 <div class="offre-bas">
@@ -1193,6 +1220,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <article class="offre">
 <figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
+<p class="offre-occasion">Le voyage</p>
 <h3>Le lot de cinq</h3>
 <p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p>
 <div class="offre-bas">
