@@ -798,40 +798,43 @@ line-height:1.8;color:var(--sage);opacity:.9}
 .banniere img{display:block;width:100%;height:auto;max-width:1400px}
 /* le texte est posé directement dans l'image : aucun panneau, aucun bord */
 .bhero-texte{background:none;padding:0;box-shadow:none;color:#fdfbf9;max-width:22ch}
-/* la bande livraison : le coffret à droite, les conditions à gauche */
-.livraison{background:#f7f2ef;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-padding:clamp(40px,5.4vh,72px) 0}
-.livraison-grid{display:grid;grid-template-columns:minmax(0,.78fr) 1.22fr;
-gap:clamp(16px,2vw,34px);align-items:center}
+/* la bande livraison : la photo est le berceau, le texte est posé dessus */
+.livraison{position:relative;overflow:hidden;
+background:#f7f2ef url("assets/bibeon-packaging-catalogue.webp") no-repeat right center/auto 132%;
+border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+padding:clamp(56px,8vh,104px) 0}
+.livraison::before{content:"";position:absolute;inset:0;pointer-events:none;
+background:linear-gradient(90deg,
+ rgba(247,242,239,.97) 0%,
+ rgba(247,242,239,.94) 26%,
+ rgba(247,242,239,.72) 40%,
+ rgba(247,242,239,.28) 50%,
+ rgba(247,242,239,0) 58%)}
+.livraison-grid{position:relative;z-index:2}
+.livraison-texte{max-width:44ch}
+.livraison-duo{position:absolute;right:46%;bottom:0;width:14%;margin:0;z-index:1}
+.livraison-duo img{display:block;width:100%;height:auto}
 .livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
 .livraison-titre em{font-style:italic;color:var(--sage)}
 .livraison-sous{margin:0 0 26px;font-family:"Playfair Display",Georgia,serif;font-style:italic;
 font-size:clamp(17px,1.5vw,22px);line-height:1.4;color:var(--sage)}
-.livraison-points{margin:0;max-width:46ch;font-family:Montserrat,sans-serif;
+.livraison-points{margin:0;max-width:44ch;font-family:Montserrat,sans-serif;
 font-size:15px;line-height:2.2;color:var(--text)}
 .livraison-points span{white-space:nowrap}
+.livraison-points b{font-weight:600;color:var(--sage-dark)}
+.livraison-points i{font-style:normal;padding:0 4px;color:var(--sage-soft)}
 .livraison-plus{margin:22px 0 0;max-width:46ch;font-family:Montserrat,sans-serif;
 font-size:13.5px;line-height:1.85;color:var(--sage)}
 .livraison-plus b{font-weight:600;color:var(--sage-dark)}
 .livraison-plus a{color:var(--sage-dark);border-bottom:1px solid var(--line)}
-.livraison-points b{font-weight:600;color:var(--sage-dark)}
-.livraison-points i{font-style:normal;padding:0 4px;color:var(--sage-soft)}
-.livraison-liste{list-style:none;margin:0;padding:0;max-width:44ch}
-.livraison-liste li{position:relative;padding:0 0 0 24px;margin:0 0 14px;
-font-family:Montserrat,sans-serif;font-size:15px;line-height:1.62;color:var(--text)}
-.livraison-liste li::before{content:"";position:absolute;left:0;top:.72em;
-width:11px;height:1px;background:var(--sage)}
-.livraison-liste b{font-weight:600;color:var(--sage-dark)}
-.livraison-note{margin:24px 0 0;font-family:Montserrat,sans-serif;font-size:13px;
-line-height:1.7;color:var(--sage)}
-.livraison-note a{color:var(--sage-dark)}
-.livraison-note b{font-weight:600;color:var(--sage-dark)}
-.livraison-image{margin:0}
-.livraison-image img{display:block;width:100%;height:auto}
 @media (max-width:900px){
-  .livraison-grid{grid-template-columns:1fr;gap:26px}
-  .livraison-image{order:-1}
+  .livraison{background-size:165% auto;background-position:center bottom;
+  padding-bottom:calc(100vw * .80)}
+  .livraison::before{background:linear-gradient(180deg,
+   rgba(247,242,239,1) 0%, rgba(247,242,239,1) 52%, rgba(247,242,239,.55) 64%, rgba(247,242,239,0) 78%)}
+  .livraison-texte{max-width:none}
+  .livraison-duo{right:auto;left:6%;bottom:2%;width:22%}
 }
 .bhero{position:relative;border-bottom:1px solid var(--line);
 background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 66%/cover;
@@ -1116,6 +1119,9 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
 <section aria-label="Ce que vous recevez et comment" class="livraison">
+<figure class="livraison-duo">
+<img alt="Deux BIBEON repliés, coloris menthe et lilas" height="1155" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-lilas.webp" width="1155"/>
+</figure>
 <div class="shell livraison-grid">
 <div class="livraison-texte">
 <p class="overline">La livraison</p>
@@ -1135,9 +1141,6 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <a href="contact.html">Écrivez-nous</a>, nous vous donnons le tarif exact pour votre pays sous 24&nbsp;h.
 </p>
 </div>
-<figure class="livraison-image">
-<img alt="Le coffret BIBEON ouvert : l’étui triangulaire, le biberon nomade pré-dosé et son pochon de mousseline de coton" height="1150" loading="lazy" src="assets/bibeon-packaging-catalogue.webp" width="1352"/>
-</figure>
 </div>
 </section>
 
