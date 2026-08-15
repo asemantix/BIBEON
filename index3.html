@@ -363,7 +363,8 @@ color:var(--sage-dark)}
 .preuve-chute{margin:28px auto 0;font-family:Montserrat,sans-serif;font-size:13px;
 font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
 .preuve-chute em{font-style:normal;color:var(--sage-dark)}
-.preuves.preuves-trois{grid-template-columns:repeat(3,1fr)}
+.preuves.preuves-matieres{grid-template-columns:repeat(3,1fr)}
+.preuves.preuves-deux{grid-template-columns:repeat(2,1fr);margin-top:0;border-top:0}
 .preuve-pied{text-align:center;padding-bottom:clamp(80px,11vh,140px)}
 .preuve-final{margin:34px auto 0;max-width:28ch;font-family:"Playfair Display",Georgia,serif;
 font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage-dark)}
@@ -373,7 +374,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage-dark)}
 background:var(--sage-dark);color:#fff;font-family:Montserrat,sans-serif;font-size:12.5px;
 font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
 .preuve-cta a:hover{background:var(--sage)}
-@media (max-width:860px){.preuves-trois{grid-template-columns:1fr}}
+@media (max-width:860px){.preuves-matieres,.preuves-deux{grid-template-columns:1fr}}
 
 /* ── ce que BIBEON change : trois tableaux, pas un tableau à trois colonnes ── */
 .change{background:var(--cream);border-top:1px solid var(--line);
@@ -785,7 +786,7 @@ text-transform:uppercase;transition:background .2s ease,border-color .2s ease}
 }
 
 /* ═══════════ DEUX PAROLES QUI SE RÉPONDENT ═══════════ */
-.paroles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(30px,3.6vw,64px);
+.paroles{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,3.6vw,64px);
 align-items:stretch;max-width:1060px;margin:clamp(36px,4.6vh,62px) auto 0}
 .parole{text-align:center;display:flex;flex-direction:column}
 .parole-titre{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:500;
@@ -795,6 +796,13 @@ font-weight:400;font-style:italic;font-size:clamp(18.5px,1.6vw,22px);line-height
 .parole-sign{margin:clamp(20px,2.6vh,32px) 0 0;padding-top:0;font-family:Montserrat,sans-serif;
 font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--sage-dark)}
 .parole .parole-corps{flex:1 0 auto}
+.paroles-eclats{margin:clamp(34px,4.6vh,58px) auto 0;max-width:74ch;text-align:center;
+font-family:"Playfair Display",Georgia,serif;font-style:italic;
+font-size:clamp(16px,1.5vw,20px);line-height:2;color:var(--sage-dark)}
+.paroles-eclats span{white-space:nowrap}
+.paroles-eclats i{font-style:normal;padding:0 8px;color:var(--sage-soft)}
+.paroles-eclats-sign{margin:14px auto 0;text-align:center;font-family:Montserrat,sans-serif;
+font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--sage)}
 .paroles-source{margin:clamp(42px,5.2vh,68px) auto 0;max-width:56ch;text-align:center;
 font-family:Montserrat,sans-serif;font-size:14px;line-height:1.75;color:var(--text)}
 .paroles-source a{color:var(--sage-dark);border-bottom:1px solid rgba(110,126,97,.34)}
@@ -1118,7 +1126,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <section aria-label="Ce que BIBEON change" class="change">
 <div class="shell change-tete">
 <h2 class="change-titre">Ce que BIBEON change.</h2>
-<p class="change-intro">BIBEON s’élève et s’abaisse à la demande, au niveau du liquide.</p>
+<p class="change-intro">BIBEON s’élève et s’abaisse à la demande.</p>
 </div>
 
 <div class="shell change-tableaux">
@@ -1132,7 +1140,6 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <p class="tableau-sur">Moins d’air à avaler</p>
 <h3 class="tableau-titre">Le liquide descend.<br/><em>BIBEON aussi.</em></h3>
 <p class="tableau-note">Les soufflets s’abaissent jusqu’au niveau du liquide. Moins d’air à avaler pour bébé.</p>
-<p class="tableau-lien"><a href="mode-demploi.html">Comprendre le système anti-air <span>→</span></a></p>
 </div>
 </article>
 
@@ -1144,7 +1151,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <p class="tableau-num">02</p>
 <p class="tableau-sur">Voyage petit</p>
 <h3 class="tableau-titre">Pas besoin<br/><em>de transporter du vide.</em></h3>
-<p class="tableau-note">BIBEON se replie au volume utile. Vingt-trois grammes : il tient dans une poche.</p>
+<p class="tableau-note">BIBEON se replie lorsqu’il est vide. Vingt-trois grammes : il tient dans une poche.</p>
 </div>
 </article>
 
@@ -1255,21 +1262,24 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <p class="overline" style="text-align:center">Ce sont les parents qui le disent.</p>
 <div class="paroles">
 <blockquote class="parole">
+<p class="parole-titre">Biberon idéal.</p>
+<p class="parole-corps">«&#8239;Très belle découverte avec ce biberon végétal. […] Il est très léger et facile à manipuler, même pour les petites mains. J’apprécie beaucoup le côté compact et pratique quand on sort, ça prend très peu de place dans le sac.&#8239;»</p>
+<footer class="parole-sign">Lilia A. · ConsoBaby · 5 mars 2026</footer>
+</blockquote>
+<blockquote class="parole">
 <p class="parole-titre">La révolution !</p>
 <p class="parole-corps">«&#8239;Je l’avais pour ma fille il y a 6 ans, et bien la révolution ! […] Malgré qu’il faut plier et déplier, il tient le coup, c’est super ça, je le conseille.&#8239;»</p>
 <footer class="parole-sign">Betty R. · ConsoBaby · 26 octobre 2022</footer>
 </blockquote>
-<blockquote class="parole">
-<p class="parole-titre">Biberon idéal.</p>
-<p class="parole-corps">«&#8239;Très belle découverte avec ce biberon végétal. […] Les matériaux sont d’origine végétale et sans bisphénols, ce qui est important quand on fait attention à ce que l’on donne à son bébé. Il est aussi très léger et facile à manipuler, même pour les petites mains. J’apprécie beaucoup le côté compact et pratique quand on sort, ça prend très peu de place dans le sac.&#8239;»</p>
-<footer class="parole-sign">Lilia A. · ConsoBaby · 5 mars 2026</footer>
-</blockquote>
-<blockquote class="parole">
-<p class="parole-titre">Biberons parfaits.</p>
-<p class="parole-corps">«&#8239;Très contente de ces biberons ! Les matériaux sont de qualité, sans OGM, ce qui est très rassurant pour la santé de bébé. Ils sont faciles à utiliser, à nettoyer, et bébé les accepte très bien. Je recommande sans hésiter.&#8239;»</p>
-<footer class="parole-sign">Amandine D. · ConsoBaby · 16 janvier 2026</footer>
-</blockquote>
 </div>
+<p class="paroles-eclats">
+<span>«&#8239;Les matériaux sont de qualité, sans OGM&#8239;»</span> <i>·</i>
+<span>«&#8239;Bébé les accepte très bien&#8239;»</span> <i>·</i>
+<span>«&#8239;Facile à nettoyer&#8239;»</span> <i>·</i>
+<span>«&#8239;Très bon ratio qualité-prix&#8239;»</span> <i>·</i>
+<span>«&#8239;On peut l’emmener partout&#8239;»</span>
+</p>
+<p class="paroles-eclats-sign">Amandine D. · Rochdi H. · Justine P. — ConsoBaby, 2025 et 2026</p>
 <p class="lien-discret lien-centre"><a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="noopener" target="_blank">Voir tous les avis ConsoBaby &amp; Kid</a></p>
 <p class="paroles-source">Orthographe et ponctuation rétablies, les propos ne sont pas modifiés · […] signale un passage non reproduit.</p>
 </div>
@@ -1444,24 +1454,38 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </div>
 
 <div class="shell" style="padding-bottom:clamp(40px,6vh,72px)">
-<div class="preuves preuves-trois">
+<div class="preuves preuves-matieres">
 <a class="preuve" href="legerete.html" id="preuve-vegetal">
 <p class="preuve-hero">50 %</p>
 <p class="preuve-mot">végétal</p>
-<p class="preuve-note">12 g sur les 23 g du BIBEON sont d’origine végétale : la bague et le capuchon.</p>
+<p class="preuve-note">La bague et le capuchon : 12 g sur les 23 g du BIBEON sont d’origine végétale. Sans OGM ni gluten.</p>
 <p class="preuve-lien"><span>Découvrir la composition</span></p>
 </a>
+<a class="preuve" href="legerete.html#matieres">
+<p class="preuve-hero">30 %</p>
+<p class="preuve-mot">polypropylène</p>
+<p class="preuve-note">Le flacon. De qualité alimentaire, exempt de bisphénols. Testé par le LNE dans les cinq coloris.</p>
+<p class="preuve-lien"><span>Découvrir les matières</span></p>
+</a>
+<a class="preuve" href="silicone-medical-alimentaire-biberon.html">
+<p class="preuve-hero">20 %</p>
+<p class="preuve-mot">silicone alimentaire</p>
+<p class="preuve-note">La tétine. Silicone alimentaire et non médical : le matériau est strictement agréé pour le contact alimentaire.</p>
+<p class="preuve-lien"><span>Alimentaire ou médical&#8239;?</span></p>
+</a>
+</div>
+<div class="preuves preuves-deux">
 <a class="preuve" href="tests-migration-lne-bibeon.html#resultats" id="preuve-residu">
 <p class="preuve-hero"><span class="zero">0</span></p>
 <p class="preuve-mot">résidu détecté</p>
 <p class="preuve-note">Les cinq coloris du corps, la bague et le capuchon ont été soumis aux essais de migration du <b>LNE — le Laboratoire national de métrologie et d’essais</b>, laboratoire de référence de l’État français. Résultats inférieurs au seuil analytique indiqué dans le rapport <i>·</i> dossier P143418.</p>
 <p class="preuve-lien"><span>Voir les résultats</span></p>
 </a>
-<a class="preuve" href="legerete.html#matieres">
+<a class="preuve" href="qui-sommes-nous.html">
 <p class="preuve-hero mot">France</p>
 <p class="preuve-mot">fabriqué ici</p>
 <p class="preuve-note">Du moule au flacon, en région lyonnaise. Une exigence que l’on peut documenter.</p>
-<p class="preuve-lien"><span>Découvrir les matières</span></p>
+<p class="preuve-lien"><span>Notre histoire</span></p>
 </a>
 </div>
 </div>
@@ -1666,6 +1690,22 @@ En nous envoyant votre photo, vous nous autorisez à la publier sur bibeon.fr et
 <div class="shell" style="padding-bottom:clamp(80px,11vh,140px)">
 <div class="faq-liste">
 <details class="faq-item">
+<summary>Pourquoi BIBEON est-il un biberon nomade ?</summary>
+<p>Parce qu’il se replie lorsque son volume n’est pas utile. Petit et léger, il tient dans une poche et évite d’emporter de grands biberons vides et leurs accessoires encombrants.</p>
+</details>
+<details class="faq-item">
+<summary>Que change le fait d’abaisser BIBEON au niveau du lait ?</summary>
+<p>À mesure que le lait descend, les soufflets peuvent être abaissés jusqu’au niveau du liquide : moins de volume d’air dans le biberon, moins d’air à avaler pour bébé.</p>
+</details>
+<details class="faq-item">
+<summary>BIBEON reste-t-il utile avec du lait liquide ?</summary>
+<p>Oui. Son pliage, sa légèreté, son faible encombrement et la possibilité d’abaisser les soufflets au niveau du lait ne dépendent pas du lait en poudre.</p>
+</details>
+<details class="faq-item">
+<summary>Pourquoi BIBEON prend-il moins de place qu’un biberon rigide ?</summary>
+<p>Un biberon rigide garde le même volume lorsqu’il est vide. BIBEON se replie lorsque ce volume n’est pas nécessaire et se déploie à la demande.</p>
+</details>
+<details class="faq-item">
 <summary>Mon bébé acceptera-t-il cette tétine ?</summary>
 <p>C’est la question que se posent la plupart des parents avant d’acheter. Les témoignages vont dans le même sens : des enfants habitués à une seule marque depuis un an l’ont adoptée sans difficulté.</p>
 </details>
@@ -1675,7 +1715,7 @@ En nous envoyant votre photo, vous nous autorisez à la publier sur bibeon.fr et
 </details>
 <details class="faq-item">
 <summary>Comment emporter un biberon en voyage sans encombrer le sac ?</summary>
-<p>BIBEON se replie à la taille d’un petit pot : replié, il tient dans une poche de sac à main. Vous y placez les doses de lait en poudre avant de partir, vous le dépliez au moment du repas et vous ajoutez l’eau. Plus de boîte doseuse à transporter à côté, et plus de sac à langer à sortir pour une course d’une heure.</p>
+<p>Parce qu’il se replie quand son volume n’est pas utile. BIBEON revient à la taille d’un petit pot : il tient dans une poche de sac à main, là où un biberon rigide garde son encombrement même vide. Vous n’emportez plus un grand contenant plein d’air pour une course d’une heure.<br/><br/>Et si vous donnez du lait en poudre, il peut aussi transporter la dose : vous la placez à l’intérieur avant de partir, vous dépliez au moment du repas, vous ajoutez l’eau. La boîte doseuse reste à la maison.</p>
 </details>
 <details class="faq-item">
 <summary>Peut-on l’emporter en avion, en bagage cabine ?</summary>
