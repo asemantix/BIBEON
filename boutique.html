@@ -727,6 +727,8 @@ margin:clamp(34px,4.4vh,54px) auto 0;border-top:1px solid var(--line)}
 letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);line-height:1.7}
 .nuancier-choix{font-weight:500;letter-spacing:.1em;color:var(--sage)}
 .pastilles{display:flex;gap:14px;flex-wrap:wrap;padding:4px 0}
+.nuancier-note{margin:10px 0 0;font-family:Montserrat,sans-serif;font-size:12px;
+line-height:1.6;color:var(--sage)}
 .pastille{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;padding:0;
 position:relative;overflow:hidden;
 background:radial-gradient(circle at 32% 26%,
@@ -828,7 +830,9 @@ background:linear-gradient(90deg,
 .livraison-legende{position:absolute;right:6%;bottom:6%;z-index:3;margin:0;text-align:right;
 font-family:Montserrat,sans-serif;font-size:13px;line-height:1.8;color:var(--sage);max-width:34ch}
 .livraison-legende b{font-weight:600;color:var(--sage-dark)}
-.livraison-duo{position:absolute;right:44%;bottom:-1%;width:22%;margin:0;z-index:2}
+/* les deux repliés sont le MÊME flacon que le pré-dosé : même diamètre.
+   34 % cale leur largeur sur la sienne ; 37 % les dégage de la colonne de texte. */
+.livraison-duo{position:absolute;right:37%;bottom:-1%;width:34%;margin:0;z-index:2}
 .livraison-duo img{display:block;width:100%;height:auto}
 .livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
@@ -844,6 +848,10 @@ font-size:15px;line-height:2.2;color:var(--text)}
 font-size:13.5px;line-height:1.85;color:var(--sage)}
 .livraison-plus b{font-weight:600;color:var(--sage-dark)}
 .livraison-plus a{color:var(--sage-dark);border-bottom:1px solid var(--line)}
+/* entre 900 et 1250 px la colonne de texte ne rétrécit pas aussi vite que la
+   section : le duo doit reculer vers la droite pour ne pas la chevaucher. */
+@media (max-width:1250px){.livraison-duo{right:31%;width:31%}}
+@media (max-width:1050px){.livraison-duo{right:26%;width:28%}}
 @media (max-width:900px){
   .livraison{background-size:155% auto;background-position:center bottom;
   padding-bottom:calc(100vw * .74)}
@@ -942,9 +950,19 @@ font-size:16px;line-height:1.75;color:var(--text)}
 .coloris-tete p.coloris-preuve b{font-weight:600;color:var(--sage-dark)}
 .coloris-jonquille{margin:18px auto 0;max-width:56ch;font-family:Montserrat,sans-serif;
 font-size:14px;line-height:1.8;color:var(--sage)}
-.coloris-grille{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.5vw,22px);
+.coloris-grille{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(12px,1.5vw,22px);
 padding:clamp(40px,5.5vh,64px) 0 clamp(70px,10vh,120px)}
 .coloris-carte{display:block}
+/* le jonquille est épuisé : pas de photo produit, une pastille de teinte,
+   et un pas de retrait pour qu'il ne se lise pas comme une offre en vente */
+.coloris-epuise{opacity:.7}
+.coloris-pastille-fond{background:var(--beige-2)}
+.coloris-disque{display:block;width:46%;aspect-ratio:1;border-radius:50%;
+background:radial-gradient(circle at 32% 26%,
+color-mix(in srgb, var(--teinte) 45%, white) 0%, var(--teinte) 42%,
+color-mix(in srgb, var(--teinte) 82%, #4a3f2f) 100%);
+box-shadow:inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
+.coloris-epuise .coloris-ref{color:var(--sage-soft)}
 .coloris-fond{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
 padding:12% 14%;margin:0 0 16px}
 .coloris-fond img{display:block;width:100%;height:100%;object-fit:contain}
@@ -1175,6 +1193,43 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </div>
 </section>
 
+<!-- ══════════ LES CINQ COLORIS ══════════ -->
+<section aria-label="Les cinq coloris" class="coloris">
+<div class="shell coloris-tete">
+<p class="coloris-sur">La gamme</p>
+<h2>Cinq coloris testés par le LNE.<br/><em><span class="zero">0</span> résidu détecté.</em></h2>
+<p class="coloris-preuve">Les essais de migration ont porté sur <b>les cinq coloris</b>, sur <b>la bague</b> et sur <b>le capuchon</b> — les deux pièces en contact permanent avec la tétine. Aucun résidu détecté : sous le seuil de détection de 6 mg/kg, dix fois inférieur à la limite de 60 mg/kg applicable aux objets destinés aux nourrissons.</p>
+<p>Teintés dans la masse, translucides. La couleur n’est pas déposée sur le biberon — elle est dans la matière, et elle ne s’efface pas au lavage.</p>
+<p class="coloris-jonquille">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images d’archive.</p>
+</div>
+<div class="shell coloris-grille">
+<div class="coloris-carte">
+<div class="coloris-fond" style="background:#E6F4ED"><img alt="Le biberon nomade BIBEON replié, coloris menthe" height="1324" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1324"/></div>
+<p class="coloris-nom">Menthe</p><p class="coloris-ref">Disponible</p>
+</div>
+<div class="coloris-carte">
+<div class="coloris-fond" style="background:#FAECE1"><img alt="Le biberon nomade BIBEON replié, coloris abricot" height="1305" loading="lazy" src="assets/bibeon-biberon-pliable-abricot.webp" width="1305"/></div>
+<p class="coloris-nom">Abricot</p><p class="coloris-ref">Disponible</p>
+</div>
+<div class="coloris-carte">
+<div class="coloris-fond" style="background:#F3DEF6"><img alt="Le biberon nomade BIBEON replié, coloris lilas" height="1318" loading="lazy" src="assets/bibeon-biberon-pliable-lilas.webp" width="1318"/></div>
+<p class="coloris-nom">Lilas</p><p class="coloris-ref">Disponible</p>
+</div>
+<div class="coloris-carte">
+<div class="coloris-fond" style="background:#F9E3EB"><img alt="Le biberon nomade BIBEON replié, coloris rose" height="1287" loading="lazy" src="assets/bibeon-biberon-pliable-rose.webp" width="1287"/></div>
+<p class="coloris-nom">Rose</p><p class="coloris-ref">Disponible</p>
+</div>
+<div class="coloris-carte">
+<div class="coloris-fond" style="background:#E4EEF4"><img alt="Le biberon nomade BIBEON replié, coloris lin" height="1309" loading="lazy" src="assets/bibeon-biberon-pliable-lin.webp" width="1309"/></div>
+<p class="coloris-nom">Lin</p><p class="coloris-ref">Disponible</p>
+</div>
+<div class="coloris-carte coloris-epuise">
+<div class="coloris-fond coloris-pastille-fond"><span class="coloris-disque" style="--teinte:#efd97a"></span></div>
+<p class="coloris-nom">Jonquille</p><p class="coloris-ref">Épuisé</p>
+</div>
+</div>
+</section>
+
 <section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
 
 <div class="shell" id="offres" style="padding:clamp(20px,3vh,40px) 0 clamp(80px,11vh,140px)">
@@ -1202,6 +1257,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="nuancier" data-max="2">
 <p class="nuancier-titre">Choisissez deux coloris<br/><span class="nuancier-choix">aucun choisi</span></p>
 <div class="pastilles" data-paires='{"Lilas+Abricot":"https://py.pl/7rI7klD11nU","Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9"}'><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
+<p class="nuancier-note">Rose et lin se commandent à l’unité ou dans le lot de cinq.</p>
 </div>
 <div class="offre-bas">
 <span class="offre-prix">62 €<small>soit 31 € l’unité · port compris</small></span>
@@ -1264,38 +1320,6 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </div>
 
 <p class="offre-note">Toute commande passée avant midi part le jour même, depuis la France. Paiement par carte ou PayPal, retour sous 30 jours.</p>
-</div>
-</section>
-<!-- ══════════ LES CINQ COLORIS ══════════ -->
-<section aria-label="Les cinq coloris" class="coloris">
-<div class="shell coloris-tete">
-<p class="coloris-sur">La gamme</p>
-<h2>Cinq coloris testés par le LNE.<br/><em><span class="zero">0</span> résidu détecté.</em></h2>
-<p class="coloris-preuve">Les essais de migration ont porté sur <b>les cinq coloris</b>, sur <b>la bague</b> et sur <b>le capuchon</b> — les deux pièces en contact permanent avec la tétine. Aucun résidu détecté : sous le seuil de détection de 6 mg/kg, dix fois inférieur à la limite de 60 mg/kg applicable aux objets destinés aux nourrissons.</p>
-<p>Teintés dans la masse, translucides. La couleur n’est pas déposée sur le biberon — elle est dans la matière, et elle ne s’efface pas au lavage.</p>
-<p class="coloris-jonquille">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images d’archive.</p>
-</div>
-<div class="shell coloris-grille">
-<div class="coloris-carte">
-<div class="coloris-fond" style="background:#E6F4ED"><img alt="Le biberon nomade BIBEON replié, coloris menthe" height="1324" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1324"/></div>
-<p class="coloris-nom">Menthe</p><p class="coloris-ref">Disponible</p>
-</div>
-<div class="coloris-carte">
-<div class="coloris-fond" style="background:#FAECE1"><img alt="Le biberon nomade BIBEON replié, coloris abricot" height="1305" loading="lazy" src="assets/bibeon-biberon-pliable-abricot.webp" width="1305"/></div>
-<p class="coloris-nom">Abricot</p><p class="coloris-ref">Disponible</p>
-</div>
-<div class="coloris-carte">
-<div class="coloris-fond" style="background:#F3DEF6"><img alt="Le biberon nomade BIBEON replié, coloris lilas" height="1318" loading="lazy" src="assets/bibeon-biberon-pliable-lilas.webp" width="1318"/></div>
-<p class="coloris-nom">Lilas</p><p class="coloris-ref">Disponible</p>
-</div>
-<div class="coloris-carte">
-<div class="coloris-fond" style="background:#F9E3EB"><img alt="Le biberon nomade BIBEON replié, coloris rose" height="1287" loading="lazy" src="assets/bibeon-biberon-pliable-rose.webp" width="1287"/></div>
-<p class="coloris-nom">Rose</p><p class="coloris-ref">Disponible</p>
-</div>
-<div class="coloris-carte">
-<div class="coloris-fond" style="background:#E4EEF4"><img alt="Le biberon nomade BIBEON replié, coloris lin" height="1309" loading="lazy" src="assets/bibeon-biberon-pliable-lin.webp" width="1309"/></div>
-<p class="coloris-nom">Lin</p><p class="coloris-ref">Disponible</p>
-</div>
 </div>
 </section>
 
