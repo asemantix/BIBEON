@@ -314,39 +314,6 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
 .bloc-texte .bloc-titre{margin:0 0 18px;font-family:"Playfair Display",Georgia,serif;
   font-weight:500;font-size:clamp(32px,3.8vw,50px);line-height:1.04;color:var(--sage-dark)}
 .bloc-texte 
-/* ── ce que BIBEON change : la réponse au hero, trois conséquences ── */
-.change{background:var(--cream);border-top:1px solid var(--line);
-padding:clamp(64px,9vh,110px) 0 clamp(56px,8vh,96px);text-align:center}
-.change-titre{margin:14px 0 clamp(40px,5.5vh,68px);font-family:"Playfair Display",Georgia,serif;
-font-weight:400;font-size:clamp(30px,3.7vw,52px);line-height:1.1;color:var(--sage-dark)}
-.change-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(26px,3.4vw,56px);text-align:left}
-.change-item{padding:0 0 0 22px;border-left:1px solid var(--line)}
-.change-sur{margin:0 0 14px;font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;
-letter-spacing:.22em;text-transform:uppercase;color:var(--sage)}
-.change-mot{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-size:clamp(21px,2.1vw,29px);line-height:1.24;color:var(--navy)}
-.change-mot em{font-style:italic;color:var(--sage-dark)}
-.change-intro{margin:0 auto clamp(38px,5vh,60px);max-width:44ch;font-family:Montserrat,sans-serif;
-font-size:16px;line-height:1.8;color:var(--text)}
-.change-note{margin:12px 0 0;font-family:Montserrat,sans-serif;font-size:14px;
-line-height:1.7;color:var(--text)}
-.change-fil{margin:clamp(42px,5.6vh,68px) auto 0;max-width:52ch;text-align:center;
-font-family:Montserrat,sans-serif;font-size:15px;line-height:1.85;color:var(--sage)}
-.change-fil em{font-style:normal;font-weight:600;color:var(--sage-dark)}
-/* le visuel du manifeste : il revient sous la phrase qu'il illustre */
-.change-image{margin:clamp(42px,5.6vh,72px) 0 0;width:100%}
-.change-image img{display:block;width:100%;height:auto}
-.change-lien{margin:16px 0 0;font-family:Montserrat,sans-serif;font-size:12px;
-letter-spacing:.14em;text-transform:uppercase}
-.change-lien a{color:var(--sage);border-bottom:1px solid var(--line);padding-bottom:2px}
-.change-chute{margin:clamp(30px,4vh,48px) auto 0;text-align:center;
-font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-size:clamp(26px,3vw,42px);line-height:1.15;color:var(--navy)}
-.change-chute em{font-style:italic;color:var(--sage)}
-@media (max-width:860px){
-  .change-grid{grid-template-columns:1fr;gap:30px}
-  .change-item{padding-left:18px}
-}
 
 /* ── composition & preuves : une idée forte, puis les preuves ── */
 .preuve-tete{text-align:center;padding-top:clamp(70px,10vh,120px)}
@@ -371,6 +338,47 @@ background:var(--sage-dark);color:#fff;font-family:Montserrat,sans-serif;font-si
 font-weight:600;letter-spacing:.2em;text-transform:uppercase;text-decoration:none}
 .preuve-cta a:hover{background:var(--sage)}
 @media (max-width:860px){.preuves-trois{grid-template-columns:1fr}}
+
+/* ── ce que BIBEON change : trois tableaux, pas un tableau à trois colonnes ── */
+.change{background:var(--cream);border-top:1px solid var(--line);
+padding:clamp(72px,10vh,130px) 0 0;text-align:left}
+.change-tete{text-align:center}
+.change-titre{margin:0 auto;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(34px,4.4vw,62px);line-height:1.06;color:var(--sage-dark)}
+.change-intro{margin:22px auto 0;max-width:36ch;font-family:"Playfair Display",Georgia,serif;
+font-style:italic;font-size:clamp(19px,1.9vw,27px);line-height:1.35;color:var(--sage)}
+.change-tableaux{display:grid;gap:clamp(64px,9vh,130px);
+padding:clamp(64px,9vh,120px) 0 clamp(56px,8vh,100px)}
+.tableau{display:grid;grid-template-columns:1.15fr .85fr;
+gap:clamp(30px,4.5vw,76px);align-items:center}
+.tableau:nth-child(even) .tableau-image{order:2}
+.tableau-image{margin:0}
+.tableau-image img{display:block;width:100%;height:auto;border-radius:0}
+.tableau-num{margin:0 0 18px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(28px,2.6vw,40px);line-height:1;color:var(--sage-soft)}
+.tableau-sur{margin:0 0 14px;font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;
+letter-spacing:.24em;text-transform:uppercase;color:var(--sage)}
+.tableau-titre{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+font-size:clamp(28px,3.2vw,46px);line-height:1.1;color:var(--navy)}
+.tableau-titre em{font-style:italic;color:var(--sage-dark)}
+.tableau-note{margin:20px 0 0;max-width:38ch;font-family:Montserrat,sans-serif;
+font-size:15.5px;line-height:1.8;color:var(--text)}
+.tableau-lien{margin:22px 0 0;font-family:Montserrat,sans-serif;font-size:12px;
+letter-spacing:.16em;text-transform:uppercase}
+.tableau-lien a{color:var(--sage-dark);text-decoration:none;
+border-bottom:1px solid var(--line);padding-bottom:3px}
+.tableau-lien span{padding-left:6px}
+.change-chute{margin:0 auto;text-align:center;font-family:"Playfair Display",Georgia,serif;
+font-weight:400;font-size:clamp(30px,3.8vw,54px);line-height:1.12;color:var(--navy)}
+.change-chute em{font-style:italic;color:var(--sage)}
+.change-image{margin:clamp(56px,8vh,100px) 0 0;width:100%}
+.change-image img{display:block;width:100%;height:auto}
+@media (max-width:900px){
+  .change-tableaux{gap:56px;padding:52px 0 44px}
+  .tableau{grid-template-columns:1fr;gap:26px}
+  .tableau:nth-child(even) .tableau-image{order:0}
+  .tableau-num{margin-bottom:12px}
+}
 .billets{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
   font-size:clamp(20px,1.9vw,25px);line-height:1.5;color:var(--sage);font-style:italic}
 .bloc-texte .billets b{font-style:normal;font-weight:500;color:var(--sage-dark)}
@@ -1065,28 +1073,55 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <!-- ══════════ CE QUE BIBEON CHANGE — la réponse au hero ══════════ -->
 <section aria-label="Ce que BIBEON change" class="change">
-<div class="shell">
+<div class="shell change-tete">
 <h2 class="change-titre">Ce que BIBEON change.</h2>
-<p class="change-intro">BIBEON est le biberon qui s’abaisse à la demande, au niveau du liquide.</p>
-<div class="change-grid">
-<div class="change-item">
-<p class="change-sur">Moins d’air à avaler</p>
-<p class="change-mot">Le liquide descend.<br/><em>BIBEON aussi.</em></p>
-<p class="change-note">Les soufflets s’abaissent jusqu’au niveau du liquide. Moins d’air à avaler pour bébé.</p>
-<p class="change-lien"><a href="mode-demploi.html">Comprendre le système anti-air</a></p>
+<p class="change-intro">BIBEON s’élève et s’abaisse à la demande, au niveau du liquide.</p>
 </div>
-<div class="change-item">
-<p class="change-sur">Moins d’air à transporter</p>
-<p class="change-mot">Voyage petit.</p>
-<p class="change-note">Il se replie au volume utile, au lieu de garder celui d’un grand biberon vide. Vingt-trois grammes : il tient dans une poche.</p>
+
+<div class="shell change-tableaux">
+
+<article class="tableau">
+<figure class="tableau-image">
+<img alt="Le biberon BIBEON tenu dans une main, les soufflets abaissés au niveau du liquide" height="1024" loading="lazy" src="assets/biberon-main.webp" width="1024"/>
+</figure>
+<div class="tableau-texte">
+<p class="tableau-num">01</p>
+<p class="tableau-sur">Moins d’air à avaler</p>
+<h3 class="tableau-titre">Le liquide descend.<br/><em>BIBEON aussi.</em></h3>
+<p class="tableau-note">Les soufflets s’abaissent jusqu’au niveau du liquide. Moins d’air à avaler pour bébé.</p>
+<p class="tableau-lien"><a href="mode-demploi.html">Comprendre le système anti-air <span>→</span></a></p>
 </div>
-<div class="change-item">
-<p class="change-sur">Emportez seulement l’utile</p>
-<p class="change-mot">Rien autour.</p>
-<p class="change-note">Fini les grands biberons vides et leurs accessoires encombrants. BIBEON ne se contente pas d’être petit : il évite de déménager à chaque sortie.</p>
+</article>
+
+<article class="tableau">
+<figure class="tableau-image">
+<!-- PLACEHOLDER — à remplacer par un BIBEON replié dans une poche ou tenu très petit dans la main -->
+<img alt="Les BIBEON repliés alignés devant un sac à main" height="768" loading="lazy" src="assets/sac-a-main.webp" width="1376"/>
+</figure>
+<div class="tableau-texte">
+<p class="tableau-num">02</p>
+<p class="tableau-sur">Voyage petit</p>
+<h3 class="tableau-titre">Pas besoin<br/><em>de transporter du vide.</em></h3>
+<p class="tableau-note">BIBEON se replie au volume utile. Vingt-trois grammes : il tient dans une poche.</p>
 </div>
+</article>
+
+<article class="tableau">
+<figure class="tableau-image">
+<!-- PLACEHOLDER — à remplacer par des biberons rigides et leurs accessoires encombrants dans un sac -->
+<img alt="Des biberons rigides et leurs accessoires encombrants, tout ce qu’il fallait emporter avant" height="900" loading="lazy" src="assets/monde-davant.webp" width="1600"/>
+</figure>
+<div class="tableau-texte">
+<p class="tableau-num">03</p>
+<p class="tableau-sur">Emportez seulement l’utile</p>
+<h3 class="tableau-titre">Rien autour.</h3>
+<p class="tableau-note">Fini les grands biberons vides et leurs accessoires encombrants. BIBEON vous évite de déménager à chaque sortie.</p>
 </div>
-<p class="change-fil">Moins d’air dans le biberon, moins d’air dans le sac, moins de choses autour. <em>Le biberon devient nomade.</em></p>
+</article>
+
+</div>
+
+<div class="shell">
 <p class="change-chute">On a changé le biberon.<br/><em>On a supprimé tout le reste.</em></p>
 </div>
 <figure class="change-image">
@@ -1352,59 +1387,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 
 <!-- ══════════ 13 · NOTRE HISTOIRE — trois temps, jamais trois clones ══════════ -->
-<section aria-label="Notre histoire" style="background:var(--white)" id="histoire">
-<div class="shell chapitre">
-<p class="overline">Notre histoire</p>
-<h2 class="chapitre-titre">Ce biberon s’est déjà vendu par millions.</h2>
-<p class="chapitre-note">30 000 à l’heure. Puis une autre urgence s’impose.</p>
-</div>
-
-<a class="cartel cartel-industrie" href="qui-sommes-nous.html">
-<div class="shell cartel-grid">
-<figure class="cartel-image">
-<img alt="Chaîne industrielle produisant des corps de biberons pliables BIBEON, au début des années 2000" height="788" loading="lazy" src="assets/production-historique.webp" width="1300"/>
-</figure>
-<div>
-<p class="cartel-num">01</p>
-<p class="cartel-chiffre">30 000</p>
-<p class="cartel-mot">à l’heure</p>
-<p class="cartel-texte">Une fabrication passée à l’échelle industrielle.</p>
-<p class="cartel-lien"><span>Découvrir la première vie de BIBEON</span></p>
-</div>
-</div>
-</a>
-
-<a class="cartel cartel-igas" href="suzanne-de-begon-histoire-bibeon.html">
-<div class="shell cartel-grid">
-<div>
-<p class="cartel-num">02</p>
-<p class="cartel-chiffre cartel-sigle">IGAS</p>
-</div>
-<div>
-<p class="cartel-texte">L’IGAS s’empare de l’alerte.<br/>Dans ce dossier, elle reconnaît Suzanne de Bégon comme lanceuse d’alerte.</p>
-<p class="cartel-lien"><span>Découvrir le parcours de Suzanne de Bégon</span></p>
-</div>
-</div>
-</a>
-
-<a class="cartel cartel-retour" href="boutique.html">
-<div class="shell cartel-grid">
-<div>
-<p class="cartel-num">03</p>
-<p class="cartel-chiffre">BIBEON revient.</p>
-<p class="cartel-liste">Durable.<br/>Végétal.<br/>0 résidu détecté.<br/>Testé par le LNE.</p>
-<p class="cartel-texte">La même idée. Une nouvelle exigence.</p>
-<p class="cartel-lien"><span>Découvrir le BIBEON d’aujourd’hui</span></p>
-</div>
-<figure class="cartel-image">
-<img alt="Les six coloris du biberon BIBEON, capuchons en suspension au-dessus d’un socle de marbre" height="1012" loading="lazy" src="assets/bibeon-revient.webp" width="1800"/>
-</figure>
-</div>
-</a>
-</section>
-
-
-<!-- ══════════ 14 · COMPOSITION & SÉCURITÉ ATTESTÉE ══════════ -->
+<!-- Preuves remontées avant « Notre histoire » le 15 août -->
 <section aria-label="Composition et preuves" id="matiere" style="background:var(--cream)">
 <div class="shell preuve-tete">
 <p class="overline">Composition &amp; preuves</p>
@@ -1458,6 +1441,61 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </div>
 </div>
 </section>
+
+<section aria-label="Notre histoire" style="background:var(--white)" id="histoire">
+<div class="shell chapitre">
+<p class="overline">Notre histoire</p>
+<h2 class="chapitre-titre">Ce biberon s’est déjà vendu par millions.</h2>
+<p class="chapitre-note">30 000 à l’heure. Puis une autre urgence s’impose.</p>
+</div>
+
+<a class="cartel cartel-industrie" href="qui-sommes-nous.html">
+<div class="shell cartel-grid">
+<figure class="cartel-image">
+<img alt="Chaîne industrielle produisant des corps de biberons pliables BIBEON, au début des années 2000" height="788" loading="lazy" src="assets/production-historique.webp" width="1300"/>
+</figure>
+<div>
+<p class="cartel-num">01</p>
+<p class="cartel-chiffre">30 000</p>
+<p class="cartel-mot">à l’heure</p>
+<p class="cartel-texte">Une fabrication passée à l’échelle industrielle.</p>
+<p class="cartel-lien"><span>Découvrir la première vie de BIBEON</span></p>
+</div>
+</div>
+</a>
+
+<a class="cartel cartel-igas" href="suzanne-de-begon-histoire-bibeon.html">
+<div class="shell cartel-grid">
+<div>
+<p class="cartel-num">02</p>
+<p class="cartel-chiffre cartel-sigle">IGAS</p>
+</div>
+<div>
+<p class="cartel-texte">L’IGAS s’empare de l’alerte.<br/>Dans ce dossier, elle reconnaît Suzanne de Bégon comme lanceuse d’alerte.</p>
+<p class="cartel-lien"><span>Découvrir le parcours de Suzanne de Bégon</span></p>
+</div>
+</div>
+</a>
+
+<a class="cartel cartel-retour" href="boutique.html">
+<div class="shell cartel-grid">
+<div>
+<p class="cartel-num">03</p>
+<p class="cartel-chiffre">BIBEON revient.</p>
+<p class="cartel-liste">Durable.<br/>Végétal.<br/>0 résidu détecté.<br/>Testé par le LNE.</p>
+<p class="cartel-texte">La même idée. Une nouvelle exigence.</p>
+<p class="cartel-lien"><span>Découvrir le BIBEON d’aujourd’hui</span></p>
+</div>
+<figure class="cartel-image">
+<img alt="Les six coloris du biberon BIBEON, capuchons en suspension au-dessus d’un socle de marbre" height="1012" loading="lazy" src="assets/bibeon-revient.webp" width="1800"/>
+</figure>
+</div>
+</a>
+</section>
+
+
+<!-- ══════════ 14 · COMPOSITION & SÉCURITÉ ATTESTÉE ══════════ -->
+
 
 
 <!-- ══════════ 15 · ENTRE LEURS MAINS ══════════ -->
