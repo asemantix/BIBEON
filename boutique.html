@@ -542,6 +542,14 @@ html{scroll-behavior:smooth}
 backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:78px;display:flex;align-items:center;gap:22px}
 .brand{display:inline-flex;align-items:center;color:var(--navy)}
+/* la signature déposée sous le logo, alignée à gauche — identique à l'index */
+.brand-tag{flex-direction:column;align-items:flex-start;gap:5px}
+.brand-baseline{font-family:Montserrat,sans-serif;font-weight:500;font-size:12.5px;
+letter-spacing:.11em;text-transform:uppercase;color:var(--navy);line-height:1;white-space:nowrap}
+.brand-baseline .r{color:var(--sage-soft)}
+.brand-baseline .marque-r{font-family:Montserrat,sans-serif;font-size:.62em;
+vertical-align:.9em;margin-left:.14em;margin-right:-.9em;opacity:.55}
+@media (max-width:1200px){.brand-baseline{display:none}}
 .brand img{display:block;height:34px;width:135px;flex:0 0 auto}
 @media (max-width:700px){.brand img{height:28px;width:111px}}
 
@@ -1094,7 +1102,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand" href="index.html"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
+<a aria-label="BIBEON — accueil" class="brand brand-tag" href="index.html"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/><span class="brand-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</span></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a href="index.html">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
