@@ -812,7 +812,10 @@ background:linear-gradient(90deg,
  rgba(247,242,239,0) 58%)}
 .livraison-grid{position:relative;z-index:2}
 .livraison-texte{max-width:44ch}
-.livraison-duo{position:absolute;right:46%;bottom:0;width:14%;margin:0;z-index:1}
+.livraison-legende{position:absolute;right:6%;bottom:6%;z-index:3;margin:0;text-align:right;
+font-family:Montserrat,sans-serif;font-size:13px;line-height:1.8;color:var(--sage);max-width:34ch}
+.livraison-legende b{font-weight:600;color:var(--sage-dark)}
+.livraison-duo{position:absolute;right:44%;bottom:-1%;width:22%;margin:0;z-index:2}
 .livraison-duo img{display:block;width:100%;height:auto}
 .livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
@@ -829,12 +832,13 @@ font-size:13.5px;line-height:1.85;color:var(--sage)}
 .livraison-plus b{font-weight:600;color:var(--sage-dark)}
 .livraison-plus a{color:var(--sage-dark);border-bottom:1px solid var(--line)}
 @media (max-width:900px){
-  .livraison{background-size:165% auto;background-position:center bottom;
-  padding-bottom:calc(100vw * .80)}
+  .livraison{background-size:155% auto;background-position:center bottom;
+  padding-bottom:calc(100vw * .74)}
   .livraison::before{background:linear-gradient(180deg,
-   rgba(247,242,239,1) 0%, rgba(247,242,239,1) 52%, rgba(247,242,239,.55) 64%, rgba(247,242,239,0) 78%)}
+   rgba(247,242,239,1) 0%, rgba(247,242,239,1) 62%, rgba(247,242,239,.5) 72%, rgba(247,242,239,0) 84%)}
   .livraison-texte{max-width:none}
-  .livraison-duo{right:auto;left:6%;bottom:2%;width:22%}
+  .livraison-duo{right:auto;left:4%;bottom:0;width:36%}
+  .livraison-legende{position:static;text-align:left;margin:18px 0 0;max-width:none;font-size:12.5px}
 }
 .bhero{position:relative;border-bottom:1px solid var(--line);
 background:#f6f2ee url("assets/bibeon-banniere-cafe-serre.webp") no-repeat center 66%/cover;
@@ -1119,6 +1123,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <!-- ══════════ LE PACKAGING — avant le catalogue : « qu'est-ce que je reçois ? » ══════════ -->
 <section aria-label="Ce que vous recevez et comment" class="livraison">
+<p class="livraison-legende">Biberon nomade, <b>vendu vide</b><br/>avec sa tétine en silicone alimentaire<br/>et son capuchon d’origine végétale.</p>
 <figure class="livraison-duo">
 <img alt="Deux BIBEON repliés, coloris menthe et lilas" height="1155" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-lilas.webp" width="1155"/>
 </figure>
