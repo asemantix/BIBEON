@@ -313,7 +313,9 @@ background:var(--sage);color:#fff;font-size:13px;font-weight:700}
 .bloc-texte .overline{margin:0 0 18px}
 .bloc-texte .bloc-titre{margin:0 0 18px;font-family:"Playfair Display",Georgia,serif;
   font-weight:500;font-size:clamp(32px,3.8vw,50px);line-height:1.04;color:var(--sage-dark)}
-.bloc-texte 
+.bloc-texte .billets{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
+  font-size:clamp(20px,1.9vw,25px);line-height:1.5;color:var(--sage);font-style:italic}
+.bloc-texte .billets b{font-style:normal;font-weight:500;color:var(--sage-dark)}
 
 /* ── composition & preuves : une idée forte, puis les preuves ── */
 .preuve-tete{text-align:center;padding-top:clamp(70px,10vh,120px)}
@@ -545,6 +547,11 @@ font-style:italic;font-size:clamp(20px,1.9vw,26px);line-height:1.5;color:var(--s
 
 /* la citation de la fondatrice — plus basse que le témoignage du prologue */
 .citation{margin:clamp(30px,4vh,52px) auto 0;max-width:790px;text-align:center}
+.citation-lien{margin:22px 0 0;font-family:Montserrat,sans-serif;font-size:12px;
+letter-spacing:.16em;text-transform:uppercase}
+.citation-lien a{color:var(--sage-dark);text-decoration:none;
+border-bottom:1px solid var(--line);padding-bottom:3px}
+.citation-lien span{padding-left:6px}
 .citation p{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;font-style:italic;
 font-size:clamp(19px,1.8vw,26px);line-height:1.5;color:var(--sage-dark)}
 .citation footer{margin-top:clamp(24px,3vh,36px);font-family:Montserrat,sans-serif;font-size:13px;
@@ -1095,8 +1102,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <article class="tableau">
 <figure class="tableau-image">
-<!-- PLACEHOLDER — à remplacer par un BIBEON replié dans une poche ou tenu très petit dans la main -->
-<img alt="Les BIBEON repliés alignés devant un sac à main" height="768" loading="lazy" src="assets/sac-a-main.webp" width="1376"/>
+<img alt="Une main glisse un BIBEON replié, coloris menthe, dans la poche arrière d’un jean" height="1152" loading="lazy" src="assets/bibeon-voyage-petit.webp" width="1728"/>
 </figure>
 <div class="tableau-texte">
 <p class="tableau-num">02</p>
@@ -1108,14 +1114,13 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <article class="tableau">
 <figure class="tableau-image">
-<!-- PLACEHOLDER — à remplacer par des biberons rigides et leurs accessoires encombrants dans un sac -->
-<img alt="Des biberons rigides et leurs accessoires encombrants, tout ce qu’il fallait emporter avant" height="900" loading="lazy" src="assets/monde-davant.webp" width="1600"/>
+<img alt="Le panier d’une poussette débordant de grands biberons rigides, de couches et de lingettes" height="1643" loading="lazy" src="assets/bibeon-fini-le-demenagement.webp" width="1600"/>
 </figure>
 <div class="tableau-texte">
 <p class="tableau-num">03</p>
 <p class="tableau-sur">Emportez seulement l’utile</p>
-<h3 class="tableau-titre">Rien autour.</h3>
-<p class="tableau-note">Fini les grands biberons vides et leurs accessoires encombrants. BIBEON vous évite de déménager à chaque sortie.</p>
+<h3 class="tableau-titre">Fini<br/><em>le déménagement.</em></h3>
+<p class="tableau-note">Grands biberons vides, doseurs, accessoires encombrants : BIBEON vous évite de tout emporter à chaque sortie.</p>
 </div>
 </article>
 
@@ -1401,7 +1406,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <a class="preuve" href="legerete.html" id="preuve-vegetal">
 <p class="preuve-hero">50 %</p>
 <p class="preuve-mot">végétal</p>
-<p class="preuve-note">12 g sur les 23 g du BIBEON sont d’origine végétale. Bague et capuchon <i>·</i> sans OGM ni gluten.</p>
+<p class="preuve-note">12 g sur les 23 g du BIBEON sont d’origine végétale : la bague et le capuchon.</p>
 <p class="preuve-lien"><span>Découvrir la composition</span></p>
 </a>
 <a class="preuve" href="tests-migration-lne-bibeon.html#resultats" id="preuve-residu">
@@ -1421,8 +1426,9 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <div class="shell preuve-pied">
 <blockquote class="citation">
-<p>«&#8239;Un biberon n’est pas un jouet. En l’absence d’AMM — d’autorisation de mise sur le marché — la conformité repose sur la responsabilité du fabricant, sa déclaration et les preuves qui l’étayent. J’ai voulu aller au bout de cette responsabilité.&#8239;»</p>
+<p>«&#8239;Un biberon n’est pas un jouet. Et pourtant aucune autorisation de mise sur le marché — AMM — n’est requise depuis 1996. Le vrai responsable de la santé de vos bébés, c’est le fabricant. J’ai voulu aller au bout de cette responsabilité.&#8239;»</p>
 <footer>Suzanne de Bégon <i>·</i> Fondatrice de BIBEON</footer>
+<p class="citation-lien"><a href="tests-migration-lne-bibeon.html">Voir la déclaration de conformité <span>→</span></a></p>
 </blockquote>
 <p class="preuve-final">Nous ne vous demandons pas de nous croire.<br/><em>Regardez les résultats.</em></p>
 <p class="preuve-cta"><a href="tests-migration-lne-bibeon.html#resultats">Voir les résultats du LNE <span>→</span></a></p>
