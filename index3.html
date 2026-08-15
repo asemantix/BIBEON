@@ -207,7 +207,9 @@ font-family:Montserrat,sans-serif;color:var(--text)}
 footer h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
 letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
 /* la signature de marque : mêmes capitales que le logo, le R en vert sauge */
-.baseline{margin:10px 0 16px;font-family:Montserrat,sans-serif;font-weight:500;
+/* le pied de page reprend le rapport du lock-up de la section « Le nom » :
+   l'écart vaut 0,235 fois la hauteur du logo — d'où 8 px sous un logo de 34. */
+.baseline{margin:0 0 16px;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;
 font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
 .baseline .r{color:var(--sage-soft)}
 /* la section reprend exactement le bloc du pied de page : logo + signature */
@@ -281,7 +283,9 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 /* Le BIBEO rejoint la planche des cinq coloris — deux images entières posées l'une
    sous l'autre, jamais un détourage. La marge négative rattrape le vide transparent
    que porte le fichier du duo (252 px en haut, 253 px en bas sur 1600). */
-.teaser-image img.teaser-bibeo-img{width:52%;margin:-5.5% auto -6.5%}
+/* le BIBEO à la même échelle que les BIBEON : son flacon occupe 30 % de son
+   fichier, celui des BIBEON 25 % du leur — d'où 84 % de largeur pour égaliser. */
+.teaser-image img.teaser-bibeo-img{width:84%;margin:-9% auto -9%}
 @media (max-width:900px){.teaser-grid{grid-template-columns:1fr;gap:34px;padding:52px 0}
 .teaser-image{order:-1}}
 
@@ -746,6 +750,15 @@ html{scroll-behavior:smooth}
 backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav{min-height:78px;display:flex;align-items:center;gap:22px}
 .brand{display:inline-flex;align-items:center;color:var(--navy)}
+/* la signature déposée sous le logo, alignée à gauche comme au pied de page.
+   Elle disparaît quand le menu s'en approche à moins de 40 px. */
+.brand-tag{flex-direction:column;align-items:flex-start;gap:5px}
+.brand-baseline{font-family:Montserrat,sans-serif;font-weight:500;font-size:12.5px;
+letter-spacing:.11em;text-transform:uppercase;color:var(--navy);line-height:1;white-space:nowrap}
+.brand-baseline .r{color:var(--sage-soft)}
+.brand-baseline .marque-r{font-size:.62em;vertical-align:.9em;margin-left:.14em;
+margin-right:-.9em;opacity:.55}
+@media (max-width:1200px){.brand-baseline{display:none}}
 .brand img{display:block;height:34px;width:135px;flex:0 0 auto}
 @media (max-width:700px){.brand img{height:28px;width:111px}}
 
@@ -1033,7 +1046,11 @@ width:100vw;margin-left:calc(50% - 50vw)}
 /* ═══════════ LE NOM — la lettre qui manque ═══════════ */
 /* on descend le bloc de 28 px sans changer la hauteur de la section :
    ce qu'on ajoute en haut, on le retire en bas — le contenu est centré. */
-.nom{padding-top:calc(clamp(90px,13vh,180px) + 28px);
+/* la section occupe tout l'écran : on lit le nom sans qu'une autre section
+   apparaisse en bas et détourne le regard. 100svh évite le sursaut dû aux
+   barres des navigateurs mobiles. */
+.nom{min-height:100svh;
+padding-top:calc(clamp(90px,13vh,180px) + 28px);
 padding-bottom:calc(clamp(90px,13vh,180px) - 28px)}
 .nom-mot{max-width:none;letter-spacing:.06em;font-size:clamp(34px,5.4vw,82px);line-height:1.1}
 .nom-r{color:var(--sage-soft);opacity:.42}
@@ -1097,7 +1114,7 @@ font-size:clamp(24px,4.2vw,60px);line-height:1.1;color:var(--sage);white-space:n
 
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
+<a aria-label="BIBEON — accueil" class="brand brand-tag" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/><span class="brand-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</span></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a aria-current="page" href="index.html">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
