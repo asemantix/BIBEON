@@ -84,6 +84,9 @@ margin:0 0 28px;max-width:22ch;text-shadow:0 2px 34px rgba(14,28,53,.5)}
 .hero-promesse{display:block;margin-top:.18em;color:#fff;font-style:italic;font-size:.70em;
 line-height:1.03;letter-spacing:-.012em}
 .hero h1 em.hero-promesse{color:#fff}
+/* « biberon » agrandi de 13 % — pas de gras, pas de couleur ; line-height compensé
+   (.885 × 1.13 = 1) pour que la hauteur de la première ligne ne bouge pas */
+.hero-mot{font-size:1.13em;line-height:.885;font-weight:inherit}
 .hero-promesse span{color:#cfe0b8;font-style:italic;white-space:nowrap}
 .hero-promesse{white-space:nowrap}
 @media (max-width:900px){.hero h1{max-width:13.5ch}.hero-promesse{white-space:normal}}
@@ -254,6 +257,10 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .teaser-cta a:hover{background:var(--sage)}
 .teaser-image{margin:0}
 .teaser-image img{display:block;width:100%;height:auto}
+/* Le BIBEO rejoint la planche des cinq coloris — deux images entières posées l'une
+   sous l'autre, jamais un détourage. La marge négative rattrape le vide transparent
+   que porte le fichier du duo (252 px en haut, 253 px en bas sur 1600). */
+.teaser-image img.teaser-bibeo-img{width:52%;margin:-5.5% auto -6.5%}
 @media (max-width:900px){.teaser-grid{grid-template-columns:1fr;gap:34px;padding:52px 0}
 .teaser-image{order:-1}}
 
@@ -559,6 +566,21 @@ letter-spacing:.09em;text-transform:uppercase;color:var(--sage-dark)}
 .cartel-lien span{padding-bottom:5px;border-bottom:1px solid rgba(110,126,97,.32);
 transition:border-color .2s ease}
 .cartel:hover .cartel-lien span{border-color:var(--sage-dark)}
+
+/* Histoire — version courte du 15 août : les trois cartels sont retirés.
+   Le récit long vit sur suzanne-de-begon-histoire-bibeon.html ; ici on pose
+   le fait, on nomme l'IGAS, on ouvre la porte. Rien de plus. */
+.histoire-courte{padding:clamp(76px,10vh,124px) 0 clamp(76px,10vh,124px);text-align:center}
+.histoire-courte .overline{margin:0 0 20px}
+.histoire-igas{margin:clamp(30px,4vh,46px) auto 0;max-width:52ch;
+font-family:Montserrat,sans-serif;font-size:16px;line-height:1.72;color:var(--navy)}
+.histoire-igas b{font-weight:600;color:var(--sage-dark)}
+.histoire-lien{margin:clamp(28px,3.6vh,40px) 0 0;font-family:Montserrat,sans-serif;
+font-size:13px;font-weight:500;letter-spacing:.09em;text-transform:uppercase}
+.histoire-lien a{color:var(--sage-dark);text-decoration:none;
+padding-bottom:5px;border-bottom:1px solid rgba(110,126,97,.32);transition:border-color .2s ease}
+.histoire-lien a:hover{border-color:var(--sage-dark)}
+.histoire-lien span{margin-left:6px}
 .cartel-image{margin:0;overflow:hidden}
 .cartel-image img{display:block;width:100%;height:auto}
 
@@ -692,7 +714,7 @@ line-height:1.75;color:var(--text)}
 
 /* ═══════════ ENTÊTE — reprise fidèle d'index2, plus le seul ajout : ACHAT RAPIDE ═══════════ */
 html{scroll-behavior:smooth}
-#preuve-vegetal,#preuve-residu,#boutique,#avis,#faq,#fonctionnement,#film-complet,
+#preuve-vegetal,#preuve-residu,#boutique,#avis,#faq,#fonctionnement,#film-complet,#evolutif,
 #inscription,#matiere,#contact{scroll-margin-top:100px}
 /* le logo et la flèche pointent vers #accueil : on veut le tout début de la page,
    bandeau d'annonce compris — une marge large fait retomber le défilement sur 0 */
@@ -1073,12 +1095,12 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <div aria-hidden="true" class="hero-voile"></div>
 <div class="shell hero-contenu">
 <p class="overline">Fabriqué en France · Testé par le LNE</p>
-<h1>Le biberon<br/>a changé.<br/><em class="hero-promesse">Rien d’autre <span>à transporter.</span></em></h1>
+<h1>Le <span class="hero-mot">biberon</span><br/>a changé.<br/><em class="hero-promesse">Rien d’autre <span>à transporter.</span></em></h1>
 <div class="hero-capsules">
 <a class="capsule" href="#preuve-vegetal">50 % végétal</a>
 <a class="capsule" href="#preuve-residu">0 résidu détecté</a>
 </div>
-<p class="hero-cta"><a href="#film-complet">Découvrir BIBEON en 30 secondes <span>→</span></a></p>
+<p class="hero-cta"><a href="#evolutif">Découvrir BIBEON en 30 secondes <span>→</span></a></p>
 </div>
 </section>
 
@@ -1163,7 +1185,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <p class="tableau-num">03</p>
 <p class="tableau-sur">Emportez seulement l’utile</p>
 <h3 class="tableau-titre">Fini<br/><em>le déménagement.</em></h3>
-<p class="tableau-note">Grands biberons vides, doseurs, accessoires encombrants : BIBEON vous évite de tout emporter à chaque sortie.</p>
+<p class="tableau-note">Grands biberons vides et accessoires encombrants : BIBEON vous évite de tout emporter à chaque sortie.</p>
 </div>
 </article>
 
@@ -1179,7 +1201,7 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 
 <!-- ══════════ ÉVOLUTIF — le curseur remonté ici le 14 août :
      il démontre « il s'élève à la demande » juste après l'avoir annoncé. ══════════ -->
-<section aria-label="Évolutif" class="bloc" style="background:var(--beige)">
+<section aria-label="Évolutif" class="bloc" id="evolutif" style="background:var(--beige)">
 <div class="shell bloc-grid">
 <div class="bloc-texte">
 <p class="overline">Évolutif</p>
@@ -1496,8 +1518,6 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 <footer>Suzanne de Bégon <i>·</i> Fondatrice de BIBEON</footer>
 <p class="citation-lien"><a href="tests-migration-lne-bibeon.html">Voir la déclaration de conformité <span>→</span></a></p>
 </blockquote>
-<p class="preuve-final">Nous ne vous demandons pas de nous croire.<br/><em>Regardez les résultats.</em></p>
-<p class="preuve-cta"><a href="tests-migration-lne-bibeon.html#resultats">Voir les résultats du LNE <span>→</span></a></p>
 </div>
 
 <div class="regle">
@@ -1515,54 +1535,13 @@ font-size:clamp(22px,2.4vw,34px);line-height:1.2;color:var(--sage)}
 </section>
 
 <section aria-label="Notre histoire" style="background:var(--white)" id="histoire">
-<div class="shell chapitre">
+<div class="shell histoire-courte">
 <p class="overline">Notre histoire</p>
 <h2 class="chapitre-titre">Ce biberon s’est déjà vendu par millions.</h2>
 <p class="chapitre-note">30 000 à l’heure. Puis une autre urgence s’impose.</p>
+<p class="histoire-igas"><b>L’IGAS</b> — l’Inspection générale des affaires sociales — s’empare de l’alerte. Dans ce dossier, elle reconnaît Suzanne de Bégon comme lanceuse d’alerte.</p>
+<p class="histoire-lien"><a href="suzanne-de-begon-histoire-bibeon.html">Découvrir notre histoire <span>→</span></a></p>
 </div>
-
-<a class="cartel cartel-industrie" href="qui-sommes-nous.html">
-<div class="shell cartel-grid">
-<figure class="cartel-image">
-<img alt="Chaîne industrielle produisant des corps de biberons pliables BIBEON, au début des années 2000" height="788" loading="lazy" src="assets/production-historique.webp" width="1300"/>
-</figure>
-<div>
-<p class="cartel-num">01</p>
-<p class="cartel-chiffre">30 000</p>
-<p class="cartel-mot">à l’heure</p>
-<p class="cartel-texte">Une fabrication passée à l’échelle industrielle.</p>
-<p class="cartel-lien"><span>Découvrir la première vie de BIBEON</span></p>
-</div>
-</div>
-</a>
-
-<a class="cartel cartel-igas" href="suzanne-de-begon-histoire-bibeon.html">
-<div class="shell cartel-grid">
-<div>
-<p class="cartel-num">02</p>
-<p class="cartel-chiffre cartel-sigle">IGAS</p>
-</div>
-<div>
-<p class="cartel-texte">L’IGAS s’empare de l’alerte.<br/>Dans ce dossier, elle reconnaît Suzanne de Bégon comme lanceuse d’alerte.</p>
-<p class="cartel-lien"><span>Découvrir le parcours de Suzanne de Bégon</span></p>
-</div>
-</div>
-</a>
-
-<a class="cartel cartel-retour" href="boutique.html">
-<div class="shell cartel-grid">
-<div>
-<p class="cartel-num">03</p>
-<p class="cartel-chiffre">BIBEON revient.</p>
-<p class="cartel-liste">Durable.<br/>Végétal.<br/>0 résidu détecté.<br/>Testé par le LNE.</p>
-<p class="cartel-texte">La même idée. Une nouvelle exigence.</p>
-<p class="cartel-lien"><span>Découvrir le BIBEON d’aujourd’hui</span></p>
-</div>
-<figure class="cartel-image">
-<img alt="Les six coloris du biberon BIBEON, capuchons en suspension au-dessus d’un socle de marbre" height="1012" loading="lazy" src="assets/bibeon-revient.webp" width="1800"/>
-</figure>
-</div>
-</a>
 </section>
 
 
@@ -1805,14 +1784,14 @@ En nous envoyant votre photo, vous nous autorisez à la publier sur bibeon.fr et
 <div class="shell teaser-grid">
 <div>
 <p class="teaser-sur">La boutique</p>
-<h2>Quatre façons<br/><em>de commencer.</em></h2>
-<p class="teaser-texte">Un BIBEON pour la petite course, un duo pour l’après-midi, le Trio Nomade dans son étui pour le week-end, les cinq coloris pour le voyage. Port compris, expédié de France le jour même.</p>
-<p class="teaser-bibeo">Et le <b>BIBEO</b>, édition limitée hors gamme : il porte la marque d’origine, un colibri qui tient le O.</p>
+<h2>Cinq façons<br/><em>de commencer.</em></h2>
+<p class="teaser-texte">Un BIBEON pour la petite course, un duo pour l’après-midi, un lot de trois pour le week-end, les cinq coloris pour le voyage — et le <b>BIBEO</b> pour changer de couleurs. Port compris, expédié de France le jour même.</p>
 <p class="teaser-prix">De <b>35 €</b> à <b>125 €</b></p>
 <p class="teaser-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
 </div>
 <figure class="teaser-image">
 <img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="1600" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1600"/>
+<img class="teaser-bibeo-img" alt="Le duo BIBEO, rose et menthe, bagues dorées" height="1600" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1600"/>
 </figure>
 </div>
 </section>
