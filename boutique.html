@@ -793,9 +793,9 @@ padding:clamp(38px,5.5vh,66px) 0;text-align:center}
 .sous-hero-mot{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(19px,1.9vw,27px);line-height:1.4;color:var(--sage-dark)}
 .sous-hero-mot em{font-style:italic;color:var(--sage)}
-.sous-hero-note{margin:20px 0 0;font-family:Montserrat,sans-serif;font-size:12.5px;
-line-height:1.8;color:var(--sage);opacity:.9}
-.sous-hero-note a{color:var(--sage-dark)}
+.sous-hero-ligne{margin:20px 0 0;font-family:Montserrat,sans-serif;font-size:15px;
+line-height:1.9;color:var(--sage-dark)}
+.sous-hero-ligne a{color:var(--sage-dark);border-bottom:1px solid var(--line);padding-bottom:2px}
 .banniere{margin:0;padding:0;background:var(--beige);display:flex;justify-content:center}
 .banniere img{display:block;width:100%;height:auto;max-width:1400px}
 /* le texte est posé directement dans l'image : aucun panneau, aucun bord */
@@ -940,6 +940,8 @@ font-size:clamp(30px,3.6vw,50px);line-height:1.12;color:var(--sage-dark)}
 font-size:16px;line-height:1.75;color:var(--text)}
 .coloris-tete p.coloris-preuve{max-width:60ch;font-size:15px;color:#5b655d}
 .coloris-tete p.coloris-preuve b{font-weight:600;color:var(--sage-dark)}
+.coloris-jonquille{margin:18px auto 0;max-width:56ch;font-family:Montserrat,sans-serif;
+font-size:14px;line-height:1.8;color:var(--sage)}
 .coloris-grille{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(12px,1.5vw,22px);
 padding:clamp(40px,5.5vh,64px) 0 clamp(70px,10vh,120px)}
 .coloris-carte{display:block}
@@ -1112,7 +1114,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="sous-hero">
 <div class="shell">
 <p class="sous-hero-mot">Petit quand vous partez, grand quand bébé en a besoin.<br/><em>BIBEON voyage léger et suit vos découvertes.</em></p>
-<p class="sous-hero-note">Le biberon nomade pliable, fabriqué en France · <a href="#japon">Livraison au Japon</a> · Le coloris jonquille est épuisé, il apparaît encore sur quelques images.</p>
+<p class="sous-hero-ligne">Le biberon nomade pliable, fabriqué en France. <a href="#japon">Nous livrons aussi au Japon.</a></p>
 </div>
 </div>
 
@@ -1138,7 +1140,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <section aria-label="Du replié au déplié" class="pliage">
 <div class="shell">
 <p class="overline">Un seul biberon</p>
-<h2 class="pliage-titre">De 30 à 300 ml,<br/><em>sans rien ajouter.</em></h2>
+<h2 class="pliage-titre">De 30 à 300 ml.</h2>
 <figure class="pliage-image">
 <img alt="Le BIBEON à cinq états de pliage, du replié au complètement déplié, avec sa bague et son capuchon" height="1006" loading="lazy" src="assets/bibeon-etats-de-pliage.webp" width="2000"/>
 </figure>
@@ -1271,6 +1273,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <h2>Cinq coloris testés par le LNE.<br/><em><span class="zero">0</span> résidu détecté.</em></h2>
 <p class="coloris-preuve">Les essais de migration ont porté sur <b>les cinq coloris</b>, sur <b>la bague</b> et sur <b>le capuchon</b> — les deux pièces en contact permanent avec la tétine. Aucun résidu détecté : sous le seuil de détection de 6 mg/kg, dix fois inférieur à la limite de 60 mg/kg applicable aux objets destinés aux nourrissons.</p>
 <p>Teintés dans la masse, translucides. La couleur n’est pas déposée sur le biberon — elle est dans la matière, et elle ne s’efface pas au lavage.</p>
+<p class="coloris-jonquille">Le coloris jonquille est épuisé. Il apparaît encore sur quelques images d’archive.</p>
 </div>
 <div class="shell coloris-grille">
 <div class="coloris-carte">
@@ -1555,7 +1558,6 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <div class="footer-col">
 <h3>Le produit</h3>
 <a href="index.html#fonctionnement">Comment ça marche</a>
-<a href="index.html#uniques">Nos différences</a>
 <a href="legerete.html">La légèreté a son prix</a>
 <a href="preparer-biberon-en-sortie.html">Préparer un biberon en sortie</a>
 <a href="biberon-nomade-sans-accessoires.html">Le biberon nomade sans accessoires</a>
