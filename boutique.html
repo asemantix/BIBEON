@@ -1122,6 +1122,45 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 .brand{display:inline-flex;align-items:center;color:var(--navy)}
 .brand img{display:block;height:34px;width:135px;flex:0 0 auto}
 @media (max-width:700px){.brand img{height:28px;width:111px}}
+/* ═══════════ PANNEAU D'ACCEPTATION DES CGV — 17 août 2026 ═══════════
+   Aucun départ vers PayPal sans que la cliente ait eu les CGV sous les yeux
+   et coché une case décochée par défaut. */
+.cgv-fond{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;
+padding:20px;background:rgba(17,37,58,.55);backdrop-filter:blur(3px)}
+.cgv-fond.ouvert{display:flex}
+.cgv-panneau{background:var(--cream);border-radius:var(--radius);box-shadow:var(--shadow-m);
+width:min(560px,100%);max-height:90vh;overflow:auto;padding:clamp(28px,4vw,44px)}
+.cgv-sur{margin:0 0 14px;font-family:Montserrat,sans-serif;font-size:11.5px;font-weight:600;
+letter-spacing:.24em;text-indent:.24em;text-transform:uppercase;color:var(--sage)}
+.cgv-titre{margin:0 0 22px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(24px,2.6vw,32px);line-height:1.14;color:var(--sage-dark)}
+.cgv-recap{margin:0 0 20px;border-top:1px solid var(--line)}
+.cgv-recap div{display:flex;justify-content:space-between;align-items:baseline;gap:20px;
+padding:12px 2px;border-bottom:1px solid var(--line);
+font-family:Montserrat,sans-serif;font-size:14.5px;color:var(--text)}
+.cgv-recap span:first-child{font-size:12px;font-weight:600;letter-spacing:.14em;
+text-transform:uppercase;color:var(--sage)}
+.cgv-recap b{font-family:"Playfair Display",Georgia,serif;font-weight:500;font-size:20px;
+color:var(--sage-dark)}
+.cgv-note{margin:0 0 22px;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.75;
+color:var(--text)}
+.cgv-note a{color:var(--sage-dark);border-bottom:1px solid rgba(110,126,97,.34)}
+.cgv-case{display:flex;gap:12px;align-items:flex-start;margin:0 0 24px;cursor:pointer;
+font-family:Montserrat,sans-serif;font-size:14.5px;line-height:1.6;color:var(--navy)}
+.cgv-case input{flex:0 0 auto;width:20px;height:20px;margin:2px 0 0;accent-color:var(--sage-dark);cursor:pointer}
+.cgv-case a{color:var(--sage-dark);border-bottom:1px solid rgba(110,126,97,.34)}
+.cgv-actions{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.cgv-payer{display:inline-flex;align-items:center;gap:10px;padding:15px 30px;border:0;border-radius:999px;
+background:var(--sage-dark);color:#fff;font-family:Montserrat,sans-serif;font-size:12.5px;
+font-weight:600;letter-spacing:.12em;text-indent:.12em;text-transform:uppercase;cursor:pointer;
+transition:background .2s ease}
+.cgv-payer:hover{background:var(--sage)}
+.cgv-payer[disabled]{background:transparent;color:var(--sage);border:1px solid var(--sage-soft);cursor:not-allowed}
+.cgv-annuler{background:none;border:0;padding:8px 4px;cursor:pointer;
+font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:500;letter-spacing:.1em;
+text-transform:uppercase;color:var(--sage);border-bottom:1px solid transparent}
+.cgv-annuler:hover{border-color:var(--sage)}
+.cgv-tiers{margin:18px 0 0;font-family:Montserrat,sans-serif;font-size:11.5px;line-height:1.7;color:var(--sage)}
 </style>
 </head>
 <body>
@@ -1571,16 +1610,18 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <p class="footer-achat"><a href="boutique.html">Boutique</a></p>
 </div>
 <div class="footer-col">
-<h3>Le produit</h3>
-<a href="index.html#fonctionnement">Comment ça marche</a>
-<a href="index.html#matiere">Nos garanties</a>
-<a href="index.html#avis">Les avis</a>
-<a href="index.html#faq">Questions fréquentes</a>
+<h3>BIBEON en détail</h3>
+<a href="mode-demploi.html">Mode d’emploi</a>
+<a href="legerete.html">La légèreté a un prix</a>
+<a href="voyage.html">Voyager avec bébé</a>
+<a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
+<a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
 <a href="conseils.html">Nos conseils</a>
 </div>
 <div class="footer-col">
 <h3>La maison</h3>
 <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+<a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
 <a href="mentions-legales.html">Mentions légales</a>
 <a href="cgv.html">Conditions générales de vente</a>
 <a href="confidentialite.html">Politique de confidentialité</a>
@@ -1671,5 +1712,97 @@ if(a) a.textContent=new Date().getFullYear();})();
   });
 })();
 </script>
+<!-- ══════════ PANNEAU D'ACCEPTATION DES CGV ══════════ -->
+<div aria-hidden="true" class="cgv-fond" id="cgvFond">
+<div aria-labelledby="cgvTitre" aria-modal="true" class="cgv-panneau" role="dialog">
+<p class="cgv-sur">Votre commande</p>
+<h2 class="cgv-titre" id="cgvTitre">Avant de payer</h2>
+<div class="cgv-recap" id="cgvRecap"></div>
+<p class="cgv-note">Livraison offerte en France métropolitaine, expédiée de France sous 24 heures ouvrées. Vous disposez de <b>quatorze jours</b> pour vous rétracter — sauf sur un biberon ou une tétine descellé après livraison, qui ne peut être repris pour des raisons d’hygiène. Le détail figure dans nos <a href="cgv.html" rel="noopener" target="_blank">conditions générales de vente</a>.</p>
+<label class="cgv-case" for="cgvCase">
+<input id="cgvCase" type="checkbox"/>
+<span>J’ai lu et j’accepte les <a href="cgv.html" rel="noopener" target="_blank">conditions générales de vente</a> ainsi que la <a href="confidentialite.html" rel="noopener" target="_blank">politique de confidentialité</a>.</span>
+</label>
+<div class="cgv-actions">
+<button class="cgv-payer" disabled="" id="cgvPayer" type="button">Commander avec obligation de paiement</button>
+<button class="cgv-annuler" id="cgvAnnuler" type="button">Annuler</button>
+</div>
+<p class="cgv-tiers">Le paiement est traité par PayPal, qui s’ouvrira dans un nouvel onglet. Aucune donnée bancaire ne transite par bibeon.fr.</p>
+</div>
+</div>
+
+<script>
+/* ═══ Acceptation des CGV avant tout départ vers PayPal ═══
+   Le lien de paiement n'est plus suivi directement : on retient sa destination,
+   on montre le récapitulatif, et on n'ouvre PayPal qu'une fois la case cochée. */
+(function () {
+  var fond = document.getElementById("cgvFond"),
+      recap = document.getElementById("cgvRecap"),
+      cases = document.getElementById("cgvCase"),
+      payer = document.getElementById("cgvPayer"),
+      annuler = document.getElementById("cgvAnnuler"),
+      destination = null, origine = null;
+
+  function estPaiement(a) {
+    var h = a.getAttribute("href") || "";
+    return h.indexOf("py.pl") > -1 || h.indexOf("paypal.com") > -1;
+  }
+  function ligne(nom, valeur, fort) {
+    var d = document.createElement("div");
+    d.innerHTML = "<span>" + nom + "</span>" + (fort ? "<b>" + valeur + "</b>" : "<span>" + valeur + "</span>");
+    recap.appendChild(d);
+  }
+  function ouvrir(a) {
+    destination = a.getAttribute("href");
+    origine = a;
+    recap.innerHTML = "";
+    var carte = a.closest(".offre");
+    if (carte) {
+      var titre = carte.querySelector("h3");
+      if (titre) ligne("Article", titre.textContent.trim());
+      var choix = [];
+      carte.querySelectorAll(".nuancier-choix").forEach(function (c) {
+        var t = c.textContent.trim();
+        if (t && t !== "à choisir" && t !== "aucun choisi") choix.push(t);
+      });
+      if (choix.length) ligne(choix.length > 1 ? "Coloris" : "Coloris", choix.join(" + "));
+      var prix = carte.querySelector(".offre-prix");
+      if (prix) ligne("Prix", (prix.childNodes[0].textContent || "").trim(), true);
+    }
+    ligne("Livraison", "Offerte · France métropolitaine");
+    cases.checked = false;
+    payer.disabled = true;
+    fond.classList.add("ouvert");
+    fond.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+    setTimeout(function () { cases.focus(); }, 30);
+  }
+  function fermer() {
+    fond.classList.remove("ouvert");
+    fond.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    if (origine && origine.focus) origine.focus();
+    destination = null;
+  }
+  document.addEventListener("click", function (e) {
+    var a = e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a || !estPaiement(a)) return;
+    e.preventDefault();
+    ouvrir(a);
+  });
+  cases.addEventListener("change", function () { payer.disabled = !cases.checked; });
+  payer.addEventListener("click", function () {
+    if (!cases.checked || !destination) return;
+    window.open(destination, "_blank", "noopener");
+    fermer();
+  });
+  annuler.addEventListener("click", fermer);
+  fond.addEventListener("click", function (e) { if (e.target === fond) fermer(); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && fond.classList.contains("ouvert")) fermer();
+  });
+})();
+</script>
+
 </body>
 </html>
