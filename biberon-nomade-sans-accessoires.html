@@ -640,6 +640,41 @@ footer .brand svg.brand-logo{height:30px}
 .conclusion{margin-top:46px;padding:32px 36px;border-radius:var(--radius);
             background:var(--cream);border:1px solid var(--line)}
 @media (max-width:700px){.article-summary ul{columns:1}}
+
+/* ═══ PIED DE PAGE COMMUN — recopié depuis l'accueil, 16 août 2026 ═══ */
+footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
+.footer-col{display:flex;flex-direction:column;gap:9px;font-size:13.5px;
+font-family:Montserrat,sans-serif;color:var(--text)}
+.footer-col a{color:var(--text);text-decoration:none}
+.footer-col a:hover{color:var(--sage-dark)}
+footer h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
+letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+/* le pied de page reprend le rapport du lock-up de la section « Le nom » :
+   l'écart vaut 0,235 fois la hauteur du logo — d'où 8 px sous un logo de 34. */
+.baseline{margin:0 0 16px;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;
+font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.baseline .r{color:var(--sage-soft)}
+.marque-r{font-family:Montserrat,sans-serif;font-size:.42em;font-weight:500;
+vertical-align:.72em;letter-spacing:0;margin-left:.12em;line-height:0;opacity:.7}
+.footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0;line-height:1.7}
+.brand-logo{display:block;width:auto;height:34px;color:var(--navy);transform:translateY(-2px)}
+.footer-achat{margin:20px 0 0}
+.footer-achat a{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
+background:var(--sage-dark);color:#fff;text-decoration:none;font-family:Montserrat,sans-serif;
+font-size:12.5px;font-weight:600;letter-spacing:.14em;text-indent:.14em;text-transform:uppercase;
+transition:background .2s ease}
+.footer-achat a:hover{background:var(--sage)}
+.footer-fournisseurs{display:block;margin-top:12px;padding-top:12px;
+border-top:1px solid var(--line);font-size:13px;color:#7b8579}
+.copyright{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;
+display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
+font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
+@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}.brand-logo{height:30px}}
+@media (max-width:560px){.footer-grid{grid-template-columns:1fr}.brand-logo{height:27px}.copyright{justify-content:flex-start}}
+.brand{display:inline-flex;align-items:center;color:var(--navy)}
+.brand img{display:block;height:34px;width:135px;flex:0 0 auto}
+@media (max-width:700px){.brand img{height:28px;width:111px}}
 </style>
 </head>
 
@@ -912,9 +947,9 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 </section>
 
 <footer id="contact">
-  <div class="shell footer-grid">
-    <div class="footer-col">
-      <a class="brand" href="index.html#accueil" aria-label="BIBEON — accueil"><svg class="brand-logo" viewBox="0 0 901 227" role="img" aria-label="BIBEON"><g transform="translate(0,227) scale(0.1,-0.1)" fill="currentColor" fill-rule="evenodd"><path d="M8830 2245 c-80 -18 -197 -59 -270 -96 -155 -78 -271 -212 -299 -347
+<div class="shell footer-grid">
+<div class="footer-col">
+<a aria-label="BIBEON — accueil" class="brand" href="index.html#accueil"><svg aria-label="BIBEON" class="brand-logo" role="img" viewbox="0 0 901 227"><g fill="currentColor" fill-rule="evenodd" transform="translate(0,227) scale(0.1,-0.1)"><path d="M8830 2245 c-80 -18 -197 -59 -270 -96 -155 -78 -271 -212 -299 -347
 -12 -57 -15 -274 -4 -285 3 -4 27 31 53 78 57 100 162 238 222 290 47 40 171
 125 183 125 4 0 -42 -51 -104 -112 -61 -62 -127 -135 -147 -163 -39 -54 -128
 -224 -121 -231 8 -8 322 96 387 128 107 52 188 146 236 274 30 80 48 221 37
@@ -948,50 +983,38 @@ l-365 0 0 160 0 160 309 0 c262 0 310 2 321 15 18 22 15 151 -5 181 l-15 24
 -218 299 -372 123 -154 249 -309 279 -343 l55 -64 94 4 c80 2 97 6 109 22 12
 17 14 119 14 633 l0 614 -25 24 c-22 23 -32 25 -115 25 -83 0 -93 -2 -115 -25
 l-25 -24 0 -396 0 -396 -167 203 c-303 369 -456 552 -497 596 l-40 42 -81 -1
-c-44 0 -87 -3 -95 -6z"/></g></svg></a>
-      <p class="baseline">Toujours prêt.</p>
-      <p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
-    </div>
-
-    <div class="footer-col">
-      <h3>Le produit</h3>
-      <a href="index.html#fonctionnement">Comment ça marche</a>
-      <a href="index.html#uniques">Nos différences</a>
-        <a href="legerete.html">La légèreté a son prix</a>
-        <a href="preparer-biberon-en-sortie.html">Préparer un biberon en sortie</a>
-        <a href="biberon-nomade-sans-accessoires.html">Le biberon nomade sans accessoires</a>
-        <a href="tests-migration-lne-bibeon.html">Les essais de migration du LNE</a>
-        <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
-        <a href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser</a>
-        <a href="biberon-entame-refrigerateur.html">Biberon entamé : que faire du reste ?</a>
-        <a href="silicone-medical-alimentaire-biberon.html">Silicone médical ou alimentaire ?</a>
-      <a href="index.html#preuves">Nos garanties</a>
-      <a href="index.html#avis">Les avis</a>
-      <a href="index.html#faq">Questions fréquentes</a>
-      <a href="index.html#histoire">Notre engagement</a>
-      <a href="index.html#boutique">Boutique</a>
-    </div>
-
-    <div class="footer-col">
-      <h3>Informations</h3>
-      <span>Mentions légales — à venir</span>
-      <span>Conditions de vente — à venir</span>
-      <span>Confidentialité — à venir</span>
-    </div>
-
-    <div class="footer-col">
-      <h3>Nous contacter</h3>
-      <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
-      <a href="tel:+33611768407">06 11 76 84 07</a>
-      <span>Du lundi au vendredi, 9 h – 18 h</span>
-      <span class="footer-fournisseurs">Fournisseurs et revendeurs<br><a href="tel:+33427024415">04 27 02 44 15</a></span>
-    </div>
-  </div>
-
-  <div class="shell copyright">
-    <span>© <span id="annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
-    <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
-  </div>
+c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
+<p class="baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</p>
+<p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
+<p class="footer-achat"><a href="boutique.html">Boutique</a></p>
+</div>
+<div class="footer-col">
+<h3>Le produit</h3>
+<a href="index.html#fonctionnement">Comment ça marche</a>
+<a href="index.html#matiere">Nos garanties</a>
+<a href="index.html#avis">Les avis</a>
+<a href="index.html#faq">Questions fréquentes</a>
+<a href="conseils.html">Nos conseils</a>
+</div>
+<div class="footer-col">
+<h3>La maison</h3>
+<a href="qui-sommes-nous.html">Qui sommes-nous</a>
+<a href="mentions-legales.html">Mentions légales</a>
+<a href="cgv.html">Conditions générales de vente</a>
+<a href="confidentialite.html">Politique de confidentialité</a>
+</div>
+<div class="footer-col">
+<h3>Nous contacter</h3>
+<a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
+<a href="tel:+33611768407">06 11 76 84 07</a>
+<span>Du lundi au vendredi, 9 h – 18 h</span>
+<span class="footer-fournisseurs">Fournisseurs et revendeurs<br/><a href="tel:+33427024415">04 27 02 44 15</a></span>
+</div>
+</div>
+<div class="shell copyright">
+<span>© <span id="annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
+<span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
+</div>
 </footer>
 
 <script>
