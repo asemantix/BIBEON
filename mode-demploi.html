@@ -581,6 +581,13 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 font-size:clamp(24px,2.6vw,34px);line-height:1.14;color:var(--sage-dark)}
 .astuce-carte.astuce-seule p{margin:0 auto 10px;max-width:46ch;font-size:15.5px;line-height:1.75}
 .astuce-carte.astuce-seule .overline{margin:0 0 16px}
+
+/* Les images de démonstration ne sont pas des films : pas de format imposé,
+   pas de recadrage. Elles gardent leurs proportions d'origine. */
+.md-figure{margin:clamp(26px,3.4vh,44px) auto 0;padding:0;border:0;background:none;overflow:visible}
+.md-figure img{display:block;width:100%;height:auto;border-radius:16px}
+.md-figure figcaption{margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;
+font-size:13px;line-height:1.6;color:var(--sage)}
 </style>
 <script type="application/ld+json">
 {
@@ -792,7 +799,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <p class="overline">Fermer BIBEON</p>
 <h2 class="section-title">La tétine rentre<br>dans sa base.</h2>
 </div>
-<figure class="etape-video" style="margin:clamp(24px,3vh,38px) auto 0;max-width:720px">
+<figure class="md-figure" style="max-width:720px">
 <img src="assets/tetine-dans-capuchon.webp" width="1600" height="2133" alt="Quatre vues du geste : la tétine dressée, le capuchon qui descend, la tétine couchée dans sa base, le bloc fermé" loading="lazy" style="display:block;width:100%;height:auto">
 <figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">La tétine s’abaisse à l’intérieur d’elle-même. Le toit du capuchon vient obturer son orifice.</figcaption>
 </figure>
@@ -837,11 +844,11 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <p class="overline">Nettoyage</p>
 <h2 class="section-title">Le fond remonte jusqu’à vous.</h2>
 </div>
-<figure class="etape-video" style="margin:clamp(24px,3vh,38px) auto 0;max-width:760px">
+<figure class="md-figure" style="max-width:760px">
 <img src="assets/goupillon-soufflets.webp" width="1400" height="1877" alt="Le goupillon à l’intérieur du biberon : les poils s’ouvrent dans le creux de chaque soufflet" loading="lazy" style="display:block;width:100%;height:auto;border-radius:var(--radius)">
 <figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">Les poils entrent dans le creux de chaque soufflet. Une paroi accidentée se lave aussi bien qu’une paroi lisse.</figcaption>
 </figure>
-<figure class="etape-video" style="margin:clamp(20px,2.6vh,32px) auto 0;max-width:1000px">
+<figure class="md-figure" style="max-width:1000px">
 <img src="assets/doigt-trois-etapes.webp" width="1600" height="476" alt="Trois étapes : le biberon replié, le doigt qui entre, le doigt qui atteint le fond" loading="lazy" style="display:block;width:100%;height:auto">
 <figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">Repliez les soufflets : le fond remonte jusqu’à votre doigt. C’est ce qu’aucune brosse n’atteint dans un biberon rigide.</figcaption>
 </figure>
