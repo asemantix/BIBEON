@@ -573,6 +573,14 @@ display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
 font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 @media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}footer .brand-logo{height:30px}}
 @media (max-width:560px){.footer-grid{grid-template-columns:1fr}footer .brand-logo{height:27px}.copyright{justify-content:flex-start}}
+
+/* « À retenir » sans pictogramme : une seule colonne, sinon le texte se retrouve
+   coincé dans la gouttière de 120 px prévue pour l'icône */
+.astuce-carte.astuce-seule{grid-template-columns:1fr;text-align:center;padding:clamp(30px,4vh,46px) clamp(24px,3vw,44px)}
+.astuce-carte.astuce-seule h2{margin:0 0 18px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+font-size:clamp(24px,2.6vw,34px);line-height:1.14;color:var(--sage-dark)}
+.astuce-carte.astuce-seule p{margin:0 auto 10px;max-width:46ch;font-size:15.5px;line-height:1.75}
+.astuce-carte.astuce-seule .overline{margin:0 0 16px}
 </style>
 <script type="application/ld+json">
 {
@@ -784,6 +792,12 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <p class="overline">Fermer BIBEON</p>
 <h2 class="section-title">La tétine rentre<br>dans sa base.</h2>
 </div>
+<figure class="etape-video" style="margin:clamp(24px,3vh,38px) auto 0;max-width:720px">
+<img src="assets/tetine-dans-capuchon.webp" width="1600" height="2133" alt="Quatre vues du geste : la tétine dressée, le capuchon qui descend, la tétine couchée dans sa base, le bloc fermé" loading="lazy" style="display:block;width:100%;height:auto">
+<figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">La tétine s’abaisse à l’intérieur d’elle-même. Le toit du capuchon vient obturer son orifice.</figcaption>
+</figure>
+<div class="shell">
+</div>
 <div class="fermeture-grid">
 <article><h3>Posez</h3><p>Posez le capuchon bien droit sur la tétine.</p></article>
 <article><h3>Appuyez</h3><p>Appuyez verticalement. Le mamelon se raccourcit tandis que sa base souple s’élargit légèrement pour le recevoir à l’intérieur d’elle-même.</p></article>
@@ -823,6 +837,16 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 <p class="overline">Nettoyage</p>
 <h2 class="section-title">Le fond remonte jusqu’à vous.</h2>
 </div>
+<figure class="etape-video" style="margin:clamp(24px,3vh,38px) auto 0;max-width:760px">
+<img src="assets/goupillon-soufflets.webp" width="1400" height="1877" alt="Le goupillon à l’intérieur du biberon : les poils s’ouvrent dans le creux de chaque soufflet" loading="lazy" style="display:block;width:100%;height:auto;border-radius:var(--radius)">
+<figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">Les poils entrent dans le creux de chaque soufflet. Une paroi accidentée se lave aussi bien qu’une paroi lisse.</figcaption>
+</figure>
+<figure class="etape-video" style="margin:clamp(20px,2.6vh,32px) auto 0;max-width:1000px">
+<img src="assets/doigt-trois-etapes.webp" width="1600" height="476" alt="Trois étapes : le biberon replié, le doigt qui entre, le doigt qui atteint le fond" loading="lazy" style="display:block;width:100%;height:auto">
+<figcaption style="margin-top:12px;text-align:center;font-family:Montserrat,sans-serif;font-size:13px;line-height:1.6;color:var(--sage)">Repliez les soufflets : le fond remonte jusqu’à votre doigt. C’est ce qu’aucune brosse n’atteint dans un biberon rigide.</figcaption>
+</figure>
+<div class="shell">
+</div>
 <div class="pratique-grid">
 <article class="pratique-item">
 <img src="assets/icone-09-goupillon.png" alt="" width="48" height="48" loading="lazy" style="width:48px;height:48px;object-fit:contain;margin:0 auto 10px;display:block;">
@@ -857,7 +881,7 @@ c-44 0 -87 -3 -95 -6z"/></g></svg></a>
 
 <section class="astuce" id="a-retenir">
 <div class="shell">
-<div class="astuce-carte">
+<div class="astuce-carte astuce-seule">
 <div>
 <p class="overline">À retenir</p>
 <h2>Un geste commande tous les autres.</h2>
