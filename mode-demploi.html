@@ -726,6 +726,18 @@ border-radius:0;padding:0;text-align:center}
   .notice-page .pratique-item:first-child,.notice-page .fermeture-grid article:first-child{border-top:0}
   .notice-page .etape{text-align:center}
 }
+
+/* le détail se déplie : premier niveau court, le reste à la demande */
+.notice-page .plus{margin:14px 0 0}
+.notice-page .plus summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:8px;
+font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.14em;
+text-transform:uppercase;color:var(--sage-dark);padding-bottom:4px;
+border-bottom:1px solid rgba(110,126,97,.34)}
+.notice-page .plus summary::-webkit-details-marker{display:none}
+.notice-page .plus summary::after{content:"+";font-weight:400;font-size:15px;line-height:1;color:var(--sage-soft)}
+.notice-page .plus[open] summary::after{content:"–"}
+.notice-page .plus summary:hover{color:var(--sage)}
+.notice-page .plus p{margin:16px 0 0;font-size:15px;line-height:1.8}
 </style>
 <script type="application/ld+json">
 {
@@ -791,7 +803,7 @@ border-radius:0;padding:0;text-align:center}
 <h1>Il s’élève.<br>Il s’abaisse.</h1>
 <h2>Le volume suit le liquide.</h2>
 <div class="filet"></div>
-<p class="lead">BIBEON adapte son volume à ce qu’il contient. Replié, il réduit le volume vide à transporter. Pendant la tétée, il peut s’abaisser jusqu’au niveau du liquide pour réduire le volume d’air restant dans le biberon. Lait, eau ou autre boisson adaptée à l’enfant : le principe est le même.</p>
+<p class="lead">BIBEON adapte son volume à ce qu’il contient. Lait, eau ou autre boisson : le principe est le même.</p>
 </div>
 <figure class="notice-photo" style="background:none;border:0;box-shadow:none;padding:0">
 <img src="assets/quatre-tailles.webp" width="1400" height="791" alt="Quatre BIBEON à des hauteurs différentes : le même biberon, du plus replié au plus haut" fetchpriority="high" style="mix-blend-mode:multiply;border-radius:0">
@@ -801,8 +813,8 @@ border-radius:0;padding:0;text-align:center}
 <section aria-label="Le biberon replié" style="background:var(--cream);padding:clamp(34px,4.6vh,62px) 0 0">
 <div class="shell">
 <figure class="md-figure" style="max-width:760px;margin-top:0">
-<img src="assets/hero-cuisine-marbre.webp" width="1400" height="1866" alt="Le BIBEON replié, ouverture libre, et son capuchon retourné posé à côté sur un plan de travail" loading="lazy">
-<figcaption>Replié, il tient dans une poche. Le capuchon se pose à côté, l’ouverture reste libre.</figcaption>
+<img src="assets/hero-cuisine-marbre.webp" width="1400" height="1866" alt="Le flacon replié et, à côté, le bloc bague-tétine posé à l’envers sur son capuchon" loading="lazy">
+<figcaption>Le bloc bague-tétine se retire avant de plier ou de déplier le flacon. Posé à l’envers sur son support, il garde la tétine à l’abri des souillures.</figcaption>
 </figure>
 </div>
 </section>
@@ -815,9 +827,8 @@ border-radius:0;padding:0;text-align:center}
 <h2 class="section-title">Avant de changer son volume :<br>laissez l’air circuler.</h2>
 </div>
 <div class="avant-texte">
-<p>BIBEON ne doit jamais être plié ou déplié lorsque la bague est vissée à fond.</p>
-<p>À vide, retirez le bloc bague-tétine avant de modifier le volume.</p>
-<p>Si BIBEON contient déjà de la poudre ou du liquide, desserrez simplement la bague de quelques tours, sans la retirer, afin de laisser l’air entrer ou sortir sans projection.</p>
+<p><strong>À vide</strong> : retirez le bloc bague-tétine.</p>
+<p><strong>Avec de la poudre ou du liquide</strong> : desserrez la bague de quelques tours, sans la retirer.</p>
 </div>
 <div class="etape-video" style="max-width:620px;margin:clamp(26px,3.4vh,42px) auto 0;aspect-ratio:960/500">
 <video controls loop muted playsinline preload="none" width="960" height="500" poster="assets/geste-ouvrir-avant.jpg" aria-label="Le bloc bague-tétine retiré du biberon avant de changer sa taille">
@@ -838,9 +849,8 @@ border-radius:0;padding:0;text-align:center}
 </figure>
 
 <div class="avant-texte">
-<p>BIBEON n’est pas réservé au lait en poudre. Avec du lait liquide, de l’eau ou une autre boisson adaptée à l’enfant, utilisez-le comme un biberon classique.</p>
-<p>À mesure que le niveau descend, retirez momentanément le biberon de la bouche de bébé, desserrez légèrement la bague et abaissez les soufflets vides jusqu’au niveau du liquide. Revissez ensuite.</p>
-<p><strong>Moins de volume vide dans le biberon. Moins d’air disponible à avaler.</strong></p>
+<p>Pendant la tétée : desserrez la bague, abaissez les soufflets vides jusqu’au liquide, revissez.</p>
+<p><strong>Moins de volume vide, donc moins d’air disponible à avaler.</strong></p>
 </div>
 </div>
 </section>
@@ -852,9 +862,8 @@ border-radius:0;padding:0;text-align:center}
 <h2 class="section-title">Déplier, remplir, mesurer.</h2>
 </div>
 <div class="dosage-carte">
-<p>BIBEON possède neuf soufflets et des repères tous les 30 ml jusqu’à 300 ml.</p>
-<p>Pour lire correctement une graduation, <strong>le corps doit être entièrement déplié</strong>.</p>
-<p>Avec un lait infantile, la quantité d’eau prescrite par le fabricant reste la référence. Ne modifiez jamais la proportion d’eau et de poudre pour atteindre un autre niveau dans le biberon.</p>
+<p>Neuf soufflets, <strong>330 ml utiles</strong>, des repères tous les 30 ml jusqu’à 300.</p>
+<p>Une graduation ne se lit que <strong>corps entièrement déplié</strong>.</p>
 </div>
 </div>
 </section>
@@ -870,9 +879,8 @@ border-radius:0;padding:0;text-align:center}
 <div class="etape-visuel"><img src="assets/etape-1.webp" width="454" height="482" alt="Le biberon replié, ouvert, et la dose de lait en poudre versée à l’intérieur" loading="lazy"></div>
 <div class="etape-num">1</div>
 <h3>Dosez, éventuellement à l’avance</h3>
-<p>Utilisez un BIBEON <strong>propre et parfaitement sec</strong>. Placez la dose de lait en poudre dans le biberon totalement replié, puis refermez-le correctement.</p>
-<p>Jusqu’à 8 mesurettes peuvent tenir dans BIBEON replié.</p>
-<p>Conservez toujours la poudre selon les instructions figurant sur sa boîte. BIBEON ne modifie ni sa durée ni ses conditions de conservation.</p>
+<p>La dose de lait en poudre voyage dans le biberon replié, <strong>propre et parfaitement sec</strong>.</p>
+<details class="plus"><summary>Voir le geste en détail</summary><p>Placez la dose dans le biberon totalement replié, puis refermez-le correctement. Jusqu’à 8 mesurettes peuvent y tenir.</p><p>Conservez toujours la poudre selon les instructions figurant sur sa boîte. BIBEON ne modifie ni sa durée ni ses conditions de conservation.</p></details>
 <div class="etape-video">
 <video width="960" height="500" poster="assets/geste-doser.jpg" controls muted loop playsinline preload="none" aria-label="Le lait en poudre versé dans le biberon replié">
 <source src="assets/geste-doser.mp4" type="video/mp4">
@@ -884,8 +892,8 @@ border-radius:0;padding:0;text-align:center}
 <div class="etape-visuel"><img src="assets/etape-2.webp" width="454" height="482" alt="Le biberon que l’on déplie pour retrouver sa contenance" loading="lazy"></div>
 <div class="etape-num">2</div>
 <h3>Desserrez dans tous les cas, puis dépliez</h3>
-<p>Au moment du repas, desserrez la bague de quelques tours <strong>sans la retirer</strong>. Dépliez ensuite BIBEON entièrement avant toute lecture des graduations.</p>
-<p>Le premier soufflet demande un geste plus marqué : tenez le biberon par ses deux extrémités et arrondissez légèrement le corps d’un côté, puis de l’autre. Une fois le premier soufflet ouvert, les suivants se déplient plus facilement.</p>
+<p>Desserrez la bague de quelques tours, <strong>sans la retirer</strong>. Dépliez entièrement avant de lire une graduation.</p>
+<details class="plus"><summary>Voir le geste en détail</summary><p>Le premier soufflet demande un geste plus marqué : tenez le biberon par ses deux extrémités et arrondissez légèrement le corps d’un côté, puis de l’autre. Une fois le premier soufflet ouvert, les suivants se déplient plus facilement.</p></details>
 <div class="etape-video">
 <video width="960" height="540" controls muted loop playsinline preload="none" aria-label="Dépliage du biberon BIBEON, soufflet par soufflet">
 <source src="assets/geste-deplier.mp4" type="video/mp4">
@@ -897,8 +905,8 @@ border-radius:0;padding:0;text-align:center}
 <div class="etape-visuel"><img src="assets/etape-3.webp" width="454" height="482" alt="De l’eau versée dans le biberon déplié" loading="lazy"></div>
 <div class="etape-num">3</div>
 <h3>Ajoutez l’eau ou le liquide</h3>
-<p>Ajoutez exactement la quantité d’eau prévue par le fabricant de votre lait. Respectez toujours le rapport eau/poudre indiqué sur la boîte : <strong>BIBEON ne change pas le dosage du lait infantile.</strong></p>
-<p>Refermez, puis mélangez vigoureusement. <strong>Les reliefs des soufflets participent au mélange</strong> et aident à défaire les grumeaux visibles.</p>
+<p>Ajoutez la quantité prévue par le fabricant de votre lait. Refermez, puis mélangez.</p>
+<details class="plus"><summary>Voir le geste en détail</summary><p>Respectez toujours le rapport eau/poudre indiqué sur la boîte : <strong>BIBEON ne change pas le dosage du lait infantile.</strong></p><p>Les reliefs des soufflets participent au mélange et aident à défaire les grumeaux visibles.</p><p>Avec un autre contenu — lait liquide, eau, jus, potage —, remplissez simplement jusqu’au niveau voulu.</p></details>
 <div class="etape-video">
 <video width="960" height="500" poster="assets/geste-ajouter-eau.jpg" controls muted loop playsinline preload="none" aria-label="L’eau ajoutée par-dessus le lait en poudre">
 <source src="assets/geste-ajouter-eau.mp4" type="video/mp4">
@@ -909,9 +917,8 @@ border-radius:0;padding:0;text-align:center}
 </div>
 <div class="dosage-carte" style="display:block;margin-top:clamp(24px,3vh,40px)">
 <h2 style="font-family:&quot;Playfair Display&quot;,Georgia,serif;font-weight:500;font-size:clamp(23px,2.3vw,30px);line-height:1.14;color:var(--sage-dark);margin:0 0 15px">Quelle quantité d’eau ajouter&#8239;?</h2>
-<p>Lorsque la poudre est déjà dans BIBEON, le niveau du lait reconstitué est supérieur au niveau de l’eau seule : la poudre diluée occupe elle aussi un volume.</p>
-<p><strong>La quantité d’eau indiquée par le fabricant du lait reste toujours la référence.</strong></p>
-<p>Pour un lait préparé à raison d’une mesurette pour 30 ml d’eau, BIBEON permet de retenir un repère simple :</p>
+<p>La poudre déjà dans le biberon occupe un volume : le lait reconstitué monte plus haut que l’eau seule.</p>
+<p><strong>La quantité d’eau du fabricant reste la référence.</strong> Pour un lait à une mesurette pour 30 ml :</p>
 <ul class="table-eau" style="border-left:0;padding-left:0">
 <li><b>2 mesurettes</b><span>60 ml d’eau — le lait reconstitué arrive environ <strong>¼ de soufflet</strong> au-dessus du niveau de l’eau seule.</span></li>
 <li><b>4 mesurettes</b><span>120 ml d’eau — environ <strong>½ soufflet</strong> au-dessus.</span></li>
@@ -922,9 +929,8 @@ border-radius:0;padding:0;text-align:center}
 </div>
 <div class="dosage-carte" style="display:block;margin-top:clamp(24px,3vh,40px)">
 <h2 style="font-family:&quot;Playfair Display&quot;,Georgia,serif;font-weight:500;font-size:clamp(23px,2.3vw,30px);line-height:1.14;color:var(--sage-dark);margin:0 0 15px">Autre moyen : repérez votre niveau à la maison.</h2>
-<p>Préparez une fois votre biberon normalement chez vous, eau puis poudre, et observez le niveau atteint dans BIBEON une fois le lait reconstitué.</p>
-<p>En déplacement, lorsque la poudre est déjà dans BIBEON et que vous ajoutez l’eau en second, il suffit de retrouver ce même niveau.</p>
-<p>Vous ne changez ni la quantité d’eau ni le nombre de mesurettes : vous reproduisez simplement le niveau du lait reconstitué que vous avez déjà vérifié chez vous.</p>
+<p>Préparez une fois le biberon chez vous, eau puis poudre, et repérez le niveau atteint.</p>
+<p>En déplacement, retrouvez simplement ce niveau. <strong>Ni la quantité d’eau ni le nombre de mesurettes ne changent.</strong></p>
 </div>
 <p class="sterilisation"><strong>La dose dedans.<br>L’eau au moment du repas.</strong></p>
 </div>
@@ -951,15 +957,14 @@ border-radius:0;padding:0;text-align:center}
 <article><h3>Appuyez</h3><p>Appuyez verticalement. Le mamelon se raccourcit tandis que sa base souple s’élargit légèrement pour le recevoir à l’intérieur d’elle-même.</p></article>
 <article><h3>Posez, appuyez, vérifiez</h3><p>Le capuchon n’a pas de pas de vis : il vient se poser sur le balcon de la bague. Appuyez pour l’asseoir dessus, puis tournez-le d’un quart de tour — s’il ne joue plus, il est serré.</p></article>
 </div>
-<div class="fermeture-alerte"><strong>Le toit intérieur du capuchon vient alors obturer l’orifice de la tétine.</strong><br>La tétine doit rester droite dans son axe, jamais se replier sur le côté.</div>
+<div class="fermeture-alerte">Le toit intérieur du capuchon obture l’orifice de la tétine. Une tétine repliée sur le côté laisse son orifice dégagé, et l’air entre.</div>
 
-<p class="sterilisation" style="max-width:60ch;margin-inline:auto"><strong>C’est cette fermeture verticale qui referme le contenant</strong>, et elle seule. Tétine enfoncée à l’intérieur d’elle-même, comme une chaussette que l’on retourne, orifice obturé par le toit du capuchon. Une tétine repliée sur le côté laisse son orifice dégagé, et l’air entre.</p>
+<p class="sterilisation" style="max-width:60ch;margin-inline:auto"><strong>C’est cette fermeture verticale qui referme le contenant</strong> — tétine enfoncée à l’intérieur d’elle-même, comme une chaussette que l’on retourne.</p>
 
-<div class="sechage-express" style="margin-top:clamp(24px,3vh,36px)">
+<div class="sechage-express" style="margin-top:clamp(34px,4.4vh,58px)">
 <h3>L’obturateur en moins.</h3>
-<p>Sur un biberon classique, un disque obturateur se glisse sous le bloc bague-tétine pour fermer le biberon pendant le transport. BIBEON n’en a pas besoin : la tétine rentrée dans sa base, le capuchon posé sur son balcon et appuyé, le toit intérieur obture directement l’orifice.</p>
-<p>Une pièce de moins à emporter, à manipuler, à retrouver au fond du sac.</p>
-<p><strong>C’est un geste à prendre.</strong> Il devient vite machinal — et une fois acquis, il vous donne l’herméticité durant vos déplacements : contre les fuites, et pour la conservation de la poudre le cas échéant.</p>
+<p>Un biberon classique demande un disque obturateur pour voyager fermé. BIBEON n’en a pas besoin : le capuchon obture directement l’orifice.</p>
+<p><strong>Le geste devient machinal</strong> — et il vous donne l’herméticité durant vos déplacements : contre les fuites, et pour la poudre le cas échéant.</p>
 </div>
 </div>
 </section>
@@ -995,7 +1000,7 @@ border-radius:0;padding:0;text-align:center}
 <h2 class="section-title">Le fond remonte jusqu’à vous.</h2>
 <figure class="md-figure" style="max-width:560px">
 <img src="assets/doigt-au-fond-cuisine.webp" width="1400" height="1866" alt="Un doigt entre dans le biberon replié posé sur un plan de travail et touche le fond" loading="lazy">
-<figcaption>BIBEON replié, le fond remonte jusqu’à votre doigt. C’est ce qu’aucune brosse n’atteint dans un biberon rigide.</figcaption>
+<figcaption>Son architecture pliable permet un nettoyage manuel : depuis le fond, puis au niveau de chaque soufflet déplié en remontant jusqu’au col.</figcaption>
 </figure>
 
 
@@ -1024,7 +1029,7 @@ border-radius:0;padding:0;text-align:center}
 </article>
 </div>
 <p class="sterilisation"><strong>BIBEON doit être parfaitement sec</strong> avant d’y placer une dose de poudre.</p>
-<p class="sterilisation">La stérilisation systématique d’un biberon n’est pas nécessaire. Si une désinfection est souhaitée pour BIBEON, utilisez uniquement une méthode à froid compatible avec le produit. <a href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser un biberon</a></p>
+<p class="sterilisation">La stérilisation systématique n’est pas nécessaire. Pour désinfecter, une méthode à froid compatible suffit. <a href="nettoyer-desinfecter-steriliser-biberon.html">En savoir plus</a></p>
 <div class="entretien-videos">
 <div class="etape-video" style="max-width:520px;margin:clamp(24px,3vh,38px) auto 0;aspect-ratio:464/688">
 <video controls loop muted playsinline preload="none" width="464" height="688" poster="assets/geste-goupillon-soufflets.jpg" aria-label="Le goupillon passé dans le biberon : les poils s’ouvrent dans chaque creux">
