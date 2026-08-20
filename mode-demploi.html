@@ -918,6 +918,38 @@ footer .brand svg.brand-logo{
   footer .brand svg.brand-logo{height:27px}
 }
 
+
+/* ═══ NETTOYAGE — DEUX VISUELS ÉQUILIBRÉS ═══ */
+.notice-page #nettoyage .nettoyage-duo{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:clamp(24px,3vw,44px);
+  max-width:980px;
+  margin:clamp(36px,5vh,64px) auto 0;
+  align-items:start;
+}
+.notice-page #nettoyage .nettoyage-duo figure{
+  margin:0;
+}
+.notice-page #nettoyage .nettoyage-duo img{
+  width:100%;
+  height:auto;
+  max-height:620px;
+  object-fit:contain;
+  border-radius:var(--radius);
+  box-shadow:var(--shadow-m);
+  background:var(--beige-2);
+}
+@media (max-width:760px){
+  .notice-page #nettoyage .nettoyage-duo{
+    grid-template-columns:1fr;
+    max-width:560px;
+  }
+  .notice-page #nettoyage .nettoyage-duo img{
+    max-height:none;
+  }
+}
+
 </style>
  <script type="application/ld+json">
 {
@@ -1201,24 +1233,31 @@ footer .brand svg.brand-logo{
 
 <!-- ══════════ NETTOYER ══════════ -->
 <section class="geste" id="nettoyage">
-<div class="shell geste-grid">
-<div class="geste-texte">
-<p class="geste-num">NETTOYER</p>
-<h2 class="geste-titre">Accéder là où un biberon rigide ne le permet pas</h2>
-<p>Malgré sa paroi à soufflets, BIBEON se nettoie à la main avec un goupillon standard.</p>
-<p>Parce qu’il se replie, vous pouvez accéder directement au fond du flacon, puis remonter soufflet après soufflet jusqu’au col pour atteindre précisément une zone en particulier, à la main ou avec le goupillon.</p>
-<p><strong>Lave-vaisselle : interdit.</strong></p>
-</div>
-<div class="geste-media">
-<img src="assets/goupillon-soufflets.webp" width="1400" height="1877" alt="Le goupillon à l’intérieur du biberon : les poils s’ouvrent dans le creux de chaque soufflet" loading="lazy">
-</div>
-</div>
-<div class="shell">
-<figure class="geste-media" style="max-width:720px;margin-inline:auto">
-<img src="assets/doigt-au-fond-cuisine.webp" width="1200" height="1600" alt="Le biberon replié, le doigt atteignant le fond" loading="lazy">
-<figcaption class="geste-legende">Replié, le fond et chaque soufflet deviennent directement accessibles.</figcaption>
-</figure>
-</div>
+  <div class="shell">
+    <div class="geste-texte center" style="max-width:760px;margin-inline:auto;text-align:center">
+      <p class="geste-num">NETTOYER</p>
+      <h2 class="geste-titre">Accéder là où un biberon rigide ne le permet pas</h2>
+      <p>Malgré sa paroi à soufflets, BIBEON se nettoie à la main avec un goupillon standard.</p>
+      <p>Parce qu’il se replie, vous pouvez accéder directement au fond du flacon, puis remonter soufflet après soufflet jusqu’au col pour atteindre précisément une zone en particulier, à la main ou avec le goupillon.</p>
+      <p><strong>Lave-vaisselle : interdit.</strong></p>
+    </div>
+
+    <div class="nettoyage-duo">
+      <figure class="geste-media">
+        <img src="assets/goupillon-soufflets.webp" width="1400" height="1877"
+             alt="Le goupillon à l’intérieur du biberon : les poils s’ouvrent dans le creux de chaque soufflet"
+             loading="lazy">
+        <figcaption class="geste-legende">Le goupillon atteint les creux des soufflets.</figcaption>
+      </figure>
+
+      <figure class="geste-media">
+        <img src="assets/doigt-au-fond-cuisine.webp" width="1200" height="1600"
+             alt="Le biberon replié, le doigt atteignant le fond"
+             loading="lazy">
+        <figcaption class="geste-legende">Replié, le fond et chaque soufflet deviennent directement accessibles.</figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
 <section class="aide">
