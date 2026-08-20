@@ -866,6 +866,10 @@ line-height:1.6;color:var(--text)}
   margin-right:auto;
 }
 
+
+/* la troisième ligne du titre : plus petite, en italique, sauge — une chute, pas un troisième bloc */
+.notice-hero h1 .h1-chute{display:block;margin-top:.18em;font-style:italic;
+font-size:.56em;line-height:1.05;color:var(--sage)}
 </style>
  <script type="application/ld+json">
 {
@@ -928,13 +932,13 @@ line-height:1.6;color:var(--text)}
 <div class="shell notice-grid">
 <div>
 <p class="overline">Mode d’emploi</p>
-<h1>Il s’élève.<br/>Il s’abaisse.<br/>Il vide l'air.</h1>
+<h1>Il s’élève.<br/>Il s’abaisse.<br/><em class="h1-chute">Il vide l’air.</em></h1>
 <h2>Son volume suit le liquide.</h2>
 <div class="filet"></div>
 <p class="lead">Les particularités de BIBEON, en quelques gestes.</p>
 </div>
 <figure class="notice-photo" style="background:none;border:0;box-shadow:none;padding:0">
-<img src="assets/quatre-tailles.webp" width="1400" height="791" alt="Quatre BIBEON à des hauteurs différentes : le même biberon, du plus replié au plus haut" fetchpriority="high" style="mix-blend-mode:multiply;border-radius:0">
+<img src="assets/quatre-tailles.webp" width="1400" height="791" alt="Quatre BIBEON à des hauteurs différentes : le même biberon, du plus replié au plus haut" fetchpriority="high" style="display:block;width:100%;height:auto">
 </figure>
 </div>
 </section>
@@ -961,8 +965,8 @@ line-height:1.6;color:var(--text)}
 <h3 class="geste-sous">Déplier BIBEON à vide</h3>
 </div>
 <div class="geste-media">
-<video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/geste-ouvrir-deplier.jpg" aria-label="BIBEON déplié à vide">
-<source src="assets/geste-ouvrir-deplier.mp4" type="video/mp4">
+<video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/geste-deplier-vide.jpg" aria-label="BIBEON déplié à vide">
+<source src="assets/geste-deplier-vide.mp4" type="video/mp4">
 </video>
 </div>
 </div>
@@ -972,7 +976,9 @@ line-height:1.6;color:var(--text)}
 <h3 class="geste-sous">Replier BIBEON à vide</h3>
 </div>
 <div class="geste-media">
-<img src="assets/hero-cuisine-marbre.webp" width="1400" height="1866" alt="BIBEON replié" loading="lazy">
+<video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/geste-plier-vide.jpg" aria-label="BIBEON replié à vide, soufflet par soufflet">
+<source src="assets/geste-plier-vide.mp4" type="video/mp4">
+</video>
 </div>
 </div>
 </div>
@@ -1002,7 +1008,9 @@ line-height:1.6;color:var(--text)}
 <p>Pendant la tétée, retirez le biberon de la bouche de bébé, desserrez la bague sans la retirer, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p>
 </div>
 <div class="geste-media">
-<img src="assets/biberon-main.webp" width="1024" height="1024" alt="BIBEON rempli, soufflets abaissés jusqu’au niveau du lait" loading="lazy">
+<video controls loop muted playsinline preload="none" width="1280" height="720" poster="assets/geste-plier-rempli.jpg" aria-label="BIBEON rempli, soufflets abaissés jusqu’au niveau du lait">
+<source src="assets/geste-plier-rempli.mp4" type="video/mp4">
+</video>
 </div>
 </div>
 </div>
@@ -1018,8 +1026,8 @@ line-height:1.6;color:var(--text)}
 <p>Versez directement dans le flacon replié la quantité de poudre nécessaire, jusqu’à <strong>8 mesurettes maximum</strong>.</p>
 </div>
 <div class="geste-media">
-<video controls loop muted playsinline preload="none" width="960" height="500" poster="assets/geste-doser.jpg" aria-label="Le lait en poudre versé dans BIBEON replié">
-<source src="assets/geste-doser.mp4" type="video/mp4">
+<video controls loop muted playsinline preload="none" width="960" height="500" poster="assets/geste-dosera.jpg" aria-label="Le lait en poudre versé dans BIBEON replié">
+<source src="assets/geste-dosera.mp4" type="video/mp4">
 </video>
 </div>
 </div>
@@ -1054,7 +1062,7 @@ line-height:1.6;color:var(--text)}
 <p>Ajoutez ensuite l’eau dans le flacon, puis revissez le bloc.</p>
 </div>
 <div class="geste-media">
-<img src="assets/hero-cuisine-marbre.webp" width="1400" height="1866" alt="Le flacon replié et le bloc bague-tétine-capuchon posé à l’envers" loading="lazy">
+<img src="assets/geste-preparer-exterieur.jpg" width="1216" height="1632" alt="Le BIBEON replié, sa dose de poudre à l’intérieur, posé sur une table dressée en terrasse" loading="lazy">
 </div>
 </div>
 </section>
@@ -1077,6 +1085,10 @@ line-height:1.6;color:var(--text)}
 
 <div class="shell">
 <div class="tableau-dose">
+<figure class="geste-media" style="max-width:380px;margin:0 auto clamp(26px,3.4vh,42px)">
+<img src="assets/poudre-dans-flacon-deplie.jpg" width="1440" height="1376" alt="Le flacon déplié, la poudre occupant le fond sur deux soufflets" loading="lazy">
+<figcaption class="geste-legende">La poudre occupe déjà deux soufflets.</figcaption>
+</figure>
 <h3 class="geste-sous" style="text-align:center">Repères d’eau</h3>
 <table class="table-dose">
 <thead><tr><th>Mesurettes</th><th>Eau prévue</th><th>Remplissez jusqu’à</th></tr></thead>
@@ -1145,16 +1157,12 @@ line-height:1.6;color:var(--text)}
 <p><strong>Lave-vaisselle : interdit.</strong></p>
 </div>
 <div class="geste-media">
-<video controls loop muted playsinline preload="none" width="720" height="376" poster="assets/geste-goupillon-reel.jpg" aria-label="Nettoyage de BIBEON avec un goupillon standard">
-<source src="assets/geste-goupillon-reel.mp4" type="video/mp4">
-</video>
+<img src="assets/goupillon-soufflets.webp" width="1400" height="1877" alt="Le goupillon à l’intérieur du biberon : les poils s’ouvrent dans le creux de chaque soufflet" loading="lazy">
 </div>
 </div>
 <div class="shell">
 <figure class="geste-media" style="max-width:720px;margin-inline:auto">
-<video controls loop muted playsinline preload="none" width="720" height="376" poster="assets/geste-doigt-reel.jpg" aria-label="BIBEON replié permettant d’accéder directement à une zone des soufflets">
-<source src="assets/geste-doigt-reel.mp4" type="video/mp4">
-</video>
+<img src="assets/doigt-au-fond-cuisine.webp" width="1400" height="1866" alt="Le biberon replié, le doigt atteignant le fond" loading="lazy">
 <figcaption class="geste-legende">Replié, le fond et chaque soufflet deviennent directement accessibles.</figcaption>
 </figure>
 </div>
@@ -1175,7 +1183,7 @@ line-height:1.6;color:var(--text)}
 <footer id="contact">
 <div class="shell footer-grid">
 <div class="footer-col">
-<a aria-label="BIBEON — accueil" class="brand" href="/#accueil"><svg aria-label="BIBEON" class="brand-logo" role="img" viewbox="0 0 901 227"><g fill="currentColor" fill-rule="evenodd" transform="translate(0,227) scale(0.1,-0.1)"><path d="M8830 2245 c-80 -18 -197 -59 -270 -96 -155 -78 -271 -212 -299 -347
+<a aria-label="BIBEON — accueil" class="brand" href="/#accueil"><svg aria-label="BIBEON" class="brand-logo" role="img" viewBox="0 0 901 227"><g fill="currentColor" fill-rule="evenodd" transform="translate(0,227) scale(0.1,-0.1)"><path d="M8830 2245 c-80 -18 -197 -59 -270 -96 -155 -78 -271 -212 -299 -347
 -12 -57 -15 -274 -4 -285 3 -4 27 31 53 78 57 100 162 238 222 290 47 40 171
 125 183 125 4 0 -42 -51 -104 -112 -61 -62 -127 -135 -147 -163 -39 -54 -128
 -224 -121 -231 8 -8 322 96 387 128 107 52 188 146 236 274 30 80 48 221 37
