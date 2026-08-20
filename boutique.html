@@ -1179,6 +1179,30 @@ line-height:1.6;color:var(--sage)}
   .ensortie-grid{grid-template-columns:1fr;gap:clamp(26px,4vh,38px)}
   .ensortie-photo{max-width:420px;margin-inline:auto;aspect-ratio:3/4}
 }
+
+/* ═══ BOUTIQUE — PRODUITS IMMÉDIATEMENT APRÈS LE HERO ═══ */
+.boutique-tete{
+  max-width:760px;
+  margin:0 auto clamp(34px,4.5vh,56px);
+  text-align:center;
+}
+.boutique-tete h2{
+  margin:0;
+  font-family:"Playfair Display",Georgia,serif;
+  font-weight:400;
+  font-size:clamp(34px,4vw,54px);
+  line-height:1.05;
+  color:var(--sage-dark);
+}
+.boutique-tete > p:last-child{
+  margin:16px auto 0;
+  max-width:52ch;
+  font-family:Montserrat,sans-serif;
+  font-size:15.5px;
+  line-height:1.75;
+  color:var(--text);
+}
+
 </style>
 </head>
 <body>
@@ -1223,7 +1247,77 @@ line-height:1.6;color:var(--sage)}
 <div class="bhero-texte">
 <p class="bhero-sur">La boutique</p>
 <h1>BIBEON<br/>vous attend.</h1>
-<p class="bhero-chapo">Le monde n’attend que vous.</p>
+<p class="bhero-chapo">Le monde n’attend que vous.</p
+
+<!-- ══════════ OFFRES — remontées juste après le hero ══════════ -->
+<section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
+
+<div class="shell" id="offres" style="padding:clamp(56px,7vh,88px) 0 clamp(72px,10vh,120px)">
+<div class="boutique-tete">
+<p class="overline">Choisir</p>
+<h2>Votre BIBEON.</h2>
+<p>À l’unité, en duo ou en lot — choisissez la formule qui vous accompagne.</p>
+</div>
+<div class="offres">
+<article class="offre">
+<figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
+<p class="offre-occasion">La petite course</p>
+<h3>Un BIBEON</h3>
+<p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois et plus. Vendu vide.</p>
+<div class="nuancier" data-image="1" data-max="1">
+<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Menthe</span></p>
+<div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="lin" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
+</div>
+<div class="offre-bas">
+<span class="offre-prix">35 €<small>livraison offerte</small></span>
+<p class="offre-cta"><a href="https://py.pl/IDHpe" rel="noopener" target="_blank">Commander</a></p>
+</div>
+</article>
+
+<article class="offre">
+<figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
+<p class="offre-occasion">L’après-midi</p>
+<h3>Le duo</h3>
+<p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
+<div class="nuancier nuancier-duo" data-image="1" data-paires='{"Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9","Abricot+Lilas":"https://py.pl/7rI7klD11nU","Menthe+Menthe":"https://www.paypal.com/instantcommerce/checkout/LNXRMKC353S42","Abricot+Abricot":"https://www.paypal.com/instantcommerce/checkout/U2TW2UVM32WZJ","Lilas+Lilas":"https://www.paypal.com/instantcommerce/checkout/AFGST29KHTJN6"}'>
+<p class="nuancier-titre">Premier biberon<br/><span class="nuancier-choix" data-rang="1">à choisir</span></p>
+<div class="pastilles" data-rang="1"><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
+<p class="nuancier-titre nuancier-titre-2">Second biberon<br/><span class="nuancier-choix" data-rang="2">à choisir</span></p>
+<div class="pastilles" data-rang="2"><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
+<p class="nuancier-note">Rose et lin se commandent à l’unité ou dans le lot de cinq.</p>
+</div>
+<div class="offre-bas">
+<span class="offre-prix">62 €<small>soit 31 € l’unité · livraison offerte</small></span>
+<p class="offre-cta"><a aria-disabled="true">Choisissez deux coloris</a></p>
+</div>
+</article>
+
+<article class="offre">
+<figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
+<p class="offre-occasion">Le week-end</p>
+<h3>Le lot de trois</h3>
+<p>Trois repas dosés la veille : la journée entière tient dans le sac à main.</p>
+<div class="offre-bas">
+<span class="offre-prix">87 €<small>soit 29 € l’unité · livraison offerte</small></span>
+<p class="offre-cta"><a href="https://py.pl/2Oc3yYLWaB7" rel="noopener" target="_blank">Commander</a></p>
+</div>
+</article>
+
+<article class="offre">
+<figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
+<p class="offre-occasion">Le voyage</p>
+<h3>Le lot de cinq</h3>
+<p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p>
+<div class="offre-bas">
+<span class="offre-prix">125 €<small>soit 25 € l’unité · livraison offerte</small></span>
+<p class="offre-cta"><a href="https://py.pl/1XG8bj" rel="noopener" target="_blank">Commander</a></p>
+</div>
+</article>
+</div>
+
+</div>
+</section>
+>
 <p class="bhero-cta"><a href="#offres">Voir les offres</a></p>
 </div>
 </div>
@@ -1330,68 +1424,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 </section>
 
-<section aria-label="Boutique" class="boutique" id="boutique" style="background:var(--white)">
 
-<div class="shell" id="offres" style="padding:clamp(20px,3vh,40px) 0 clamp(80px,11vh,140px)">
-<div class="offres">
-<article class="offre">
-<figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
-<p class="offre-occasion">La petite course</p>
-<h3>Un BIBEON</h3>
-<p>Le biberon nomade, avec sa tétine en silicone alimentaire, débit 6 mois et plus. Vendu vide.</p>
-<div class="nuancier" data-image="1" data-max="1">
-<p class="nuancier-titre">Coloris<br/><span class="nuancier-choix">Menthe</span></p>
-<div class="pastilles"><button aria-label="Menthe" aria-pressed="true" class="pastille" data-coloris="Menthe" data-fichier="menthe" data-lien="https://py.pl/IDHpe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" data-lien="https://py.pl/2HC5kM" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" data-lien="https://py.pl/EBa9r" style="--teinte:#b7a0c7" type="button"></button><button aria-label="Rose" aria-pressed="false" class="pastille" data-coloris="Rose" data-fichier="rose" data-lien="https://py.pl/1q7xE7" style="--teinte:#d0a7bc" type="button"></button><button aria-label="Lin" aria-pressed="false" class="pastille" data-coloris="Lin" data-fichier="lin" data-lien="https://py.pl/25KCmg" style="--teinte:#a5c2d4" type="button"></button></div>
-</div>
-<div class="offre-bas">
-<span class="offre-prix">35 €<small>livraison offerte</small></span>
-<p class="offre-cta"><a href="https://py.pl/IDHpe" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
-<p class="offre-occasion">L’après-midi</p>
-<h3>Le duo</h3>
-<p>Celui de la sortie, et celui qui reste prêt dans le sac.</p>
-<div class="nuancier nuancier-duo" data-image="1" data-paires='{"Menthe+Abricot":"https://py.pl/22McOA","Menthe+Lilas":"https://py.pl/1ofoe9","Abricot+Lilas":"https://py.pl/7rI7klD11nU","Menthe+Menthe":"https://www.paypal.com/instantcommerce/checkout/LNXRMKC353S42","Abricot+Abricot":"https://www.paypal.com/instantcommerce/checkout/U2TW2UVM32WZJ","Lilas+Lilas":"https://www.paypal.com/instantcommerce/checkout/AFGST29KHTJN6"}'>
-<p class="nuancier-titre">Premier biberon<br/><span class="nuancier-choix" data-rang="1">à choisir</span></p>
-<div class="pastilles" data-rang="1"><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
-<p class="nuancier-titre nuancier-titre-2">Second biberon<br/><span class="nuancier-choix" data-rang="2">à choisir</span></p>
-<div class="pastilles" data-rang="2"><button aria-label="Menthe" aria-pressed="false" class="pastille" data-coloris="Menthe" data-fichier="menthe" style="--teinte:#acd7c0" type="button"></button><button aria-label="Abricot" aria-pressed="false" class="pastille" data-coloris="Abricot" data-fichier="abricot" style="--teinte:#e2b59d" type="button"></button><button aria-label="Lilas" aria-pressed="false" class="pastille" data-coloris="Lilas" data-fichier="lilas" style="--teinte:#b7a0c7" type="button"></button></div>
-<p class="nuancier-note">Rose et lin se commandent à l’unité ou dans le lot de cinq.</p>
-</div>
-<div class="offre-bas">
-<span class="offre-prix">62 €<small>soit 31 € l’unité · livraison offerte</small></span>
-<p class="offre-cta"><a aria-disabled="true">Choisissez deux coloris</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
-<p class="offre-occasion">Le week-end</p>
-<h3>Le lot de trois</h3>
-<p>Trois repas dosés la veille : la journée entière tient dans le sac à main.</p>
-<div class="offre-bas">
-<span class="offre-prix">87 €<small>soit 29 € l’unité · livraison offerte</small></span>
-<p class="offre-cta"><a href="https://py.pl/2Oc3yYLWaB7" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-
-<article class="offre">
-<figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
-<p class="offre-occasion">Le voyage</p>
-<h3>Le lot de cinq</h3>
-<p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p>
-<div class="offre-bas">
-<span class="offre-prix">125 €<small>soit 25 € l’unité · livraison offerte</small></span>
-<p class="offre-cta"><a href="https://py.pl/1XG8bj" rel="noopener" target="_blank">Commander</a></p>
-</div>
-</article>
-</div>
-
-</div>
-</section>
 
 
 <!-- ══════════ EN SORTIE — l'échelle, par une main ══════════ -->
