@@ -2126,5 +2126,22 @@ if(a) a.textContent=new Date().getFullYear();})();
   window.addEventListener('scroll', maj, {passive:true}); maj();
 })();
 </script>
+   <script>
+(function () {
+  var films = document.querySelectorAll('video[data-play-visible]');
+  if (!films.length) return;
+  if (!('IntersectionObserver' in window)) {
+    films.forEach(function (v) { v.play().catch(function () {}); });
+    return;
+  }
+  var oeil = new IntersectionObserver(function (entrees) {
+    entrees.forEach(function (e) {
+      if (e.isIntersecting) { e.target.play().catch(function () {}); }
+      else { e.target.pause(); }
+    });
+  }, { rootMargin: '200px 0px' });
+  films.forEach(function (v) { oeil.observe(v); });
+})();
+</script>
 </body>
 </html>
