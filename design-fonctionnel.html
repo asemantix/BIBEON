@@ -1094,7 +1094,11 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 </style>
 <style>
 /* ── réglages propres à cette page — mêmes variables que la charte ── */
-.hero.hero-eclipse{background:var(--navy);min-height:min(78vh,720px)}
+.hero.hero-eclipse{background:#12161a;min-height:min(84vh,780px)}
+.hero-eclipse .hero-fond{filter:none;object-position:38% center}
+.hero-eclipse .hero-voile{background:
+linear-gradient(100deg,rgba(10,13,16,.88) 0%,rgba(10,13,16,.66) 30%,rgba(10,13,16,.24) 54%,rgba(10,13,16,0) 78%),
+linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 .hero-eclipse h1{max-width:16ch}
 .hero-triade{margin:34px 0 0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-style:italic;font-size:clamp(20px,2vw,28px);line-height:1.5;color:#cfe0b8}
@@ -1140,6 +1144,8 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 
 <!-- ══════════ 1 · HERO ══════════ -->
 <section class="hero hero-eclipse" id="accueil">
+<img alt="Un BIBEON menthe devant un mur d’accessoires de puériculture pétrifiés dans la pierre." class="hero-fond" src="assets/eclipse-accessoires-menthe.webp"/>
+<div aria-hidden="true" class="hero-voile"></div>
 <div class="shell hero-contenu">
 <p class="overline">Design fonctionnel</p>
 <h1>L’Éclipse<br/>des accessoires</h1>
