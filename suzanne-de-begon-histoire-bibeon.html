@@ -723,6 +723,9 @@ transition:background .2s ease}
 .nav-achat:hover{background:var(--sage)}
 @media (max-width:1080px){.nav-links{display:none}}
 @media (max-width:520px){.nav-achat{padding:9px 16px;font-size:10.5px;letter-spacing:.1em}}
+
+/* la page courante se marque dans le menu */
+.nav-links a[aria-current="page"]{color:var(--sage-dark);border-color:var(--sage-dark)}
 </style>
 </head>
 
@@ -743,14 +746,13 @@ transition:background .2s ease}
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
+<a href="design-fonctionnel.html">Design fonctionnel</a>
 <a href="mode-demploi.html">Mode d’emploi</a>
 <a href="legerete.html">La légèreté</a>
-<a href="migration.html">Migration</a>
 <a href="qui-sommes-nous.html">Qui sommes-nous</a>
 <a href="contact.html">Contact</a>
 </nav>
 <div class="nav-tel">
-<a href="tel:+33611768632"><b>Utilisation</b> 06 11 76 86 32</a>
 <a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
 </div>
 <div class="nav-outils">
@@ -931,6 +933,7 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <a href="voyage.html">Voyager avec bébé</a>
 <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
 <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
+<a href="migration.html">Migration</a>
 <a href="conseils.html">Nos conseils</a>
 </div>
 <div class="footer-col">
