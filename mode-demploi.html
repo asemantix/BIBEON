@@ -953,6 +953,13 @@ footer .brand svg.brand-logo{
 .lien-discret{margin:28px 0 0;text-align:center}
 .lien-discret a{font-family:Montserrat,sans-serif;font-size:13.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dark);text-decoration:none;padding-bottom:5px;border-bottom:1px solid rgba(110,126,97,.34);transition:border-color .2s}
 .lien-discret a:hover{border-color:var(--sage-dark)}
+
+/* les deux fermetures, cote a cote */
+.fermeture-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,44px);
+max-width:820px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
+.fermeture-duo figure{margin:0}
+.fermeture-duo video{width:100%;height:auto}
+@media (max-width:700px){.fermeture-duo{grid-template-columns:1fr;max-width:420px}}
 </style>
  <script type="application/ld+json">
 {
@@ -1152,24 +1159,37 @@ footer .brand svg.brand-logo{
 </div>
 
 <!-- ══════════ LE CAPUCHON PLAT — FERMER LE CAPUCHON ══════════ -->
-<div class="shell geste-grid visuel-gauche" id="fermeture" style="margin-top:clamp(46px,6vh,84px)">
-<div class="geste-texte">
+<div class="shell" id="fermeture" style="margin-top:clamp(46px,6vh,84px)">
+<div class="geste-texte center" style="max-width:760px;margin-inline:auto;text-align:center">
 <p class="geste-num">LE CAPUCHON PLAT</p>
 <h2 class="geste-titre">Fermer le capuchon</h2>
-<p>Posez le capuchon bien droit, <strong>verticalement sur la tétine</strong>, puis appuyez.</p>
+<p>Posez le capuchon bien droit, <strong>verticalement sur l’orifice de la tétine</strong>, puis appuyez.</p>
+<p>Maintenez la tétine droite dans son axe pendant qu’elle s’enfonce, puis poursuivez la pression jusqu’à fermeture complète.</p>
+</div>
+<div class="fermeture-duo">
+<figure class="geste-media">
+<video controls loop muted playsinline preload="none" width="464" height="688" poster="assets/geste-fermer-tetine.webp" aria-label="Bonne fermeture : la tétine s’enfonce droite dans son axe">
+<source src="assets/geste-fermer-tetine.mp4" type="video/mp4">
+</video>
+<figcaption class="geste-legende">Bonne fermeture — la tétine s’enfonce droite dans son axe.</figcaption>
+</figure>
+<figure class="geste-media">
+<video controls loop muted playsinline preload="none" width="720" height="1066" poster="assets/geste-fermeture-de-travers.webp" aria-label="Mauvaise fermeture : la tétine se couche sur le côté">
+<source src="assets/geste-fermeture-de-travers.mp4" type="video/mp4">
+</video>
+<figcaption class="geste-legende">Mauvaise fermeture — la tétine s’est couchée sur le côté.</figcaption>
+</figure>
+</div>
+<div class="geste-texte center" style="max-width:760px;margin:clamp(34px,4.4vh,54px) auto 0;text-align:center">
+<h3 class="geste-sous">À vérifier</h3>
 <p>La tétine doit s’enfoncer droite dans son axe. <strong>Elle ne doit pas se coucher sur le côté.</strong></p>
-<p>Maintenez la pression jusqu’à ce que le mamelon soit complètement enfoncé dans sa base.</p>
-<p>À l’ouverture, posez le bloc bague–tétine–capuchon à l’envers, sur le capuchon plat.</p>
+<p>Si elle s’est repliée latéralement, retirez le capuchon et recommencez la fermeture.</p>
+<h3 class="geste-sous" style="margin-top:clamp(26px,3.4vh,40px)">À l’ouverture</h3>
+<p>Posez le bloc bague–tétine–capuchon à l’envers, sur le capuchon plat.</p>
 <p>Si la tétine reste enfoncée, effleurez son côté avec le bord du capuchon : elle reprend sa position.</p>
 <p class="lien-discret"><a href="design-fonctionnel.html#capuchon">Pourquoi ce capuchon est-il plat ? → Design fonctionnel</a></p>
 </div>
-<div class="geste-media">
-<video controls loop muted playsinline preload="none" width="464" height="688" poster="assets/geste-fermer-tetine.webp" aria-label="Fermeture verticale du capuchon : la tétine s’enfonce à l’intérieur d’elle-même">
-<source src="assets/geste-fermer-tetine.mp4" type="video/mp4">
-</video>
 </div>
-</div>
-
 <div class="shell">
 <p class="note-large">Conservez BIBEON pré-dosé, à l’abri de la lumière et de l’humidité, dans son pochon, un sac ou un placard.</p>
 </div>
