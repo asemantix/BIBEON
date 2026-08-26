@@ -1120,6 +1120,11 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 
 /* la page courante se marque dans le menu */
 .nav-links a[aria-current="page"]{color:var(--sage-dark);border-color:var(--sage-dark)}
+
+/* legende sous un visuel de section */
+.bloc-visuel.photo.avec-legende{height:auto;overflow:visible;border-radius:0;box-shadow:none;display:block}
+.bloc-visuel.photo.avec-legende img{width:100%;height:auto;object-fit:contain;border-radius:var(--radius);box-shadow:var(--shadow-m)}
+.bloc-visuel.photo.avec-legende figcaption{margin:12px auto 0;max-width:52ch;text-align:center;font-size:12.5px;line-height:1.65;color:var(--sage)}
 </style>
 </head>
 <body>
@@ -1176,8 +1181,9 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 <!-- ═════════ SECTION 01 · LE FLACON — Bien plus qu’une boîte doseuse ═════════ -->
 <section aria-labelledby="t-flacon" class="bloc respiration" id="flacon">
 <div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel photo">
+<figure class="bloc-visuel photo avec-legende">
 <img alt="Sur un plan de marbre : un biberon classique, une boîte doseuse remplie de lait en poudre, et à droite un BIBEON replié et fermé, qui remplace les deux." src="assets/flacon-sans-boite-doseuse.webp"/>
+<figcaption>BIBEON pré-dosé doit se conserver à l’abri de l’air, de l’humidité et de la lumière — dans un sac à main, un placard, ou son pochon livré avec.</figcaption>
 </figure>
 <div class="bloc-texte">
 <p class="overline">01 · Le flacon</p>
