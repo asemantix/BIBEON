@@ -1,31 +1,30 @@
 <!doctype html>
-<!-- BIBEON — Qui sommes-nous. Page autonome. -->
+<!-- BIBEON — Notre parti pris. Page autonome (CSS et JS intégrés). -->
 <html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Qui sommes-nous — l’histoire de BIBEON et de son inventrice</title>
-<meta name="description" content="Une invention de 1999, une alerte sanitaire sur la stérilisation des biberons, et un biberon repris aujourd’hui par son inventrice.">
+<title>Notre parti pris : enlever plutôt qu’ajouter — BIBEON</title>
+<meta name="description" content="Pourquoi BIBEON supprime la boîte doseuse, l’obturateur et le casse-grumeaux au lieu d’ajouter des pièces : la méthode de conception, expliquée.">
 <meta name="theme-color" content="#f9f4ef">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="canonical" href="https://bibeon.fr/qui-sommes-nous.html">
+<link rel="canonical" href="https://bibeon.fr/notre-parti-pris.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="BIBEON">
-<meta property="og:url" content="https://bibeon.fr/qui-sommes-nous.html">
-<meta property="og:title" content="Qui sommes-nous — l’histoire de BIBEON">
-<meta property="og:description" content="Une invention de 1999, une alerte sanitaire, et un biberon repris par son inventrice.">
+<meta property="og:url" content="https://bibeon.fr/notre-parti-pris.html">
+<meta property="og:title" content="Et si le vrai progrès était d’enlever ?">
+<meta property="og:description" content="Moins à transporter, moins à chercher, moins à démonter, moins à laver.">
 <meta property="og:image" content="https://bibeon.fr/assets/bibeon-og-sac-beige.jpg">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Qui sommes-nous — l’histoire de BIBEON">
-<meta name="twitter:description" content="Une invention de 1999, une alerte sanitaire, et un biberon repris par son inventrice.">
+<meta name="twitter:title" content="Et si le vrai progrès était d’enlever ?">
+<meta name="twitter:description" content="Moins à transporter, moins à chercher, moins à démonter, moins à laver.">
 <meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-og-sac-beige.jpg">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-
 
 
 /* =========================================================
@@ -525,13 +524,10 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
 
 
 
-.tete-grid{display:grid;grid-template-columns:1fr 300px;gap:44px;align-items:center}
-@media (max-width:860px){.tete-grid{grid-template-columns:1fr;gap:26px}
-  .portrait{max-width:260px}}
-.portrait{margin:0;max-width:300px;justify-self:end}
-.portrait img{width:100%;display:block;border-radius:var(--radius);border:1px solid var(--line);
-              box-shadow:var(--shadow-s)}
-.portrait figcaption{margin-top:10px;font-size:13px;color:#7b8579;line-height:1.6}
+.preuve-doc{margin:32px 0}
+.preuve-doc img{width:100%;display:block;border:1px solid var(--line);border-radius:var(--radius);
+                background:var(--white);box-shadow:var(--shadow-s)}
+.preuve-doc figcaption{margin-top:10px;font-size:13px;color:#7b8579;line-height:1.6;text-align:center}
 /* ---------- article de fond ---------- */
 .article-tete{padding:58px 0 14px;background:var(--cream)}
 .article-tete h1{max-width:22ch}
@@ -559,36 +555,106 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
          font-family:"Playfair Display",Georgia,serif;font-size:25px;line-height:1.4;color:var(--navy)}
 .signature-art{margin-top:44px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:#7b8579}
 
-
-.repere{display:grid;grid-template-columns:auto 1fr;gap:20px 26px;margin:32px 0;
-        padding:26px 30px;background:var(--white);border:1px solid var(--line);
-        border-radius:var(--radius);box-shadow:var(--shadow-s)}
-.repere dt{font-family:"Playfair Display",Georgia,serif;font-size:23px;color:var(--sage-dark);
-           white-space:nowrap;margin:0}
-.repere dd{margin:0;font-size:14.5px;line-height:1.7;align-self:center}
-.presse-liens{margin:26px 0;padding:24px 28px;background:var(--beige-2);border:1px solid var(--line);
-              border-radius:var(--radius)}
-.presse-liens p.titre{margin:0 0 12px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage)}
-.presse-liens ul{margin:0;padding-left:18px}
-.presse-liens li{font-size:14px;margin-bottom:7px}
-
-.photo-epoque{margin:38px 0 0}
-.photo-epoque img{display:block;width:100%;height:auto;border-radius:18px}
-.photo-epoque figcaption{margin-top:12px;font-size:13px;color:#7b8579;font-style:italic}
 .brand svg.brand-logo{display:block;width:auto;height:34px;color:var(--navy);transform:translateY(-2px);margin-right:14px}
 footer .brand svg.brand-logo{height:30px}
 @media (max-width:700px){.brand svg.brand-logo{height:27px}}
-.encadre-igas{margin:34px 0;padding:28px 32px;border-radius:var(--radius);
-  background:var(--cream);border:1px solid var(--sage-soft)}
-.encadre-titre{margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.24em;
-  text-transform:uppercase;color:var(--sage)}
-.encadre-igas p{margin:0 0 12px;font-size:15.5px;line-height:1.75}
-.encadre-igas blockquote{margin:16px 0;padding:16px 22px;border-left:4px solid var(--navy);
-  background:#fff;font-family:"Playfair Display",Georgia,serif;font-size:19px;font-style:italic;
-  line-height:1.5;color:var(--navy)}
-.encadre-igas cite{display:block;margin-top:10px;font-family:Montserrat,sans-serif;font-size:11.5px;
-  font-style:normal;letter-spacing:.08em;text-transform:uppercase;color:var(--sage)}
-.encadre-igas a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft)}
+.signature-autrice{margin:34px 0 0;padding:24px 28px;border-radius:16px;
+  background:var(--cream);border:1px solid var(--line)}
+.signature-autrice .eyebrow{margin-bottom:10px}
+.signature-autrice p{margin:0;font-size:14.5px;line-height:1.75}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://bibeon.fr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Notre parti pris",
+          "item": "https://bibeon.fr/notre-parti-pris.html"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "headline": "Et si le vrai progrès était d’enlever ?",
+      "description": "Pourquoi BIBEON supprime la boîte doseuse, l’obturateur et le casse-grumeaux au lieu d’ajouter des pièces : la méthode de conception, expliquée.",
+      "mainEntityOfPage": "https://bibeon.fr/notre-parti-pris.html",
+      "inLanguage": "fr-FR",
+      "author": {
+        "@type": "Person",
+        "name": "Suzanne de Bégon",
+        "url": "https://bibeon.fr/suzanne-de-begon-histoire-bibeon.html"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "BIBEON",
+        "url": "https://bibeon.fr/"
+      }
+    }
+  ]
+}
+</script>
+<style>
+.guide{padding:76px 0 96px;background:var(--white)}
+.guide .shell{max-width:820px}
+.guide .eyebrow{margin:0 0 14px;font-size:11px;font-weight:600;letter-spacing:.28em;
+                text-transform:uppercase;color:var(--sage)}
+.guide h1{margin:0 0 20px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+          font-size:clamp(30px,4.4vw,52px);line-height:1.1;color:var(--navy)}
+.guide .lead{font-size:18px;line-height:1.8;color:var(--text);margin:0 0 10px}
+.guide h2{margin:52px 0 16px;font-family:"Playfair Display",Georgia,serif;font-weight:500;
+          font-size:clamp(23px,2.6vw,32px);line-height:1.2;color:var(--sage-dark)}
+.guide h3{margin:30px 0 10px;font-size:17px;color:var(--navy);line-height:1.3}
+.guide p{margin:0 0 15px;font-size:16px;line-height:1.8}
+.guide ul{margin:0 0 18px;padding-left:20px}
+.guide li{margin-bottom:8px;font-size:16px;line-height:1.75}
+.guide a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft);text-decoration:none}
+.guide a:hover{color:var(--navy)}
+
+.article-summary{margin:34px 0 10px;padding:24px 28px;border-radius:var(--radius);
+                 background:var(--cream);border:1px solid var(--line)}
+.article-summary strong{display:block;margin-bottom:12px;font-size:11px;letter-spacing:.22em;
+                        text-transform:uppercase;color:var(--sage);font-weight:600}
+.article-summary ul{margin:0;padding-left:18px;columns:2;column-gap:32px}
+.article-summary li{font-size:14.5px;margin-bottom:6px}
+
+.product-focus{margin:52px 0;padding:34px 38px;border-radius:var(--radius);
+               background:var(--sage-tint);border:1px solid var(--sage-soft)}
+.product-focus h2{margin-top:6px}
+.button-link{display:inline-block;margin-top:8px;padding:12px 24px;border-radius:999px;
+             background:var(--navy);color:#fff !important;border:0;font-size:14.5px}
+.button-link:hover{background:var(--sage-dark);color:#fff !important}
+
+.important{margin:0 0 20px;padding:18px 22px;border-radius:14px;
+           background:#fdf3f0;border:1px solid #e8cdc4;font-size:15px;line-height:1.7}
+.table-wrapper{overflow-x:auto;margin:0 0 18px}
+.guide table{width:100%;border-collapse:collapse;font-size:15px}
+.guide caption{text-align:left;padding-bottom:10px;font-size:13px;color:var(--sage)}
+.guide th,.guide td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left}
+.guide th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);font-weight:600}
+
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:600;color:var(--navy);font-size:16px;line-height:1.4}
+.faq details[open] summary{color:var(--sage-dark)}
+.faq details p{margin:12px 0 0;font-size:15.5px}
+
+.article-sources{margin-top:56px;padding-top:26px;border-top:1px solid var(--line)}
+.article-sources h2{font-size:20px;margin:0 0 12px}
+.article-sources ul{font-size:15px}
+.disclaimer{font-size:13.5px;color:#7b8579;line-height:1.7}
+.conclusion{margin-top:46px;padding:32px 36px;border-radius:var(--radius);
+            background:var(--cream);border:1px solid var(--line)}
+@media (max-width:700px){.article-summary ul{columns:1}}
 
 /* ═══ PIED DE PAGE COMMUN — recopié depuis l'accueil, 16 août 2026 ═══ */
 footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
@@ -665,32 +731,7 @@ transition:background .2s ease}
 .nav-achat:hover{background:var(--sage)}
 @media (max-width:1080px){.nav-links{display:none}}
 @media (max-width:520px){.nav-achat{padding:9px 16px;font-size:10.5px;letter-spacing:.1em}}
-
-/* la page courante se marque dans le menu */
-.nav-links a[aria-current="page"]{color:var(--sage-dark);border-color:var(--sage-dark)}
 </style>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://bibeon.fr/" },
-        { "@type": "ListItem", "position": 2, "name": "Qui sommes-nous", "item": "https://bibeon.fr/qui-sommes-nous.html" }
-      ]
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://bibeon.fr/qui-sommes-nous.html#page",
-      "name": "Qui sommes-nous — BIBEON",
-      "url": "https://bibeon.fr/qui-sommes-nous.html",
-      "inLanguage": "fr-FR",
-      "about": { "@id": "https://bibeon.fr/#organisation" }
-    }
-  ]
-}
-</script>
 </head>
 
 <body class="notice-page">
@@ -710,13 +751,14 @@ transition:background .2s ease}
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
-<a href="design-fonctionnel.html">Design fonctionnel</a>
 <a href="mode-demploi.html">Mode d’emploi</a>
 <a href="legerete.html">La légèreté</a>
-<a aria-current="page" href="qui-sommes-nous.html">Qui sommes-nous</a>
+<a href="migration.html">Migration</a>
+<a href="qui-sommes-nous.html">Qui sommes-nous</a>
 <a href="contact.html">Contact</a>
 </nav>
 <div class="nav-tel">
+<a href="tel:+33611768632"><b>Utilisation</b> 06 11 76 86 32</a>
 <a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
 </div>
 <div class="nav-outils">
@@ -727,126 +769,179 @@ transition:background .2s ease}
 
 <main>
 
-<section class="fil" aria-label="Fil d’Ariane">
-  <div class="shell"><a href="/">Accueil</a> · Qui sommes-nous</div>
-</section>
-
-<section class="article-tete">
-  <div class="shell tete-grid">
-    <div>
-      <p class="overline">Qui sommes-nous</p>
-      <h1>Une inventrice,<br>et une histoire longue.</h1>
-      <p class="chapo">BIBEON n’est pas une marque lancée l’an dernier. C’est une invention déposée en 1999, commercialisée, arrêtée, puis reprise par celle qui l’avait conçue. Entre les deux, il y a eu une alerte sanitaire.</p>
-    </div>
-
-    <figure class="portrait">
-      <img src="assets/portrait-suzanne.webp" width="1200" height="900"
-           alt="L’inventrice de BIBEON, tenant un biberon de l’époque" loading="lazy">
-      <figcaption>Au moment de l’alerte, avec l’un des biberons concernés.</figcaption>
-    </figure>
-  </div>
-</section>
-
-<section class="article-corps">
+<section class="guide">
   <div class="shell">
-  <div class="texte">
+    <article class="bibeon-seo-article">
+      <header class="article-hero">
+        <p class="eyebrow">Notre parti pris</p>
+        <h1>Et si le vrai progrès était d’enlever ?</h1>
+        <p class="lead">Moins à transporter, moins à chercher, moins à démonter, moins à laver. Un biberon repensé à partir de ce que vivent réellement les parents quand bébé a faim.</p>
+        <p>Sortir avec un bébé ne devrait pas ressembler à un déménagement. Et pourtant, au moment du biberon, il faut souvent rassembler le flacon, la poudre, le doseur, l’eau, parfois un obturateur, un accessoire pour les grumeaux… Vérifier qu’on n’a rien oublié, retrouver chaque chose dans le sac, transvaser, assembler — parfois d’une seule main, pendant que bébé réclame son repas.</p>
+        <p>Le problème n’est donc pas seulement ce que l’on porte. C’est aussi tout ce qu’il faut penser, chercher et manipuler avant que bébé puisse boire.</p>
+        <p>BIBEON est parti de là. Pas de l’envie d’inventer un accessoire supplémentaire, mais d’une question : <strong>qu’est-ce qu’on peut enlever sans enlever les fonctions ?</strong></p>
+      </header>
 
-    <h2>D’où je viens</h2>
+      <nav class="article-summary" aria-label="Sommaire de l’article">
+        <strong>Dans cet article</strong>
+        <ul>
+          <li><a href="#doseuse">Pourquoi emporter une boîte doseuse séparée ?</a></li>
+          <li><a href="#nettoyage">Pourquoi tout démonter pour laver un biberon ?</a></li>
+          <li><a href="#grumeaux">Éviter les grumeaux sans accessoire de plus</a></li>
+          <li><a href="#air">Réduire l’air que bébé avale</a></li>
+          <li><a href="#fuite">Est-ce que ça fuit dans le sac ?</a></li>
+          <li><a href="#capuchon">Pourquoi le capuchon est plus court que la tétine</a></li>
+          <li><a href="#poser">Poser le biberon dehors, sans rien salir</a></li>
+          <li><a href="#solide">Un biberon de 35 g peut-il être solide ?</a></li>
+          <li><a href="#mentale">Et si la vraie légèreté était mentale ?</a></li>
+          <li><a href="#matieres">Faire moins, sans transiger</a></li>
+        </ul>
+      </nav>
 
-    <p>Ingénieure commerciale chez IBM, puis conseillère clientèle à la MGEN. Deux métiers qui n’ont rien à voir avec la puériculture, et qui m’ont pourtant tout appris de ce que je fais aujourd’hui : la rigueur technique d’un côté, l’écoute de l’autre.</p>
+      <section id="doseuse" class="product-focus">
+        <p class="eyebrow">Deux objets en un</p>
+        <h2>Pourquoi emporter une boîte doseuse séparée ?</h2>
+        <p>Préparer les doses de lait en poudre avant de sortir est pratique. Mais cela signifie généralement emporter un récipient supplémentaire : le nettoyer, le sécher, le remplir, le ranger, le retrouver au moment du repas, puis transvaser la poudre dans le biberon. Et une fois vide, il continue à prendre de la place jusqu’au retour.</p>
+        <p>BIBEON supprime cette étape. Replié et correctement fermé, le flacon reçoit directement la dose de lait en poudre pré-dosée. <strong>La dose part avec le biberon, dans le biberon.</strong></p>
+        <p>Au moment du repas, on desserre la bague de quelques tours sans la retirer — elle garde le goulot couvert et empêche la poudre de gicler à l’ouverture des soufflets — puis on déplie BIBEON en totalité avant de mesurer l’eau prescrite. La préparation est ensuite réalisée dans ce même flacon, qui offre jusqu’à 330 ml de capacité utile.</p>
+        <p>Pas de boîte à retrouver. Pas de transvasement. Pas de récipient vide à rapporter.</p>
+        <div class="important"><strong>Pré-dosé ici. Nourrissez partout.</strong></div>
+        <p><a class="button-link" href="mode-demploi.html">Le geste complet, dans le mode d’emploi →</a></p>
+      </section>
 
-    <p>C’est encore moi qui réponds au téléphone. Pas un service, pas un formulaire : la personne qui a dessiné le biberon.</p>
+      <section id="nettoyage">
+        <h2>Pourquoi faudrait-il tout démonter pour laver un biberon ?</h2>
+        <p>Le nettoyage des pièces démontables revient constamment dans les plaintes des parents : valves, inserts, recoins difficiles à atteindre, éléments longs à sécher, crainte qu’un résidu reste quelque part. À force d’ajouter des fonctions sous forme de pièces, certains biberons finissent par devenir de petites usines à démonter après chaque repas.</p>
+        <p>BIBEON a choisi le chemin inverse. Le flacon, la bague, la tétine. L’essentiel. Le capuchon solidaire se rince simplement.</p>
+        <p>Et surtout, le pliage qui rend BIBEON compact sert aussi au nettoyage. Bague et tétine retirées, en abaissant puis en redéployant les soufflets, le fond, les plis et les recoins deviennent accessibles à la main.</p>
+        <p>On voit où l’on nettoie. On atteint ce que l’on voit. C’est essentiel, car la crainte exprimée par les parents porte moins sur la présence d’un relief que sur ce qui pourrait rester caché à l’intérieur.</p>
+        <div class="important"><strong>Jusqu’au fond. Littéralement.</strong></div>
+        <p>Le flacon sèche ensuite à l’air libre, démonté. Et lorsqu’il faut repartir vite, un embout mousse propre et parfaitement sec absorbe les dernières gouttelettes récalcitrantes, avant un nouveau pré-dosage.</p>
+        <p>Laver. Sécher. Pré-doser. Repartir.</p>
+        <p>BIBEON se lave à la main. Pas de lave-vaisselle, pas d’ébullition. Lorsque la stérilisation est souhaitée, elle se fait à froid, avec des comprimés adaptés et conformément à leur mode d’emploi.</p>
+        <p><strong>La sophistication n’est pas dans le nombre de pièces. Elle est dans tout ce qu’on a réussi à supprimer.</strong></p>
+        <p><a class="button-link" href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser : les différences →</a></p>
+      </section>
 
-    <h2>L’invention</h2>
+      <section id="grumeaux" class="product-focus">
+        <p class="eyebrow">Sans casse-grumeaux</p>
+        <h2>Comment éviter les grumeaux sans emporter un accessoire de plus ?</h2>
+        <p>Les grumeaux ne sont pas qu’une question d’apparence. Ils peuvent parvenir jusqu’à la tétine et gêner l’écoulement du lait. Les parents cherchent alors différentes techniques, voire des mélangeurs ou de petits batteurs dédiés. Mais dehors, chaque solution supplémentaire devient encore un objet à emporter, retrouver, utiliser, retirer et laver.</p>
+        <p>BIBEON utilise au contraire la forme même de son flacon. Une fois totalement déployés, les soufflets dessinent à l’intérieur une succession de creux. Pendant les secousses, les grumeaux rencontrent cette géométrie, se fragmentent et se dispersent.</p>
+        <p>Les soufflets contribuent directement à casser et diluer les grumeaux. Cette efficacité a été contrôlée au tamis.</p>
+        <div class="important"><strong>Rien à emporter. Rien à ajouter. Rien à retirer. Rien à laver séparément.</strong></div>
+        <p><a class="button-link" href="mode-demploi.html">Voir le lait passer au tamis →</a></p>
+      </section>
 
-    <p>Le biberon à corps escamotable a été breveté en 1999, puis étendu à l’Europe et à l’international. Le principe tenait dans une géométrie : des soufflets capables de se replier et de se déplier sans que la matière ne s’use, ce qui n’avait jamais été obtenu sur un contenant alimentaire de ce type.</p>
+      <section id="air">
+        <h2>Comment réduire l’air que bébé avale pendant la tétée ?</h2>
+        <p>Pendant que bébé boit, le niveau du lait descend. Dans un biberon rigide, le volume libéré reste occupé par de l’air.</p>
+        <p>Avec BIBEON, le corps du flacon peut être abaissé jusqu’au niveau du liquide. L’espace vide diminue avec lui. Le geste est simple, et il se fait en dehors de la tétée : retirez le biberon de la bouche de bébé, desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p>
+        <p>En fin de tétée, on peut aussi couder le col — plier les soufflets pour l’incliner — afin que le lait remplisse totalement la tétine.</p>
+        <p>L’objectif est simple : moins d’air présent dans le biberon, donc moins d’air susceptible d’être avalé pendant la tétée.</p>
+        <p>Pas de promesse médicale. Pas de mécanisme invisible à croire sur parole. Un geste que l’on peut voir.</p>
+        <div class="important"><strong>Le biberon s’abaisse au niveau de ce qu’il contient.</strong></div>
+        <p>Les mêmes soufflets remplissent ainsi plusieurs fonctions : moins de volume à transporter, moins de grumeaux à la préparation, moins d’air à avaler pendant la tétée.</p>
+      </section>
 
-    <p>Une licence d’exploitation a été accordée à un grand industriel de l’alimentation infantile, qui l’a commercialisé sous la marque BIBEON, de 1999 à 2002.</p>
-    <p>Quand cet industriel a cessé, j’ai repris les machines, les moules et la marque, et j’ai fabriqué moi-même — sous ma propre société, Stérilab, à Tarbes. Le biberon était alors à usage unique, en sachet scellé, <strong>stérilisé aux rayons gamma</strong> : par choix, après ce que j’avais découvert.</p>
-    <p>Il est reparti en hypermarché, dans les deux plus grandes enseignes françaises — 500 000 unités par enseigne et par mois. <strong>Un million de biberons par mois</strong>, produits et livrés par ma société.</p>
+      <section id="fuite" class="product-focus">
+        <p class="eyebrow">Sans obturateur</p>
+        <h2>Est-ce que ça fuit dans le sac ?</h2>
+        <p>C’est l’une des premières questions que peut susciter un biberon pliable. La réponse est directe : <strong>correctement fermé, BIBEON est hermétique.</strong></p>
+        <p>Correctement fermé veut dire quelque chose de précis : la tétine doit être enfoncée verticalement dans sa propre base, son orifice plaqué contre le toit plat du capuchon. Repliée de travers, elle ne ferme plus.</p>
+        <p>Cette fermeture permet notamment de transporter la dose de poudre pré-dosée directement dans son flacon, sans fuite de contenu sec et sans boîte supplémentaire.</p>
+        <p>Et elle est obtenue sans obturateur séparé. Lorsque le capuchon descend, la tétine s’enfonce correctement dans son axe. Son orifice vient se plaquer contre le toit plat du capuchon et s’obture directement.</p>
+        <div class="important"><strong>La fonction reste. La pièce disparaît.</strong></div>
+      </section>
 
-    <figure class="photo-epoque">
-      <img src="assets/bebe-ballon.webp" width="1600" height="1062" loading="lazy"
-           alt="Un jeune enfant assis dans l’herbe, un biberon BIBEON déplié posé devant lui">
-      <figcaption>Photo d’époque. Le flacon était alors neutre, sans coloris, et la bague orange.</figcaption>
-    </figure>
+      <section id="capuchon">
+        <h2>Pourquoi le capuchon est-il plus court que la tétine ?</h2>
+        <p>Parce que transporter une hauteur inutile n’aurait aucun sens.</p>
+        <p>Au repos, la tétine dépasse volontairement la hauteur du capuchon fermé. Lorsque celui-ci descend jusqu’à la bague, son toit rencontre le mamelon et l’entraîne vers le bas, jusqu’à l’enfoncer dans sa propre base. La hauteur de la tétine disparaît alors de l’encombrement final. Environ 2 cm sont gagnés.</p>
+        <div class="important"><strong>Le capuchon n’est pas court malgré la tétine. Il est court pour la faire disparaître.</strong></div>
+        <p>Pour rendre ce mécanisme visible, certaines illustrations de BIBEON représentent volontairement le capuchon ou d’autres pièces en transparence. Cette transparence n’est utilisée que pour révéler ce qui se passe à l’intérieur.</p>
+      </section>
 
-    <h2>L’alerte</h2>
+      <section id="poser">
+        <h2>Comment poser un biberon dehors sans toucher ce qui doit rester propre ?</h2>
+        <p>Une terrasse, une tablette de train ou une table d’aire d’autoroute ne sont pas des surfaces dont on connaît toujours la propreté.</p>
+        <p>BIBEON a donc relié deux choix de design : un capuchon plat et un bloc bague–tétine–capuchon solidaire. À l’ouverture, l’ensemble reste en une seule pièce et peut être posé à l’envers sur la face extérieure du capuchon.</p>
+        <ul>
+          <li>Le bloc reste stable, le capuchon plat ne roule pas.</li>
+          <li>Bague, tétine et capuchon restent solidaires : rien ne se disperse.</li>
+          <li>Rien de l’intérieur ne touche la table — seule la face extérieure du capuchon entre en contact avec le support.</li>
+          <li>Et les doigts ne touchent rien de l’intérieur du biberon.</li>
+        </ul>
+        <p>Pas de petite pièce à poser quelque part. Pas d’obturateur à retrouver. Pas de tétine à déposer sur une surface inconnue.</p>
+        <div class="important"><strong>Stabilité, hygiène et praticité viennent ici du même dessin.</strong></div>
+      </section>
 
-    <p>C’est en travaillant sur ce produit que j’ai découvert le procédé employé pour le stériliser : un gaz classé cancérogène, interdit pour les matériaux au contact des denrées alimentaires — mais autorisé pour les dispositifs médicaux. Or certains biberons à usage unique, distribués en maternité, étaient classés comme dispositifs médicaux.</p>
+      <section id="solide">
+        <h2>Un biberon de 35 g peut-il être solide ?</h2>
+        <p>La légèreté peut être trompeuse. Un objet de 35 g complet peut donner l’impression qu’il contient peu de matière — et donc qu’il devrait coûter peu cher ou être fragile.</p>
+        <p>Mais le véritable défi était précisément de faire léger sans faire fragile. Le flacon devait être suffisamment souple pour se replier, suffisamment ferme pour ne pas s’affaisser seul, et suffisamment résistant pour supporter les manipulations répétées. Chaque épaisseur, chaque rayon, chaque zone de flexion devait trouver son équilibre.</p>
+        <p><strong>Enlever de la matière sans enlever la fonction est une contrainte de conception, pas une économie de conception.</strong></p>
+        <p>À 35 €, BIBEON ne se juge donc pas au poids de matière qu’il contient. Il faut regarder ce que son design permet d’éviter : des pièces, du volume et plusieurs accessoires autour du biberon. Sa légèreté se mesure aussi à tout ce qu’il permet de ne plus porter.</p>
+        <p><a class="button-link" href="legerete.html">La légèreté a un prix →</a></p>
+      </section>
 
-    <p>J’ai alerté. Longtemps, et sans être entendue. En novembre 2011, le 17 exactement, l’affaire est sortie dans <em>Le Nouvel Observateur</em>, et le ministère de la Santé a demandé le retrait des biberons, tétines et téterelles ainsi stérilisés.</p>
+      <section id="mentale">
+        <h2>Et si la vraie légèreté était aussi mentale ?</h2>
+        <p>Quand bébé a faim, le problème n’est plus seulement la taille du sac. Il faut retrouver les bonnes choses, compter juste, ne pas renverser, disposer d’une surface, parfois tenir bébé ou n’avoir qu’une main disponible — et agir pendant que les pleurs montent.</p>
+        <p>C’est là que quelques objets supprimés deviennent quelques décisions supprimées.</p>
+        <ul>
+          <li>Moins à transporter.</li>
+          <li>Moins à chercher.</li>
+          <li>Moins à assembler.</li>
+          <li>Moins à démonter.</li>
+          <li>Moins à laver.</li>
+          <li>Moins de temps perdu à rassembler le nécessaire sous les pleurs d’un bébé qui a faim.</li>
+        </ul>
+        <div class="important"><strong>Changer de paradigme, ce n’est pas réussir à mieux ranger toute la cuisine dans le sac à langer. C’est se demander pourquoi il faudrait encore la transporter.</strong></div>
+      </section>
 
-    <div class="presse-liens">
-      <p class="titre">L’affaire dans la presse</p>
-      <ul>
-        <li>Le Nouvel Observateur, novembre 2011 puis avril 2012</li>
-        <li>Le Monde, Sud Ouest, RFI, RTBF, L’Usine Nouvelle, France 3 Régions</li>
-        <li>Rapport de l’Inspection générale des affaires sociales, décembre 2012</li>
-      </ul>
-      <!-- À COMPLÉTER : ajoutez ici les liens vers les articles en ligne.
-           Un lien vers l'article d'origine vaut mieux que dix lignes de récit. -->
-    </div>
+      <section id="matieres" class="conclusion">
+        <h2>Faire moins, sans transiger sur ce qui compte le plus</h2>
+        <p>Cette logique de soustraction s’arrête là où commence l’essentiel : ce qui entre en contact avec l’alimentation de bébé. Alléger, plier, supprimer des pièces : aucun de ces choix n’aurait de sens s’il devait réduire l’exigence portée aux matériaux.</p>
+        <p>La bague et le capuchon sont en matière d’origine végétale, sans OGM ni gluten. La tétine est en silicone alimentaire. Le flacon est en polypropylène alimentaire, sans aucun bisphénol.</p>
+        <p>Lors des essais de migration réalisés en laboratoire sur les éléments concernés, aucun résidu n’a été détecté jusqu’au seuil de détection de 6 mg/kg, dans les conditions testées.</p>
+        <p>Mais BIBEON a voulu aller au-delà de l’affirmation. Les résultats des essais et la déclaration de conformité sont rendus accessibles. Parce qu’avec un produit destiné à l’alimentation d’un bébé, la confiance ne devrait pas demander de croire sur parole ce qui peut être vérifié.</p>
+        <p><strong>Le flacon est transparent. La démarche veut l’être aussi.</strong></p>
+        <div class="important"><strong>Moins de matière. Moins de poids. Moins de volume. Moins de pièces. Moins d’accessoires. Mais jamais moins d’exigence.</strong></div>
+        <p><a class="button-link" href="tests-migration-lne-bibeon.html">Les essais de migration du LNE →</a></p>
+      </section>
 
-    <p>L’inspection générale des affaires sociales, dans son rapport n° RM2012-032P de juillet 2012, a confirmé que cette stérilisation n’apparaissait pas conforme au droit en vigueur. Elle a relevé que la norme fixant les résidus « admissibles » avait été établie pour des adultes de soixante-dix kilos, sans distinguer les objets destinés au contact des aliments. Et elle a recommandé de mieux articuler deux logiques qui ne se ressemblent pas : la sécurité alimentaire, où aucun risque n’est toléré, et la sécurité infectieuse, où un risque peut être accepté si le bénéfice le dépasse.</p>
 
-    
-    <aside class="encadre-igas">
-      <p class="encadre-titre">Une expertise reconnue par un rapport public</p>
-      <p>Le rapport de l’Inspection générale des affaires sociales <strong>n° RM2012-032P</strong>, publié en juillet 2012, examine la stérilisation à l’oxyde d’éthylène des biberons, tétines et téterelles utilisés dans les établissements de santé.</p>
-      <blockquote>« Le rôle de lanceur d’alerte est joué, dans ce dossier, principalement par M<sup>me</sup> Suzanne de Bégon. »<cite>Rapport IGAS n° RM2012-032P, § 225</cite></blockquote>
-      <p><a href="https://www.vie-publique.fr/files/rapport/pdf/124000681.pdf" target="_blank" rel="noopener noreferrer">Consulter le rapport officiel de l’IGAS</a></p>
-    </aside>
+      <section id="faq" class="faq">
+        <h2>Les questions que les parents se posent vraiment</h2>
+        <details><summary>Pourquoi faut-il démonter autant de pièces pour laver un biberon ?</summary><p>Avec BIBEON, l’essentiel tient au flacon, à la bague et à la tétine ; le capuchon solidaire se rince simplement. Le pliage et le dépliage permettent d’accéder directement au fond, aux plis et aux recoins pour les nettoyer à la main. <a href="demonter-biberon-pour-laver.html">Lire l’article complet</a>.</p></details>
+        <details><summary>Comment préparer un biberon dehors sans emporter toute la cuisine ?</summary><p>BIBEON reçoit directement la dose de lait en poudre pré-dosée dans son flacon replié et correctement fermé. Au moment du repas, on le déploie complètement avant d’ajouter l’eau prescrite : pas de boîte doseuse à retrouver ni de poudre à transvaser.</p></details>
+        <details><summary>Comment éviter les grumeaux sans emporter un accessoire de plus ?</summary><p>Une fois BIBEON totalement déployé, les creux formés par ses soufflets rencontrent les amas de poudre pendant les secousses et contribuent à les fragmenter et à les diluer. Cette efficacité a été contrôlée au tamis.</p></details>
+        <details><summary>Est-ce qu’un biberon pliable peut fuir dans le sac ?</summary><p>Correctement fermé, BIBEON est hermétique. La tétine s’enfonce dans son axe et son orifice vient se plaquer contre le toit plat du capuchon : l’obturation est intégrée, sans disque séparé. <a href="biberon-pliable-fuite-sac.html">Lire l’article complet</a>.</p></details>
+        <details><summary>Comment réduire l’air que bébé avale pendant la tétée ?</summary><p>À mesure que le niveau du lait descend, le corps de BIBEON peut être abaissé jusqu’au niveau du liquide. Le volume d’air présent dans le biberon diminue avec lui, avec pour objectif moins d’air à avaler pendant la tétée.</p></details>
+        <details><summary>Comment poser le biberon dehors sans toucher l’intérieur ?</summary><p>Le bloc bague–tétine–capuchon reste solidaire et se pose à l’envers sur la face plate du capuchon. Seul l’extérieur du capuchon touche la table : la tétine, l’intérieur de la bague et les doigts ne touchent rien de l’intérieur du biberon.</p></details>
+        <details><summary>Un biberon de 35 g est-il forcément fragile ?</summary><p>Non. Concevoir un biberon de 35 g complet, pliable, ferme et réutilisable impose au contraire un équilibre précis entre épaisseur, souplesse et résistance. Faire léger sans faire fragile est une contrainte de conception supplémentaire.</p></details>
+        <details><summary>Que signifie « apte au contact alimentaire » pour un biberon ?</summary><p>Que les matériaux ont été choisis pour leur aptitude au contact alimentaire et doivent répondre aux exigences applicables. Pour les éléments concernés de BIBEON, les essais de migration réalisés en laboratoire n’ont détecté aucun résidu jusqu’au seuil de détection de 6 mg/kg, dans les conditions testées. Les résultats et la déclaration de conformité sont accessibles.</p></details>
+      </section>
 
-    <p><a href="suzanne-de-begon-histoire-bibeon.html">Lire le récit complet : trente ans de travail sur le biberon</a></p>
+      <div class="signature-autrice">
+        <p class="eyebrow">Signature éditoriale</p>
+        <p><strong>Article rédigé par Suzanne de Bégon</strong><br>Inventrice de biberons depuis mai 1996 et créatrice de BIBEON. Le rapport public IGAS RM2012-032P l’identifie comme la principale lanceuse d’alerte dans le dossier de la stérilisation à l’oxyde d’éthylène des biberons hospitaliers. Les contenus de bibeon.fr s’appuient sur les recommandations des autorités sanitaires et sur son expérience de conception et d’utilisation des biberons. <a href="suzanne-de-begon-histoire-bibeon.html">Lire son parcours</a>.</p>
+      </div>
 
-    <p>En juin 2025, l’Union européenne a acté la non-approbation de ce gaz comme substance biocide. Quatorze ans après l’alerte.</p>
-
-    <h2>Ce que cela a coûté</h2>
-
-    <p>Je ne le raconte pas pour qu’on m’en sache gré, mais parce que la suite en dépend. Après l’alerte, plus aucun fabricant n’a voulu travailler avec moi. Ma carrière s’est arrêtée là, et le reste a suivi.</p>
-
-    <p>On me demande parfois conseil. Le voici, et il n’est pas encourageant : si vous n’avez pas l’autorité professionnelle reconnue du domaine que vous mettez en cause, réfléchissez longuement. Une médecin qui alerte sur un médicament est entendue parce qu’elle est médecin. Les autres passent des années à se faire ouvrir des portes, et n’en ressortent pas indemnes.</p>
-
-    <!-- ================================================================
-         À COMPLÉTER PAR VOUS.
-         Ce paragraphe est le vôtre : ce que vous avez vu, à qui vous avez
-         écrit, combien de temps cela a duré. Deux ou trois paragraphes
-         suffisent. Écrivez-les sans chercher l'effet — c'est la sobriété
-         qui rend ce genre de récit crédible.
-    ================================================================= -->
-
-    <h2>Et aujourd’hui</h2>
-
-    <p>La marque BIBEON m’a été rétrocédée. Le biberon est de nouveau fabriqué, en France, en région lyonnaise, du moule au flacon. Il a été testé par le Laboratoire national de métrologie et d’essais, pièce par pièce, dans trois simulants d’aliment : <a href="migration.html">le détail des mesures est publié ici</a>.</p>
-
-    <p>Rien de tout cela n’est un argument de vente. C’est simplement la raison pour laquelle ce biberon est fait comme il est fait.</p>
-
-    <h2>Pourquoi celui-là</h2>
-
-    <p>Je devrais peut-être garder cela pour moi, mais la question m’est posée assez souvent pour que j’y réponde ici.</p>
-
-    <p>BIBEON est arrivé dans ma vie au moment où je me suis retrouvée enceinte et seule, sans le père de ma fille, et sans l’avoir voulu. Entre les pleurs et les joies, mes biberons de l’époque contenaient plus de larmes que de lait.</p>
-
-    <p>Je regrette une chose, et une seule : de ne pas avoir donné le sein les premiers mois. C’est pour cette raison que ce biberon n’est pas conçu pour les nouveau-nés, qu’il est livré avec une tétine à débit six mois, et que vous ne me verrez jamais le présenter comme un cadeau de naissance. Il accompagne la diversification, pas les premières semaines.</p>
-
-    <p>Le reste — les brevets, les essais, les vingt-cinq ans — a suivi.</p>
-
-    <h2>Et à côté</h2>
-
-    <p>Je n’ai pas cessé d’inventer. Mon travail actuel porte sur un tout autre terrain : la cybersécurité, les transmissions résistantes à l’informatique quantique, et un procédé de preuve numérique que j’ai appelé la ligature de preuve. Ces travaux vivent ailleurs, sur <a href="https://asemantix.tech" rel="noopener">asemantix.tech</a> et <a href="https://lapreuveparphi.fr" rel="noopener">lapreuveparphi.fr</a>.</p>
-
-    <p>Le rapport avec un biberon peut sembler lointain. Il ne l’est pas tant que cela : dans les deux cas, il s’agit de faire en sorte qu’une chose soit vérifiable plutôt que crue sur parole.</p>
-
-    <div class="encadre">
-      <p><strong>Une question, une demande de presse, un dossier de conformité ?</strong> Appelez le <a href="tel:+33611768407">06 11 76 84 07</a> ou écrivez depuis la <a href="contact.html">page contact</a>.</p>
-    </div>
-
-  </div>
+      <footer class="article-sources">
+        <h2>À lire également</h2>
+        <ul>
+          <li><a href="tests-migration-lne-bibeon.html">BIBEON : matériaux, contact alimentaire et essais de migration — ce que les résultats disent réellement</a></li>
+          <li><a href="mode-demploi.html">BIBEON — Mode d’emploi</a></li>
+          <li><a href="legerete.html">La légèreté a un prix</a></li>
+          <li><a href="demonter-biberon-pour-laver.html">Faut-il démonter tout le biberon pour le laver ?</a></li>
+          <li><a href="biberon-nomade-sans-accessoires.html">Le biberon nomade, manipulé sans toucher l’intérieur</a></li>
+        </ul>
+        <p class="disclaimer">Ce contenu est informatif. Les instructions figurant sur la boîte de lait infantile et les conseils du professionnel de santé qui suit votre enfant restent prioritaires.</p>
+      </footer>
+</article>
   </div>
 </section>
-
-</main>
 
 <footer id="contact">
 <div class="shell footer-grid">
@@ -892,18 +987,17 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 </div>
 <div class="footer-col">
 <h3>BIBEON en détail</h3>
-<a href="notre-parti-pris.html">Notre parti pris</a>
+<span>Notre parti pris</span>
 <a href="mode-demploi.html">Mode d’emploi</a>
 <a href="legerete.html">La légèreté a un prix</a>
 <a href="voyage.html">Voyager avec bébé</a>
 <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
 <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
-<a href="migration.html">Migration</a>
 <a href="conseils.html">Nos conseils</a>
 </div>
 <div class="footer-col">
 <h3>La maison</h3>
-<span>Qui sommes-nous</span>
+<a href="qui-sommes-nous.html">Qui sommes-nous</a>
 <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
 <a href="mentions-legales.html">Mentions légales</a>
 <a href="cgv.html">Conditions générales de vente</a>
@@ -998,5 +1092,77 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 
 </script>
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Pourquoi faut-il démonter autant de pièces pour laver un biberon ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Avec BIBEON, l’essentiel tient au flacon, à la bague et à la tétine ; le capuchon solidaire se rince simplement. Le pliage et le dépliage permettent d’accéder directement au fond, aux plis et aux recoins pour les nettoyer à la main. Lire l’article complet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment préparer un biberon dehors sans emporter toute la cuisine ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "BIBEON reçoit directement la dose de lait en poudre pré-dosée dans son flacon replié et correctement fermé. Au moment du repas, on le déploie complètement avant d’ajouter l’eau prescrite : pas de boîte doseuse à retrouver ni de poudre à transvaser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment éviter les grumeaux sans emporter un accessoire de plus ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Une fois BIBEON totalement déployé, les creux formés par ses soufflets rencontrent les amas de poudre pendant les secousses et contribuent à les fragmenter et à les diluer. Cette efficacité a été contrôlée au tamis."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Est-ce qu’un biberon pliable peut fuir dans le sac ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Correctement fermé, BIBEON est hermétique. La tétine s’enfonce dans son axe et son orifice vient se plaquer contre le toit plat du capuchon : l’obturation est intégrée, sans disque séparé."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment réduire l’air que bébé avale pendant la tétée ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "À mesure que le niveau du lait descend, le corps de BIBEON peut être abaissé jusqu’au niveau du liquide. Le volume d’air présent dans le biberon diminue avec lui, avec pour objectif moins d’air à avaler pendant la tétée."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment poser le biberon dehors sans toucher l’intérieur ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Le bloc bague–tétine–capuchon reste solidaire et se pose à l’envers sur la face plate du capuchon. Seul l’extérieur du capuchon touche la table : la tétine, l’intérieur de la bague et les doigts ne touchent rien de l’intérieur du biberon."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Un biberon de 35 g est-il forcément fragile ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Non. Concevoir un biberon de 35 g complet, pliable, ferme et réutilisable impose au contraire un équilibre précis entre épaisseur, souplesse et résistance. Faire léger sans faire fragile est une contrainte de conception supplémentaire."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Que signifie « apte au contact alimentaire » pour un biberon ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Que les matériaux ont été choisis pour leur aptitude au contact alimentaire et doivent répondre aux exigences applicables. Pour les éléments concernés de BIBEON, les essais de migration réalisés en laboratoire n’ont détecté aucun résidu jusqu’au seuil de détection de 6 mg/kg, dans les conditions testées. Les résultats et la déclaration de conformité sont accessibles."
+      }
+    }
+  ]
+}
+</script>
 </body>
 </html>

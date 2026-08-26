@@ -581,8 +581,11 @@ footer .brand svg.brand-logo{height:30px}
 .price-box p:last-child,.pack-box p:last-child,.review-box p:last-child,
 .luxe-box p:last-child,.warning-box p:last-child,.link-panel p:last-child{margin-bottom:0}
 
-.functions-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin:28px 0}
-.function-card{padding:22px 24px;border-radius:20px;background:var(--white);border:1px solid var(--line)}
+.functions-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(30px,4vw,58px) clamp(36px,5vw,72px);margin:clamp(38px,5vh,64px) 0}
+.function-card{padding:0;background:none;border:0;border-top:1px solid var(--sage-soft);padding-top:20px}
+.function-card h3{margin:0 0 10px;font-size:clamp(19px,1.7vw,23px);color:var(--sage-dark)}
+.function-card p{margin:0;font-size:16px;line-height:1.8}
+@media(max-width:640px){.functions-grid{grid-template-columns:1fr}}
 .function-card h3{margin:0 0 8px;font-size:15.5px;color:var(--navy)}
 .function-card p{margin:0;font-size:14.5px;line-height:1.65}
 
@@ -961,6 +964,7 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 </div>
 <div class="footer-col">
 <h3>BIBEON en détail</h3>
+<a href="notre-parti-pris.html">Notre parti pris</a>
 <a href="mode-demploi.html">Mode d’emploi</a>
 <span>La légèreté a un prix</span>
 <a href="voyage.html">Voyager avec bébé</a>
