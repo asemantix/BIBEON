@@ -1166,8 +1166,27 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 .cta-boutique a:hover{background:var(--sage-dark);color:#fff}
 
 /* ═══ le biberon pratique — version « pourquoi » (28 août 2026) ═══ */
-.hero-question h1{max-width:20ch;line-height:1.0;font-size:clamp(34px,5.2vw,72px)}
-.hero-question .hero-triade{max-width:30ch}
+/* Le titre tenait sur toute la largeur et se posait sur le flacon : on lisait
+   « biberon ... compliqué » écrit sur BIBEON. La colonne de texte est ramenée
+   à gauche, et le cadrage de l'image décale le flacon vers la droite. */
+.hero-question h1{max-width:12ch;line-height:1.04;font-size:clamp(32px,3.9vw,56px);
+  margin-bottom:24px}
+.hero-question .hero-triade{max-width:21ch;font-size:clamp(18px,1.6vw,23px);line-height:1.45}
+.hero.hero-question .hero-fond{object-position:6% center}
+.hero-question .hero-voile{background:
+linear-gradient(100deg,rgba(10,13,16,.90) 0%,rgba(10,13,16,.74) 26%,rgba(10,13,16,.30) 46%,rgba(10,13,16,0) 66%),
+linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
+@media (max-width:900px){
+  /* Sur téléphone, un cadrage « cover » découpe le flacon et fait passer le
+     titre par-dessus. On empile : le texte d'abord, l'image entière ensuite. */
+  .hero.hero-question{display:block;height:auto;min-height:0;
+    padding:0 0 min(9vh,72px);background:#0b0e11}
+  .hero.hero-question .hero-fond{position:relative;inset:auto;z-index:0;
+    width:100%;height:auto;object-fit:contain;margin:0 0 30px;display:block}
+  .hero-question .hero-voile{display:none}
+  .hero-question h1{max-width:15ch}
+  .hero-question .hero-triade{max-width:26ch;margin-bottom:0}
+}
 #lavage .bloc-titre,#gestes .bloc-titre{margin-inline:auto}
 .moins-liste{list-style:none;margin:26px auto 30px;padding:0;
   display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 34px;max-width:760px}
@@ -1291,7 +1310,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
    "mainEntity": [
     {
      "@type": "Question",
-     "name": "Pourquoi transporter un biberon aussi gros et aussi lourd ?",
+     "name": "Pourquoi un biberon classique prend-il autant de place dans le sac ?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "BIBEON pèse environ 35 g et mesure environ 10 cm une fois replié. Son flacon replié reçoit directement la dose de lait en poudre pré-dosée, sans boîte doseuse séparée, et se déploie jusqu’à 330 ml de capacité utile."
@@ -1299,7 +1318,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
     },
     {
      "@type": "Question",
-     "name": "Pourquoi faut-il démonter autant de pièces pour laver un biberon ?",
+     "name": "Laver un biberon, est-ce forcément démonter une usine à gaz ?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "À l’usage, BIBEON se résume à deux ensembles : le flacon et le bloc solidaire bague-tétine-capuchon. Pas de valve, de grille ni d’insert à démonter et à faire sécher. Les soufflets s’abaissent puis se redéploient pour accéder au fond et aux plis."
@@ -1307,7 +1326,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
     },
     {
      "@type": "Question",
-     "name": "Comment réduire l’air que bébé avale pendant la tétée ?",
+     "name": "Et si on enlevait l’air, au lieu d’ajouter une valve ?",
      "acceptedAnswer": {
       "@type": "Answer",
       "text": "Les soufflets permettent d’abaisser progressivement le flacon jusqu’au niveau du liquide, ce qui réduit le volume d’air restant au-dessus du lait, sans ajouter de valve ni de pièce supplémentaire."
@@ -1375,8 +1394,8 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 <div aria-hidden="true" class="hero-voile"></div>
 <div class="shell hero-contenu">
 <p class="overline">Le biberon pratique</p>
-<h1>Pourquoi un simple biberon devrait-il être si compliqué&nbsp;?</h1>
-<p class="hero-triade">Moins à porter. Moins à démonter.<br/>Moins à laver.<br/>Moins de gestes quand bébé a faim.</p>
+<h1>Pourquoi un si petit biberon simplifie-t-il autant les sorties&nbsp;?</h1>
+<p class="hero-triade">Moins à porter.<br/>Moins à démonter.<br/>Moins à laver.<br/>Moins de gestes quand bébé a faim.</p>
 </div>
 </section>
 
@@ -1385,19 +1404,20 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 <!-- ══════════ L’ENTRÉE EN MATIÈRE ══════════ -->
 <section aria-label="Le principe" class="entree">
 <div class="shell">
-<p>BIBEON a été dessiné à partir de ces problèmes-là.</p>
+<p>Sept questions que se posent les parents.</p>
+<p>BIBEON a été dessiné à partir de celles-là.</p>
 </div>
 </section>
 
 <!-- ═════════ 01 · LE TRANSPORT ═════════ -->
 <section aria-labelledby="t-transport" class="bloc respiration" id="transport">
 <div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel photo">
+<figure class="bloc-visuel photo libre">
 <img alt="Le BIBEON à cinq états de pliage, du replié au complètement déplié, avec sa bague et son capuchon." src="assets/bibeon-etats-de-pliage.webp" width="2000" height="1006" loading="lazy"/>
 </figure>
 <div class="bloc-texte">
 <p class="overline">01 · Le transport</p>
-<h2 class="bloc-titre" id="t-transport">Pourquoi transporter un biberon aussi gros et aussi lourd&nbsp;?</h2>
+<h2 class="bloc-titre" id="t-transport">Pourquoi un biberon classique prend-il autant de place dans le sac&nbsp;?</h2>
 <p class="corps"><b>35&nbsp;g. Environ 10&nbsp;cm une fois replié.</b></p>
 <p class="corps">BIBEON commence par prendre moins de place par lui-même, avant même de compter tout ce qu’il permet de laisser à la maison.</p>
 <p class="corps">Son flacon replié reçoit directement la dose de lait en poudre pré-dosée&nbsp;: <b>pas de boîte doseuse séparée à transporter.</b></p>
@@ -1413,7 +1433,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 <div class="shell">
 <div style="max-width:min(760px,100%);margin-inline:auto;text-align:center">
 <p class="overline">02 · Le lavage</p>
-<h2 class="bloc-titre" id="t-lavage">Pourquoi faut-il démonter une usine à gaz pour laver un biberon&nbsp;?</h2>
+<h2 class="bloc-titre" id="t-lavage">Laver un biberon, est-ce forcément démonter une usine à gaz&nbsp;?</h2>
 <p class="corps">À l’usage, BIBEON se résume à <b>deux ensembles à manipuler</b>&nbsp;: le flacon et le bloc solidaire bague–tétine–capuchon.</p>
 <p class="corps">Pas de valve, de grille ou d’insert supplémentaire à démonter et à faire sécher.</p>
 <p class="corps">Les soufflets peuvent être abaissés puis redéployés pour accéder au fond, aux plis et aux recoins. Et le diamètre étroit du flacon permet au goupillon de travailler directement contre les parois sans avoir à parcourir un large cylindre.</p>
@@ -1445,7 +1465,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 </figure>
 <div class="bloc-texte">
 <p class="overline">03 · L’air</p>
-<h2 class="bloc-titre" id="t-air">Comment réduire l’air que bébé avale pendant la tétée&nbsp;?</h2>
+<h2 class="bloc-titre" id="t-air">Et si on enlevait l’air, au lieu d’ajouter une valve&nbsp;?</h2>
 <p class="corps">Pendant que bébé boit, le lait descend.<br/><b>BIBEON descend avec lui.</b></p>
 <p class="corps">Les soufflets permettent d’abaisser progressivement le flacon jusqu’au niveau du liquide, réduisant ainsi le volume d’air restant au-dessus du lait.</p>
 <p class="corps">Moins d’air présent dans le biberon. Moins d’air susceptible d’être avalé pendant la tétée.</p>
@@ -1482,7 +1502,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 </figure>
 <div class="bloc-texte">
 <p class="overline">05 · L’étanchéité</p>
-<h2 class="bloc-titre" id="t-etancheite">Est-ce que ça fuit dans le sac&nbsp;?</h2>
+<h2 class="bloc-titre" id="t-etancheite">Est-ce qu’un biberon pliable fuit dans le sac&nbsp;?</h2>
 <p class="corps"><b>Correctement fermé, BIBEON est hermétique.</b></p>
 <p class="corps">Le capuchon est volontairement plus court que la tétine. En descendant, son toit entraîne celle-ci dans son axe jusqu’à l’enfoncer dans sa propre base.</p>
 <p class="corps">Son orifice vient alors se plaquer directement contre le toit plat du capuchon et s’obture. <b>L’obturateur séparé devient inutile.</b></p>
@@ -1517,7 +1537,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 </figure>
 <div class="bloc-texte">
 <p class="overline">07 · La légèreté</p>
-<h2 class="bloc-titre" id="t-legerete">Pourquoi mettre un biberon lourd entre les petites mains de bébé&nbsp;?</h2>
+<h2 class="bloc-titre" id="t-legerete">Quel poids peut-on mettre entre les petites mains de bébé&nbsp;?</h2>
 <p class="corps"><b>BIBEON pèse environ 35&nbsp;g complet.</b></p>
 <p class="corps">Cette légèreté facilite aussi sa prise en main&nbsp;: peu de masse à soutenir, un corps étroit et une forme qui reste naturellement proche du contenu à mesure que le biberon s’abaisse.</p>
 <p class="corps">Et faire aussi léger sans faire fragile a été l’un des défis de sa conception.</p>
