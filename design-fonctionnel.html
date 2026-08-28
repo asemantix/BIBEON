@@ -1125,6 +1125,16 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 .bloc-visuel.photo.avec-legende{height:auto;overflow:visible;border-radius:0;box-shadow:none;display:block}
 .bloc-visuel.photo.avec-legende img{width:100%;height:auto;object-fit:contain;border-radius:var(--radius);box-shadow:var(--shadow-m)}
 .bloc-visuel.photo.avec-legende figcaption{margin:12px auto 0;max-width:52ch;text-align:center;font-size:12.5px;line-height:1.65;color:var(--sage)}
+
+/* le nettoyage : deux etats du meme BIBEON — 28/08/2026 */
+.nettoyage-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.2vw,52px);
+  max-width:980px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
+.nettoyage-duo figure{margin:0}
+.nettoyage-duo img{display:block;width:100%;height:clamp(300px,38vh,420px);object-fit:cover;
+  border-radius:var(--radius);box-shadow:var(--shadow-m)}
+.nettoyage-duo figcaption{margin:14px auto 0;max-width:34ch;text-align:center;
+  font-family:Montserrat,sans-serif;font-size:13px;line-height:1.7;color:var(--sage)}
+@media(max-width:760px){.nettoyage-duo{grid-template-columns:1fr;max-width:460px}}
 </style>
 </head>
 <body>
@@ -1213,16 +1223,29 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 </div>
 </section>
 
-<!-- ═════════ SECTION 03 · LE CAPUCHON — Plat, par fonction ═════════ -->
+<!-- ═════════ SECTION 03 · LE BLOC SOLIDAIRE — sans visuel, respiration ═════════ -->
+<section aria-labelledby="t-bloc" class="bloc respiration" id="bloc-solidaire">
+<div class="shell" style="max-width:min(760px,calc(100% - 64px));margin-inline:auto;text-align:center">
+<p class="overline">03 · Le bloc solidaire</p>
+<h2 class="bloc-titre" id="t-bloc">Comment protéger la tétine dehors sans manipuler de pièces séparées ?</h2>
+<p class="corps">Sur la plupart des biberons, le haut se compose de trois éléments indépendants : le capuchon, la bague et la tétine. Chacun se retire, se pose, se cherche. <b>BIBEON les réunit en un seul bloc solidaire.</b></p>
+<p class="corps">Cette solidarité ne coûte aucune pièce supplémentaire : ni clip, ni charnière. <b>La bague est la seule pièce filetée</b> ; le capuchon est simplement assis sur son épaulement, serré. En dévissant la bague, il vient avec — et pour le détacher au lavage, il suffit de le tourner en serrant la bague.</p>
+<p class="corps">Dans le sac, le capuchon protège en permanence la tétine et l’intérieur de la bague. À l’ouverture, le bloc reste d’un seul tenant : rien à démonter, rien à poser séparément, rien à toucher à l’intérieur.</p>
+<p class="corps">Posé à l’envers sur son capuchon plat, seule la face extérieure du capuchon touche le support — une terrasse, une tablette de train, une table d’aire d’autoroute. La tétine et l’intérieur de la bague restent protégés.</p>
+<p class="billets" style="margin-inline:auto">Un seul bloc à manipuler.<br/>Rien de l’intérieur à toucher.</p>
+</div>
+</section>
+
+<!-- ═════════ SECTION 04 · LE CAPUCHON — Plat, par fonction ═════════ -->
 <section aria-labelledby="t-capuchon" class="bloc respiration" id="capuchon">
 <div class="shell bloc-grid visuel-gauche">
 <figure class="bloc-visuel photo">
 <img alt="À gauche, un biberon classique avec sa tétine, son disque obturateur et son capuchon en obus posés à côté ; à droite, un BIBEON replié et fermé par son seul capuchon plat." src="assets/capuchon-obturateur.webp"/>
 </figure>
 <div class="bloc-texte">
-<p class="overline">03 · Le capuchon</p>
+<p class="overline">04 · Le capuchon</p>
 <h2 class="bloc-titre" id="t-capuchon">Court et plat, par fonction.</h2>
-<p class="corps"><b>1. Gagner 2 cm de hauteur.</b><br/>Le capuchon a volontairement été conçu plus court que la tétine au repos. En descendant jusqu’à la bague, son toit rencontre le mamelon et l’entraîne avec lui vers le bas, jusqu’à l’enfoncer dans sa propre base. Sa hauteur disparaît ainsi de l’encombrement du biberon.</p>
+<p class="corps"><b>1. Gagner 2 cm de hauteur.</b><br/>Le capuchon a volontairement été conçu plus court que la tétine au repos. En descendant jusqu’à la bague, son toit rencontre le mamelon et l’entraîne avec lui vers le bas, jusqu’à l’enfoncer dans sa propre base. Sa hauteur disparaît ainsi de l’encombrement du biberon. Il s’arrête aussi plus haut que les autres : là où les capuchons du marché descendent jusqu’en bas recouvrir la bague, celui-ci vient s’asseoir sur son épaulement et la laisse découverte — de la hauteur gagnée une seconde fois, et l’appui qui tient le bloc solidaire.</p>
 <p class="corps"><b>2. Former une base stable.</b><br/>Plat plutôt qu’en obus, le capuchon ne roule pas. Posé à l’envers, le bloc bague–tétine–capuchon reste stable : seule la face extérieure du capuchon touche le support, tandis que la tétine et l’intérieur de la bague restent protégés.</p>
 <p class="corps"><b>3. Supprimer l’obturateur séparé.</b><br/>Lorsque la tétine s’enfonce dans son axe, son orifice vient se plaquer contre le toit plat du capuchon et s’obture directement. La fonction assurée ailleurs par un obturateur séparé est ici intégrée au dessin même du capuchon.</p>
 <p class="billets">Une forme courte et plate. Trois fonctions.<br/>Une pièce de moins.</p>
@@ -1231,6 +1254,32 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 </section>
 
    
+
+<!-- ═════════ SECTION 05 · LE NETTOYAGE ═════════ -->
+<section aria-labelledby="t-nettoyage" class="bloc respiration" id="nettoyage">
+<div class="shell">
+<div style="max-width:min(760px,100%);margin-inline:auto;text-align:center">
+<p class="overline">05 · Le nettoyage</p>
+<h2 class="bloc-titre" id="t-nettoyage">Pourquoi faudrait-il démonter un biberon pour le nettoyer&nbsp;?</h2>
+<p class="corps">Le pliage ne sert pas seulement à transporter BIBEON. Il rend aussi l’intérieur accessible : on abaisse les soufflets pour atteindre le fond et les plis à la main, puis on les redéploie pour que la paroi entière vienne à portée du goupillon.</p>
+<p class="corps">Ni valve, ni tube, ni insert, ni mécanisme intérieur à démonter. <b>Ce qui sert à ranger le biberon sert aussi à le laver.</b></p>
+</div>
+
+<div class="nettoyage-duo">
+<figure>
+<img alt="BIBEON replié sur un plan de travail : l’index descend à l’intérieur et atteint directement le fond du flacon." src="assets/doigt-au-fond-cuisine.webp" width="1200" height="1600" loading="lazy"/>
+<figcaption>Replié, le fond est directement accessible.</figcaption>
+</figure>
+<figure>
+<img alt="BIBEON déployé : les poils du goupillon s’ouvrent dans le creux de chaque soufflet." src="assets/goupillon-soufflets.webp" width="1400" height="1877" loading="lazy"/>
+<figcaption>Déployé, chaque creux vient à portée du goupillon.</figcaption>
+</figure>
+</div>
+
+<p class="billets" style="text-align:center;margin-inline:auto">Peu de pièces. Rien de caché.<br/>Jusqu’au fond. Littéralement.</p>
+</div>
+</section>
+
 <footer id="contact">
 <div class="shell footer-grid">
 <div class="footer-col">
@@ -1278,7 +1327,7 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <a href="notre-parti-pris.html">Notre parti pris</a>
 <a href="design-fonctionnel.html">Design fonctionnel</a>
 <a href="mode-demploi.html">Mode d’emploi</a>
-<a href="legerete.html">La légèreté</a>
+<a href="legerete.html">La légèreté a un prix</a>
 <a href="voyage.html">Voyager avec bébé</a>
 <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
 <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
