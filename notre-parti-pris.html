@@ -701,7 +701,7 @@ letter-spacing:.11em;text-transform:uppercase;color:var(--navy);line-height:1;wh
 .brand-baseline .r{color:var(--sage-soft)}
 .brand-baseline .marque-r{font-size:.62em;vertical-align:.9em;margin-left:.14em;
 margin-right:-.9em;opacity:.55}
-@media (max-width:1200px){.brand-baseline{display:none}}
+@media (max-width:1320px){.brand-baseline{display:none}}
 .brand img{display:block;height:34px;width:135px;flex:0 0 auto}
 @media (max-width:700px){.brand img{height:28px;width:111px}}
 .annonce{background:var(--sage-dark);color:#fff}
@@ -718,7 +718,7 @@ font-family:Montserrat,sans-serif;font-size:14px;white-space:nowrap}
 .nav-tel a:hover{color:var(--sage-dark)}
 .nav-tel b{font-size:11.5px;font-weight:600;letter-spacing:.11em;
 text-transform:uppercase;color:var(--sage)}
-@media (max-width:1500px){.nav-tel{display:none}}
+@media (max-width:1800px){.nav-tel{display:none}}
 .nav-links{display:flex;gap:20px;margin-left:auto;font-size:15px;white-space:nowrap}
 .nav-links a{padding:6px 0;border-bottom:1px solid transparent;color:var(--text);text-decoration:none}
 .nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
@@ -731,6 +731,35 @@ transition:background .2s ease}
 .nav-achat:hover{background:var(--sage)}
 @media (max-width:1080px){.nav-links{display:none}}
 @media (max-width:520px){.nav-achat{padding:9px 16px;font-size:10.5px;letter-spacing:.1em}}
+
+.renvoi-article{margin:18px 0 0;padding-left:16px;border-left:3px solid var(--sage-soft);font-size:15px;color:var(--sage-dark)}
+
+/* Menu à huit entrées : resserrer dans la plage où il s'affiche encore
+   en entier mais où la place manque (le bouton Boutique sortait du cadre). */
+@media (max-width:1366px){
+  .nav-links{font-size:13.5px;gap:17px}
+  .brand-baseline{display:none}
+}
+
+/* Menu mobile : le bouton d'ouverture manquait, la navigation était donc
+   totalement absente sous 1080 px — soit sur tous les téléphones. */
+.burger{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
+  border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;
+  font-family:Montserrat,sans-serif;color:var(--navy);cursor:pointer}
+.burger:hover{border-color:var(--sage)}
+@media (max-width:1120px){
+  .burger{display:block}
+  .nav-links{display:none;position:absolute;left:22px;right:22px;top:72px;
+    flex-direction:column;gap:14px;background:#fff;border:1px solid var(--line);
+    border-radius:20px;padding:22px 24px;z-index:60;
+    box-shadow:0 18px 44px rgba(17,37,58,.13)}
+  .nav-links.open{display:flex}
+  .header .nav{position:relative}
+}
+
+.cta-boutique{margin:30px 0 0;padding:20px 24px;border-radius:14px;background:var(--cream);border:1px solid var(--line);text-align:center;font-family:Montserrat,sans-serif;font-size:15px;font-weight:600}
+.cta-boutique a{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;background:var(--sage);color:#fff;text-decoration:none;border:0;transition:background .2s}
+.cta-boutique a:hover{background:var(--sage-dark);color:#fff}
 </style>
 </head>
 
@@ -751,14 +780,15 @@ transition:background .2s ease}
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
+<a href="biberon-pratique.html">Le biberon pratique</a>
 <a href="mode-demploi.html">Mode d’emploi</a>
 <a href="legerete.html">La légèreté</a>
-<a href="migration.html">Migration</a>
+<a href="conseils.html">Nos conseils</a>
 <a href="qui-sommes-nous.html">Qui sommes-nous</a>
 <a href="contact.html">Contact</a>
 </nav>
+<button class="burger" type="button" id="burger" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
 <div class="nav-tel">
-<a href="tel:+33611768632"><b>Utilisation</b> 06 11 76 86 32</a>
 <a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
 </div>
 <div class="nav-outils">
@@ -806,10 +836,12 @@ transition:background .2s ease}
         <p>Pas de boîte à retrouver. Pas de transvasement. Pas de récipient vide à rapporter.</p>
         <div class="important"><strong>Pré-dosé ici. Nourrissez partout.</strong></div>
         <p><a class="button-link" href="mode-demploi.html">Le geste complet, dans le mode d’emploi →</a></p>
-      </section>
+      
+<p class="renvoi-article">Le détail dans l’article dédié : <a href="sortir-sans-toute-la-cuisine.html">Préparer un biberon dehors sans emporter toute la cuisine</a>.</p>
+</section>
 
       <section id="nettoyage">
-        <h2>Pourquoi faudrait-il tout démonter pour laver un biberon ?</h2>
+        <h2>Une paroi qui s’ouvre plutôt que des pièces à démonter</h2>
         <p>Le nettoyage des pièces démontables revient constamment dans les plaintes des parents : valves, inserts, recoins difficiles à atteindre, éléments longs à sécher, crainte qu’un résidu reste quelque part. À force d’ajouter des fonctions sous forme de pièces, certains biberons finissent par devenir de petites usines à démonter après chaque repas.</p>
         <p>BIBEON a choisi le chemin inverse. Le flacon, la bague, la tétine. L’essentiel. Le capuchon solidaire se rince simplement.</p>
         <p>Et surtout, le pliage qui rend BIBEON compact sert aussi au nettoyage. Bague et tétine retirées, en abaissant puis en redéployant les soufflets, le fond, les plis et les recoins deviennent accessibles à la main.</p>
@@ -820,7 +852,9 @@ transition:background .2s ease}
         <p>BIBEON se lave à la main. Pas de lave-vaisselle, pas d’ébullition. Lorsque la stérilisation est souhaitée, elle se fait à froid, avec des comprimés adaptés et conformément à leur mode d’emploi.</p>
         <p><strong>La sophistication n’est pas dans le nombre de pièces. Elle est dans tout ce qu’on a réussi à supprimer.</strong></p>
         <p><a class="button-link" href="nettoyer-desinfecter-steriliser-biberon.html">Nettoyer, désinfecter ou stériliser : les différences →</a></p>
-      </section>
+      
+<p class="renvoi-article">Le détail dans l’article dédié : <a href="demonter-biberon-pour-laver.html">Pourquoi faut-il démonter autant de pièces pour laver un biberon ?</a>.</p>
+</section>
 
       <section id="grumeaux" class="product-focus">
         <p class="eyebrow">Sans casse-grumeaux</p>
@@ -833,7 +867,7 @@ transition:background .2s ease}
       </section>
 
       <section id="air">
-        <h2>Comment réduire l’air que bébé avale pendant la tétée ?</h2>
+        <h2>Le flacon descend avec le lait, l’air s’en va</h2>
         <p>Pendant que bébé boit, le niveau du lait descend. Dans un biberon rigide, le volume libéré reste occupé par de l’air.</p>
         <p>Avec BIBEON, le corps du flacon peut être abaissé jusqu’au niveau du liquide. L’espace vide diminue avec lui. Le geste est simple, et il se fait en dehors de la tétée : retirez le biberon de la bouche de bébé, desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p>
         <p>En fin de tétée, on peut aussi couder le col — plier les soufflets pour l’incliner — afin que le lait remplisse totalement la tétine.</p>
@@ -845,13 +879,15 @@ transition:background .2s ease}
 
       <section id="fuite" class="product-focus">
         <p class="eyebrow">Sans obturateur</p>
-        <h2>Est-ce que ça fuit dans le sac ?</h2>
+        <h2>Un capuchon plat, plutôt qu’un obturateur de plus</h2>
         <p>C’est l’une des premières questions que peut susciter un biberon pliable. La réponse est directe : <strong>correctement fermé, BIBEON est hermétique.</strong></p>
         <p>Correctement fermé veut dire quelque chose de précis : la tétine doit être enfoncée verticalement dans sa propre base, son orifice plaqué contre le toit plat du capuchon. Repliée de travers, elle ne ferme plus.</p>
         <p>Cette fermeture permet notamment de transporter la dose de poudre pré-dosée directement dans son flacon, sans fuite de contenu sec et sans boîte supplémentaire.</p>
         <p>Et elle est obtenue sans obturateur séparé. Lorsque le capuchon descend, la tétine s’enfonce correctement dans son axe. Son orifice vient se plaquer contre le toit plat du capuchon et s’obture directement.</p>
         <div class="important"><strong>La fonction reste. La pièce disparaît.</strong></div>
-      </section>
+      
+<p class="renvoi-article">Le détail dans l’article dédié : <a href="biberon-pliable-fuite-sac.html">Est-ce qu’un biberon pliable peut fuir dans le sac ?</a>.</p>
+</section>
 
       <section id="capuchon">
         <h2>Pourquoi le capuchon est-il plus court que la tétine ?</h2>
@@ -873,7 +909,9 @@ transition:background .2s ease}
         </ul>
         <p>Pas de petite pièce à poser quelque part. Pas d’obturateur à retrouver. Pas de tétine à déposer sur une surface inconnue.</p>
         <div class="important"><strong>Stabilité, hygiène et praticité viennent ici du même dessin.</strong></div>
-      </section>
+      
+<p class="renvoi-article">Le détail dans l’article dédié : <a href="biberon-nomade-sans-accessoires.html">Le biberon nomade, manipulé sans toucher l’intérieur</a>.</p>
+</section>
 
       <section id="solide">
         <h2>Un biberon de 35 g peut-il être solide ?</h2>
@@ -923,7 +961,9 @@ transition:background .2s ease}
         <details><summary>Que signifie « apte au contact alimentaire » pour un biberon ?</summary><p>Que les matériaux ont été choisis pour leur aptitude au contact alimentaire et doivent répondre aux exigences applicables. Pour les éléments concernés de BIBEON, les essais de migration réalisés en laboratoire n’ont détecté aucun résidu jusqu’au seuil de détection de 6 mg/kg, dans les conditions testées. Les résultats et la déclaration de conformité sont accessibles.</p></details>
       </section>
 
-      <div class="signature-autrice">
+      
+<p class="cta-boutique"><a href="boutique.html">Découvrir le biberon BIBEON <span>→</span></a></p>
+<div class="signature-autrice">
         <p class="eyebrow">Signature éditoriale</p>
         <p><strong>Article rédigé par Suzanne de Bégon</strong><br>Inventrice de biberons depuis mai 1996 et créatrice de BIBEON. Le rapport public IGAS RM2012-032P l’identifie comme la principale lanceuse d’alerte dans le dossier de la stérilisation à l’oxyde d’éthylène des biberons hospitaliers. Les contenus de bibeon.fr s’appuient sur les recommandations des autorités sanitaires et sur son expérience de conception et d’utilisation des biberons. <a href="suzanne-de-begon-histoire-bibeon.html">Lire son parcours</a>.</p>
       </div>
@@ -931,6 +971,7 @@ transition:background .2s ease}
       <footer class="article-sources">
         <h2>À lire également</h2>
         <ul>
+          <li><a href="conseils.html">Tous nos conseils sur le biberon — 18 articles pour les parents</a></li>
           <li><a href="guide-securite-biberon-sans-bpa.html">Biberon sans BPA, verre ou plastique : ce que dit la loi</a></li>
           <li><a href="tests-migration-lne-bibeon.html">BIBEON : matériaux, contact alimentaire et essais de migration — ce que les résultats disent réellement</a></li>
           <li><a href="mode-demploi.html">BIBEON — Mode d’emploi</a></li>
@@ -944,6 +985,7 @@ transition:background .2s ease}
   </div>
 </section>
 
+</main>
 <footer id="contact">
 <div class="shell footer-grid">
 <div class="footer-col">
