@@ -478,6 +478,9 @@ font-family:Montserrat,sans-serif;font-size:11.5px;line-height:1.7;color:var(--s
 .bloc-grid.pose-large{grid-template-columns:.82fr 1.18fr}
 .bloc-visuel.libre.pose-duo{justify-content:flex-start}
 .bloc-visuel.libre.pose-duo img{max-height:min(858px,84vh);max-width:none;filter:none;margin:0 0 0 56px}
+/* en position gauche, le visuel se cale sur la colonne au lieu de déborder vers elle */
+.visuel-gauche .bloc-visuel.libre.pose-duo{justify-content:center}
+.visuel-gauche .bloc-visuel.libre.pose-duo img{margin:0;max-width:100%}
 @media (max-width:900px){
   .bloc-grid.pose-large{grid-template-columns:1fr}
   .bloc-visuel.libre.pose-duo{justify-content:center}
@@ -1159,7 +1162,7 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
   .nav-links.open{display:flex}
   .header .nav{position:relative}
 }
-@media (max-width:1366px){.nav-links{font-size:13.5px;gap:17px}.brand-baseline{display:none}}
+@media (max-width:1560px){.nav-links{font-size:13.5px;gap:17px}.brand-baseline{display:none}}
 
 .cta-boutique{margin:30px auto 0;max-width:820px;padding:20px 24px;border-radius:14px;background:var(--cream);border:1px solid var(--line);text-align:center;font-family:Montserrat,sans-serif;font-size:15px;font-weight:600}
 .cta-boutique a{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;background:var(--sage);color:#fff;text-decoration:none;border:0;transition:background .2s}
@@ -1412,8 +1415,8 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 <!-- ═════════ 01 · LE TRANSPORT ═════════ -->
 <section aria-labelledby="t-transport" class="bloc respiration" id="transport">
 <div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel photo libre">
-<img alt="Le BIBEON à cinq états de pliage, du replié au complètement déplié, avec sa bague et son capuchon." src="assets/bibeon-etats-de-pliage.webp" width="2000" height="1006" loading="lazy"/>
+<figure class="bloc-visuel libre pose-duo">
+<img alt="Le biberon BIBEON replié, capuchon vissé, contenant sa dose de lait en poudre, posé à côté de son pochon de mousseline de coton." src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400" height="1400" loading="lazy"/>
 </figure>
 <div class="bloc-texte">
 <p class="overline">01 · Le transport</p>
@@ -1423,7 +1426,8 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 <p class="corps">Son flacon replié reçoit directement la dose de lait en poudre pré-dosée&nbsp;: <b>pas de boîte doseuse séparée à transporter.</b></p>
 <p class="corps">Petit dehors. Grand quand on en a besoin&nbsp;: <b>jusqu’à 330&nbsp;ml de capacité utile</b> une fois entièrement déployé.</p>
 <p class="billets">Moins de volume. Moins de poids.<br/>Un objet de moins dans le sac.</p>
-<p class="lien-discret"><a href="sortir-sans-toute-la-cuisine.html">Préparer un biberon dehors sans emporter toute la cuisine</a></p>
+<p class="lien-discret"><a href="sortir-sans-toute-la-cuisine.html">Combien d’objets faut-il pour un seul biberon&nbsp;?</a></p>
+<p class="lien-discret"><a href="transporter-lait-en-poudre.html">Transporter le lait en poudre&nbsp;: dans quoi&nbsp;?</a></p>
 </div>
 </div>
 </section>
