@@ -1168,9 +1168,17 @@ font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sa
 /* Section 06 : le bloc solidaire n'avait aucun visuel. La photo le montre
    tenu d'une main, pieces assemblees — ce que le texte affirme. */
 .bloc-solidaire-visuel{margin:clamp(30px,4vh,48px) auto clamp(26px,3.4vh,40px);max-width:440px}
+/* En duo quand les deux preuves sont la : le bloc tenu d'une main, et le
+   capuchon pose sur sa face plate. Meme grille que .nettoyage-duo. */
+.bloc-solidaire-duo{display:grid;grid-template-columns:1fr 1fr;
+  gap:clamp(22px,3vw,44px);max-width:860px;
+  margin:clamp(30px,4vh,48px) auto clamp(26px,3.4vh,40px);align-items:start}
+.bloc-solidaire-duo .bloc-solidaire-visuel{margin:0;max-width:none}
+@media (max-width:760px){.bloc-solidaire-duo{grid-template-columns:1fr;max-width:440px}}
 .bloc-solidaire-visuel img{display:block;width:100%;height:auto;aspect-ratio:5/4;
   object-fit:cover;object-position:44% 34%;border-radius:var(--radius);
   background:#fff;box-shadow:var(--shadow-m)}
+.bloc-solidaire-visuel.centre img{object-position:50% 50%}
 .bloc-solidaire-visuel figcaption{margin:14px auto 0;max-width:40ch;text-align:center;
   font-family:Montserrat,sans-serif;font-size:12.5px;line-height:1.7;color:var(--sage)}
 .cta-boutique{margin:30px auto 0;max-width:820px;padding:20px 24px;border-radius:14px;background:var(--cream);border:1px solid var(--line);text-align:center;font-family:Montserrat,sans-serif;font-size:15px;font-weight:600}
@@ -1537,11 +1545,18 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 <p class="corps">Et le capuchon plat ajoute une deuxième intelligence&nbsp;: le bloc entier peut être posé à l’envers sur sa face extérieure. <b>Il reste stable. Il ne roule pas.</b></p>
 <p class="corps">Seule la face extérieure du capuchon touche la table. La tétine et l’intérieur de la bague ne touchent ni le support ni les doigts.</p>
 <p class="corps">Le bloc solidaire apporte la praticité&nbsp;; le capuchon plat apporte la stabilité et l’hygiène.</p>
+<div class="bloc-solidaire-duo">
 <figure class="bloc-solidaire-visuel">
 <img src="assets/bague-tetine-dessous.webp" width="1400" height="1568" loading="lazy"
      alt="Le bloc bague–tétine–capuchon de BIBEON tenu dans une main, vu de dessous : les pièces restent assemblées, le col de la tétine apparaît au centre.">
 <figcaption>Retiré d’un seul geste, il reste d’un seul tenant. Au centre, le col de la tétine&nbsp;; autour, la bague et le capuchon.</figcaption>
 </figure>
+<figure class="bloc-solidaire-visuel centre">
+<img src="assets/capuchon-pose-a-lenvers.jpg" width="1200" height="1500" loading="lazy"
+     alt="Le capuchon plat de BIBEON posé à l’envers sur sa face extérieure, stable, à côté de la tétine montée sur sa bague.">
+<figcaption>Posé à l’envers sur sa face extérieure, le capuchon ne roule pas&nbsp;— et rien de l’intérieur ne touche la table.</figcaption>
+</figure>
+</div>
 <p class="billets" style="margin-inline:auto">Une seule pièce à manipuler dehors.<br/>Rien de l’intérieur à toucher.</p>
 <p class="lien-discret lien-centre"><a href="biberon-nomade-sans-accessoires.html">Le biberon manipulé sans toucher l’intérieur</a></p>
 </div>
