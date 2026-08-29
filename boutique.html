@@ -42,90 +42,534 @@
 
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CollectionPage",
+   "@id": "https://bibeon.fr/boutique.html#page",
+   "url": "https://bibeon.fr/boutique.html",
+   "name": "Boutique BIBEON",
+   "description": "Les offres du biberon nomade pliable BIBEON : unité, duo, lot de trois, lot de cinq, et le BIBEO.",
+   "inLanguage": "fr-FR",
+   "isPartOf": {
+    "@id": "https://bibeon.fr/#site"
+   },
+   "about": {
+    "@id": "https://bibeon.fr/#biberon"
+   },
+   "publisher": {
+    "@id": "https://bibeon.fr/#organisation"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://bibeon.fr/assets/bibeon-coffret-hero.webp",
+    "width": 1600,
+    "height": 1000
+   },
+   "datePublished": "2026-08-06",
+   "dateModified": "2026-08-29"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://bibeon.fr/boutique.html#fil",
+   "itemListElement": [
     {
-      "@type": "CollectionPage",
-      "@id": "https://bibeon.fr/boutique.html#page",
-      "url": "https://bibeon.fr/boutique.html",
-      "name": "Boutique BIBEON",
-      "description": "Les offres du biberon nomade pliable BIBEON : unité, duo, lot de trois, lot de cinq, et le BIBEO.",
-      "inLanguage": "fr-FR",
-      "isPartOf": {
-        "@id": "https://bibeon.fr/#site"
-      },
-      "about": {
-        "@id": "https://bibeon.fr/#biberon"
-      },
-      "publisher": {
-        "@id": "https://bibeon.fr/#organisation"
-      },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://bibeon.fr/assets/bibeon-coffret-hero.webp",
-        "width": 1600,
-        "height": 1000
-      },
-      "datePublished": "2026-08-06",
-      "dateModified": "2026-08-29"
+     "@type": "ListItem",
+     "position": 1,
+     "name": "BIBEON",
+     "item": "https://bibeon.fr/"
     },
     {
-      "@type": "BreadcrumbList",
-      "@id": "https://bibeon.fr/boutique.html#fil",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "BIBEON",
-          "item": "https://bibeon.fr/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Boutique",
-          "item": "https://bibeon.fr/boutique.html"
-        }
-      ]
-    },
-    {
-      "@type": "ItemList",
-      "@id": "https://bibeon.fr/boutique.html#offres",
-      "name": "Les offres BIBEON",
-      "numberOfItems": 6,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Un BIBEON — biberon nomade pliable 330 ml"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Le duo — deux biberons nomades pliables"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Le lot de trois — trois biberons nomades pliables"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Le lot de cinq — les cinq coloris"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Le BIBEO — édition limitée"
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "name": "Le duo BIBEO — édition limitée"
-        }
-      ]
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Boutique",
+     "item": "https://bibeon.fr/boutique.html"
     }
-  ]
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://bibeon.fr/boutique.html#offres",
+   "name": "Les offres BIBEON",
+   "numberOfItems": 6,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#un-bibeon",
+      "name": "Un BIBEON",
+      "description": "Le biberon nomade pliable BIBEON, 330 ml, avec sa tétine en silicone alimentaire, débit 6 mois et plus. Vendu vide.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-menthe.webp",
+      "url": "https://bibeon.fr/boutique.html#un-bibeon",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "1"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#un-bibeon-offre",
+       "price": "35.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#un-bibeon",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#duo",
+      "name": "Le duo",
+      "description": "Deux biberons nomades pliables BIBEON de 330 ml : celui de la sortie, et celui qui reste prêt dans le sac. Coloris au choix.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-duo-menthe-abricot.webp",
+      "url": "https://bibeon.fr/boutique.html#duo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "2"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#duo-offre",
+       "price": "62.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#duo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#lot-de-trois",
+      "name": "Le lot de trois",
+      "description": "Trois biberons nomades pliables BIBEON de 330 ml : trois repas dosés la veille, la journée entière dans le sac à main.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-trio.webp",
+      "url": "https://bibeon.fr/boutique.html#lot-de-trois",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "3"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#lot-de-trois-offre",
+       "price": "87.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#lot-de-trois",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#lot-de-cinq",
+      "name": "Le lot de cinq",
+      "description": "Les cinq coloris du biberon nomade pliable BIBEON, 330 ml : un chez vous, un dans la voiture, un chez la nounou, un chez mamie, et le cinquième toujours prêt.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-5-coloris.webp",
+      "url": "https://bibeon.fr/boutique.html#lot-de-cinq",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "5"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#lot-de-cinq-offre",
+       "price": "125.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#lot-de-cinq",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#bibeo",
+      "name": "Le BIBEO",
+      "description": "Le BIBEON en édition limitée, coloré de haut en bas, bague jaune. Biberon nomade pliable de 330 ml.",
+      "image": "https://bibeon.fr/assets/bibeo-biberon-pliable-rose.webp",
+      "url": "https://bibeon.fr/boutique.html#bibeo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "1"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#bibeo-offre",
+       "price": "45.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#bibeo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#duo-bibeo",
+      "name": "Le duo BIBEO",
+      "description": "Deux BIBEO en édition limitée, le rose et le menthe ou deux fois le même. Biberon nomade pliable de 330 ml.",
+      "image": "https://bibeon.fr/assets/bibeo-biberon-pliable-duo.webp",
+      "url": "https://bibeon.fr/boutique.html#duo-bibeo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "2"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#duo-bibeo-offre",
+       "price": "79.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#duo-bibeo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+       "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+         "@type": "MonetaryAmount",
+         "value": "0",
+         "currency": "EUR"
+        },
+        "shippingDestination": {
+         "@type": "DefinedRegion",
+         "addressCountry": "FR"
+        }
+       },
+       "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "FR",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 30,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnShippingFees"
+       }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true
+     }
+    }
+   ]
+  }
+ ]
 }
 </script>
 <style>
@@ -1315,7 +1759,7 @@ line-height:1.6;color:var(--sage)}
 <div class="shell bhero-grid">
 <div class="bhero-texte">
 <p class="bhero-sur">La boutique</p>
-<h1>BIBEON<br/>vous attend.</h1>
+<h1>Le biberon nomade pliable.</h1>
 <p class="bhero-chapo">Le monde n’attend que vous.</p>
 <p class="bhero-cta"><a href="#offres">Voir les offres</a></p>
 </div>
@@ -1342,7 +1786,7 @@ line-height:1.6;color:var(--sage)}
 <p>À l’unité, en duo ou en lot — choisissez la formule qui vous accompagne.</p>
 </div>
 <div class="offres">
-<article class="offre">
+<article class="offre" id="un-bibeon">
 <figure class="offre-image"><img alt="Le biberon nomade BIBEON replié, coloris menthe, capuchon fermé et tétine montée" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-menthe.webp" width="1200"/></figure>
 <p class="offre-occasion">La petite course</p>
 <h3>Un BIBEON</h3>
@@ -1357,7 +1801,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 </article>
 
-<article class="offre">
+<article class="offre" id="duo">
 <figure class="offre-image"><img data-coloris-img="1" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" width="1200"/></figure>
 <p class="offre-occasion">L’après-midi</p>
 <h3>Le duo</h3>
@@ -1375,7 +1819,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 </article>
 
-<article class="offre">
+<article class="offre" id="lot-de-trois">
 <figure class="offre-image"><img alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-trio.webp" width="1200"/></figure>
 <p class="offre-occasion">Le week-end</p>
 <h3>Le lot de trois</h3>
@@ -1386,7 +1830,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 </article>
 
-<article class="offre">
+<article class="offre" id="lot-de-cinq">
 <figure class="offre-image"><img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="900" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1200"/></figure>
 <p class="offre-occasion">Le voyage</p>
 <h3>Le lot de cinq</h3>
@@ -1426,7 +1870,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 
 <div class="offres offres-rare">
-<article class="offre">
+<article class="offre" id="bibeo">
 <figure class="offre-image"><img alt="Un BIBEO replié, coloris rose : flacon et capuchon roses, bague jaune" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-rose.webp" width="1200"/></figure>
 <h3>Le BIBEO</h3>
 <p>Coloré de haut en bas, bague jaune.</p>
@@ -1440,7 +1884,7 @@ line-height:1.6;color:var(--sage)}
 </div>
 </article>
 
-<article class="offre">
+<article class="offre" id="duo-bibeo">
 <figure class="offre-image"><img alt="Les deux BIBEO repliés côte à côte : l’un rose, l’autre menthe, bague jaune" data-coloris-img="1" height="900" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1200"/></figure>
 <h3>Le duo BIBEO</h3>
 <p>Le rose et le menthe, ou deux fois le même.</p>
