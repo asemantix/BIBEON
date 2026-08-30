@@ -1340,10 +1340,6 @@ background:linear-gradient(90deg,
 .livraison-legende{position:absolute;right:6%;bottom:6%;z-index:3;margin:0;text-align:right;
 font-family:Montserrat,sans-serif;font-size:13px;line-height:1.8;color:var(--sage);max-width:34ch}
 .livraison-legende b{font-weight:600;color:var(--sage-dark)}
-/* les deux repliés sont le MÊME flacon que le pré-dosé : même diamètre.
-   34 % cale leur largeur sur la sienne ; 37 % les dégage de la colonne de texte. */
-.livraison-duo{position:absolute;right:37%;bottom:-1%;width:34%;margin:0;z-index:2}
-.livraison-duo img{display:block;width:100%;height:auto}
 .livraison-titre{margin:14px 0 14px;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(28px,3vw,42px);line-height:1.12;color:var(--sage-dark)}
 .livraison-titre em{font-style:italic;color:var(--sage)}
@@ -1358,17 +1354,12 @@ font-size:15px;line-height:2.2;color:var(--text)}
 font-size:13.5px;line-height:1.85;color:var(--sage)}
 .livraison-plus b{font-weight:600;color:var(--sage-dark)}
 .livraison-plus a{color:var(--sage-dark);border-bottom:1px solid var(--line)}
-/* entre 900 et 1250 px la colonne de texte ne rétrécit pas aussi vite que la
-   section : le duo doit reculer vers la droite pour ne pas la chevaucher. */
-@media (max-width:1250px){.livraison-duo{right:31%;width:31%}}
-@media (max-width:1050px){.livraison-duo{right:26%;width:28%}}
 @media (max-width:900px){
   .livraison{background-size:155% auto;background-position:center bottom;
   padding-bottom:calc(100vw * .74)}
   .livraison::before{background:linear-gradient(180deg,
    rgba(247,242,239,1) 0%, rgba(247,242,239,1) 62%, rgba(247,242,239,.5) 72%, rgba(247,242,239,0) 84%)}
   .livraison-texte{max-width:none}
-  .livraison-duo{right:auto;left:4%;bottom:0;width:36%}
   .livraison-legende{position:static;text-align:left;margin:18px 0 0;max-width:none;font-size:12.5px}
 }
 .bhero{position:relative;border-bottom:1px solid var(--line);
@@ -1474,8 +1465,11 @@ color-mix(in srgb, var(--teinte) 82%, #4a3f2f) 100%);
 box-shadow:inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
 .coloris-epuise .coloris-ref{color:var(--sage-soft)}
 .coloris-fond{aspect-ratio:3/4;display:flex;align-items:center;justify-content:center;
-padding:12% 14%;margin:0 0 16px}
-.coloris-fond img{display:block;width:100%;height:100%;object-fit:contain}
+overflow:hidden;margin:0 0 16px}
+/* le flacon est centré dans une photo 4/3 très aérée : « cover » recadre les marges
+   blanches et le remplit la carte sans jamais mordre sur le produit. */
+.coloris-fond img{display:block;width:100%;height:100%;
+object-fit:cover;mix-blend-mode:multiply}
 .coloris-nom{margin:0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
 font-size:clamp(18px,1.6vw,23px);color:var(--sage-dark)}
 .coloris-ref{margin:5px 0 0;font-family:Montserrat,sans-serif;font-size:11.5px;
@@ -1949,9 +1943,6 @@ line-height:1.6;color:var(--sage)}
 
 <section aria-label="Ce que vous recevez et comment" class="livraison">
 <p class="livraison-legende">Biberon nomade, <b>vendu vide</b><br/>flacon, tétine, bague et capuchon.</p>
-<figure class="livraison-duo">
-<img alt="Deux BIBEON repliés, coloris menthe et lilas" height="1200" loading="lazy" src="assets/bibeon-biberon-pliable-duo-menthe-lilas.webp" width="1600"/>
-</figure>
 <div class="shell livraison-grid">
 <div class="livraison-texte">
 <p class="overline">La livraison</p>

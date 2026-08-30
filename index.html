@@ -292,10 +292,12 @@ text-transform:uppercase;text-decoration:none;padding:17px 34px;border-radius:99
 background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .teaser-cta a:hover{background:var(--sage)}
 .teaser-image{margin:0}
-.teaser-image img{display:block;width:100%;height:auto}
+.teaser-image img{display:block;width:100%;height:auto;mix-blend-mode:multiply}
 /* Le BIBEO rejoint la planche des cinq coloris — deux images entières posées l'une
-   sous l'autre, jamais un détourage. La marge négative rattrape le vide transparent
-   que porte le fichier du duo (252 px en haut, 253 px en bas sur 1600). */
+   sous l'autre, jamais un détourage. Les deux fichiers sont détourés sur blanc pur :
+   c'est « multiply » qui fait disparaître ce blanc sur la crème, et la marge négative
+   qui rattrape le vide que porte le fichier du duo (164 px en haut, 128 px en bas
+   sur 1200) pour rapprocher les deux planches. */
 /* le BIBEO à la même échelle que les BIBEON : son flacon occupe 30 % de son
    fichier, celui des BIBEON 25 % du leur — d'où 84 % de largeur pour égaliser. */
 .teaser-image img.teaser-bibeo-img{width:84%;margin:-9% auto -9%}
@@ -1657,7 +1659,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <p class="billets">À l’abri de la lumière :<br/>dans un sac à main,<br/>ou dans son pochon.</p>
 </div>
 <figure class="bloc-visuel libre pose-duo">
-<img alt="Le biberon BIBEON replié, capuchon vissé, contenant la dose de lait en poudre, et son pochon de mousseline de coton" height="1400" loading="lazy" src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400"/>
+<img alt="Le biberon BIBEON replié, fermé par son capuchon clipsé, contenant la dose de lait en poudre, et son pochon de mousseline de coton" height="1400" loading="lazy" src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400"/>
 </figure>
 </div>
 </section>
@@ -2271,8 +2273,8 @@ En nous envoyant votre photo, vous nous autorisez à la publier sur bibeon.fr et
 <p class="teaser-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
 </div>
 <figure class="teaser-image">
-<img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="1400" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1400"/>
-<img class="teaser-bibeo-img" alt="Le duo BIBEO, rose et menthe, bagues dorées" height="1400" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1400"/>
+<img alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" height="1200" loading="lazy" src="assets/bibeon-biberon-pliable-5-coloris.webp" width="1600"/>
+<img class="teaser-bibeo-img" alt="Le duo BIBEO, rose et menthe, bagues dorées" height="1200" loading="lazy" src="assets/bibeo-biberon-pliable-duo.webp" width="1600"/>
 </figure>
 </div>
 </section>
