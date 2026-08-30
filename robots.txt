@@ -18,6 +18,6 @@ Allow: /
 # Dossier de travail : fichiers sources lourds en attente de traitement.
 # À retirer de ce fichier quand /sources/ sera supprimé.
 User-agent: *
-Disallow: /sources/
+Disallow: /source/
 
 Sitemap: https://bibeon.fr/sitemap.xml
