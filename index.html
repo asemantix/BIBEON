@@ -1501,7 +1501,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <!-- ══════════ 1 · HERO ══════════ -->
 <section class="hero" id="accueil">
-<video aria-hidden="true" class="hero-fond" data-jouer-une-fois="" muted="" playsinline="" poster="assets/hero-serre.webp" preload="metadata" src="assets/hero-serre.mp4" tabindex="-1"></video>
+<video aria-hidden="true" class="hero-fond" data-play-visible="" loop="" muted="" playsinline="" poster="assets/hero-serre.webp" preload="metadata" src="assets/hero-serre.mp4" tabindex="-1"></video>
 <div aria-hidden="true" class="hero-voile"></div>
 <div class="shell hero-contenu">
 <p class="overline">Fabriqué en France · Testé par le LNE</p>
@@ -2527,15 +2527,13 @@ if(a) a.textContent=new Date().getFullYear();})();
 </script>
    <script>
 (function () {
-  /* Le film du hero ne tourne pas en boucle : il se joue une fois à l'arrivée,
-     puis se fige sur sa dernière image. Rien ne décode plus rien ensuite.
-     Si le visiteur a demandé moins d'animations à son système, il ne part pas
-     du tout et l'affiche reste seule. */
+  /* Les films ne tournent que tant qu'ils sont à l'écran : dès qu'on a scrollé,
+     ils se mettent en pause et plus rien ne décode. C'est ce qui évite de faire
+     tourner une boucle dans le vide pendant toute la visite.
+     Si le visiteur a demandé moins d'animations à son système, aucun ne part :
+     chacun reste sur son affiche. */
   var calme = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  document.querySelectorAll('video[data-jouer-une-fois]').forEach(function (v) {
-    if (calme) return;
-    v.play().catch(function () {});
-  });
+  if (calme) return;
 
   var films = document.querySelectorAll('video[data-play-visible]');
   if (!films.length) return;
