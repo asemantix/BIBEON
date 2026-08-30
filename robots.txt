@@ -1,23 +1,35 @@
 # robots.txt — bibeon.fr
+
+# Dossier de travail : fichiers sources lourds en attente de traitement.
+# Le « Disallow: /source/ » est répété dans chaque groupe : un robot qui trouve
+# son propre nom ignore entièrement le groupe « * ». À retirer partout quand
+# le dossier /source/ sera supprimé.
+
 User-agent: *
 Allow: /
+Disallow: /source/
 
 # Robots des IA génératives : autorisés (ils citent la marque et amènent du trafic).
 # Pour les bloquer un jour, remplacer Allow par Disallow.
+
 User-agent: GPTBot
 Allow: /
+Disallow: /source/
+
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /source/
+
 User-agent: PerplexityBot
 Allow: /
+Disallow: /source/
+
 User-agent: ClaudeBot
 Allow: /
+Disallow: /source/
+
 User-agent: Google-Extended
 Allow: /
-
-# Dossier de travail : fichiers sources lourds en attente de traitement.
-# À retirer de ce fichier quand /sources/ sera supprimé.
-User-agent: *
 Disallow: /source/
 
 Sitemap: https://bibeon.fr/sitemap.xml
