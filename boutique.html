@@ -1410,7 +1410,11 @@ background:var(--sage-dark);color:#fff;transition:background .2s ease}
 .bhero-image{display:none}
 @media (max-width:900px){
   /* sur téléphone : le voile descend du haut, le texte est posé dessus */
-  .bhero{aspect-ratio:3 / 4;background-size:cover;background-position:64% center}
+  /* height et min-height de la regle de base l'emportaient sur aspect-ratio :
+     le hero mobile faisait 430 px au lieu des 520 prevus, et l'image se
+     retrouvait ecrasee sous le bouton. On rend la main au rapport. */
+  .bhero{aspect-ratio:3 / 4;height:auto;min-height:0;
+  background-size:cover;background-position:64% center}
   .bhero::before{background:linear-gradient(180deg,
    rgba(17,37,58,.82) 0%, rgba(17,37,58,.62) 28%, rgba(17,37,58,.24) 46%, rgba(17,37,58,0) 62%)}
   .bhero-grid{grid-template-columns:1fr;gap:0;min-height:0;padding:26px 0;align-items:start}
