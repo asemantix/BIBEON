@@ -15,4 +15,9 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# Dossier de travail : fichiers sources lourds en attente de traitement.
+# À retirer de ce fichier quand /sources/ sera supprimé.
+User-agent: *
+Disallow: /sources/
+
 Sitemap: https://bibeon.fr/sitemap.xml
