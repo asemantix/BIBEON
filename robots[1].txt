@@ -1,0 +1,24 @@
+# robots.txt — bibeon.fr
+
+User-agent: *
+Allow: /
+
+# Robots des IA génératives : autorisés (ils citent la marque et amènent du trafic).
+# Pour les bloquer un jour, remplacer Allow par Disallow.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://bibeon.fr/sitemap.xml
