@@ -7,29 +7,29 @@
 
 User-agent: *
 Allow: /
-Disallow: /source/
+
 
 # Robots des IA génératives : autorisés (ils citent la marque et amènent du trafic).
 # Pour les bloquer un jour, remplacer Allow par Disallow.
 
 User-agent: GPTBot
 Allow: /
-Disallow: /source/
+
 
 User-agent: OAI-SearchBot
 Allow: /
-Disallow: /source/
+
 
 User-agent: PerplexityBot
 Allow: /
-Disallow: /source/
+
 
 User-agent: ClaudeBot
 Allow: /
-Disallow: /source/
+
 
 User-agent: Google-Extended
 Allow: /
-Disallow: /source/
+
 
 Sitemap: https://bibeon.fr/sitemap.xml
