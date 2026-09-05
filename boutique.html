@@ -147,26 +147,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
@@ -228,26 +244,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
@@ -309,26 +341,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
@@ -390,26 +438,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+        "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
@@ -471,26 +535,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
@@ -552,26 +632,42 @@
        "seller": {
         "@id": "https://bibeon.fr/#organisation"
        },
-       "shippingDetails": {
-        "@type": "OfferShippingDetails",
-        "shippingRate": {
-         "@type": "MonetaryAmount",
-         "value": "0",
-         "currency": "EUR"
-        },
-        "shippingDestination": {
-         "@type": "DefinedRegion",
-         "addressCountry": "FR"
-        }
-       },
-       "hasMerchantReturnPolicy": {
-        "@type": "MerchantReturnPolicy",
-        "applicableCountry": "FR",
-        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-        "merchantReturnDays": 30,
-        "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/ReturnShippingFees"
-       }
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
       },
       "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
       "isFamilyFriendly": true,
