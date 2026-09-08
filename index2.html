@@ -1534,6 +1534,8 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   .hist12-texte{order:2;margin:0 auto;text-align:center}
 }
 
+/* signature de fin de page : la section « Le nom », en respiration courte */
+.nom-fin{min-height:0;padding:clamp(72px,11vh,130px) 0}
 </style>
 </head>
 <body>
@@ -1550,7 +1552,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand brand-tag" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/><span class="brand-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</span></a>
+<a aria-label="BIBEON — accueil" class="brand brand-tag" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a aria-current="page" href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
@@ -1580,7 +1582,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   <div class="heroF-grille">
     <div class="heroF-contenu">
       <p class="heroF-eyebrow">Fabriqué en France · Testé par le LNE</p>
-      <h1 id="hero-titre">Le <span class="heroF-mot">biberon</span> pliable<br>et nomade.<em class="heroF-promesse">L’air <span>en moins.</span></em></h1>
+      <h1 id="hero-titre">Le <span class="heroF-mot">biberon</span> pliable<br>et nomade.<em class="heroF-promesse">L’R <span>en moins.</span></em></h1>
       <p class="heroF-prix"><b>À partir de 35 €</b><i>·</i>livraison offerte<i>·</i>expédié de France le jour même</p>
       <p class="heroF-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
       <p class="heroF-capsules"><a href="#preuve-vegetal">50 % végétal</a><a href="#preuve-residu">0 résidu détecté</a></p>
@@ -1887,6 +1889,14 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   </figure>
 </section>
 
+<!-- ══════════ 13 · LA SIGNATURE — logo + « Le biberon, l'R en moins » ; ferme chaque page du site ══════════ -->
+<section aria-label="Le nom" class="usp nom nom-fin">
+<div class="shell">
+<img alt="BIBEON" class="nom-logo" height="34" src="assets/logo-bibeon.svg" width="135"/>
+<p class="baseline nom-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</p>
+</div>
+
+</section>
 <!-- ══════════ 20 · NOUS CONTACTER ══════════
      Cible du bouton « Nous contacter » des pages intérieures : index.html#inscription
      Ne pas renommer l'id sans corriger ces pages. -->
