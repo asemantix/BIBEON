@@ -7,22 +7,20 @@
 <title>Voyager avec bébé : le biberon pliable BIBEON (avion, voiture, plage)</title>
 <meta name="description" content="Avion, voiture, train, plage, camping : emporter les repas de bébé sans sac à langer. Le biberon pliable BIBEON 330 ml se dose avant le départ.">
 <meta name="theme-color" content="#f9f4ef">
-<!-- ⚠️ VOYAGE2 EN TEST : au basculement (renommage en voyage.html), remplacer la ligne suivante par
-     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1"> -->
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://bibeon.fr/voyage.html">
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="BIBEON">
 <meta property="og:url" content="https://bibeon.fr/voyage.html">
 <meta property="og:title" content="Voyager avec bébé : pré-dosé chez vous, nourrissez partout">
 <meta property="og:description" content="Dosez à la maison, dépliez et ajoutez l’eau sur place. Avion, voiture, plage, camping — le biberon pliable BIBEON 330 ml.">
-<meta property="og:image" content="https://bibeon.fr/assets/sac-a-main-grok.jpg">
-<meta property="og:image:alt" content="Cinq BIBEON repliés sortis d’un sac à main, alignés sur un plan de travail">
+<meta property="og:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
+<meta property="og:image:alt" content="Trois BIBEON repliés, pré-dosés, prêts à entrer dans un sac à main vert sauge">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Voyager avec bébé : pré-dosé chez vous, nourrissez partout">
 <meta name="twitter:description" content="Le biberon pliable BIBEON 330 ml : dosé à la maison, déplié sur place.">
-<meta name="twitter:image" content="https://bibeon.fr/assets/sac-a-main-grok.jpg">
+<meta name="twitter:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -625,7 +623,7 @@ transition:background .2s ease}
 
 
 /* ══════════ VOYAGE 2 — styles des nouveaux écrans (livrés par Claude, septembre 2026) ══════════ */
-/* ══════════ VOYAGE · ÉCRAN 1 · HERO — texte à gauche, la vidéo Grok du sac à main à droite (assets/sac-a-main-grok.mp4, 14,5 s, 2,8 Mo, coupée au premier plan du sac, rien d'autre changé) + assets/sac-a-main-grok.jpg. Fond blanc.
+/* ══════════ VOYAGE · ÉCRAN 1 · HERO — texte à gauche, l’image du sac vert sauge à droite (assets/sac-sauge-hero.webp, tirée à 3,75 s de la vidéo Grok « sac sauge », trois BIBEON pré-dosés, la main sur l’abricot). Fond blanc.
    H1 = sa phrase ; « voyager avec bébé » et « biberon nomade pliable » restent dans le H2 pour Google. ══════════ */
 .vhero{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
   background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
@@ -645,14 +643,14 @@ transition:background .2s ease}
 .vhero-cta a span{display:inline-block;margin-left:.6em;transition:transform .25s}
 .vhero-cta a:hover span{transform:translateX(5px)}
 .vhero-visuel{margin:0;display:flex;align-items:center;justify-content:center;min-height:0}
-.vhero-visuel video{display:block;width:100%;height:auto;max-height:78svh;aspect-ratio:4/3;object-fit:cover;border-radius:28px;background:#fff}
+.vhero-visuel img{display:block;width:100%;height:auto;max-height:78svh;object-fit:contain;border-radius:28px}
 @media (max-width:820px){
   .vhero{grid-template-columns:1fr;min-height:auto;gap:28px;padding:56px 24px}
   .vhero-visuel{order:-1}
   .vhero-texte{margin:0 auto;text-align:center}
 }
 
-/* ══════════ VOYAGE · ÉCRAN 2 · LA DOSE — la vidéo Grok du dosage (le BIBEON replié reçoit sa poudre au doseur, puis son capuchon), coupée à 2,5 s, texte à gauche. Fichiers : assets/dose-poudre-grok.mp4 (12,5 s, 2,4 Mo, 4/3) + .jpg. Sa propre vidéo (dosage-poudre.mp4) part au mode d’emploi. ══════════ */
+/* ══════════ VOYAGE · ÉCRAN 2 · LA DOSE — la vidéo Grok du dosage (le BIBEON replié reçoit sa poudre au doseur, puis son capuchon), coupée à 4,6 s, dès que la poudre coule, texte à gauche. Fichiers : assets/dose-lait-poudre-biberon-replie.mp4 (12,5 s, 2,4 Mo, 4/3) + .jpg. Sa propre vidéo (dosage-poudre.mp4) part au mode d’emploi. ══════════ */
 .dose{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
   background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
   display:grid;grid-template-columns:1fr 1fr;align-items:center;
@@ -838,7 +836,7 @@ transition:background .2s ease}
 @media (max-width:720px){.vsix{min-height:auto;padding:64px 22px}}
 
 /* ══════════ SECTION 6 · LA PORTE DE LA BOUTIQUE — un écran blanc, les cinq flacons, le prix, le bouton.
-   Fichiers : assets/cinq-coloris-etagere.mp4 (vidéo Grok « les cinq sur l’étagère », marche avant seule, boucle fondue 8,5 s) + .jpg (image d’attente, affichée tant que la vidéo n’est pas en ligne). Le défilé (defile-cinq-coloris) est écarté : elle ne veut plus montrer les biberons pleins de lait. Pas de panier ici : il vit sur boutique.html. ══════════ */
+   Fichier : assets/cinq-coloris-chambre.webp (image tirée de la vidéo Grok n° 4, les cinq dans la chambre de bébé). ══════════ */
 .porte{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
   background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
@@ -846,8 +844,8 @@ transition:background .2s ease}
 .porte-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
 .porte-titre{font:400 clamp(36px,5.2vw,72px)/1.04 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
 .porte-titre em{font-style:italic;color:var(--sauge-texte)}
-.porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,720px)}
-.porte-visuel video{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:24px;background:#fff}
+.porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,820px)}
+.porte-visuel img{display:block;width:100%;height:auto;border-radius:24px}
 .porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
 .porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
 .porte-lait{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
@@ -1040,7 +1038,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <p class="vhero-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
   </div>
   <figure class="vhero-visuel">
-    <video src="assets/sac-a-main-grok.mp4" poster="assets/sac-a-main-grok.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Une femme sort de son sac à main cinq BIBEON repliés et les aligne sur le plan de travail."></video>
+    <img src="assets/sac-sauge-hero.webp" width="1280" height="720" alt="Trois BIBEON repliés, pré-dosés, prêts à entrer dans un sac à main vert sauge." fetchpriority="high">
   </figure>
 </section>
 
@@ -1048,7 +1046,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <!-- ══════════ 2 · LA DOSE ══════════ -->
 <section id="la-dose" class="dose" aria-labelledby="dose-titre">
   <figure class="dose-visuel">
-    <video src="assets/dose-poudre-grok.mp4" poster="assets/dose-poudre-grok.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="La dose de lait en poudre versée au doseur dans le BIBEON replié, puis le capuchon posé."></video>
+    <video src="assets/dose-lait-poudre-biberon-replie.mp4" poster="assets/dose-lait-poudre-biberon-replie.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="La dose de lait en poudre versée au doseur dans le BIBEON replié, puis le capuchon posé."></video>
   </figure>
   <div class="dose-texte">
     <p class="dose-eyebrow">Chez vous</p>
@@ -1228,7 +1226,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
   <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
 
   <figure class="porte-visuel">
-<video src="assets/cinq-coloris-etagere.mp4" poster="assets/cinq-coloris-etagere.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Les cinq BIBEON alignés sur l’étagère : abricot, menthe, lilas, lin, rose."></video>
+<img src="assets/cinq-coloris-chambre.webp" width="1280" height="720" alt="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé." loading="lazy">
   </figure>
 
   <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
