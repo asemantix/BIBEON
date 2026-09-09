@@ -1357,6 +1357,12 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   margin:0; letter-spacing:-.01em;
 }
 .concept-titre em{ font-style:italic; color:var(--sauge-texte); }
+/* la chute : la conclusion du titre, en grand mais moins que lui */
+.concept-chute{
+  font:400 clamp(24px,3vw,40px)/1.15 "Playfair Display",Georgia,serif;
+  margin:14px 0 0; letter-spacing:-.005em;
+}
+.concept-chute em{ font-style:italic; color:var(--sauge-texte); }
 .concept-sous{
   font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;
   color:var(--sauge-texte); margin:18px 0 0;
@@ -1560,6 +1566,10 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 /* signature de fin de page : la section « Le nom », en respiration courte */
 .nom-fin{min-height:0;padding:clamp(72px,11vh,130px) 0}
+/* entête : le logo ne rétrécit plus quand le téléphone apparaît sur les grands écrans */
+.brand{flex:0 0 auto}
+.nav-links{font-size:13.5px;gap:17px}
+@media (max-width:1700px){.nav-tel{display:none}}
 </style>
 </head>
 <body>
@@ -1621,7 +1631,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   <div class="concept-tete">
     <p class="concept-eyebrow">Le biberon, l’R en moins</p>
     <h2 id="concept-titre" class="concept-titre">Il s’élève. Il s’abaisse.<br><em>Il se coude.</em></h2>
-    <p class="concept-sous">Un seul biberon, toutes les tailles, toutes les formes — et toujours moins d’air.</p>
+    <p class="concept-chute">Et toujours <em>moins d’air.</em></p>
   </div>
 
   <div class="concept-films">
@@ -1650,7 +1660,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <div class="bloc-texte">
 <p class="overline">Évolutif</p>
 <h2 class="bloc-titre">Un seul biberon.</h2>
-<p class="billets">Il s’élève et s’abaisse à la demande.</p>
+<p class="billets">Toutes les tailles.</p>
 </div>
 <div class="bloc-visuel demo">
 <div style="text-align:center;width:100%">
@@ -1902,7 +1912,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   </figure>
   <div class="appel-texte">
     <p class="appel-eyebrow">La boutique</p>
-    <h2 id="appel-titre" class="appel-titre">Abricot, menthe, lilas, lin, rose. <em>Lequel sera le sien ?</em></h2>
+    <h2 id="appel-titre" class="appel-titre">Lin, menthe, rose, lilas, abricot. <em>Lequel sera le sien ?</em></h2>
     <p class="appel-ligne">À partir de 35 €<i>·</i>livraison offerte<i>·</i>retour offert sous 30 jours</p>
     <p class="appel-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
   </div>
