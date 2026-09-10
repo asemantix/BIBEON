@@ -12,16 +12,18 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="BIBEON">
 <meta property="og:url" content="https://bibeon.fr/voyage.html">
-<meta property="og:title" content="Voyager avec bébé : le biberon qui tient dans une poche">
+<meta property="og:title" content="Voyager avec bébé : le biberon pliable BIBEON (avion, voiture, plage)">
 <meta property="og:description" content="Dosez à la maison, dépliez et ajoutez l’eau sur place. Avion, voiture, plage, camping — le biberon pliable BIBEON 330 ml.">
 <meta property="og:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
 <meta property="og:image:alt" content="Trois BIBEON repliés, pré-dosés, prêts à entrer dans un sac à main vert sauge">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voyager avec bébé : le biberon qui tient dans une poche">
+<meta name="twitter:title" content="Voyager avec bébé : le biberon pliable BIBEON (avion, voiture, plage)">
 <meta name="twitter:description" content="Le biberon pliable BIBEON 330 ml : dosé à la maison, déplié sur place.">
 <meta name="twitter:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+<link href="/assets/favicon-bibeon.png" rel="icon" sizes="512x512" type="image/png">
+<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon">
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -652,107 +654,26 @@ transition:background .2s ease}
   .vhero-texte{margin:0 auto;text-align:center}
 }
 
-/* ══════════ VOYAGE · ÉCRAN 2 · LA DOSE — sa vidéo à la cuillère (deux cuillerées dans le BIBEON lilas replié, capuchon, secoué, posé), pause coupée, 19 s, verticale, texte à gauche. Fichiers : assets/dose-lait-poudre-cuillere.mp4 (2,3 Mo) + .jpg. ══════════ */
-.dose{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
+/* ══════════ VOYAGE · ÉCRAN 2 · LE GESTE — une phrase par idée, le détail est dans le mode d’emploi (retour Grok : cette page dit si l’on peut partir, pas comment doser). Vidéo de la cuillère à droite. ══════════ */
+.geste{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
+  background:#fff;color:var(--nuit);box-sizing:border-box;width:min(100%,1380px);margin-inline:auto;
   display:grid;grid-template-columns:1fr 1fr;align-items:center;
-  gap:clamp(24px,5vw,96px);padding:clamp(48px,7vh,88px) clamp(20px,6vw,96px)}
-.dose-visuel{margin:0;order:2;display:flex;align-items:center;justify-content:center;min-height:0}
-.dose-visuel video{display:block;width:min(100%,420px);height:auto;max-height:78svh;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
-.dose-texte{max-width:520px}
-.dose-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 26px}
-.dose-titre{font:400 clamp(36px,4.6vw,66px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.dose-titre em{font-style:italic;color:var(--sauge-texte)}
-.dose-ligne{font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:22px 0 0}
-.dose-lien{margin:28px 0 0}
-.dose-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
+  gap:clamp(24px,4vw,72px);padding:clamp(56px,9vh,110px) clamp(20px,6vw,96px)}
+.geste-visuel{margin:0;order:2;display:flex;justify-content:center}
+.geste-visuel video{display:block;width:min(100%,400px);height:auto;max-height:78svh;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
+.geste-texte{max-width:540px}
+.geste-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
+.geste-titre{font:400 clamp(34px,4.4vw,62px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
+.geste-titre em{font-style:italic;color:var(--sauge-texte)}
+.geste-lignes{list-style:none;margin:clamp(24px,3vh,36px) 0 0;padding:0}
+.geste-lignes li{padding:16px 0;border-top:1px solid #E6E1D8;font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif}
+.geste-lignes li:last-child{border-bottom:1px solid #E6E1D8}
+.geste-lignes a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:4px;white-space:nowrap;margin-left:.6em}
 @media (max-width:820px){
-  .dose-visuel{order:0}
-  .dose{grid-template-columns:1fr;min-height:auto;gap:28px;padding:56px 24px}
-  .dose-texte{margin:0 auto;text-align:center}
-}
-
-/* ══════════ VOYAGE · ÉCRAN 3 · LES 3 GESTES — les trois dessins existants (etape-1/2/3.webp), entiers, un mot par geste.
-   Fond vert sauge pâle (#eef1ea, celui du bloc « silicone médical » de l'accueil). Les textes viennent de l'accueil actuel, raccourcis. ══════════ */
-.gestes{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--sauge-fond:#eef1ea;
-  background:var(--sauge-fond);color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
-.gestes-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
-.gestes-titre{font:400 clamp(36px,5vw,68px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.gestes-titre em{font-style:italic;color:var(--sauge-texte)}
-.gestes-grille{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,64px);width:min(100%,1080px);margin:clamp(32px,6vh,64px) 0 0;align-items:end}
-.geste{margin:0}
-.geste img{display:block;width:auto;height:clamp(220px,34vh,340px);max-width:100%;margin:0 auto;object-fit:contain}
-.geste-num{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;color:var(--sauge);margin:26px 0 12px}
-.geste h3{font:400 clamp(22px,2.1vw,30px)/1.2 "Playfair Display",Georgia,serif;margin:0}
-.geste p{font:400 clamp(15px,1.25vw,18px)/1.55 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:10px auto 0;max-width:26ch}
-@media (max-width:720px){
-  .gestes{min-height:auto;padding:64px 22px}
-  .gestes-grille{grid-template-columns:1fr;gap:48px}
-  .geste img{height:260px}
-}
-
-/* ══════════ VOYAGE · ÉCRAN 3c · L'EAU — extrait de la vidéo Borislav (moitié droite) : capuchon ôté, l'eau versée, capuchon remis. Vidéo à gauche, texte à droite. Fichiers : assets/eau-on-ajoute.mp4 (17 s, 2,9 Mo, vertical) + .jpg. ══════════ */
-.eau{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;
-  gap:clamp(24px,5vw,96px);padding:clamp(48px,7vh,88px) clamp(20px,6vw,96px)}
-.eau-visuel{margin:0;display:flex;align-items:center;justify-content:center;min-height:0}
-.eau-visuel video{display:block;width:auto;height:78svh;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
-.eau-texte{max-width:520px}
-.eau-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 26px}
-.eau-titre{font:400 clamp(36px,4.6vw,66px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.eau-titre em{font-style:italic;color:var(--sauge-texte)}
-.eau-ligne{font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:22px 0 0}
-.eau-lien{margin:28px 0 0}
-.eau-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
-@media (max-width:820px){
-  .eau{grid-template-columns:1fr;min-height:auto;gap:28px;padding:56px 24px}
-  .eau-visuel video{height:60svh}
-  .eau-texte{margin:0 auto;text-align:center}
-}
-
-/* ══════════ VOYAGE · ÉCRAN 3b · PLEIN, IL VIDE L'AIR — sa vidéo en vitesse réelle (le biberon plein de lait qu'on replie au niveau du lait), texte à droite. Fichiers : assets/reduction-avec-lait.mp4 (36 s, 5,9 Mo, vertical) + .jpg. ══════════ */
-.plein{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;
-  gap:clamp(24px,5vw,96px);padding:clamp(48px,7vh,88px) clamp(20px,6vw,96px)}
-.plein-visuel{margin:0;order:2;display:flex;align-items:center;justify-content:center;min-height:0}
-.plein-visuel video{display:block;width:auto;height:78svh;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
-.plein-texte{max-width:520px}
-.plein-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 26px}
-.plein-titre{font:400 clamp(36px,4.6vw,66px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.plein-titre em{font-style:italic;color:var(--sauge-texte)}
-.plein-ligne{font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:22px 0 0}
-.plein-lien{margin:28px 0 0}
-.plein-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
-@media (max-width:820px){
-  .plein-visuel{order:0}
-  .plein{grid-template-columns:1fr;min-height:auto;gap:28px;padding:56px 24px}
-  .plein-visuel video{height:60svh}
-  .plein-texte{margin:0 auto;text-align:center}
-}
-
-/* ══════════ VOYAGE · ÉCRAN 4 · HERMÉTIQUE — sa vidéo « antifuite » (le biberon plein, retourné sur son capuchon : rien ne coule), texte à droite.
-   Fichiers : assets/antifuite.mp4 (18 s, 1,4 Mo, vertical — version validée par elle) + assets/antifuite.jpg. ══════════ */
-.herm{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;
-  gap:clamp(24px,5vw,96px);padding:clamp(48px,7vh,88px) clamp(20px,6vw,96px)}
-.herm-visuel{margin:0;display:flex;align-items:center;justify-content:center;min-height:0}
-.herm-visuel video{display:block;width:auto;height:78svh;max-width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
-.herm-texte{max-width:520px}
-.herm-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 26px}
-.herm-titre{font:400 clamp(36px,4.6vw,66px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.herm-titre em{font-style:italic;color:var(--sauge-texte)}
-.herm-ligne{font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:22px 0 0}
-.herm-lien{margin:28px 0 0}
-.herm-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
-@media (max-width:820px){
-  .herm{grid-template-columns:1fr;min-height:auto;gap:28px;padding:56px 24px}
-  .herm-visuel video{height:60svh}
-  .herm-texte{margin:0 auto;text-align:center}
+  .geste{grid-template-columns:1fr;gap:28px;padding:56px 24px}
+  .geste-visuel{order:0}
+  .geste-texte{margin:0 auto;text-align:center}
+  .geste-lignes a{display:inline-block;margin:10px 0 0}
 }
 
 /* ══════════ VOYAGE · ÉCRAN 5a · L'AVION, AVANT / APRÈS — le cas le plus fort, isolé avant les douze situations.
@@ -1016,7 +937,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <b>La boutique est ouverte</b><i>·</i>
 <span>Expédié de France le jour même</span>
 <i>·</i>
-<span>Livraison offerte</span>
+<span>Point relais offert · domicile 3,50 €</span>
 </div>
 </div>
 
@@ -1064,85 +985,20 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 </section>
 
 
-<!-- ══════════ 2 · LA DOSE ══════════ -->
-<section id="la-dose" class="dose" aria-labelledby="dose-titre">
-  <figure class="dose-visuel">
-    <video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, le capuchon, on secoue, il attend."></video>
+<!-- ══════════ 2 · LE GESTE ══════════ -->
+<section id="la-dose" class="geste" aria-labelledby="geste-titre">
+  <div class="geste-texte">
+    <p class="geste-eyebrow">Le geste</p>
+    <h2 id="geste-titre" class="geste-titre">Dosez à la maison. <em>Le reste, sur place.</em></h2>
+    <ul class="geste-lignes">
+      <li>La poudre se verse dans le biberon replié, à la maison. Dépliez et ajoutez l’eau sur place. <a href="mode-demploi.html">Le mode d’emploi →</a></li>
+      <li>Fermé, il est hermétique. <a href="biberon-pliable-fuite-sac.html">Pourquoi il ne fuit pas →</a></li>
+      <li>Pendant la tétée, les soufflets s’abaissent : moins d’air à avaler.</li>
+    </ul>
+  </div>
+  <figure class="geste-visuel">
+    <video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, le capuchon, on secoue."></video>
   </figure>
-  <div class="dose-texte">
-    <p class="dose-eyebrow">Chez vous</p>
-    <h2 id="dose-titre" class="dose-titre">La dose, <em>directement dedans.</em></h2>
-    <p class="dose-ligne">Le biberon replié reçoit sa poudre. Capuchon, et il attend dans le sac ou le pochon, à l’abri de la lumière — des heures, des semaines.</p>
-    <p class="dose-lien"><a href="mode-demploi.html">Voir le mode d’emploi →</a></p>
-  </div>
-</section>
-
-
-<!-- ══════════ 3 · LES 3 GESTES ══════════ -->
-<section id="gestes" class="gestes" aria-labelledby="gestes-titre">
-  <p class="gestes-eyebrow">Les 3 gestes</p>
-  <h2 id="gestes-titre" class="gestes-titre">Dosez. Dépliez. <em>Ajoutez l’eau.</em></h2>
-
-  <div class="gestes-grille">
-    <figure class="geste">
-      <img src="assets/etape-1.webp" width="601" height="937" alt="La dose de lait en poudre versée dans le BIBEON replié." loading="lazy">
-      <p class="geste-num">1</p>
-      <h3>Dosez</h3>
-      <p>La poudre dans BIBEON replié. Jusqu’à 8 doses.</p>
-    </figure>
-    <figure class="geste">
-      <img src="assets/etape-2.webp" width="601" height="937" alt="Le BIBEON que l’on déplie." loading="lazy">
-      <p class="geste-num">2</p>
-      <h3>Dépliez</h3>
-      <p>Desserrez la bague sans la retirer. Dépliez entièrement.</p>
-    </figure>
-    <figure class="geste">
-      <img src="assets/etape-3.webp" width="601" height="937" alt="De l’eau versée dans le BIBEON déplié." loading="lazy">
-      <p class="geste-num">3</p>
-      <h3>Ajoutez l’eau</h3>
-      <p>Jusqu’à la graduation. Refermez, secouez. C’est prêt.</p>
-    </figure>
-  </div>
-</section>
-
-
-<!-- ══════════ 3c · L’EAU ══════════ -->
-<section id="l-eau" class="eau" aria-labelledby="eau-titre">
-  <figure class="eau-visuel">
-    <video src="assets/eau-on-ajoute.mp4" poster="assets/eau-on-ajoute.jpg" width="720" height="1310" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Dehors : le BIBEON déplié reçoit l’eau de la bouteille, puis son capuchon."></video>
-  </figure>
-  <div class="eau-texte">
-    <p class="eau-eyebrow">Dehors</p>
-    <h2 id="eau-titre" class="eau-titre">De l’eau, <em>et c’est prêt.</em></h2>
-    <p class="eau-ligne">Une bouteille d’eau suffit. Versez jusqu’à la graduation, refermez, secouez.</p>
-  </div>
-</section>
-
-
-<!-- ══════════ 3b · PLEIN, IL VIDE L’AIR ══════════ -->
-<section id="plein" class="plein" aria-labelledby="plein-titre">
-  <figure class="plein-visuel">
-    <video src="assets/reduction-avec-lait.mp4" poster="assets/reduction-avec-lait.jpg" width="720" height="1270" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Un BIBEON plein de lait que l’on replie, soufflet par soufflet, jusqu’au niveau du lait."></video>
-  </figure>
-  <div class="plein-texte">
-    <p class="plein-eyebrow">Le repas commencé</p>
-    <h2 id="plein-titre" class="plein-titre">Plein, <em>il vide l’air.</em></h2>
-    <p class="plein-ligne">Repliez jusqu’au niveau du lait : plus d’air au-dessus. C’est le seul endroit où le moins d’air touche bébé — moins d’air avalé.</p>
-  </div>
-</section>
-
-
-<!-- ══════════ 4 · HERMÉTIQUE ══════════ -->
-<section id="hermetique" class="herm" aria-labelledby="herm-titre">
-  <figure class="herm-visuel">
-    <video src="assets/antifuite.mp4" poster="assets/antifuite.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Un BIBEON plein de lait, fermé, posé tête en bas sur son capuchon : rien ne coule."></video>
-  </figure>
-  <div class="herm-texte">
-    <p class="herm-eyebrow">Dans le sac</p>
-    <h2 id="herm-titre" class="herm-titre">Fermé, <em>il est hermétique.</em></h2>
-    <p class="herm-ligne">Tête en bas, secoué : pas une goutte. Sans obturateur — le capuchon bouche la tétine.</p>
-    <p class="herm-lien"><a href="biberon-pliable-fuite-sac.html">Pourquoi il ne fuit pas →</a></p>
-  </div>
 </section>
 
 
@@ -1266,7 +1122,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
   <div class="vporte-texte">
     <p class="vporte-eyebrow">La boutique</p>
     <h2 id="vporte-titre" class="vporte-titre">Replié, il tient sous le passeport. <em>Cinq coloris, lequel part avec vous ?</em></h2>
-    <p class="vporte-ligne">À partir de 35 €<i>·</i>livraison offerte<i>·</i>retour offert sous 30 jours</p>
+    <p class="vporte-ligne">À partir de 35 €<i>·</i>point relais offert<i>·</i>domicile 3,50 €<i>·</i>retour offert sous 30 jours</p>
     <p class="vporte-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
   </div>
 </section>
@@ -1342,6 +1198,7 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
 <a href="mentions-legales.html">Mentions légales</a>
 <a href="cgv.html">Conditions générales de vente</a>
+<a href="livraison-et-retours.html">Livraison et retours</a>
 <a href="confidentialite.html">Politique de confidentialité</a>
 </div>
 <div class="footer-col">
