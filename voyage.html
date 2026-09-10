@@ -12,13 +12,13 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="BIBEON">
 <meta property="og:url" content="https://bibeon.fr/voyage.html">
-<meta property="og:title" content="Voyager avec bébé : pré-dosé chez vous, nourrissez partout">
+<meta property="og:title" content="Voyager avec bébé : le biberon qui tient dans une poche">
 <meta property="og:description" content="Dosez à la maison, dépliez et ajoutez l’eau sur place. Avion, voiture, plage, camping — le biberon pliable BIBEON 330 ml.">
 <meta property="og:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
 <meta property="og:image:alt" content="Trois BIBEON repliés, pré-dosés, prêts à entrer dans un sac à main vert sauge">
 <meta property="og:locale" content="fr_FR">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Voyager avec bébé : pré-dosé chez vous, nourrissez partout">
+<meta name="twitter:title" content="Voyager avec bébé : le biberon qui tient dans une poche">
 <meta name="twitter:description" content="Le biberon pliable BIBEON 330 ml : dosé à la maison, déplié sur place.">
 <meta name="twitter:image" content="https://bibeon.fr/assets/sac-sauge-hero.webp">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236e7e61'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23fff' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
@@ -626,7 +626,7 @@ transition:background .2s ease}
 
 /* ══════════ VOYAGE 2 — styles des nouveaux écrans (livrés par Claude, septembre 2026) ══════════ */
 /* ══════════ VOYAGE · ÉCRAN 1 · HERO — texte à gauche, l’image du sac vert sauge à droite (assets/sac-sauge-hero.webp, tirée à 3,75 s de la vidéo Grok « sac sauge », trois BIBEON pré-dosés, la main sur l’abricot). Fond blanc.
-   H1 = sa phrase ; « voyager avec bébé » et « biberon nomade pliable » restent dans le H2 pour Google. ══════════ */
+   H1 = encombrement et légèreté d’abord (tout le monde ne donne pas de lait en poudre) ; la poudre devient le bonus ; « voyager avec bébé » et « biberon nomade pliable » restent dans le H2 pour Google. ══════════ */
 .vhero{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
   background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
   display:grid;grid-template-columns:1fr 1.15fr;align-items:center;
@@ -796,6 +796,24 @@ transition:background .2s ease}
   .situ-liste div:last-child{border-bottom:1px solid var(--filet)}
 }
 
+/* ══════════ VOYAGE · ÉCRAN 5b · ILS L’EMPORTENT — cinq avis ConsoBaby, mot pour mot (prénom, initiale, année), un filet entre chaque, fond sauge pâle. Note et lien vers la fiche ConsoBaby en bas. ══════════ */
+.avis{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--sauge-fond:#eef1ea;--filet:#d9dfd0;
+  background:var(--sauge-fond);color:var(--nuit);box-sizing:border-box;
+  display:flex;flex-direction:column;align-items:center;
+  padding:clamp(56px,9vh,110px) clamp(20px,5vw,72px)}
+.avis-tete{text-align:center;margin:0 0 clamp(28px,4vh,48px)}
+.avis-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
+.avis-titre{font:400 clamp(34px,4.8vw,64px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
+.avis-titre em{font-style:italic;color:var(--sauge-texte)}
+.avis-liste{width:min(100%,820px);margin:0;padding:0;list-style:none}
+.avis-liste li{padding:clamp(18px,2.6vh,28px) 0;border-top:1px solid var(--filet)}
+.avis-liste li:last-child{border-bottom:1px solid var(--filet)}
+.avis-liste blockquote{margin:0;font:400 clamp(19px,1.7vw,25px)/1.4 "Playfair Display",Georgia,serif}
+.avis-liste cite{display:block;font:600 11px/1 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;font-style:normal;color:var(--sauge-texte);margin:12px 0 0}
+.avis-source{font:400 clamp(15px,1.2vw,17px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:clamp(24px,4vh,40px) 0 0;text-align:center}
+.avis-source a{color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:2px}
+@media (max-width:720px){.avis{padding:64px 22px}}
+
 /* ══════════ VOYAGE · ÉCRAN 6 · LA LISTE COURTE — six lignes, un mot fort et sa suite, centrées, filets fins. Textes de la page actuelle, raccourcis. ══════════ */
 .liste{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--sauge-fond:#eef1ea;--filet:#D9DFD2;
   background:var(--sauge-fond);color:var(--nuit);min-height:100svh;box-sizing:border-box;
@@ -884,6 +902,8 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 
 /* écrans à deux colonnes : largeur plafonnée et centrée, pour ne pas s’étaler sur les grands écrans */
 .vhero,.dose,.eau,.plein,.herm,.vporte{width:min(100%,1380px);margin-inline:auto;gap:clamp(24px,4vw,72px)}
+/* la liste courte repasse en blanc : l’écran des avis, juste avant, est en sauge */
+.liste{background:#fff}
 </style>
 <script type="application/ld+json">
 {
@@ -1032,10 +1052,10 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <!-- ══════════ 1 · HERO ══════════ -->
 <section class="vhero" aria-labelledby="vhero-titre">
   <div class="vhero-texte">
-    <h1 id="vhero-titre">Pré-dosé chez vous.<br><em>Nourrissez partout.</em></h1>
+    <h1 id="vhero-titre">Il tient dans une poche.<br><em>Il ne pèse presque rien.</em></h1>
     <h2>Voyager avec bébé : le biberon nomade pliable en avion, en voiture, à la plage.</h2>
-    <p class="vhero-ligne">Le lait de bébé directement dans son biberon. Pas de boîte de lait à chercher, pas de transvasement.<br>Dépliez, ajoutez l’eau, secouez. C’est prêt.</p>
-    <p class="vhero-bonus">Et tout ça tient <em>dans une poche.</em></p>
+    <p class="vhero-ligne">Replié, BIBEON fait 9,5 cm et pèse environ 35 g, capuchon compris. Trois biberons tiennent dans le volume d’un seul biberon rigide.</p>
+    <p class="vhero-bonus">Et si vous donnez du lait en poudre, <em>pré-dosez-le chez vous</em> : plus de boîte à transporter.</p>
     <p class="vhero-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
   </div>
   <figure class="vhero-visuel">
@@ -1165,6 +1185,23 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <div><h3>La nounou et les grands-parents</h3><p>Un coloris par enfant, la dose du jour déjà dedans, le mode d’emploi fourni.</p></div>
     <div><h3>Le biberon de secours du sac</h3><p>Celui qui reste dans le sac à main, prêt depuis des semaines, pour la sortie qui s’allonge.</p></div>
   </div>
+</section>
+
+
+<!-- ══════════ 5b · ILS L’EMPORTENT ══════════ -->
+<section id="avis" class="avis" aria-labelledby="avis-titre">
+  <div class="avis-tete">
+    <p class="avis-eyebrow">Ils l’emportent</p>
+    <h2 id="avis-titre" class="avis-titre">Dans le sac, <em>depuis des années.</em></h2>
+  </div>
+  <ul class="avis-liste">
+    <li><blockquote>« Se faufile partout, aussi bien dans mon sac à main que dans le sac à langer. »</blockquote><cite>Celia B. · 2025</cite></li>
+    <li><blockquote>« Il tient dans une poche de manteau. »</blockquote><cite>Denise R. · 2025</cite></li>
+    <li><blockquote>« Je peux le mettre dans mon sac à main pour avoir toujours de l’eau à portée de main. »</blockquote><cite>Cesme Y. · 2022</cite></li>
+    <li><blockquote>« J’ai acheté ce biberon pour partir en voyage en avion. La place est limitée dans le sac, donc il est devenu un essentiel des voyages. »</blockquote><cite>Carole B. · 2024</cite></li>
+    <li><blockquote>« Il ne quitte plus notre sac à langer. »</blockquote><cite>Charlotte V. · 2025</cite></li>
+  </ul>
+  <p class="avis-source">4,4 / 5 sur 65 avis — <a href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html" rel="nofollow noopener" target="_blank">lire les avis sur ConsoBaby</a></p>
 </section>
 
 
