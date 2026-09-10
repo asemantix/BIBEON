@@ -621,6 +621,8 @@ transition:background .2s ease}
   .header .nav{position:relative}
 }
 
+/* entête : le logo ne doit jamais être écrasé par le menu (même correctif que l’accueil) */
+.brand{flex:0 0 auto}.brand img{flex:0 0 auto;max-width:none}.nav-links{font-size:13.5px;gap:17px}@media(max-width:1700px){.nav-tel{display:none}}
 
 /* ══════════ VOYAGE 2 — styles des nouveaux écrans (livrés par Claude, septembre 2026) ══════════ */
 /* ══════════ VOYAGE · ÉCRAN 1 · HERO — texte à gauche, l’image du sac vert sauge à droite (assets/sac-sauge-hero.webp, tirée à 3,75 s de la vidéo Grok « sac sauge », trois BIBEON pré-dosés, la main sur l’abricot). Fond blanc.
@@ -650,13 +652,13 @@ transition:background .2s ease}
   .vhero-texte{margin:0 auto;text-align:center}
 }
 
-/* ══════════ VOYAGE · ÉCRAN 2 · LA DOSE — la vidéo Grok du dosage (le BIBEON replié reçoit sa poudre au doseur, puis son capuchon), coupée à 4,6 s, dès que la poudre coule, texte à gauche. Fichiers : assets/dose-lait-poudre-biberon-replie.mp4 (12,5 s, 2,4 Mo, 4/3) + .jpg. Sa propre vidéo (dosage-poudre.mp4) part au mode d’emploi. ══════════ */
+/* ══════════ VOYAGE · ÉCRAN 2 · LA DOSE — sa vidéo à la cuillère (deux cuillerées dans le BIBEON lilas replié, capuchon, secoué, posé), pause coupée, 19 s, verticale, texte à gauche. Fichiers : assets/dose-lait-poudre-cuillere.mp4 (2,3 Mo) + .jpg. ══════════ */
 .dose{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
   background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
   display:grid;grid-template-columns:1fr 1fr;align-items:center;
   gap:clamp(24px,5vw,96px);padding:clamp(48px,7vh,88px) clamp(20px,6vw,96px)}
 .dose-visuel{margin:0;order:2;display:flex;align-items:center;justify-content:center;min-height:0}
-.dose-visuel video{display:block;width:100%;height:auto;max-height:78svh;aspect-ratio:4/3;object-fit:cover;border-radius:28px;background:#fff}
+.dose-visuel video{display:block;width:min(100%,420px);height:auto;max-height:78svh;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
 .dose-texte{max-width:520px}
 .dose-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 26px}
 .dose-titre{font:400 clamp(36px,4.6vw,66px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
@@ -835,30 +837,26 @@ transition:background .2s ease}
 .vsix-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
 @media (max-width:720px){.vsix{min-height:auto;padding:64px 22px}}
 
-/* ══════════ SECTION 6 · LA PORTE DE LA BOUTIQUE — un écran blanc, les cinq flacons, le prix, le bouton.
-   Fichier : assets/cinq-coloris-chambre.webp (image tirée de la vidéo Grok n° 4, les cinq dans la chambre de bébé). ══════════ */
-.porte{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
-.porte-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
-.porte-titre{font:400 clamp(36px,5.2vw,72px)/1.04 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.porte-titre em{font-style:italic;color:var(--sauge-texte)}
-.porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,820px)}
-.porte-visuel img{display:block;width:100%;height:auto;border-radius:24px}
-.porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
-.porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
-.porte-lait{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
-.porte-lait em{font-style:italic;color:var(--sauge-texte)}
-.porte-conditions{font:400 clamp(16px,1.4vw,20px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:0 0 28px}
-.porte-conditions i{font-style:normal;opacity:.5;margin:0 .45em}
-.porte-cta a{display:inline-block;font:600 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;
-  color:#fff;background:var(--nuit);text-decoration:none;padding:20px 34px;border-radius:999px}
-.porte-cta a span{display:inline-block;margin-left:.6em;transition:transform .25s}
-.porte-cta a:hover span{transform:translateX(5px)}
-@media (max-width:720px){
-  .porte{min-height:auto;padding:64px 22px}
-  .porte-conditions i{display:block;height:4px;margin:0;opacity:0}
+/* ══════════ VOYAGE · ÉCRAN 8 · LA PORTE DE LA BOUTIQUE — sa vidéo du sac en raphia (assets/sous-le-passeport.mp4, 21 s, verticale, + .jpg) : cinq BIBEON repliés, le passeport, l’abricot posé à côté. Vidéo à gauche, texte à droite. ══════════ */
+.vporte{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
+  background:#fff;color:var(--nuit);box-sizing:border-box;
+  display:grid;grid-template-columns:1fr 1.1fr;align-items:center;
+  gap:clamp(24px,5vw,96px);padding:clamp(56px,9vh,110px) clamp(20px,6vw,96px)}
+.vporte-visuel{margin:0;justify-self:center;width:min(100%,420px)}
+.vporte-visuel video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;border-radius:28px;background:#fff}
+.vporte-texte{max-width:560px}
+.vporte-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
+.vporte-titre{font:400 clamp(34px,4.4vw,62px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
+.vporte-titre em{font-style:italic;color:var(--sauge-texte)}
+.vporte-ligne{font:400 clamp(17px,1.5vw,21px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:20px 0 0}
+.vporte-ligne i{font-style:normal;opacity:.5;margin:0 .45em}
+.vporte-cta{margin:30px 0 0}
+.vporte-cta a{display:inline-block;font:600 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#fff;background:var(--nuit);text-decoration:none;padding:20px 34px;border-radius:999px}
+.vporte-cta a span{display:inline-block;margin-left:.6em;transition:transform .25s}
+.vporte-cta a:hover span{transform:translateX(5px)}
+@media (max-width:820px){
+  .vporte{grid-template-columns:1fr;gap:28px;padding:56px 24px}
+  .vporte-texte{margin:0 auto;text-align:center}
 }
 
 /* ══════════ 9 · LA SIGNATURE — règles reprises de l’accueil ══════════ */
@@ -881,6 +879,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 .nom-fin{min-height:0;padding:clamp(72px,11vh,130px) 0;background:#fff}
 .nom .shell{text-align:center}
 .nom-fin .baseline{margin:clamp(12px,1.38vw,18px) 0 0;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:#0E1C35}
+.nom-fin .baseline{font-size:14px;letter-spacing:.22em}
 .nom-fin .baseline .r{color:#a9b79c}
 
 </style>
@@ -1046,7 +1045,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <!-- ══════════ 2 · LA DOSE ══════════ -->
 <section id="la-dose" class="dose" aria-labelledby="dose-titre">
   <figure class="dose-visuel">
-    <video src="assets/dose-lait-poudre-biberon-replie.mp4" poster="assets/dose-lait-poudre-biberon-replie.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="La dose de lait en poudre versée au doseur dans le BIBEON replié, puis le capuchon posé."></video>
+    <video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, le capuchon, on secoue, il attend."></video>
   </figure>
   <div class="dose-texte">
     <p class="dose-eyebrow">Chez vous</p>
@@ -1220,18 +1219,17 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 </section>
 
 
-<!-- ══════════ 8 · LA PORTE DE LA BOUTIQUE — identique à l’accueil ══════════ -->
-<section id="porte-boutique" class="porte" aria-labelledby="porte-titre">
-  <p class="porte-eyebrow">La boutique</p>
-  <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
-
-  <figure class="porte-visuel">
-<img src="assets/cinq-coloris-chambre.webp" width="1280" height="720" alt="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé." loading="lazy">
+<!-- ══════════ 8 · LA PORTE DE LA BOUTIQUE — sous le passeport ══════════ -->
+<section id="boutique" class="vporte" aria-labelledby="vporte-titre">
+  <figure class="vporte-visuel">
+    <video src="assets/sous-le-passeport.mp4" poster="assets/sous-le-passeport.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Cinq BIBEON repliés dans un sac en raphia ; l’un est posé à côté du passeport, plus bas que lui."></video>
   </figure>
-
-  <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
-  <p class="porte-conditions">Livraison offerte<i>·</i>expédié de France le jour même<i>·</i>retour offert sous 30 jours</p>
-  <p class="porte-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
+  <div class="vporte-texte">
+    <p class="vporte-eyebrow">La boutique</p>
+    <h2 id="vporte-titre" class="vporte-titre">Replié, il tient sous le passeport. <em>Cinq coloris, lequel part avec vous ?</em></h2>
+    <p class="vporte-ligne">À partir de 35 €<i>·</i>livraison offerte<i>·</i>retour offert sous 30 jours</p>
+    <p class="vporte-cta"><a href="boutique.html">Voir la boutique <span>→</span></a></p>
+  </div>
 </section>
 
 
