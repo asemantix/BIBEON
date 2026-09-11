@@ -12,6 +12,12 @@
 <link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon"/>
 <link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <title>Le biberon pratique : quatre accessoires en moins | BIBEON</title>
+<meta name="description" content="Le biberon pratique BIBEON : doseur, mélangeur, obturateur, valve — quatre accessoires en moins. Moins à porter, moins à démonter, moins à laver, moins de gestes quand bébé a faim.">
+<link rel="canonical" href="https://bibeon.fr/biberon-pratique.html">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link href="/assets/favicon-bibeon.png" rel="icon" sizes="512x512" type="image/png">
+<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon">
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
 <meta content="Moins à porter, moins à démonter, moins à laver, moins de gestes quand bébé a faim : les sept problèmes de parents à partir desquels BIBEON a été dessiné." name="description"/>
 <link href="https://bibeon.fr/biberon-pratique.html" rel="canonical"/>
 <meta property="og:type" content="article">
@@ -1096,149 +1102,105 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 @media (max-width:560px){.footer-grid{grid-template-columns:1fr}footer .brand-logo{height:27px}.copyright{justify-content:flex-start}}
 .bloc-texte .corps{margin:0 0 10px;max-width:none;font-size:16.5px;line-height:1.65;color:var(--sage-dark)}
 .bloc-texte .corps:last-child{margin-bottom:0}
-</style>
-<style>
-/* ── réglages propres à cette page — mêmes variables que la charte ── */
-.hero.hero-eclipse{background:#12161a;height:auto;min-height:min(88vh,880px);
-align-items:flex-start;padding:min(17vh,165px) 0 min(9vh,100px)}
-.hero-eclipse .hero-fond{filter:none;object-fit:cover;object-position:31% center}
-@media (max-width:900px){
-.hero.hero-eclipse{align-items:center;padding:0 0 min(10vh,90px)}
-.hero-eclipse .hero-fond{object-position:60% center}
+
+/* entête : le logo ne doit jamais être écrasé par le menu (même correctif que l’accueil) */
+.brand{flex:0 0 auto}.brand img,.brand svg{flex:0 0 auto;max-width:none}.nav-links{font-size:13.5px;gap:17px}@media(max-width:1700px){.nav-tel{display:none}}@media(min-width:1121px){.burger{display:none}}
+
+/* ══════════ BIBERON PRATIQUE 3 — écrans « un accessoire en moins » (gabarit voyage : contenu, blanc, court) ══════════ */
+.e{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--sauge-fond:#eef1ea;--filet:#E6E1D8;
+  background:#fff;color:var(--nuit);box-sizing:border-box;width:min(100%,1180px);margin-inline:auto;
+  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(24px,4vw,64px);padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
+.e-texte{max-width:520px}
+.e-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 20px}
+.e-titre{font:400 clamp(30px,3.6vw,50px)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
+.e-titre em{font-style:italic;color:var(--sauge-texte)}
+.e-lignes{list-style:none;margin:clamp(20px,3vh,30px) 0 0;padding:0}
+.e-lignes li{padding:13px 0;border-top:1px solid var(--filet);font:400 clamp(16px,1.35vw,19px)/1.5 "Playfair Display",Georgia,serif}
+.e-lignes li:last-child{border-bottom:1px solid var(--filet)}
+.e-lignes li s{text-decoration:line-through;text-decoration-color:var(--sauge);text-decoration-thickness:1px;color:var(--sauge-texte)}
+.e-chute{font:400 clamp(18px,1.6vw,23px)/1.4 "Playfair Display",Georgia,serif;font-style:italic;color:var(--sauge-texte);margin:clamp(18px,2.5vh,26px) 0 0}
+.e-lien{margin:22px 0 0}
+.e-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
+.e-visuel{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.e-visuel video,.e-visuel img{display:block;width:min(100%,360px);height:auto;max-height:72svh;object-fit:cover;border-radius:24px;background:#fff}
+.e-visuel video.v{aspect-ratio:9/16}
+.e-visuel img.large{width:min(100%,480px)}
+.e-visuel figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);text-align:center;margin:12px 0 0}
+.e-visuel.droite{order:2}
+.e-visuel.duo{flex-direction:row;align-items:flex-end;gap:clamp(12px,1.6vw,20px)}
+.e-visuel.duo .duo-item{display:flex;flex-direction:column;align-items:center;min-width:0}
+.e-visuel.duo video{width:min(100%,220px);max-height:none}
+.e-visuel.duo img{width:min(100%,260px);max-height:none;aspect-ratio:1;object-fit:cover}
+.attente{display:flex;align-items:center;justify-content:center;text-align:center;width:min(100%,360px);aspect-ratio:9/16;max-height:72svh;border-radius:24px;border:1.5px dashed var(--sauge);background:var(--sauge-fond);color:var(--sauge-texte);font:italic 400 clamp(16px,1.3vw,19px)/1.5 "Playfair Display",Georgia,serif;padding:24px;box-sizing:border-box}
+/* écrans pleine colonne : « Tout dedans », les dimensions, « Finalement » */
+.plein{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--filet:#E6E1D8;background:#fff;color:var(--nuit);box-sizing:border-box;text-align:center;width:min(100%,1180px);margin-inline:auto;padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
+.plein figure{margin:clamp(24px,4vh,40px) auto 0;width:min(100%,1000px)}
+.plein img{display:block;width:100%;height:auto;border-radius:24px}
+.plein figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);margin:12px 0 0}
+.plein .e-titre{max-width:20ch;margin-inline:auto}
+.moins-intro{font:400 clamp(16px,1.35vw,19px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:18px auto 0;max-width:48ch}
+.moins-liste{list-style:none;margin:clamp(28px,4vh,44px) auto 0;padding:0;width:min(100%,860px);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,5vw,72px)}
+.moins-liste li{padding:13px 0;border-top:1px solid var(--filet);font:400 clamp(18px,1.6vw,24px)/1.3 "Playfair Display",Georgia,serif;text-align:left}
+.moins-liste li:nth-last-child(-n+2){border-bottom:1px solid var(--filet)}
+.moins-chute{font:400 clamp(17px,1.5vw,22px)/1.45 "Playfair Display",Georgia,serif;margin:clamp(28px,4vh,44px) auto 0;max-width:44ch}
+.moins-chute em{font-style:italic;color:var(--sauge-texte)}
+@media (max-width:820px){
+  .e{grid-template-columns:1fr;gap:26px;padding:48px 22px}
+  .e-visuel.droite{order:0}
+  .e-texte{margin:0 auto;text-align:center}
+  .e-lignes li{text-align:left}
+  .e-visuel.duo img{width:min(100%,170px)}.e-visuel.duo video{width:min(100%,150px)}
+  .moins-liste{grid-template-columns:1fr}.moins-liste li:nth-last-child(-n+2){border-bottom:0}.moins-liste li:last-child{border-bottom:1px solid var(--filet)}
 }
-.hero-eclipse .hero-voile{background:
-linear-gradient(100deg,rgba(10,13,16,.88) 0%,rgba(10,13,16,.66) 30%,rgba(10,13,16,.24) 54%,rgba(10,13,16,0) 78%),
-linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
-.hero-eclipse h1{max-width:16ch;line-height:.88}
-.hero-eclipse h1 span{display:block}
-.hero-eclipse h1 .petit-des{font-size:.6em;line-height:.72;font-style:italic;
-letter-spacing:.02em;color:#e7ecdf}
-.hero-triade{margin:34px 0 0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-style:italic;font-size:clamp(20px,2vw,28px);line-height:1.5;color:#cfe0b8}
-.entree{background:var(--cream);padding:clamp(80px,12vh,150px) 0;text-align:center}
-.entree p{margin:0 auto;max-width:34ch;font-family:"Playfair Display",Georgia,serif;
-font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sage-dark)}
-.entree p+p{margin-top:.55em;font-weight:400;font-style:italic;color:var(--sage)}
-#accueil{scroll-margin-top:240px}
 
-/* la page courante se marque dans le menu */
-.nav-links a[aria-current="page"]{color:var(--sage-dark);border-color:var(--sage-dark)}
-
-/* legende sous un visuel de section */
-.bloc-visuel.photo.avec-legende{height:auto;overflow:visible;border-radius:0;box-shadow:none;display:block}
-.bloc-visuel.photo.avec-legende img{width:100%;height:auto;object-fit:contain;border-radius:var(--radius);box-shadow:var(--shadow-m)}
-.bloc-visuel.photo.avec-legende figcaption{margin:12px auto 0;max-width:52ch;text-align:center;font-size:12.5px;line-height:1.65;color:var(--sage)}
-
-/* le nettoyage : deux etats du meme BIBEON — 28/08/2026 */
-.nettoyage-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.2vw,52px);
-  max-width:980px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
-.nettoyage-duo figure{margin:0}
-.nettoyage-duo img{display:block;width:100%;height:clamp(300px,38vh,420px);object-fit:cover;
-  border-radius:var(--radius);box-shadow:var(--shadow-m)}
-.nettoyage-duo figcaption{margin:14px auto 0;max-width:34ch;text-align:center;
-  font-family:Montserrat,sans-serif;font-size:13px;line-height:1.7;color:var(--sage)}
-@media(max-width:760px){.nettoyage-duo{grid-template-columns:1fr;max-width:460px}}
-
-.df-liens{max-width:820px;margin:0 auto;padding:48px 24px 8px}
-.df-liens h2{font-family:"Playfair Display",Georgia,serif;font-weight:500;
-  font-size:clamp(22px,2.4vw,28px);color:var(--sage-dark);margin:0 0 14px}
-.df-liens ul{margin:0;padding-left:20px}
-.df-liens li{margin-bottom:9px;font-size:16px;line-height:1.7}
-.df-liens a{color:var(--sage-dark);border-bottom:1px solid var(--sage-soft);text-decoration:none}
-.df-liens a:hover{color:var(--navy)}
-
-/* Menu mobile : le bouton d'ouverture manquait, la navigation était donc
-   totalement absente sous 1120 px — soit sur tous les téléphones. */
-.burger{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
-  border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;
-  font-family:Montserrat,sans-serif;color:var(--navy);cursor:pointer}
-.burger:hover{border-color:var(--sage)}
-@media (max-width:1120px){
-  .burger{display:block}
-  .nav-links{display:none;position:absolute;left:22px;right:22px;top:72px;
-    flex-direction:column;gap:14px;background:#fff;border:1px solid var(--line);
-    border-radius:20px;padding:22px 24px;z-index:60;
-    box-shadow:0 18px 44px rgba(17,37,58,.13)}
-  .nav-links.open{display:flex}
-  .header .nav{position:relative}
+/* ══════════ SECTION 6 · LA PORTE DE LA BOUTIQUE — un écran blanc, les cinq flacons, le prix, le bouton.
+   Fichier : assets/cinq-coloris-chambre.webp (image tirée de la vidéo Grok n° 4, les cinq dans la chambre de bébé). ══════════ */
+.porte{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
+  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
+.porte-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
+.porte-titre{font:400 clamp(36px,5.2vw,72px)/1.04 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
+.porte-titre em{font-style:italic;color:var(--sauge-texte)}
+.porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,820px)}
+.porte-visuel img{display:block;width:100%;height:auto;border-radius:24px}
+.porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
+.porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
+.porte-lait{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
+.porte-lait em{font-style:italic;color:var(--sauge-texte)}
+.porte-conditions{font:400 clamp(16px,1.4vw,20px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:0 0 28px}
+.porte-conditions i{font-style:normal;opacity:.5;margin:0 .45em}
+.porte-cta a{display:inline-block;font:600 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;
+  color:#fff;background:var(--nuit);text-decoration:none;padding:20px 34px;border-radius:999px}
+.porte-cta a span{display:inline-block;margin-left:.6em;transition:transform .25s}
+.porte-cta a:hover span{transform:translateX(5px)}
+@media (max-width:720px){
+  .porte{min-height:auto;padding:64px 22px}
+  .porte-conditions i{display:block;height:4px;margin:0;opacity:0}
 }
-@media (max-width:1560px){.nav-links{font-size:13.5px;gap:17px}.brand-baseline{display:none}}
 
+/* ══════════ LA SIGNATURE — règles reprises de l’accueil ══════════ */
+.usp{min-height:72vh;display:flex;align-items:center;text-align:center;
+padding:clamp(90px,13vh,180px) 0;background:var(--white)}
+.nom-logo{display:block;margin:0 auto;height:clamp(44px,5.2vw,75px);width:auto;
+transform:translateX(2.15%)}
+.nom-baseline{margin:clamp(12px,1.38vw,18px) 0 0;font-size:clamp(14px,2vw,29px);
+/* l'interlettrage ajoute un blanc APRÈS la dernière lettre : sans compensation,
+   un texte centré paraît décalé vers la gauche. Même correctif que .usp-marque. */
+text-indent:.18em}
+.nom-baseline .marque-r{font-size:.36em;vertical-align:1.75em;opacity:.55;
+/* le ® est très haut : on annule la largeur qu'il occupe pour que le point final
+   revienne se coller à MOINS. Ils ne se touchent pas, ils sont à deux hauteurs. */
+margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
+.marque-r{font-size:.36em;vertical-align:1.75em;opacity:.55;
+/* le ® est très haut : on annule la largeur qu'il occupe pour que le point final
+   revienne se coller à MOINS. Ils ne se touchent pas, ils sont à deux hauteurs. */
+margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
+.nom-fin{min-height:0;padding:clamp(72px,11vh,130px) 0;background:#fff}
+.nom .shell{text-align:center}
+.nom-fin .baseline{margin:clamp(12px,1.38vw,18px) 0 0;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#0E1C35;font-size:14px}
+.nom-fin .baseline .r{color:#a9b79c}
 
-/* Section 06 : le bloc solidaire n'avait aucun visuel. La photo le montre
-   tenu d'une main, pieces assemblees — ce que le texte affirme. */
-.bloc-solidaire-visuel{margin:clamp(30px,4vh,48px) auto clamp(26px,3.4vh,40px);max-width:440px}
-/* En duo quand les deux preuves sont la : le bloc tenu d'une main, et le
-   capuchon pose sur sa face plate. Meme grille que .nettoyage-duo. */
-.bloc-solidaire-duo{display:grid;grid-template-columns:1fr 1fr;
-  gap:clamp(22px,3vw,44px);max-width:860px;
-  margin:clamp(30px,4vh,48px) auto clamp(26px,3.4vh,40px);align-items:start}
-.bloc-solidaire-duo .bloc-solidaire-visuel{margin:0;max-width:none}
-@media (max-width:760px){.bloc-solidaire-duo{grid-template-columns:1fr;max-width:440px}}
-.bloc-solidaire-visuel img,.bloc-solidaire-visuel video{display:block;width:100%;height:auto;aspect-ratio:5/4;
-  object-fit:cover;object-position:44% 34%;border-radius:var(--radius);
-  background:#fff;box-shadow:var(--shadow-m)}
-.bloc-solidaire-visuel.centre img{object-position:50% 50%}
-.bloc-solidaire-visuel figcaption{margin:14px auto 0;max-width:40ch;text-align:center;
-  font-family:Montserrat,sans-serif;font-size:12.5px;line-height:1.7;color:var(--sage)}
-.cta-boutique{margin:30px auto 0;max-width:820px;padding:20px 24px;border-radius:14px;background:var(--cream);border:1px solid var(--line);text-align:center;font-family:Montserrat,sans-serif;font-size:15px;font-weight:600}
-.cta-boutique a{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:999px;background:var(--sage);color:#fff;text-decoration:none;border:0;transition:background .2s}
-.cta-boutique a:hover{background:var(--sage-dark);color:#fff}
-
-/* ═══ le biberon pratique — version « pourquoi » (28 août 2026) ═══ */
-/* Le titre tenait sur toute la largeur et se posait sur le flacon : on lisait
-   « biberon ... compliqué » écrit sur BIBEON. La colonne de texte est ramenée
-   à gauche, et le cadrage de l'image décale le flacon vers la droite. */
-.hero-question h1{max-width:12ch;line-height:1.04;font-size:clamp(32px,3.9vw,56px);
-  margin-bottom:24px}
-.hero-question .hero-triade{max-width:21ch;font-size:clamp(18px,1.6vw,23px);line-height:1.45}
-.hero.hero-question .hero-fond{object-position:6% center}
-.hero-question .hero-voile{background:
-linear-gradient(100deg,rgba(10,13,16,.90) 0%,rgba(10,13,16,.74) 26%,rgba(10,13,16,.30) 46%,rgba(10,13,16,0) 66%),
-linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
-@media (max-width:900px){
-  /* Sur téléphone, un cadrage « cover » découpe le flacon et fait passer le
-     titre par-dessus. On empile : le texte d'abord, l'image entière ensuite. */
-  .hero.hero-question{display:block;height:auto;min-height:0;
-    padding:0 0 min(9vh,72px);background:#0b0e11}
-  .hero.hero-question .hero-fond{position:relative;inset:auto;z-index:0;
-    width:100%;height:auto;object-fit:contain;margin:0 0 30px;display:block}
-  .hero-question .hero-voile{display:none}
-  .hero-question h1{max-width:15ch}
-  .hero-question .hero-triade{max-width:26ch;margin-bottom:0}
-}
-#lavage .bloc-titre,#gestes .bloc-titre{margin-inline:auto}
-.moins-liste{list-style:none;margin:26px auto 30px;padding:0;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 34px;max-width:760px}
-.moins-liste li{position:relative;padding-left:20px;
-  font-family:"Playfair Display",Georgia,serif;font-size:clamp(18px,1.7vw,22px);
-  line-height:1.45;color:var(--sage-dark)}
-.moins-liste li::before{content:"—";position:absolute;left:0;color:var(--sage-soft)}
-.conclusion-df{background:var(--beige-2);text-align:center;min-height:auto;
-  padding:clamp(72px,10vh,128px) 0}
-.conclusion-df .bloc-titre{margin:0 auto 26px;max-width:20ch;
-  font-family:"Playfair Display",Georgia,serif;font-weight:500;
-  font-size:clamp(30px,3.6vw,48px);line-height:1.06;color:var(--sage-dark)}
-.conclusion-df .corps{margin:0 auto 12px;max-width:52ch;font-size:16.5px;
-  line-height:1.7;color:var(--sage-dark)}
-.signature-df{margin:34px 0 0;font-family:Montserrat,sans-serif;font-weight:700;
-  font-size:15px;letter-spacing:.14em;color:var(--navy)}
-.signature-df .r{color:var(--sage)}
-.entree{background:var(--cream);padding:clamp(80px,12vh,150px) 0;text-align:center}
-.entree p{margin:0 auto;max-width:34ch;font-family:"Playfair Display",Georgia,serif;
-  font-weight:500;font-size:clamp(26px,3.2vw,44px);line-height:1.12;color:var(--sage-dark)}
-.bloc-visuel.photo.avec-legende{height:auto;overflow:visible;border-radius:0;box-shadow:none;display:block}
-.bloc-visuel.photo.avec-legende img{width:100%;height:auto;object-fit:contain;
-  border-radius:var(--radius);box-shadow:var(--shadow-m)}
-.nettoyage-duo{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3.2vw,52px);
-  max-width:980px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
-.nettoyage-duo figure{margin:0}
-.nettoyage-duo img{display:block;width:100%;height:clamp(300px,38vh,420px);object-fit:cover;
-  border-radius:var(--radius);box-shadow:var(--shadow-m)}
-.nettoyage-duo figcaption{margin:14px auto 0;max-width:34ch;text-align:center;
-  font-family:Montserrat,sans-serif;font-size:13px;line-height:1.7;color:var(--sage)}
-@media(max-width:760px){.nettoyage-duo{grid-template-columns:1fr;max-width:460px}}
-@media (max-width:820px){.moins-liste{grid-template-columns:1fr;text-align:left;max-width:22em}}
 </style>
 <script type="application/ld+json">
 {
@@ -1381,13 +1343,13 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 <b>La boutique est ouverte</b><i>·</i>
 <span>Expédié de France le jour même</span>
 <i>·</i>
-<span>Livraison offerte</span>
+<span>Point relais offert · domicile 3,50 €</span>
 </div>
 </div>
 
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand brand-tag" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/><span class="brand-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</span></a>
+<a aria-label="BIBEON — accueil" class="brand" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
@@ -1407,7 +1369,9 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 </div>
 </div>
 </header>
+<main>
 
+<!-- ══════════ HERO (page en ligne, telle quelle) ══════════ -->
 <!-- ══════════ HERO ══════════ -->
 <section class="hero hero-eclipse hero-question" id="accueil">
 <img alt="Un BIBEON menthe devant un mur d’accessoires de puériculture pétrifiés dans la pierre." class="hero-fond" src="assets/eclipse-accessoires-menthe.webp" width="1792" height="807"/>
@@ -1419,195 +1383,214 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 </div>
 </section>
 
-<main>
+<!-- ══════════ 00 · TOUT DEDANS ══════════ -->
+<section id="tout-dedans" class="plein" aria-labelledby="tout-dedans-titre">
+  <h2 id="tout-dedans-titre" class="e-titre">Tout dedans. <em>Rien autour.</em></h2>
+  <figure><img src="assets/sortir-leger.webp" alt="Un BIBEON doré, replié, au milieu des accessoires de biberon qu’il remplace" width="2000" height="1124" loading="lazy"></figure>
+</section>
 
-<!-- ══════════ L’ENTRÉE EN MATIÈRE ══════════ -->
-<section aria-label="Le principe" class="entree">
+<!-- ══════════ 01 · LE TRANSPORT ══════════ -->
+<section id="transport" class="e" aria-labelledby="transport-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">01 · Le transport</p>
+    <h2 id="transport-titre" class="e-titre">Un objet de moins <em>dans le sac.</em></h2>
+    <ul class="e-lignes">
+      <li>Jusqu’à quatre fois moins d’encombrement. Poudre comprise.</li>
+      <li>Un biberon pour le lait. Une boîte doseuse pour la poudre. Avec BIBEON, la dose voyage déjà dans le flacon.</li>
+      <li>Replié, il tient dans la moitié de la hauteur d’un biberon classique. Le biberon et sa boîte doseuse réunis dans un seul format.</li>
+    </ul>
+    <p class="e-chute">Deux contenants. Un objet minimal.</p>
+  </div>
+  <figure class="e-visuel droite">
+    <img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="À gauche, quatre BIBEON repliés dans un petit sac ; à droite, quatre doseurs, quatre biberons rigides et un grand sac à langer" width="1568" height="1264" loading="lazy" class="large">
+    <figcaption>À gauche, ce qui reste. À droite, ce qu’on emportait.</figcaption>
+  </figure>
+</section>
+
+<!-- ══════════ 01b · LES DIMENSIONS ══════════ -->
+<section id="dimensions" class="plein" aria-labelledby="dims-titre">
+  <h2 id="dims-titre" class="e-titre">Ses dimensions, <em>replié.</em></h2>
+  <figure><img src="assets/dimensions-bibeon-trois-vues.webp" alt="Dimensions du BIBEON replié : 9,5 cm de haut, capuchon Ø 4,5 cm, base Ø 6,5 cm ; trois vues avec les graduations poudre, ml et oz" width="1448" height="1086" loading="lazy">
+    <figcaption>Gradué en doses de poudre, en millilitres et en onces.</figcaption></figure>
+</section>
+
+<!-- ══════════ 02 · LE DOSEUR ══════════ -->
+<section id="doseur" class="e" aria-labelledby="doseur-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">02 · Le doseur</p>
+    <h2 id="doseur-titre" class="e-titre">Ce que la boîte doseuse <em>supposait.</em></h2>
+    <ul class="e-lignes">
+      <li><s>La transporter, aller et retour, même vide.</s></li>
+      <li><s>La chercher au fond du sac.</s></li>
+      <li><s>Transvaser, sans en mettre à côté.</s></li>
+      <li><s>La laver au retour. La sécher.</s></li>
+    </ul>
+    <p class="e-chute">La dose voyage dans le biberon.</p>
+    <p class="e-lien"><a href="mode-demploi.html">Comment doser →</a></p>
+  </div>
+  <figure class="e-visuel duo">
+    <div class="duo-item"><img src="assets/boite-doseuse-classique.webp" alt="Une boîte doseuse classique, remplie de lait en poudre" width="1000" height="1000" loading="lazy"><figcaption>Avant</figcaption></div>
+    <div class="duo-item"><video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, le capuchon, on secoue."></video><figcaption>Avec BIBEON</figcaption></div>
+  </figure>
+</section>
+
+<!-- ══════════ 03 · LES GRUMEAUX ══════════ -->
+<section id="grumeaux" class="e" aria-labelledby="grumeaux-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">03 · Les grumeaux</p>
+    <h2 id="grumeaux-titre" class="e-titre">Il est son propre <em>shaker.</em></h2>
+    <ul class="e-lignes">
+      <li>Déployés, les soufflets forment à l’intérieur une succession de creux.</li>
+      <li>En secouant, les amas de poudre s’y brisent et se dispersent : BIBEON est son propre shaker.</li>
+      <li>Pas de mélangeur, pas de grille, rien à laver séparément.</li>
+    </ul>
+    <p class="e-lien"><a href="mode-demploi.html">Préparer un lait sans grumeaux →</a></p>
+  </div>
+  <figure class="e-visuel droite">
+    <!-- PLACEBO : vidéo du tamis à venir --><div class="attente">Vidéo à venir<br>la poudre se disperse dans les soufflets</div>
+  </figure>
+</section>
+
+<!-- ══════════ 04 · L’AIR ══════════ -->
+<section id="air" class="e" aria-labelledby="air-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">04 · L’air</p>
+    <h2 id="air-titre" class="e-titre">On n’ajoute pas une pièce. <em>On enlève l’air.</em></h2>
+    <ul class="e-lignes">
+      <li>Le lait descend. BIBEON aussi.</li>
+      <li>Le lait diminue. Abaissez les soufflets jusqu’à son niveau. Moins d’espace d’air dans le flacon.</li>
+      <li>En fin de tétée, coudez légèrement BIBEON. La tétine reste pleine de lait.</li>
+    </ul>
+    <p class="e-chute">Le volume et la forme s’adaptent. À la demande.</p>
+  </div>
+  <figure class="e-visuel">
+    <video src="assets/reduction-avec-lait.mp4" poster="assets/reduction-avec-lait.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Les soufflets s’abaissent jusqu’au niveau du lait."></video>
+  </figure>
+</section>
+
+<!-- ══════════ 05 · LE CAPUCHON, COURT ══════════ -->
+<section id="capuchon-court" class="e" aria-labelledby="capuchon-court-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">05 · Le capuchon, court</p>
+    <h2 id="capuchon-court-titre" class="e-titre">Il enfonce la tétine. <em>Il fait bloc.</em></h2>
+    <ul class="e-lignes">
+      <li>À la fermeture, le capuchon comprime la tétine dans sa base. Deux centimètres gagnés.</li>
+      <li>Il prend appui sur l’épaulement de la bague et s’y fixe par serrage.</li>
+      <li>Capuchon, tétine, bague : trois pièces rendues solidaires. Un seul bloc à manipuler.</li>
+    </ul>
+  </div>
+  <figure class="e-visuel droite duo">
+    <div class="duo-item"><video src="assets/capuchon-serre-la-tetine-bloc-monte.mp4" poster="assets/capuchon-serre-la-tetine-bloc-monte.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Le capuchon vient comprimer la tétine et se serrer sur la bague, puis le bloc se visse sur le flacon."></video><figcaption>Fermer</figcaption></div>
+    <div class="duo-item"><video src="assets/capuchon-serre-on-le-retire.mp4" poster="assets/capuchon-serre-on-le-retire.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="On retire le capuchon serré : il tient, on le sent ; la tétine reste en place, le capuchon se pose à l’envers."></video><figcaption>Ouvrir</figcaption></div>
+  </figure>
+</section>
+
+<!-- ══════════ 06 · LE BLOC SOLIDAIRE ══════════ -->
+<section id="gestes" class="e" aria-labelledby="gestes-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">06 · Le bloc solidaire</p>
+    <h2 id="gestes-titre" class="e-titre">Un geste. <em>Une hygiène.</em></h2>
+    <ul class="e-lignes">
+      <li>Le bloc se dévisse d’un geste et se repose entier. Rien à séparer, rien à chercher au remontage.</li>
+      <li>La tétine reste à l’abri dans le capuchon : les doigts ne la touchent pas.</li>
+      <li>Si elle reste enfoncée, le bord du capuchon la déloge.</li>
+    </ul>
+    <p class="e-chute">Dehors, une seule pièce en main. L’intérieur, jamais touché.</p>
+  </div>
+  <figure class="e-visuel duo">
+    <div class="duo-item"><video src="assets/fermer-devisser-poser-a-lenvers.mp4" poster="assets/fermer-devisser-poser-a-lenvers.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="On ferme le capuchon sur la tétine, on dévisse le bloc d’un geste, on le pose à l’envers sur son capuchon."></video><figcaption>Un geste</figcaption></div>
+    <div class="duo-item"><video src="assets/deloger-tetine-bord-du-capuchon.mp4" poster="assets/deloger-tetine-bord-du-capuchon.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="La tétine restée enfoncée est délogée avec le bord du capuchon, sans les doigts."></video><figcaption>Sans les doigts</figcaption></div>
+  </figure>
+</section>
+
+<!-- ══════════ 07 · LE CAPUCHON, PLAT ══════════ -->
+<section id="capuchon-plat" class="e" aria-labelledby="capuchon-plat-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">07 · Le capuchon, plat</p>
+    <h2 id="capuchon-plat-titre" class="e-titre">Hermétique. <em>Et stable.</em></h2>
+    <ul class="e-lignes">
+      <li>En s’enfonçant, la tétine vient plaquer son orifice contre la face intérieure plane du capuchon. Ni air n’entre. Ni liquide ne sort.</li>
+      <li>La poudre reste à l’abri. Le lait reste contenu.</li>
+      <li>Retourné, le bloc repose sur la face extérieure plate du capuchon. Stable sur la table. La tétine reste orientée vers le haut, à distance du support : elle ne touche rien, elle reste protégée.</li>
+    </ul>
+  </div>
+  <figure class="e-visuel droite">
+    <img src="assets/capuchon-pose-a-plat.webp" alt="À gauche, le bloc bague-tétine-capuchon retourné, posé sur son capuchon à côté du flacon ouvert ; à droite, pendant la tétée, le capuchon seul posé à plat" width="1568" height="1264" loading="lazy" class="large">
+  </figure>
+</section>
+
+<!-- ══════════ 08 · LE LAVAGE ══════════ -->
+<section id="lavage" class="e" aria-labelledby="lavage-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">08 · Le lavage</p>
+    <h2 id="lavage-titre" class="e-titre">Rien <em>à démonter.</em></h2>
+    <ul class="e-lignes">
+      <li>Deux ensembles : le flacon, et le bloc bague–tétine–capuchon. Pas de valve ni d’insert à démonter.</li>
+      <li>Le goupillon travaille contre la paroi.</li>
+      <li>Les soufflets s’abaissent pour atteindre le fond.</li>
+    </ul>
+    <p class="e-chute">On voit. On atteint. On nettoie.</p>
+    <p class="e-lien"><a href="mode-demploi.html">Nettoyer, sécher →</a></p>
+  </div>
+  <figure class="e-visuel">
+    <img src="assets/goupillon-soufflets.webp" alt="Le goupillon dans le BIBEON, contre la paroi des soufflets" width="1200" height="1600" loading="lazy">
+  </figure>
+</section>
+
+<!-- ══════════ 09 · LA LÉGÈRETÉ ══════════ -->
+<section id="legerete" class="e" aria-labelledby="legerete-titre">
+  <div class="e-texte">
+    <p class="e-eyebrow">09 · La légèreté</p>
+    <h2 id="legerete-titre" class="e-titre">35 g. <em>Sans faire fragile.</em></h2>
+    <ul class="e-lignes">
+      <li>Environ 35 g, tout compris.</li>
+      <li>Peu de masse à tenir, un corps étroit : il se prend d’une main.</li>
+      <li>Aussi léger sans être fragile, c’est là que le travail a été long.</li>
+    </ul>
+    <p class="e-chute">Léger ne veut pas dire moins conçu.</p>
+    <p class="e-lien"><a href="legerete.html">La légèreté a un prix →</a></p>
+  </div>
+  <figure class="e-visuel droite">
+    <!-- PLACEBO : photo à venir, BIBEON déplié tenu d’une main, fond clair --><div class="attente">Photo à venir<br>BIBEON déplié, tenu d’une main</div>
+  </figure>
+</section>
+
+<!-- ══════════ 10 · FINALEMENT ══════════ -->
+<section id="conclusion" class="plein" aria-labelledby="moins-titre">
+  <h2 id="moins-titre" class="e-titre">Finalement, <em>c’est quoi ?</em></h2>
+  <p class="moins-intro">Ce n’est pas un capuchon intelligent qu’il faudrait admirer. Ni des soufflets qu’il faudrait venir étudier. C’est ce qu’ils permettent de ne plus subir.</p>
+  <ul class="moins-liste">
+    <li>Moins lourd.</li><li>Moins encombrant.</li><li>Moins de pièces.</li><li>Moins à démonter et à laver.</li>
+    <li>Moins de grumeaux.</li><li>Moins d’air à avaler.</li><li>Moins de risques de fuite.</li><li>Moins de gestes à faire dehors, pendant que bébé a faim.</li>
+  </ul>
+  <p class="moins-chute">BIBEON n’a pas été dessiné pour avoir davantage de fonctions visibles.<br><em>Il a été dessiné pour laisser moins de contraintes aux parents.</em></p>
+</section>
+
+<!-- ══════════ PORTE DE LA BOUTIQUE ══════════ -->
+<section id="porte-boutique" class="porte" aria-labelledby="porte-titre">
+  <p class="porte-eyebrow">La boutique</p>
+  <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
+
+  <figure class="porte-visuel">
+<img src="assets/cinq-coloris-chambre.webp" width="1280" height="720" alt="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé." loading="lazy">
+  </figure>
+
+  <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
+  <p class="porte-conditions">Point relais offert<i>·</i>domicile 3,50 €<i>·</i>retour offert sous 30 jours</p>
+  <p class="porte-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
+</section>
+
+
+<!-- ══════════ SIGNATURE ══════════ -->
+<section aria-label="Le nom" class="usp nom nom-fin">
 <div class="shell">
-<p>Sept questions que se posent les parents.</p>
-<p>BIBEON a été dessiné à partir de celles-là.</p>
+<img alt="BIBEON" class="nom-logo" height="34" src="assets/logo-bibeon.svg" width="135"/>
+<p class="baseline nom-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</p>
 </div>
+
 </section>
-
-<!-- ═════════ 01 · LE TRANSPORT ═════════ -->
-<section aria-labelledby="t-transport" class="bloc respiration" id="transport">
-<div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel libre pose-duo">
-<img alt="Le biberon BIBEON replié, fermé par son capuchon clipsé, contenant sa dose de lait en poudre, posé à côté de son pochon de mousseline de coton." src="assets/bibeon-biberon-pre-dose-et-pochon.webp" width="1400" height="1400" loading="lazy"/>
-</figure>
-<div class="bloc-texte">
-<p class="overline">01 · Le transport</p>
-<h2 class="bloc-titre" id="t-transport">Pourquoi un biberon classique prend-il autant de place dans le sac&nbsp;?</h2>
-<p class="corps"><b>35&nbsp;g. Environ 10&nbsp;cm une fois replié.</b></p>
-<p class="corps">BIBEON commence par prendre moins de place par lui-même, avant même de compter tout ce qu’il permet de laisser à la maison.</p>
-<p class="corps">Son flacon replié reçoit directement la dose de lait en poudre pré-dosée&nbsp;: <b>pas de boîte doseuse séparée à transporter.</b></p>
-<p class="corps">Petit dehors. Grand quand on en a besoin&nbsp;: <b>jusqu’à 330&nbsp;ml de capacité utile</b> une fois entièrement déployé.</p>
-<p class="billets">Moins de volume. Moins de poids.<br/>Un objet de moins dans le sac.</p>
-<p class="lien-discret"><a href="sortir-sans-toute-la-cuisine.html">Combien d’objets faut-il pour un seul biberon&nbsp;?</a></p>
-<p class="lien-discret"><a href="transporter-lait-en-poudre.html">Transporter le lait en poudre&nbsp;: dans quoi&nbsp;?</a></p>
-</div>
-</div>
-</section>
-
-<!-- ═════════ 02 · LE LAVAGE ═════════ -->
-<section aria-labelledby="t-lavage" class="bloc respiration" id="lavage">
-<div class="shell">
-<div style="max-width:min(760px,100%);margin-inline:auto;text-align:center">
-<p class="overline">02 · Le lavage</p>
-<h2 class="bloc-titre" id="t-lavage">Laver un biberon, est-ce forcément démonter une usine à gaz&nbsp;?</h2>
-<p class="corps">À l’usage, BIBEON se résume à <b>deux ensembles à manipuler</b>&nbsp;: le flacon et le bloc solidaire bague–tétine–capuchon.</p>
-<p class="corps">Pas de valve, de grille ou d’insert supplémentaire à démonter et à faire sécher.</p>
-<p class="corps">Les soufflets peuvent être abaissés puis redéployés pour accéder au fond, aux plis et aux recoins. Et le diamètre étroit du flacon permet au goupillon de travailler directement contre les parois sans avoir à parcourir un large cylindre.</p>
-<p class="corps"><b>On voit. On atteint. On nettoie.</b></p>
-<p class="corps">Et les dernières gouttelettes peuvent être absorbées avec un embout mousse propre et parfaitement sec avant un nouveau pré-dosage.</p>
-</div>
-
-<div class="nettoyage-duo">
-<figure>
-<img alt="BIBEON replié sur un plan de travail : l’index descend à l’intérieur et atteint directement le fond du flacon." src="assets/doigt-au-fond-cuisine.webp" width="1200" height="1600" loading="lazy"/>
-<figcaption>Replié, le fond est directement accessible.</figcaption>
-</figure>
-<figure>
-<img alt="BIBEON déployé : les poils du goupillon s’ouvrent dans le creux de chaque soufflet." src="assets/goupillon-soufflets.webp" width="1400" height="1877" loading="lazy"/>
-<figcaption>Déployé, chaque creux vient à portée du goupillon.</figcaption>
-</figure>
-</div>
-
-<p class="billets" style="text-align:center;margin-inline:auto">Lavage à la main. Pas de lave-vaisselle.<br/>Pas d’ébullition.</p>
-<p class="lien-discret lien-centre"><a href="demonter-biberon-pour-laver.html">Pourquoi faut-il démonter autant de pièces pour laver un biberon&nbsp;?</a></p>
-</div>
-</section>
-
-<!-- ═════════ 03 · L’AIR ═════════ -->
-<section aria-labelledby="t-air" class="bloc respiration" id="air">
-<div class="shell bloc-grid">
-<figure class="bloc-visuel photo">
-<img alt="Le biberon nomade BIBEON menthe tenu dans une main, les soufflets abaissés au niveau du liquide" src="assets/biberon-main.webp" width="1408" height="1408" loading="lazy"/>
-</figure>
-<div class="bloc-texte">
-<p class="overline">03 · L’air</p>
-<h2 class="bloc-titre" id="t-air">Et si on enlevait l’air, au lieu d’ajouter une valve&nbsp;?</h2>
-<p class="corps">Pendant que bébé boit, le lait descend.<br/><b>BIBEON descend avec lui.</b></p>
-<p class="corps">Les soufflets permettent d’abaisser progressivement le flacon jusqu’au niveau du liquide, réduisant ainsi le volume d’air restant au-dessus du lait.</p>
-<p class="corps">Moins d’air présent dans le biberon. Moins d’air susceptible d’être avalé pendant la tétée.</p>
-<p class="billets">L’air ne se traite pas avec une pièce supplémentaire.<br/><b>On enlève simplement l’espace qui le contient.</b></p>
-<p class="lien-discret"><a href="reduire-air-avale-biberon.html">Comment réduire l’air que bébé avale au biberon&nbsp;?</a></p>
-</div>
-</div>
-</section>
-
-<!-- ═════════ 04 · LES GRUMEAUX ═════════ -->
-<section aria-labelledby="t-grumeaux" class="bloc respiration" id="grumeaux">
-<div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel photo">
-<img alt="Un biberon classique et son mélangeur séparé, à côté d’un BIBEON déployé rempli de lait, avec un agrandissement sur ses soufflets." src="assets/soufflets-sans-melangeur.webp" loading="lazy" width="1448" height="1086"/>
-</figure>
-<div class="bloc-texte">
-<p class="overline">04 · Les grumeaux</p>
-<h2 class="bloc-titre" id="t-grumeaux">Comment éviter les grumeaux sans emporter un accessoire de plus&nbsp;?</h2>
-<p class="corps">Une fois totalement déployés, les soufflets forment à l’intérieur du flacon une succession de creux.</p>
-<p class="corps">Pendant les secousses, les amas de poudre rencontrent cette géométrie, se fragmentent et se dispersent.</p>
-<p class="corps"><b>BIBEON agit comme son propre shaker.</b></p>
-<p class="corps">L’efficacité a été contrôlée au tamis. <a href="index.html#tamis">Voir le lait passer au tamis</a>.</p>
-<p class="billets">Pas de mélangeur à emporter. Pas de grille à retirer.<br/>Rien à laver séparément.</p>
-<p class="lien-discret"><a href="mode-demploi.html">Le mode d’emploi&nbsp;: préparer un lait sans grumeaux</a></p>
-</div>
-</div>
-</section>
-
-<!-- ═════════ 05 · L’ÉTANCHÉITÉ ═════════ -->
-<section aria-labelledby="t-etancheite" class="bloc respiration" id="etancheite">
-<div class="shell bloc-grid">
-<figure class="bloc-visuel photo">
-<img alt="À gauche, un biberon classique avec sa tétine, son disque obturateur et son capuchon en obus posés à côté ; à droite, un BIBEON replié et fermé par son seul capuchon plat." src="assets/capuchon-obturateur.webp" loading="lazy" width="1872" height="1056"/>
-</figure>
-<div class="bloc-texte">
-<p class="overline">05 · L’étanchéité</p>
-<h2 class="bloc-titre" id="t-etancheite">Est-ce qu’un biberon pliable fuit dans le sac&nbsp;?</h2>
-<p class="corps"><b>Correctement fermé, BIBEON est hermétique.</b></p>
-<p class="corps">Le capuchon est volontairement plus court que la tétine. En descendant, son toit entraîne celle-ci dans son axe jusqu’à l’enfoncer dans sa propre base.</p>
-<p class="corps">Son orifice vient alors se plaquer directement contre le toit plat du capuchon et s’obture. <b>L’obturateur séparé devient inutile.</b></p>
-<p class="corps">Cette fermeture permet aussi de transporter la poudre pré-dosée directement dans le flacon, sans fuite de contenu sec.</p>
-<p class="corps">Et, au passage, l’enfoncement de la tétine fait disparaître environ 2&nbsp;cm de hauteur.</p>
-<p class="billets">Une fonction de fermeture. Une fonction de compacité.<br/>Une pièce de moins.</p>
-<p class="lien-discret"><a href="biberon-pliable-fuite-sac.html">Est-ce qu’un biberon pliable peut fuir dans le sac&nbsp;?</a></p>
-</div>
-</div>
-</section>
-
-<!-- ═════════ 06 · LES GESTES DEHORS ═════════ -->
-<section aria-labelledby="t-gestes" class="bloc respiration" id="gestes">
-<div class="shell" style="max-width:min(760px,calc(100% - 64px));margin-inline:auto;text-align:center">
-<p class="overline">06 · Les gestes dehors</p>
-<h2 class="bloc-titre" id="t-gestes">Pourquoi manipuler trois pièces dehors quand une seule suffit&nbsp;?</h2>
-<p class="corps">C’est ici que le <b>bloc solidaire bague–tétine–capuchon</b> prend tout son sens.</p>
-<p class="corps">On le retire d’un seul geste. Les éléments restent ensemble. Rien à séparer, rien à poser individuellement, rien à rechercher pour remonter le biberon.</p>
-<p class="corps">Et le capuchon plat ajoute une deuxième intelligence&nbsp;: le bloc entier peut être posé à l’envers sur sa face extérieure. <b>Il reste stable. Il ne roule pas.</b></p>
-<p class="corps">La tétine reste protégée à l’intérieur du capuchon. <b>Elle n’est jamais manipulée directement avec les doigts.</b></p>
-<p class="corps">Bague vissée à l’endroit, le capuchon est retiré et la tétine devient accessible pour bébé.</p>
-<div class="bloc-solidaire-duo">
-<figure class="bloc-solidaire-visuel">
-<video aria-label="Le capuchon plat de BIBEON descend sur la tétine montée dans sa bague, et referme le bloc d’un seul tenant"
-       data-play-visible="" loop="" muted="" playsinline="" preload="none"
-       poster="assets/bloc-solidaire-se-referme.webp"
-       src="assets/bloc-solidaire-se-referme.mp4"></video>
-<figcaption>Bague, tétine, capuchon&nbsp;: refermé, l’ensemble ne fait plus qu’une pièce. C’est elle qu’on retire d’un seul geste.</figcaption>
-</figure>
-<figure class="bloc-solidaire-visuel">
-<img alt="Le capuchon plat de BIBEON posé sur sa face extérieure sur un plan de marbre, l’ouverture tournée vers le haut" src="assets/capuchon-plat-fait-socle.webp" loading="lazy" width="1100" height="880"/>
-<figcaption>La face extérieure est plate&nbsp;: posée dessus, elle fait socle. C’est elle, et elle seule, qui touche la table.</figcaption>
-</figure>
-</div>
-<p class="billets" style="margin-inline:auto">Une seule pièce à manipuler dehors.<br/>Rien de l’intérieur à toucher.</p>
-<p class="lien-discret lien-centre"><a href="biberon-nomade-sans-accessoires.html">Le biberon manipulé sans toucher l’intérieur</a></p>
-</div>
-</section>
-
-<!-- ═════════ 07 · LA LÉGÈRETÉ ═════════ -->
-<section aria-labelledby="t-legerete" class="bloc respiration" id="legerete">
-<div class="shell bloc-grid visuel-gauche">
-<figure class="bloc-visuel photo">
-<img alt="Un biberon BIBEON doré au centre, les biberons rigides et leurs accessoires expulsés autour de lui." src="assets/sortir-leger.webp" width="3371" height="1895" loading="lazy"/>
-</figure>
-<div class="bloc-texte">
-<p class="overline">07 · La légèreté</p>
-<h2 class="bloc-titre" id="t-legerete">Quel poids peut-on mettre entre les petites mains de bébé&nbsp;?</h2>
-<p class="corps"><b>BIBEON pèse environ 35&nbsp;g complet.</b></p>
-<p class="corps">Cette légèreté facilite aussi sa prise en main&nbsp;: peu de masse à soutenir, un corps étroit et une forme qui reste naturellement proche du contenu à mesure que le biberon s’abaisse.</p>
-<p class="corps">Et faire aussi léger sans faire fragile a été l’un des défis de sa conception.</p>
-<p class="billets">Léger ne signifie pas moins conçu.<br/><b>C’est précisément ce qui a été difficile à concevoir.</b></p>
-<p class="lien-discret"><a href="legerete.html">La légèreté a un prix</a></p>
-</div>
-</div>
-</section>
-
-<!-- ═════════ LA CONCLUSION ═════════ -->
-<section aria-labelledby="t-conclusion" class="bloc conclusion-df" id="conclusion">
-<div class="shell">
-<h2 class="bloc-titre" id="t-conclusion">Le biberon pratique, finalement, c’est quoi&nbsp;?</h2>
-<p class="corps">Ce n’est pas un capuchon intelligent qu’il faudrait admirer.<br/>Ni des soufflets qu’il faudrait venir étudier.</p>
-<p class="corps"><b>C’est ce qu’ils permettent de ne plus subir.</b></p>
-<ul class="moins-liste">
-<li>Moins lourd.</li>
-<li>Moins encombrant.</li>
-<li>Moins de pièces.</li>
-<li>Moins à démonter et à laver.</li>
-<li>Moins de grumeaux.</li>
-<li>Moins d’air à avaler.</li>
-<li>Moins de risques de fuite.</li>
-<li>Moins de gestes à faire dehors, pendant que bébé a faim.</li>
-</ul>
-<p class="corps">BIBEON n’a pas été dessiné pour avoir davantage de fonctions visibles.</p>
-<p class="corps"><b>Il a été dessiné pour laisser moins de contraintes aux parents.</b></p>
-<p class="signature-df">BIBEON — Le bibe<span class="r">r</span>on, l’R en moins<sup>®</sup>.</p>
-<p class="lien-discret lien-centre"><a href="conseils.html">Tous nos conseils sur le biberon</a></p>
-</div>
-</section>
-
-<p class="cta-boutique"><a href="boutique.html">Découvrir le biberon BIBEON <span>→</span></a></p>
 
 </main>
-
 
 <footer id="contact">
 <div class="shell footer-grid">
@@ -1669,6 +1652,7 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
 <a href="mentions-legales.html">Mentions légales</a>
 <a href="cgv.html">Conditions générales de vente</a>
+<a href="livraison-et-retours.html">Livraison et retours</a>
 <a href="confidentialite.html">Politique de confidentialité</a>
 </div>
 <div class="footer-col">
@@ -1684,11 +1668,6 @@ c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
 <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
-
-<a aria-label="Revenir en haut de la page" class="haut" href="#accueil">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24">
-<path d="M12 19V5"></path><path d="m5 12 7-7 7 7"></path>
-</svg>
 
 <script>
 (function(){var a=document.querySelector("#annee");
@@ -1710,5 +1689,9 @@ if(a) a.textContent=new Date().getFullYear();})();
   document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
 })();
 </script>
+<script>
+(function(){var videos=document.querySelectorAll("video[data-play-visible]");if(videos.length&&"IntersectionObserver" in window){var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){var v=entry.target;if(entry.isIntersecting){v.play().catch(function(){});}else{v.pause();}});},{threshold:0.25});videos.forEach(function(v){obs.observe(v);});}})();
+</script>
+
 </body>
 </html>
