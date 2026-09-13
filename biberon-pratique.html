@@ -1274,6 +1274,7 @@ linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
 .e-visuel.duo .duo-item{display:flex;flex-direction:column;align-items:center;min-width:0}
 .e-visuel.duo video{width:min(100%,220px);max-height:none}
 .e-visuel.duo img{width:min(100%,260px);max-height:none;aspect-ratio:1;object-fit:cover}
+.e-visuel.duo img.entiere{aspect-ratio:auto;object-fit:contain;width:min(100%,320px)}
 .attente{display:flex;align-items:center;justify-content:center;text-align:center;width:min(100%,360px);aspect-ratio:9/16;max-height:72svh;border-radius:24px;border:1.5px dashed var(--sauge);background:var(--sauge-fond);color:var(--sauge-texte);font:italic 400 clamp(16px,1.3vw,19px)/1.5 "Playfair Display",Georgia,serif;padding:24px;box-sizing:border-box}
 /* écrans pleine colonne : « Tout dedans », les dimensions, « Finalement » */
 .plein{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--filet:#E6E1D8;background:#fff;color:var(--nuit);box-sizing:border-box;text-align:center;width:min(100%,1180px);margin-inline:auto;padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
@@ -1539,7 +1540,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <h2 id="transport-titre" class="e-titre">Jusqu’à quatre fois <em>moins d’encombrement.</em></h2>
     <ul class="e-lignes">
       <li>Un biberon rigide. Une boîte doseuse. Un obturateur. Un mélangeur anti-grumeaux.</li>
-      <li>Avec BIBEON, leurs fonctions sont déjà intégrées : la dose voyage dans le flacon, le capuchon obture la tétine, les soufflets font office de shaker.</li>
+      <li>Avec BIBEON, leurs fonctions sont déjà intégrées : la dose voyage dans le flacon, le capuchon compacteur obture la tétine, les soufflets font office de shaker.</li>
       <li>Replié, BIBEON tient dans la moitié de la hauteur d’un biberon classique.</li>
     </ul>
     <p class="e-chute">Plus de fonctions dans le biberon. Moins d’objets dans le sac.</p>
@@ -1590,7 +1591,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <p class="e-lien"><a href="mode-demploi.html">Préparer un lait sans grumeaux →</a></p>
   </div>
   <figure class="e-visuel droite">
-    <!-- PLACEBO : vidéo du tamis à venir --><div class="attente">Vidéo à venir<br>la poudre se disperse dans les soufflets</div>
+    <video src="assets/lait-au-tamis-sans-grumeaux.mp4" poster="assets/lait-au-tamis-sans-grumeaux.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Le lait préparé dans BIBEON est versé à travers un tamis : il reste vide, aucun grumeau."></video>
   </figure>
 </section>
 
@@ -1614,10 +1615,10 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <!-- ══════════ 05 · LE CAPUCHON, COURT ══════════ -->
 <section id="capuchon-court" class="e" aria-labelledby="capuchon-court-titre">
   <div class="e-texte">
-    <p class="e-eyebrow">05 · Le capuchon, court</p>
+    <p class="e-eyebrow">05 · Le capuchon compacteur</p>
     <h2 id="capuchon-court-titre" class="e-titre">Il enfonce la tétine. <em>Il fait bloc.</em></h2>
     <ul class="e-lignes">
-      <li>À la fermeture, le capuchon comprime la tétine dans sa base. Deux centimètres gagnés.</li>
+      <li>À la fermeture, le capuchon compacteur comprime la tétine dans sa base. Deux centimètres gagnés.</li>
       <li>Il prend appui sur l’épaulement de la bague et s’y fixe par serrage.</li>
       <li>Capuchon, tétine, bague : trois pièces rendues solidaires. Un seul bloc à manipuler.</li>
     </ul>
@@ -1635,7 +1636,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <h2 id="gestes-titre" class="e-titre">Un geste. <em>Une hygiène.</em></h2>
     <ul class="e-lignes">
       <li>Le bloc se dévisse d’un geste et se repose entier. Rien à séparer, rien à chercher au remontage.</li>
-      <li>La tétine reste à l’abri dans le capuchon : les doigts ne la touchent pas.</li>
+      <li>La tétine reste à l’abri dans le capuchon compacteur : les doigts ne la touchent pas.</li>
       <li>Si elle reste enfoncée, le bord du capuchon la déloge.</li>
     </ul>
     <p class="e-chute">Dehors, une seule pièce en main. L’intérieur, jamais touché.</p>
@@ -1657,8 +1658,9 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
       <li>Retourné, le bloc repose sur la face extérieure plate du capuchon. Stable sur la table. La tétine reste orientée vers le haut, à distance du support : elle ne touche rien, elle reste protégée.</li>
     </ul>
   </div>
-  <figure class="e-visuel droite">
-    <img src="assets/capuchon-pose-a-plat.webp" alt="À gauche, le bloc bague-tétine-capuchon retourné, posé sur son capuchon à côté du flacon ouvert ; à droite, pendant la tétée, le capuchon seul posé à plat" width="1568" height="1264" loading="lazy" class="large">
+  <figure class="e-visuel droite duo">
+    <div class="duo-item"><img src="assets/capuchon-pose-a-plat.webp" alt="À gauche, le bloc bague-tétine-capuchon retourné, posé sur son capuchon à côté du flacon ouvert ; à droite, pendant la tétée, le capuchon seul posé à plat" width="1568" height="1264" loading="lazy" class="entiere"><figcaption>Stable</figcaption></div>
+    <div class="duo-item"><video src="assets/ferme-retourne-rouvert-sec.mp4" poster="assets/ferme-retourne-rouvert-sec.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Plein de lait, fermé, retourné sur son capuchon, puis rouvert : sec."></video><figcaption>Hermétique</figcaption></div>
   </figure>
 </section>
 
