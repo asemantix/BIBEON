@@ -1037,7 +1037,7 @@ max-width:820px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
 .gestes small{display:block;font:400 clamp(15px,1.2vw,17px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin-top:4px}
 .ehero-film{font:400 clamp(21px,2vw,28px)/1.35 "Playfair Display",Georgia,serif;margin:clamp(36px,6vh,64px) 0 0}
 .ehero-film em{font-style:italic;color:var(--sauge-texte)}
-.ehero video{display:block;width:min(100%,960px);height:auto;margin:clamp(20px,3vh,32px) auto 0;border-radius:28px;background:#0E1C35}
+.ehero video{display:block;width:min(100%,420px);height:auto;aspect-ratio:9/16;margin:clamp(20px,3vh,32px) auto 0;border-radius:28px;background:#f9f4ef}
 @media (max-width:720px){.ehero{padding:56px 22px 16px}}
 /* ══════════ ÉCRAN 1c · QUATRE PIÈCES — l’image entière, en pleine largeur ══════════ */
 .pieces{--nuit:#0E1C35;--sauge-texte:#55614B;background:#fff;color:var(--nuit);text-align:center;box-sizing:border-box;padding:clamp(56px,9vh,110px) clamp(20px,5vw,72px)}
@@ -1272,17 +1272,16 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <section id="les-gestes" class="ehero" aria-labelledby="gestes-titre">
   <h2 id="gestes-titre" class="g-titre" style="font:400 clamp(34px,4.4vw,62px)/1.06 'Playfair Display',Georgia,serif;color:#0E1C35;margin:0;max-width:none">Cinq gestes. <em>Dans l’ordre.</em></h2>
   <p class="g-note" style="margin-top:14px">Cliquez un geste : le film s’y rend.</p>
-  <!-- CHAPITRES : data-t = seconde de début de chaque geste dans le film. Minutages PROVISOIRES, à remplacer par les vrais quand le montage est fait. -->
+  <!-- CHAPITRES : data-t = seconde de début de chaque geste dans le film un-voyage-un-repas.mp4 -->
   <ol class="gestes" id="chapitres">
-    <li><button type="button" data-t="0"><b>01</b><span>Dosez la poudre dans le biberon replié.<small>Huit mesurettes au maximum. Capuchon.</small></span></button></li>
-    <li><button type="button" data-t="12"><b>02</b><span>Dépliez au moment du repas.<small>Bague desserrée, un soufflet à la fois, jusqu’au dernier.</small></span></button></li>
-    <li><button type="button" data-t="24"><b>03</b><span>Ajoutez l’eau, secouez.<small>Jusqu’au repère. Pas de mélangeur.</small></span></button></li>
-    <li><button type="button" data-t="36"><b>04</b><span>Pendant la tétée, abaissez les soufflets.<small>Le lait descend, le biberon descend avec lui.</small></span></button></li>
-    <li><button type="button" data-t="48"><b>05</b><span>Lavez à la main.<small>Replié, le fond remonte à portée du goupillon.</small></span></button></li>
+    <li><button type="button" data-t="14"><b>01</b><span>Dosez la poudre dans le biberon replié.<small>Huit mesurettes au maximum. Capuchon.</small></span></button></li>
+    <li><button type="button" data-t="24.5"><b>02</b><span>Dépliez au moment du repas.<small>Bague desserrée, un soufflet à la fois, jusqu’au dernier.</small></span></button></li>
+    <li><button type="button" data-t="34.5"><b>03</b><span>Ajoutez l’eau, secouez.<small>Jusqu’au repère. Pas de mélangeur.</small></span></button></li>
+    <li><button type="button" data-t="87"><b>04</b><span>Pendant la tétée, abaissez les soufflets.<small>Le lait descend, le biberon descend avec lui.</small></span></button></li>
+    <li><button type="button" data-t="110.5"><b>05</b><span>Repas fini ? Réduisez, fermez, repliez.<small>Retourné, rien ne fuit. Vide, il se replie.</small></span></button></li>
   </ol>
   <p class="ehero-film">Pressé ? <em>Une minute, tout est dit.</em></p>
-  <!-- PLACEBO : le film actuel reste en place jusqu’à votre montage (même nom de fichier, demo-bibeon.mp4) -->
-  <video id="film" src="assets/demo-bibeon.mp4" poster="assets/demo-bibeon.jpg" width="1200" height="624" controls playsinline preload="metadata" aria-label="Le film BIBEON : le biberon en main, du dosage au repas, puis le nettoyage."></video>
+  <video id="film" src="assets/un-voyage-un-repas.mp4" poster="assets/un-voyage-un-repas.jpg" width="720" height="1280" controls playsinline preload="metadata" aria-label="Un voyage. Un repas. Tous les gestes en une minute : le bloc, la dose, le déploiement, l’eau en deux temps, le tamis, la tétée, la fermeture, le repliage."></video>
 </section>
 
 <!-- ══════════ 2 · LE BLOC ══════════ -->
@@ -1372,7 +1371,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <h2 id="deux-temps-titre" class="g-titre">Un mouvement <em>en deux temps.</em></h2>
     <p class="g-ligne">Un soufflet ne se ferme pas d’un coup. Il bascule d’abord d’un côté, puis de l’autre, autour de son axe.</p>
     <p class="g-ligne">Les soufflets ne s’abaissent pas en un seul mouvement. Chaque pli passe successivement d’une position à l’autre.</p>
-    <p class="g-ligne">Ce fonctionnement en deux temps crée un effet auto-bloquant et évite que le flacon ne se replie inopinément. Pour modifier son volume, accompagnez volontairement chaque soufflet.</p>
+    <p class="g-ligne">Les soufflets sont auto-bloquants : c’est leur architecture. C’est pourquoi chacun passe par deux états stables, sans position intermédiaire, et pourquoi le flacon ne se replie jamais inopinément. Pour modifier son volume, accompagnez volontairement chaque soufflet.</p>
     <p class="g-ligne"><em>Ils se plient lorsqu’on le décide.</em></p>
   </div>
 </section>
@@ -1392,8 +1391,9 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 
 <!-- ══════════ 5 · L’EAU + REPÈRES ══════════ -->
 <section id="eau" class="g sauge" aria-labelledby="eau-titre">
-  <figure class="g-visuel">
-    <video src="assets/eau-en-deux-temps.mp4" poster="assets/eau-en-deux-temps.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Un peu d’eau, on referme, on agite ; on rouvre, on complète, on referme, on agite."></video>
+  <figure class="g-visuel deux">
+    <div class="bloc"><video src="assets/eau-en-deux-temps.mp4" poster="assets/eau-en-deux-temps.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Un peu d’eau, on referme, on agite ; on rouvre, on complète, on referme, on agite."></video><figcaption>En deux temps</figcaption></div>
+    <div class="bloc"><video src="assets/lait-au-tamis-sans-grumeaux.mp4" poster="assets/lait-au-tamis-sans-grumeaux.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="On secoue, on ouvre, on verse au tamis : rien ne reste. Le fond du flacon est net."></video><figcaption>Au tamis : pas un grumeau</figcaption></div>
   </figure>
   <div class="g-texte">
     <p class="g-eyebrow">L’eau</p>
@@ -1412,19 +1412,6 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     </table>
     <p class="reperes-note"><em>D’abord mélanger. Ensuite compléter.</em></p>
   </div>
-</section>
-
-<!-- ══════════ 6 · SECOUER ══════════ -->
-<section id="secouer" class="g" aria-labelledby="secouer-titre">
-  <div class="g-texte">
-    <p class="g-eyebrow">Mélanger</p>
-    <h2 id="secouer-titre" class="g-titre">Secouez. <em>C’est tout.</em></h2>
-    <p class="g-ligne">Les soufflets font le travail. Pas de grumeaux, pas de mélangeur.</p>
-    <p class="g-lien"><a href="biberon-pratique.html">Le lait au tamis, sur le biberon pratique →</a></p>
-  </div>
-  <figure class="g-visuel">
-    <video src="assets/secouer-le-biberon-ferme.mp4" poster="assets/secouer-le-biberon-ferme.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Capuchon fermé, on secoue : le lait se mélange dans le flacon."></video>
-  </figure>
 </section>
 
 <!-- ══════════ 7 · MOINS D’AIR ══════════ -->
