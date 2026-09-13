@@ -1086,8 +1086,9 @@ max-width:820px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
 .reperes td{padding:14px 12px;border-bottom:1px solid #d9dfd0}
 .reperes-note{font:400 clamp(14px,1.1vw,16px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:18px auto 0;max-width:60ch;text-align:center}
 /* réchauffer : trois lignes */
-.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,64px);width:min(100%,1080px);margin:clamp(32px,5vh,56px) auto 0}
+.trois{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,4vw,56px);width:min(100%,960px);margin:clamp(32px,5vh,56px) auto 0}
 .trois div{border-top:1px solid var(--sauge);padding-top:18px;text-align:left}
+.trois .ico{display:block;width:44px;height:44px;margin:4px 0 14px;fill:none;stroke:var(--nuit);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
 .trois h3{font:400 clamp(20px,1.8vw,26px)/1.25 "Playfair Display",Georgia,serif;margin:0}
 .trois p{font:400 clamp(15px,1.2vw,17px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:8px 0 0}
 @media (max-width:820px){
@@ -1107,7 +1108,7 @@ max-width:820px;margin:clamp(34px,4.4vh,54px) auto 0;align-items:start}
 .porte-titre{font:400 clamp(36px,5.2vw,72px)/1.04 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
 .porte-titre em{font-style:italic;color:var(--sauge-texte)}
 .porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,820px)}
-.porte-visuel img{display:block;width:100%;height:auto;border-radius:24px}
+.porte-visuel img,.porte-visuel video{display:block;width:100%;height:auto;border-radius:24px}
 .porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
 .porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
 .porte-lait{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
@@ -1272,16 +1273,16 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <section id="les-gestes" class="ehero" aria-labelledby="gestes-titre">
   <h2 id="gestes-titre" class="g-titre" style="font:400 clamp(34px,4.4vw,62px)/1.06 'Playfair Display',Georgia,serif;color:#0E1C35;margin:0;max-width:none">Cinq gestes. <em>Dans l’ordre.</em></h2>
   <p class="g-note" style="margin-top:14px">Cliquez un geste : le film s’y rend.</p>
-  <!-- CHAPITRES : data-t = seconde de début de chaque geste dans le film un-voyage-un-repas.mp4 -->
+  <!-- CHAPITRES : data-t = seconde de début de chaque geste dans le film le-biberon-nomade.mp4 -->
   <ol class="gestes" id="chapitres">
-    <li><button type="button" data-t="14"><b>01</b><span>Dosez la poudre dans le biberon replié.<small>Huit mesurettes au maximum. Capuchon.</small></span></button></li>
-    <li><button type="button" data-t="24.5"><b>02</b><span>Dépliez au moment du repas.<small>Bague desserrée, un soufflet à la fois, jusqu’au dernier.</small></span></button></li>
-    <li><button type="button" data-t="34.5"><b>03</b><span>Ajoutez l’eau, secouez.<small>Jusqu’au repère. Pas de mélangeur.</small></span></button></li>
-    <li><button type="button" data-t="87"><b>04</b><span>Pendant la tétée, abaissez les soufflets.<small>Le lait descend, le biberon descend avec lui.</small></span></button></li>
-    <li><button type="button" data-t="110.5"><b>05</b><span>Repas fini ? Réduisez, fermez, repliez.<small>Retourné, rien ne fuit. Vide, il se replie.</small></span></button></li>
+    <li><button type="button" data-t="18"><b>01</b><span>Dosez la poudre dans le biberon replié.<small>Huit mesurettes au maximum. Capuchon.</small></span></button></li>
+    <li><button type="button" data-t="28.5"><b>02</b><span>Dépliez au moment du repas.<small>Bague desserrée, un soufflet à la fois, jusqu’au dernier.</small></span></button></li>
+    <li><button type="button" data-t="48.5"><b>03</b><span>Ajoutez l’eau, secouez.<small>Jusqu’au repère. Pas de mélangeur.</small></span></button></li>
+    <li><button type="button" data-t="94"><b>04</b><span>Pendant la tétée, abaissez les soufflets.<small>Le lait descend, le biberon descend avec lui.</small></span></button></li>
+    <li><button type="button" data-t="144"><b>05</b><span>Et dans le sac ? Fermé, retourné.<small>Rien ne fuit. Rouvert, il est sec.</small></span></button></li>
   </ol>
   <p class="ehero-film">Pressé ? <em>Une minute, tout est dit.</em></p>
-  <video id="film" src="assets/un-voyage-un-repas.mp4" poster="assets/un-voyage-un-repas.jpg" width="720" height="1280" controls playsinline preload="metadata" aria-label="Un voyage. Un repas. Tous les gestes en une minute : le bloc, la dose, le déploiement, l’eau en deux temps, le tamis, la tétée, la fermeture, le repliage."></video>
+  <video id="film" src="assets/le-biberon-nomade.mp4" poster="assets/le-biberon-nomade.jpg" width="720" height="1280" controls playsinline preload="metadata" aria-label="Un voyage. Un repas. Tous les gestes en une minute : le bloc, la dose, le déploiement, l’eau en deux temps, le tamis, la tétée, la fermeture, le repliage."></video>
 </section>
 
 <!-- ══════════ 2 · LE BLOC ══════════ -->
@@ -1289,7 +1290,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
   <div class="g-texte">
     <p class="g-eyebrow">Le bloc</p>
     <h2 id="bloc-titre" class="g-titre">Le haut se retire <em>d’un seul tenant.</em></h2>
-    <p class="g-ligne">La bague se visse. Le capuchon est assis dessus, serré : en dévissant la bague, il vient avec.</p>
+    <p class="g-ligne">La bague se visse. Le capuchon est assis dessus, serré : en dévissant la bague, le capuchon vient avec. Le bloc est solidaire.</p>
   </div>
   <figure class="g-visuel">
     <video src="assets/monter-le-bloc-et-le-visser.mp4" poster="assets/monter-le-bloc-et-le-visser.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="La tétine se monte dans la bague, le capuchon la coiffe, puis le bloc se visse sur le flacon replié."></video>
@@ -1303,11 +1304,11 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <div class="bloc"><img src="assets/capuchon-plat-fait-socle.webp" width="1100" height="880" alt="Le bloc posé à l’envers sur la face plate du capuchon." loading="lazy" style="aspect-ratio:5/4"><figcaption>Posé à l’envers, stable</figcaption></div>
   </figure>
   <div class="g-texte">
-    <p class="g-eyebrow">Le capuchon</p>
+    <p class="g-eyebrow">Le capuchon compacteur</p>
     <h2 id="capuchon-titre" class="g-titre">Fermer, ouvrir, <em>poser.</em></h2>
-    <p class="g-ligne"><strong>Fermer.</strong> Le capuchon, plus court que la tétine, l’enfonce dans sa base et s’arrête sur le bord de la bague, serré : les trois pièces font bloc. La tétine doit s’enfoncer dans l’axe, bien droite — repliée sur le côté, elle fuirait.</p>
+    <p class="g-ligne"><strong>Fermer.</strong> Le capuchon compacteur, plus court que la tétine, l’enfonce dans sa base et s’arrête sur le bord de la bague, serré : les trois pièces font bloc. La tétine doit s’enfoncer dans l’axe, bien droite — repliée sur le côté, le liquide fuirait.</p>
     <p class="g-ligne"><strong>Ouvrir.</strong> Dévissez la bague : le bloc vient d’un seul geste, la tétine reste protégée dedans. Enfoncée ? Délogez-la avec le bord du capuchon, jamais avec les doigts.</p>
-    <p class="g-ligne"><strong>Poser.</strong> Le bloc se pose à l’envers sur le toit plat du capuchon : stable, il ne roule pas, la tétine tournée vers le ciel.</p>
+    <p class="g-ligne"><strong>Poser.</strong> Le bloc se pose à l’envers sur le toit plat du capuchon : stable, il ne roule pas, la tétine vers le haut, à distance du support.</p>
     <p class="g-lien"><a href="biberon-pratique.html#capuchon-court">Pourquoi il est fait ainsi →</a></p>
   </div>
 </section>
@@ -1451,9 +1452,9 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <h2 id="rechauffer-titre" class="g-titre">Comme <em>d’habitude.</em></h2>
   </div>
   <div class="trois">
-    <div><h3>Sans la bague, la tétine ni le capuchon.</h3><p>Le flacon seul.</p></div>
-    <div><h3>Bain-marie.</h3><p>Micro-ondes possible, déconseillé pour tous les biberons : le lait chauffe par zones.</p></div>
-    <div><h3>Jamais d’ébullition.</h3><p>Au froid, laissez-le revenir à température avant de le déplier.</p></div>
+    <div><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M19 6h10M20 6v5h8V6M17 13h14M15 16h18v3h-3l1.5 4H16.5L18 19h-3zM16.5 23h15v4h-15zM16.5 27l-1 4h17l-1-4M15.5 31h17v4h-17zM15.5 35l-1 4h19l-1-4M14.5 39h19v3h-19z"/></svg><h3>Sans la bague, la tétine ni le capuchon.</h3><p>Le flacon seul.</p></div>
+    <div><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 20h32v14a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6zM4 20h6M38 20h6M12 28c3-2 5-2 8 0s5 2 8 0 5-2 8 0M21 8h6v4h-6zM19 12h10v8H19z"/></svg><h3>Bain-marie.</h3><p>Micro-ondes possible, déconseillé pour tous les biberons : le lait chauffe par zones.</p></div>
+    <div><svg class="ico" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 22h32v12a6 6 0 0 1-6 6H14a6 6 0 0 1-6-6zM4 22h6M38 22h6"/><circle cx="18" cy="14" r="2"/><circle cx="26" cy="9" r="2.5"/><circle cx="32" cy="15" r="1.8"/><path d="M6 6l36 36"/></svg><h3>Jamais d’ébullition.</h3><p>Au froid, laissez-le revenir à température avant de le déplier.</p></div>
   </div>
 </section>
 
@@ -1463,7 +1464,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
   <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
 
   <figure class="porte-visuel">
-<img src="assets/cinq-coloris-chambre.webp" width="1280" height="720" alt="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé." loading="lazy">
+<video src="assets/coloris-en-ronde.mp4" poster="assets/coloris-en-ronde.jpg" width="1280" height="720" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Les coloris BIBEON, repliés, tournent lentement dans la lumière."></video>
   </figure>
 
   <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
