@@ -869,6 +869,8 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 .ou-item figure{margin:0 0 18px;aspect-ratio:4/3;overflow:hidden;border-radius:22px;background:#f9f4ef}
 .ou-item figure img{display:block;width:100%;height:100%;object-fit:cover}
 .ou-item figure .attente{width:100%;height:100%;border-radius:22px;box-sizing:border-box}
+.ou-item figure.duo{display:grid;grid-template-columns:1fr 1fr;gap:8px;background:none;aspect-ratio:auto}
+.ou-item figure.duo img{aspect-ratio:4/5;border-radius:18px}
 .ou-item.sans{padding-top:18px;border-top:1px solid var(--filet)}
 .ou-item.sans:last-child{}
 .ou-item h3{font:400 clamp(20px,1.7vw,24px)/1.3 "Playfair Display",Georgia,serif;margin:0 0 8px}
@@ -996,8 +998,8 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 
 <div class="annonce">
 <div class="shell annonce-in">
-<b>La boutique est ouverte</b><i>·</i>
-<span>Expédié de France le jour même</span>
+<b>Expédié de France le jour même</b><i>·</i>
+<span>Livraison en 3 jours ouvrés</span>
 <i>·</i>
 <span>Point relais offert · domicile 3,50 €</span>
 </div>
@@ -1036,10 +1038,9 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <section class="vhero" aria-labelledby="vhero-titre">
   <div class="vhero-texte">
     <p class="vhero-eyebrow">Le biberon nomade</p>
-    <h1 id="vhero-titre">Il tient dans une poche.<br><em>Il ne pèse presque rien.</em></h1>
-    <h2>Voyager avec bébé : le biberon nomade pliable en avion, en voiture, à la plage.</h2>
+    <h1 id="vhero-titre">Il tient dans <em>une poche.</em></h1>
+    <h2>Un biberon et sa dose de lait en poudre réunis en un seul objet.</h2>
     <p class="vhero-ligne">9,5 cm replié. Environ 35 g, tétine et capuchon compris.</p>
-    <p class="vhero-bonus">Pour le lait en poudre, <em>la dose voyage directement dans le flacon.</em></p>
     <p class="vhero-cta"><a href="boutique.html">Découvrir BIBEON <span>→</span></a></p>
   </div>
   <figure class="vhero-visuel">
@@ -1060,8 +1061,8 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     </ul>
     <p class="v-chute">Les repas sont pré-dosés. Rien n’est encore mélangé.</p>
   </div>
-  <figure class="geste-visuel">
-    <video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, puis le capuchon."></video>
+  <figure class="geste-visuel large">
+    <img src="assets/trois-bibeon-pre-doses.webp" width="1400" height="1010" alt="Trois BIBEON repliés et fermés, lilas, rose et lin, chacun pré-dosé de lait en poudre." loading="lazy">
   </figure>
 </section>
 
@@ -1103,8 +1104,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     <p class="minute-ligne">Pré-doser. Déployer. Ajouter l’eau. Mélanger. Donner. Replier.<br>Tous les gestes de BIBEON, du départ jusqu’à la fin du repas.</p>
   </div>
   <figure class="minute-visuel">
-    <!-- PLACEBO : le film d’une minute, dès qu’il est monté -->
-    <div class="attente">Film à venir<br>Un voyage. Un repas. Tous les gestes en une minute.</div>
+    <video src="assets/un-voyage-un-repas.mp4" poster="assets/un-voyage-un-repas.jpg" width="720" height="1280" controls playsinline preload="none" aria-label="Un voyage. Un repas. Tous les gestes en une minute : le bloc, la dose, le déploiement, l’eau en deux temps, le tamis, la tétée, la fermeture, le repliage."></video>
   </figure>
   <p class="minute-lien"><a href="mode-demploi.html">Voir le mode d’emploi détaillé →</a></p>
 </section>
@@ -1123,7 +1123,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
       <p>Les repas pré-dosés restent rangés jusqu’à la prochaine pause.</p>
     </div>
     <div class="ou-item">
-      <figure><img src="assets/train-tablette.webp" alt="Sur la tablette d’un train, le BIBEON déployé, le bloc posé à l’envers à côté, l’eau versée." loading="lazy"></figure>
+      <figure class="duo"><img src="assets/train-tablette-replie.webp" alt="Dans le train, sur la tablette : le BIBEON replié, fermé, à côté d’une petite bouteille d’eau." loading="lazy"><img src="assets/train-tablette-deplie.webp" alt="Le même BIBEON déployé sur la tablette, le bloc en main, prêt à recevoir l’eau." loading="lazy"></figure>
       <h3>En train ou en bus</h3>
       <p>Peu de place pour préparer. Peu de pièces à manipuler.</p>
       <p>Dévissez le bloc, posez-le à l’envers, puis ajoutez l’eau.</p>
