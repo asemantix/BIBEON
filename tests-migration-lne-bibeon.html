@@ -562,6 +562,12 @@ footer .brand svg.brand-logo{height:30px}
   background:var(--cream);border:1px solid var(--line)}
 .signature-autrice .eyebrow{margin-bottom:10px}
 .signature-autrice p{margin:0;font-size:14.5px;line-height:1.75}
+[id]{scroll-margin-top:130px}
+.lne-tableau{width:100%;border-collapse:collapse;margin:22px 0 6px;font-size:15px}
+.lne-tableau th,.lne-tableau td{padding:12px 10px;border-bottom:1px solid #E6E1D8;text-align:left;vertical-align:top}
+.lne-tableau th{font:600 11px/1.4 Montserrat,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#55614B}
+.lne-tableau td.v{font-weight:600;color:#0E1C35;white-space:nowrap}
+.lne-note{font-size:14px;color:#55614B;margin:0 0 18px}
 </style>
 <script type="application/ld+json">
 {
@@ -842,6 +848,15 @@ transition:background .2s ease}
           <p style="margin:0 0 10px"><strong>0 résidu détecté</strong> — migration globale inférieure à 6 mg/kg dans toutes les conditions testées.</p>
           <p style="margin:0">La mention « 0 résidu détecté » signifie qu’aucune valeur égale ou supérieure au <strong>seuil analytique de 6 mg/kg</strong> n’a été mesurée. Elle ne signifie pas qu’une méthode d’analyse pourrait démontrer l’absence absolue de toute molécule.</p>
         </div>
+        <table class="lne-tableau" aria-label="Résultats des essais de migration globale du LNE">
+          <thead><tr><th>Pièce testée</th><th>Acide acétique 3 %</th><th>Éthanol 50 %</th><th>Huile végétale</th></tr></thead>
+          <tbody>
+            <tr><td>Corps à soufflets (chaque coloris)</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td></tr>
+            <tr><td>Bague</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td></tr>
+            <tr><td>Capuchon</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td><td class="v">&lt; 6 mg/kg</td></tr>
+          </tbody>
+        </table>
+        <p class="lne-note">Migration globale, dix jours à 40 °C, selon NF EN 1186 — Laboratoire national de métrologie et d’essais. Limite réglementaire : 60 mg/kg.</p>
         <p>La réglementation autorise jusqu’à <strong>60 mg/kg</strong> pour les matériaux au contact des denrées alimentaires. Le seuil sous lequel se situent tous les résultats est donc <strong>dix fois inférieur à la limite légale</strong> — et il correspond à la limite de ce que la méthode sait mesurer, non à une valeur trouvée.</p>
 
         <h3>Six millionièmes</h3>
@@ -870,9 +885,8 @@ transition:background .2s ease}
       </section>
 
       <section class="conclusion">
-        <h2>Le dossier est consultable</h2>
-        <p>Le rapport d’essais de migration du LNE est tenu à disposition sur simple demande. Nous ne demandons à personne de nous croire sur parole : nous publions ce que le laboratoire a mesuré.</p>
-        <p><a class="button-link" href="contact.html">Demander le rapport d’essais</a></p>
+        <h2>Ce que nous publions</h2>
+        <p>Les valeurs ci-dessus sont celles du rapport d’essais du LNE, pièce par pièce et simulant par simulant. Nous ne demandons à personne de nous croire sur parole : nous publions ce que le laboratoire a mesuré.</p>
       </section>
 
       <section id="faq" class="faq">
@@ -900,7 +914,7 @@ transition:background .2s ease}
           <li><a href="legerete.html">La légèreté</a></li>
           <li><a href="mode-demploi.html">BIBEON — Mode d’emploi</a></li>
         </ul>
-        <p class="disclaimer">Les résultats présentés sur cette page sont ceux du rapport d’essais du Laboratoire national de métrologie et d’essais. Le dossier complet est communiqué sur demande.</p>
+        <p class="disclaimer">Les résultats présentés sur cette page sont ceux du rapport d’essais du Laboratoire national de métrologie et d’essais.</p>
       </footer>
     </article>
   </div>
