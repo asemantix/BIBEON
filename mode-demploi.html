@@ -1146,6 +1146,19 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 .nom-fin .baseline{margin:clamp(12px,1.38vw,18px) 0 0;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#0E1C35;font-size:14px}
 .nom-fin .baseline .r{color:#a9b79c}
 
+
+/* ══════════ AÉRATION (15 sept.) : chaque écran prend la hauteur de la fenêtre, comme l’accueil ══════════ */
+.ehero{min-height:min(88svh,880px);justify-content:center;padding:clamp(72px,10vh,140px) clamp(20px,5vw,72px)}
+.ehero+.ehero{min-height:0;padding-top:clamp(40px,6vh,72px)}
+.g{min-height:min(100svh,960px);width:100%;max-width:none;padding:clamp(96px,14vh,180px) max(clamp(20px,6vw,96px),calc((100% - 1380px)/2));gap:clamp(40px,6vw,110px)}
+.ehero,.film,.pieces,.porte{width:100%;max-width:none}
+.g.sauge{padding-inline:max(clamp(20px,6vw,96px),calc((100% - 1380px)/2))}
+.g-texte{max-width:480px}
+.g-visuel video,.g-visuel img{max-height:72svh}
+.g.un{min-height:min(80svh,760px)}
+.film,.pieces{padding:clamp(96px,14vh,180px) clamp(20px,5vw,72px)}
+@media (max-width:820px){.g{min-height:0;padding:72px 20px}.ehero{min-height:0}}
+
 </style>
 <script type="application/ld+json">
 {
