@@ -1371,6 +1371,9 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 .e-visuel.duo img{width:min(100%,380px);aspect-ratio:auto;object-fit:contain}
 .e-visuel.duo img.entiere{width:min(100%,380px)}
 .plein{width:100%;max-width:none;min-height:min(80svh,760px);display:flex;flex-direction:column;justify-content:center;padding:clamp(96px,14vh,180px) clamp(20px,5vw,72px)}
+.e-bande{grid-column:1/-1;margin:clamp(32px,5vh,64px) auto 0;width:min(100%,1100px);text-align:center}
+.e-bande img{display:block;width:100%;height:auto;border-radius:24px}
+.e-bande figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);margin:14px 0 0}
 @media (max-width:820px){
   .e{grid-template-columns:1fr;min-height:0;padding:72px 20px}
   .e-visuel.duo video,.e-visuel.duo img,.e-visuel.duo img.entiere{width:min(100%,220px)}
@@ -1639,11 +1642,10 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
     </ul>
     <p class="e-chute">Le volume et la forme s’adaptent. À la demande.</p>
   </div>
-  <figure class="e-visuel duo">
-    <div class="duo-item"><img src="assets/air-au-dessus-du-lait.webp" alt="BIBEON déployé, à moitié plein : entre le lait et la tétine, une colonne d’air." width="1406" height="1406" loading="lazy" class="entiere"><figcaption>Déployé : de l’air au-dessus</figcaption></div>
-    <div class="duo-item"><video src="assets/reduction-avec-lait.mp4" poster="assets/reduction-avec-lait.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Les soufflets s’abaissent jusqu’au niveau du lait."></video><figcaption>Abaissé : plus d’air</figcaption></div>
+  <figure class="e-visuel">
+    <video src="assets/reduction-avec-lait.mp4" poster="assets/reduction-avec-lait.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Les soufflets s’abaissent jusqu’au niveau du lait, puis le flacon se coude."></video>
   </figure>
-</section>
+<figure class="e-bande"><img src="assets/deploye-a-moitie-abaisse.webp" alt="Quatre étapes : déployé avec de l’air au-dessus du lait, abaissé jusqu’au lait ; le lait baisse, on abaisse encore." width="1530" height="839" loading="lazy" class="entiere"><figcaption>Le lait descend, BIBEON aussi : à chaque étape, plus d’air au-dessus.</figcaption></figure></section>
 
 <!-- ══════════ 05 · LE CAPUCHON, COURT ══════════ -->
 <section id="capuchon-court" class="e" aria-labelledby="capuchon-court-titre">
