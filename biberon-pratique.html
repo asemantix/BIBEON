@@ -427,6 +427,26 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 .hero-question h1{max-width:17ch}
 @media (max-width:900px){.hero-question h1{max-width:19ch}}
 
+
+/* ══ LE MOT DE L’INVENTRICE (16 sept.) ══
+   Une confidence posée sous le chapeau : pas d’encadré, juste un filet
+   à gauche et l’italique. Reprend les variables de la section .plein. */
+.mot-inventrice{margin:clamp(26px,3.6vh,42px) auto 0;max-width:52ch;padding:0 0 0 22px;
+border-left:2px solid var(--sauge);text-align:left}
+.mot-inventrice p{margin:0;font:italic 400 clamp(17px,1.5vw,21px)/1.55 "Playfair Display",Georgia,serif;
+color:var(--nuit)}
+.mot-inventrice footer{margin:14px 0 0;font:600 11px/1.5 Montserrat,sans-serif;
+letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte)}
+.mot-inventrice footer i{font-style:normal;padding:0 7px;opacity:.5}
+
+
+/* ══ LE DIFFÉRENTIEL DE POIDS (16 sept.) ══
+   Sous la chute de l'écran 01 : un constat, pas une exclamation.
+   Corps plus petit que .e-chute, filet au-dessus pour le détacher. */
+.e-poids{margin:clamp(18px,2.4vh,26px) 0 0;padding:clamp(16px,2vh,22px) 0 0;
+border-top:1px solid var(--filet);
+font:400 clamp(15px,1.25vw,17px)/1.65 Montserrat,sans-serif;color:var(--sauge-texte)}
+
 </style>
 <script type="application/ld+json">
 {
@@ -612,7 +632,11 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
 <!-- ══════════ 00 · TOUT DEDANS ══════════ -->
 <section id="tout-dedans" class="plein" aria-labelledby="tout-dedans-titre">
   <h2 id="tout-dedans-titre" class="e-titre">Pensé de bout en bout <em>pour l’extérieur.</em></h2>
-  <p class="moins-intro">Chaque détail a été dessiné pour un seul usage : le biberon hors de la maison. Moins de pièces à sortir, à poser quelque part, à reprendre — donc moins de contacts avec l’intérieur du flacon et la tétine. Tout est pensé pour faciliter les manipulations, là où rien n’est à portée de main.</p>
+  <p class="moins-intro">Chaque détail a été dessiné pour un seul usage : le biberon hors de la maison. Moins de pièces à sortir et à poser quelque part, c’est moins d’occasions de salir ce qui touchera la bouche de bébé. Rien de ce que vous manipulez n’entre en contact avec le lait ni avec la tétine.</p>
+  <blockquote class="mot-inventrice">
+    <p>« Je voulais un biberon qu’on puisse donner après avoir changé une roue, sans avoir pu se laver les mains — parce que rien de ce qu’on touche n’entre en contact avec le lait ni avec la tétine. »</p>
+    <footer>Suzanne de Bégon<i>·</i>inventrice</footer>
+  </blockquote>
   <figure><img src="assets/sortir-leger.webp" alt="Un BIBEON doré, replié, au milieu des accessoires de biberon qu’il remplace" width="2000" height="1124" loading="lazy"></figure>
 </section>
 
@@ -627,6 +651,7 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
       <li>Replié, BIBEON tient dans la moitié de la hauteur d’un biberon classique.</li>
     </ul>
     <p class="e-chute">Plus de fonctions dans le biberon. Moins d’objets dans le sac.</p>
+    <p class="e-poids">Quatre BIBEON pré-dosés pèsent ce que pèsent quatre boîtes doseuses — avec les biberons en prime. Les quatre biberons vides, vous ne les transporterez plus, ni à l’aller ni au retour.</p>
   </div>
   <figure class="e-visuel droite">
     <img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="À gauche, quatre BIBEON repliés dans un petit sac ; à droite, quatre doseurs, quatre biberons rigides et un grand sac à langer" width="1568" height="1264" loading="lazy" class="large">
