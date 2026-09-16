@@ -111,6 +111,13 @@
     </image:image>
   </url>
   <url>
+    <loc>https://bibeon.fr/preparer-biberon-la-nuit.html</loc>
+    <image:image>
+      <image:loc>https://bibeon.fr/assets/preparer-biberon-la-nuit.webp</image:loc>
+      <image:title>Table de nuit éclairée par une lampe : une bouteille d’eau fermée et un BIBEON replié, sa dose de lait déjà dedans, pendant que la mère dort.</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://bibeon.fr/preparer-biberon-avion.html</loc>
     <image:image>
       <image:loc>https://bibeon.fr/assets/avion-arsenal.webp</image:loc>
@@ -126,6 +133,10 @@
     <image:image>
       <image:loc>https://bibeon.fr/assets/voiture-coffre-trousse.webp</image:loc>
       <image:title>Coffre ouvert, bébé dans son siège : un BIBEON pré-dosé en main, deux autres dans la trousse, une bouteille d’eau.</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://bibeon.fr/assets/biberon-nomade-pre-dose-train.webp</image:loc>
+      <image:title>Dans le train, sur la tablette : le BIBEON replié, fermé, sa dose de lait en poudre visible à travers le flacon, à côté d’une bouteille d’eau.</image:title>
     </image:image>
     <image:image>
       <image:loc>https://bibeon.fr/assets/train-tablette-deplie.webp</image:loc>
@@ -153,6 +164,13 @@
     <image:image>
       <image:loc>https://bibeon.fr/assets/rapport-lne-p143418-resultats.webp</image:loc>
       <image:title>Page 4 du rapport d’essais LNE P143418 : pour chaque corps de biberon (violet, rose, bleu, vert, orange) et pour la bague et le capuchon, dans l’acide acétique 3 %, l’éthanol 50 % et l’huile végétale, 40 °C pendant dix jours : aucune modification, migration inférieure à 6,0 mg/kg.</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://bibeon.fr/migration.html</loc>
+    <image:image>
+      <image:loc>https://bibeon.fr/assets/rapport-lne-migration-globale.webp</image:loc>
+      <image:title>Page de résultats du rapport LNE P143418 : migration globale mesurée sur cinq corps de flacon et sur l’ensemble bague et capuchon, après dix jours à 40 °C dans trois simulants. Résultat inférieur à 6 mg/kg dans les dix-huit essais, sans modification observée.</image:title>
     </image:image>
   </url>
   <url>
