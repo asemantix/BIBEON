@@ -983,27 +983,6 @@ margin:clamp(34px,4.4vh,54px) auto 0;border-top:1px solid var(--line)}
   .offre:first-child{border-top:0}
 }
 
-/* le nuancier, repris tel quel de votre index2 */
-.nuancier{margin:16px 0 4px}
-.nuancier-titre{margin:0 0 12px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.14em;text-transform:uppercase;color:var(--sage-dark);line-height:1.7}
-.nuancier-choix{font-weight:500;letter-spacing:.1em;color:var(--sage)}
-.pastilles{display:flex;gap:14px;flex-wrap:wrap;padding:4px 0}
-.pastille{width:34px;height:34px;border-radius:50%;border:0;cursor:pointer;padding:0;
-position:relative;overflow:hidden;
-background:radial-gradient(circle at 32% 26%,
-color-mix(in srgb, var(--teinte) 45%, white) 0%, var(--teinte) 42%,
-color-mix(in srgb, var(--teinte) 82%, #4a3f2f) 100%);
-box-shadow:inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42),
-0 3px 6px rgba(17,37,58,.20),0 1px 2px rgba(17,37,58,.14);
-transition:transform .2s cubic-bezier(.34,1.4,.64,1),box-shadow .2s ease}
-.pastille::after{content:"";position:absolute;left:22%;top:14%;width:34%;height:22%;
-border-radius:50%;transform:rotate(-18deg);pointer-events:none;
-background:radial-gradient(ellipse at center,rgba(255,255,255,.92) 0%,rgba(255,255,255,0) 72%)}
-.pastille[aria-pressed="true"]{transform:scale(1.12);
-box-shadow:0 0 0 2px var(--cream),0 0 0 4px var(--sage-dark),
-inset 0 -5px 9px rgba(74,63,47,.22),inset 0 4px 8px rgba(255,255,255,.42)}
-.pastille:focus-visible{outline:2px solid var(--sage-dark);outline-offset:4px}
 
 /* ═══════════ LA PHRASE DE MARQUE — une respiration, rien d'autre ═══════════ */
 .usp{min-height:72vh;display:flex;align-items:center;text-align:center;
@@ -1599,7 +1578,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 
 <header class="header">
 <div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand brand-tag" href="#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
+<a aria-label="BIBEON — accueil" class="brand brand-tag" href="/#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
 <nav aria-label="Navigation principale" class="nav-links" id="menu">
 <a aria-current="page" href="/">Accueil</a>
 <a href="voyage.html">Voyager avec bébé</a>
@@ -1632,7 +1611,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
       <h1 id="hero-titre">Le biberon végétal, pliable.<span class="hero-second">Il est nomade.</span></h1>
       <p class="heroF-prix"><b>À partir de 35 €</b><i>·</i>point relais offert<i>·</i>domicile 3,50 €</p>
       <p class="heroF-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
-      <p class="heroF-capsules"><a href="#preuve-vegetal">50 % végétal</a><a href="#preuve-residu">0 résidu détecté</a></p>
+      <p class="heroF-capsules"><a href="#preuve-vegetal">50 % végétal</a><a href="#avis">4,4 / 5 · 65 avis</a></p>
     </div>
     <div></div>
   </div>
@@ -1993,69 +1972,7 @@ range.style.setProperty("--pct",(n/N*100)+"%");
 range.addEventListener("input",maj);range.addEventListener("change",maj);maj();
 })();
 
-(function () {
-  /* nuancier : choix du ou des coloris, image et lien PayPal suivent — logique reprise d'index2 */
-  document.querySelectorAll(".nuancier").forEach(function (n) {
-    var max = parseInt(n.dataset.max, 10) || 1,
-        etiquette = n.querySelector(".nuancier-choix"),
-        carte = n.closest(".offre"),
-        image = carte && carte.querySelector("[data-coloris-img]");
-    function choisis() {
-      return Array.prototype.filter.call(n.querySelectorAll(".pastille"), function (b) {
-        return b.getAttribute("aria-pressed") === "true";
-      });
-    }
-    function maj() {
-      var c = choisis().map(function (b) { return b.dataset.coloris; });
-      etiquette.textContent = c.length ? c.join(", ") : (max === 1 ? "à choisir" : "aucun choisi");
-      if (image && c.length) {
-        if (max === 2 && c.length === 2) {
-          /* duo : nom composé des deux coloris, dans l'ordre fixe menthe, abricot, lilas, rose, lin */
-          var ordre = ["menthe", "abricot", "lilas", "rose", "lin"];
-          var f = choisis().map(function (b) { return b.dataset.fichier; })
-                  .sort(function (x, y) { return ordre.indexOf(x) - ordre.indexOf(y); });
-          image.src = "assets/bibeon-biberon-pliable-duo-" + f[0] + "-" + f[1] + ".webp";
-        } else {
-          image.src = "assets/" + (n.dataset.prefixe || "bibeon-biberon-pliable-") + choisis()[0].dataset.fichier + ".webp";
-        }
-      }
-      var bouton = carte && carte.querySelector(".offre-cta a"),
-          premier = choisis()[0],
-          pastilles = n.querySelector(".pastilles"),
-          paires = pastilles && pastilles.dataset.paires ? JSON.parse(pastilles.dataset.paires) : null;
-      if (bouton && paires) {
-        var noms = choisis().map(function (b) { return b.dataset.coloris; }),
-            url = paires[noms.join("+")] || paires[noms.slice().reverse().join("+")];
-        if (noms.length === max && url) {
-          bouton.href = url;
-          bouton.setAttribute("target", "_blank");
-          bouton.removeAttribute("aria-disabled");
-          bouton.textContent = "Commander";
-        } else {
-          bouton.removeAttribute("href");
-          bouton.removeAttribute("target");
-          bouton.setAttribute("aria-disabled", "true");
-          bouton.textContent = noms.length === 1 ? "Encore un coloris" : "Choisissez deux coloris";
-        }
-      } else if (bouton && premier && premier.dataset.lien) {
-        bouton.href = premier.dataset.lien;
-      }
-    }
-    n.querySelectorAll(".pastille").forEach(function (b) {
-      b.addEventListener("click", function () {
-        var actif = b.getAttribute("aria-pressed") === "true";
-        if (max === 1) {
-          n.querySelectorAll(".pastille").forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
-          b.setAttribute("aria-pressed", "true");
-        } else if (actif) { b.setAttribute("aria-pressed", "false"); }
-        else if (choisis().length < max) { b.setAttribute("aria-pressed", "true"); }
-        else { choisis()[0].setAttribute("aria-pressed", "false"); b.setAttribute("aria-pressed", "true"); }
-        maj();
-      });
-    });
-    maj();
-  });
-})();
+
 
 (function () {
   /* Défilement interne sans navigation.
