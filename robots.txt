@@ -22,3 +22,4 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://bibeon.fr/sitemap.xml
+Sitemap: https://bibeon.fr/sitemap-images.xml
