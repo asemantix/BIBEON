@@ -440,12 +440,12 @@ letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte)}
 .mot-inventrice footer i{font-style:normal;padding:0 7px;opacity:.5}
 
 
-/* ══ LE DIFFÉRENTIEL DE POIDS (16 sept.) ══
-   Sous la chute de l'écran 01 : un constat, pas une exclamation.
-   Corps plus petit que .e-chute, filet au-dessus pour le détacher. */
-.e-poids{margin:clamp(18px,2.4vh,26px) 0 0;padding:clamp(16px,2vh,22px) 0 0;
-border-top:1px solid var(--filet);
-font:400 clamp(15px,1.25vw,17px)/1.65 Montserrat,sans-serif;color:var(--sauge-texte)}
+/* ══ LÉGENDE EN PHRASE (16 sept.) ══
+   Les légendes du site sont en capitales interlettrées : parfait pour
+   un mot, illisible pour une phrase. Celle-ci reprend donc le corps
+   de texte, en plus petit et centré. */
+.e-visuel figcaption.legende-phrase{font:400 clamp(14px,1.15vw,16px)/1.6 Montserrat,sans-serif;
+letter-spacing:0;text-transform:none;max-width:44ch;margin-inline:auto}
 
 </style>
 <script type="application/ld+json">
@@ -651,11 +651,10 @@ font:400 clamp(15px,1.25vw,17px)/1.65 Montserrat,sans-serif;color:var(--sauge-te
       <li>Replié, BIBEON tient dans la moitié de la hauteur d’un biberon classique.</li>
     </ul>
     <p class="e-chute">Plus de fonctions dans le biberon. Moins d’objets dans le sac.</p>
-    <p class="e-poids">Quatre BIBEON pré-dosés pèsent ce que pèsent quatre boîtes doseuses — avec les biberons en prime. Les quatre biberons vides, vous ne les transporterez plus, ni à l’aller ni au retour.</p>
   </div>
   <figure class="e-visuel droite">
     <img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="À gauche, quatre BIBEON repliés dans un petit sac ; à droite, quatre doseurs, quatre biberons rigides et un grand sac à langer" width="1568" height="1264" loading="lazy" class="large">
-    <figcaption>À gauche, ce qui reste. À droite, ce qu’on emportait.</figcaption>
+    <figcaption class="legende-phrase">À droite, le poids des biberons vides en plus, à l’aller comme au retour.</figcaption>
   </figure>
 </section>
 
