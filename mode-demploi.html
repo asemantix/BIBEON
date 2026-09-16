@@ -326,12 +326,6 @@ h1,h2,h3,blockquote,.serif{font-family:"Playfair Display",Georgia,serif;font-wei
 }
 .inscription h2{font-size:clamp(28px,3vw,38px);color:var(--sage-dark);margin:0 0 6px}
 .inscription p{margin:0;font-size:14.5px}
-.form-mail{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.form-mail input{
-  min-width:290px;padding:14px 20px;border-radius:999px;
-  border:1px solid var(--line);background:#fff;font:inherit;font-size:14px;color:var(--navy);
-}
-.form-mail input:focus{outline:2px solid var(--sage-soft);outline-offset:1px}
 .form-message{flex-basis:100%;font-size:13px;color:var(--sage-dark);margin:0}
 
 /* ---------- pied de page ---------- */
@@ -395,10 +389,7 @@ footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px
   .pm{min-width:56px;padding:0 9px;font-size:12px}
   .paiement-marques{gap:8px}
   .etapes-grid,.produits,.preuves-grid{grid-template-columns:1fr}
-  .etape-visuel{height:290px}
-  .form-mail input{min-width:100%}
-  .form-mail .btn{width:100%}
-  .footer-grid{grid-template-columns:1fr}
+  .etape-visuel{height:290px}  .footer-grid{grid-template-columns:1fr}
   .copyright{justify-content:flex-start}
 }
 
@@ -1575,27 +1566,6 @@ margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
   /* --- année du copyright --- */
   var annee = document.querySelector("#annee");
   if (annee) annee.textContent = new Date().getFullYear();
-
-  /* --- formulaire d'inscription ---
-     À relier à votre outil d'e-mailing (Brevo, Mailchimp…) avant la mise en ligne.
-     Pour l'instant, il confirme simplement la saisie sans rien envoyer.            */
-  var form = document.querySelector("#form-mail");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var champ = form.querySelector("input[type=email]");
-      var msg = form.querySelector(".form-message");
-      var valeur = (champ.value || "").trim();
-
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(valeur)) {
-        msg.textContent = "Merci de vérifier votre adresse e-mail.";
-        champ.focus();
-        return;
-      }
-      msg.textContent = "Merci ! Ce formulaire doit encore être relié à votre outil d'e-mailing.";
-      form.reset();
-    });
-  }
 
   /* --- la vidéo ne tourne que lorsqu'elle est visible --- */
   var video = document.querySelector(".video-frame video");
