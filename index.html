@@ -1415,8 +1415,8 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 .porte-visuel img,.porte-visuel video{display:block;width:100%;height:auto;border-radius:24px;background:#fff}
 .porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
 .porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
-.porte-lait{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
-.porte-lait em{font-style:italic;color:var(--sauge-texte)}
+.porte-question{font:400 clamp(19px,1.8vw,26px)/1.35 "Playfair Display",Georgia,serif;margin:0 0 18px}
+.porte-question em{font-style:italic;color:var(--sauge-texte)}
 .porte-conditions{font:400 clamp(16px,1.4vw,20px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:0 0 28px}
 .porte-conditions i{font-style:normal;opacity:.5;margin:0 .45em}
 .porte-cta a{display:inline-block;font:600 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;
@@ -1528,7 +1528,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   display:grid;grid-template-columns:1.1fr 1fr;align-items:center;
   gap:clamp(24px,5vw,96px);padding:clamp(56px,9vh,110px) clamp(20px,6vw,96px)}
 .appel-visuel{margin:0}
-.appel-visuel video{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:28px;background:#fff}
+.appel-visuel video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border-radius:28px;background:#fff}
 .appel-texte{max-width:520px}
 .appel-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
 .appel-titre{font:400 clamp(34px,4.4vw,62px)/1.06 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
@@ -1730,10 +1730,11 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
   <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
 
   <figure class="porte-visuel">
-<video src="assets/cinq-coloris-chambre.mp4" poster="assets/cinq-coloris-chambre.webp" width="1280" height="720" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé."></video>
+<video src="assets/zoom-coloris.mp4" poster="assets/zoom-coloris.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="La caméra s’approche de chaque coloris : abricot, menthe, lilas, lin, rose."></video>
   </figure>
 
   <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
+  <p class="porte-question">Lequel <em>partira avec lui ?</em></p>
   <p class="porte-conditions">Point relais offert<i>·</i>domicile 3,50 €<i>·</i>retour offert sous 30 jours</p>
   <p class="porte-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
 </section>
@@ -1905,7 +1906,7 @@ font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
 <!-- ══════════ 12b · L'APPEL DE FIN — la boutique ══════════ -->
 <section id="appel-boutique" class="appel" aria-labelledby="appel-titre">
   <figure class="appel-visuel">
-    <video src="assets/zoom-coloris.mp4" poster="assets/zoom-coloris.jpg" width="1280" height="960" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="La caméra s’approche de chaque coloris : abricot, menthe, lilas, lin, rose."></video>
+    <video src="assets/cinq-coloris-chambre.mp4" poster="assets/cinq-coloris-chambre.webp" width="1280" height="720" autoplay muted loop playsinline preload="metadata" data-play-visible aria-label="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé."></video>
   </figure>
   <div class="appel-texte">
     <p class="appel-eyebrow">La boutique</p>
