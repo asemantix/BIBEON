@@ -535,6 +535,12 @@ body.bb-bloque{overflow:hidden}
  color:#fff;max-width:26ch;margin:32px 0 30px}
 .care-line{margin:0 0 30px;font:italic 1.02rem/1.6 "Playfair Display",Georgia,serif;color:#A9B79C}
 .care-line em{color:#CFE0B8;font-style:italic}
+
+/* ── le diptyque : images entières, jamais rognées ── */
+.bb-dip-haut,.bb-dip-bas{flex:0 0 auto}
+.bb-diptyque img{width:100%;height:auto;object-fit:contain;background:#0A1526}
+.bb-diptyque{justify-content:center}
+@media(max-width:900px){.bb-dip-haut,.bb-dip-bas{min-height:0}}
 </style>
 </head>
 <body>
@@ -645,7 +651,7 @@ body.bb-bloque{overflow:hidden}
       </div>
       <figure class="bb-diptyque">
         <div class="bb-dip-haut"><img src="assets/goupillon-accueil.webp" width="832" height="992" loading="lazy" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON, les brins épousent chaque creux, mousse de savon au fond."><span>01 · Nettoyer</span></div>
-        <div class="bb-dip-bas"><img src="assets/doigt-pince-le-soufflet.webp" width="792" height="1200" loading="lazy" alt="Deux doigts saisissent un soufflet du BIBEON depuis l’extérieur et l’écartent pour l’inspecter"><span>02 · Accéder</span></div>
+        <div class="bb-dip-bas"><img src="assets/doigt-pince-le-soufflet.webp" width="792" height="636" loading="lazy" alt="Deux doigts saisissent un soufflet du BIBEON depuis l’extérieur et l’écartent pour l’inspecter"><span>02 · Accéder</span></div>
         <figcaption>Nettoyer. Vérifier. Accéder.</figcaption>
       </figure>
       <div class="teat-choice">
