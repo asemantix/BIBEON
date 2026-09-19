@@ -377,6 +377,41 @@ body.bb-bloque{overflow:hidden}
 .bb-curseur{background:#F9F4EF}
 .bb-lecture{margin:20px 0 0;color:#55614B}
 .bb-etat{margin:6px 0 22px;color:#7b8579}
+
+/* ── le bloc tétine : photo en pleine moitié, comme les autres sections ── */
+.teat-choice{grid-column:1/-1;background:#DDE3D4;padding:0;display:grid;
+ grid-template-columns:50% 50%;gap:0;align-items:stretch;min-height:640px}
+.bb-tetine-photo{margin:0;overflow:hidden}
+.bb-tetine-photo img{width:100%;height:100%;max-width:none;max-height:none;object-fit:cover;display:block;border-radius:0}
+.bb-tetine-texte{padding:clamp(48px,5vw,84px) clamp(28px,4vw,66px);align-self:center}
+.bb-tetine-texte h3{font-size:clamp(2.6rem,4vw,4.4rem);line-height:.95;letter-spacing:-.03em;margin:0 0 26px}
+.bb-tetine-texte h3 em{color:#55614B}
+.bb-tetine-texte>p:not(.home-kicker){max-width:520px;font-size:.92rem;line-height:1.75;margin:0 0 30px}
+@media(max-width:900px){
+ .teat-choice{grid-template-columns:1fr;min-height:0}
+ .bb-tetine-photo{min-height:460px}
+ .bb-tetine-texte{padding:60px 24px}
+}
+
+/* ── les cinq pastilles de coloris ── */
+.palette__visual>div{gap:10px;bottom:34px}
+.palette__visual span{position:relative;display:inline-flex;align-items:center;gap:9px;
+ padding:10px 18px 10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.55);
+ background:rgba(251,249,246,.82);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+ color:#0E1C35;font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;
+ box-shadow:0 6px 18px rgba(14,28,53,.12)}
+.palette__visual span:before{content:"";width:12px;height:12px;border-radius:50%;
+ box-shadow:inset 0 0 0 1px rgba(14,28,53,.12)}
+.palette__visual .mint:before{background:#B8DCD4}
+.palette__visual .apricot:before{background:#F3C3A2}
+.palette__visual .lilac:before{background:#C8B5DD}
+.palette__visual .rose:before{background:#F0C0CB}
+.palette__visual .linen:before{background:#EBE3D6}
+@media(max-width:560px){
+ .palette__visual>div{gap:7px;bottom:20px}
+ .palette__visual span{padding:8px 13px 8px 10px;font-size:.52rem;gap:7px}
+ .palette__visual span:before{width:9px;height:9px}
+}
 </style>
 </head>
 <body>
@@ -477,9 +512,12 @@ body.bb-bloque{overflow:hidden}
       </div>
       <div class="teat-choice">
         <figure class="bb-tetine-photo"><img src="assets/quatre-pieces-tetine.webp" alt="Les quatre pièces du BIBEON séparées : le flacon gradué, la bague, la tétine à col étroit et le capuchon" width="1200" height="1600" loading="lazy"></figure>
-        <div><p class="home-kicker">Et la tétine ?</p><h3>Une seule condition.<br><em>Un col étroit.</em></h3>
-        <p>La tétine fournie se remplace. Choisissez une tétine à col étroit, en silicone ou en caoutchouc — celle que votre bébé préfère. Les modèles à col large, comme les formats AVENT ou MAM, ne conviennent pas.</p></div>
-        <a class="home-link" href="boutique.html">Tout savoir avant de choisir <span>→</span></a>
+        <div class="bb-tetine-texte">
+          <p class="home-kicker">Et la tétine ?</p>
+          <h3>Une seule condition.<br><em>Un col étroit.</em></h3>
+          <p>La tétine fournie se remplace. Choisissez une tétine à col étroit, en silicone ou en caoutchouc — celle que votre bébé préfère. Les modèles à col large, comme les formats AVENT ou MAM, ne conviennent pas.</p>
+          <a class="home-link" href="boutique.html">Tout savoir avant de choisir <span>→</span></a>
+        </div>
       </div>
     </section>
 
