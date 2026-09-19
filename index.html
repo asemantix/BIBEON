@@ -430,28 +430,7 @@ body.bb-bloque{overflow:hidden}
 .rmoins-intro{padding-bottom:96px}
 @media(max-width:900px){.rmoins-intro{padding-bottom:64px}}
 
-/* ── les cinq preuves ── */
-.evidence-grid{grid-template-columns:repeat(3,1fr);margin-bottom:0}
-.evidence-grid article{padding:35px 34px 38px 0;border-right:1px solid #CDD5C4;border-bottom:1px solid #CDD5C4}
-.evidence-grid article:nth-child(3n){border-right:0;padding-right:0}
-.evidence-grid article:nth-last-child(-n+2){border-bottom:0}
-.evidence-grid span.mot{font:500 clamp(2rem,3vw,3.1rem)/1.05 "Playfair Display",Georgia,serif;
- color:#0E1C35;letter-spacing:-.02em;display:block}
-.evidence-grid .home-link{margin-top:22px}
-@media(max-width:900px){
- .evidence-grid{grid-template-columns:1fr}
- .evidence-grid article,.evidence-grid article+article{padding:26px 0;border-right:0;border-bottom:1px solid #CDD5C4}
- .evidence-grid article:last-child{border-bottom:0}
-}
 
-/* ── « Il s'abaisse au niveau du lait » en sauge clair ── */
-.rmoins--inside{background:#DDE3D4;color:#0E1C35}
-.rmoins--inside h2 em{color:#55614B}
-.rmoins--inside figure img{filter:none}
-.rmoins--inside .home-link{color:#0E1C35;border-bottom-color:rgba(14,28,53,.35)}
-.rmoins--inside .home-link:hover{border-bottom-color:#0E1C35}
-.rmoins--inside .home-kicker{color:#55614B}
-.rmoins--inside .home-kicker:before{background:#55614B}
 
 /* ── la note, en tête de la section des avis ── */
 .bb-note{margin:18px 0 30px;font:500 clamp(2.4rem,4.2vw,4.6rem)/1.05 "Playfair Display",Georgia,serif;
@@ -460,6 +439,36 @@ body.bb-bloque{overflow:hidden}
 .bb-note em{font-style:italic;color:#55614B;display:block;margin-top:4px}
 .parents h2{font-size:clamp(2rem,3.1vw,3.4rem);opacity:.92}
 @media(max-width:900px){.bb-note{font-size:2.5rem;margin-bottom:24px}}
+
+/* ── les preuves : trois matières, puis deux preuves ── */
+.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:70px 0 0;
+ border-top:1px solid #CDD5C4}
+.evidence-grid--deux{grid-template-columns:1.6fr 1fr;margin:0 0 38px}
+.evidence-grid article{padding:38px 40px 42px 0;border-right:1px solid #CDD5C4;
+ border-bottom:1px solid #CDD5C4}
+.evidence-grid article:last-child{border-right:0;padding-right:0}
+.evidence-grid--deux article{border-bottom:0}
+.ev-cle{margin:0 0 22px;font:500 clamp(1.9rem,2.9vw,3rem)/1 "Playfair Display",Georgia,serif;
+ color:#0E1C35;letter-spacing:-.02em}
+.ev-cle small{display:block;margin-top:10px;font:600 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.2em;text-transform:uppercase;color:#55614B}
+.evidence-grid h3{margin:0 0 12px;font:500 1.06rem/1.35 "Playfair Display",Georgia,serif;color:#0E1C35}
+.evidence-grid p:not(.ev-cle){margin:0;font-size:.88rem;line-height:1.7}
+.evidence-grid .home-link{margin-top:24px}
+@media(max-width:900px){
+ .evidence-grid,.evidence-grid--deux{grid-template-columns:1fr;margin-top:40px}
+ .evidence-grid article{padding:28px 0;border-right:0}
+ .evidence-grid--deux{border-top:0;margin-bottom:28px}
+ .evidence-grid--deux article{border-bottom:1px solid #CDD5C4}
+ .evidence-grid--deux article:last-child{border-bottom:0}
+}
+
+/* ── la vie dehors : fond sauge, comme le reste ── */
+.outside{background:#DDE3D4}
+.outside__film video{filter:none}
+.outside__film:after{background:linear-gradient(0deg,rgba(14,28,53,.42),transparent 38%)}
+.outside__copy>p:not(.home-kicker){max-width:520px}
+.outside__copy>p strong{font-weight:600}
 </style>
 </head>
 <body>
@@ -500,7 +509,7 @@ body.bb-bloque{overflow:hidden}
       <h1>Le biberon<br><em>qui change</em><br>la sortie.</h1>
       <p class="bb-sous-titre">Le biberon végétal, pliable. 330 ml. Fabriqué en France.</p>
       <div class="story-bottom">
-        <p>Il se replie, emporte sa dose et s’abaisse au niveau du lait.<br><strong>330 ml déplié · 9,5 cm replié.</strong></p>
+        <p>Il se replie, part pré-dosé et s’abaisse au niveau du lait.<br><strong>330 ml déplié · 9,5 cm replié.</strong></p>
         <a class="shop shop--main" href="boutique.html">Découvrir les BIBEON <span>→</span></a>
         <button class="bb-film-ouvrir" id="bb-film-ouvrir" type="button">Voir le film complet <span>· 39 s</span></button>
       </div>
@@ -532,7 +541,7 @@ body.bb-bloque{overflow:hidden}
       </div></div>
     </section>
 
-    <section class="rmoins-intro"><p class="home-kicker">La signature</p><h2>BIBEON, le BIBE<span>R</span>ON,<br><em>l’R en moins.</em></h2><p>Moins d’air dedans. Moins d’air à transporter. Moins d’air autour.</p></section>
+    <section class="rmoins-intro"><p class="home-kicker">La signature</p><h2>BIBEON, le BIBE<span>R</span>ON,<br><em>l’R en moins.</em></h2><p>Moins d’air dedans. Moins d’air dehors. Moins d’air autour.</p></section>
 
     <section class="rmoins rmoins--inside">
       <figure><img src="assets/biberon-main.webp" alt="Un BIBEON abaissé au niveau du lait, tenu d’une main" loading="lazy"></figure>
@@ -541,12 +550,23 @@ body.bb-bloque{overflow:hidden}
 
     <section class="rmoins rmoins--bag">
       <figure><img src="assets/bibeon-voyage-petit.webp" alt="Un BIBEON menthe replié, glissé dans la poche arrière d’un jean" loading="lazy"></figure>
-      <div><p class="home-kicker">L’R en moins · Dans le sac de bébé</p><h2>Replié,<br><em>il voyage petit.</em></h2><p>Moins d’air à transporter : 9,5 cm replié et environ 35 grammes, tétine comprise.</p><a class="home-link" href="voyage.html">Voyager avec bébé <span>→</span></a></div>
+      <div><p class="home-kicker">L’R en moins · Dehors</p><h2>Replié,<br><em>il voyage petit.</em></h2><p>Moins d’air dehors : 9,5 cm replié et environ 35 grammes, tétine comprise.</p><a class="home-link" href="voyage.html">Voyager avec bébé <span>→</span></a></div>
     </section>
 
     <section class="rmoins rmoins--around">
       <figure><img src="assets/bibeon-fini-le-demenagement.webp" alt="Une poussette chargée des accessoires du biberon rigide : doseur, mélangeur, biberons vides" loading="lazy"></figure>
-      <div><p class="home-kicker">L’R en moins · Autour</p><h2>Doseur, mélangeur,<br>obturateur : <em>disparus.</em></h2><p>Moins d’air autour : la dose voyage dedans, les soufflets mélangent et le capuchon ferme.</p><a class="home-link home-link--light" href="biberon-pratique.html">Tout ce qu’on n’utilise plus <span>→</span></a></div>
+      <div><p class="home-kicker">L’R en moins · Autour</p><h2>Doseur, mélangeur,<br>obturateur : <em>disparus.</em></h2><p>Moins d’air autour : le biberon part pré-dosé, les soufflets mélangent et le capuchon ferme.</p><a class="home-link home-link--light" href="biberon-pratique.html">Tout ce qu’on n’utilise plus <span>→</span></a></div>
+    </section>
+
+    <section class="outside">
+      <div class="outside__film"><video autoplay muted loop playsinline preload="none" poster="assets/sac-a-main.webp" data-geste aria-label="Six BIBEON pré-dosés que l’on range un à un dans un sac à main, dehors."><source src="assets/demo-nomade.mp4" type="video/mp4"></video><div><p>9,5 cm replié</p><p>≈ 35 g</p></div></div>
+      <div class="outside__copy">
+        <p class="home-kicker">La vie dehors</p>
+        <h2>L’élégance<br><em>de partir léger.</em></h2>
+        <p>Le BIBEON part <strong>pré-dosé</strong> : la poudre est déjà dans le flacon, fermé, propre et sec. Dehors, il ne reste que l’eau à ajouter au moment du repas.</p>
+        <p>Voiture, train, avion ou promenade — vous n’emportez que ce qui sert.</p>
+        <a class="home-link" href="voyage.html">Voyager avec bébé <span>→</span></a>
+      </div>
     </section>
 
     <section class="reassurance" aria-labelledby="reassurance-title">
@@ -573,11 +593,13 @@ body.bb-bloque{overflow:hidden}
     <section class="evidence">
       <header><p class="home-kicker">Composition & preuves</p><h2>Pas une promesse.<br><em>Une preuve.</em></h2><p>Un biberon n’est pas un jouet. Alors nous avons voulu savoir — et publier ce que nous savons.</p></header>
       <div class="evidence-grid">
-<article><span>50 %</span><h3>Végétal</h3><p>La bague et le capuchon : la moitié du poids du BIBEON est d’origine végétale. Sans OGM ni gluten.</p><a class="home-link" href="notre-parti-pris.html">Découvrir la composition <span>→</span></a></article>
-<article><span class="mot">Polypropylène</span><h3>Le flacon</h3><p>De qualité alimentaire, exempt de bisphénols. Testé par le LNE dans les cinq coloris.</p><a class="home-link" href="migration.html">Découvrir les matières <span>→</span></a></article>
-<article><span class="mot">Silicone</span><h3>Alimentaire</h3><p>La tétine. Non médical : le matériau est strictement agréé pour le contact alimentaire.</p><a class="home-link" href="silicone-medical-alimentaire-biberon.html">Alimentaire ou médical ? <span>→</span></a></article>
-<article><span>0</span><h3>Résidu détecté</h3><p>Les cinq coloris du corps, la bague et le capuchon ont été soumis aux essais de migration du <strong>LNE — le Laboratoire national de métrologie et d’essais</strong>, laboratoire de référence de l’État français. Résultats inférieurs au seuil analytique indiqué dans le rapport · dossier P143418.</p><a class="home-link" href="tests-migration-lne-bibeon.html">Voir les résultats <span>→</span></a></article>
-<article><span class="mot">France</span><h3>Fabriqué ici</h3><p>Du moule au flacon, en région lyonnaise. Une exigence que l’on peut documenter.</p><a class="home-link" href="qui-sommes-nous.html">Notre histoire <span>→</span></a></article>
+<article><p class="ev-cle">50 %<small>végétal</small></p><h3>La bague et le capuchon</h3><p>La moitié du poids du BIBEON est d’origine végétale. Sans OGM ni gluten.</p><a class="home-link" href="notre-parti-pris.html">Découvrir la composition <span>→</span></a></article>
+<article><p class="ev-cle">Polypropylène<small>le flacon</small></p><h3>De qualité alimentaire</h3><p>Exempt de bisphénols. Testé par le LNE dans les cinq coloris.</p><a class="home-link" href="migration.html">Découvrir les matières <span>→</span></a></article>
+<article><p class="ev-cle">Silicone<small>la tétine</small></p><h3>Alimentaire, non médical</h3><p>Le matériau est strictement agréé pour le contact alimentaire.</p><a class="home-link" href="silicone-medical-alimentaire-biberon.html">Alimentaire ou médical ? <span>→</span></a></article>
+</div>
+      <div class="evidence-grid evidence-grid--deux">
+<article><p class="ev-cle">0<small>résidu détecté</small></p><h3>Les essais de migration</h3><p>Les cinq coloris du corps, la bague et le capuchon ont été soumis aux essais du <strong>LNE</strong>, laboratoire national de métrologie et d’essais, laboratoire de référence de l’État français. Résultats inférieurs au seuil analytique du rapport · dossier P143418.</p><a class="home-link" href="tests-migration-lne-bibeon.html">Voir les résultats <span>→</span></a></article>
+<article><p class="ev-cle">France<small>fabriqué ici</small></p><h3>Du moule au flacon</h3><p>En région lyonnaise. Une exigence que l’on peut documenter.</p><a class="home-link" href="qui-sommes-nous.html">Notre histoire <span>→</span></a></article>
 </div>
       </section>
 
@@ -596,7 +618,7 @@ body.bb-bloque{overflow:hidden}
       <div class="house__copy"><p class="home-kicker">La maison BIBEON</p><h2>Il s’en est déjà<br><em>vendu des millions.</em></h2><p>Inventé en France et breveté, ce biberon a déjà été produit et vendu à plusieurs millions d’exemplaires. Aujourd’hui, BIBEON renaît en région lyonnaise — avec la même idée intacte : libérer les sorties.</p><a class="home-link home-link--light" href="qui-sommes-nous.html">L’histoire de l’invention <span>→</span></a></div><div class="house__visual"><img src="assets/production-historique.webp" width="1300" height="788" alt="La maison BIBEON et son biberon pliable français" loading="lazy"><blockquote>« J’ai voulu enlever tout ce qui pesait autour du repas. »<cite>Suzanne de Bégon · Fondatrice</cite></blockquote></div>
     </section>
 
-    <section class="home-close"><p class="home-kicker">BIBEON</p><h2>L’élégance<br><em>de partir léger.</em></h2><p>À partir de 35 € · Point relais offert · domicile 3,50 € · retour offert sous 30 jours</p><a class="home-cta" href="boutique.html">Découvrir la boutique <span>→</span></a></section>
+    <section class="home-close"><p class="home-kicker">BIBEON</p><h2>Tout est dedans.<br><em>Sauf l’eau.</em></h2><p>À partir de 35 € · Point relais offert · domicile 3,50 € · retour offert sous 30 jours</p><a class="home-cta" href="boutique.html">Découvrir la boutique <span>→</span></a></section>
   </main>
 
   
