@@ -218,9 +218,11 @@ body.bb-bloque{overflow:hidden}
 .bb-pied .bb-logo{display:inline-block;color:#fff;margin-bottom:14px}
 .bb-signature{font:italic 1rem/1.4 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 18px}
 .bb-signature i{font-style:normal;text-decoration:line-through;text-decoration-color:var(--bb-sauge)}
-.bb-pied-achat{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
- background:var(--bb-sauge);color:var(--bb-navy)!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
- letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.bb-pied a.bb-pied-achat{display:inline-flex;align-items:center;width:auto;
+ padding:14px 30px;border-radius:999px;background:var(--bb-ivoire);color:var(--bb-navy);
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:14px;transition:background .25s ease,transform .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:var(--bb-sauge);color:var(--bb-navy);transform:translateY(-1px)}
 .bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;
  border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;
  justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
@@ -260,7 +262,8 @@ body.bb-bloque{overflow:hidden}
 .bb-film{position:fixed;inset:0;z-index:120;background:rgba(10,16,28,.94);
  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
  display:flex;align-items:center;justify-content:center;padding:clamp(16px,4vw,54px)}
-.bb-film[hidden]{display:none}
+.bb-film{opacity:0;visibility:hidden;transition:opacity .3s ease,visibility .3s}
+.bb-film.bb-film-ouvert{opacity:1;visibility:visible}
 .bb-film-cadre{width:min(100%,1180px)}
 .bb-film-cadre video{display:block;width:100%;height:auto;max-height:82svh;border-radius:14px;background:#0E1C35}
 .bb-film-fermer{position:absolute;top:clamp(14px,3vw,30px);right:clamp(14px,3vw,30px);
@@ -287,8 +290,8 @@ body.bb-bloque{overflow:hidden}
 .bb-curseur{display:flex;flex-direction:column;align-items:center;justify-content:center;
  padding:clamp(40px,6vw,72px) 24px;background:#EEF1EA;text-align:center}
 .bb-curseur:after{content:none}
-.bb-sprite{width:100%;max-width:290px;aspect-ratio:600/750;border-radius:14px;
- background-image:url("assets/depliage-sprite.webp");background-repeat:no-repeat;
+.bb-sprite{width:auto;max-width:none;height:min(600px,54vh);aspect-ratio:243/544;
+ background-image:url("assets/depliage-sprite-large.webp");background-repeat:no-repeat;
  background-size:100% 1000%;background-position:0 0}
 .bb-lecture{margin:18px 0 0;font:500 44px/1 "Playfair Display",Georgia,serif;color:#55614B}
 .bb-lecture small{font:400 15px "DM Sans",sans-serif;color:#6E7E61}
@@ -300,7 +303,10 @@ body.bb-bloque{overflow:hidden}
 #bibFold::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:#55614B;border:4px solid #fff}
 .bb-bornes{display:flex;justify-content:space-between;width:100%;max-width:290px;margin:10px auto 0;
  font:400 11px "DM Sans",sans-serif;letter-spacing:.04em;color:#7b8579}
-@media(max-width:900px){.bb-curseur{min-height:0}.bb-lecture{font-size:34px}}
+@media(max-width:900px){.bb-curseur{min-height:0}.bb-lecture{font-size:31px;margin-top:24px}
+ .bb-etat{margin-bottom:16px}
+ .bb-sprite{height:400px;width:100%;max-width:290px;aspect-ratio:600/750;border-radius:14px;
+  background-image:url("assets/depliage-sprite.webp")}}
 
 /* ── sections « l’R en moins » et « les plis se nettoient » ── */
 /* Les deux freins à l'achat, traités avant la preuve et la boutique. */
@@ -341,6 +347,15 @@ body.bb-bloque{overflow:hidden}
  .teat-choice{grid-template-columns:1fr;gap:34px}
  .bb-tetine-photo img{max-height:340px}
 }
+
+/* ── la photo d'usine, montrée entière ── */
+.house__visual{min-height:0!important;display:flex;flex-direction:column;justify-content:center;
+ gap:26px;padding:clamp(26px,3.4vw,54px)}
+.house__visual img{width:100%;height:auto;max-width:900px;max-height:none;object-fit:contain;
+ border-radius:14px;margin:0 auto;filter:none}
+.house__visual:after{content:none}
+.house blockquote{position:static;margin:0 auto;max-width:900px;left:auto;right:auto;bottom:auto}
+@media(max-width:900px){.house__visual{padding:34px 24px}}
 </style>
 </head>
 <body>
@@ -404,11 +419,11 @@ body.bb-bloque{overflow:hidden}
         <a href="mode-demploi.html"><span>03</span><figure class="bb-geste"><video muted loop playsinline preload="none" poster="assets/concept-coude.jpg" data-geste aria-label="Le flacon se plie légèrement, la tétine reste pleine."><source src="assets/concept-coude.mp4" type="video/mp4"></video></figure><h3>Il se coude.</h3><p>La tétine reste pleine jusqu’à la dernière gorgée.</p><i>Voir le geste →</i></a>
       </div>
       <div class="volume"><div class="volume__copy"><p class="home-kicker">Évolutif</p><h2>Un seul biberon.<br><em>Toutes les tailles.</em></h2><p>Dépliez seulement ce dont bébé a besoin. Puis repliez-le quand le repas est terminé.</p><a class="home-link" href="mode-demploi.html">Découvrir le mode d’emploi <span>→</span></a></div><div class="volume__visual bb-curseur">
-        <div class="bb-sprite" id="bibSprite" role="img" aria-label="BIBEON déplié soufflet par soufflet"></div>
+        <div class="bb-sprite" id="bibSprite" role="img" aria-label="Le biberon BIBEON qui s’élève et s’abaisse au fil du curseur, de 30 à 300 ml"></div>
         <p class="bb-lecture"><span id="bibVol">150</span> <small>ml</small></p>
         <p class="bb-etat" id="bibNb">4 soufflets dépliés</p>
-        <input id="bibFold" type="range" min="0" max="9" step="1" value="4" aria-label="Déplier le biberon">
-        <div class="bb-bornes"><span>30 ml</span><span>300 ml</span></div>
+        <input id="bibFold" type="range" min="0" max="9" step="1" value="4" aria-label="Déplier le biberon, de 30 à 300 millilitres par paliers de 30">
+        <div class="bb-bornes"><span>replié · 30 ml</span><span>déplié · 300 ml</span></div>
       </div></div>
     </section>
 
@@ -420,12 +435,12 @@ body.bb-bloque{overflow:hidden}
     </section>
 
     <section class="rmoins rmoins--bag">
-      <figure><img src="assets/hero-porte-bebe-poche.webp" alt="Un BIBEON replié, glissé dans la poche d’un porte-bébé" loading="lazy"></figure>
+      <figure><img src="assets/bibeon-voyage-petit.webp" alt="Un BIBEON menthe replié, glissé dans la poche arrière d’un jean" loading="lazy"></figure>
       <div><p class="home-kicker">L’R en moins · Dans le sac de bébé</p><h2>Replié,<br><em>il voyage petit.</em></h2><p>Moins d’air à transporter : 9,5 cm replié et environ 35 grammes, tétine comprise.</p><a class="home-link" href="voyage.html">Voyager avec bébé <span>→</span></a></div>
     </section>
 
     <section class="rmoins rmoins--around">
-      <figure><img src="assets/sortir-leger.webp" alt="Un BIBEON replié au milieu des accessoires de biberon qu’il remplace" loading="lazy"></figure>
+      <figure><img src="assets/bibeon-fini-le-demenagement.webp" alt="Une poussette chargée des accessoires du biberon rigide : doseur, mélangeur, biberons vides" loading="lazy"></figure>
       <div><p class="home-kicker">L’R en moins · Autour</p><h2>Doseur, mélangeur,<br>obturateur : <em>disparus.</em></h2><p>Moins d’air autour : la dose voyage dedans, les soufflets mélangent et le capuchon ferme.</p><a class="home-link home-link--light" href="biberon-pratique.html">Tout ce qu’on n’utilise plus <span>→</span></a></div>
     </section>
 
@@ -454,7 +469,7 @@ body.bb-bloque{overflow:hidden}
     </section>
 
     <section class="parents">
-      <div class="parents__visual"><img src="assets/bibeon-voyage-petit.webp" alt="Deux BIBEON colorés, légers et faciles à emporter" loading="lazy"></div>
+      <div class="parents__visual"><img src="assets/enfant-boit-biberon-bibeon-rose.webp" alt="Une petite fille tenant seule son BIBEON rose et buvant" loading="lazy"></div>
       <div class="parents__copy"><p class="home-kicker">Ce sont les parents qui le disent</p><p class="score">4,4 <span>/ 5</span></p><h2>« Il ne quitte plus<br><em>notre sac à langer. »</em></h2><p class="quote-source">Charlotte V. · ConsoBaby · 2025</p><div class="mini-quotes"><p>« Très léger et facile à manipuler. »</p><p>« Une révolution ! »</p><p>« Très bon ratio qualité-prix. »</p></div><a class="home-link" href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html">Lire les 65 avis <span>→</span></a></div>
     </section>
 
@@ -465,7 +480,7 @@ body.bb-bloque{overflow:hidden}
     </section>
 
     <section class="house">
-      <div class="house__copy"><p class="home-kicker">La maison BIBEON</p><h2>Il fallait enlever.<br><em>Pas ajouter.</em></h2><p>Une invention française, brevetée, déjà vendue à des millions d’exemplaires. Aujourd’hui fabriquée en région lyonnaise, avec la même idée intacte : libérer les sorties.</p><a class="home-link home-link--light" href="qui-sommes-nous.html">L’histoire de l’invention <span>→</span></a></div><div class="house__visual"><img src="assets/production-historique.webp" alt="La maison BIBEON et son biberon pliable français" loading="lazy"><blockquote>« J’ai voulu enlever tout ce qui pesait autour du repas. »<cite>Suzanne de Bégon · Fondatrice</cite></blockquote></div>
+      <div class="house__copy"><p class="home-kicker">La maison BIBEON</p><h2>Il s’en est déjà<br><em>vendu des millions.</em></h2><p>Inventé en France et breveté, ce biberon a déjà été produit et vendu à plusieurs millions d’exemplaires. Aujourd’hui, BIBEON renaît en région lyonnaise — avec la même idée intacte : libérer les sorties.</p><a class="home-link home-link--light" href="qui-sommes-nous.html">L’histoire de l’invention <span>→</span></a></div><div class="house__visual"><img src="assets/production-historique.webp" width="1300" height="788" alt="La maison BIBEON et son biberon pliable français" loading="lazy"><blockquote>« J’ai voulu enlever tout ce qui pesait autour du repas. »<cite>Suzanne de Bégon · Fondatrice</cite></blockquote></div>
     </section>
 
     <section class="home-close"><p class="home-kicker">BIBEON</p><h2>L’élégance<br><em>de partir léger.</em></h2><p>À partir de 35 € · Livraison offerte · Retour sous 30 jours</p><a class="home-cta" href="boutique.html">Découvrir la boutique <span>→</span></a></section>
@@ -473,7 +488,7 @@ body.bb-bloque{overflow:hidden}
 
   
 
-<div class="bb-film" id="bb-film" hidden>
+<div class="bb-film" id="bb-film" aria-hidden="true">
   <button class="bb-film-fermer" id="bb-film-fermer" type="button" aria-label="Fermer le film">Fermer ✕</button>
   <div class="bb-film-cadre"><video id="bb-film-video" controls playsinline preload="none" poster="assets/hero-affiche.webp"></video></div>
 </div>
@@ -511,6 +526,7 @@ body.bb-bloque{overflow:hidden}
 </footer>
 <script>
 
+
 const clips = [
   { src: 'assets/bibeon-atelier.mp4',  duration: 4800 },
   { src: 'assets/bibeon-gallery.mp4',  duration: 4800 },
@@ -530,34 +546,46 @@ const eco = (navigator.connection && (navigator.connection.saveData ||
             /2g/.test(navigator.connection.effectiveType || ''))) ||
             window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-function load(video, src) {
-  if (video.getAttribute('src') !== src) { video.src = src; }
-  video.currentTime = 0;
-  video.play().catch(() => {});
+// prépare une vidéo sans la montrer, et prévient quand elle peut jouer
+function preparer(video, src) {
+  return new Promise(resolve => {
+    if (video.dataset.src === src && video.readyState >= 3) return resolve();
+    video.dataset.src = src;
+    video.src = src;
+    video.preload = 'auto';
+    let fini = false;
+    const pret = () => { if (!fini) { fini = true; resolve(); } };
+    video.addEventListener('canplay', pret, { once: true });
+    video.addEventListener('error', pret, { once: true });
+    setTimeout(pret, 6000);     // on n'attend jamais indéfiniment
+    video.load();
+  });
 }
 function schedule() { clearTimeout(timer); timer = setTimeout(advance, clips[index].duration); }
-function advance() {
-  index = (index + 1) % clips.length;
+
+async function advance() {
+  const suivant = (index + 1) % clips.length;
   const next = 1 - active;
-  load(videos[next], clips[index].src);
+  await preparer(videos[next], clips[suivant].src);   // on bascule seulement quand l'image est là
+  videos[next].currentTime = 0;
+  videos[next].play().catch(() => {});
   videos[next].classList.add('is-active');
   videos[active].classList.remove('is-active');
-  active = next;
+  setTimeout(() => videos[1 - next].pause(), 1300);   // après le fondu
+  active = next; index = suivant;
   count.textContent = String(index + 1).padStart(2, '0');
-  // on ne prepare la suivante qu'une fois celle-ci lancee
-  const apres = clips[(index + 1) % clips.length].src;
-  const autre = videos[1 - active];
-  setTimeout(() => { if (autre.getAttribute('src') !== apres) autre.preload = 'auto'; }, 1200);
   schedule();
 }
-function demarrer() {
+
+async function demarrer() {
   if (demarre || eco) return;
   demarre = true;
-  load(videos[0], clips[0].src);
+  await preparer(videos[0], clips[0].src);
+  videos[0].currentTime = 0;
+  videos[0].play().catch(() => {});
   schedule();
 }
-// l'affiche est deja la : on ne lance le premier clip qu'apres l'affichage complet
-if (!eco) { window.addEventListener('load', () => setTimeout(demarrer, 400)); }
+if (!eco) { window.addEventListener('load', () => setTimeout(demarrer, 300)); }
 
 document.addEventListener('visibilitychange', () => {
   if (document.hidden) { clearTimeout(timer); videos.forEach(v => v.pause()); }
@@ -570,7 +598,6 @@ if (hero && 'IntersectionObserver' in window) {
     else { clearTimeout(timer); videos.forEach(v => v.pause()); }
   }), { threshold: 0 }).observe(hero);
 }
-
 </script>
 <script>
 (function(){
@@ -600,14 +627,16 @@ if (hero && 'IntersectionObserver' in window) {
  if(!o||!m||!v) return;
  function ouvrir(){
    if(!v.getAttribute('src')) v.src='assets/film-bibeon.mp4';
-   m.hidden=false; document.body.classList.add('bb-bloque');
+   m.classList.add('bb-film-ouvert'); m.setAttribute('aria-hidden','false');
+   document.body.classList.add('bb-bloque');
    v.play().catch(function(){}); f.focus();
  }
- function fermer(){ v.pause(); m.hidden=true; document.body.classList.remove('bb-bloque'); o.focus(); }
+ function fermer(){ v.pause(); m.classList.remove('bb-film-ouvert');
+   m.setAttribute('aria-hidden','true'); document.body.classList.remove('bb-bloque'); o.focus(); }
  o.addEventListener('click',ouvrir);
  f.addEventListener('click',fermer);
  m.addEventListener('click',function(e){ if(e.target===m) fermer(); });
- document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!m.hidden) fermer(); });
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&m.classList.contains('bb-film-ouvert')) fermer(); });
 })();
 (function(){var v=document.querySelectorAll('video[data-play-visible]');
  if(!v.length||!('IntersectionObserver' in window)) return;
