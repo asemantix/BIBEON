@@ -487,6 +487,22 @@ body.bb-bloque{overflow:hidden}
 .bb-geste video{display:block;width:100%;height:auto;aspect-ratio:3/4;
  object-fit:contain;background:#EEF1EA}
 @media(max-width:900px){.bb-geste video{aspect-ratio:9/16}}
+
+/* ── la vie dehors : visuel à droite, pour alterner ── */
+.outside{grid-template-columns:42% 58%}
+.outside__film{order:2}
+.outside__film>div{left:auto;right:30px}
+
+/* ── la première preuve : le 50 % doit frapper ── */
+.evidence-grid article:first-child .ev-cle{
+ font-size:clamp(3.4rem,6vw,6.2rem);line-height:.9;color:#0E1C35}
+.evidence-grid article:first-child .ev-cle small{margin-top:14px;font-size:.62rem}
+@media(max-width:900px){
+ .outside{grid-template-columns:1fr}
+ .outside__film{order:0}
+ .outside__film>div{left:24px;right:auto}
+ .evidence-grid article:first-child .ev-cle{font-size:3.6rem}
+}
 </style>
 </head>
 <body>
