@@ -271,11 +271,6 @@ body.bb-bloque{overflow:hidden}
  font:600 .66rem "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
 @media(max-width:640px){.bb-film-ouvrir{font-size:.68rem}}
 
-/* ── les trois gestes sous le hero ── */
-.bb-geste{margin:0 0 26px;border-radius:14px;overflow:hidden;background:#EEF1EA}
-.bb-geste video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
-.movement-grid h3{margin-top:0}
-@media(max-width:900px){.bb-geste{max-width:320px}}
 
 /* ── la signature (section ajoutée) ── */
 .rmoins-intro{padding:120px 7vw;background:#0E1C35;color:#fff;text-align:center}
@@ -357,23 +352,31 @@ body.bb-bloque{overflow:hidden}
 .house blockquote{position:static;margin:0 auto;max-width:900px;left:auto;right:auto;bottom:auto}
 @media(max-width:900px){.house__visual{padding:34px 24px}}
 
-/* ── les trois gestes : cartes égales, vidéo et texte visibles ensemble ── */
-.movement-grid{align-items:start}
-.movement-grid a,.movement-grid a+a{padding:28px 18px 34px;display:flex;flex-direction:column}
-.movement-grid a:first-child{padding-left:0}
-.movement-grid a:last-child{padding-right:0}
+/* ── les trois gestes : trois cartes strictement identiques ── */
+.movement-grid{align-items:start;gap:clamp(20px,2.4vw,38px)}
+.movement-grid a,.movement-grid a+a,.movement-grid a:first-child,.movement-grid a:last-child{
+ padding:28px 0 34px;display:flex;flex-direction:column;border-right:0}
 .bb-geste{margin:0 0 22px;border-radius:14px;overflow:hidden;background:#EEF1EA;width:100%}
 .bb-geste video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
 .movement-grid h3{margin:0 0 10px;font-size:clamp(1.9rem,2.4vw,2.4rem)}
 .movement-grid p{margin:0}
 .movement-grid i{margin-top:18px}
 @media(max-width:900px){
- .movement-grid a,.movement-grid a+a{padding:25px 0}
+ .movement-grid a,.movement-grid a+a,.movement-grid a:first-child,.movement-grid a:last-child{padding:25px 0}
  .bb-geste{max-width:360px}
  .bb-geste video{aspect-ratio:4/5}
 }
 
 .palette__visual video{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── le curseur : un seul fond, et son texte remis en flux ── */
+.volume__visual.bb-curseur{background:#F9F4EF}
+.volume__visual.bb-curseur:after{content:none}
+.volume__visual.bb-curseur>p{position:static;left:auto;right:auto;bottom:auto;
+ display:block;color:inherit;text-align:center}
+.bb-curseur{background:#F9F4EF}
+.bb-lecture{margin:20px 0 0;color:#55614B}
+.bb-etat{margin:6px 0 22px;color:#7b8579}
 </style>
 </head>
 <body>
