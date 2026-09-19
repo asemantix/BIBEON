@@ -429,6 +429,37 @@ body.bb-bloque{overflow:hidden}
 .rmoins--inside .home-kicker:before{background:#A9B79C}
 .rmoins-intro{padding-bottom:96px}
 @media(max-width:900px){.rmoins-intro{padding-bottom:64px}}
+
+/* ── les cinq preuves ── */
+.evidence-grid{grid-template-columns:repeat(3,1fr);margin-bottom:0}
+.evidence-grid article{padding:35px 34px 38px 0;border-right:1px solid #CDD5C4;border-bottom:1px solid #CDD5C4}
+.evidence-grid article:nth-child(3n){border-right:0;padding-right:0}
+.evidence-grid article:nth-last-child(-n+2){border-bottom:0}
+.evidence-grid span.mot{font:500 clamp(2rem,3vw,3.1rem)/1.05 "Playfair Display",Georgia,serif;
+ color:#0E1C35;letter-spacing:-.02em;display:block}
+.evidence-grid .home-link{margin-top:22px}
+@media(max-width:900px){
+ .evidence-grid{grid-template-columns:1fr}
+ .evidence-grid article,.evidence-grid article+article{padding:26px 0;border-right:0;border-bottom:1px solid #CDD5C4}
+ .evidence-grid article:last-child{border-bottom:0}
+}
+
+/* ── « Il s'abaisse au niveau du lait » en sauge clair ── */
+.rmoins--inside{background:#DDE3D4;color:#0E1C35}
+.rmoins--inside h2 em{color:#55614B}
+.rmoins--inside figure img{filter:none}
+.rmoins--inside .home-link{color:#0E1C35;border-bottom-color:rgba(14,28,53,.35)}
+.rmoins--inside .home-link:hover{border-bottom-color:#0E1C35}
+.rmoins--inside .home-kicker{color:#55614B}
+.rmoins--inside .home-kicker:before{background:#55614B}
+
+/* ── la note, en tête de la section des avis ── */
+.bb-note{margin:18px 0 30px;font:500 clamp(2.4rem,4.2vw,4.6rem)/1.05 "Playfair Display",Georgia,serif;
+ color:#0E1C35;letter-spacing:-.03em}
+.bb-note span{color:#0E1C35}
+.bb-note em{font-style:italic;color:#55614B;display:block;margin-top:4px}
+.parents h2{font-size:clamp(2rem,3.1vw,3.4rem);opacity:.92}
+@media(max-width:900px){.bb-note{font-size:2.5rem;margin-bottom:24px}}
 </style>
 </head>
 <body>
@@ -541,13 +572,18 @@ body.bb-bloque{overflow:hidden}
 
     <section class="evidence">
       <header><p class="home-kicker">Composition & preuves</p><h2>Pas une promesse.<br><em>Une preuve.</em></h2><p>Un biberon n’est pas un jouet. Alors nous avons voulu savoir — et publier ce que nous savons.</p></header>
-      <div class="evidence-grid"><article><span>50 %</span><h3>Végétal</h3><p>La bague et le capuchon, qui représentent environ la moitié du poids de BIBEON, sont d’origine végétale.</p></article><article><span>0</span><h3>Résidu détecté</h3><p>Les cinq coloris, la bague et le capuchon ont passé les essais de migration du LNE.</p><small>Dossier P143418</small></article><article><span>FR</span><h3>Fabriqué ici</h3><p>Du moule au flacon, en région lyonnaise.</p></article></div>
-      <a class="home-link" href="tests-migration-lne-bibeon.html">Lire les essais du LNE <span>→</span></a>
-    </section>
+      <div class="evidence-grid">
+<article><span>50 %</span><h3>Végétal</h3><p>La bague et le capuchon : la moitié du poids du BIBEON est d’origine végétale. Sans OGM ni gluten.</p><a class="home-link" href="notre-parti-pris.html">Découvrir la composition <span>→</span></a></article>
+<article><span class="mot">Polypropylène</span><h3>Le flacon</h3><p>De qualité alimentaire, exempt de bisphénols. Testé par le LNE dans les cinq coloris.</p><a class="home-link" href="migration.html">Découvrir les matières <span>→</span></a></article>
+<article><span class="mot">Silicone</span><h3>Alimentaire</h3><p>La tétine. Non médical : le matériau est strictement agréé pour le contact alimentaire.</p><a class="home-link" href="silicone-medical-alimentaire-biberon.html">Alimentaire ou médical ? <span>→</span></a></article>
+<article><span>0</span><h3>Résidu détecté</h3><p>Les cinq coloris du corps, la bague et le capuchon ont été soumis aux essais de migration du <strong>LNE — le Laboratoire national de métrologie et d’essais</strong>, laboratoire de référence de l’État français. Résultats inférieurs au seuil analytique indiqué dans le rapport · dossier P143418.</p><a class="home-link" href="tests-migration-lne-bibeon.html">Voir les résultats <span>→</span></a></article>
+<article><span class="mot">France</span><h3>Fabriqué ici</h3><p>Du moule au flacon, en région lyonnaise. Une exigence que l’on peut documenter.</p><a class="home-link" href="qui-sommes-nous.html">Notre histoire <span>→</span></a></article>
+</div>
+      </section>
 
     <section class="parents">
       <div class="parents__visual"><img src="assets/enfant-boit-biberon-bibeon-rose.webp" alt="Une petite fille tenant seule son BIBEON rose et buvant" loading="lazy"></div>
-      <div class="parents__copy"><p class="home-kicker">Ce sont les parents qui le disent</p><p class="score">4,4 <span>/ 5</span></p><h2>« Il ne quitte plus<br><em>notre sac à langer. »</em></h2><p class="quote-source">Charlotte V. · ConsoBaby · 2025</p><div class="mini-quotes"><p>« Très léger et facile à manipuler. »</p><p>« Une révolution ! »</p><p>« Très bon ratio qualité-prix. »</p></div><a class="home-link" href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html">Lire les 65 avis <span>→</span></a></div>
+      <div class="parents__copy"><p class="home-kicker">Ce sont les parents qui le disent</p><p class="bb-note">4,4 <span>/ 5.</span> <em>65 avis ConsoBaby.</em></p><h2>« Il ne quitte plus<br><em>notre sac à langer. »</em></h2><p class="quote-source">Charlotte V. · ConsoBaby · 2025</p><div class="mini-quotes"><p>« Très léger et facile à manipuler. »</p><p>« Une révolution ! »</p><p>« Très bon ratio qualité-prix. »</p></div><a class="home-link" href="https://www.consobaby.com/avis-biberon-instantane-bibeon.html">Lire les 65 avis <span>→</span></a></div>
     </section>
 
     <section class="palette">
