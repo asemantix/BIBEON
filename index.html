@@ -306,13 +306,6 @@ body.bb-bloque{overflow:hidden}
 /* ── sections « l’R en moins » et « les plis se nettoient » ── */
 /* Les deux freins à l'achat, traités avant la preuve et la boutique. */
 .reassurance{background:#FBF9F6;color:#0E1C35;display:grid;grid-template-columns:52% 48%}
-.reassurance__visual{position:relative;overflow:hidden;min-height:720px;background:#0E1C35}
-.reassurance__visual img{width:100%;height:100%;object-fit:cover;filter:saturate(.78)}
-.reassurance__visual:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.82),transparent 58%)}
-.reassurance__visual>p{position:absolute;z-index:1;left:38px;right:38px;bottom:34px;color:#fff;margin:0}
-.reassurance__visual span{display:block;margin-bottom:13px;text-transform:uppercase;font-size:.6rem;letter-spacing:.16em}
-.reassurance__visual b{display:block;font:500 clamp(2.2rem,3.6vw,4.5rem)/.98 "Playfair Display",serif}
-.reassurance__visual small{display:block;margin-top:16px;color:#DDE3D4;font-size:.68rem}
 .reassurance__copy{padding:7vw 6vw;align-self:center}
 .reassurance h2 em,.teat-choice h3 em{color:#55614B}
 .reassurance__lead{margin:38px 0 32px;max-width:570px;font-size:.96rem;line-height:1.75}
@@ -327,8 +320,8 @@ body.bb-bloque{overflow:hidden}
 .teat-choice>p{max-width:640px;font-size:.9rem;line-height:1.75}
 .teat-choice .home-link{white-space:nowrap}
 
-@media(max-width:900px){.reassurance{grid-template-columns:1fr}.reassurance__visual{min-height:520px}.reassurance__copy{padding:80px 24px}.teat-choice{grid-column:auto;grid-template-columns:1fr;padding:70px 24px;gap:30px}.teat-choice>p{margin:0}}
-@media(max-width:560px){.reassurance__visual{min-height:430px}.reassurance__visual>p{left:24px;right:24px;bottom:24px}.care-points p{grid-template-columns:1fr;gap:5px}.teat-choice h3{font-size:3.3rem}}
+@media(max-width:900px){.reassurance{grid-template-columns:1fr}.reassurance__copy{padding:80px 24px}.teat-choice{grid-column:auto;grid-template-columns:1fr;padding:70px 24px;gap:30px}.teat-choice>p{margin:0}}
+@media(max-width:560px){.care-points p{grid-template-columns:1fr;gap:5px}.teat-choice h3{font-size:3.3rem}}
 
 .rmoins{display:grid;grid-template-columns:56% 44%;min-height:690px;background:#FBF9F6}.rmoins figure{margin:0;overflow:hidden}.rmoins figure img{width:100%;height:100%;object-fit:cover}.rmoins>div{padding:7vw 6vw;align-self:center}.rmoins h2{font-size:clamp(3.4rem,5.5vw,6.6rem)}.rmoins>div>p:not(.home-kicker){max-width:520px;margin:38px 0;font:500 1.12rem/1.65 "Playfair Display",serif}.rmoins--bag{grid-template-columns:44% 56%;background:#DDE3D4}.rmoins--bag figure{order:2}.rmoins--around{background:#0E1C35;color:#fff}.rmoins--around h2 em{color:#CFE0B8}.rmoins--around figure img{filter:saturate(.75)}@media(max-width:900px){.rmoins,.rmoins--bag{grid-template-columns:1fr;min-height:0}.rmoins figure,.rmoins--bag figure{order:0;min-height:480px}.rmoins>div{padding:75px 24px}}@media(max-width:560px){.rmoins figure,.rmoins--bag figure{min-height:390px}.rmoins h2{font-size:3.5rem}}
 
@@ -503,6 +496,33 @@ body.bb-bloque{overflow:hidden}
  .outside__film>div{left:24px;right:auto}
  .evidence-grid article:first-child .ev-cle{font-size:3.6rem}
 }
+
+@media(max-width:900px){
+  }
+
+
+/* ── entretien : texte à gauche, diptyque à droite ── */
+.reassurance{display:grid;grid-template-columns:55% 45%;align-items:stretch;background:#0E1C35;color:#fff}
+.reassurance__copy{padding:clamp(56px,6vw,96px) clamp(28px,5vw,80px);align-self:center;order:1}
+.bb-diptyque{order:2;margin:0;display:flex;flex-direction:column;background:#0A1526}
+.bb-dip-haut{position:relative;flex:2 1 0;min-height:0;overflow:hidden}
+.bb-dip-bas{position:relative;flex:1 1 0;min-height:0;overflow:hidden;
+ border-top:1px solid rgba(255,255,255,.22)}
+.bb-diptyque img{display:block;width:100%;height:100%;object-fit:cover}
+.bb-diptyque span{position:absolute;left:24px;bottom:20px;z-index:1;color:#fff;
+ font:600 .56rem/1 "DM Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;
+ text-shadow:0 1px 10px rgba(10,21,38,.65)}
+.bb-diptyque figcaption{padding:20px 24px;text-align:center;color:#DDE3D4;
+ font:600 .58rem/1.5 "DM Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase;
+ border-top:1px solid rgba(255,255,255,.14)}
+.reassurance__lead{max-width:520px;line-height:1.75}
+@media(max-width:900px){
+ .reassurance{grid-template-columns:1fr}
+ .reassurance__copy{padding:60px 24px;order:1}
+ .bb-diptyque{order:2}
+ .bb-dip-haut{min-height:440px}
+ .bb-dip-bas{min-height:300px}
+}
 </style>
 </head>
 <body>
@@ -589,7 +609,7 @@ body.bb-bloque{overflow:hidden}
 
     <section class="rmoins rmoins--around">
       <figure><img src="assets/bibeon-fini-le-demenagement.webp" alt="Une poussette chargée des accessoires du biberon rigide : doseur, mélangeur, biberons vides" loading="lazy"></figure>
-      <div><p class="home-kicker">L’R en moins · Autour</p><h2>Doseur, mélangeur,<br>obturateur : <em>disparus.</em></h2><p>Moins d’air autour : le biberon part pré-dosé, les soufflets mélangent et le capuchon ferme.</p><a class="home-link home-link--light" href="biberon-pratique.html">Tout ce qu’on n’utilise plus <span>→</span></a></div>
+      <div><p class="home-kicker">L’R en moins · Autour</p><h2>Doseur, mélangeur,<br>obturateur : <em>disparus.</em></h2><p>Moins d’air autour : le biberon part pré-dosé, les soufflets mélangent et le capuchon obture.</p><a class="home-link home-link--light" href="biberon-pratique.html">Tout ce qu’on n’utilise plus <span>→</span></a></div>
     </section>
 
     <section class="outside">
@@ -604,15 +624,19 @@ body.bb-bloque{overflow:hidden}
     </section>
 
     <section class="reassurance" aria-labelledby="reassurance-title">
-      <div class="reassurance__visual"><img src="assets/doigt-au-fond-cuisine.webp" alt="Un doigt atteint le fond du BIBEON replié, dans une cuisine" loading="lazy"><p><span>Le geste de lavage</span><b>Le fond remonte<br>à portée de main.</b></p></div>
       <div class="reassurance__copy">
-        <p class="home-kicker">La question que tout le monde se pose</p>
-        <h2 id="reassurance-title">Oui, les plis<br><em>se nettoient.</em></h2>
-        <p class="reassurance__lead">La paroi qui se replie pour partir se replie aussi pour être lavée. Faites remonter le fond : les plis deviennent accessibles, un à un.</p>
+        <p class="home-kicker">Entretien</p>
+        <h2 id="reassurance-title">Rien ne peut se cacher<br><em>dans une paroi qui bouge.</em></h2>
+        <p class="reassurance__lead">Le goupillon assure le lavage quotidien. Et si nécessaire, les soufflets mobiles permettent d’accéder directement à chaque pli.</p>
         <div class="care-points"><p><b>4 pièces</b><span>Flacon, bague, tétine, capuchon.</span></p><p><b>Sans recoin caché</b><span>Ni valve, ni insert à démonter.</span></p><p><b>À la main</b><span>Eau chaude savonneuse, rinçage, séchage complet.</span></p></div>
         <p class="care-line">On voit où l’on lave. <em>On atteint ce que l’on voit.</em></p>
-        <a class="home-link" href="mode-demploi.html#nettoyer">Voir le geste de nettoyage <span>→</span></a>
+        <a class="home-link" href="mode-demploi.html#nettoyer">Découvrir l’entretien <span>→</span></a>
       </div>
+      <figure class="bb-diptyque">
+        <div class="bb-dip-haut"><img src="assets/goupillon-accueil.webp" width="1926" height="1074" loading="lazy" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON rose, les brins épousent chaque creux."><span>01 · Nettoyer</span></div>
+        <div class="bb-dip-bas"><img src="assets/doigt-au-fond-cuisine.webp" loading="lazy" alt="Deux doigts mobilisent la paroi du BIBEON replié pour atteindre le fond"><span>02 · Accéder</span></div>
+        <figcaption>Nettoyer. Vérifier. Accéder.</figcaption>
+      </figure>
       <div class="teat-choice">
         <figure class="bb-tetine-photo"><img src="assets/quatre-pieces-tetine.webp" alt="Les quatre pièces du BIBEON séparées : le flacon gradué, la bague, la tétine à col étroit et le capuchon" width="1200" height="1600" loading="lazy"></figure>
         <div class="bb-tetine-texte">
