@@ -78,7 +78,7 @@
    "@type": "WebPage",
    "@id": "https://bibeon.fr/#page",
    "url": "https://bibeon.fr/",
-   "name": "BIBEON — biberon nomade pliable fabriqué en France",
+   "name": "BIBEON — biberon végétal, nomade et pliable, fabriqué en France",
    "inLanguage": "fr-FR",
    "isPartOf": {
     "@id": "https://bibeon.fr/#site"
@@ -86,7 +86,7 @@
    "about": {
     "@id": "https://bibeon.fr/#organisation"
    },
-   "dateModified": "2026-08-29"
+   "dateModified": "2026-09-19"
   },
   {
    "@type": "FAQPage",
@@ -412,6 +412,23 @@ body.bb-bloque{overflow:hidden}
  .palette__visual span{padding:8px 13px 8px 10px;font-size:.52rem;gap:7px}
  .palette__visual span:before{width:9px;height:9px}
 }
+
+/* ── la ligne sous le H1 : les mots du title, visibles dans la page ── */
+.bb-sous-titre{margin:22px 0 0;max-width:30ch;
+ font:400 clamp(1.05rem,1.5vw,1.35rem)/1.5 "Playfair Display",Georgia,serif;
+ color:#CFE0B8;letter-spacing:.01em}
+@media(max-width:640px){.bb-sous-titre{font-size:1rem;margin-top:16px}}
+
+/* ── la signature et « Dedans » ne font qu'un seul bloc navy ── */
+.rmoins--inside{background:#0E1C35;color:#fff}
+.rmoins--inside h2 em{color:#CFE0B8}
+.rmoins--inside figure img{filter:saturate(.8)}
+.rmoins--inside .home-link{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
+.rmoins--inside .home-link:hover{border-bottom-color:#fff}
+.rmoins--inside .home-kicker{color:#A9B79C}
+.rmoins--inside .home-kicker:before{background:#A9B79C}
+.rmoins-intro{padding-bottom:96px}
+@media(max-width:900px){.rmoins-intro{padding-bottom:64px}}
 </style>
 </head>
 <body>
@@ -450,10 +467,11 @@ body.bb-bloque{overflow:hidden}
     <section class="story">
       <p class="eyebrow"><span></span> Biberon végétal et pliable · Fabriqué en France</p>
       <h1>Le biberon<br><em>qui change</em><br>la sortie.</h1>
+      <p class="bb-sous-titre">Le biberon végétal, pliable. 330 ml. Fabriqué en France.</p>
       <div class="story-bottom">
         <p>Il se replie, emporte sa dose et s’abaisse au niveau du lait.<br><strong>330 ml déplié · 9,5 cm replié.</strong></p>
         <a class="shop shop--main" href="boutique.html">Découvrir les BIBEON <span>→</span></a>
-        <button class="bb-film-ouvrir" id="bb-film-ouvrir" type="button">Voir le film complet <span>· 40 s</span></button>
+        <button class="bb-film-ouvrir" id="bb-film-ouvrir" type="button">Voir le film complet <span>· 43 s</span></button>
       </div>
       <p class="proofs">50 % végétal <i>·</i> 0 résidu détecté par le LNE <i>·</i> 4,4/5 — 65 avis</p>
     </section>
@@ -542,7 +560,7 @@ body.bb-bloque{overflow:hidden}
       <div class="house__copy"><p class="home-kicker">La maison BIBEON</p><h2>Il s’en est déjà<br><em>vendu des millions.</em></h2><p>Inventé en France et breveté, ce biberon a déjà été produit et vendu à plusieurs millions d’exemplaires. Aujourd’hui, BIBEON renaît en région lyonnaise — avec la même idée intacte : libérer les sorties.</p><a class="home-link home-link--light" href="qui-sommes-nous.html">L’histoire de l’invention <span>→</span></a></div><div class="house__visual"><img src="assets/production-historique.webp" width="1300" height="788" alt="La maison BIBEON et son biberon pliable français" loading="lazy"><blockquote>« J’ai voulu enlever tout ce qui pesait autour du repas. »<cite>Suzanne de Bégon · Fondatrice</cite></blockquote></div>
     </section>
 
-    <section class="home-close"><p class="home-kicker">BIBEON</p><h2>L’élégance<br><em>de partir léger.</em></h2><p>À partir de 35 € · Livraison offerte · Retour sous 30 jours</p><a class="home-cta" href="boutique.html">Découvrir la boutique <span>→</span></a></section>
+    <section class="home-close"><p class="home-kicker">BIBEON</p><h2>L’élégance<br><em>de partir léger.</em></h2><p>À partir de 35 € · Point relais offert · domicile 3,50 € · retour offert sous 30 jours</p><a class="home-cta" href="boutique.html">Découvrir la boutique <span>→</span></a></section>
   </main>
 
   
