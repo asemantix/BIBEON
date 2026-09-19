@@ -555,6 +555,12 @@ body.bb-bloque{overflow:hidden}
  .bb-dip-haut{flex:0 0 auto;min-height:330px}
  .bb-dip-bas{flex:0 0 auto;min-height:280px}
 }
+
+/* ── le bouton du film : une seule ligne ── */
+.story-bottom .bb-film-ouvrir{white-space:nowrap;flex:0 0 auto}
+.bb-film-ouvrir span{white-space:nowrap}
+.story-bottom{flex-wrap:wrap;gap:26px 34px}
+@media(max-width:1100px){.bb-film-ouvrir{margin-top:0}}
 </style>
 </head>
 <body>
@@ -605,7 +611,7 @@ body.bb-bloque{overflow:hidden}
     <div class="timeline" aria-hidden="true">
       <span class="timeline-label">Le bibe<span>r</span>on, l’R en moins.</span>
       <div class="timeline-track"><i></i></div>
-      <span class="timeline-count"><b>01</b> / 07</span>
+      <span class="timeline-count"><b>01</b> / 08</span>
     </div>
 
     </main>
@@ -649,7 +655,7 @@ body.bb-bloque{overflow:hidden}
       <div class="outside__copy">
         <p class="home-kicker">La vie dehors</p>
         <h2>L’élégance<br><em>de partir léger.</em></h2>
-        <p>Le BIBEON part <strong>pré-dosé</strong> : la poudre est déjà dans le flacon, fermé, propre et sec. Dehors, il ne reste que l’eau à ajouter au moment du repas.</p>
+        <p>Le BIBEON peut partir <strong>pré-dosé</strong> : vous versez la poudre dans le flacon replié, propre et sec, et vous le refermez. Dehors, il ne reste que l’eau à ajouter au moment du repas.</p>
         <p>Voiture, train, avion ou promenade — vous n’emportez que ce qui sert.</p>
         <a class="home-link" href="voyage.html">Voyager avec bébé <span>→</span></a>
       </div>
@@ -753,11 +759,12 @@ body.bb-bloque{overflow:hidden}
 
 const clips = [
   { src: 'assets/bibeon-atelier.mp4',  duration: 4800 },
-  { src: 'assets/bibeon-gallery.mp4',  duration: 3200 },
+  { src: 'assets/bibeon-miroirs.mp4',  duration: 4800 },
   { src: 'assets/bibeon-colors.mp4',   duration: 14800 },
   { src: 'assets/bibeon-family.mp4',   duration: 4800 },
   { src: 'assets/bibeon-counter.mp4',  duration: 4800 },
   { src: 'assets/bibeon-mint.mp4',     duration: 4800 },
+  { src: 'assets/bibeon-vitrine.mp4',  duration: 4800 },
   { src: 'assets/bibeon-boutique.mp4', duration: 9800 }
 ];
 
