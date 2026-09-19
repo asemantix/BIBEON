@@ -309,10 +309,6 @@ body.bb-bloque{overflow:hidden}
 .reassurance__copy{padding:7vw 6vw;align-self:center}
 .reassurance h2 em,.teat-choice h3 em{color:#55614B}
 .reassurance__lead{margin:38px 0 32px;max-width:570px;font-size:.96rem;line-height:1.75}
-.care-points{border-top:1px solid #CDD5C4;margin-bottom:34px}
-.care-points p{display:grid;grid-template-columns:145px 1fr;gap:18px;margin:0;padding:17px 0;border-bottom:1px solid #CDD5C4}
-.care-points b{font:500 1.06rem "Playfair Display",serif}
-.care-points span{font-size:.76rem;line-height:1.55}
 .care-line{font:italic 1.35rem/1.4 "Playfair Display",serif;margin:0 0 32px}
 .care-line em{color:#55614B}
 .teat-choice{grid-column:1/-1;background:#DDE3D4;padding:70px 7vw;display:grid;grid-template-columns:1fr 1.1fr auto;gap:6vw;align-items:center}
@@ -321,7 +317,7 @@ body.bb-bloque{overflow:hidden}
 .teat-choice .home-link{white-space:nowrap}
 
 @media(max-width:900px){.reassurance{grid-template-columns:1fr}.reassurance__copy{padding:80px 24px}.teat-choice{grid-column:auto;grid-template-columns:1fr;padding:70px 24px;gap:30px}.teat-choice>p{margin:0}}
-@media(max-width:560px){.care-points p{grid-template-columns:1fr;gap:5px}.teat-choice h3{font-size:3.3rem}}
+@media(max-width:560px){.teat-choice h3{font-size:3.3rem}}
 
 .rmoins{display:grid;grid-template-columns:56% 44%;min-height:690px;background:#FBF9F6}.rmoins figure{margin:0;overflow:hidden}.rmoins figure img{width:100%;height:100%;object-fit:cover}.rmoins>div{padding:7vw 6vw;align-self:center}.rmoins h2{font-size:clamp(3.4rem,5.5vw,6.6rem)}.rmoins>div>p:not(.home-kicker){max-width:520px;margin:38px 0;font:500 1.12rem/1.65 "Playfair Display",serif}.rmoins--bag{grid-template-columns:44% 56%;background:#DDE3D4}.rmoins--bag figure{order:2}.rmoins--around{background:#0E1C35;color:#fff}.rmoins--around h2 em{color:#CFE0B8}.rmoins--around figure img{filter:saturate(.75)}@media(max-width:900px){.rmoins,.rmoins--bag{grid-template-columns:1fr;min-height:0}.rmoins figure,.rmoins--bag figure{order:0;min-height:480px}.rmoins>div{padding:75px 24px}}@media(max-width:560px){.rmoins figure,.rmoins--bag figure{min-height:390px}.rmoins h2{font-size:3.5rem}}
 
@@ -523,6 +519,22 @@ body.bb-bloque{overflow:hidden}
  .bb-dip-haut{min-height:440px}
  .bb-dip-bas{min-height:300px}
 }
+
+/* ── le bloc tétine : encre lisible sur le sauge ── */
+.teat-choice{color:#0E1C35}
+.bb-tetine-texte h3{color:#0E1C35}
+.bb-tetine-texte h3 em{color:#55614B}
+.bb-tetine-texte>p:not(.home-kicker){color:#0E1C35}
+.bb-tetine-texte .home-kicker{color:#55614B}
+.bb-tetine-texte .home-kicker:before{background:#55614B}
+.bb-tetine-texte .home-link{color:#0E1C35;border-bottom-color:rgba(14,28,53,.35)}
+.bb-tetine-texte .home-link:hover{border-bottom-color:#0E1C35}
+
+/* ── l'entretien : deux phrases, rien de plus ── */
+.reassurance__lead{font:500 clamp(1.15rem,1.7vw,1.5rem)/1.55 "Playfair Display",Georgia,serif;
+ color:#fff;max-width:26ch;margin:32px 0 30px}
+.care-line{margin:0 0 30px;font:italic 1.02rem/1.6 "Playfair Display",Georgia,serif;color:#A9B79C}
+.care-line em{color:#CFE0B8;font-style:italic}
 </style>
 </head>
 <body>
@@ -627,10 +639,9 @@ body.bb-bloque{overflow:hidden}
       <div class="reassurance__copy">
         <p class="home-kicker">Entretien</p>
         <h2 id="reassurance-title">Rien ne peut se cacher<br><em>dans une paroi qui bouge.</em></h2>
-        <p class="reassurance__lead">Le goupillon assure le lavage quotidien. Et si nécessaire, les soufflets mobiles permettent d’accéder directement à chaque pli.</p>
-        <div class="care-points"><p><b>4 pièces</b><span>Flacon, bague, tétine, capuchon.</span></p><p><b>Sans recoin caché</b><span>Ni valve, ni insert à démonter.</span></p><p><b>À la main</b><span>Eau chaude savonneuse, rinçage, séchage complet.</span></p></div>
-        <p class="care-line">On voit où l’on lave. <em>On atteint ce que l’on voit.</em></p>
-        <a class="home-link" href="mode-demploi.html#nettoyer">Découvrir l’entretien <span>→</span></a>
+        <p class="reassurance__lead">Le goupillon suit les plis.<br>La paroi mobile les rend accessibles, un à un.</p>
+        <p class="care-line">On voit où l’on lave. <em>On accède à ce que l’on voit.</em></p>
+        <a class="home-link" href="mode-demploi.html#nettoyer">Voir l’entretien <span>→</span></a>
       </div>
       <figure class="bb-diptyque">
         <div class="bb-dip-haut"><img src="assets/goupillon-accueil.webp" width="1926" height="1074" loading="lazy" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON rose, les brins épousent chaque creux."><span>01 · Nettoyer</span></div>
