@@ -402,11 +402,6 @@ body.bb-bloque{overflow:hidden}
  .palette__visual span:before{width:9px;height:9px}
 }
 
-/* ── la ligne sous le H1 : les mots du title, visibles dans la page ── */
-.bb-sous-titre{margin:22px 0 0;max-width:30ch;
- font:400 clamp(1.05rem,1.5vw,1.35rem)/1.5 "Playfair Display",Georgia,serif;
- color:#CFE0B8;letter-spacing:.01em}
-@media(max-width:640px){.bb-sous-titre{font-size:1rem;margin-top:16px}}
 
 /* ── la signature et « Dedans » ne font qu'un seul bloc navy ── */
 .rmoins--inside{background:#0E1C35;color:#fff}
@@ -569,6 +564,59 @@ body.bb-bloque{overflow:hidden}
 .reassurance .home-kicker:before{background:#A9B79C}
 .reassurance .home-link{color:#fff;border-bottom-color:rgba(255,255,255,.4)}
 .reassurance .home-link:hover{border-bottom-color:#fff}
+
+/* ── le bloc tétine : surtitre et lien lisibles sur le sauge ── */
+.teat-choice .home-kicker{color:#55614B}
+.teat-choice .home-kicker:before{background:#55614B}
+.teat-choice h3{color:#0E1C35}
+.teat-choice h3 em{color:#55614B}
+.teat-choice>p,.bb-tetine-texte>p:not(.home-kicker){color:#0E1C35}
+.teat-choice .home-link,.bb-tetine-texte .home-link{color:#0E1C35;
+ border-bottom:1px solid rgba(14,28,53,.4)}
+.teat-choice .home-link:hover{border-bottom-color:#0E1C35}
+.teat-choice .home-link span{color:#0E1C35}
+
+
+
+
+/* ══ SES COULEURS, SECTION PAR SECTION ══
+   terre cuite : hero, principe, volume, dedans, dans le sac, dehors, avis, gamme, maison, clôture
+   sauge       : la signature, autour, l'entretien, la tétine, les preuves ══ */
+:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;
+      --bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
+
+/* — la terre cuite — */
+.home h2 em{color:var(--bb-terre)}
+h1 em{color:var(--bb-terre-pale)}
+.house__copy h2 em{color:var(--bb-terre-clair)}
+.rmoins--inside h2 em{color:var(--bb-terre-clair)}
+.bb-note em{color:var(--bb-terre)}
+.timeline-label span{text-decoration-color:var(--bb-terre-pale)}
+.rmoins--inside .home-kicker{color:var(--bb-terre-clair)}
+.rmoins--inside .home-kicker:before{background:var(--bb-terre-clair)}
+
+/* — le sauge — */
+.rmoins-intro h2 em{color:var(--bb-sauge-clair)}
+.rmoins-intro h2 span{text-decoration-color:var(--bb-sauge-filet)}
+.rmoins-intro>p:last-child{color:var(--bb-sauge-clair)}
+.rmoins--around h2 em{color:var(--bb-sauge-clair)}
+.reassurance h2 em{color:var(--bb-sauge-clair)}
+.reassurance .home-kicker{color:var(--bb-sauge-filet)}
+.reassurance .home-kicker:before{background:var(--bb-sauge-filet)}
+.care-line{color:var(--bb-sauge-filet)}
+.care-line em{color:var(--bb-sauge-clair)}
+.bb-tetine-texte h3 em,.teat-choice h3 em{color:var(--bb-sauge-titre)}
+.bb-tetine-texte .home-kicker,.teat-choice .home-kicker{color:var(--bb-sauge-titre)}
+.bb-tetine-texte .home-kicker:before,.teat-choice .home-kicker:before{background:var(--bb-sauge-titre)}
+.evidence-grid .ev-cle small{color:var(--bb-sauge-titre)}
+.bb-lecture{color:var(--bb-sauge-titre)}
+.proofs i{color:var(--bb-sauge-filet)}
+
+/* — les appels à l'action — */
+.home-cta{background:var(--bb-terre);color:#fff!important}
+.home-cta:hover{background:#8E5450}
+.bb-pied a.bb-pied-achat{background:var(--bb-terre);color:#fff}
+.bb-pied a.bb-pied-achat:hover{background:#8E5450;color:#fff}
 </style>
 </head>
 <body>
@@ -607,7 +655,6 @@ body.bb-bloque{overflow:hidden}
     <section class="story">
       <p class="eyebrow"><span></span> Biberon végétal et pliable · Fabriqué en France</p>
       <h1>Le biberon<br><em>qui change</em><br>la sortie.</h1>
-      <p class="bb-sous-titre">Le biberon végétal, pliable. 330 ml. Fabriqué en France.</p>
       <div class="story-bottom">
         <p>Il se replie, part pré-dosé et s’abaisse au niveau du lait.<br><strong>330 ml déplié · 9,5 cm replié.</strong></p>
         <a class="shop shop--main" href="boutique.html">Découvrir les BIBEON <span>→</span></a>
@@ -685,7 +732,7 @@ body.bb-bloque{overflow:hidden}
       <div class="teat-choice">
         <figure class="bb-tetine-photo"><img src="assets/quatre-pieces-tetine.webp" alt="Les quatre pièces du BIBEON séparées : le flacon gradué, la bague, la tétine à col étroit et le capuchon" width="1200" height="1600" loading="lazy"></figure>
         <div class="bb-tetine-texte">
-          <p class="home-kicker">Et la tétine ?</p>
+          <p class="home-kicker">Tétine interchangeable</p>
           <h3>Une seule condition.<br><em>Un col étroit.</em></h3>
           <p>La tétine fournie se remplace. Choisissez une tétine à col étroit, en silicone ou en caoutchouc — celle que votre bébé préfère. Les modèles à col large, comme les formats AVENT ou MAM, ne conviennent pas.</p>
           <a class="home-link" href="boutique.html">Tout savoir avant de choisir <span>→</span></a>
