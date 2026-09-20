@@ -770,6 +770,35 @@ body.bb-bloque{overflow:hidden}
 /* ── l'entête BIBEON remplace la sienne ── */
 .bb-cale{height:108px}
 .shop-hero{min-height:620px}
+
+
+/* ══ SES COULEURS, SECTION PAR SECTION ══
+   terre cuite : le hero, les offres, la gamme, la livraison — tout ce qui vend
+   sauge       : les fonctions, les trois gestes, l'entretien, les preuves, la FAQ ══ */
+:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;
+      --bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
+
+/* — la terre cuite : vendre — */
+h1 em{color:var(--bb-terre)}
+.offers h2 em,.shipping h2 em{color:var(--bb-terre)}
+.colors h2 em{color:var(--bb-terre-clair)}
+.colors .kicker{color:var(--bb-terre-clair)}
+.colors .kicker:before{background:var(--bb-terre-clair)}
+.price strong{color:var(--bb-terre)}
+.offer__image span{background:var(--bb-terre);color:#fff}
+.cta--dark{background:var(--bb-terre);color:#fff!important}
+.cta--dark:hover{background:#8E5450}
+.swatches button.active{outline-color:var(--bb-terre)}
+
+/* — le sauge : prouver — */
+.functions__head h2 em,.care h2 em,.faq h2 em,.proof h2 em{color:var(--bb-sauge-titre)}
+.three-steps h2 em{color:var(--bb-sauge-clair)}
+.three-steps .kicker{color:var(--bb-sauge-filet)}
+.three-steps .kicker:before{background:var(--bb-sauge-filet)}
+.function-word{color:var(--bb-sauge-titre)}
+.promises b{color:#0E1C35}
+.promises span{color:var(--bb-sauge-titre)}
+.details-link--light{color:#fff;border-bottom-color:rgba(255,255,255,.45)}
 </style>
 </head>
 <body>
@@ -818,7 +847,7 @@ body.bb-bloque{overflow:hidden}
         <a class="cta cta--dark" href="#offres">Voir les offres <span>↓</span></a>
       </div>
       <div class="shop-hero__visual">
-        <video autoplay muted loop playsinline preload="none" poster="assets/coloris-en-mouvement.webp" data-geste><source src="assets/coloris-en-mouvement.mp4" type="video/mp4"></video>
+        <video autoplay muted loop playsinline preload="none" poster="assets/bibeon-biberon-pliable-5-coloris.webp" data-geste aria-label="Les BIBEON serrés au premier plan, graduations et soufflets visibles"><source src="assets/bibeon-vitrine.mp4" type="video/mp4"></video>
         <p><b>30 → 300 ml</b><span>Un seul biberon. Toutes les tailles.</span></p>
       </div>
     </section>
@@ -872,7 +901,7 @@ body.bb-bloque{overflow:hidden}
           <p class="occasion">La petite course</p><h3>Un BIBEON</h3>
           <p class="desc">Le biberon pliable avec tétine silicone alimentaire, débit 6 mois et plus. Vendu vide.</p>
           <fieldset><legend>Coloris</legend><div class="swatches" data-group="single"><button class="active mint" aria-label="Menthe"></button><button class="apricot" aria-label="Abricot"></button><button class="lilac" aria-label="Lilas"></button><button class="rose" aria-label="Rose"></button><button class="linen" aria-label="Lin"></button></div><output>Menthe</output></fieldset>
-          <div class="price"><strong>35 €</strong><span>point relais offert</span></div>
+          <div class="price"><strong>35 €</strong><span>point relais offert · 3 jours</span></div>
           <a class="cta cta--light" href="#offres">Commander <span>→</span></a>
         </div>
       </article>
@@ -880,16 +909,16 @@ body.bb-bloque{overflow:hidden}
       <div class="offer-grid">
         <article class="offer">
           <div class="offer__image"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, coloris menthe et abricot" loading="lazy"></div>
-          <div class="offer__body"><p class="occasion">L’après-midi</p><h3>Le duo BIBEON</h3><p class="desc">Celui de la sortie, et celui qui reste prêt dans le sac.</p><div class="price"><strong>62 €</strong><span>31 € l’unité · point relais offert</span></div><a class="text-link" href="#offres">Choisir deux coloris →</a></div>
+          <div class="offer__body"><p class="occasion">L’après-midi</p><h3>Le duo BIBEON</h3><p class="desc">Celui de la sortie, et celui qui reste prêt dans le sac.</p><div class="price"><strong>62 €</strong><span>31 € l’unité · point relais offert · 3 jours</span></div><a class="text-link" href="#offres">Choisir deux coloris →</a></div>
         </article>
         <article class="offer">
           <div class="offer__image"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés, coloris menthe, abricot et lilas" loading="lazy"></div>
-          <div class="offer__body"><p class="occasion">Le week-end</p><h3>Le lot de trois</h3><p class="desc">Trois repas dosés la veille : la journée tient dans le sac à main.</p><div class="price"><strong>87 €</strong><span>29 € l’unité · point relais offert</span></div><a class="text-link" href="#offres">Choisir le trio →</a></div>
+          <div class="offer__body"><p class="occasion">Le week-end</p><h3>Le lot de trois</h3><p class="desc">Trois repas dosés la veille : la journée tient dans le sac à main.</p><div class="price"><strong>87 €</strong><span>29 € l’unité · point relais offert · 3 jours</span></div><a class="text-link" href="#offres">Choisir le trio →</a></div>
         </article>
       </div>
 
       <article class="journey">
-        <div><p class="occasion">Le voyage</p><h3>Le lot de cinq BIBEON</h3><p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p><div class="price"><strong>125 €</strong><span>25 € l’unité · point relais offert</span></div><a class="cta cta--dark" href="#offres">Choisir les cinq <span>→</span></a></div>
+        <div><p class="occasion">Le voyage</p><h3>Le lot de cinq BIBEON</h3><p>Un chez vous, un dans la voiture, un chez la nounou, un chez mamie — et le cinquième toujours prêt.</p><div class="price"><strong>125 €</strong><span>25 € l’unité · point relais offert · 3 jours</span></div><a class="cta cta--dark" href="#offres">Choisir les cinq <span>→</span></a></div>
         <img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés : menthe, abricot, lilas, rose et lin" loading="lazy">
       </article>
     </section>
@@ -915,7 +944,7 @@ body.bb-bloque{overflow:hidden}
       </div>
     </section>
 
-    <section class="shipping"><p class="kicker">La livraison</p><h2>Commandé avant midi.<br><em>Parti le jour même.</em></h2><p>Paiement sécurisé · Point relais offert · Domicile 3,50 € · Retour offert sous 30 jours</p><a class="cta cta--dark" href="#offres">Choisir mon BIBEON <span>↑</span></a></section>
+    <section class="shipping"><p class="kicker">La livraison</p><h2>Commandé avant midi.<br><em>Parti le jour même.</em></h2><p>Paiement sécurisé · Point relais Mondial Relay offert, livré en 3 jours · Domicile 3,50 € · Retour offert sous 30 jours</p><a class="cta cta--dark" href="#offres">Choisir mon BIBEON <span>↑</span></a></section>
   </main>
 
   
