@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
 <meta charset="utf-8"/>
@@ -26,422 +26,6 @@
 <meta name="twitter:description" content="Moins à porter. Moins à démonter. Moins à laver. Moins de gestes quand bébé a faim.">
 <meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-og-sac-beige.jpg">
 <meta name="twitter:image:alt" content="Un BIBEON replié posé près d’un sac à langer beige.">
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-<style>
-/* ============ EXTRAIT DE TA FEUILLE DE STYLE — inchangé ============ */
-:root{
---cream:#fdfbf9;--beige:#f9f4ef;--beige-2:#f6f1ea;--cream-deep:#f6f1ea;
---white:#ffffff;--card:#ffffff;
---sage:#6e7e61;--sage-dark:#55614b;--sage-soft:#a9b79c;--sage-tint:#eef1ea;
---navy:#11253a;--text:#5b655d;--line:#ddd6cb;
---shadow-s:0 6px 18px rgba(17,37,58,.05);
---shadow-m:0 18px 44px rgba(17,37,58,.09);
---radius:26px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--cream);color:var(--text);
-font-family:Montserrat,-apple-system,Segoe UI,Arial,sans-serif;font-size:16px;line-height:1.65;
--webkit-font-smoothing:antialiased}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-.shell{width:min(1320px,calc(100% - 64px));margin-inline:auto}
-
-h1, h2, h3, blockquote{font-family:"Playfair Display",Georgia,serif;font-weight:500}
-.overline{margin:0 0 18px;font-size:13px;font-weight:600;letter-spacing:.24em;
-text-transform:uppercase;color:var(--sage)}
-
-/* hero */
-.hero{position:relative;overflow:hidden;isolation:isolate;min-height:min(88vh,820px);
-display:flex;align-items:center;padding:0 0 min(14vh,140px);background:var(--navy)}
-.hero-fond{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
-object-position:center center;z-index:-2;filter:saturate(.72) contrast(1.03) sepia(.05)}
-.hero-voile{position:absolute;inset:0;z-index:-1;background:
-linear-gradient(100deg,rgba(14,28,53,.90) 0%,rgba(14,28,53,.72) 26%,rgba(14,28,53,.34) 50%,
-rgba(14,28,53,.06) 74%,rgba(14,28,53,0) 100%),
-linear-gradient(180deg,rgba(14,28,53,.34) 0%,rgba(14,28,53,0) 26%)}
-.hero-contenu{position:relative;max-width:900px}
-.hero .overline{color:#c9d3bd;margin-bottom:20px}
-.hero h1{font-size:clamp(40px,5.15vw,76px);line-height:1.0;letter-spacing:-.015em;color:#fff;
-margin:0 0 28px;max-width:22ch;text-shadow:0 2px 34px rgba(14,28,53,.5)}
-
-@media (max-width:900px){.hero h1{max-width:13.5ch}}
-
-
-/* ═══════════ PIED DE PAGE ═══════════ */
-footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
-.footer-col{display:flex;flex-direction:column;gap:9px;font-size:13.5px;
-font-family:Montserrat,sans-serif;color:var(--text)}
-.footer-col a{color:var(--text);text-decoration:none}
-.footer-col a:hover{color:var(--sage-dark)}
-footer h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
-/* la signature de marque : mêmes capitales que le logo, le R en vert sauge */
-/* le pied de page reprend le rapport du lock-up de la section « Le nom » :
-   l'écart vaut 0,235 fois la hauteur du logo — d'où 8 px sous un logo de 34. */
-.baseline{margin:0 0 16px;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;
-font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
-.baseline .r{color:var(--sage-soft)}
-/* la section reprend exactement le bloc du pied de page : logo + signature */
-/* le bloc du pied de page, doublé : il tient la section sans rien changer d'autre.
-   Tout suit la largeur d'écran pour rester entier jusqu'à 320 px. */
-/* la feuille dépasse à droite dans le fichier du logo : centrer la BOÎTE décale
-   le mot BIBEON de 2,15 % vers la gauche. On recentre sur le mot, pas sur la boîte. */
-.nom-logo{display:block;margin:0 auto;height:clamp(44px,5.2vw,75px);width:auto;
-transform:translateX(2.15%)}
-.nom-baseline{margin:clamp(12px,1.38vw,18px) 0 0;font-size:clamp(14px,2vw,29px);
-/* l'interlettrage ajoute un blanc APRÈS la dernière lettre : sans compensation,
-   un texte centré paraît décalé vers la gauche. Même correctif que .usp-marque. */
-text-indent:.18em}
-/* ® en vrai exposant : remonté à hauteur de capitale, pas posé sur la ligne */
-.nom-baseline .marque-r{font-size:.36em;vertical-align:1.75em;opacity:.55;
-/* le ® est très haut : on annule la largeur qu'il occupe pour que le point final
-   revienne se coller à MOINS. Ils ne se touchent pas, ils sont à deux hauteurs. */
-margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
-/* le ® ferme la phrase déposée « BIBEON, le biberon, l'R en moins ».
-   Taille et hauteur en em : il suit le corps du texte qui le porte. */
-.marque-r{font-family:Montserrat,sans-serif;font-size:.42em;font-weight:500;
-vertical-align:.72em;letter-spacing:0;margin-left:.12em;line-height:0;opacity:.7}
-
-.footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0;line-height:1.7}
-.brand-logo{display:block;width:auto;height:34px;color:var(--navy);transform:translateY(-2px)}
-.footer-achat{margin:20px 0 0}
-.footer-achat a{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
-background:var(--sage-dark);color:#fff;text-decoration:none;font-family:Montserrat,sans-serif;
-font-size:12.5px;font-weight:600;letter-spacing:.14em;text-indent:.14em;text-transform:uppercase;
-transition:background .2s ease}
-.footer-achat a:hover{background:var(--sage)}
-.footer-fournisseurs{display:block;margin-top:12px;padding-top:12px;
-border-top:1px solid var(--line);font-size:13px;color:#7b8579}
-.copyright{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;
-display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
-font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
-@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}.brand-logo{height:30px}}
-@media (max-width:560px){.footer-grid{grid-template-columns:1fr}.brand-logo{height:27px}
-.copyright{justify-content:flex-start}}
-
-/* ═══════════ ENTÊTE — reprise fidèle d'index2, plus le seul ajout : ACHAT RAPIDE ═══════════ */
-html{scroll-behavior:smooth}
-#tamis, #preuve-vegetal, #preuve-residu, #boutique, #avis, #faq, #fonctionnement, #film-complet, #evolutif, #inscription, #matiere, #contact{scroll-margin-top:100px}
-/* le logo et la flèche pointent vers #accueil : on veut le tout début de la page,
-   bandeau d'annonce compris — une marge large fait retomber le défilement sur 0 */
-#accueil{scroll-margin-top:240px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.header{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);
-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{min-height:78px;display:flex;align-items:center;gap:22px}
-.brand{display:inline-flex;align-items:center;color:var(--navy)}
-
-.brand img{display:block;height:34px;width:135px;flex:0 0 auto}
-@media (max-width:700px){.brand img{height:28px;width:111px}}
-
-/* ═══════════ BANDEAU D'ANNONCE ═══════════ */
-.annonce{background:var(--sage-dark);color:#fff}
-.annonce-in{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;
-gap:6px 20px;padding:12px 0;text-align:center;
-font-family:Montserrat,sans-serif;font-size:14px;line-height:1.5}
-.annonce-in b{font-weight:600}
-.annonce-in i{font-style:normal;color:#cfe0b8}
-.annonce-in span{color:rgba(255,255,255,.9)}
-@media (max-width:700px){.annonce-in{font-size:12.5px;gap:4px 12px;padding:10px 0}
-.annonce-in i{display:none}}
-
-/* ═══════════ TÉLÉPHONES DE L'ENTÊTE ═══════════ */
-.nav-tel{display:flex;align-items:center;gap:18px;
-font-family:Montserrat,sans-serif;font-size:14px;white-space:nowrap}
-.nav-tel a{display:flex;align-items:baseline;gap:7px;color:var(--text);text-decoration:none}
-.nav-tel a:hover{color:var(--sage-dark)}
-.nav-tel b{font-size:11.5px;font-weight:600;letter-spacing:.11em;
-text-transform:uppercase;color:var(--sage)}
-@media (max-width:1500px){.nav-tel{display:none}}
-.nav-links{display:flex;gap:20px;margin-left:auto;font-size:15px;white-space:nowrap}
-.nav-links a{padding:6px 0;border-bottom:1px solid transparent;color:var(--text);text-decoration:none}
-.nav-links a:hover{color:var(--sage-dark);border-color:var(--sage-soft)}
-.nav-outils{display:flex;align-items:center;gap:14px}
-/* le seul élément nouveau */
-.nav-achat{display:inline-flex;align-items:center;padding:10px 22px;border-radius:999px;
-background:var(--sage-dark);color:#fff;text-decoration:none;
-font-family:Montserrat,sans-serif;font-size:12.5px;font-weight:600;
-letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;
-transition:background .2s ease}
-.nav-achat:hover{background:var(--sage)}
-@media (max-width:1080px){.nav-links{display:none}}
-@media (max-width:520px){.nav-achat{padding:9px 16px;font-size:10.5px;letter-spacing:.1em}}
-
-/* ═══════════ LA PHRASE DE MARQUE — une respiration, rien d'autre ═══════════ */
-.usp{min-height:72vh;display:flex;align-items:center;text-align:center;
-padding:clamp(90px,13vh,180px) 0;background:var(--white)}
-
-@media (max-width:700px){.usp{min-height:0;padding:88px 0}}
-
-.nav-achat{text-indent:.13em}
-
-/* ═══════════ LE NOM — la lettre qui manque ═══════════ */
-/* on descend le bloc de 28 px sans changer la hauteur de la section :
-   ce qu'on ajoute en haut, on le retire en bas — le contenu est centré. */
-/* la section occupe tout l'écran : on lit le nom sans qu'une autre section
-   apparaisse en bas et détourne le regard. 100svh évite le sursaut dû aux
-   barres des navigateurs mobiles. */
-
-/* ═══ PIED DE PAGE COMMUN — recopié depuis l'accueil, 16 août 2026 ═══ */
-footer{background:var(--beige-2);padding:56px 0 22px;margin-top:0;border-top:1px solid var(--line)}
-.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.1fr;gap:36px}
-.footer-col{display:flex;flex-direction:column;gap:9px;font-size:13.5px;
-font-family:Montserrat,sans-serif;color:var(--text)}
-.footer-col a{color:var(--text);text-decoration:none}
-.footer-col a:hover{color:var(--sage-dark)}
-footer h3{margin:0 0 6px;font-family:Montserrat,sans-serif;font-size:12px;font-weight:600;
-letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
-/* le pied de page reprend le rapport du lock-up de la section « Le nom » :
-   l'écart vaut 0,235 fois la hauteur du logo — d'où 8 px sous un logo de 34. */
-footer .baseline{margin:0 0 16px;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;
-font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
-footer .baseline .r{color:var(--sage-soft)}
-footer .marque-r{font-family:Montserrat,sans-serif;font-size:.42em;font-weight:500;
-vertical-align:.72em;letter-spacing:0;margin-left:.12em;line-height:0;opacity:.7}
-.footer-intro{font-size:13.5px;max-width:34ch;margin:14px 0 0;line-height:1.7}
-footer .brand-logo{display:block;width:auto;height:34px;color:var(--navy);transform:translateY(-2px)}
-.footer-achat{margin:20px 0 0}
-.footer-achat a{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
-background:var(--sage-dark);color:#fff;text-decoration:none;font-family:Montserrat,sans-serif;
-font-size:12.5px;font-weight:600;letter-spacing:.14em;text-indent:.14em;text-transform:uppercase;
-transition:background .2s ease}
-.footer-achat a:hover{background:var(--sage)}
-.footer-fournisseurs{display:block;margin-top:12px;padding-top:12px;
-border-top:1px solid var(--line);font-size:13px;color:#7b8579}
-.copyright{border-top:1px solid var(--line);margin-top:40px;padding-top:18px;
-display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:space-between;
-font-family:Montserrat,sans-serif;font-size:12px;color:#7b8579}
-@media (max-width:900px){.footer-grid{grid-template-columns:1fr 1fr}footer .brand-logo{height:30px}}
-@media (max-width:560px){.footer-grid{grid-template-columns:1fr}footer .brand-logo{height:27px}.copyright{justify-content:flex-start}}
-
-</style>
-<style>
-/* ── réglages propres à cette page — mêmes variables que la charte ── */
-.hero.hero-eclipse{background:#12161a;height:auto;min-height:min(88vh,880px);
-align-items:flex-start;padding:min(17vh,165px) 0 min(9vh,100px)}
-.hero-eclipse .hero-fond{filter:none;object-fit:cover;object-position:31% center}
-@media (max-width:900px){
-.hero.hero-eclipse{align-items:center;padding:0 0 min(10vh,90px)}
-.hero-eclipse .hero-fond{object-position:60% center}
-}
-.hero-eclipse .hero-voile{background:
-linear-gradient(100deg,rgba(10,13,16,.88) 0%,rgba(10,13,16,.66) 30%,rgba(10,13,16,.24) 54%,rgba(10,13,16,0) 78%),
-linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
-.hero-eclipse h1{max-width:16ch;line-height:.88}
-.hero-eclipse h1 span{display:block}
-
-.hero-triade{margin:34px 0 0;font-family:"Playfair Display",Georgia,serif;font-weight:400;
-font-style:italic;font-size:clamp(20px,2vw,28px);line-height:1.5;color:#cfe0b8}
-
-#accueil{scroll-margin-top:240px}
-
-/* la page courante se marque dans le menu */
-.nav-links a[aria-current="page"]{color:var(--sage-dark);border-color:var(--sage-dark)}
-
-/* Menu mobile : le bouton d'ouverture manquait, la navigation était donc
-   totalement absente sous 1120 px — soit sur tous les téléphones. */
-.burger{display:none;margin-left:auto;background:#fff;border:1px solid var(--line);
-  border-radius:999px;padding:9px 16px;font-size:13px;font-weight:600;
-  font-family:Montserrat,sans-serif;color:var(--navy);cursor:pointer}
-.burger:hover{border-color:var(--sage)}
-@media (max-width:1120px){
-  .burger{display:block}
-  .nav-links{display:none;position:absolute;left:22px;right:22px;top:72px;
-    flex-direction:column;gap:14px;background:#fff;border:1px solid var(--line);
-    border-radius:20px;padding:22px 24px;z-index:60;
-    box-shadow:0 18px 44px rgba(17,37,58,.13)}
-  .nav-links.open{display:flex}
-  .header .nav{position:relative}
-}
-@media (max-width:1560px){.nav-links{font-size:13.5px;gap:17px}}
-
-/* ═══ le biberon pratique — version « pourquoi » (28 août 2026) ═══ */
-/* Le titre tenait sur toute la largeur et se posait sur le flacon : on lisait
-   « biberon ... compliqué » écrit sur BIBEON. La colonne de texte est ramenée
-   à gauche, et le cadrage de l'image décale le flacon vers la droite. */
-.hero-question h1{max-width:12ch;line-height:1.04;font-size:clamp(32px,3.9vw,56px);
-  margin-bottom:24px}
-.hero-question .hero-triade{max-width:21ch;font-size:clamp(18px,1.6vw,23px);line-height:1.45}
-.hero.hero-question .hero-fond{object-position:6% center}
-.hero-question .hero-voile{background:
-linear-gradient(100deg,rgba(10,13,16,.90) 0%,rgba(10,13,16,.74) 26%,rgba(10,13,16,.30) 46%,rgba(10,13,16,0) 66%),
-linear-gradient(180deg,rgba(10,13,16,.42) 0%,rgba(10,13,16,0) 30%)}
-@media (max-width:900px){
-  /* Sur téléphone, un cadrage « cover » découpe le flacon et fait passer le
-     titre par-dessus. On empile : le texte d'abord, l'image entière ensuite. */
-  .hero.hero-question{display:block;height:auto;min-height:0;
-    padding:0 0 min(9vh,72px);background:#0b0e11}
-  .hero.hero-question .hero-fond{position:relative;inset:auto;z-index:0;
-    width:100%;height:auto;object-fit:contain;margin:0 0 30px;display:block}
-  .hero-question .hero-voile{display:none}
-  .hero-question h1{max-width:15ch}
-  .hero-question .hero-triade{max-width:26ch;margin-bottom:0}
-}
-
-.moins-liste{list-style:none;margin:26px auto 30px;padding:0;
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px 34px;max-width:760px}
-.moins-liste li{position:relative;padding-left:20px;
-  font-family:"Playfair Display",Georgia,serif;font-size:clamp(18px,1.7vw,22px);
-  line-height:1.45;color:var(--sage-dark)}
-.moins-liste li::before{content:"—";position:absolute;left:0;color:var(--sage-soft)}
-
-@media (max-width:820px){.moins-liste{grid-template-columns:1fr;text-align:left;max-width:22em}}
-
-/* entête : le logo ne doit jamais être écrasé par le menu (même correctif que l’accueil) */
-.brand{flex:0 0 auto}.brand img, .brand svg{flex:0 0 auto;max-width:none}.nav-links{font-size:13.5px;gap:17px}@media(max-width:1700px){.nav-tel{display:none}}@media(min-width:1121px){.burger{display:none}}
-
-/* ══════════ BIBERON PRATIQUE 3 — écrans « un accessoire en moins » (gabarit voyage : contenu, blanc, court) ══════════ */
-.e{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--sauge-fond:#eef1ea;--filet:#E6E1D8;
-  background:#fff;color:var(--nuit);box-sizing:border-box;width:min(100%,1180px);margin-inline:auto;
-  display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(24px,4vw,64px);padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
-.e-texte{max-width:520px}
-.e-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 20px}
-.e-titre{font:400 clamp(30px,3.6vw,50px)/1.08 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.e-titre em{font-style:italic;color:var(--sauge-texte)}
-.e-lignes{list-style:none;margin:clamp(20px,3vh,30px) 0 0;padding:0}
-.e-lignes li{padding:13px 0;border-top:1px solid var(--filet);font:400 clamp(16px,1.35vw,19px)/1.5 "Playfair Display",Georgia,serif}
-.e-lignes li:last-child{border-bottom:1px solid var(--filet)}
-.e-lignes li s{text-decoration:line-through;text-decoration-color:var(--sauge);text-decoration-thickness:1px;color:var(--sauge-texte)}
-.e-chute{font:400 clamp(18px,1.6vw,23px)/1.4 "Playfair Display",Georgia,serif;font-style:italic;color:var(--sauge-texte);margin:clamp(18px,2.5vh,26px) 0 0}
-.e-lien{margin:22px 0 0}
-.e-lien a{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--nuit);text-decoration:none;border-bottom:1px solid var(--sauge);padding-bottom:6px}
-.e-visuel{margin:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.e-visuel video, .e-visuel img{display:block;width:min(100%,360px);height:auto;max-height:72svh;object-fit:cover;border-radius:24px;background:#fff}
-.e-visuel video.v{aspect-ratio:9/16}
-.e-visuel img.large{width:min(100%,480px)}
-.e-visuel figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);text-align:center;margin:12px 0 0}
-.e-visuel.droite{order:2}
-.e-visuel.duo{flex-direction:row;align-items:flex-end;gap:clamp(12px,1.6vw,20px)}
-.e-visuel.duo .duo-item{display:flex;flex-direction:column;align-items:center;min-width:0}
-.e-visuel.duo video{width:min(100%,220px);max-height:none}
-.e-visuel.duo img{width:min(100%,260px);max-height:none;aspect-ratio:1;object-fit:cover}
-.e-visuel.duo img.entiere{aspect-ratio:auto;object-fit:contain;width:min(100%,320px)}
-
-/* écrans pleine colonne : « Tout dedans », les dimensions, « Finalement » */
-.plein{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;--filet:#E6E1D8;background:#fff;color:var(--nuit);box-sizing:border-box;text-align:center;width:min(100%,1180px);margin-inline:auto;padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
-.plein figure{margin:clamp(24px,4vh,40px) auto 0;width:min(100%,1000px)}
-.plein img{display:block;width:100%;height:auto;border-radius:24px}
-.plein figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);margin:12px 0 0}
-.plein .e-titre{max-width:20ch;margin-inline:auto}
-.moins-intro{font:400 clamp(16px,1.35vw,19px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:18px auto 0;max-width:48ch}
-.moins-liste{list-style:none;margin:clamp(28px,4vh,44px) auto 0;padding:0;width:min(100%,860px);display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(24px,5vw,72px)}
-.moins-liste li{padding:13px 0;border-top:1px solid var(--filet);font:400 clamp(18px,1.6vw,24px)/1.3 "Playfair Display",Georgia,serif;text-align:left}
-.moins-liste li:nth-last-child(-n+2){border-bottom:1px solid var(--filet)}
-.moins-chute{font:400 clamp(17px,1.5vw,22px)/1.45 "Playfair Display",Georgia,serif;margin:clamp(28px,4vh,44px) auto 0;max-width:44ch}
-.moins-chute em{font-style:italic;color:var(--sauge-texte)}
-@media (max-width:820px){
-  .e{grid-template-columns:1fr;gap:26px;padding:48px 22px}
-  .e-visuel.droite{order:0}
-  .e-texte{margin:0 auto;text-align:center}
-  .e-lignes li{text-align:left}
-  .e-visuel.duo img{width:min(100%,170px)}.e-visuel.duo video{width:min(100%,150px)}
-  .moins-liste{grid-template-columns:1fr}.moins-liste li:nth-last-child(-n+2){border-bottom:0}.moins-liste li:last-child{border-bottom:1px solid var(--filet)}
-}
-
-/* ══════════ SECTION 6 · LA PORTE DE LA BOUTIQUE — un écran blanc, les cinq flacons, le prix, le bouton.
-   Fichier : assets/cinq-coloris-chambre.webp (image tirée de la vidéo Grok n° 4, les cinq dans la chambre de bébé). ══════════ */
-.porte{--nuit:#0E1C35;--sauge:#8F9875;--sauge-texte:#55614B;
-  background:#fff;color:var(--nuit);min-height:100svh;box-sizing:border-box;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:clamp(48px,7vh,88px) clamp(20px,5vw,72px)}
-.porte-eyebrow{font:600 12px/1 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 22px}
-.porte-titre{font:400 clamp(36px,5.2vw,72px)/1.04 "Playfair Display",Georgia,serif;letter-spacing:-.01em;margin:0}
-.porte-titre em{font-style:italic;color:var(--sauge-texte)}
-.porte-visuel{margin:clamp(20px,4vh,40px) 0;width:min(100%,820px)}
-.porte-visuel img{display:block;width:100%;height:auto;border-radius:24px}
-.porte-coloris{font:600 11px/1.6 Montserrat,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge-texte);margin:0 0 18px}
-.porte-coloris i{font-style:normal;opacity:.5;margin:0 .6em}
-
-.porte-conditions{font:400 clamp(16px,1.4vw,20px)/1.5 "Playfair Display",Georgia,serif;color:var(--sauge-texte);margin:0 0 28px}
-.porte-conditions i{font-style:normal;opacity:.5;margin:0 .45em}
-.porte-cta a{display:inline-block;font:600 13px/1 Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase;
-  color:#fff;background:var(--nuit);text-decoration:none;padding:20px 34px;border-radius:999px}
-.porte-cta a span{display:inline-block;margin-left:.6em;transition:transform .25s}
-.porte-cta a:hover span{transform:translateX(5px)}
-@media (max-width:720px){
-  .porte{min-height:auto;padding:64px 22px}
-  .porte-conditions i{display:block;height:4px;margin:0;opacity:0}
-}
-
-/* ══════════ LA SIGNATURE — règles reprises de l’accueil ══════════ */
-.usp{min-height:72vh;display:flex;align-items:center;text-align:center;
-padding:clamp(90px,13vh,180px) 0;background:var(--white)}
-.nom-logo{display:block;margin:0 auto;height:clamp(44px,5.2vw,75px);width:auto;
-transform:translateX(2.15%)}
-.nom-baseline{margin:clamp(12px,1.38vw,18px) 0 0;font-size:clamp(14px,2vw,29px);
-/* l'interlettrage ajoute un blanc APRÈS la dernière lettre : sans compensation,
-   un texte centré paraît décalé vers la gauche. Même correctif que .usp-marque. */
-text-indent:.18em}
-.nom-baseline .marque-r{font-size:.36em;vertical-align:1.75em;opacity:.55;
-/* le ® est très haut : on annule la largeur qu'il occupe pour que le point final
-   revienne se coller à MOINS. Ils ne se touchent pas, ils sont à deux hauteurs. */
-margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
-.marque-r{font-size:.36em;vertical-align:1.75em;opacity:.55;
-/* le ® est très haut : on annule la largeur qu'il occupe pour que le point final
-   revienne se coller à MOINS. Ils ne se touchent pas, ils sont à deux hauteurs. */
-margin-left:.06em;margin-right:-1.05em;letter-spacing:0}
-.nom-fin{min-height:0;padding:clamp(72px,11vh,130px) 0;background:#fff}
-.nom .shell{text-align:center}
-.nom-fin .baseline{margin:clamp(12px,1.38vw,18px) 0 0;line-height:1.2;font-family:Montserrat,sans-serif;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:#0E1C35;font-size:14px}
-.nom-fin .baseline .r{color:#a9b79c}
-
-/* ══ HERO CLAIRE (14 sept.) : photo des cinq coloris, voile blanc à gauche, texte bleu nuit ══ */
-.hero.hero-eclipse.hero-question{background:#f2f2f0}
-.hero-question .hero-voile{background:linear-gradient(100deg,rgba(244,244,242,.94) 0%,rgba(244,244,242,.80) 28%,rgba(244,244,242,.40) 48%,rgba(244,244,242,0) 66%)}
-.hero-eclipse .hero-fond{object-position:70% center}
-.hero-question h1{color:#0E1C35;text-shadow:none}
-.hero-question .overline{color:#55614B}
-.hero-question .hero-triade{color:#55614B}
-
-@media (max-width:820px){.hero.hero-question{background:#f2f2f0}}
-
-/* ══════════ AÉRATION (15 sept.) : un écran par accessoire, visuels grands, comme l’accueil ══════════ */
-.e{width:100%;max-width:none;min-height:min(100svh,960px);grid-template-columns:minmax(0,520px) minmax(0,1fr);
-  gap:clamp(40px,6vw,110px);padding:clamp(96px,14vh,180px) max(clamp(20px,6vw,96px),calc((100% - 1380px)/2))}
-.e:nth-of-type(even){background:#f9f6f1}
-.e-texte{max-width:520px}
-.e-visuel img{width:min(100%,600px);max-height:78svh;object-fit:contain}
-.e-visuel video{width:min(100%,420px);max-height:78svh;aspect-ratio:9/16;object-fit:cover}
-.e-visuel img.large{width:min(100%,760px)}
-.e-visuel.duo{gap:clamp(20px,2.4vw,36px);align-items:flex-start}
-.e-visuel.duo video{width:min(100%,380px);aspect-ratio:9/16;object-fit:cover}
-.e-visuel.duo img{width:min(100%,380px);aspect-ratio:auto;object-fit:contain}
-.e-visuel.duo img.entiere{width:min(100%,380px)}
-.plein{width:100%;max-width:none;min-height:min(80svh,760px);display:flex;flex-direction:column;justify-content:center;padding:clamp(96px,14vh,180px) clamp(20px,5vw,72px)}
-.e-bande{grid-column:1/-1;margin:clamp(32px,5vh,64px) auto 0;width:min(100%,1100px);text-align:center}
-.e-bande img{display:block;width:100%;height:auto;border-radius:24px}
-.e-bande figcaption{font:500 11px/1.5 Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte);margin:14px 0 0}
-@media (max-width:820px){
-  .e{grid-template-columns:1fr;min-height:0;padding:72px 20px}
-  .e-visuel.duo video, .e-visuel.duo img, .e-visuel.duo img.entiere{width:min(100%,220px)}
-  .plein{min-height:0;padding:72px 20px}
-}
-
-/* ══ H1 (15 sept.) ══
-   La nouvelle question est plus longue que l'ancienne : a 12ch elle
-   tombait sur six lignes. On desserre a 17ch, 19ch sur telephone. */
-.hero-question h1{max-width:17ch}
-@media (max-width:900px){.hero-question h1{max-width:19ch}}
-
-
-/* ══ LE MOT DE L’INVENTRICE (16 sept.) ══
-   Une confidence posée sous le chapeau : pas d’encadré, juste un filet
-   à gauche et l’italique. Reprend les variables de la section .plein. */
-.mot-inventrice{margin:clamp(26px,3.6vh,42px) auto 0;max-width:52ch;padding:0 0 0 22px;
-border-left:2px solid var(--sauge);text-align:left}
-.mot-inventrice p{margin:0;font:italic 400 clamp(17px,1.5vw,21px)/1.55 "Playfair Display",Georgia,serif;
-color:var(--nuit)}
-.mot-inventrice footer{margin:14px 0 0;font:600 11px/1.5 Montserrat,sans-serif;
-letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte)}
-.mot-inventrice footer i{font-style:normal;padding:0 7px;opacity:.5}
-
-
-
-</style>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -575,336 +159,272 @@ letter-spacing:.2em;text-transform:uppercase;color:var(--sauge-texte)}
  ]
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0E1C35;--paper:#FBF9F6;--cream:#eee7df;--rose:#c98780;--line:#d8d0c8}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--paper);font-family:"DM Sans",sans-serif}.ribbon{height:30px;padding:8px;text-align:center;background:var(--ink);color:white;font-size:.6rem;text-transform:uppercase;letter-spacing:.18em}.nav{height:82px;padding:0 4vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}a{color:inherit}.brand{text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:.2em}.brand sup{font-size:.4em}.nav nav{display:flex;gap:30px}.nav nav a,.shop-link{font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;text-decoration:none}.shop-link{justify-self:end;border-bottom:1px solid;padding-bottom:5px}.practical-hero{min-height:760px;display:grid;grid-template-columns:56% 44%}.practical-hero__film{position:relative;overflow:hidden;background:#222}.practical-hero video{width:100%;height:100%;object-fit:cover;filter:saturate(.75) contrast(1.06)}.practical-hero__film:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.35),transparent 45%)}.stamp{position:absolute;z-index:1;left:38px;bottom:38px;color:#fff;display:flex;align-items:center;gap:12px}.stamp>span{font:500 5rem "Playfair Display",serif;line-height:.7}.stamp small{text-transform:uppercase;letter-spacing:.13em;line-height:1.4}.practical-hero__copy{background:var(--cream);padding:7vw 5vw;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.kicker{text-transform:uppercase;font-size:.64rem;letter-spacing:.19em;margin:0 0 25px}.kicker:before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;vertical-align:middle;margin-right:10px}h1,h2,h3{font-family:"Playfair Display",serif}h1{font-size:clamp(4.2rem,7vw,8rem);line-height:.82;letter-spacing:-.055em;margin:0}h1 em,h2 em,h3 em{font-weight:500;color:#A46661}.practical-hero__copy>p:not(.kicker){line-height:1.7;max-width:460px;margin:38px 0}.cta{display:inline-flex;justify-content:space-between;min-width:220px;gap:35px;padding:16px 18px;border:1px solid;text-decoration:none;text-transform:uppercase;font-size:.66rem;letter-spacing:.13em}.cta--dark{background:var(--ink);color:white;border-color:var(--ink)}.manifesto{padding:52px 5vw;background:var(--ink);color:white;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.manifesto p{margin:0;font:500 clamp(1.2rem,2vw,2rem) "Playfair Display",serif}.manifesto .accent{color:#e4b7b1}.compare{padding:120px 6vw}.compare__head{display:flex;justify-content:space-between;align-items:start}.compare h2,.weight h2,.chapters>header h2,.hygiene h2,.less h2{font-size:clamp(3.3rem,6vw,7rem);line-height:.9;letter-spacing:-.05em;margin:0}.compare__cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:70px}.compare__cards article{min-height:520px;padding:40px;display:flex;flex-direction:column}.compare__cards article>span{text-transform:uppercase;letter-spacing:.14em;font-size:.63rem}.compare__cards article>p{margin-top:auto;max-width:450px;line-height:1.6;font-size:.86rem}.before{background:#ece6df}.objects{margin:auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.objects i{font:italic 1.2rem "Playfair Display",serif;padding:28px;border:1px solid #bfb6ae;text-decoration:line-through;text-decoration-color:var(--rose)}.after{background:#c7d9d5;position:relative;overflow:hidden}.after img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply;opacity:.7}.after>*{position:relative;z-index:1}.weight{padding:100px 7vw;background:#d9cbc0;display:grid;grid-template-columns:1fr 1fr;align-items:center}.weight__number{font:500 clamp(10rem,24vw,24rem)/.7 "Playfair Display",serif;letter-spacing:-.08em}.weight__number small{font-size:.15em;letter-spacing:0}.weight>div:last-child>p:not(.kicker){max-width:470px;line-height:1.7}.weight .quiet{font:italic 1.25rem "Playfair Display",serif}.chapters{padding:120px 6vw}.chapters>header{margin-bottom:90px}.chapter{display:grid;grid-template-columns:42% 58%;min-height:650px;margin-bottom:24px;background:#eee8e1}.chapter--reverse{grid-template-columns:58% 42%}.chapter--reverse .chapter__copy{order:2}.chapter__copy{padding:65px;align-self:center}.num{font-size:.62rem;letter-spacing:.16em}.removed{text-transform:uppercase;letter-spacing:.15em;font-size:.65rem;color:#8e5853;margin:45px 0 12px}.chapter h3{font-size:clamp(2.8rem,4vw,5rem);line-height:.92;letter-spacing:-.04em;margin:0 0 28px}.chapter__copy>p:not(.num,.removed){line-height:1.7;font-size:.9rem}.chapter ul{list-style:none;padding:0;margin:25px 0}.chapter li{padding:10px 0;border-bottom:1px solid #cfc5bc;font-size:.76rem}.demo{position:relative;overflow:hidden;min-height:500px}.demo img{width:100%;height:100%;object-fit:cover}.demo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.48),transparent 40%)}.demo span{position:absolute;z-index:1;left:28px;bottom:24px;color:#fff;text-transform:uppercase;font-size:.62rem;letter-spacing:.15em}.hygiene{background:var(--ink);color:white;padding:110px 7vw;display:grid;grid-template-columns:1.2fr .8fr;gap:10vw}.hygiene>div>p:not(.kicker){line-height:1.7;max-width:640px;color:#c6bdb7}.hygiene blockquote{font:italic 1.35rem/1.5 "Playfair Display",serif;margin:45px 0 0;padding-left:22px;border-left:2px solid var(--rose)}.hygiene cite{display:block;font:500 .6rem "DM Sans";text-transform:uppercase;letter-spacing:.14em;margin-top:15px}.hygiene__steps{align-self:end}.hygiene__steps p{display:grid;grid-template-columns:46px 1fr;align-items:center;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.2);font-size:.78rem}.hygiene__steps span{width:32px;height:32px;display:grid;place-items:center;border:1px solid;border-radius:50%;font-size:.6rem}.less{text-align:center;padding:120px 6vw}.less .kicker:before{display:none}.less h2{max-width:1000px;margin:auto}.less>div{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:48px 0}.less>div span{padding:12px 16px;border:1px solid var(--line);font-size:.7rem;text-transform:uppercase;letter-spacing:.1em}.less .cta{margin:auto}footer{padding:50px 5vw;background:var(--ink);color:white;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}footer p{font:italic 1rem "Playfair Display",serif}footer p span{text-decoration:line-through;text-decoration-color:var(--rose)}footer>a:last-child{justify-self:end;text-transform:uppercase;font-size:.66rem;letter-spacing:.12em}@media(max-width:850px){.nav{grid-template-columns:1fr auto}.nav nav{display:none}.practical-hero{grid-template-columns:1fr}.practical-hero__film{min-height:500px}.practical-hero__copy{padding:80px 24px}.manifesto{grid-template-columns:1fr 1fr;padding:40px 24px}.compare,.chapters,.less{padding:80px 24px}.compare__head{display:block}.compare__cards,.weight,.hygiene{grid-template-columns:1fr}.compare__cards article{min-height:430px}.weight{padding:80px 24px;gap:70px}.weight__number{font-size:45vw}.chapter,.chapter--reverse{grid-template-columns:1fr}.chapter--reverse .chapter__copy{order:0}.chapter__copy{padding:45px 24px}.demo{min-height:420px}.hygiene{padding:80px 24px}.hygiene__steps{margin-top:40px}footer{grid-template-columns:1fr;gap:18px;text-align:center}footer>a:last-child{justify-self:center}}@media(max-width:520px){.manifesto{grid-template-columns:1fr}.practical-hero__film{min-height:390px}.compare__cards{grid-template-columns:1fr}.objects i{padding:18px}.chapter{min-height:0}.demo{min-height:320px}.stamp{left:20px;bottom:24px}}
+
+
+/* ══════════ ENTÊTE PREMIUM — commun à toutes les pages ══════════ */
+:root{--bb-navy:#0E1C35;--bb-ivoire:#FBF9F6;--bb-sauge:#8F9875;--bb-filet:rgba(14,28,53,.12)}
+.bb-bandeau{background:var(--bb-navy);color:#fff;text-align:center;padding:9px 16px;
+ font:600 .58rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.bb-entete{position:fixed;top:0;left:0;right:0;z-index:90;height:74px;padding:0 clamp(16px,4vw,42px);
+ display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+ background:transparent;border-bottom:1px solid transparent;
+ transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
+.bb-entete.bb-fige,.bb-entete.bb-opaque{background:rgba(251,249,246,.88);
+ -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:var(--bb-filet)}
+.bb-entete.bb-clair,.bb-entete.bb-clair .bb-logo,.bb-entete.bb-clair .bb-btn{color:#fff}
+.bb-entete,.bb-entete a,.bb-entete button{color:var(--bb-navy)}
+.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.bb-trait{display:block;width:20px;height:9px;position:relative}
+.bb-trait:before,.bb-trait:after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s ease}
+.bb-trait:before{top:0}.bb-trait:after{bottom:0}
+.bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.26em}
+.bb-logo sup{font-size:.38em;vertical-align:.9em;opacity:.7}
+.bb-actions{justify-self:end;display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
+.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.bb-panier{display:inline-flex;align-items:center;text-decoration:none}
+.bb-panier svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.4}
+.bb-cale{height:74px}
+
+/* ── le menu plein écran ── */
+.bb-menu{position:fixed;inset:0;z-index:100;background:var(--bb-navy);color:#fff;
+ opacity:0;visibility:hidden;transform:translateY(-14px);transition:opacity .4s ease,transform .4s ease,visibility .4s;
+ overflow-y:auto;padding:clamp(24px,5vw,48px)}
+.bb-menu.bb-ouvert{opacity:1;visibility:visible;transform:none}
+.bb-menu-tete{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(40px,8vh,90px)}
+.bb-menu-tete .bb-logo{justify-self:auto;color:#fff}
+.bb-fermer{background:none;border:0;color:#fff;cursor:pointer;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,4vw,56px);max-width:1280px;margin:0 auto}
+.bb-grille h2{font:500 clamp(1.5rem,2.4vw,2.2rem)/1.1 "Playfair Display",Georgia,serif;
+ margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18);color:#fff}
+.bb-grille a,.bb-grille span{display:block;text-decoration:none;color:rgba(255,255,255,.78);
+ padding:9px 0;font:400 .92rem/1.4 "DM Sans",Montserrat,sans-serif;transition:color .2s}
+.bb-grille a:hover{color:#fff}
+.bb-grille span{color:var(--bb-sauge)}
+.bb-menu-pied{max-width:1280px;margin:clamp(40px,7vh,80px) auto 0;padding-top:24px;
+ border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;gap:10px 28px;
+ font:400 .78rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.62)}
+.bb-menu-pied a{color:rgba(255,255,255,.62);text-decoration:none}
+.bb-menu-pied a:hover{color:#fff}
+body.bb-bloque{overflow:hidden}
+
+/* ── le pied de page ── */
+.bb-pied{background:var(--bb-navy);color:rgba(255,255,255,.74);padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px}
+.bb-pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(24px,3vw,46px);max-width:1280px;margin:0 auto}
+.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;
+ text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
+.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;
+ padding:4px 0;font:400 .84rem/1.5 "DM Sans",Montserrat,sans-serif}
+.bb-pied a:hover{color:#fff}
+.bb-pied .bb-logo{display:inline-block;color:#fff;margin-bottom:14px}
+.bb-signature{font:italic 1rem/1.4 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 18px}
+.bb-signature i{font-style:normal;text-decoration:line-through;text-decoration-color:var(--bb-sauge)}
+.bb-pied-achat{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
+ background:var(--bb-sauge);color:var(--bb-navy)!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;
+ border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;
+ justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
+
+@media(max-width:900px){
+ .bb-grille{grid-template-columns:1fr 1fr}
+ .bb-pied-grille{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+ .bb-entete{height:64px}.bb-cale{height:64px}
+ .bb-btn span:not(.bb-trait){display:none}
+ .bb-boutique{display:none}
+ .bb-logo{font-size:1rem;letter-spacing:.2em}
+ .bb-grille,.bb-pied-grille{grid-template-columns:1fr}
+ .bb-copy{justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.bb-entete,.bb-menu{transition:none}}
+
+
+/* ══ ses couleurs, section par section ══ */
+:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;
+      --bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
+h1 em{color:var(--bb-terre-pale)}
+.manifesto h2 em,.chapters h2 em{color:var(--bb-terre)}
+.compare h2 em,.weight h2 em{color:var(--bb-sauge-titre)}
+.hygiene h2 em,.less h2 em{color:var(--bb-sauge-clair)}
+.bb-cale{height:108px}
+
+
+/* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
+footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+ color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
+footer.bb-pied p{font:inherit}
+footer.bb-pied p span{text-decoration:none}
+footer.bb-pied>a:last-child{justify-self:auto;font-size:inherit;text-transform:none;letter-spacing:normal}
+footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
+@media(max-width:900px){footer.bb-pied{grid-template-columns:none!important;gap:0;text-align:left}
+ footer.bb-pied>a:last-child{justify-self:auto}}
+
+/* ══ le panneau de navigation ══ */
+.bb-voile{position:fixed;inset:0;z-index:88;background:transparent}
+.bb-voile[hidden]{display:none}
+.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;
+ background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);
+ border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);
+ padding:46px 75px;display:flex;flex-direction:column;
+ opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
+.bb-panneau[hidden]{display:none}
+.bb-panneau.bb-ouvert{opacity:1;transform:none}
+.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;
+ text-decoration:none;text-align:left;
+ font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);
+ border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
+.bb-panneau a:last-child,.bb-panneau span:last-child{border-bottom:0}
+.bb-panneau a:hover{color:var(--bb-sauge-fonce)}
+.bb-panneau span[aria-current]{color:var(--bb-sauge-fonce);cursor:default}
+@media(max-width:640px){
+ .bb-panneau{width:100%;top:93px;padding:34px 26px}
+ .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
+}
+
+/* ── le bouton MENU : deux traits puis le mot, toujours visible ── */
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn{gap:12px}
+@media(max-width:640px){.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}}
+
+/* ── les titres de colonnes du pied gardent leur taille ── */
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
+ letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
+ margin:0 0 16px!important;line-height:1.4!important}
+</style>
 </head>
 <body>
-<!-- ══════════ 0 · ENTÊTE ══════════ -->
-<div class="annonce">
-<div class="shell annonce-in">
-<b>Expédié de France le jour même</b><i>·</i>
-<span>Livraison en 3 jours ouvrés</span>
-<i>·</i>
-<span>Point relais offert · domicile 3,50 €</span>
-</div>
-</div>
-
-<header class="header">
-<div class="shell nav">
-<a aria-label="BIBEON — accueil" class="brand" href="/#accueil"><img alt="BIBEON" height="34" src="assets/logo-bibeon.svg" width="135"/></a>
-<nav aria-label="Navigation principale" class="nav-links" id="menu">
-<a href="/">Accueil</a>
-<a href="voyage.html">Voyager avec bébé</a>
-<a aria-current="page" href="biberon-pratique.html">Le biberon pratique</a>
-<a href="mode-demploi.html">Mode d’emploi</a>
-<a href="legerete.html">La légèreté</a>
-<a href="conseils.html">Nos conseils</a>
-<a href="qui-sommes-nous.html">Qui sommes-nous</a>
-<a href="contact.html">Contact</a>
-</nav>
-<button class="burger" type="button" id="burger" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">Menu</button>
-<div class="nav-tel">
-<a href="tel:+33611768407"><b>Commandes</b> 06 11 76 84 07</a>
-</div>
-<div class="nav-outils">
-<a class="nav-achat" href="boutique.html">Boutique</a>
-</div>
-</div>
+<div class="bb-bandeau">Fabriqué en France</div>
+<header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
+  <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+    <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
+  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <div class="bb-actions">
+    <a class="bb-boutique" href="boutique.html">Boutique</a>
+    <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+  </div>
 </header>
-<main>
+<div class="bb-voile" id="bb-voile" hidden></div>
+<nav class="bb-panneau" id="bb-menu" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><span aria-current="page">Le biberon pratique</span><a href="mode-demploi.html">Mode d’emploi</a><a href="voyage.html">Voyager avec bébé</a><a href="legerete.html">La légèreté</a><a href="boutique.html">La boutique</a></nav>
+<div class="bb-cale"></div>
 
-<!-- ══════════ HERO (page en ligne, image remplacée) ══════════ -->
-<!-- ══════════ HERO ══════════ -->
-<section class="hero hero-eclipse hero-question" id="accueil">
-<img alt="Cinq BIBEON repliés et fermés, chacun pré-dosé de lait en poudre : abricot, rose, menthe, lilas, lin." class="hero-fond" src="assets/cinq-bibeon-pre-doses.webp" width="1792" height="1008"/>
-<div aria-hidden="true" class="hero-voile"></div>
-<div class="shell hero-contenu">
-<p class="overline">Le biberon pratique</p>
-<h1>Pourquoi ce petit biberon est-il si pratique pour les sorties&nbsp;?</h1>
-<p class="hero-triade">Moins à porter.<br/>Moins à démonter.<br/>Moins à laver.<br/>Moins de gestes quand bébé a faim.</p>
+  <main>
+    <section class="practical-hero">
+      <div class="practical-hero__film"><video autoplay muted loop playsinline preload="none" poster="assets/sortir-leger.webp" data-geste aria-label="Un BIBEON replié au milieu des accessoires de biberon qu’il remplace"><source src="assets/toutes-les-formes.mp4" type="video/mp4"></video><div class="stamp"><span>4</span><small>accessoires<br>en moins</small></div></div>
+      <div class="practical-hero__copy"><p class="kicker">Le biberon pratique</p><h1>Moins<br>d’objets.<br><em>Plus de sortie.</em></h1><p>Un biberon rigide, une boîte doseuse, un mélangeur et un obturateur : quatre objets pour un repas. BIBEON réunit leurs fonctions.</p><a class="cta" href="#principe">Voir comment <span>↓</span></a></div>
+    </section>
+
+    <section class="manifesto"><p>Moins à porter.</p><p>Moins à démonter.</p><p>Moins à laver.</p><p class="accent">Moins de gestes quand bébé a faim.</p></section>
+
+    <section class="compare" id="principe">
+      <div class="compare__head"><p class="kicker">01 · Le transport</p><h2>Tout ce qui<br><em>ne part plus.</em></h2></div>
+      <div class="compare__cards"><article class="before"><span>Avant</span><div class="objects"><i>Biberon</i><i>Doseur</i><i>Mélangeur</i><i>Obturateur</i></div><p>Quatre objets pour un seul repas. À transporter, chercher, manipuler, laver et sécher.</p></article><article class="after"><span>Avec BIBEON</span><img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="Quatre BIBEON repliés face à quatre biberons rigides et leurs accessoires" loading="lazy"><p>Un seul objet. La dose de poudre voyage déjà dedans.</p></article></div>
+    </section>
+
+    <section class="weight"><div class="weight__number">35<small>g</small></div><div><p class="kicker">02 · La légèreté</p><h2>Sans faire<br><em>fragile.</em></h2><p>Environ 35 grammes, tétine et capuchon compris. Peu de masse à tenir, un corps étroit et 9,5 cm une fois replié.</p><p class="quiet">Léger ne veut pas dire moins conçu.</p></div></section>
+
+    <section class="chapters" id="gestes">
+      <header><p class="kicker">Le principe</p><h2>Il enlève.<br><em>Il simplifie.</em></h2></header>
+      <article class="chapter"><div class="chapter__copy"><p class="num">03</p><p class="removed">Sans boîte doseuse</p><h3>La dose voyage<br>dans le biberon.</h3><p>Versez la poudre chez vous, dans un flacon propre et parfaitement sec. Dehors, ajoutez simplement l’eau.</p><ul><li>Rien à transvaser</li><li>Rien à chercher au fond du sac</li><li>Une pièce de moins à laver</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le BIBEON replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video><span>Film 01 · Pré-doser</span></div></article>
+      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="num">04</p><p class="removed">Sans mélangeur</p><h3>Il est son<br>propre shaker.</h3><p>À l’intérieur, les creux des soufflets brisent les amas de poudre quand vous secouez.</p><ul><li>Pas de grille séparée</li><li>Moins de grumeaux</li><li>Rien à laver à part</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait préparé dans le BIBEON traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video><span>Film 02 · Mélanger</span></div></article>
+      <article class="chapter"><div class="chapter__copy"><p class="num">05</p><p class="removed">Sans valve</p><h3>On n’ajoute pas.<br><em>On enlève l’air.</em></h3><p>Le lait descend. BIBEON aussi. Abaissez les soufflets jusqu’au niveau du lait, puis coudez légèrement le flacon.</p><ul><li>Moins d’espace d’air</li><li>La tétine reste pleine</li><li>Le volume suit le repas</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait pendant la tétée"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video><span>Film 03 · Abaisser</span></div></article>
+      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="num">06</p><p class="removed">Sans obturateur</p><h3>Il comprime.<br>Il protège.</h3><p>Le toit plat du capuchon comprime la tétine dans sa base et obture son orifice.</p><ul><li>Le bloc reste fermé</li><li>La tétine ne touche pas la table</li><li>Trois pièces deviennent un bloc</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon vissé puis dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video><span>Film 04 · Fermer</span></div></article>
+    </section>
+
+    <section class="hygiene" id="hygiene"><div><p class="kicker">07 · Dehors</p><h2>Tout se passe<br><em>par l’extérieur.</em></h2><p>Sur un banc, dans un train ou à la terrasse d’un café, les mains ne sont pas toujours impeccables. Le bloc bague–tétine–capuchon se manipule par le capuchon : les doigts ne touchent ni la tétine ni le lait.</p><blockquote>« Je voulais un biberon qu’on puisse donner après avoir changé une roue, sans avoir pu se laver les mains. »<cite>Suzanne de Bégon · Inventrice</cite></blockquote></div><div class="hygiene__steps"><p><span>1</span>Dévisser le bloc solidaire.</p><p><span>2</span>Le poser à l’envers sur sa face plate.</p><p><span>3</span>Ajouter l’eau, sans toucher la tétine.</p></div></section>
+
+    <section class="less"><p class="kicker">Finalement</p><h2>Un biberon dessiné<br>pour <em>tout remplacer.</em></h2><div><span>Moins lourd.</span><span>Moins encombrant.</span><span>Moins de pièces.</span><span>Moins d’air.</span><span>Moins de gestes.</span></div><a class="cta cta--dark" href="boutique.html">Choisir mon BIBEON <span>→</span></a></section>
+  </main>
+
+  
+<footer class="bb-pied">
+<div class="bb-pied-grille">
+ <div>
+  <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
+  <p class="bb-signature">Le bibe<i>r</i>on, l’R en moins.</p>
+  <a class="bb-pied-achat" href="boutique.html">Boutique</a>
+ </div>
+ <div><h3>BIBEON en détail</h3>
+  <a href="biberon-pratique.html">Le biberon pratique</a>
+  <a href="legerete.html">La légèreté</a>
+  <a href="mode-demploi.html">Mode d’emploi</a>
+  <a href="voyage.html">Voyager avec bébé</a>
+  <a href="notre-parti-pris.html">Notre parti pris</a></div>
+ <div><h3>Les preuves</h3>
+  <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
+  <a href="migration.html">Migration et contact alimentaire</a>
+  <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
+  <a href="conseils.html">Nos conseils</a></div>
+ <div><h3>La maison</h3>
+  <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+  <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
+  <a href="contact.html">Nous contacter</a>
+  <a href="livraison-et-retours.html">Livraison et retours</a>
+  <a href="cgv.html">Conditions générales de vente</a>
+  <a href="mentions-legales.html">Mentions légales</a>
+  <a href="confidentialite.html">Politique de confidentialité</a></div>
 </div>
-</section>
-
-<!-- ══════════ 00 · TOUT DEDANS ══════════ -->
-<section id="tout-dedans" class="plein" aria-labelledby="tout-dedans-titre">
-  <h2 id="tout-dedans-titre" class="e-titre">Pensé de bout en bout <em>pour l’extérieur.</em></h2>
-  <p class="moins-intro">Chaque détail a été dessiné pour un seul usage : le biberon hors de la maison. Moins de pièces à sortir et à poser quelque part, c’est moins d’occasions de salir ce qui touchera la bouche de bébé. Rien de ce que vous manipulez n’entre en contact avec le lait ni avec la tétine.</p>
-  <blockquote class="mot-inventrice">
-    <p>« Je voulais un biberon qu’on puisse donner après avoir changé une roue, sans avoir pu se laver les mains — parce que rien de ce qu’on touche n’entre en contact avec le lait ni avec la tétine. »</p>
-    <footer>Suzanne de Bégon<i>·</i>inventrice</footer>
-  </blockquote>
-  <figure><img src="assets/sortir-leger.webp" alt="Un BIBEON doré, replié, au milieu des accessoires de biberon qu’il remplace" width="2000" height="1124" loading="lazy"></figure>
-</section>
-
-<!-- ══════════ 01 · LE TRANSPORT ══════════ -->
-<section id="transport" class="e" aria-labelledby="transport-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">01 · Le transport</p>
-    <h2 id="transport-titre" class="e-titre">Moins d’objets. <em>Moins de poids.</em></h2>
-    <ul class="e-lignes">
-      <li>Un biberon rigide, une boîte doseuse, un obturateur, un mélangeur : quatre objets pour un repas. BIBEON intègre leurs fonctions, il n’en reste qu’un.</li>
-      <li>Replié, il tient dans la moitié de la hauteur d’un biberon classique — et la dose de lait voyage déjà dedans.</li>
-      <li>Quatre BIBEON pré-dosés pèsent ce que pèsent quatre boîtes doseuses. Les biberons vides, c’est du poids en plus, à l’aller comme au retour.</li>
-    </ul>
-    <p class="e-chute">Moins à porter, dans tous les sens du mot.</p>
-  </div>
-  <figure class="e-visuel droite">
-    <img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="À gauche, quatre BIBEON repliés dans un petit sac ; à droite, quatre doseurs, quatre biberons rigides et un grand sac à langer" width="1568" height="1264" loading="lazy" class="large">
-    <figcaption>Moins de poids, moins d’encombrement</figcaption>
-  </figure>
-</section>
-
-<!-- ══════════ 02 · LA LÉGÈRETÉ ══════════ -->
-<section id="legerete" class="e" aria-labelledby="legerete-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">02 · La légèreté</p>
-    <h2 id="legerete-titre" class="e-titre">35 g. <em>Sans faire fragile.</em></h2>
-    <ul class="e-lignes">
-      <li>Environ 35 g, tout compris.</li>
-      <li>Peu de masse à tenir, un corps étroit : il tient sur un doigt.</li>
-      <li>Aussi léger sans être fragile, c’est là que le travail a été long.</li>
-    </ul>
-    <p class="e-chute">Léger ne veut pas dire moins conçu.</p>
-    <p class="e-lien"><a href="legerete.html">Pourquoi si léger →</a></p>
-  </div>
-  <figure class="e-visuel droite">
-    <img src="assets/bibeon-sur-un-doigt.webp" alt="Un BIBEON lilas replié, en équilibre sur le bout d’un index, fond clair." width="1086" height="1448" loading="lazy">
-  </figure>
-</section>
-
-<!-- ══════════ 01b · LES DIMENSIONS ══════════ -->
-<section id="dimensions" class="plein" aria-labelledby="dims-titre">
-  <h2 id="dims-titre" class="e-titre">Ses dimensions, <em>replié.</em></h2>
-  <figure><img src="assets/dimensions-bibeon-trois-vues.webp" alt="Dimensions du BIBEON replié : 9,5 cm de haut, capuchon Ø 4,5 cm, base Ø 6,5 cm ; trois vues avec les graduations poudre, ml et oz" width="1448" height="936" loading="lazy">
-    <figcaption>Gradué en doses de poudre, en millilitres et en onces.</figcaption></figure>
-</section>
-
-<!-- ══════════ 03 · LE DOSEUR ══════════ -->
-<section id="doseur" class="e" aria-labelledby="doseur-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">03 · Pas besoin de boîte doseuse</p>
-    <h2 id="doseur-titre" class="e-titre">Ce que la boîte doseuse <em>supposait.</em></h2>
-    <ul class="e-lignes">
-      <li><s>La transporter, aller et retour, même vide.</s></li>
-      <li><s>La chercher au fond du sac.</s></li>
-      <li><s>Transvaser, sans en mettre à côté.</s></li>
-      <li><s>La laver au retour. La sécher.</s></li>
-    </ul>
-    <p class="e-chute">La dose voyage dans le biberon.</p>
-    <p class="e-lien"><a href="mode-demploi.html#doser">Comment doser →</a></p>
-    <p class="e-lien"><a href="transporter-lait-en-poudre.html">Transporter le lait en poudre : les quatre solutions →</a></p>
-  </div>
-  <figure class="e-visuel duo">
-    <div class="duo-item"><img src="assets/boite-doseuse-classique.webp" alt="Une boîte doseuse remplie de lait en poudre à côté d’un biberon rigide vide : deux objets à transporter" width="1400" height="1120" loading="lazy"><figcaption>Avant</figcaption></div>
-    <div class="duo-item"><video src="assets/dose-lait-poudre-cuillere.mp4" poster="assets/dose-lait-poudre-cuillere.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Deux cuillerées de lait en poudre dans le BIBEON replié, le capuchon, on secoue."></video><figcaption>Avec BIBEON</figcaption></div>
-  </figure>
-</section>
-
-<!-- ══════════ 04 · LES GRUMEAUX ══════════ -->
-<section id="grumeaux" class="e" aria-labelledby="grumeaux-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">04 · Pas besoin de mélangeur anti-grumeaux</p>
-    <h2 id="grumeaux-titre" class="e-titre">Il est son propre <em>shaker.</em></h2>
-    <ul class="e-lignes">
-      <li>Déployés, les soufflets forment à l’intérieur une succession de creux.</li>
-      <li>En secouant, les amas de poudre s’y brisent et se dispersent : BIBEON est son propre shaker.</li>
-      <li>Pas de mélangeur anti-grumeaux, pas de grille, rien à laver séparément.</li>
-    </ul>
-    <p class="e-lien"><a href="mode-demploi.html#eau">Préparer un lait sans grumeaux →</a></p>
-  </div>
-  <figure class="e-visuel droite">
-    <video src="assets/lait-au-tamis-sans-grumeaux.mp4" poster="assets/lait-au-tamis-sans-grumeaux.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Le lait préparé dans BIBEON est versé à travers un tamis : il reste vide, aucun grumeau."></video>
-  </figure>
-</section>
-
-<!-- ══════════ 05 · L’AIR ══════════ -->
-<section id="air" class="e" aria-labelledby="air-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">05 · Pas besoin de valve</p>
-    <h2 id="air-titre" class="e-titre">On n’ajoute pas une valve. <em>On enlève l’air.</em></h2>
-    <ul class="e-lignes">
-      <li>Le lait descend. BIBEON aussi.</li>
-      <li>Le lait diminue. Abaissez les soufflets jusqu’à son niveau. Moins d’espace d’air dans le flacon.</li>
-      <li>En fin de tétée, coudez légèrement BIBEON. La tétine reste pleine de lait.</li>
-    </ul>
-    <p class="e-chute">Le volume et la forme s’adaptent. À la demande.</p>
-  </div>
-  <figure class="e-visuel">
-    <video src="assets/reduction-avec-lait.mp4" poster="assets/reduction-avec-lait.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Les soufflets s’abaissent jusqu’au niveau du lait, puis le flacon se coude."></video>
-  </figure>
-<figure class="e-bande"><img src="assets/deploye-a-moitie-abaisse.webp" alt="Quatre étapes : déployé avec de l’air au-dessus du lait, abaissé jusqu’au lait ; le lait baisse, on abaisse encore." width="1530" height="839" loading="lazy" class="entiere"><figcaption>Le lait descend, BIBEON aussi : à chaque étape, moins d’air au-dessus.</figcaption></figure></section>
-
-<!-- ══════════ 06 · LE CAPUCHON (fusion des anciens 05 et 07) ══════════ -->
-<section id="capuchon" class="e" aria-labelledby="capuchon-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">06 · Pas besoin d’obturateur</p>
-    <h2 id="capuchon-titre" class="e-titre">Il est plat. Il est stable. <em>Il comprime.</em></h2>
-    <ul class="e-lignes">
-      <li>Le capuchon comprime la tétine dans sa base et se serre sur l’épaulement de la bague : deux centimètres gagnés, et trois pièces devenues un seul bloc.</li>
-      <li>Son toit plat vient obturer l’orifice de la tétine rentrée. Le biberon est <strong>hermétique</strong> et sans fuite de liquide — l’obturateur devient inutile.</li>
-      <li>Retourné, le bloc repose sur la face plate du capuchon. La tétine pointe vers le haut, sans jamais toucher la table.</li>
-    </ul>
-    <p class="e-chute">Une seule pièce, trois contraintes en moins.</p>
-  </div>
-  <figure class="e-visuel droite">
-    <video src="assets/ferme-retourne-rouvert-sec.mp4" poster="assets/ferme-retourne-rouvert-sec.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="Plein de lait, fermé, retourné sur son capuchon, puis rouvert : sec."></video>
-  </figure>
-</section>
-
-
-<!-- ══════════ 07 · L’HYGIÈNE EN DÉPLACEMENT ══════════ -->
-<section id="gestes" class="e" aria-labelledby="gestes-titre">
-  <div class="e-texte">
-    <p class="e-eyebrow">07 · L’hygiène en déplacement</p>
-    <h2 id="gestes-titre" class="e-titre">Dans une cuisine, c’est facile. <em>Dehors, beaucoup moins.</em></h2>
-    <ul class="e-lignes">
-      <li>Sur un banc, dans un train, à la terrasse d’un café : les mains ne sont pas toujours propres, et il n’y a pas de plan de travail.</li>
-      <li>Le bloc — bague, tétine, capuchon — se dévisse et se repose d’un seul geste. Les doigts tiennent le capuchon, jamais la tétine.</li>
-      <li>Si la tétine reste rentrée, le bord du capuchon la déloge — toujours sans les doigts.</li>
-    </ul>
-    <p class="e-chute">Tout se passe par l’extérieur.</p>
-  </div>
-  <figure class="e-visuel">
-    <video src="assets/fermer-devisser-poser-a-lenvers.mp4" poster="assets/fermer-devisser-poser-a-lenvers.jpg" width="720" height="1280" autoplay muted loop playsinline preload="metadata" data-play-visible class="v" aria-label="On ferme le capuchon sur la tétine, on dévisse le bloc d’un geste, on le pose à l’envers sur son capuchon."></video>
-  </figure>
-</section>
-
-
-<!-- ══════════ 08 · FINALEMENT ══════════ -->
-<section id="conclusion" class="plein" aria-labelledby="moins-titre">
-  <h2 id="moins-titre" class="e-titre">Finalement, <em>c’est quoi ?</em></h2>
-  <p class="moins-intro">Ce n’est pas un capuchon intelligent qu’il faudrait admirer. Ni des soufflets qu’il faudrait venir étudier. C’est ce qu’ils permettent de ne plus subir.</p>
-  <ul class="moins-liste">
-    <li>Moins lourd.</li><li>Moins encombrant.</li><li>Moins de pièces.</li><li>Moins à démonter et à laver.</li>
-    <li>Moins de grumeaux.</li><li>Moins d’air à avaler.</li><li>Moins de risques de fuite.</li><li>Moins de gestes à faire dehors, pendant que bébé a faim.</li>
-  </ul>
-  <p class="moins-chute">BIBEON n’a pas été dessiné pour avoir davantage de fonctions visibles.<br><em>Il a été dessiné pour laisser moins de contraintes aux parents.</em></p>
-</section>
-
-<!-- ══════════ PORTE DE LA BOUTIQUE ══════════ -->
-<section id="porte-boutique" class="porte" aria-labelledby="porte-titre">
-  <p class="porte-eyebrow">La boutique</p>
-  <h2 id="porte-titre" class="porte-titre">Cinq coloris. <em>À partir de 35 €.</em></h2>
-
-  <figure class="porte-visuel">
-<img src="assets/cinq-coloris-chambre.webp" width="1280" height="720" alt="Les cinq BIBEON dépliés, tétine en place, dans une chambre de bébé." loading="lazy">
-  </figure>
-
-  <p class="porte-coloris">Lin<i>·</i>Menthe<i>·</i>Rose<i>·</i>Lilas<i>·</i>Abricot</p>
-  <p class="porte-conditions">Point relais offert<i>·</i>domicile 3,50 €<i>·</i>retour offert sous 30 jours</p>
-  <p class="porte-cta"><a href="boutique.html">Voir les BIBEONS <span>→</span></a></p>
-</section>
-
-
-<!-- ══════════ SIGNATURE ══════════ -->
-<section aria-label="Le nom" class="usp nom nom-fin">
-<div class="shell">
-<img alt="BIBEON" class="nom-logo" height="34" src="assets/logo-bibeon.svg" width="135"/>
-<p class="baseline nom-baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</p>
-</div>
-
-</section>
-
-</main>
-
-<footer id="contact">
-<div class="shell footer-grid">
-<div class="footer-col">
-<a aria-label="BIBEON — accueil" class="brand" href="/#accueil"><svg aria-label="BIBEON" class="brand-logo" role="img" viewbox="0 0 901 227"><g fill="currentColor" fill-rule="evenodd" transform="translate(0,227) scale(0.1,-0.1)"><path d="M8830 2245 c-80 -18 -197 -59 -270 -96 -155 -78 -271 -212 -299 -347
--12 -57 -15 -274 -4 -285 3 -4 27 31 53 78 57 100 162 238 222 290 47 40 171
-125 183 125 4 0 -42 -51 -104 -112 -61 -62 -127 -135 -147 -163 -39 -54 -128
--224 -121 -231 8 -8 322 96 387 128 107 52 188 146 236 274 30 80 48 221 37
-294 l-8 55 -50 2 c-28 1 -79 -5 -115 -12z M6130 1344 c-265 -40 -441 -157 -540 -359 -54 -109 -70 -179 -70
--306 0 -190 51 -326 168 -451 84 -89 156 -135 277 -178 l100 -35 195 0 c187 1
-198 2 274 28 240 84 405 261 452 487 21 98 14 259 -15 350 -74 234 -285 409
--549 455 -77 14 -229 18 -292 9z m232 -245 c176 -37 301 -174 330 -361 51
--336 -236 -569 -582 -472 -109 31 -194 107 -248 221 -25 54 -27 67 -27 189 l0
-130 38 76 c58 117 153 195 270 217 62 13 159 13 219 0z M60 1333 c-8 -3 -23 -12 -32 -21 -17 -14 -18 -57 -18 -632 0 -615 0
--617 21 -636 20 -18 42 -19 418 -19 424 0 456 3 556 52 70 34 138 105 171 177
-24 51 28 74 28 141 -2 131 -60 227 -170 281 l-54 26 41 30 c111 80 149 247 88
-388 -24 56 -95 127 -160 161 -97 49 -121 52 -509 55 -201 2 -372 1 -380 -3z
-m732 -263 c95 -64 89 -195 -12 -254 -32 -19 -54 -21 -262 -24 l-228 -3 0 156
-0 156 233 -3 c229 -3 234 -3 269 -28z m42 -526 c56 -29 79 -63 84 -126 5 -65
--22 -110 -83 -142 -37 -19 -60 -21 -292 -24 l-253 -4 0 162 0 162 253 -4 c232
--3 255 -5 291 -24z M1695 1316 l-25 -25 0 -615 0 -615 26 -20 c23 -18 41 -21 124 -21 81
-0 102 3 121 19 l24 19 0 621 c0 582 -1 621 -18 638 -14 14 -38 19 -122 21
--100 4 -105 3 -130 -22z M2513 1330 c-12 -5 -26 -18 -32 -29 -8 -13 -11 -216 -11 -625 0 -587
-1 -607 19 -625 11 -11 35 -23 54 -26 19 -4 205 -5 413 -3 411 5 446 9 540 64
-65 38 137 122 157 184 26 79 23 193 -7 255 -30 65 -88 122 -154 152 l-54 25
-29 18 c172 107 187 369 29 508 -110 96 -202 112 -635 111 -179 0 -336 -4 -348
--9z m708 -240 c145 -40 132 -248 -18 -289 -21 -6 -129 -11 -240 -11 l-203 0 0
-155 0 155 213 0 c116 0 228 -5 248 -10z m34 -531 c87 -24 141 -91 132 -165 -6
--53 -36 -96 -84 -120 -34 -17 -68 -19 -290 -22 l-253 -4 0 161 0 161 228 0
-c133 0 244 -5 267 -11z M4153 1330 c-12 -5 -26 -18 -32 -29 -8 -13 -11 -216 -11 -624 0 -581
-1 -606 19 -628 l19 -24 486 -3 c571 -3 526 -13 526 113 0 123 28 115 -405 115
-l-365 0 0 160 0 160 309 0 c262 0 310 2 321 15 18 22 15 151 -5 181 l-15 24
--305 0 -305 0 0 155 0 155 350 0 c417 0 390 -8 390 118 0 126 41 117 -499 119
--251 1 -466 -2 -478 -7z M7470 1333 c-40 -14 -40 -15 -40 -653 0 -516 2 -619 14 -636 12 -16
-29 -20 108 -22 83 -3 96 -1 120 18 l28 21 2 414 3 415 75 -93 c41 -50 175
--218 299 -372 123 -154 249 -309 279 -343 l55 -64 94 4 c80 2 97 6 109 22 12
-17 14 119 14 633 l0 614 -25 24 c-22 23 -32 25 -115 25 -83 0 -93 -2 -115 -25
-l-25 -24 0 -396 0 -396 -167 203 c-303 369 -456 552 -497 596 l-40 42 -81 -1
-c-44 0 -87 -3 -95 -6z"></path></g></svg></a>
-<p class="baseline">Le bibe<span class="r">r</span>on, l’R en moins<sup class="marque-r">®</sup>.</p>
-<p class="footer-intro">Le biberon nomade pliable, pensé pour alléger les sorties avec bébé.</p>
-<p class="footer-achat"><a href="boutique.html">Boutique</a></p>
-</div>
-<div class="footer-col">
-<h3>BIBEON en détail</h3>
-<a href="notre-parti-pris.html">Notre parti pris</a>
-<span>Le biberon pratique</span>
-<a href="mode-demploi.html">Mode d’emploi</a>
-<a href="legerete.html">La légèreté</a>
-<a href="voyage.html">Voyager avec bébé</a>
-<a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
-<a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
-<a href="migration.html">Migration</a>
-<a href="conseils.html">Nos conseils</a>
-</div>
-<div class="footer-col">
-<h3>La maison</h3>
-<a href="qui-sommes-nous.html">Qui sommes-nous</a>
-<a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
-<a href="mentions-legales.html">Mentions légales</a>
-<a href="cgv.html">Conditions générales de vente</a>
-<a href="livraison-et-retours.html">Livraison et retours</a>
-<a href="confidentialite.html">Politique de confidentialité</a>
-</div>
-<div class="footer-col">
-<h3>Nous contacter</h3>
-<a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
-<a href="tel:+33611768407">06 11 76 84 07</a>
-<span>Du lundi au vendredi, 9 h – 18 h</span>
-<span class="footer-fournisseurs">Fournisseurs et revendeurs<br/><a href="tel:+33427024415">04 27 02 44 15</a></span>
-</div>
-</div>
-<div class="shell copyright">
-<span>© <span id="annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
-<span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
+<div class="bb-copy">
+ <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
+ <span>Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
-
 <script>
-(function(){var a=document.querySelector("#annee");
-if(a) a.textContent=new Date().getFullYear();})();
 (function(){
-  var b=document.querySelector('.haut'); if(!b) return;
-  function maj(){ b.classList.toggle('visible', window.scrollY > 700); }
-  maj(); window.addEventListener('scroll', maj, {passive:true});
+ var e=document.getElementById('bb-entete'),o=document.getElementById('bb-ouvrir'),
+     f=document.getElementById('bb-fermer'),m=document.getElementById('bb-menu');
+ var a=document.getElementById('bb-annee'); if(a)a.textContent=new Date().getFullYear();
+ if(e&&e.dataset.hero==='oui'){
+   var maj=function(){var p=window.scrollY>60;
+     e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
+   maj(); window.addEventListener('scroll',maj,{passive:true});
+ }
+ if(!o||!m) return;
+ function etat(v){ m.classList.toggle('bb-ouvert',v);
+   o.setAttribute('aria-expanded',String(v));
+   document.body.classList.toggle('bb-bloque',v);
+   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
+ o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
+ if(f)f.addEventListener('click',function(){etat(false);});
+ m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
+ document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
-(function(){
-  var b=document.getElementById('burger'), m=document.getElementById('menu');
-  if(!b||!m) return;
-  function set(o){ m.classList.toggle('open',o); b.setAttribute('aria-expanded',String(o));
-    b.setAttribute('aria-label', o?'Fermer le menu':'Ouvrir le menu'); }
-  b.addEventListener('click',function(){ set(!m.classList.contains('open')); });
-  m.querySelectorAll('a').forEach(function(a){ a.addEventListener('click',function(){ set(false); }); });
-  document.addEventListener('keydown',function(e){ if(e.key==='Escape') set(false); });
-})();
+(function(){var v=document.querySelectorAll('video[data-geste]');
+ if(!v.length||!('IntersectionObserver' in window)) return;
+ var o=new IntersectionObserver(function(es){es.forEach(function(x){
+  if(x.isIntersecting){if(!x.target.dataset.pret){x.target.dataset.pret='1';x.target.load();}x.target.play().catch(function(){});}
+  else{x.target.pause();}});},{threshold:.2,rootMargin:'150px'});
+ v.forEach(function(x){o.observe(x);});})();
 </script>
 <script>
-(function(){var videos=document.querySelectorAll("video[data-play-visible]");if(videos.length&&"IntersectionObserver" in window){var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){var v=entry.target;if(entry.isIntersecting){v.play().catch(function(){});}else{v.pause();}});},{threshold:0.25});videos.forEach(function(v){obs.observe(v);});}})();
+(function(){
+ var b=document.getElementById('bb-ouvrir'),
+     p=document.getElementById('bb-menu'),
+     v=document.getElementById('bb-voile');
+ if(!b||!p) return;
+ var ouvert=false;
+ function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
+   requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
+   b.setAttribute('aria-expanded','true'); ouvert=true; }
+ function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','false'); ouvert=false;
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+ b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
+ if(v) v.addEventListener('click',fermer);
+ p.addEventListener('click',function(e){ e.stopPropagation(); });
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
+})();
 </script>
-
 </body>
 </html>
