@@ -850,15 +850,63 @@ body.bb-bloque{overflow:hidden}
  .bb-entete{top:29px}
  .bb-cale{height:93px}
 }
+
+.swatch.mint{background:var(--mint)}
+.swatch.rose{background:var(--rose)}
+
+/* ── l'entretien, au gabarit de la page ── */
+.care{display:grid;grid-template-columns:46% 54%;background:var(--ivory);align-items:stretch}
+.care-visuel{margin:0;overflow:hidden;background:var(--navy)}
+.care-visuel img{width:100%;height:100%;object-fit:cover;display:block}
+.care-texte{padding:clamp(60px,7vw,104px) clamp(26px,5vw,74px);align-self:center}
+.care-texte h2{font:500 clamp(2.5rem,4.4vw,5rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 26px}
+.care-texte h2 em{font-style:italic;font-weight:500;color:var(--sage)}
+.care-chapeau{max-width:46ch;margin:0 0 34px;font-size:.92rem;line-height:1.75;color:var(--ink)}
+.care-etapes{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--line)}
+.care-etapes li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:baseline;
+ padding:15px 0;border-bottom:1px solid var(--line)}
+.care-etapes b{font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:var(--terracotta-dark)}
+.care-etapes span{font-size:.85rem;line-height:1.6;color:var(--muted)}
+.care-interdit{margin:0 0 28px;font:600 .6rem/1.5 "DM Sans",sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta-dark)}
+@media(max-width:900px){.care{grid-template-columns:1fr}.care-visuel{min-height:380px}
+ .care-texte{padding:60px 24px}}
+
+/* ── la livraison, au gabarit de la page ── */
+.shipping{padding:clamp(70px,9vh,120px) 5vw;text-align:center;background:var(--paper)}
+.shipping .eyebrow:before{display:none}
+.shipping h2{font:500 clamp(2.5rem,4.6vw,5.4rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 46px}
+.shipping h2 em{font-style:italic;font-weight:500;color:var(--terracotta)}
+.ship-points{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+ max-width:860px;margin:0 auto 46px;padding:0;border-top:1px solid var(--line)}
+.ship-points li{padding:24px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ship-points li:last-child{border-right:0}
+.ship-points b{display:block;font:600 .6rem/1 "DM Sans",sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.ship-points span{display:block;margin-top:9px;font-size:.8rem;line-height:1.5;color:var(--muted)}
+@media(max-width:700px){.ship-points{grid-template-columns:1fr}.ship-points li{border-right:0}}
+
+/* ── les deux liens de ces sections, au gabarit de la page ── */
+.care .lien-detail,.shipping .bouton-principal{display:inline-flex;align-items:center;gap:32px;
+ border-bottom:1px solid;padding-bottom:7px;text-decoration:none;text-transform:uppercase;
+ letter-spacing:.12em;font:600 .64rem/1 "DM Sans",sans-serif;color:var(--navy)}
+.care .lien-detail:hover,.shipping .bouton-principal:hover{color:var(--terracotta-dark)}
+.care .eyebrow:before{background:var(--sage)}
+.care .eyebrow{color:var(--sage)}
+
+.bb-entete .bb-ici{color:var(--sage);cursor:default}
 </style>
 </head>
 <body>
-<div class="bb-bandeau">Point relais Mondial Relay offert · livré en 3 jours · retour offert sous 30 jours</div>
+<div class="bb-bandeau">Livraison offerte en point relais · Retour offert sous 30 jours</div>
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
   <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
   <div class="bb-actions">
+<span class="bb-boutique bb-ici">Boutique</span>
 <button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>
 </div>
 </header>
@@ -890,7 +938,7 @@ body.bb-bloque{overflow:hidden}
         </ul>
         <div class="product-information" aria-label="Informations produit">
           <details open><summary>Le produit <span>+</span></summary><p>Un flacon pliable de 330 ml, <strong>gradué de 30 ml en 30 ml</strong>, une bague, une tétine en silicone alimentaire à débit 6 mois et plus, et un capuchon. Le capuchon se fixe par serrage sur la bague. BIBEON accepte les tétines à <strong>col étroit</strong>, en silicone ou en caoutchouc.</p></details>
-          <details><summary>L’entretien <span>+</span></summary><div class="soins"><p class="soins-titre">Réchauffer</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M12 30h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8Z'/><path d='M20 26c0-4 8-4 8-8'/><path d='M26 26c0-4 8-4 8-8'/></svg><span>Bain-marie</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='7' y='14' width='34' height='22' rx='2'/><rect x='11' y='18' width='18' height='14'/><circle cx='35' cy='22' r='1.6'/><circle cx='35' cy='28' r='1.6'/></svg><span>Micro-ondes</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M16 10h16l-2 28a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4L16 10Z'/><path d='M17 24h14'/></svg><span>Chauffe-biberon</span></li></ul><p class="soins-titre">Laver</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 6v22'/><path d='M18 28h12l-1 12a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3l-1-12Z'/><path d='M20 10h8M20 15h8M20 20h8'/></svg><span>Au goupillon</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M14 34c0-8 6-12 10-12s10 4 10 12'/><path d='M16 22c2-5 5-8 8-8s6 3 8 8'/><path d='M12 40h24'/></svg><span>À la main</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 8c6 8 10 12 10 18a10 10 0 0 1-20 0c0-6 4-10 10-18Z'/></svg><span>Rincer, ébrouer</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M18 12h12l-1 26a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3L18 12Z'/><path d='M22 6h4'/><path d='M36 20l4-3M36 26h5M36 32l4 3'/></svg><span>Sécher à l’endroit</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='11' y='12' width='26' height='24' rx='2'/><path d='M17 18h14M17 24h14M17 30h9'/></svg><span>Sopalin en express</span></li></ul><p class="soins-titre soins-interdit">Jamais</p><ul class="soins-liste soins-non"><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='10' y='8' width='28' height='32' rx='2'/><circle cx='24' cy='24' r='8'/><path d='M12 44 36 4'/></svg><span>Lave-vaisselle</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M10 26h28v6a10 10 0 0 1-10 10h-8a10 10 0 0 1-10-10v-6Z'/><path d='M18 20c0-4 6-4 6-8'/><path d='M26 20c0-4 6-4 6-8'/><path d='M12 44 36 4'/></svg><span>Ébullition</span></li></ul><p class="soins-note">Le lavage quotidien se fait à la main, à l’eau chaude savonneuse. La paroi mobile donne accès à chaque pli. Laisser les dernières gouttes s’évaporer, flacon à l’endroit.</p></div></details>
+          <details><summary>L’entretien <span>+</span></summary><div class="soins"><p class="soins-titre">Réchauffer</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M12 30h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8Z'/><path d='M20 26c0-4 8-4 8-8'/><path d='M26 26c0-4 8-4 8-8'/></svg><span>Bain-marie</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='7' y='14' width='34' height='22' rx='2'/><rect x='11' y='18' width='18' height='14'/><circle cx='35' cy='22' r='1.6'/><circle cx='35' cy='28' r='1.6'/></svg><span>Micro-ondes</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M16 10h16l-2 28a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4L16 10Z'/><path d='M17 24h14'/></svg><span>Chauffe-biberon</span></li></ul><p class="soins-titre">Laver</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 6v22'/><path d='M18 28h12l-1 12a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3l-1-12Z'/><path d='M20 10h8M20 15h8M20 20h8'/></svg><span>Au goupillon</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M14 34c0-8 6-12 10-12s10 4 10 12'/><path d='M16 22c2-5 5-8 8-8s6 3 8 8'/><path d='M12 40h24'/></svg><span>À la main</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 8c6 8 10 12 10 18a10 10 0 0 1-20 0c0-6 4-10 10-18Z'/></svg><span>Rincer, ébrouer</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M18 12h12l-1 26a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3L18 12Z'/><path d='M22 6h4'/><path d='M36 20l4-3M36 26h5M36 32l4 3'/></svg><span>Sécher à l’endroit</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='11' y='12' width='26' height='24' rx='2'/><path d='M17 18h14M17 24h14M17 30h9'/></svg><span>Sopalin en express</span></li></ul><p class="soins-titre soins-interdit">Jamais</p><ul class="soins-liste soins-non"><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='10' y='8' width='28' height='32' rx='2'/><circle cx='24' cy='24' r='8'/><path d='M12 44 36 4'/></svg><span>Lave-vaisselle</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M10 26h28v6a10 10 0 0 1-10 10h-8a10 10 0 0 1-10-10v-6Z'/><path d='M18 20c0-4 6-4 6-8'/><path d='M26 20c0-4 6-4 6-8'/><path d='M12 44 36 4'/></svg><span>Ébullition</span></li></ul><p class="soins-note">Le lavage quotidien se fait à la main, à l’eau chaude savonneuse. La paroi mobile donne accès à chaque pli. Laisser les dernières gouttes s’évaporer à l’air libre, flacon à l’endroit — ou les sécher au sopalin, goutte à goutte.</p></div></details>
           <details><summary>La composition et les essais <span>+</span></summary><p>Le flacon est en <strong>polypropylène alimentaire</strong>, naturellement exempt de bisphénols. La bague et le capuchon, qui représentent environ la moitié du poids, sont d’origine végétale. Le capuchon se fixe par serrage sur la bague — par clipsage sur BIBEO.</p><p>La paroi mobile donne plusieurs tailles de biberon, de 30 à 300 ml, sans graduation intermédiaire.</p><p><strong>Zéro résidu détecté par le LNE</strong>, sur tous les coloris · rapport P143418.</p></details>
           <details><summary>La fin de vie <span>+</span></summary><p>Séparer les quatre pièces avant de les orienter vers les filières indiquées localement. Les consignes pouvant varier selon la commune, vérifier l’application ou le guide de tri de votre collectivité.</p></details>
         </div>
@@ -919,9 +967,9 @@ body.bb-bloque{overflow:hidden}
       <ul class="coloris-grille">
         <li><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Le biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>Menthe</span></li>
         <li><img src="assets/bibeon-biberon-pliable-abricot.webp" alt="Le biberon nomade BIBEON replié, coloris abricot" loading="lazy"><span>Abricot</span></li>
-        <li><img src="assets/bibeon-biberon-pliable-lilas.webp" alt="Le biberon nomade BIBEON replié, coloris lilas" loading="lazy"><span>Lilas</span><small>lot de 5</small></li>
+        <li><img src="assets/bibeon-biberon-pliable-lilas.webp" alt="Le biberon nomade BIBEON replié, coloris lilas" loading="lazy"><span>Lilas</span></li>
         <li><img src="assets/bibeon-biberon-pliable-rose.webp" alt="Le biberon nomade BIBEON replié, coloris rose" loading="lazy"><span>Rose</span><small>lot de 5</small></li>
-        <li><img src="assets/bibeon-biberon-pliable-lin.webp" alt="Le biberon nomade BIBEON replié, coloris lin" loading="lazy"><span>Lin</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-lin.webp" alt="Le biberon nomade BIBEON replié, coloris lin" loading="lazy"><span>Lin</span><small>lot de 5</small></li>
       </ul>
     </section>
 
@@ -944,9 +992,21 @@ body.bb-bloque{overflow:hidden}
       </div>
       <div class="bibeo-media"><img src="assets/bibeo-biberon-pliable-duo.webp" alt="Deux biberons pliables BIBEON présentés ensemble" width="1600" height="1200"></div>
     </section>
-    <section class="care" id="entretien">
-      <div class="care__visual"><img src="assets/goupillon-accueil.webp" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON" loading="lazy"><p><b>4 pièces</b><span>Flacon · bague · tétine · capuchon</span></p></div>
-      <div class="care__copy"><p class="kicker">L’entretien</p><h2>Jusqu’au fond.<br><em>À portée de doigt.</em></h2><p class="care__lede">La paroi est mobile : repliez les soufflets et le fond remonte. Le BIBEON se lave entièrement à la main.</p><ul><li><b>01</b><span>Démontez les quatre pièces.</span></li><li><b>02</b><span>Lavez à l’eau chaude savonneuse avec un goupillon.</span></li><li><b>03</b><span>Repliez le flacon pour atteindre le fond et les soufflets.</span></li><li><b>04</b><span>Rincez abondamment et laissez sécher complètement à l’air libre.</span></li></ul><p class="care__warning">Lavage à la main uniquement · pas de lave-vaisselle.</p><a class="details-link" href="mode-demploi.html#nettoyer">Tous les conseils d’entretien <span>→</span></a></div>
+    <section class="care" id="entretien" aria-labelledby="care-titre">
+      <figure class="care-visuel"><img src="assets/goupillon-accueil.webp" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON" loading="lazy"></figure>
+      <div class="care-texte">
+        <p class="eyebrow">L’entretien</p>
+        <h2 id="care-titre">Jusqu’au fond.<br><em>À portée de doigt.</em></h2>
+        <p class="care-chapeau">La paroi est mobile : repliez les soufflets et le fond remonte. BIBEON se lave entièrement à la main.</p>
+        <ol class="care-etapes">
+          <li><b>01</b><span>Démontez les quatre pièces.</span></li>
+          <li><b>02</b><span>Lavez à l’eau chaude savonneuse, au goupillon.</span></li>
+          <li><b>03</b><span>Repliez le flacon pour atteindre le fond et chaque pli.</span></li>
+          <li><b>04</b><span>Rincez, ébrouez, séchez à l’air libre.</span></li>
+        </ol>
+        <p class="care-interdit">Lavage à la main uniquement · ni lave-vaisselle, ni ébullition</p>
+        <a class="lien-detail" href="mode-demploi.html#nettoyer">Le geste de nettoyage <span>→</span></a>
+      </div>
     </section>
     <section class="faq">
       <div><p class="eyebrow">Avant de commander</p><h2>Les questions<br><em>qui comptent.</em></h2></div>
@@ -958,7 +1018,16 @@ body.bb-bloque{overflow:hidden}
         <details><summary>Quand ma commande part-elle ? <span>+</span></summary><p>Les commandes passées avant midi sont préparées le jour même. Point relais Mondial Relay offert, livré en 3 jours ; domicile 3,50 €.</p></details>
       </div>
     </section>
-    <section class="shipping"><p class="kicker">La livraison</p><h2>Commandé avant midi.<br><em>Parti le jour même.</em></h2><p>Paiement sécurisé · Point relais Mondial Relay offert, livré en 3 jours · Domicile 3,50 € · Retour offert sous 30 jours</p><a class="cta cta--dark" href="#composer">Choisir mon BIBEON <span>↑</span></a></section>
+    <section class="shipping" aria-labelledby="ship-titre">
+      <p class="eyebrow">La livraison</p>
+      <h2 id="ship-titre">Commandé avant midi.<br><em>Parti le jour même.</em></h2>
+      <ul class="ship-points">
+        <li><b>Point relais</b><span>Mondial Relay offert · livré en 3 jours</span></li>
+        <li><b>À domicile</b><span>3,50 € · France métropolitaine</span></li>
+        <li><b>Retour</b><span>Offert sous 30 jours</span></li>
+      </ul>
+      <a class="bouton-principal" href="#composer">Composer mon BIBEON <span>↑</span></a>
+    </section>
     <section class="closing"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#bibeon">Composer mon BIBEON <span>↑</span></a></section>
   </main>
   <div class="cart-backdrop" hidden></div>
@@ -1002,7 +1071,7 @@ body.bb-bloque{overflow:hidden}
 <script>
 const COLORS=[{name:'Menthe',className:'mint'},{name:'Abricot',className:'apricot'},{name:'Lilas',className:'lilac'},{name:'Rose',className:'rose'},{name:'Lin',className:'linen'}];
 // rose et lilas : stock presque épuisé, réservés au lot de cinq
-const COLORS_RARES=['Rose','Lilas'];
+const COLORS_RARES=['Rose','Lin'];
 function colorsPourQuantite(q){return q===5?COLORS:COLORS.filter(c=>!COLORS_RARES.includes(c.name));}
 const state={qty:1,price:35,colors:['Menthe'],bibeoQty:1,bibeoPrice:45,bibeoColors:['Rose'],cart:[]};
 const composer=document.querySelector('.composer');
@@ -1024,7 +1093,7 @@ function renderColorPickers(){
     return noms.includes(c)?c:'Menthe';
   });
   colorPickers.innerHTML=state.colors.map((selected,index)=>`<div class="color-picker"><span>BIBEON ${index+1}</span><div class="swatches" role="radiogroup" aria-label="Coloris du BIBEON ${index+1}">${dispo.map(color=>`<button type="button" class="swatch ${color.className}" role="radio" aria-checked="${color.name===selected}" aria-label="${color.name}" data-slot="${index}" data-color="${color.name}"></button>`).join('')}</div><output>${selected}</output></div>`).join('')
-    + (state.qty===5?'':'<p class="coloris-note">Le rose et le lilas sont réservés au lot de cinq — stock presque épuisé.</p>');
+    + (state.qty===5?'':'<p class="coloris-note">Le rose et le lin sont réservés au lot de cinq — stock presque épuisé.</p>');
   updateSummary();
 }
 function updateSummary(){const labels={1:'Un BIBEON',2:'Duo BIBEON',3:'Trois BIBEON',5:'Cinq BIBEON'};summaryName.textContent=`${labels[state.qty]} · ${state.colors.join(' + ')}`;summaryPrice.textContent=`${state.price} €`}

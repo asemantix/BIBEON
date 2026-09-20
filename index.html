@@ -617,6 +617,14 @@ h1 em{color:var(--bb-terre-pale)}
 .home-cta:hover{background:#8E5450}
 .bb-pied a.bb-pied-achat{background:var(--bb-terre);color:#fff}
 .bb-pied a.bb-pied-achat:hover{background:#8E5450;color:#fff}
+
+/* ── le panier en toutes lettres, identique à la boutique ── */
+.bb-actions .bb-panier-txt{display:inline-flex;align-items:center;gap:10px;text-decoration:none;
+ color:inherit;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-actions .cart-count{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;
+ border:1px solid currentColor;font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:0}
+@media(max-width:640px){.bb-actions .bb-panier-txt{font-size:.58rem;gap:8px}
+ .bb-actions .cart-count{width:19px;height:19px}}
 </style>
 </head>
 <body>
@@ -627,7 +635,7 @@ h1 em{color:var(--bb-terre-pale)}
   <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
   <div class="bb-actions">
     <a class="bb-boutique" href="boutique.html">Boutique</a>
-    <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
+    <a class="bb-panier-txt" href="boutique.html" aria-label="Panier, 0 article">Panier <span class="cart-count">0</span></a>
   </div>
 </header>
 </div>
