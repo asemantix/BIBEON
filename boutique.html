@@ -807,6 +807,37 @@ body.bb-bloque{overflow:hidden}
 /* ── la promesse au-dessus du nom ── */
 .promesse{margin:0 0 10px;font:italic clamp(1.15rem,1.7vw,1.6rem)/1.3 "Playfair Display",Georgia,serif;color:#514f4b}
 .promesse em{font-style:italic;color:var(--terracotta)}
+
+/* ── la planche des cinq coloris ── */
+.coloris{padding:clamp(70px,9vh,120px) 5vw;background:var(--paper)}
+.coloris-tete{max-width:1280px;margin:0 auto clamp(40px,6vh,68px);text-align:center}
+.coloris-tete h2{font:500 clamp(2.6rem,4.6vw,5.4rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 22px}
+.coloris-tete h2 em{font-style:italic;font-weight:500;color:var(--terracotta)}
+.coloris-tete .eyebrow:before{display:none}
+.coloris-tete>p:last-child{max-width:52ch;margin:0 auto;color:var(--muted);font-size:.88rem;line-height:1.72}
+.coloris-grille{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);
+ gap:clamp(10px,1.6vw,24px);max-width:1280px;margin:0 auto;padding:0}
+.coloris-grille li{position:relative;background:var(--ivory);padding:clamp(18px,2.4vw,34px) 12px clamp(16px,2vw,26px);
+ text-align:center;transition:background .25s ease,transform .25s ease}
+.coloris-grille li:hover{background:#f1ece4;transform:translateY(-3px)}
+.coloris-grille img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;margin:0 auto}
+.coloris-grille span{display:block;margin-top:14px;font:600 .62rem/1 "DM Sans",sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.coloris-grille small{display:block;margin-top:7px;font:400 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta-dark)}
+@media(max-width:900px){.coloris-grille{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.coloris-grille{grid-template-columns:repeat(2,1fr);gap:9px}}
+
+/* ── le bouton panier, en toutes lettres ── */
+.bb-entete .bb-panier-txt{display:inline-flex;align-items:center;gap:10px;background:none;border:0;
+ cursor:pointer;color:inherit;padding:8px 0;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-entete .cart-count{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;
+ border:1px solid currentColor;font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:0}
+.bb-entete .bb-panier-txt:hover .cart-count{background:var(--terracotta);border-color:var(--terracotta);color:#fff}
+@media(max-width:640px){.bb-entete .bb-panier-txt{font-size:.58rem;gap:8px}
+ .bb-entete .cart-count{width:19px;height:19px}}
 </style>
 </head>
 <body>
@@ -816,9 +847,8 @@ body.bb-bloque{overflow:hidden}
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
   <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
   <div class="bb-actions">
-    <a class="bb-boutique" href="boutique.html">Boutique</a>
-    <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
-  </div>
+<button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>
+</div>
 </header>
 <nav class="bb-menu" id="bb-menu" aria-label="Navigation principale">
   <div class="bb-menu-tete">
@@ -866,6 +896,21 @@ body.bb-bloque{overflow:hidden}
           <p class="buy-note">Point relais offert · Paiement sécurisé au moment de finaliser la commande</p>
         </section>
       </div>
+    </section>
+
+    <section class="coloris" id="coloris" aria-labelledby="coloris-titre">
+      <div class="coloris-tete">
+        <p class="eyebrow">La gamme</p>
+        <h2 id="coloris-titre">Cinq coloris.<br><em>Un même BIBEON.</em></h2>
+        <p>Teintés dans la masse : la couleur est dans la matière, elle ne s’efface pas au lavage.</p>
+      </div>
+      <ul class="coloris-grille">
+        <li><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Le biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>Menthe</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-abricot.webp" alt="Le biberon nomade BIBEON replié, coloris abricot" loading="lazy"><span>Abricot</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-lilas.webp" alt="Le biberon nomade BIBEON replié, coloris lilas" loading="lazy"><span>Lilas</span><small>lot de 5</small></li>
+        <li><img src="assets/bibeon-biberon-pliable-rose.webp" alt="Le biberon nomade BIBEON replié, coloris rose" loading="lazy"><span>Rose</span><small>lot de 5</small></li>
+        <li><img src="assets/bibeon-biberon-pliable-lin.webp" alt="Le biberon nomade BIBEON replié, coloris lin" loading="lazy"><span>Lin</span></li>
+      </ul>
     </section>
 
     <section class="reassurance" aria-label="Les preuves BIBEON">
