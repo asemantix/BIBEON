@@ -166,11 +166,16 @@ h1 em{color:var(--bb-terre-pale)}
 .durability h2 em{color:var(--bb-sauge-clair)}
 .bb-cale{height:108px}
 
+
 /* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block;padding:0;background:var(--bb-navy);color:#fff;
- grid-template-columns:none;align-items:initial;text-align:left}
+footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+ color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
+footer.bb-pied p{font:inherit}
 footer.bb-pied p span{text-decoration:none}
-@media(max-width:900px){footer.bb-pied{grid-template-columns:none;gap:0;text-align:left}}
+footer.bb-pied>a:last-child{justify-self:auto;font-size:inherit;text-transform:none;letter-spacing:normal}
+footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
+@media(max-width:900px){footer.bb-pied{grid-template-columns:none!important;gap:0;text-align:left}
+ footer.bb-pied>a:last-child{justify-self:auto}}
 </style>
 </head>
 <body>
