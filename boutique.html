@@ -923,6 +923,39 @@ body.bb-bloque{overflow:hidden}
 @media(max-width:700px){.pack-options{grid-template-columns:repeat(2,1fr)}
  .pack-option{border-bottom:1px solid var(--line)}
  .pack-option:nth-child(2n){border-right:0}}
+
+/* ══ le panneau de navigation ══ */
+.bb-voile{position:fixed;inset:0;z-index:88;background:transparent}
+.bb-voile[hidden]{display:none}
+.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;
+ background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);
+ border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);
+ padding:46px 75px;display:flex;flex-direction:column;
+ opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
+.bb-panneau[hidden]{display:none}
+.bb-panneau.bb-ouvert{opacity:1;transform:none}
+.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;
+ text-decoration:none;text-align:left;
+ font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);
+ border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
+.bb-panneau a:last-child,.bb-panneau span:last-child{border-bottom:0}
+.bb-panneau a:hover{color:var(--bb-sauge-fonce)}
+.bb-panneau span[aria-current]{color:var(--bb-sauge-fonce);cursor:default}
+@media(max-width:640px){
+ .bb-panneau{width:100%;top:93px;padding:34px 26px}
+ .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
+}
+
+/* ── le bouton MENU : deux traits puis le mot, toujours visible ── */
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn{gap:12px}
+@media(max-width:640px){.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}}
+
+/* ── les titres de colonnes du pied gardent leur taille ── */
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
+ letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
+ margin:0 0 16px!important;line-height:1.4!important}
 </style>
 </head>
 <body>
@@ -936,18 +969,8 @@ body.bb-bloque{overflow:hidden}
 <button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>
 </div>
 </header>
-<nav class="bb-menu" id="bb-menu" aria-label="Navigation principale">
-  <div class="bb-menu-tete">
-    <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
-    <button class="bb-fermer" id="bb-fermer" type="button">Fermer ✕</button>
-  </div>
-  <div class="bb-grille"><div><h2>Le BIBEON</h2><a href="biberon-pratique.html">Le biberon pratique</a><a href="legerete.html">La légèreté</a><a href="mode-demploi.html">Mode d’emploi</a><a href="notre-parti-pris.html">Notre parti pris</a></div><div><h2>L’expérience</h2><a href="voyage.html">Voyager avec bébé</a><a href="conseils.html">Nos conseils</a><a href="preparer-biberon-en-sortie.html">Préparer un biberon en sortie</a><a href="preparer-biberon-avion.html">Préparer un biberon en avion</a><a href="preparer-biberon-la-nuit.html">Préparer un biberon la nuit</a></div><div><h2>La preuve</h2><a href="tests-migration-lne-bibeon.html">Les essais du LNE</a><a href="migration.html">Migration et contact alimentaire</a><a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a><a href="qui-sommes-nous.html">Qui sommes-nous</a><a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a></div><div><h2>La boutique</h2><span>Voir les BIBEON</span><a href="livraison-et-retours.html">Livraison et retours</a><a href="contact.html">Nous contacter</a></div></div>
-  <div class="bb-menu-pied">
-    <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
-    <a href="tel:+33611768407">06 11 76 84 07</a>
-    <span>Point relais offert · domicile 3,50 € · retour offert sous 30 jours</span>
-  </div>
-</nav>
+<div class="bb-voile" id="bb-voile" hidden></div>
+<nav class="bb-panneau" id="bb-menu" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><a href="biberon-pratique.html">Le biberon pratique</a><a href="mode-demploi.html">Mode d’emploi</a><a href="voyage.html">Voyager avec bébé</a><a href="legerete.html">La légèreté</a><span aria-current="page">La boutique</span></nav>
 <div class="bb-cale"></div>
 
   
@@ -1093,7 +1116,7 @@ body.bb-bloque{overflow:hidden}
 </div>
 <div class="bb-copy">
  <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
- <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
+ <span>Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
 <script>
@@ -1197,6 +1220,25 @@ renderColorPickers();renderCart();
   if(arrivee.getDay()!==0&&arrivee.getDay()!==6) ouvres++; }
  e.innerHTML='<b>Livré le '+JOURS[arrivee.getDay()]+' '+arrivee.getDate()+' '+MOIS[arrivee.getMonth()]+'</b>'
   +' <span>· commande avant midi, expédiée le jour même</span>';
+})();
+</script>
+<script>
+(function(){
+ var b=document.getElementById('bb-ouvrir'),
+     p=document.getElementById('bb-menu'),
+     v=document.getElementById('bb-voile');
+ if(!b||!p) return;
+ var ouvert=false;
+ function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
+   requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
+   b.setAttribute('aria-expanded','true'); ouvert=true; }
+ function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','false'); ouvert=false;
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+ b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
+ if(v) v.addEventListener('click',fermer);
+ p.addEventListener('click',function(e){ e.stopPropagation(); });
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
 </body>
