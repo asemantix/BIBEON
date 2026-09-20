@@ -304,6 +304,61 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
  .step__media--double{grid-template-rows:none;gap:10px}
  .step__media--double figure{aspect-ratio:4/5}
 }
+
+/* ── le bouton Boutique du pied garde sa forme ── */
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
+ padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
+
+/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
+   fonds clairs  -> terre cuite foncée #96503F
+   fonds moyens  -> bleu nuit seul
+   fond bleu nuit-> terre claire ou sauge clair ══ */
+
+/* fonds clairs : beige, ivoire, papier, sauge clair */
+.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
+.departure h2 em,.checklist h2 em,.duration h2 em,
+.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
+.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
+.manual-close h2 em,.steps>header h2 em,.heating h2 em,
+.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
+.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
+.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
+
+/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
+.duration h2 em,.testimonials h2 em{color:#2F5E5C}
+
+/* fond bleu nuit : teintes claires uniquement */
+h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
+.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
+.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
+.travel-hero__copy h1 em{color:#96503F}
+
+.measure-table .astuce{margin-top:16px;font:italic 1rem/1.6 "Playfair Display",Georgia,serif;color:#96503F}
+
+/* ── réchauffer : section sur fond bleu nuit, donc traits clairs ── */
+.heating h2 em{color:#C5D1C7!important}
+.heating .kicker{color:#AEBCAF}
+.heat-grid p{border-color:rgba(255,255,255,.22)!important}
+.heat-grid svg{stroke:#FBF9F6!important}
+.heat-grid span{color:#FBF9F6!important}
+.heat-grid b{color:#C5D1C7!important}
+.heat-non svg{stroke:#E0B4AE!important}
+.heat-non b{color:#E0B4AE!important}
+.heat-non span{color:#E0B4AE!important}
+.heat-non p,.heat-grid .heat-non{border-color:rgba(224,180,174,.45)!important}
+
+/* ── des pictogrammes qui se voient ── */
+.heat-grid{gap:clamp(10px,1.4vw,18px)}
+.heat-grid p{padding:clamp(26px,3vw,38px) 10px!important;gap:16px}
+.heat-grid svg{width:clamp(56px,5vw,76px)!important;height:clamp(56px,5vw,76px)!important;stroke-width:1.2}
+.heat-grid span{font-size:.84rem!important}
+.heat-grid b{font-size:.6rem!important}
+@media(max-width:560px){.heat-grid svg{width:52px!important;height:52px!important}}
 </style>
 </head>
 <body>
@@ -332,23 +387,23 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
     <section class="steps" id="gestes">
       <header><p class="kicker">Les gestes</p><h2>Dans l’ordre.<br><em>Sans hésiter.</em></h2></header>
 
-      <article class="step"><div class="step__number">01</div><div class="step__copy"><p class="label">Avant de partir</p><h3>Pré-doser.</h3><p>Utilisez un flacon parfaitement propre et sec. Versez directement la quantité de poudre nécessaire dans le BIBEON replié, puis refermez.</p><aside>Jusqu’à 8 mesurettes maximum. Respectez toujours les indications du fabricant du lait.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le flacon replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video><span>Film 01 · Verser la poudre</span></div></article>
+      <article class="step"><div class="step__number">01</div><div class="step__copy"><p class="label">Avant de déplier, replier ou couder</p><h3>Laisser l’air circuler.</h3><p>Comme pour une bouteille d’eau, il faut retirer le bouchon pour pouvoir l’écraser. L’air contenu dans BIBEON doit pouvoir circuler au dépliage, au repliage et au coudage.</p><p>Dévissez la bague avant chaque modification. <strong>Rempli de liquide, il suffit de la desserrer.</strong> Resserrez une fois la modification faite.</p></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">02</div><div class="step__copy"><p class="label">Avant tout changement de volume</p><h3>Ouvrir.</h3><p>Retirez le bloc bague–tétine–capuchon pour laisser l’air circuler. Comme une bouteille d’eau, BIBEON ne peut pas se comprimer lorsqu’il est fermé.</p><aside>Posez le bloc à l’envers sur la face plate du capuchon : la tétine reste protégée.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video><span>Film 02 · Dévisser et poser</span></div></article>
+      <article class="step"><div class="step__number">02</div><div class="step__copy"><p class="label">Avant de partir</p><h3>Pré-doser.</h3><p><strong>Tout doit être propre et parfaitement sec</strong> — le flacon, la bague, la tétine et sa collerette, le capuchon. Versez la poudre dans le BIBEON replié, puis refermez.</p><p>Jusqu’à 8 mesurettes. La poudre se conserve ainsi <strong>15 jours</strong>, à l’abri de la lumière, capuchon en place sur la tétine.</p><aside><a href="biberon-pratique.html">Comment le capuchon obture la tétine <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le flacon replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">03</div><div class="step__copy"><p class="label">Modifier la taille</p><h3>Déplier.</h3><p>Tenez le flacon par ses deux extrémités et ouvrez les soufflets un à un, en accordéon. Dépliez-les tous avant de vous fier aux graduations.</p><aside>Un soufflet resté replié soustrait 30 ml au volume disponible.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/deplier-avec-la-poudre.jpg" data-geste aria-label="Le flacon déplié, la poudre déjà dedans"><source src="assets/deplier-avec-la-poudre.mp4" type="video/mp4"></video><span>Film 03 · Déplier les soufflets</span></div></article>
+      <article class="step"><div class="step__number">03</div><div class="step__copy"><p class="label">Modifier la taille</p><h3>Déplier.</h3><p><strong>Retirez ou desserrez la bague.</strong> Tenez ensuite le flacon par ses deux extrémités et ouvrez les soufflets un à un, en accordéon. Dépliez-les tous avant de vous fier aux graduations.</p><aside>Un soufflet resté replié soustrait 30 ml au volume disponible.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/deplier-avec-la-poudre.jpg" data-geste aria-label="Le flacon déplié, la poudre déjà dedans"><source src="assets/deplier-avec-la-poudre.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step" id="dosage"><div class="step__number">04</div><div class="step__copy"><p class="label">Préparer le repas</p><h3>Ajouter l’eau.</h3><p>Ajoutez d’abord une petite quantité d’eau, revissez le bloc puis agitez. Complétez ensuite jusqu’au niveau prévu.</p><aside>La poudre occupe déjà du volume : utilisez les repères spécifiques ci-dessous.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/soufflet-par-soufflet.jpg" data-geste aria-label="L’eau versée dans le flacon déployé"><source src="assets/soufflet-par-soufflet.mp4" type="video/mp4"></video><span>Film 04 · Verser l’eau</span></div></article>
+      <article class="step" id="dosage"><div class="step__number">04</div><div class="step__copy"><p class="label">Préparer le repas</p><h3>Ajouter l’eau.</h3><p>Ajoutez d’abord une petite quantité d’eau, revissez le bloc puis agitez. Complétez ensuite jusqu’au niveau prévu.</p><aside>La poudre versée en premier occupe déjà du volume : l’eau ne peut plus se mesurer au trait. Il faut viser le niveau du lait reconstitué. Les repères sont ci-dessous.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/soufflet-par-soufflet.jpg" data-geste aria-label="L’eau versée dans le flacon déployé"><source src="assets/soufflet-par-soufflet.mp4" type="video/mp4"></video></div></article>
 
-      <div class="measure-table"><div><p class="kicker">Repères d’eau</p><h3>La poudre est déjà dedans.</h3><p>Pour un lait dosé à une mesurette pour 30 ml d’eau. Les instructions du fabricant du lait restent prioritaires.</p></div><table><thead><tr><th>Mesurettes</th><th>Eau prévue</th><th>Remplir jusqu’à</th></tr></thead><tbody><tr><td>2</td><td>60 ml</td><td>¼ de soufflet au-dessus de 60 ml</td></tr><tr><td>4</td><td>120 ml</td><td>½ soufflet au-dessus de 120 ml</td></tr><tr><td>6</td><td>180 ml</td><td>¾ de soufflet au-dessus de 180 ml</td></tr><tr><td>8</td><td>240 ml</td><td>1 soufflet au-dessus, soit ≈ 270 ml</td></tr></tbody></table></div>
+      <div class="measure-table"><div><p class="kicker">Repères d’eau</p><h3>La poudre est déjà dedans.</h3><p>L’eau ajoutée doit tenir compte du volume de la poudre versée en premier. Ces repères donnent le niveau à viser.</p><p class="astuce">Plus simple encore : préparez un biberon comme d’habitude, relevez le niveau de lait reconstitué obtenu, et reproduisez-le à l’identique.</p></div><table><thead><tr><th>Mesurettes</th><th>Eau prévue</th><th>Remplir jusqu’à</th></tr></thead><tbody><tr><td>2</td><td>60 ml</td><td>¼ de soufflet au-dessus de 60 ml</td></tr><tr><td>4</td><td>120 ml</td><td>½ soufflet au-dessus de 120 ml</td></tr><tr><td>6</td><td>180 ml</td><td>¾ de soufflet au-dessus de 180 ml</td></tr><tr><td>8</td><td>240 ml</td><td>1 soufflet au-dessus, soit ≈ 270 ml</td></tr></tbody></table></div>
 
-      <article class="step"><div class="step__number">05</div><div class="step__copy"><p class="label">Les soufflets travaillent</p><h3>Mélanger.</h3><p>Refermez correctement, puis secouez. Les creux des soufflets dispersent les amas de poudre : aucun mélangeur séparé n’est nécessaire.</p><aside>Secouez. C’est tout.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait mélangé traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video><span>Film 05 · Secouer</span></div></article>
+      <article class="step"><div class="step__number">05</div><div class="step__copy"><p class="label">Les soufflets travaillent</p><h3>Mélanger.</h3><p>Refermez correctement, puis secouez. Les creux des soufflets dispersent les amas de poudre : aucun mélangeur séparé n’est nécessaire.</p><aside>Secouez. C’est tout.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait mélangé traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">06</div><div class="step__copy"><p class="label">Pendant la tétée</p><h3>Abaisser.</h3><p>Retirez le biberon de la bouche de bébé. Desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p><aside>Le lait descend. BIBEON aussi.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video><span>Film 06 · Réduire le volume</span></div></article>
+      <article class="step"><div class="step__number">06</div><div class="step__copy"><p class="label">Pendant la tétée</p><h3>Abaisser.</h3><p>Retirez le biberon de la bouche de bébé. Desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p><aside>Le lait descend. BIBEON aussi.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p>En fin de tétée, inclinez légèrement un soufflet. La forme s’adapte et la tétine reste alimentée en lait.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video><span>Film 07 · Couder</span></div></article>
+      <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p><strong>Desserrez la bague.</strong> En fin de tétée, inclinez légèrement un soufflet : la forme s’adapte et la tétine reste alimentée. Resserrez ensuite.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p>Retirez le bloc, repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video><span>Film 08 · Replier et fermer</span></div></article>
+      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
 
       <article class="step" id="nettoyage"><div class="step__number">09</div><div class="step__copy"><p class="label">Jusqu’au fond</p><h3>Nettoyer.</h3><p>Démontez les quatre pièces. Lavez-les à la main à l’eau chaude savonneuse. Repliez le flacon pour rapprocher le fond, puis remontez soufflet après soufflet.</p><aside>Lave-vaisselle interdit. Rincez abondamment et laissez sécher complètement à l’air libre.</aside></div><div class="step__media step__media--double"><figure><video muted loop playsinline preload="none" poster="assets/goupillon-dans-le-flacon.jpg" data-geste aria-label="Le goupillon tourne dans les soufflets du flacon déployé"><source src="assets/goupillon-dans-le-flacon.mp4" type="video/mp4"></video><figcaption>01 · Laver au goupillon</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/doigt-au-fond-replie.jpg" data-geste aria-label="Le doigt atteint le fond du flacon replié"><source src="assets/doigt-au-fond-replie.mp4" type="video/mp4"></video><figcaption>02 · Atteindre chaque pli</figcaption></figure></div></article>
     </section>
@@ -387,7 +442,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 </div>
 <div class="bb-copy">
  <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
- <span>Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
 <script>

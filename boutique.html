@@ -956,6 +956,46 @@ body.bb-bloque{overflow:hidden}
 footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
  letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
  margin:0 0 16px!important;line-height:1.4!important}
+
+/* ── le bouton Boutique du pied garde sa forme ── */
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
+ padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
+
+/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
+   fonds clairs  -> terre cuite foncée #96503F
+   fonds moyens  -> bleu nuit seul
+   fond bleu nuit-> terre claire ou sauge clair ══ */
+
+/* fonds clairs : beige, ivoire, papier, sauge clair */
+.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
+.departure h2 em,.checklist h2 em,.duration h2 em,
+.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
+.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
+.manual-close h2 em,.steps>header h2 em,.heating h2 em,
+.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
+.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
+.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
+
+/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
+.duration h2 em,.testimonials h2 em{color:#2F5E5C}
+
+/* fond bleu nuit : teintes claires uniquement */
+h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
+.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
+.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
+.travel-hero__copy h1 em{color:#96503F}
+
+/* ── des pictogrammes qui se voient ── */
+.soins-liste{gap:18px 14px}
+.soins-liste li{width:clamp(110px,12vw,140px)}
+.soins-liste svg{width:clamp(56px,5vw,72px)!important;height:clamp(56px,5vw,72px)!important;stroke-width:1.2}
+.soins-liste span{font-size:.76rem!important;margin-top:10px!important}
+@media(max-width:520px){.soins-liste li{width:98px}.soins-liste svg{width:50px!important;height:50px!important}}
 </style>
 </head>
 <body>
@@ -1116,7 +1156,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 </div>
 <div class="bb-copy">
  <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
- <span>Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
 <script>
