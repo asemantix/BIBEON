@@ -897,10 +897,36 @@ body.bb-bloque{overflow:hidden}
 .care .eyebrow{color:var(--sage)}
 
 .bb-entete .bb-ici{color:var(--sage);cursor:default}
+
+/* ── les trois gestes, en trois vidéos ── */
+.movement-media{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);
+ align-content:center;padding:clamp(20px,3vw,44px)}
+.geste{margin:0;text-align:center}
+.geste video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;
+ background:rgba(255,255,255,.06);border-radius:10px}
+.geste figcaption{margin-top:12px;font:600 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+@media(max-width:900px){.movement-media{padding:24px}.geste video{aspect-ratio:9/16}}
+
+/* ── la date de livraison annoncée ── */
+.livraison-date{margin:0 0 10px;font:400 .84rem/1.5 "DM Sans",sans-serif;color:var(--ink)}
+.livraison-date b{font-weight:600;color:var(--terracotta-dark)}
+.livraison-date span{color:var(--muted)}
+
+/* ── une vignette dans chaque option ── */
+.pack-option{min-height:0;padding:14px 10px 16px;align-items:stretch}
+.pack-option img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;
+ margin:0 0 10px;mix-blend-mode:multiply}
+.pack-option.active img{mix-blend-mode:normal}
+.pack-option span{font:600 .58rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.pack-option b{margin:6px 0 2px}
+@media(max-width:700px){.pack-options{grid-template-columns:repeat(2,1fr)}
+ .pack-option{border-bottom:1px solid var(--line)}
+ .pack-option:nth-child(2n){border-right:0}}
 </style>
 </head>
 <body>
-<div class="bb-bandeau">Livraison offerte en point relais · Retour offert sous 30 jours</div>
+<div class="bb-bandeau">Livraison offerte · Retour offert sous 30 jours</div>
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
@@ -945,15 +971,16 @@ body.bb-bloque{overflow:hidden}
         <section class="composer" aria-labelledby="composer-title" data-product="BIBEON">
           <p class="step-label">Composer votre commande</p><h2 id="composer-title">Combien de BIBEON&nbsp;?</h2>
           <div class="pack-options" role="radiogroup" aria-label="Choisir une offre">
-            <button class="pack-option active" type="button" role="radio" aria-checked="true" data-qty="1" data-price="35"><span>1</span><b>35 €</b><small>35 € l’unité</small></button>
-            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="2" data-price="62"><span>2</span><b>62 €</b><small>31 € l’unité</small></button>
-            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="3" data-price="87"><span>3</span><b>87 €</b><small>29 € l’unité</small></button>
-            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="5" data-price="125"><span>5</span><b>125 €</b><small>25 € l’unité</small></button>
+            <button class="pack-option active" type="button" role="radio" aria-checked="true" data-qty="1" data-price="35"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié" loading="lazy"><span>1</span><b>35 €</b><small>35 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="2" data-price="62"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés" loading="lazy"><span>2</span><b>62 €</b><small>31 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="3" data-price="87"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>3</span><b>87 €</b><small>29 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="5" data-price="125"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés" loading="lazy"><span>5</span><b>125 €</b><small>25 € l’unité</small></button>
           </div>
           <div class="color-pickers" aria-live="polite"></div>
           <div class="selection-summary"><div><span>Votre sélection</span><strong class="summary-name">Un BIBEON · Menthe</strong></div><div><span>Total</span><strong class="summary-price">35 €</strong></div></div>
           <button class="add-to-cart" type="button">Ajouter au panier <span>→</span></button>
-          <p class="buy-note">Point relais offert · Paiement sécurisé au moment de finaliser la commande</p>
+          <p class="livraison-date" id="livraison-date"></p>
+        <p class="buy-note">Paiement sécurisé au moment de finaliser la commande</p>
         </section>
       </div>
     </section>
@@ -980,7 +1007,7 @@ body.bb-bloque{overflow:hidden}
     </section>
     <section class="movement">
       <div class="movement-copy"><p class="eyebrow">Le principe</p><h2>Il s’élève.<br>Il s’abaisse.<br><em>Il se coude.</em></h2><p>Dépliez seulement le volume nécessaire. Pendant la tétée, abaissez la paroi au niveau du lait, puis coudez le flacon pour conserver la tétine pleine.</p><a href="mode-demploi.html">Voir les trois gestes <span>→</span></a></div>
-      <div class="movement-media"><img src="assets/bibeon-etats-de-pliage.webp" alt="BIBEON se déplie et change de volume" width="1600" height="1200"></div>
+      <div class="movement-media"><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-eleve.jpg" data-geste aria-label="Le BIBEON se déplie, soufflet après soufflet"><source src="assets/concept-eleve.mp4" type="video/mp4"></video><figcaption>Il s’élève</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-abaisse.jpg" data-geste aria-label="Les soufflets redescendent au niveau du lait"><source src="assets/concept-abaisse.mp4" type="video/mp4"></video><figcaption>Il s’abaisse</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-coude.jpg" data-geste aria-label="Le flacon se coude, la tétine reste pleine"><source src="assets/concept-coude.mp4" type="video/mp4"></video><figcaption>Il se coude</figcaption></figure></div>
     </section>
     <section class="bibeo" id="bibeo">
       <div class="bibeo-copy"><p class="eyebrow">Une autre proposition</p><h2>BIBEO</h2><p class="signature">Le même principe, dans deux accords colorés.</p><p>BIBEO est proposé à l’unité en rose ou en menthe, ou en duo rose et menthe. Même flacon pliable, même capacité, mêmes gestes. Son capuchon se clipse sur la bague.</p>
@@ -1028,11 +1055,12 @@ body.bb-bloque{overflow:hidden}
       </ul>
       <a class="bouton-principal" href="#composer">Composer mon BIBEON <span>↑</span></a>
     </section>
-    <section class="closing"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#bibeon">Composer mon BIBEON <span>↑</span></a></section>
+    <section class="closing"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#composer">Composer mon BIBEON <span>↑</span></a></section>
   </main>
   <div class="cart-backdrop" hidden></div>
   <aside class="cart" id="cart" aria-labelledby="cart-title" aria-hidden="true">
-    <div class="cart-items"></div><div class="cart-empty"><p>Votre panier est encore vide.</p><a href="#bibeon">Choisir mon BIBEON</a></div>
+    <header><div><p class="eyebrow">Votre sélection</p><h2 id="cart-title">Le panier</h2></div><button class="cart-close" type="button" aria-label="Fermer le panier">×</button></header>
+    <div class="cart-items"></div><div class="cart-empty"><p>Votre panier est encore vide.</p><a href="#composer">Choisir mon BIBEON</a></div>
     <div class="cart-footer" hidden><div><span>Total</span><strong class="cart-total">0 €</strong></div><p>Point relais offert en France métropolitaine.</p><button class="checkout" type="button">Finaliser ma commande <span>→</span></button><small>Le paiement sera activé lors de la connexion de la boutique à PayPal.</small></div>
   </aside>
   <div class="toast" role="status" aria-live="polite"></div>
@@ -1142,6 +1170,33 @@ renderColorPickers();renderCart();
  if(f)f.addEventListener('click',function(){etat(false);});
  m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
  document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
+})();
+</script>
+<script>
+(function(){var v=document.querySelectorAll('video[data-geste]');
+ if(!v.length||!('IntersectionObserver' in window)) return;
+ var m=window.matchMedia('(max-width:900px)').matches;
+ var o=new IntersectionObserver(function(es){es.forEach(function(x){
+  var t=x.target;
+  if(x.isIntersecting){ if(m){v.forEach(function(y){if(y!==t)y.pause();});}
+   if(!t.dataset.pret){t.dataset.pret='1';t.load();} t.play().catch(function(){}); }
+  else{ t.pause(); }});},{threshold:.25,rootMargin:'140px'});
+ v.forEach(function(x){o.observe(x);});})();
+</script>
+<script>
+(function(){
+ var e=document.getElementById('livraison-date'); if(!e) return;
+ var JOURS=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+ var MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+ var d=new Date(), avantMidi=d.getHours()<12;
+ // l'expédition part le jour même avant midi, sinon le lendemain ouvré
+ var depart=new Date(d); if(!avantMidi) depart.setDate(depart.getDate()+1);
+ while(depart.getDay()===0||depart.getDay()===6) depart.setDate(depart.getDate()+1);
+ var arrivee=new Date(depart), ouvres=0;
+ while(ouvres<3){ arrivee.setDate(arrivee.getDate()+1);
+  if(arrivee.getDay()!==0&&arrivee.getDay()!==6) ouvres++; }
+ e.innerHTML='<b>Livré le '+JOURS[arrivee.getDay()]+' '+arrivee.getDate()+' '+MOIS[arrivee.getMonth()]+'</b>'
+  +' <span>· commande avant midi, expédiée le jour même</span>';
 })();
 </script>
 </body>
