@@ -334,16 +334,23 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
 .travel-hero__copy h1 em{color:#96503F}
 
-/* ── la légèreté se montre, elle ne s'écrit pas ── */
-.weight{grid-template-columns:46% 54%;gap:clamp(30px,4vw,64px)}
-.weight__visuel{margin:0;display:grid;place-items:center}
-.weight__visuel img{display:block;width:100%;height:auto;max-height:66vh;object-fit:contain}
-.weight__visuel figcaption{margin-top:18px;text-align:center}
-.weight__visuel b{display:block;font:500 clamp(2.2rem,3.4vw,3.4rem)/1 "Playfair Display",Georgia,serif;
- color:#0E1C35;letter-spacing:-.03em}
-.weight__visuel span{display:block;margin-top:8px;font:600 .58rem/1 "DM Sans",sans-serif;
- letter-spacing:.18em;text-transform:uppercase;color:#5d554f}
-@media(max-width:850px){.weight{grid-template-columns:1fr}.weight__visuel img{max-height:52vh}}
+
+
+
+/* ── la légèreté : une section deux fois plus haute ── */
+.weight{grid-template-columns:52% 48%!important;align-items:center;
+ min-height:180vh;padding:clamp(70px,9vh,130px) 5vw!important}
+.weight__visuel{margin:0;display:grid;place-items:center;height:100%}
+.weight__visuel img{display:block;width:100%;height:auto;max-height:150vh;object-fit:contain}
+.weight__visuel figcaption{margin-top:26px;text-align:center}
+.weight__visuel b{display:block;font:500 clamp(3.4rem,5.4vw,5.6rem)/1 "Playfair Display",Georgia,serif;
+ color:#0E1C35;letter-spacing:-.035em}
+.weight__visuel span{display:block;margin-top:12px;font:600 .64rem/1 "DM Sans",sans-serif;
+ letter-spacing:.2em;text-transform:uppercase;color:#5d554f}
+@media(max-width:850px){
+ .weight{grid-template-columns:1fr!important;min-height:0;padding:70px 24px!important;gap:50px}
+ .weight__visuel img{max-height:78vh}
+}
 </style>
 </head>
 <body>
