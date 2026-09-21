@@ -333,6 +333,17 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .three-steps h2 em,.colors h2 em{color:#E0B4AE}
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
 .travel-hero__copy h1 em{color:#96503F}
+
+/* ── la légèreté se montre, elle ne s'écrit pas ── */
+.weight{grid-template-columns:46% 54%;gap:clamp(30px,4vw,64px)}
+.weight__visuel{margin:0;display:grid;place-items:center}
+.weight__visuel img{display:block;width:100%;height:auto;max-height:66vh;object-fit:contain}
+.weight__visuel figcaption{margin-top:18px;text-align:center}
+.weight__visuel b{display:block;font:500 clamp(2.2rem,3.4vw,3.4rem)/1 "Playfair Display",Georgia,serif;
+ color:#0E1C35;letter-spacing:-.03em}
+.weight__visuel span{display:block;margin-top:8px;font:600 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;color:#5d554f}
+@media(max-width:850px){.weight{grid-template-columns:1fr}.weight__visuel img{max-height:52vh}}
 </style>
 </head>
 <body>
@@ -360,10 +371,10 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 
     <section class="compare" id="principe">
       <div class="compare__head"><p class="kicker">01 · Le transport</p><h2>Tout ce qui<br><em>ne part plus.</em></h2></div>
-      <div class="compare__cards"><article class="before"><span>Avant</span><div class="objects"><i>Biberon</i><i>Doseur</i><i>Mélangeur</i><i>Obturateur</i></div><p>Quatre objets pour un seul repas. À transporter, chercher, manipuler, laver et sécher.</p></article><article class="after"><span>Avec BIBEON</span><img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="Quatre BIBEON repliés face à quatre biberons rigides et leurs accessoires" loading="lazy"><p>Un seul objet. La dose de poudre voyage déjà dedans.</p></article></div>
+      <div class="compare__cards"><article class="before"><span>Avant</span><div class="objects"><i>Biberon rigide</i><i>Boîte doseuse</i><i>Mélangeur</i><i>Obturateur</i></div><p>Quatre objets pour un seul repas. À transporter, chercher, manipuler, laver et sécher.</p></article><article class="after"><span>Avec BIBEON</span><img src="assets/quatre-bibeon-contre-quatre-biberons.webp" alt="Quatre BIBEON repliés face à quatre biberons rigides et leurs accessoires" loading="lazy"><p>Un seul objet. La dose de poudre voyage déjà dedans.</p></article></div>
     </section>
 
-    <section class="weight"><div class="weight__number">35<small>g</small></div><div><p class="kicker">02 · La légèreté</p><h2>Sans faire<br><em>fragile.</em></h2><p>Environ 35 grammes, tétine et capuchon compris. Peu de masse à tenir, un corps étroit et 9,5 cm une fois replié.</p><p class="quiet">Léger ne veut pas dire moins conçu.</p></div></section>
+    <section class="weight"><figure class="weight__visuel"><img src="assets/bibeon-sur-un-doigt.webp" alt="Un BIBEON replié tenu en équilibre au bout d’un doigt" loading="lazy"><figcaption><b>≈ 35 g</b><span>tétine et capuchon compris</span></figcaption></figure><div><p class="kicker">02 · La légèreté</p><h2>Sans faire<br><em>fragile.</em></h2><p>Environ 35 grammes, tétine et capuchon compris. Peu de masse à tenir, un corps étroit et 9,5 cm une fois replié.</p><p class="quiet">Léger ne veut pas dire moins conçu.</p></div></section>
 
     <section class="chapters" id="gestes">
       <header><p class="kicker">Le principe</p><h2>Il enlève.<br><em>Il simplifie.</em></h2></header>
