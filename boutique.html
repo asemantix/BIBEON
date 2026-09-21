@@ -1010,6 +1010,13 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 /* ── le hero : les cinq flacons restent dans le cadre ── */
 .product-media video{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
 @media(max-width:900px){.product-media video{object-position:center 45%}}
+
+/* ── le principe : une ligne par mouvement ── */
+.principe-lignes{display:flex;flex-direction:column;gap:0;margin:30px 0 34px;
+ border-top:1px solid rgba(255,255,255,.2)}
+.principe-lignes span{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2);
+ font-size:.92rem;line-height:1.6}
+.principe-lignes b{font:500 1.06rem "Playfair Display",Georgia,serif;margin-right:8px}
 </style>
 </head>
 <body>
@@ -1083,7 +1090,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <article><span>03</span><h2>La preuve est publiée.</h2><p>Essais de migration du LNE · zéro résidu détecté dans tous les coloris · rapport P143418. Conforme aux règles de contact alimentaire pour l’alimentation du nourrisson.</p></article>
     </section>
     <section class="movement">
-      <div class="movement-copy"><p class="eyebrow">Le principe</p><h2>Il s’élève.<br>Il s’abaisse.<br><em>Il se coude.</em></h2><p>Dépliez seulement le volume nécessaire. Pendant la tétée, abaissez la paroi au niveau du lait, puis coudez le flacon pour conserver la tétine pleine.</p><a href="mode-demploi.html">Voir les trois gestes <span>→</span></a></div>
+      <div class="movement-copy"><p class="eyebrow">Le principe</p><h2>Il s’élève.<br>Il s’abaisse.<br><em>Il se coude.</em></h2><p class="principe-lignes"><span><b>Il s’élève.</b> Tous les soufflets ouverts, pour que la graduation soit juste.</span><span><b>Il s’abaisse.</b> Après, en fonction du niveau du liquide : l’air part.</span><span><b>Il se coude.</b> La tétine reste pleine jusqu’à la dernière gorgée.</span></p><a href="mode-demploi.html">Voir les trois gestes <span>→</span></a></div>
       <div class="movement-media"><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-eleve.jpg" data-geste aria-label="Le BIBEON se déplie, soufflet après soufflet"><source src="assets/concept-eleve.mp4" type="video/mp4"></video><figcaption>Il s’élève</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-abaisse.jpg" data-geste aria-label="Les soufflets redescendent au niveau du lait"><source src="assets/concept-abaisse.mp4" type="video/mp4"></video><figcaption>Il s’abaisse</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-coude.jpg" data-geste aria-label="Le flacon se coude, la tétine reste pleine"><source src="assets/concept-coude.mp4" type="video/mp4"></video><figcaption>Il se coude</figcaption></figure></div>
     </section>
     <section class="bibeo" id="bibeo">
