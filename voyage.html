@@ -403,6 +403,12 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .three-steps h2 em,.colors h2 em{color:#E0B4AE}
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
 .travel-hero__copy h1 em{color:#96503F}
+
+/* ── la section du départ : le visuel occupe sa largeur ── */
+.departure__visual{background:#EEF1EA;padding:clamp(14px,2vw,26px)}
+.departure__visual img{width:100%!important;max-width:none!important;max-height:62vh!important;
+ object-fit:cover!important;aspect-ratio:16/9}
+@media(max-width:900px){.departure__visual img{aspect-ratio:4/3;max-height:52vh!important}}
 </style>
 </head>
 <body>
@@ -432,7 +438,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <section class="departure" id="depart">
       <div class="departure__title"><p class="kicker">Si bébé prend encore du lait en poudre</p><h2>Préparez ici.<br><em>Respirez dehors.</em></h2></div>
       <div class="departure__flow"><article><span>01</span><h3>Pré-doser</h3><p>Versez chaque dose de poudre dans un BIBEON propre et parfaitement sec.</p></article><article><span>02</span><h3>Refermer</h3><p>La poudre reste protégée dans le flacon replié jusqu’au moment du repas.</p></article><article><span>03</span><h3>Emporter l’eau</h3><p>Ajoutez séparément la quantité d’eau nécessaire. Rien n’est encore mélangé.</p></article></div>
-      <div class="departure__visual"><img src="assets/biberon-nomade-pre-dose-train.webp" alt="Des BIBEON pré-dosés rangés, prêts pour la journée" loading="lazy"><p>Les repas sont pré-dosés.<br><strong>Le sac reste léger.</strong></p></div>
+      <div class="departure__visual"><img src="assets/avion-tablette-eau.webp" alt="Le BIBEON pré-dosé sur la tablette, l’eau ajoutée au moment du repas" loading="lazy"><p>Les repas sont pré-dosés.<br><strong>Le sac reste léger.</strong></p></div>
     </section>
 
     <section class="onsite">
@@ -445,7 +451,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="destination-grid">
 <article class="destination destination--large"><div class="destination__media destination__media--duo"><figure><img src="assets/biberon-nomade-pre-dose-train.webp" alt="Un BIBEON pré-dosé, replié, gardé contre soi pendant le trajet" loading="lazy"><figcaption>Pré-dosé, replié</figcaption></figure><figure><img src="assets/train-tablette-deplie.webp" alt="Le BIBEON déployé sur la tablette du train, au moment du repas" loading="lazy"><figcaption>Déployé, au repas</figcaption></figure></div><div><p class="number">01</p><h3>En train ou en bus</h3><p>Peu de place pour préparer, peu de pièces à manipuler. Le repas voyage pré-dosé, l’eau s’ajoute au moment de servir.</p></div></article>
 <article class="destination destination--wide"><div class="destination__media"><img src="assets/voiture-coffre-trousse.webp" alt="Un BIBEON rangé dans la trousse du coffre, prêt pour la route" loading="lazy"></div><div><p class="number">02</p><h3>En voiture</h3><p>Préparez toujours le biberon à l’arrêt, sur un support propre et stable. Les repas pré-dosés restent rangés jusqu’à la prochaine pause.</p></div></article>
-<article class="destination destination--large"><div class="destination__media"><img src="assets/sous-le-passeport.jpg" alt="Un BIBEON replié glissé sous un passeport" loading="lazy"></div><div><p class="number">03</p><h3>En avion</h3><p>Emportez la poudre pré-dosée et vérifiez les règles de l’aéroport, de la compagnie et du pays avant le départ.</p></div></article>
+<article class="destination destination--large"><div class="destination__media"><img src="assets/verser-eau-sur-la-tablette.webp" alt="L’eau versée dans le BIBEON déployé, sur la tablette de l’avion" loading="lazy"></div><div><p class="number">03</p><h3>En avion</h3><p>Emportez la poudre pré-dosée et vérifiez les règles de l’aéroport, de la compagnie et du pays avant le départ.</p></div></article>
 <article class="destination destination--wide"><div class="destination__media"><img src="assets/plage-serviette.webp" alt="Un BIBEON posé sur une serviette, en plein air" loading="lazy"></div><div><p class="number">04</p><h3>À la plage ou en plein air</h3><p>Gardez la poudre, l’eau et le biberon à l’abri du soleil, de la chaleur, du sable et des éclaboussures.</p></div></article>
 </div>
     </section>
