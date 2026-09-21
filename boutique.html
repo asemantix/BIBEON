@@ -996,6 +996,20 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .soins-liste svg{width:clamp(56px,5vw,72px)!important;height:clamp(56px,5vw,72px)!important;stroke-width:1.2}
 .soins-liste span{font-size:.76rem!important;margin-top:10px!important}
 @media(max-width:520px){.soins-liste li{width:98px}.soins-liste svg{width:50px!important;height:50px!important}}
+
+/* ── le goupillon : visuel à droite, pour alterner ── */
+.care--goupillon{grid-template-columns:54% 46%}
+.care--goupillon .care-texte{order:1}
+.care--goupillon .care-visuel{order:2}
+.care--goupillon{background:var(--paper)}
+@media(max-width:900px){
+ .care--goupillon{grid-template-columns:1fr}
+ .care--goupillon .care-visuel{order:0;min-height:380px}
+}
+
+/* ── le hero : les cinq flacons restent dans le cadre ── */
+.product-media video{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
+@media(max-width:900px){.product-media video{object-position:center 45%}}
 </style>
 </head>
 <body>
@@ -1016,7 +1030,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
   
   <main>
     <section class="product" id="bibeon">
-      <div class="product-media"><video autoplay muted loop playsinline preload="none" poster="assets/bibeon-biberon-pliable-5-coloris.webp" aria-label="Les BIBEON pastel en gros plan, soufflets, graduations et tétines visibles"><source src="assets/bibeon-counter.mp4" type="video/mp4"></video><p class="media-note"><span>01</span> Cinq coloris · un même BIBEON</p></div>
+      <div class="product-media"><video autoplay muted loop playsinline preload="none" poster="assets/cinq-coloris-etagere.jpg" aria-label="Les cinq coloris BIBEON alignés sur une étagère"><source src="assets/cinq-coloris-etagere.mp4" type="video/mp4"></video><p class="media-note"><span>01</span> Cinq coloris · un même BIBEON</p></div>
       <div class="product-panel">
         <p class="eyebrow">Biberon végétal et pliable · Fabriqué en France</p>
         <p class="promesse">Votre sortie. <em>Votre BIBEON.</em></p>
@@ -1083,20 +1097,29 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="bibeo-media"><img src="assets/bibeo-biberon-pliable-duo.webp" alt="Deux biberons pliables BIBEON présentés ensemble" width="1600" height="1200"></div>
     </section>
     <section class="care" id="entretien" aria-labelledby="care-titre">
-      <figure class="care-visuel"><img src="assets/goupillon-accueil.webp" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON" loading="lazy"></figure>
+      <figure class="care-visuel"><img src="assets/doigt-pince-le-soufflet.webp" alt="Deux doigts écartent un soufflet du BIBEON depuis l’extérieur" loading="lazy"></figure>
       <div class="care-texte">
         <p class="eyebrow">L’entretien</p>
         <h2 id="care-titre">Jusqu’au fond.<br><em>À portée de doigt.</em></h2>
-        <p class="care-chapeau">La paroi est mobile : repliez les soufflets et le fond remonte. BIBEON se lave entièrement à la main.</p>
+        <p class="care-chapeau">La paroi est mobile : repliez les soufflets et le fond remonte. Chaque pli devient accessible à la main.</p>
         <ol class="care-etapes">
           <li><b>01</b><span>Démontez les quatre pièces.</span></li>
-          <li><b>02</b><span>Lavez à l’eau chaude savonneuse, au goupillon.</span></li>
-          <li><b>03</b><span>Repliez le flacon pour atteindre le fond et chaque pli.</span></li>
-          <li><b>04</b><span>Rincez, ébrouez, séchez à l’air libre.</span></li>
+          <li><b>02</b><span>Repliez le flacon pour atteindre le fond et chaque pli.</span></li>
+          <li><b>03</b><span>Rincez, ébrouez, séchez à l’air libre.</span></li>
         </ol>
         <p class="care-interdit">Lavage à la main uniquement · ni lave-vaisselle, ni ébullition</p>
-        <a class="lien-detail" href="mode-demploi.html#nettoyer">Le geste de nettoyage <span>→</span></a>
+        <a class="lien-detail" href="mode-demploi.html#nettoyage">Le geste de nettoyage <span>→</span></a>
       </div>
+    </section>
+
+    <section class="care care--goupillon" aria-labelledby="goup-titre">
+      <div class="care-texte">
+        <p class="eyebrow">Le lavage quotidien</p>
+        <h2 id="goup-titre">Le goupillon<br><em>suit les plis.</em></h2>
+        <p class="care-chapeau">Flacon déployé, à l’eau chaude savonneuse : les brins épousent chaque creux, de la bague jusqu’au fond.</p>
+        <p class="care-interdit">Un goupillon souple suffit · aucun accessoire propriétaire</p>
+      </div>
+      <figure class="care-visuel"><img src="assets/goupillon-accueil.webp" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON" loading="lazy"></figure>
     </section>
     <section class="faq">
       <div><p class="eyebrow">Avant de commander</p><h2>Les questions<br><em>qui comptent.</em></h2></div>
