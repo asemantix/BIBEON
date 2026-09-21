@@ -359,6 +359,36 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .heat-grid span{font-size:.84rem!important}
 .heat-grid b{font-size:.6rem!important}
 @media(max-width:560px){.heat-grid svg{width:52px!important;height:52px!important}}
+
+/* ══ CORRECTION : aucune hauteur fixe, le contenu commande ══ */
+.step{height:auto!important;min-height:clamp(560px,64vh,700px)!important;
+ grid-template-columns:7% 38% 55%!important;align-items:stretch;overflow:visible}
+.step__copy{align-self:center;padding:clamp(40px,4.4vw,64px) clamp(28px,3vw,46px)!important;overflow:visible}
+.step__media{height:auto!important;min-height:0!important;align-self:stretch;
+ display:grid;place-items:center;background:#EEF1EA;padding:clamp(12px,1.4vw,20px)}
+/* les vidéos entières, jamais découpées */
+.steps video,.step__media img{width:100%!important;height:100%!important;max-height:78vh;
+ object-fit:contain!important;aspect-ratio:auto!important;background:transparent}
+#nettoyage{height:auto!important}
+.step__media--double video{object-fit:contain!important}
+@media(max-width:900px){
+ .step{min-height:0!important;grid-template-columns:55px 1fr!important}
+ .step__media{grid-column:1/-1;aspect-ratio:auto!important;padding:10px}
+ .steps video,.step__media img{height:auto!important;max-height:70vh}
+}
+
+/* ══ UNE ÉTAPE PAR ÉCRAN, LA VIDÉO EN GRAND ══ */
+.step{min-height:88vh!important;grid-template-columns:6% 34% 60%!important;margin-bottom:22px!important}
+.step__media{padding:clamp(14px,1.6vw,24px)!important}
+.steps video,.step__media img{max-height:82vh!important;width:auto!important;max-width:100%!important;
+ height:82vh!important;object-fit:contain!important}
+.step__media--double{grid-template-rows:1fr 1fr}
+.step__media--double video{height:39vh!important;max-height:39vh!important}
+@media(max-width:900px){
+ .step{min-height:0!important}
+ .steps video,.step__media img{height:auto!important;max-height:78vh!important;width:100%!important}
+ .step__media--double video{height:auto!important;max-height:60vh!important}
+}
 </style>
 </head>
 <body>
@@ -466,15 +496,24 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 })();
 </script>
 <script>
-(function(){var v=document.querySelectorAll('video[data-geste]');
+(function(){
+ var v=[].slice.call(document.querySelectorAll('video[data-geste]'));
  if(!v.length||!('IntersectionObserver' in window)) return;
- var m=window.matchMedia('(max-width:900px)').matches;
- var o=new IntersectionObserver(function(es){es.forEach(function(x){
-  var t=x.target;
-  if(x.isIntersecting){ if(m){v.forEach(function(y){if(y!==t)y.pause();});}
-   if(!t.dataset.pret){t.dataset.pret='1';t.load();} t.play().catch(function(){}); }
-  else{ t.pause(); }});},{threshold:.25,rootMargin:'140px'});
- v.forEach(function(x){o.observe(x);});})();
+ var vis={};
+ function choisir(){
+  var mieux=null,best=0;
+  v.forEach(function(x,i){ if((vis[i]||0)>best){best=vis[i];mieux=x;} });
+  v.forEach(function(x){
+   if(x===mieux&&best>.35){ if(!x.dataset.pret){x.dataset.pret='1';x.load();} x.play().catch(function(){}); }
+   else x.pause();
+  });
+ }
+ var o=new IntersectionObserver(function(es){
+  es.forEach(function(e){ vis[v.indexOf(e.target)]=e.isIntersecting?e.intersectionRatio:0; });
+  choisir();
+ },{threshold:[0,.2,.35,.5,.65,.8,1]});
+ v.forEach(function(x){o.observe(x);});
+})();
 </script>
 <script>
 (function(){
