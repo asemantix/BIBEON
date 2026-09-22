@@ -1021,6 +1021,19 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 /* ── BIBEO : la photo verticale entière ── */
 .bibeo-media{background:#EEF1EA;display:grid;place-items:center;overflow:hidden}
 .bibeo-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+
+/* ── la clôture : le flacon déployé sur un doigt ── */
+.closing{text-align:left!important;padding:clamp(80px,10vh,130px) 5vw!important}
+.closing-duo{display:grid;grid-template-columns:46% 54%;gap:clamp(40px,5vw,90px);
+ align-items:center;max-width:1280px;margin:0 auto}
+.closing-visuel{margin:0;display:grid;place-items:center;background:var(--paper);overflow:hidden}
+.closing-visuel img{display:block;width:100%;height:auto;max-height:82vh;object-fit:contain}
+.closing--sans-image .closing-duo{grid-template-columns:1fr;text-align:center}
+.closing--sans-image .closing-visuel{display:none}
+@media(max-width:900px){
+ .closing-duo{grid-template-columns:1fr;gap:44px}
+ .closing-visuel img{max-height:64vh}
+}
 </style>
 </head>
 <body>
@@ -1108,7 +1121,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="bibeo-media"><img src="assets/bibeon-banniere-sortie-bureau.webp" width="1080" height="1440" loading="lazy" alt="Une femme en trench, sac matelassé à l’épaule, un BIBEO menthe à la main dans une rue de Paris"></div>
     </section>
     <section class="care" id="entretien" aria-labelledby="care-titre">
-      <figure class="care-visuel"><img src="assets/doigt-pince-le-soufflet.webp" alt="Deux doigts saisissent un soufflet du BIBEON et l’écartent" loading="lazy"></figure>
+      <figure class="care-visuel"><img onerror="this.onerror=null;this.src='assets/doigt-pince-le-soufflet.webp'" src="assets/index-au-fond-du-flacon.webp" alt="Deux doigts saisissent un soufflet du BIBEON et l’écartent" loading="lazy"></figure>
       <div class="care-texte">
         <p class="eyebrow">L’entretien</p>
         <h2 id="care-titre">Jusqu’au fond.<br><em>À portée de doigt.</em></h2>
@@ -1152,7 +1165,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       </ul>
       <a class="bouton-principal" href="#composer">Composer mon BIBEON <span>↑</span></a>
     </section>
-    <section class="closing"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#composer">Composer mon BIBEON <span>↑</span></a></section>
+    <section class="closing"><div class="closing-duo"><figure class="closing-visuel"><img src="assets/flacon-deplie-sur-un-doigt.webp" loading="lazy" alt="Le flacon BIBEON entièrement déployé, 330 ml, tenu en équilibre au bout d’un doigt" onerror="this.onerror=null;this.closest('.closing').classList.add('closing--sans-image')"></figure><div class="closing-texte"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#composer">Composer mon BIBEON <span>↑</span></a></div></div></section>
   </main>
   <div class="cart-backdrop" hidden></div>
   <aside class="cart" id="cart" aria-labelledby="cart-title" aria-hidden="true">
@@ -1257,15 +1270,6 @@ renderColorPickers();renderCart();
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -1304,13 +1308,16 @@ renderColorPickers();renderCart();
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
