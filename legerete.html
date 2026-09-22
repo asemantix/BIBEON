@@ -242,6 +242,27 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .three-steps h2 em,.colors h2 em{color:#E0B4AE}
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
 .travel-hero__copy h1 em{color:#96503F}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
+
+/* ── la déclaration : l'avant en image, le texte à droite ── */
+.declaration__duo{display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);
+ gap:clamp(34px,4.5vw,80px);align-items:center;max-width:1240px;margin:0 auto}
+.declaration__image{margin:0;background:#FBF9F6;display:grid;place-items:center;aspect-ratio:1/1;overflow:hidden}
+.declaration__image img{display:block;width:100%;height:100%;object-fit:contain}
+.declaration .declaration__text{margin-left:0!important;max-width:none!important;grid-template-columns:1fr!important;gap:26px!important}
+@media(max-width:900px){.declaration__duo{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -277,7 +298,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <section class="declaration">
       <p>Ce n’est pas peu de produit.</p>
       <h2>C’est beaucoup de poids<br><em>que l’on ne porte plus.</em></h2>
-      <div class="declaration__text"><p>Dans le sac, la différence ne vient pas seulement du chiffre. Propre, sec et replié, BIBEON peut déjà contenir la dose de poudre&nbsp;: le biberon vide et la boîte doseuse restent à la maison.</p><p>Dans les petites mains, son faible poids demande moins d’effort. Les creux entre les soufflets offrent naturellement une prise aux doigts.</p></div>
+      <div class="declaration__duo"><figure class="declaration__image"><img src="assets/biberons-classiques-et-dosettes.webp" alt="Un biberon classique et sa boîte doseuse remplie de lait en poudre" loading="lazy" onerror="this.onerror=null;this.src='assets/boite-doseuse-classique.webp'"></figure><div class="declaration__text"><p>Dans le sac, la différence ne vient pas seulement du chiffre. Propre, sec et replié, BIBEON peut déjà contenir la dose de poudre&nbsp;: le biberon vide et la boîte doseuse restent à la maison.</p><p>Dans les petites mains, son faible poids demande moins d’effort. Les creux entre les soufflets offrent naturellement une prise aux doigts.</p></div></div>
     </section>
 
     <section class="paradox" id="paradoxe">
@@ -290,10 +311,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <p class="paradox__answer">Il fallait trouver une fenêtre très précise dans laquelle <strong>légèreté, pliage et fiabilité du volume</strong> fonctionnent ensemble.</p>
     </section>
 
-    <section class="architecture" id="architecture">
-      <div class="architecture__visual"><img src="assets/bibeon-etats-de-pliage.webp" alt="BIBEON déplié et replié, montrant son architecture à soufflets"><p>Une même architecture.<br>Deux volumes.</p></div>
-      <div class="architecture__copy"><p class="kicker">L’architecture plutôt que l’épaisseur</p><h2>Le flacon retrouve<br><em>sa juste mesure.</em></h2><p>Le polypropylène satisfait les exigences du contact alimentaire et du pliage. Mais une fois comprimé, il tend naturellement à perdre une partie de sa hauteur.</p><p>Le dessin des soufflets a donc été conçu pour rendre au flacon sa cote exacte après dépliage. Cette géométrie permet aux graduations de rester utiles et au volume de rester fiable.</p><blockquote>Les quelque 35 grammes sont le point de rencontre entre une intention — alléger — et une contrainte — tenir, se replier et retrouver son volume.</blockquote></div>
-    </section>
+    
 
     <section class="functions">
       <header><p class="kicker">Rien d’utile n’a disparu</p><h2>Léger.<br><em>Pas simpliste.</em></h2></header>
@@ -348,15 +366,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -368,13 +377,16 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
