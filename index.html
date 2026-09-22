@@ -790,7 +790,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       </div>
       <figure class="bb-diptyque">
         <div class="bb-dip-haut"><img src="assets/goupillon-accueil.webp" width="832" height="674" loading="lazy" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON, les brins épousent chaque creux, mousse de savon au fond."><span>01 · Nettoyer</span></div>
-        <div class="bb-dip-bas"><img src="assets/doigt-pince-le-soufflet.webp" width="792" height="576" loading="lazy" alt="Deux doigts saisissent un soufflet du BIBEON depuis l’extérieur et l’écartent pour l’inspecter"><span>02 · Accéder</span></div>
+        <div class="bb-dip-bas"><img onerror="this.onerror=null;this.src='assets/doigt-pince-le-soufflet.webp'" src="assets/index-au-fond-du-flacon.webp" loading="lazy" alt="Deux doigts saisissent un soufflet du BIBEON depuis l’extérieur et l’écartent pour l’inspecter"><span>02 · Accéder</span></div>
         <figcaption>Nettoyer. Vérifier. Accéder.</figcaption>
       </figure>
       <div class="teat-choice">
@@ -956,15 +956,6 @@ if (hero && 'IntersectionObserver' in window) {
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -1042,13 +1033,16 @@ if (hero && 'IntersectionObserver' in window) {
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>

@@ -351,6 +351,37 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  .weight{grid-template-columns:1fr!important;min-height:0;padding:70px 24px!important;gap:50px}
  .weight__visuel img{max-height:78vh}
 }
+
+/* ── sans faire fragile : de l'air entre l'image et le texte ── */
+.weight{gap:clamp(60px,8vw,140px)!important}
+.weight>div:last-child{padding-left:clamp(10px,2vw,30px)}
+@media(max-width:850px){.weight{gap:56px!important}.weight>div:last-child{padding-left:0}}
+
+/* ── l'hygiène dehors : texte à gauche, vidéo à droite ── */
+.hygiene{grid-template-columns:1fr 1fr!important;gap:clamp(40px,6vw,100px)!important;align-items:center}
+.hygiene__steps{align-self:auto;margin-top:40px}
+.hygiene__video{margin:0;background:#000;display:grid;place-items:center;
+ aspect-ratio:9/16;max-height:82vh;width:100%;max-width:520px;justify-self:center;overflow:hidden}
+.hygiene__video video{display:block;width:100%;height:100%;object-fit:contain;background:#000}
+@media(max-width:900px){.hygiene{grid-template-columns:1fr!important}.hygiene__video{max-height:72vh}}
+
+/* ── le hero : le sac et les biberons classiques, image entière ── */
+.practical-hero__film{background:#F4F1EC}
+.practical-hero__film img{display:block;width:100%;height:100%;object-fit:contain;object-position:center}
+.practical-hero__film:after{content:none}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
 </style>
 </head>
 <body>
@@ -370,7 +401,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 
   <main>
     <section class="practical-hero">
-      <div class="practical-hero__film"><video autoplay muted loop playsinline preload="none" poster="assets/sortir-leger.webp" data-geste aria-label="Un BIBEON replié au milieu des accessoires de biberon qu’il remplace"><source src="assets/toutes-les-formes.mp4" type="video/mp4"></video><div class="stamp"><span>4</span><small>accessoires<br>en moins</small></div></div>
+      <div class="practical-hero__film"><img src="assets/sac-et-biberons-classiques.webp" width="902" height="1264" alt="Un grand sac à langer, quatre boîtes doseuses et quatre biberons rigides : ce qu’il faut emporter sans BIBEON"><div class="stamp"><span>4</span><small>accessoires<br>en moins</small></div></div>
       <div class="practical-hero__copy"><p class="kicker">Le biberon pratique</p><h1>Moins<br>d’objets.<br><em>Plus de sortie.</em></h1><p>Un biberon rigide, une boîte doseuse, un mélangeur et un obturateur : quatre objets pour un repas. BIBEON réunit leurs fonctions.</p><a class="cta" href="#principe">Voir comment <span>↓</span></a></div>
     </section>
 
@@ -385,13 +416,13 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 
     <section class="chapters" id="gestes">
       <header><p class="kicker">Le principe</p><h2>Il enlève.<br><em>Il simplifie.</em></h2></header>
-      <article class="chapter"><div class="chapter__copy"><p class="num">03</p><p class="removed">Sans boîte doseuse</p><h3>La dose voyage<br>dans le biberon.</h3><p>Versez la poudre chez vous, dans un flacon propre et parfaitement sec. Dehors, ajoutez simplement l’eau.</p><ul><li>Rien à transvaser</li><li>Rien à chercher au fond du sac</li><li>Une pièce de moins à laver</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le BIBEON replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video><span>Film 01 · Pré-doser</span></div></article>
-      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="num">04</p><p class="removed">Sans mélangeur</p><h3>Il est son<br>propre shaker.</h3><p>À l’intérieur, les creux des soufflets brisent les amas de poudre quand vous secouez.</p><ul><li>Pas de grille séparée</li><li>Moins de grumeaux</li><li>Rien à laver à part</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait préparé dans le BIBEON traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video><span>Film 02 · Mélanger</span></div></article>
-      <article class="chapter"><div class="chapter__copy"><p class="num">05</p><p class="removed">Sans valve</p><h3>On n’ajoute pas.<br><em>On enlève l’air.</em></h3><p>Le lait descend. BIBEON aussi. Abaissez les soufflets jusqu’au niveau du lait, puis coudez légèrement le flacon.</p><ul><li>Moins d’espace d’air</li><li>La tétine reste pleine</li><li>Le volume suit le repas</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait pendant la tétée"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video><span>Film 03 · Abaisser</span></div></article>
-      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="num">06</p><p class="removed">Sans obturateur</p><h3>Il comprime.<br>Il protège.</h3><p>Le toit plat du capuchon comprime la tétine dans sa base et obture son orifice.</p><ul><li>Le bloc reste fermé</li><li>La tétine ne touche pas la table</li><li>Trois pièces deviennent un bloc</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon vissé puis dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video><span>Film 04 · Fermer</span></div></article>
+      <article class="chapter"><div class="chapter__copy"><p class="kicker">03 · Sans boîte doseuse</p><h3>La dose voyage<br>dans le biberon.</h3><p>Replié, BIBEON ne laisse presque plus d’air autour de la poudre, et son capuchon le ferme hermétiquement : elle reste fraîche et se dilue sans grumeaux. Le flacon ne filtre pas la lumière — rangez-le dans son pochon ou un placard.</p><ul><li>Rien à transvaser</li><li>Rien à chercher au fond du sac</li><li>Une pièce de moins à laver</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le BIBEON replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video><span>Film 01 · Pré-doser</span></div></article>
+      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="kicker">04 · Sans mélangeur</p><h3>Il est son<br>propre shaker.</h3><p>À l’intérieur, les creux des soufflets brisent les amas de poudre quand vous secouez.</p><ul><li>Pas de grille séparée</li><li>Moins de grumeaux</li><li>Rien à laver à part</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait préparé dans le BIBEON traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video><span>Film 02 · Mélanger</span></div></article>
+      <article class="chapter"><div class="chapter__copy"><p class="kicker">05 · Sans valve</p><h3>On n’ajoute pas.<br><em>On enlève l’air.</em></h3><p>Le lait descend. BIBEON aussi. Abaissez les soufflets jusqu’au niveau du lait, puis coudez légèrement le flacon.</p><ul><li>Moins d’espace d’air</li><li>La tétine reste pleine</li><li>Le volume suit le repas</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait pendant la tétée"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video><span>Film 03 · Abaisser</span></div></article>
+      <article class="chapter chapter--reverse"><div class="chapter__copy"><p class="kicker">06 · Sans obturateur</p><h3>Il comprime.<br>Il protège.</h3><p>Le toit plat du capuchon comprime la tétine dans sa base et obture son orifice.</p><ul><li>Le bloc reste fermé</li><li>La tétine ne touche pas la table</li><li>Trois pièces deviennent un bloc</li></ul></div><div class="demo"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon vissé puis dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video><span>Film 04 · Fermer</span></div></article>
     </section>
 
-    <section class="hygiene" id="hygiene"><div><p class="kicker">07 · L’hygiène dehors</p><h2>Aussi propre qu’à la maison.<br><em>Où que vous soyez.</em></h2><p>Sur un banc, dans un train ou à la terrasse d’un café, les mains ne sont pas toujours impeccables. Le bloc bague–tétine–capuchon se manipule par le capuchon : les doigts ne touchent ni la tétine ni le lait.</p><blockquote>« Je voulais un biberon qu’on puisse donner après avoir changé une roue, sans avoir pu se laver les mains. »<cite>Suzanne de Bégon · Inventrice</cite></blockquote></div><div class="hygiene__steps"><p><span>1</span>Dévisser le bloc solidaire.</p><p><span>2</span>Le poser à l’envers sur sa face plate.</p><p><span>3</span>Ajouter l’eau, sans toucher la tétine.</p></div></section>
+    <section class="hygiene" id="hygiene"><div><p class="kicker">07 · L’hygiène dehors</p><h2>Aussi propre qu’à la maison.<br><em>Où que vous soyez.</em></h2><p>Sur un banc, dans un train ou à la terrasse d’un café, les mains ne sont pas toujours impeccables. Le bloc bague–tétine–capuchon se manipule par le capuchon : les doigts ne touchent ni la tétine ni le lait.</p><blockquote>« Je voulais un biberon qu’on puisse donner après avoir changé une roue, sans avoir pu se laver les mains. »<cite>Suzanne de Bégon · Inventrice</cite></blockquote><div class="hygiene__steps"><p><span>1</span>Dévisser le bloc solidaire.</p><p><span>2</span>Le poser à l’envers sur sa face plate.</p><p><span>3</span>Ajouter l’eau, sans toucher la tétine.</p></div></div><figure class="hygiene__video"><video muted loop playsinline preload="none" data-geste aria-label="Le bloc tétine, bague et capuchon posé à l’envers sur sa face plate, dehors"><source src="assets/bloc-a-lenvers-dehors.mp4" type="video/mp4"></video></figure></section>
 
     <section class="less"><p class="kicker">Finalement</p><h2>Un biberon dessiné<br>pour <em>tout remplacer.</em></h2><div><span>Moins lourd.</span><span>Moins encombrant.</span><span>Moins de pièces.</span><span>Moins d’air.</span><span>Moins de gestes.</span></div><a class="cta cta--dark" href="boutique.html">Choisir mon BIBEON <span>→</span></a></section>
   </main>
@@ -438,15 +469,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -466,13 +488,16 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
