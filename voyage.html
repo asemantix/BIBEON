@@ -409,6 +409,21 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .departure__visual img{width:100%!important;max-width:none!important;max-height:62vh!important;
  object-fit:cover!important;aspect-ratio:16/9}
 @media(max-width:900px){.departure__visual img{aspect-ratio:4/3;max-height:52vh!important}}
+
+.travel-hero__film img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
 </style>
 </head>
 <body>
@@ -430,7 +445,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <section class="travel-hero">
       <div class="travel-hero__copy"><p class="kicker">Voyager avec bébé</p><h1>Le biberon pliable<br><em>change toutes les sorties.</em></h1>
 <p class="bb-accroche">Du parc au bout du monde : 9,5 cm replié, environ 35 g et jusqu’à 330 ml une fois déployé.</p><a class="cta" href="#depart">Préparer la sortie <span>↓</span></a></div>
-      <div class="travel-hero__film"><video autoplay muted loop playsinline poster="images/gamme.jpg"><source src="media/bibeon-family.mp4" type="video/mp4"></video><div class="passport"><b>35 g</b><span>Il tient sous<br>le passeport.</span></div></div>
+      <div class="travel-hero__film"><img src="assets/voyage-couffin-avion.webp" width="1600" height="1600" alt="Un bébé dans son couffin en avion, un passeport et un BIBEON posés devant lui" onerror="this.onerror=null;this.src='assets/verser-eau-sur-la-tablette.webp'"><div class="passport"><b>35 g</b><span>Il tient sous<br>le passeport.</span></div></div>
     </section>
 
     <section class="travel-facts" aria-label="Les gestes sur place"><p><b>Déplier</b><span>le volume nécessaire</span></p><p><b>Remplir</b><span>ce que bébé boit ce jour-là</span></p><p><b>Donner</b><span>la tétine reste pleine</span></p><p><b>330 ml</b><span>pour tous les appétits</span></p></section>
@@ -506,15 +521,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -526,13 +532,16 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
