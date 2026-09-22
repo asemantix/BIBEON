@@ -396,6 +396,26 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .manual-hero__copy h1{font-size:clamp(3.2rem,5.6vw,6.4rem)!important;line-height:.9!important}
 .manual-hero__visual{min-height:clamp(420px,62vh,640px)!important;height:auto!important}
 @media(max-width:900px){.manual-hero__copy h1{font-size:clamp(3rem,12vw,4.4rem)!important}}
+
+/* ── l'étape 10 : emplacement photo, noir en attendant l'image ── */
+.step__media--photo{background:#000!important}
+.step__media--photo img{display:block;width:100%;height:100%;max-height:82vh;object-fit:contain}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
+
+.step__media--photo video{display:block;width:auto;max-width:100%;height:82vh;max-height:82vh;object-fit:contain;background:#000}
+@media(max-width:900px){.step__media--photo video{height:auto;width:100%;max-height:74vh}}
 </style>
 </head>
 <body>
@@ -443,6 +463,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
 
       <article class="step" id="nettoyage"><div class="step__number">09</div><div class="step__copy"><p class="label">Jusqu’au fond</p><h3>Nettoyer.</h3><p>Démontez les quatre pièces. Lavez-les à la main à l’eau chaude savonneuse. Repliez le flacon pour rapprocher le fond, puis remontez soufflet après soufflet.</p><aside>Lave-vaisselle interdit. Rincez abondamment et laissez sécher complètement à l’air libre.</aside></div><div class="step__media step__media--double"><figure><video muted loop playsinline preload="none" poster="assets/goupillon-dans-le-flacon.jpg" data-geste aria-label="Le goupillon tourne dans les soufflets du flacon déployé"><source src="assets/goupillon-dans-le-flacon.mp4" type="video/mp4"></video><figcaption>01 · Laver au goupillon</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/doigt-au-fond-replie.jpg" data-geste aria-label="Le doigt atteint le fond du flacon replié"><source src="assets/doigt-au-fond-replie.mp4" type="video/mp4"></video><figcaption>02 · Atteindre chaque pli</figcaption></figure></div></article>
+<article class="step" id="tetine"><div class="step__number">10</div><div class="step__copy"><p class="label">Tétine interchangeable</p><h3>Changer la tétine.</h3><p>La tétine se retire de la bague et se remplace par toute tétine à col étroit, en silicone ou en caoutchouc.</p><aside>Engagez-la bien droite : sa collerette doit être entièrement prise dans la bague.</aside></div><div class="step__media step__media--photo"><video muted loop playsinline preload="none" poster="assets/changer-la-tetine.jpg" data-geste aria-label="La tétine retirée de sa bague, puis remplacée"><source src="assets/changer-la-tetine.mp4" type="video/mp4"></video></div></article>
     </section>
 
     <section class="heating"><div><p class="kicker">Réchauffer</p><h2>Compatible avec<br><em>vos habitudes.</em></h2><p>Retirez toujours la bague, la tétine et le capuchon avant de réchauffer BIBEON. Ne le faites jamais bouillir.</p></div><div class="heat-grid"><p><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M12 30h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8Z'/><path d='M20 26c0-4 8-4 8-8'/><path d='M26 26c0-4 8-4 8-8'/></svg><span>Bain-marie</span><b>Compatible</b></p><p><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M16 10h16l-2 28a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4L16 10Z'/><path d='M17 24h14'/></svg><span>Chauffe-biberon</span><b>Compatible</b></p><p><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='7' y='14' width='34' height='22' rx='2'/><rect x='11' y='18' width='18' height='14'/><circle cx='35' cy='22' r='1.6'/><circle cx='35' cy='28' r='1.6'/></svg><span>Micro-ondes</span><b>Compatible</b></p><p class="heat-non"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='10' y='8' width='28' height='32' rx='2'/><circle cx='24' cy='24' r='8'/><path d='M12 44 36 4'/></svg><span>Lave-vaisselle</span><b>Interdit</b></p><p class="heat-non"><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M10 26h28v6a10 10 0 0 1-10 10h-8a10 10 0 0 1-10-10v-6Z'/><path d='M18 20c0-4 6-4 6-8'/><path d='M26 20c0-4 6-4 6-8'/><path d='M12 44 36 4'/></svg><span>Ébullition</span><b>Interdit</b></p></div></section>
@@ -491,15 +512,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
@@ -531,13 +543,16 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
