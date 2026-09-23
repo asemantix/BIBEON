@@ -189,7 +189,7 @@ h1 em{color:var(--bb-terre-pale)}
 .steps video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;background:#EEF1EA}
 
 /* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;
  color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
 footer.bb-pied p{font:inherit}
 footer.bb-pied p span{text-decoration:none}
@@ -304,6 +304,140 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
  .step__media--double{grid-template-rows:none;gap:10px}
  .step__media--double figure{aspect-ratio:4/5}
 }
+
+/* ── le bouton Boutique du pied garde sa forme ── */
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
+ padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
+
+/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
+   fonds clairs  -> terre cuite foncée #96503F
+   fonds moyens  -> bleu nuit seul
+   fond bleu nuit-> terre claire ou sauge clair ══ */
+
+/* fonds clairs : beige, ivoire, papier, sauge clair */
+.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
+.departure h2 em,.checklist h2 em,.duration h2 em,
+.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
+.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
+.manual-close h2 em,.steps>header h2 em,.heating h2 em,
+.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
+.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
+.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
+
+/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
+.duration h2 em,.testimonials h2 em{color:#2F5E5C}
+
+/* fond bleu nuit : teintes claires uniquement */
+h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
+.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
+.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
+.travel-hero__copy h1 em{color:#96503F}
+
+.measure-table .astuce{margin-top:16px;font:italic 1rem/1.6 "Playfair Display",Georgia,serif;color:#96503F}
+
+/* ── réchauffer : section sur fond bleu nuit, donc traits clairs ── */
+.heating h2 em{color:#C5D1C7!important}
+.heating .kicker{color:#AEBCAF}
+.heat-grid p{border-color:rgba(255,255,255,.22)!important}
+.heat-grid svg{stroke:#FBF9F6!important}
+.heat-grid span{color:#FBF9F6!important}
+.heat-grid b{color:#C5D1C7!important}
+.heat-non svg{stroke:#E0B4AE!important}
+.heat-non b{color:#E0B4AE!important}
+.heat-non span{color:#E0B4AE!important}
+.heat-non p,.heat-grid .heat-non{border-color:rgba(224,180,174,.45)!important}
+
+/* ── des pictogrammes qui se voient ── */
+.heat-grid{gap:clamp(10px,1.4vw,18px)}
+.heat-grid p{padding:clamp(26px,3vw,38px) 10px!important;gap:16px}
+.heat-grid svg{width:clamp(56px,5vw,76px)!important;height:clamp(56px,5vw,76px)!important;stroke-width:1.2}
+.heat-grid span{font-size:.84rem!important}
+.heat-grid b{font-size:.6rem!important}
+@media(max-width:560px){.heat-grid svg{width:52px!important;height:52px!important}}
+
+/* ══ CORRECTION : aucune hauteur fixe, le contenu commande ══ */
+.step{height:auto!important;min-height:clamp(560px,64vh,700px)!important;
+ grid-template-columns:7% 38% 55%!important;align-items:stretch;overflow:visible}
+.step__copy{align-self:center;padding:clamp(40px,4.4vw,64px) clamp(28px,3vw,46px)!important;overflow:visible}
+.step__media{height:auto!important;min-height:0!important;align-self:stretch;
+ display:grid;place-items:center;background:#EEF1EA;padding:clamp(12px,1.4vw,20px)}
+/* les vidéos entières, jamais découpées */
+.steps video,.step__media img{width:100%!important;height:100%!important;max-height:78vh;
+ object-fit:contain!important;aspect-ratio:auto!important;background:transparent}
+#nettoyage{height:auto!important}
+.step__media--double video{object-fit:contain!important}
+@media(max-width:900px){
+ .step{min-height:0!important;grid-template-columns:55px 1fr!important}
+ .step__media{grid-column:1/-1;aspect-ratio:auto!important;padding:10px}
+ .steps video,.step__media img{height:auto!important;max-height:70vh}
+}
+
+/* ══ UNE ÉTAPE PAR ÉCRAN, LA VIDÉO EN GRAND ══ */
+.step{min-height:88vh!important;grid-template-columns:6% 34% 60%!important;margin-bottom:22px!important}
+.step__media{padding:clamp(14px,1.6vw,24px)!important}
+.steps video,.step__media img{max-height:82vh!important;width:auto!important;max-width:100%!important;
+ height:82vh!important;object-fit:contain!important}
+.step__media--double{grid-template-rows:1fr 1fr}
+.step__media--double video{height:39vh!important;max-height:39vh!important}
+@media(max-width:900px){
+ .step{min-height:0!important}
+ .steps video,.step__media img{height:auto!important;max-height:78vh!important;width:100%!important}
+ .step__media--double video{height:auto!important;max-height:60vh!important}
+}
+
+/* ══ le hero : aucune hauteur plafonnée ══ */
+.manual-hero{max-height:none!important;min-height:0!important;height:auto!important;align-items:stretch}
+.manual-hero__copy{padding:clamp(56px,7vh,96px) clamp(26px,5vw,72px)!important}
+.manual-hero__copy h1{font-size:clamp(3.2rem,5.6vw,6.4rem)!important;line-height:.9!important}
+.manual-hero__visual{min-height:clamp(420px,62vh,640px)!important;height:auto!important}
+@media(max-width:900px){.manual-hero__copy h1{font-size:clamp(3rem,12vw,4.4rem)!important}}
+
+/* ── l'étape 10 : emplacement photo, noir en attendant l'image ── */
+.step__media--photo{background:#000!important}
+.step__media--photo img{display:block;width:100%;height:100%;max-height:82vh;object-fit:contain}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
+
+.step__media--photo video{display:block;width:auto;max-width:100%;height:82vh;max-height:82vh;object-fit:contain;background:#000}
+@media(max-width:900px){.step__media--photo video{height:auto;width:100%;max-height:74vh}}
+
+/* ── le pied : des liens lisibles ── */
+.bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
+.bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
+.bb-signature{font-size:1.12rem!important}
+.bb-pied-bas{font-size:.8rem!important}
+
+/* ── garde-fou : aucune image ne s'impose sa propre taille ── */
+main img,main video{max-height:88vh}
+@media(max-width:900px){main img,main video{max-height:80vh}}
+
+/* ── les étapes : texte plus large, vidéo plein cadre ── */
+.step{grid-template-columns:6% 44% 50%!important;min-height:clamp(540px,68vh,720px)!important}
+.step__media{padding:0!important;display:block!important;overflow:hidden}
+.steps video,.step__media img{width:100%!important;height:100%!important;max-height:none!important;
+ object-fit:cover!important;display:block}
+.step__media--double{padding:8px!important}
+.step__media--double video{height:100%!important;object-fit:cover!important}
+@media(max-width:900px){
+ .step{grid-template-columns:55px 1fr!important;min-height:0!important}
+ .step__media{aspect-ratio:4/5}
+}
 </style>
 </head>
 <body>
@@ -332,25 +466,26 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
     <section class="steps" id="gestes">
       <header><p class="kicker">Les gestes</p><h2>Dans l’ordre.<br><em>Sans hésiter.</em></h2></header>
 
-      <article class="step"><div class="step__number">01</div><div class="step__copy"><p class="label">Avant de partir</p><h3>Pré-doser.</h3><p>Utilisez un flacon parfaitement propre et sec. Versez directement la quantité de poudre nécessaire dans le BIBEON replié, puis refermez.</p><aside>Jusqu’à 8 mesurettes maximum. Respectez toujours les indications du fabricant du lait.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le flacon replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video><span>Film 01 · Verser la poudre</span></div></article>
+      <article class="step"><div class="step__number">01</div><div class="step__copy"><p class="label">Avant de déplier, replier ou couder</p><h3>Laisser l’air circuler.</h3><p>Comme pour une bouteille d’eau, il faut retirer le bouchon pour pouvoir l’écraser. L’air contenu dans BIBEON doit pouvoir circuler au dépliage, au repliage et au coudage.</p><p>Dévissez la bague avant chaque modification. <strong>Rempli de liquide, il suffit de la desserrer.</strong> Resserrez une fois la modification faite.</p></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">02</div><div class="step__copy"><p class="label">Avant tout changement de volume</p><h3>Ouvrir.</h3><p>Retirez le bloc bague–tétine–capuchon pour laisser l’air circuler. Comme une bouteille d’eau, BIBEON ne peut pas se comprimer lorsqu’il est fermé.</p><aside>Posez le bloc à l’envers sur la face plate du capuchon : la tétine reste protégée.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/fermer-devisser-poser-a-lenvers.jpg" data-geste aria-label="Le bloc tétine, bague et capuchon dévissé d’un seul tenant"><source src="assets/fermer-devisser-poser-a-lenvers.mp4" type="video/mp4"></video><span>Film 02 · Dévisser et poser</span></div></article>
+      <article class="step"><div class="step__number">02</div><div class="step__copy"><p class="label">Avant de partir</p><h3>Pré-doser.</h3><p><strong>Tout doit être propre et parfaitement sec</strong> — le flacon, la bague, la tétine et sa collerette, le capuchon. Versez la poudre dans le BIBEON replié, puis refermez.</p><p>Jusqu’à 8 mesurettes. La poudre se conserve ainsi <strong>15 jours</strong>, à l’abri de la lumière, capuchon en place sur la tétine.</p><aside><a href="biberon-pratique.html">Comment le capuchon obture la tétine <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/dose-de-poudre-flacon-replie.jpg" data-geste aria-label="La dose de lait en poudre versée dans le flacon replié"><source src="assets/dose-de-poudre-flacon-replie.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">03</div><div class="step__copy"><p class="label">Modifier la taille</p><h3>Déplier.</h3><p>Tenez le flacon par ses deux extrémités et ouvrez les soufflets un à un, en accordéon. Dépliez-les tous avant de vous fier aux graduations.</p><aside>Un soufflet resté replié soustrait 30 ml au volume disponible.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/deplier-avec-la-poudre.jpg" data-geste aria-label="Le flacon déplié, la poudre déjà dedans"><source src="assets/deplier-avec-la-poudre.mp4" type="video/mp4"></video><span>Film 03 · Déplier les soufflets</span></div></article>
+      <article class="step"><div class="step__number">03</div><div class="step__copy"><p class="label">Modifier la taille</p><h3>Déplier.</h3><p><strong>Retirez ou desserrez la bague.</strong> Tenez ensuite le flacon par ses deux extrémités et ouvrez les soufflets un à un, en accordéon. Dépliez-les tous avant de vous fier aux graduations.</p><aside>Un soufflet resté replié soustrait 30 ml au volume disponible.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/deplier-avec-la-poudre.jpg" data-geste aria-label="Le flacon déplié, la poudre déjà dedans"><source src="assets/deplier-avec-la-poudre.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step" id="dosage"><div class="step__number">04</div><div class="step__copy"><p class="label">Préparer le repas</p><h3>Ajouter l’eau.</h3><p>Ajoutez d’abord une petite quantité d’eau, revissez le bloc puis agitez. Complétez ensuite jusqu’au niveau prévu.</p><aside>La poudre occupe déjà du volume : utilisez les repères spécifiques ci-dessous.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/soufflet-par-soufflet.jpg" data-geste aria-label="L’eau versée dans le flacon déployé"><source src="assets/soufflet-par-soufflet.mp4" type="video/mp4"></video><span>Film 04 · Verser l’eau</span></div></article>
+      <article class="step" id="dosage"><div class="step__number">04</div><div class="step__copy"><p class="label">Préparer le repas</p><h3>Ajouter l’eau.</h3><p>Ajoutez d’abord une petite quantité d’eau, revissez le bloc puis agitez. Complétez ensuite jusqu’au niveau prévu.</p><aside>La poudre versée en premier occupe déjà du volume : l’eau ne peut plus se mesurer au trait. Il faut viser le niveau du lait reconstitué. Les repères sont ci-dessous.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/eau-en-deux-temps.jpg" data-geste aria-label="Un peu d’eau, on referme, on agite, puis on complète"><source src="assets/eau-en-deux-temps.mp4" type="video/mp4"></video></div></article>
 
-      <div class="measure-table"><div><p class="kicker">Repères d’eau</p><h3>La poudre est déjà dedans.</h3><p>Pour un lait dosé à une mesurette pour 30 ml d’eau. Les instructions du fabricant du lait restent prioritaires.</p></div><table><thead><tr><th>Mesurettes</th><th>Eau prévue</th><th>Remplir jusqu’à</th></tr></thead><tbody><tr><td>2</td><td>60 ml</td><td>¼ de soufflet au-dessus de 60 ml</td></tr><tr><td>4</td><td>120 ml</td><td>½ soufflet au-dessus de 120 ml</td></tr><tr><td>6</td><td>180 ml</td><td>¾ de soufflet au-dessus de 180 ml</td></tr><tr><td>8</td><td>240 ml</td><td>1 soufflet au-dessus, soit ≈ 270 ml</td></tr></tbody></table></div>
+      <div class="measure-table"><div><p class="kicker">Repères d’eau</p><h3>La poudre est déjà dedans.</h3><p>L’eau ajoutée doit tenir compte du volume de la poudre versée en premier. Ces repères donnent le niveau à viser.</p><p class="astuce">Plus simple encore : préparez un biberon comme d’habitude, relevez le niveau de lait reconstitué obtenu, et reproduisez-le à l’identique.</p></div><table><thead><tr><th>Mesurettes</th><th>Eau prévue</th><th>Remplir jusqu’à</th></tr></thead><tbody><tr><td>2</td><td>60 ml</td><td>¼ de soufflet au-dessus de 60 ml</td></tr><tr><td>4</td><td>120 ml</td><td>½ soufflet au-dessus de 120 ml</td></tr><tr><td>6</td><td>180 ml</td><td>¾ de soufflet au-dessus de 180 ml</td></tr><tr><td>8</td><td>240 ml</td><td>1 soufflet au-dessus, soit ≈ 270 ml</td></tr></tbody></table></div>
 
-      <article class="step"><div class="step__number">05</div><div class="step__copy"><p class="label">Les soufflets travaillent</p><h3>Mélanger.</h3><p>Refermez correctement, puis secouez. Les creux des soufflets dispersent les amas de poudre : aucun mélangeur séparé n’est nécessaire.</p><aside>Secouez. C’est tout.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait mélangé traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video><span>Film 05 · Secouer</span></div></article>
+      <article class="step"><div class="step__number">05</div><div class="step__copy"><p class="label">Les soufflets travaillent</p><h3>Mélanger.</h3><p>Refermez correctement, puis secouez. Les creux des soufflets dispersent les amas de poudre : aucun mélangeur séparé n’est nécessaire.</p><aside>Secouez. C’est tout.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/lait-au-tamis-sans-grumeaux.jpg" data-geste aria-label="Le lait mélangé traverse le tamis sans grumeaux"><source src="assets/lait-au-tamis-sans-grumeaux.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">06</div><div class="step__copy"><p class="label">Pendant la tétée</p><h3>Abaisser.</h3><p>Retirez le biberon de la bouche de bébé. Desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p><aside>Le lait descend. BIBEON aussi.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video><span>Film 06 · Réduire le volume</span></div></article>
+      <article class="step"><div class="step__number">06</div><div class="step__copy"><p class="label">Pendant la tétée</p><h3>Abaisser.</h3><p>Retirez le biberon de la bouche de bébé. Desserrez la bague sans retirer le bloc, abaissez les soufflets jusqu’au niveau du lait, puis revissez.</p><aside>Le lait descend. BIBEON aussi.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/abaisser-les-soufflets-avec-le-lait.jpg" data-geste aria-label="Les soufflets abaissés au niveau du lait"><source src="assets/abaisser-les-soufflets-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p>En fin de tétée, inclinez légèrement un soufflet. La forme s’adapte et la tétine reste alimentée en lait.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video><span>Film 07 · Couder</span></div></article>
+      <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p><strong>Desserrez la bague.</strong> En fin de tétée, inclinez légèrement un soufflet : la forme s’adapte et la tétine reste alimentée. Resserrez ensuite.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p>Retirez le bloc, repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video><span>Film 08 · Replier et fermer</span></div></article>
+      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
 
       <article class="step" id="nettoyage"><div class="step__number">09</div><div class="step__copy"><p class="label">Jusqu’au fond</p><h3>Nettoyer.</h3><p>Démontez les quatre pièces. Lavez-les à la main à l’eau chaude savonneuse. Repliez le flacon pour rapprocher le fond, puis remontez soufflet après soufflet.</p><aside>Lave-vaisselle interdit. Rincez abondamment et laissez sécher complètement à l’air libre.</aside></div><div class="step__media step__media--double"><figure><video muted loop playsinline preload="none" poster="assets/goupillon-dans-le-flacon.jpg" data-geste aria-label="Le goupillon tourne dans les soufflets du flacon déployé"><source src="assets/goupillon-dans-le-flacon.mp4" type="video/mp4"></video><figcaption>01 · Laver au goupillon</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/doigt-au-fond-replie.jpg" data-geste aria-label="Le doigt atteint le fond du flacon replié"><source src="assets/doigt-au-fond-replie.mp4" type="video/mp4"></video><figcaption>02 · Atteindre chaque pli</figcaption></figure></div></article>
+<article class="step" id="tetine"><div class="step__number">10</div><div class="step__copy"><p class="label">Tétine interchangeable</p><h3>Changer la tétine.</h3><p>La tétine se retire de la bague et se remplace par toute tétine à col étroit, en silicone ou en caoutchouc.</p><aside>Engagez-la bien droite : sa collerette doit être entièrement prise dans la bague.</aside></div><div class="step__media step__media--photo"><video muted loop playsinline preload="none" poster="assets/changer-la-tetine.jpg" data-geste aria-label="La tétine retirée de sa bague, puis remplacée"><source src="assets/changer-la-tetine.mp4" type="video/mp4"></video></div></article>
     </section>
 
     <section class="heating"><div><p class="kicker">Réchauffer</p><h2>Compatible avec<br><em>vos habitudes.</em></h2><p>Retirez toujours la bague, la tétine et le capuchon avant de réchauffer BIBEON. Ne le faites jamais bouillir.</p></div><div class="heat-grid"><p><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M12 30h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8Z'/><path d='M20 26c0-4 8-4 8-8'/><path d='M26 26c0-4 8-4 8-8'/></svg><span>Bain-marie</span><b>Compatible</b></p><p><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M16 10h16l-2 28a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4L16 10Z'/><path d='M17 24h14'/></svg><span>Chauffe-biberon</span><b>Compatible</b></p><p><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='7' y='14' width='34' height='22' rx='2'/><rect x='11' y='18' width='18' height='14'/><circle cx='35' cy='22' r='1.6'/><circle cx='35' cy='28' r='1.6'/></svg><span>Micro-ondes</span><b>Compatible</b></p><p class="heat-non"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='10' y='8' width='28' height='32' rx='2'/><circle cx='24' cy='24' r='8'/><path d='M12 44 36 4'/></svg><span>Lave-vaisselle</span><b>Interdit</b></p><p class="heat-non"><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M10 26h28v6a10 10 0 0 1-10 10h-8a10 10 0 0 1-10-10v-6Z'/><path d='M18 20c0-4 6-4 6-8'/><path d='M26 20c0-4 6-4 6-8'/><path d='M12 44 36 4'/></svg><span>Ébullition</span><b>Interdit</b></p></div></section>
@@ -368,7 +503,7 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
  <div><h3>BIBEON en détail</h3>
   <a href="biberon-pratique.html">Le biberon pratique</a>
   <a href="legerete.html">La légèreté</a>
-  <a href="mode-demploi.html">Mode d’emploi</a>
+  <a href="mode-demploi.html">Mode d’emploi</a><a href="astuces-et-precautions.html">Astuces et précautions</a>
   <a href="voyage.html">Voyager avec bébé</a>
   <a href="notre-parti-pris.html">Notre parti pris</a></div>
  <div><h3>Les preuves</h3>
@@ -387,7 +522,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 </div>
 <div class="bb-copy">
  <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
- <span>Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
 <script>
@@ -400,27 +534,27 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
 })();
 </script>
 <script>
-(function(){var v=document.querySelectorAll('video[data-geste]');
+(function(){
+ var v=[].slice.call(document.querySelectorAll('video[data-geste]'));
  if(!v.length||!('IntersectionObserver' in window)) return;
- var m=window.matchMedia('(max-width:900px)').matches;
- var o=new IntersectionObserver(function(es){es.forEach(function(x){
-  var t=x.target;
-  if(x.isIntersecting){ if(m){v.forEach(function(y){if(y!==t)y.pause();});}
-   if(!t.dataset.pret){t.dataset.pret='1';t.load();} t.play().catch(function(){}); }
-  else{ t.pause(); }});},{threshold:.25,rootMargin:'140px'});
- v.forEach(function(x){o.observe(x);});})();
+ var vis={};
+ function choisir(){
+  var mieux=null,best=0;
+  v.forEach(function(x,i){ if((vis[i]||0)>best){best=vis[i];mieux=x;} });
+  v.forEach(function(x){
+   if(x===mieux&&best>.35){ if(!x.dataset.pret){x.dataset.pret='1';x.load();} x.play().catch(function(){}); }
+   else x.pause();
+  });
+ }
+ var o=new IntersectionObserver(function(es){
+  es.forEach(function(e){ vis[v.indexOf(e.target)]=e.isIntersecting?e.intersectionRatio:0; });
+  choisir();
+ },{threshold:[0,.2,.35,.5,.65,.8,1]});
+ v.forEach(function(x){o.observe(x);});
+})();
 </script>
 <script>
 (function(){
@@ -431,13 +565,16 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
  var ouvert=false;
  function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
    requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
-   b.setAttribute('aria-expanded','true'); ouvert=true; }
- function fermer(){ p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
    b.setAttribute('aria-expanded','false'); ouvert=false;
-   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260); }
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
  b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
- if(v) v.addEventListener('click',fermer);
+ if(v) v.addEventListener('click',function(){fermer();});
  p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
