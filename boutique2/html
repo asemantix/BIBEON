@@ -1,0 +1,1332 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#f7f4ee" name="theme-color"/>
+<meta content="BIBEON" name="author"/>
+<meta content="index, follow, max-image-preview:large, max-snippet:-1" name="robots"/>
+<link href="https://bibeon.fr/boutique.html" hreflang="fr" rel="alternate"/>
+<link href="https://bibeon.fr/boutique.html" hreflang="x-default" rel="alternate"/>
+<meta content="BIBEON" property="og:site_name"/>
+<meta content="fr_FR" property="og:locale"/>
+<meta content="BIBEON" property="product:brand"/>
+<meta content="instock" property="product:availability"/>
+<meta content="new" property="product:condition"/>
+<meta content="true" name="pinterest-rich-pin"/>
+<link href="/assets/favicon-bibeon.png" rel="icon" sizes="512x512" type="image/png"/>
+<link href="/favicon.ico" rel="icon" sizes="48x48" type="image/x-icon"/>
+<link href="/assets/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<title>Boutique BIBEON — biberon nomade pliable, livraison offerte</title>
+<meta content="Le biberon nomade pliable BIBEON : à l’unité, en duo, en lot de trois ou de cinq, et le BIBEO. Cinq coloris testés par le LNE, 35 € l’unité, livraison offerte en point Mondial Relay." name="description"/>
+<link href="https://bibeon.fr/boutique.html" rel="canonical"/>
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bibeon.fr/boutique.html">
+<meta property="og:title" content="Boutique BIBEON — le biberon nomade pliable">
+<meta property="og:description" content="À l’unité, en duo, en lot de trois ou de cinq, et le BIBEO. Cinq coloris, livraison offerte.">
+<meta property="og:image" content="https://bibeon.fr/assets/bibeon-coffret-hero.webp">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1150">
+<meta property="og:image:alt" content="Le biberon nomade BIBEON pré-dosé, son pochon de mousseline de coton et l’étui triangulaire">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Boutique BIBEON — le biberon nomade pliable">
+<meta name="twitter:description" content="À l’unité, en duo, en lot de trois ou de cinq, et le BIBEO. Cinq coloris, livraison offerte.">
+<meta name="twitter:image" content="https://bibeon.fr/assets/bibeon-coffret-hero.webp">
+<meta name="twitter:image:alt" content="Le biberon nomade BIBEON pré-dosé, son pochon de mousseline de coton et l’étui triangulaire">
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "CollectionPage",
+   "@id": "https://bibeon.fr/boutique.html#page",
+   "url": "https://bibeon.fr/boutique.html",
+   "name": "Boutique BIBEON",
+   "description": "Les offres du biberon nomade pliable BIBEON : unité, duo, lot de trois, lot de cinq, et le BIBEO.",
+   "inLanguage": "fr-FR",
+   "isPartOf": {
+    "@id": "https://bibeon.fr/#site"
+   },
+   "about": {
+    "@id": "https://bibeon.fr/#biberon"
+   },
+   "publisher": {
+    "@id": "https://bibeon.fr/#organisation"
+   },
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://bibeon.fr/assets/bibeon-coffret-hero.webp",
+    "width": 1600,
+    "height": 1000
+   },
+   "datePublished": "2026-08-06",
+   "dateModified": "2026-08-29"
+  },
+  {
+   "@type": "BreadcrumbList",
+   "@id": "https://bibeon.fr/boutique.html#fil",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "BIBEON",
+     "item": "https://bibeon.fr/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Boutique",
+     "item": "https://bibeon.fr/boutique.html"
+    }
+   ]
+  },
+  {
+   "@type": "ItemList",
+   "@id": "https://bibeon.fr/boutique.html#offres",
+   "name": "Les offres BIBEON",
+   "numberOfItems": 6,
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#un-bibeon",
+      "name": "BIBEON — biberon nomade pliable 330 ml",
+      "description": "Le biberon nomade pliable BIBEON, 330 ml, avec sa tétine en silicone alimentaire, débit 6 mois et plus. Vendu vide.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-menthe.webp",
+      "url": "https://bibeon.fr/boutique.html#un-bibeon",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "1"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#un-bibeon-offre",
+       "price": "35.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#un-bibeon",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Un BIBEON"
+     },
+     "name": "BIBEON — biberon nomade pliable 330 ml"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#duo",
+      "name": "Duo BIBEON — 2 biberons nomades pliables 330 ml",
+      "description": "Deux biberons nomades pliables BIBEON de 330 ml : celui de la sortie, et celui qui reste prêt dans le sac. Coloris au choix.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-duo-menthe-abricot.webp",
+      "url": "https://bibeon.fr/boutique.html#duo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "2"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#duo-offre",
+       "price": "62.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#duo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Le duo BIBEON"
+     },
+     "name": "Duo BIBEON — 2 biberons nomades pliables 330 ml"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#lot-de-trois",
+      "name": "Lot de 3 BIBEON — 3 biberons nomades pliables 330 ml",
+      "description": "Trois biberons nomades pliables BIBEON de 330 ml : trois repas dosés la veille, la journée entière dans le sac à main.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-trio.webp",
+      "url": "https://bibeon.fr/boutique.html#lot-de-trois",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "3"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#lot-de-trois-offre",
+       "price": "87.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#lot-de-trois",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Le lot de trois BIBEON"
+     },
+     "name": "Lot de 3 BIBEON — 3 biberons nomades pliables 330 ml"
+    },
+    {
+     "@type": "ListItem",
+     "position": 4,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#lot-de-cinq",
+      "name": "Lot de 5 BIBEON — les 5 coloris, biberon nomade pliable 330 ml",
+      "description": "Les cinq coloris du biberon nomade pliable BIBEON, 330 ml : un chez vous, un dans la voiture, un chez la nounou, un chez mamie, et le cinquième toujours prêt.",
+      "image": "https://bibeon.fr/assets/bibeon-biberon-pliable-5-coloris.webp",
+      "url": "https://bibeon.fr/boutique.html#lot-de-cinq",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "5"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#lot-de-cinq-offre",
+       "price": "125.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#lot-de-cinq",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+        "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Le lot de cinq BIBEON"
+     },
+     "name": "Lot de 5 BIBEON — les 5 coloris, biberon nomade pliable 330 ml"
+    },
+    {
+     "@type": "ListItem",
+     "position": 5,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#bibeo",
+      "name": "BIBEO — biberon nomade pliable 330 ml, édition limitée",
+      "description": "Le BIBEON en édition limitée, coloré de haut en bas, bague jaune. Biberon nomade pliable de 330 ml.",
+      "image": "https://bibeon.fr/assets/bibeo-biberon-pliable-rose.webp",
+      "url": "https://bibeon.fr/boutique.html#bibeo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "1"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#bibeo-offre",
+       "price": "45.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#bibeo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Le BIBEO"
+     },
+     "name": "BIBEO — biberon nomade pliable 330 ml, édition limitée"
+    },
+    {
+     "@type": "ListItem",
+     "position": 6,
+     "item": {
+      "@type": "Product",
+      "@id": "https://bibeon.fr/boutique.html#duo-bibeo",
+      "name": "Duo BIBEO — 2 biberons nomades pliables 330 ml, édition limitée",
+      "description": "Deux BIBEO en édition limitée, le rose et le menthe ou deux fois le même. Biberon nomade pliable de 330 ml.",
+      "image": "https://bibeon.fr/assets/bibeo-biberon-pliable-duo.webp",
+      "url": "https://bibeon.fr/boutique.html#duo-bibeo",
+      "brand": {
+       "@type": "Brand",
+       "name": "BIBEON"
+      },
+      "category": "Puériculture > Biberons",
+      "countryOfOrigin": "FR",
+      "additionalProperty": [
+       {
+        "@type": "PropertyValue",
+        "name": "Contenance",
+        "value": "330 ml"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Poids",
+        "value": "environ 35 g"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Nombre de biberons",
+        "value": "2"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Part d’origine végétale",
+        "value": "50 % du poids (bague et capuchon)"
+       },
+       {
+        "@type": "PropertyValue",
+        "name": "Tétine",
+        "value": "silicone alimentaire, débit 6 mois et plus, interchangeable"
+       }
+      ],
+      "offers": {
+       "@type": "Offer",
+       "@id": "https://bibeon.fr/boutique.html#duo-bibeo-offre",
+       "price": "79.00",
+       "priceCurrency": "EUR",
+       "availability": "https://schema.org/InStock",
+       "itemCondition": "https://schema.org/NewCondition",
+       "url": "https://bibeon.fr/boutique.html#duo-bibeo",
+       "seller": {
+        "@id": "https://bibeon.fr/#organisation"
+       },
+         "shippingDetails": [
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay point relais",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    },
+    {
+      "@type": "OfferShippingDetails",
+      "name": "Mondial Relay domicile",
+      "shippingRate": { "@type": "MonetaryAmount", "value": "3.50", "currency": "EUR" },
+      "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "FR" },
+      "deliveryTime": {
+        "@type": "ShippingDeliveryTime",
+        "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 1, "unitCode": "DAY" },
+        "transitTime": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 3, "unitCode": "DAY" },
+        "cutoffTime": "12:00:00"
+      }
+    }
+  ],
+  "hasMerchantReturnPolicy": {
+    "@type": "MerchantReturnPolicy",
+    "applicableCountry": "FR",
+    "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+    "merchantReturnDays": 30,
+    "returnMethod": "https://schema.org/ReturnByMail",
+    "returnFees": "https://schema.org/FreeReturn",
+    "returnShippingFeesAmount": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
+    "merchantReturnLink": "https://bibeon.fr/livraison-et-retours.html"
+  }
+      },
+      "material": "Polypropylène alimentaire ; bague et capuchon en matière d’origine végétale",
+      "isFamilyFriendly": true,
+      "alternateName": "Le duo BIBEO"
+     },
+     "name": "Duo BIBEO — 2 biberons nomades pliables 330 ml, édition limitée"
+    }
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0e1d33;--ivory:#f7f3ec;--paper:#fcfaf6;--sage:#aebf96;--terracotta:#b66a55;--terracotta-dark:#96503f;--line:#d8d4cc;--ink:#0e1d33;--muted:#6e6a64;--mint:#b9dfe4;--apricot:#efb88d;--lilac:#c9b9dc;--rose:#efb4c7;--linen:#9eafd1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}body.cart-open{overflow:hidden}button,a{color:inherit}button{font:inherit}.ribbon{height:31px;padding:8px 16px;text-align:center;background:var(--navy);color:var(--ivory);font-size:.65rem;text-transform:uppercase;letter-spacing:.16em}.ribbon span{padding:0 12px;color:var(--terracotta)}.site-header{height:82px;padding:0 4vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line);background:rgba(252,250,246,.94);backdrop-filter:blur(14px);position:relative;z-index:20}.brand{font-weight:600;font-size:1.24rem;letter-spacing:.22em;text-decoration:none}.brand sup{font-size:.4em}.menu-button,.cart-button{border:0;background:none;padding:10px 0;cursor:pointer;text-transform:uppercase;font-size:.68rem;letter-spacing:.14em}.menu-button{justify-self:start;display:flex;align-items:center;gap:11px}.menu-button i,.menu-button i:after{width:25px;height:1px;background:var(--navy);display:block;content:""}.menu-button i:after{transform:translateY(6px)}.cart-button{justify-self:end}.cart-count{display:inline-grid;place-items:center;min-width:23px;height:23px;margin-left:7px;border:1px solid;border-radius:50%;font-size:.62rem}.site-menu{position:absolute;z-index:19;top:113px;left:0;width:min(440px,100%);padding:36px 4vw 46px;background:var(--paper);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}.site-menu a{display:block;padding:14px 0;border-bottom:1px solid var(--line);font:500 1.25rem "Playfair Display",serif;text-decoration:none}.product{display:grid;grid-template-columns:minmax(0,52%) minmax(0,48%);align-items:start;border-bottom:1px solid var(--line)}.product-media{position:sticky;top:0;height:100vh;min-height:720px;background:#e9e2d9;overflow:hidden}.product-media img{width:100%;height:100%;object-fit:cover}.product-media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,29,51,.24),transparent 38%)}.media-note{position:absolute;z-index:1;left:38px;bottom:34px;color:#fff;margin:0;font-size:.67rem;text-transform:uppercase;letter-spacing:.14em}.media-note span{margin-right:18px}.product-panel{padding:82px clamp(32px,5.4vw,92px) 100px}.eyebrow,.step-label{margin:0 0 22px;font-size:.65rem;text-transform:uppercase;letter-spacing:.18em}.eyebrow:before{content:"";display:inline-block;width:28px;height:1px;margin-right:11px;background:currentColor;vertical-align:middle}.product-panel h1{font:500 clamp(4.8rem,8vw,9.5rem)/.82 "Playfair Display",serif;letter-spacing:-.055em;margin:0}.signature{font:italic 1.45rem "Playfair Display",serif;color:var(--terracotta-dark);margin:25px 0 32px}.starting-price{display:flex;align-items:baseline;gap:12px;padding-bottom:32px;border-bottom:1px solid var(--line)}.starting-price span,.starting-price small{font-size:.72rem;color:var(--muted)}.starting-price strong{font:500 2.1rem "Playfair Display",serif}.starting-price small{margin-left:auto;text-transform:uppercase;letter-spacing:.08em}.facts{list-style:none;margin:0;padding:24px 0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;border-bottom:1px solid var(--line)}.facts b,.facts span{display:block}.facts b{font:500 .92rem "Playfair Display",serif}.facts span{font-size:.6rem;color:var(--muted);margin-top:5px}.product-information{border-bottom:1px solid var(--line)}details{border-bottom:1px solid var(--line)}details:last-child{border-bottom:0}summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;font:500 1.05rem "Playfair Display",serif}summary::-webkit-details-marker{display:none}summary span{font:400 1rem "DM Sans",sans-serif;transition:transform .2s}details[open] summary span{transform:rotate(45deg)}details p{margin:0 0 22px;max-width:680px;color:#514f4b;font-size:.88rem;line-height:1.72}.composer{padding-top:62px}.composer h2{font:500 clamp(2.7rem,4vw,4.5rem)/.95 "Playfair Display",serif;letter-spacing:-.04em;margin:0 0 32px}.step-label{color:var(--terracotta-dark);margin-bottom:14px}.pack-options{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line)}.pack-option{border:0;border-right:1px solid var(--line);background:transparent;padding:20px 10px;min-height:118px;cursor:pointer;text-align:left;display:flex;flex-direction:column;transition:.2s}.pack-option:last-child{border-right:0}.pack-option:hover{background:#f1ece4}.pack-option.active{background:var(--terracotta);color:#fff}.pack-option span{font:.68rem "DM Sans"}.pack-option b{font:500 1.55rem "Playfair Display",serif;margin:auto 0 4px}.pack-option small{font-size:.58rem;opacity:.76}.color-pickers{padding:24px 0}.color-picker{display:grid;grid-template-columns:105px 1fr auto;align-items:center;gap:18px;padding:14px 0;border-bottom:1px solid var(--line)}.color-picker>span{font-size:.75rem;text-transform:uppercase;letter-spacing:.1em}.swatches{display:flex;gap:9px}.swatch{width:27px;height:27px;border-radius:50%;border:2px solid var(--paper);box-shadow:0 0 0 1px #bcb6ae;cursor:pointer}.swatch[aria-checked="true"]{box-shadow:0 0 0 2px var(--navy)}.swatch.mint,.bibeo-choices i.mint{background:var(--mint)}.swatch.apricot{background:var(--apricot)}.swatch.lilac{background:var(--lilac)}.swatch.rose,.bibeo-choices i.rose{background:var(--rose)}.swatch.linen{background:var(--linen)}.color-picker output{font:500 .76rem "DM Sans"}.selection-summary{display:flex;justify-content:space-between;gap:24px;padding:24px 0;border-block:1px solid var(--navy)}.selection-summary>div:last-child{text-align:right}.selection-summary span,.selection-summary strong{display:block}.selection-summary span{font-size:.62rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin-bottom:7px}.selection-summary strong{font:500 1.05rem "Playfair Display",serif}.add-to-cart,.add-bibeo,.checkout{width:100%;border:0;background:var(--terracotta);color:white;padding:19px 21px;margin-top:20px;display:flex;justify-content:space-between;cursor:pointer;text-transform:uppercase;letter-spacing:.13em;font-size:.69rem;transition:background .2s}.add-to-cart:hover,.add-bibeo:hover,.checkout:hover{background:var(--terracotta-dark)}.buy-note{text-align:center;color:var(--muted);font-size:.66rem;margin:13px 0 0}.reassurance{display:grid;grid-template-columns:repeat(3,1fr);padding:105px 5vw;background:var(--ivory)}.reassurance article{padding:0 38px;border-right:1px solid var(--line)}.reassurance article:first-child{padding-left:0}.reassurance article:last-child{border:0}.reassurance span{font-size:.62rem;letter-spacing:.15em;color:var(--terracotta-dark)}.reassurance h2{font:500 2rem/1.05 "Playfair Display",serif;margin:46px 0 16px}.reassurance p{font-size:.84rem;line-height:1.65;color:var(--muted)}.movement{display:grid;grid-template-columns:44% 56%;min-height:730px;background:var(--navy);color:var(--ivory)}.movement-copy{padding:100px 6vw;align-self:center}.movement h2,.bibeo h2,.faq h2,.closing h2{font:500 clamp(3.7rem,6vw,7.4rem)/.88 "Playfair Display",serif;letter-spacing:-.05em;margin:0}.movement h2 em,.faq h2 em,.closing h2 em{font-weight:500;color:var(--terracotta)}.movement-copy>p:not(.eyebrow){max-width:500px;color:#d4d3cf;line-height:1.75;margin:34px 0}.movement a,.closing a{display:inline-flex;gap:38px;border-bottom:1px solid;padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.12em;font-size:.67rem}.movement-media img,.bibeo-media img{width:100%;height:100%;object-fit:cover}.bibeo{display:grid;grid-template-columns:50% 50%;min-height:700px;background:#dfe6d3}.bibeo-copy{padding:92px 7vw;align-self:center}.bibeo-copy>p:not(.eyebrow,.signature){max-width:500px;line-height:1.72;color:#4f5548}.bibeo .signature{color:var(--navy)}.bibeo-choices{margin-top:35px;display:grid;border-top:1px solid #aeb8a2}.bibeo-choices button{border:0;border-bottom:1px solid #aeb8a2;background:transparent;text-align:left;padding:17px 0;display:flex;align-items:center;gap:13px;cursor:pointer;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem}.bibeo-choices button.active{font-weight:600}.bibeo-choices i{display:block;width:19px;height:19px;border-radius:50%;box-shadow:0 0 0 1px rgba(14,29,51,.35)}.bibeo-media{min-height:600px}.faq{padding:115px 6vw;display:grid;grid-template-columns:.85fr 1.15fr;gap:9vw;background:var(--paper)}.faq-list{border-top:1px solid var(--line)}.faq h2 em{color:var(--sage)}.faq summary{font-size:1.2rem;padding:24px 0}.closing{text-align:center;padding:120px 20px;background:var(--ivory)}.closing .eyebrow:before{display:none}.closing h2{margin-bottom:45px}.closing h2 em{color:var(--terracotta)}.closing a{background:var(--navy);color:white;border:0;padding:19px 22px;min-width:250px;justify-content:space-between}footer{padding:48px 5vw;background:var(--navy);color:#fff;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}footer nav{display:flex;gap:22px}footer nav a{font-size:.63rem;text-transform:uppercase;letter-spacing:.1em}footer p{justify-self:end;font:italic .95rem "Playfair Display",serif}.cart-backdrop{position:fixed;z-index:29;inset:0;background:rgba(14,29,51,.48);backdrop-filter:blur(3px)}.cart{position:fixed;z-index:30;top:0;right:0;width:min(500px,100%);height:100vh;background:var(--paper);transform:translateX(102%);transition:transform .35s ease;display:flex;flex-direction:column;padding:34px}.cart.open{transform:translateX(0)}.cart>header{display:flex;justify-content:space-between;align-items:start;padding-bottom:20px;border-bottom:1px solid var(--line)}.cart>header h2{font:500 3rem "Playfair Display",serif;margin:0}.cart-close{border:0;background:none;font-size:2rem;cursor:pointer}.cart-items{overflow:auto}.cart-item{display:grid;grid-template-columns:74px 1fr auto;gap:16px;padding:21px 0;border-bottom:1px solid var(--line);align-items:center}.cart-item img{width:74px;height:88px;object-fit:cover}.cart-item h3{font:500 1.05rem "Playfair Display",serif;margin:0 0 5px}.cart-item p{font-size:.68rem;color:var(--muted);margin:0}.cart-item button{border:0;background:none;text-decoration:underline;font-size:.62rem;padding:7px 0;cursor:pointer}.cart-item strong{font:500 1.05rem "Playfair Display",serif}.cart-empty{text-align:center;margin:auto}.cart-empty a{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em}.cart-footer{margin-top:auto;border-top:1px solid var(--navy);padding-top:23px}.cart-footer>div{display:flex;justify-content:space-between}.cart-footer span{text-transform:uppercase;letter-spacing:.1em;font-size:.68rem}.cart-total{font:500 1.6rem "Playfair Display",serif}.cart-footer p,.cart-footer small{font-size:.65rem;color:var(--muted)}.toast{position:fixed;z-index:40;left:50%;bottom:28px;transform:translate(-50%,30px);background:var(--navy);color:#fff;padding:13px 20px;font-size:.72rem;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:1050px){.facts{grid-template-columns:repeat(3,1fr)}.pack-options{grid-template-columns:1fr 1fr}.pack-option:nth-child(2){border-right:0}.pack-option:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media(max-width:850px){.product{grid-template-columns:1fr}.product-media{position:relative;height:70vh;min-height:520px}.product-panel{padding:70px 24px}.starting-price{flex-wrap:wrap}.starting-price small{width:100%;margin:0}.reassurance{grid-template-columns:1fr;padding:70px 24px}.reassurance article,.reassurance article:first-child{padding:28px 0;border-right:0;border-bottom:1px solid var(--line)}.reassurance h2{margin:25px 0 12px}.movement,.bibeo,.faq{grid-template-columns:1fr}.movement-copy,.bibeo-copy,.faq{padding:75px 24px}.movement-media,.bibeo-media{min-height:480px}.bibeo-media{order:-1}.faq{gap:55px}.site-header{padding:0 22px}footer{grid-template-columns:1fr;gap:22px;text-align:center}footer nav{justify-content:center;flex-wrap:wrap}footer p{justify-self:center;margin:0}}
+@media(max-width:520px){.ribbon{font-size:.54rem;letter-spacing:.1em}.menu-button span,.cart-button{font-size:.6rem}.product-media{height:56vh;min-height:410px}.product-panel h1{font-size:5.2rem}.facts{grid-template-columns:1fr 1fr}.facts li{padding:7px 0}.pack-option{min-height:105px}.color-picker{grid-template-columns:82px 1fr}.color-picker output{grid-column:2}.swatch{width:25px;height:25px}.selection-summary{display:block}.selection-summary>div:last-child{text-align:left;margin-top:18px}.movement-media,.bibeo-media{min-height:370px}.cart{padding:25px 20px}.cart-item{grid-template-columns:62px 1fr auto}.cart-item img{width:62px;height:76px}}
+.bibeo-packs{display:grid;grid-template-columns:1fr 1fr;border:1px solid #9fac94}.bibeo-packs button{border:0;border-right:1px solid #9fac94;background:transparent;text-align:left;padding:17px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem}.bibeo-packs button:last-child{border-right:0}.bibeo-packs button.active{background:var(--navy);color:#fff}.bibeo-packs b{font:500 1.1rem "Playfair Display",serif}.bibeo-color-pickers{margin-top:12px}.bibeo .color-picker{border-color:#aeb8a2}.bibeo-summary{border-color:#7f8f77}
+
+
+/* ══════════ ENTÊTE PREMIUM — commun à toutes les pages ══════════ */
+:root{--bb-navy:#0E1C35;--bb-ivoire:#FBF9F6;--bb-sauge:#8F9875;--bb-filet:rgba(14,28,53,.12)}
+.bb-bandeau{background:var(--bb-navy);color:#fff;text-align:center;padding:9px 16px;
+ font:600 .58rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.bb-entete{position:fixed;top:0;left:0;right:0;z-index:90;height:74px;padding:0 clamp(16px,4vw,42px);
+ display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
+ background:transparent;border-bottom:1px solid transparent;
+ transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
+.bb-entete.bb-fige,.bb-entete.bb-opaque{background:rgba(251,249,246,.88);
+ -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:var(--bb-filet)}
+.bb-entete.bb-clair,.bb-entete.bb-clair .bb-logo,.bb-entete.bb-clair .bb-btn{color:#fff}
+.bb-entete,.bb-entete a,.bb-entete button{color:var(--bb-navy)}
+.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.bb-trait{display:block;width:20px;height:9px;position:relative}
+.bb-trait:before,.bb-trait:after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s ease}
+.bb-trait:before{top:0}.bb-trait:after{bottom:0}
+.bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.26em}
+.bb-logo sup{font-size:.38em;vertical-align:.9em;opacity:.7}
+.bb-actions{justify-self:end;display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
+.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.bb-panier{display:inline-flex;align-items:center;text-decoration:none}
+.bb-panier svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.4}
+.bb-cale{height:74px}
+
+/* ── le menu plein écran ── */
+.bb-menu{position:fixed;inset:0;z-index:100;background:var(--bb-navy);color:#fff;
+ opacity:0;visibility:hidden;transform:translateY(-14px);transition:opacity .4s ease,transform .4s ease,visibility .4s;
+ overflow-y:auto;padding:clamp(24px,5vw,48px)}
+.bb-menu.bb-ouvert{opacity:1;visibility:visible;transform:none}
+.bb-menu-tete{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(40px,8vh,90px)}
+.bb-menu-tete .bb-logo{justify-self:auto;color:#fff}
+.bb-fermer{background:none;border:0;color:#fff;cursor:pointer;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,4vw,56px);max-width:1280px;margin:0 auto}
+.bb-grille h2{font:500 clamp(1.5rem,2.4vw,2.2rem)/1.1 "Playfair Display",Georgia,serif;
+ margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18);color:#fff}
+.bb-grille a,.bb-grille span{display:block;text-decoration:none;color:rgba(255,255,255,.78);
+ padding:9px 0;font:400 .92rem/1.4 "DM Sans",Montserrat,sans-serif;transition:color .2s}
+.bb-grille a:hover{color:#fff}
+.bb-grille span{color:var(--bb-sauge)}
+.bb-menu-pied{max-width:1280px;margin:clamp(40px,7vh,80px) auto 0;padding-top:24px;
+ border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;gap:10px 28px;
+ font:400 .78rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.62)}
+.bb-menu-pied a{color:rgba(255,255,255,.62);text-decoration:none}
+.bb-menu-pied a:hover{color:#fff}
+body.bb-bloque{overflow:hidden}
+
+/* ── le pied de page ── */
+.bb-pied{background:var(--bb-navy);color:rgba(255,255,255,.74);padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px}
+.bb-pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(24px,3vw,46px);max-width:1280px;margin:0 auto}
+.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;
+ text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
+.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;
+ padding:4px 0;font:400 .84rem/1.5 "DM Sans",Montserrat,sans-serif}
+.bb-pied a:hover{color:#fff}
+.bb-pied .bb-logo{display:inline-block;color:#fff;margin-bottom:14px}
+.bb-signature{font:italic 1rem/1.4 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 18px}
+.bb-signature i{font-style:normal;text-decoration:line-through;text-decoration-color:var(--bb-sauge)}
+.bb-pied-achat{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
+ background:var(--bb-sauge);color:var(--bb-navy)!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;
+ border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;
+ justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
+
+@media(max-width:900px){
+ .bb-grille{grid-template-columns:1fr 1fr}
+ .bb-pied-grille{grid-template-columns:1fr 1fr}
+}
+@media(max-width:640px){
+ .bb-entete{height:64px}.bb-cale{height:64px}
+ .bb-btn span:not(.bb-trait){display:none}
+ .bb-boutique{display:none}
+ .bb-logo{font-size:1rem;letter-spacing:.2em}
+ .bb-grille,.bb-pied-grille{grid-template-columns:1fr}
+ .bb-copy{justify-content:flex-start}
+}
+@media(prefers-reduced-motion:reduce){.bb-entete,.bb-menu{transition:none}}
+
+
+/* ── l'entête BIBEON remplace la sienne ── */
+.bb-cale{height:108px}
+
+
+/* ── entretien et livraison, repris de la version éditoriale ── */
+.section-head h2,.colors h2,.proof h2,.shipping h2{font-size:clamp(3rem,5.4vw,6.4rem);line-height:.92;letter-spacing:-.045em;margin:0}
+.shipping{text-align:center;padding:120px 20px}
+.shipping .kicker:before{display:none}
+.shipping>p:not(.kicker){font-size:.75rem;letter-spacing:.08em;margin:32px 0}
+.shipping .cta{margin:auto}
+.shipping{padding:90px 20px}
+.colors h2,.proof h2,.shipping h2{font-size:3rem}
+
+.care h2 em{color:#647466}
+.shipping h2 em{color:#A46661}
+.care__visual img{width:100%;height:100%;object-fit:cover}
+
+.product-media video{width:100%;height:100%;object-fit:cover;display:block}
+
+/* ── l'entretien en pictogrammes ── */
+.soins{margin:0 0 26px}
+.soins-titre{margin:18px 0 12px;font:600 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.2em;text-transform:uppercase;color:var(--terracotta-dark)}
+.soins-titre.soins-interdit{color:#96503F}
+.soins-liste{list-style:none;display:flex;flex-wrap:wrap;gap:12px 10px;margin:0;padding:0}
+.soins-liste li{flex:0 0 auto;width:96px;text-align:center}
+.soins-liste svg{width:40px;height:40px;stroke:var(--navy);fill:none;stroke-width:1.4;
+ stroke-linecap:round;stroke-linejoin:round}
+.soins-liste span{display:block;margin-top:6px;font:400 .64rem/1.3 "DM Sans",sans-serif;color:#514f4b}
+.soins-non svg{stroke:#96503F}
+.soins-non span{color:#96503F}
+.soins-note{margin:20px 0 0;font-size:.8rem;line-height:1.7;color:#6f6c67}
+@media(max-width:520px){.soins-liste li{width:82px}.soins-liste svg{width:34px;height:34px}}
+
+.coloris-note{margin:14px 0 0;font:400 .68rem/1.5 "DM Sans",sans-serif;color:var(--terracotta-dark)}
+/* ── la promesse au-dessus du nom ── */
+.promesse{margin:0 0 10px;font:italic clamp(1.15rem,1.7vw,1.6rem)/1.3 "Playfair Display",Georgia,serif;color:#514f4b}
+.promesse em{font-style:italic;color:var(--terracotta)}
+
+/* ── la planche des cinq coloris ── */
+.coloris{padding:clamp(70px,9vh,120px) 5vw;background:var(--paper)}
+.coloris-tete{max-width:1280px;margin:0 auto clamp(40px,6vh,68px);text-align:center}
+.coloris-tete h2{font:500 clamp(2.6rem,4.6vw,5.4rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 22px}
+.coloris-tete h2 em{font-style:italic;font-weight:500;color:var(--terracotta)}
+.coloris-tete .eyebrow:before{display:none}
+.coloris-tete>p:last-child{max-width:52ch;margin:0 auto;color:var(--muted);font-size:.88rem;line-height:1.72}
+.coloris-grille{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);
+ gap:clamp(10px,1.6vw,24px);max-width:1280px;margin:0 auto;padding:0}
+.coloris-grille li{position:relative;background:var(--ivory);padding:clamp(18px,2.4vw,34px) 12px clamp(16px,2vw,26px);
+ text-align:center;transition:background .25s ease,transform .25s ease}
+.coloris-grille li:hover{background:#f1ece4;transform:translateY(-3px)}
+.coloris-grille img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;margin:0 auto}
+.coloris-grille span{display:block;margin-top:14px;font:600 .62rem/1 "DM Sans",sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.coloris-grille small{display:block;margin-top:7px;font:400 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--terracotta-dark)}
+@media(max-width:900px){.coloris-grille{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.coloris-grille{grid-template-columns:repeat(2,1fr);gap:9px}}
+
+/* ── le bouton panier, en toutes lettres ── */
+.bb-entete .bb-panier-txt{display:inline-flex;align-items:center;gap:10px;background:none;border:0;
+ cursor:pointer;color:inherit;padding:8px 0;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-entete .cart-count{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;
+ border:1px solid currentColor;font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:0}
+.bb-entete .bb-panier-txt:hover .cart-count{background:var(--terracotta);border-color:var(--terracotta);color:#fff}
+@media(max-width:640px){.bb-entete .bb-panier-txt{font-size:.58rem;gap:8px}
+ .bb-entete .cart-count{width:19px;height:19px}}
+
+/* ── le bandeau reste visible au-dessus de l'entête ── */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:31px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px;
+ font-size:.57rem;letter-spacing:.18em}
+.bb-entete{top:31px}
+.bb-cale{height:105px}
+@media(max-width:640px){
+ .bb-bandeau{height:auto;min-height:29px;padding:7px 12px;font-size:.5rem;letter-spacing:.1em;line-height:1.3}
+ .bb-entete{top:29px}
+ .bb-cale{height:93px}
+}
+
+.swatch.mint{background:var(--mint)}
+.swatch.rose{background:var(--rose)}
+
+/* ── l'entretien, au gabarit de la page ── */
+.care{display:grid;grid-template-columns:46% 54%;background:var(--ivory);align-items:stretch}
+.care-visuel{margin:0;overflow:hidden;background:var(--navy)}
+.care-visuel img{width:100%;height:100%;object-fit:cover;display:block}
+.care-texte{padding:clamp(60px,7vw,104px) clamp(26px,5vw,74px);align-self:center}
+.care-texte h2{font:500 clamp(2.5rem,4.4vw,5rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 26px}
+.care-texte h2 em{font-style:italic;font-weight:500;color:var(--sage)}
+.care-chapeau{max-width:46ch;margin:0 0 34px;font-size:.92rem;line-height:1.75;color:var(--ink)}
+.care-etapes{list-style:none;margin:0 0 26px;padding:0;border-top:1px solid var(--line)}
+.care-etapes li{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:baseline;
+ padding:15px 0;border-bottom:1px solid var(--line)}
+.care-etapes b{font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:var(--terracotta-dark)}
+.care-etapes span{font-size:.85rem;line-height:1.6;color:var(--muted)}
+.care-interdit{margin:0 0 28px;font:600 .6rem/1.5 "DM Sans",sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta-dark)}
+@media(max-width:900px){.care{grid-template-columns:1fr}.care-visuel{min-height:380px}
+ .care-texte{padding:60px 24px}}
+
+/* ── la livraison, au gabarit de la page ── */
+.shipping{padding:clamp(70px,9vh,120px) 5vw;text-align:center;background:var(--paper)}
+.shipping .eyebrow:before{display:none}
+.shipping h2{font:500 clamp(2.5rem,4.6vw,5.4rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0 0 46px}
+.shipping h2 em{font-style:italic;font-weight:500;color:var(--terracotta)}
+.ship-points{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);
+ max-width:860px;margin:0 auto 46px;padding:0;border-top:1px solid var(--line)}
+.ship-points li{padding:24px 18px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.ship-points li:last-child{border-right:0}
+.ship-points b{display:block;font:600 .6rem/1 "DM Sans",sans-serif;
+ letter-spacing:.18em;text-transform:uppercase;color:var(--navy)}
+.ship-points span{display:block;margin-top:9px;font-size:.8rem;line-height:1.5;color:var(--muted)}
+@media(max-width:700px){.ship-points{grid-template-columns:1fr}.ship-points li{border-right:0}}
+
+/* ── les deux liens de ces sections, au gabarit de la page ── */
+.care .lien-detail,.shipping .bouton-principal{display:inline-flex;align-items:center;gap:32px;
+ border-bottom:1px solid;padding-bottom:7px;text-decoration:none;text-transform:uppercase;
+ letter-spacing:.12em;font:600 .64rem/1 "DM Sans",sans-serif;color:var(--navy)}
+.care .lien-detail:hover,.shipping .bouton-principal:hover{color:var(--terracotta-dark)}
+.care .eyebrow:before{background:var(--sage)}
+.care .eyebrow{color:var(--sage)}
+
+.bb-entete .bb-ici{color:var(--sage);cursor:default}
+
+/* ── les trois gestes, en trois vidéos ── */
+.movement-media{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.2vw,16px);
+ align-content:center;padding:clamp(20px,3vw,44px)}
+.geste{margin:0;text-align:center}
+.geste video{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:contain;
+ background:rgba(255,255,255,.06);border-radius:10px}
+.geste figcaption{margin-top:12px;font:600 .58rem/1 "DM Sans",sans-serif;
+ letter-spacing:.16em;text-transform:uppercase;color:var(--sage)}
+@media(max-width:900px){.movement-media{padding:24px}.geste video{aspect-ratio:9/16}}
+
+/* ── la date de livraison annoncée ── */
+.livraison-date{margin:0 0 10px;font:400 .84rem/1.5 "DM Sans",sans-serif;color:var(--ink)}
+.livraison-date b{font-weight:600;color:var(--terracotta-dark)}
+.livraison-date span{color:var(--muted)}
+
+/* ── une vignette dans chaque option ── */
+.pack-option{min-height:0;padding:14px 10px 16px;align-items:stretch}
+.pack-option img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;
+ margin:0 0 10px;mix-blend-mode:multiply}
+.pack-option.active img{mix-blend-mode:normal}
+.pack-option span{font:600 .58rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;opacity:.7}
+.pack-option b{margin:6px 0 2px}
+@media(max-width:700px){.pack-options{grid-template-columns:repeat(2,1fr)}
+ .pack-option{border-bottom:1px solid var(--line)}
+ .pack-option:nth-child(2n){border-right:0}}
+
+/* ══ le panneau de navigation ══ */
+.bb-voile{position:fixed;inset:0;z-index:88;background:transparent}
+.bb-voile[hidden]{display:none}
+.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;
+ background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);
+ border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);
+ padding:46px 75px;display:flex;flex-direction:column;
+ opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
+.bb-panneau[hidden]{display:none}
+.bb-panneau.bb-ouvert{opacity:1;transform:none}
+.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;
+ text-decoration:none;text-align:left;
+ font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);
+ border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
+.bb-panneau a:last-child,.bb-panneau span:last-child{border-bottom:0}
+.bb-panneau a:hover{color:var(--bb-sauge-fonce)}
+.bb-panneau span[aria-current]{color:var(--bb-sauge-fonce);cursor:default}
+@media(max-width:640px){
+ .bb-panneau{width:100%;top:93px;padding:34px 26px}
+ .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
+}
+
+/* ── le bouton MENU : deux traits puis le mot, toujours visible ── */
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn{gap:12px}
+@media(max-width:640px){.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}}
+
+/* ── les titres de colonnes du pied gardent leur taille ── */
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
+ letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
+ margin:0 0 16px!important;line-height:1.4!important}
+
+/* ── le bouton Boutique du pied garde sa forme ── */
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
+ padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
+
+/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
+   fonds clairs  -> terre cuite foncée #96503F
+   fonds moyens  -> bleu nuit seul
+   fond bleu nuit-> terre claire ou sauge clair ══ */
+
+/* fonds clairs : beige, ivoire, papier, sauge clair */
+.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
+.departure h2 em,.checklist h2 em,.duration h2 em,
+.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
+.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
+.manual-close h2 em,.steps>header h2 em,.heating h2 em,
+.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
+.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
+.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
+
+/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
+.duration h2 em,.testimonials h2 em{color:#2F5E5C}
+
+/* fond bleu nuit : teintes claires uniquement */
+h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
+.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
+.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
+.travel-hero__copy h1 em{color:#96503F}
+
+/* ── des pictogrammes qui se voient ── */
+.soins-liste{gap:18px 14px}
+.soins-liste li{width:clamp(110px,12vw,140px)}
+.soins-liste svg{width:clamp(56px,5vw,72px)!important;height:clamp(56px,5vw,72px)!important;stroke-width:1.2}
+.soins-liste span{font-size:.76rem!important;margin-top:10px!important}
+@media(max-width:520px){.soins-liste li{width:98px}.soins-liste svg{width:50px!important;height:50px!important}}
+
+/* ── le goupillon : visuel à droite, pour alterner ── */
+.care--goupillon{grid-template-columns:54% 46%}
+.care--goupillon .care-texte{order:1}
+.care--goupillon .care-visuel{order:2}
+.care--goupillon{background:var(--paper)}
+@media(max-width:900px){
+ .care--goupillon{grid-template-columns:1fr}
+ .care--goupillon .care-visuel{order:0;min-height:380px}
+}
+
+/* ── le hero : les cinq flacons restent dans le cadre ── */
+.product-media video{width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block}
+@media(max-width:900px){.product-media video{object-position:center 45%}}
+
+/* ── le principe : une ligne par mouvement ── */
+.principe-lignes{display:flex;flex-direction:column;gap:0;margin:30px 0 34px;
+ border-top:1px solid rgba(255,255,255,.2)}
+.principe-lignes span{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.2);
+ font-size:.92rem;line-height:1.6}
+.principe-lignes b{font:500 1.06rem "Playfair Display",Georgia,serif;margin-right:8px}
+
+/* ── BIBEO : la photo verticale entière ── */
+.bibeo-media{background:#EEF1EA;display:grid;place-items:center;overflow:hidden}
+.bibeo-media img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+
+/* ── la clôture : le flacon déployé sur un doigt ── */
+.closing{text-align:left!important;padding:clamp(80px,10vh,130px) 5vw!important}
+.closing-duo{display:grid;grid-template-columns:46% 54%;gap:clamp(40px,5vw,90px);
+ align-items:center;max-width:1280px;margin:0 auto}
+.closing-visuel{margin:0;display:grid;place-items:center;background:var(--paper);overflow:hidden}
+.closing-visuel img{display:block;width:100%;height:auto;max-height:82vh;object-fit:contain}
+.closing--sans-image .closing-duo{grid-template-columns:1fr;text-align:center}
+.closing--sans-image .closing-visuel{display:none}
+@media(max-width:900px){
+ .closing-duo{grid-template-columns:1fr;gap:44px}
+ .closing-visuel img{max-height:64vh}
+}
+
+/* ── le pied : des liens lisibles ── */
+.bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
+.bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
+.bb-signature{font-size:1.12rem!important}
+.bb-pied-bas{font-size:.8rem!important}
+
+</style>
+</head>
+<body>
+<div class="bb-bandeau">Livraison offerte · Retour offert sous 30 jours</div>
+<header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
+  <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
+    <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
+  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <div class="bb-actions">
+<span class="bb-boutique bb-ici">Boutique</span>
+<button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>
+</div>
+</header>
+<div class="bb-voile" id="bb-voile" hidden></div>
+<nav class="bb-panneau" id="bb-menu" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><a href="biberon-pratique.html">Le biberon pratique</a><a href="mode-demploi.html">Mode d’emploi</a><a href="voyage.html">Voyager avec bébé</a><a href="legerete.html">La légèreté</a><span aria-current="page">La boutique</span></nav>
+<div class="bb-cale"></div>
+
+  
+  <main>
+    <section class="product" id="bibeon">
+      <div class="product-media"><video autoplay muted loop playsinline preload="none" poster="assets/cinq-coloris-etagere.jpg" aria-label="Les cinq coloris BIBEON alignés sur une étagère"><source src="assets/cinq-coloris-etagere.mp4" type="video/mp4"></video><p class="media-note"><span>01</span> Cinq coloris · un même BIBEON</p></div>
+      <div class="product-panel">
+        <p class="eyebrow">Biberon végétal et pliable · Fabriqué en France</p>
+        <p class="promesse">Votre sortie. <em>Votre BIBEON.</em></p>
+<h1>BIBEON</h1><p class="signature">Le BIBE<span>R</span>ON, l’R en moins.</p>
+        <div class="starting-price"><span>À partir de</span><strong>35 €</strong><small>Point relais offert</small></div>
+        <ul class="facts" aria-label="Caractéristiques essentielles">
+          <li><b>330 ml</b><span>déplié</span></li><li><b>≈ 35 g</b><span>tout compris</span></li><li><b>9,5 cm</b><span>replié</span></li><li><b>6 mois +</b><span>tétine fournie</span></li><li><b>Vendu vide</b><span>4 pièces</span></li>
+        </ul>
+        <div class="product-information" aria-label="Informations produit">
+          <details open><summary>Le produit <span>+</span></summary><p>Un flacon pliable de 330 ml, <strong>gradué de 30 ml en 30 ml</strong>, une bague, une tétine en silicone alimentaire à débit 6 mois et plus, et un capuchon. Le capuchon se fixe par serrage sur la bague. BIBEON accepte les tétines à <strong>col étroit</strong>, en silicone ou en caoutchouc.</p></details>
+          <details><summary>L’entretien <span>+</span></summary><div class="soins"><p class="soins-titre">Réchauffer</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M12 30h24v8a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4v-8Z'/><path d='M20 26c0-4 8-4 8-8'/><path d='M26 26c0-4 8-4 8-8'/></svg><span>Bain-marie</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='7' y='14' width='34' height='22' rx='2'/><rect x='11' y='18' width='18' height='14'/><circle cx='35' cy='22' r='1.6'/><circle cx='35' cy='28' r='1.6'/></svg><span>Micro-ondes</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M16 10h16l-2 28a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4L16 10Z'/><path d='M17 24h14'/></svg><span>Chauffe-biberon</span></li></ul><p class="soins-titre">Laver</p><ul class="soins-liste"><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 6v22'/><path d='M18 28h12l-1 12a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3l-1-12Z'/><path d='M20 10h8M20 15h8M20 20h8'/></svg><span>Au goupillon</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M14 34c0-8 6-12 10-12s10 4 10 12'/><path d='M16 22c2-5 5-8 8-8s6 3 8 8'/><path d='M12 40h24'/></svg><span>À la main</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M24 8c6 8 10 12 10 18a10 10 0 0 1-20 0c0-6 4-10 10-18Z'/></svg><span>Rincer, ébrouer</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M18 12h12l-1 26a3 3 0 0 1-3 3h-4a3 3 0 0 1-3-3L18 12Z'/><path d='M22 6h4'/><path d='M36 20l4-3M36 26h5M36 32l4 3'/></svg><span>Sécher à l’endroit</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='11' y='12' width='26' height='24' rx='2'/><path d='M17 18h14M17 24h14M17 30h9'/></svg><span>Sopalin en express</span></li></ul><p class="soins-titre soins-interdit">Jamais</p><ul class="soins-liste soins-non"><li><svg viewBox="0 0 48 48" aria-hidden="true"><rect x='10' y='8' width='28' height='32' rx='2'/><circle cx='24' cy='24' r='8'/><path d='M12 44 36 4'/></svg><span>Lave-vaisselle</span></li><li><svg viewBox="0 0 48 48" aria-hidden="true"><path d='M10 26h28v6a10 10 0 0 1-10 10h-8a10 10 0 0 1-10-10v-6Z'/><path d='M18 20c0-4 6-4 6-8'/><path d='M26 20c0-4 6-4 6-8'/><path d='M12 44 36 4'/></svg><span>Ébullition</span></li></ul><p class="soins-note">Le lavage quotidien se fait à la main, à l’eau chaude savonneuse. La paroi mobile donne accès à chaque pli. Laisser les dernières gouttes s’évaporer à l’air libre, flacon à l’endroit — ou les sécher au sopalin, goutte à goutte.</p></div></details>
+          <details><summary>La composition et les essais <span>+</span></summary><p>Le flacon est en <strong>polypropylène alimentaire</strong>, naturellement exempt de bisphénols. La bague et le capuchon, qui représentent environ la moitié du poids, sont d’origine végétale. Le capuchon se fixe par serrage sur la bague — par clipsage sur BIBEO.</p><p>La paroi mobile donne plusieurs tailles de biberon, de 30 à 300 ml, sans graduation intermédiaire.</p><p><strong>Zéro résidu détecté par le LNE</strong>, sur tous les coloris · rapport P143418.</p></details>
+          <details><summary>La fin de vie <span>+</span></summary><p>Séparer les quatre pièces avant de les orienter vers les filières indiquées localement. Les consignes pouvant varier selon la commune, vérifier l’application ou le guide de tri de votre collectivité.</p></details>
+        </div>
+        <section class="composer" id="composer" aria-labelledby="composer-title" data-product="BIBEON">
+          <p class="step-label">Composer votre commande</p><h2 id="composer-title">Combien de BIBEON&nbsp;?</h2>
+          <div class="pack-options" role="radiogroup" aria-label="Choisir une offre">
+            <button class="pack-option active" type="button" role="radio" aria-checked="true" data-qty="1" data-price="35"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié" loading="lazy"><span>1</span><b>35 €</b><small>35 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="2" data-price="62"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés" loading="lazy"><span>2</span><b>62 €</b><small>31 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="3" data-price="87"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>3</span><b>87 €</b><small>29 € l’unité</small></button>
+            <button class="pack-option" type="button" role="radio" aria-checked="false" data-qty="5" data-price="125"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés" loading="lazy"><span>5</span><b>125 €</b><small>25 € l’unité</small></button>
+          </div>
+          <div class="color-pickers" aria-live="polite"></div>
+          <div class="selection-summary"><div><span>Votre sélection</span><strong class="summary-name">Un BIBEON · Menthe</strong></div><div><span>Total</span><strong class="summary-price">35 €</strong></div></div>
+          <button class="add-to-cart" type="button">Ajouter au panier <span>→</span></button>
+          <p class="livraison-date" id="livraison-date"></p>
+        <p class="buy-note">Paiement sécurisé au moment de finaliser la commande</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="coloris" id="coloris" aria-labelledby="coloris-titre">
+      <div class="coloris-tete">
+        <p class="eyebrow">La gamme</p>
+        <h2 id="coloris-titre">Cinq coloris.<br><em>Un même BIBEON.</em></h2>
+        <p>Teintés dans la masse : la couleur est dans la matière, elle ne s’efface pas au lavage.</p>
+      </div>
+      <ul class="coloris-grille">
+        <li><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Le biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>Menthe</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-abricot.webp" alt="Le biberon nomade BIBEON replié, coloris abricot" loading="lazy"><span>Abricot</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-lilas.webp" alt="Le biberon nomade BIBEON replié, coloris lilas" loading="lazy"><span>Lilas</span></li>
+        <li><img src="assets/bibeon-biberon-pliable-rose.webp" alt="Le biberon nomade BIBEON replié, coloris rose" loading="lazy"><span>Rose</span><small>lot de 5</small></li>
+        <li><img src="assets/bibeon-biberon-pliable-lin.webp" alt="Le biberon nomade BIBEON replié, coloris lin" loading="lazy"><span>Lin</span><small>lot de 5</small></li>
+      </ul>
+    </section>
+
+    <section class="reassurance" aria-label="Les preuves BIBEON">
+      <article><span>01</span><h2>Tout est intégré.</h2><p>La dose voyage et se conserve dans le flacon replié, à l’abri de la lumière. Les soufflets mélangent. Le capuchon compacteur obture. Le bloc reste solidaire, conçu pour les manipulations à l’extérieur.</p></article>
+      <article><span>02</span><h2>La paroi reste accessible.</h2><p>Le goupillon suit les plis. La paroi mobile permet d’atteindre chaque recoin, à la main.</p></article>
+      <article><span>03</span><h2>La preuve est publiée.</h2><p>Essais de migration du LNE · zéro résidu détecté dans tous les coloris · rapport P143418. Conforme aux règles de contact alimentaire pour l’alimentation du nourrisson.</p></article>
+    </section>
+    <section class="movement">
+      <div class="movement-copy"><p class="eyebrow">Le principe</p><h2>Il s’élève.<br>Il s’abaisse.<br><em>Il se coude.</em></h2><p class="principe-lignes"><span><b>Il s’élève.</b> Tous les soufflets ouverts, pour que la graduation soit juste.</span><span><b>Il s’abaisse.</b> Après, en fonction du niveau du liquide : l’air part.</span><span><b>Il se coude.</b> La tétine reste pleine jusqu’à la dernière gorgée.</span></p><a href="mode-demploi.html">Voir les trois gestes <span>→</span></a></div>
+      <div class="movement-media"><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-eleve.jpg" data-geste aria-label="Le BIBEON se déplie, soufflet après soufflet"><source src="assets/concept-eleve.mp4" type="video/mp4"></video><figcaption>Il s’élève</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-abaisse.jpg" data-geste aria-label="Les soufflets redescendent au niveau du lait"><source src="assets/concept-abaisse.mp4" type="video/mp4"></video><figcaption>Il s’abaisse</figcaption></figure><figure class="geste"><video muted loop playsinline preload="none" poster="assets/concept-coude.jpg" data-geste aria-label="Le flacon se coude, la tétine reste pleine"><source src="assets/concept-coude.mp4" type="video/mp4"></video><figcaption>Il se coude</figcaption></figure></div>
+    </section>
+    <section class="bibeo" id="bibeo">
+      <div class="bibeo-copy"><p class="eyebrow">Une autre proposition</p><h2>BIBEO</h2><p class="signature">Le même principe, dans deux accords colorés.</p><p>BIBEO est proposé à l’unité en rose ou en menthe, ou en duo rose et menthe. Même flacon pliable, même capacité, mêmes gestes. Son capuchon se clipse sur la bague.</p>
+        <p class="step-label">Choisir l’offre</p>
+        <div class="bibeo-packs" role="radiogroup" aria-label="Choisir une offre BIBEO"><button type="button" class="active" data-bibeo-qty="1" data-price="45" aria-checked="true" role="radio"><span>1 BIBEO</span><b>45 €</b></button><button type="button" data-bibeo-qty="2" data-price="79" aria-checked="false" role="radio"><span>Duo BIBEO</span><b>79 €</b></button></div>
+        <div class="bibeo-color-pickers" aria-live="polite"></div>
+        <div class="selection-summary bibeo-summary"><div><span>Votre sélection</span><strong class="bibeo-summary-name">Un BIBEO · Rose</strong></div><div><span>Total</span><strong class="bibeo-summary-price">45 €</strong></div></div>
+        <button class="add-bibeo" type="button">Ajouter BIBEO au panier <span>→</span></button>
+      </div>
+      <div class="bibeo-media"><img src="assets/bibeon-banniere-sortie-bureau.webp" width="1080" height="1440" loading="lazy" alt="Une femme en trench, sac matelassé à l’épaule, un BIBEO menthe à la main dans une rue de Paris"></div>
+    </section>
+    <section class="care" id="entretien" aria-labelledby="care-titre">
+      <figure class="care-visuel"><img onerror="this.onerror=null;this.src='assets/doigt-pince-le-soufflet.webp'" src="assets/index-au-fond-du-flacon.webp" alt="Deux doigts saisissent un soufflet du BIBEON et l’écartent" loading="lazy"></figure>
+      <div class="care-texte">
+        <p class="eyebrow">L’entretien</p>
+        <h2 id="care-titre">Jusqu’au fond.<br><em>À portée de doigt.</em></h2>
+        <p class="care-chapeau">La paroi est mobile : repliez les soufflets et le fond remonte. Chaque pli devient accessible à la main.</p>
+        <ol class="care-etapes">
+          <li><b>01</b><span>Démontez les quatre pièces.</span></li>
+          <li><b>02</b><span>Repliez le flacon pour atteindre le fond et chaque pli.</span></li>
+          <li><b>03</b><span>Rincez, ébrouez, séchez à l’air libre.</span></li><li><b>04</b><span>Pressé ? Séchez au tissu ultra propre à usage unique.</span></li>
+        </ol>
+        <p class="care-interdit">Lavage à la main uniquement · ni lave-vaisselle, ni ébullition</p>
+        <a class="lien-detail" href="mode-demploi.html#nettoyage">Le geste de nettoyage <span>→</span></a>
+      </div>
+    </section>
+
+    <section class="care care--goupillon" aria-labelledby="goup-titre">
+      <div class="care-texte">
+        <p class="eyebrow">Le lavage quotidien</p>
+        <h2 id="goup-titre">Le goupillon<br><em>suit les plis.</em></h2>
+        <p class="care-chapeau">Flacon déployé, à l’eau chaude savonneuse : les brins épousent chaque creux, de la bague jusqu’au fond.</p>
+        <p class="care-interdit">Un goupillon souple suffit · aucun accessoire propriétaire</p>
+      </div>
+      <figure class="care-visuel"><img src="assets/goupillon-accueil.webp" alt="Un goupillon engagé dans les soufflets déployés d’un BIBEON" loading="lazy"></figure>
+    </section>
+    <section class="faq">
+      <div><p class="eyebrow">Avant de commander</p><h2>Les questions<br><em>qui comptent.</em></h2></div>
+      <div class="faq-list">
+        <details><summary>Qu’est-ce qui est livré ? <span>+</span></summary><p>Un BIBEON complet, vendu vide : flacon, bague, tétine et capuchon. L’écrin et la notice accompagnent le produit.</p></details>
+        <details><summary>Est-ce qu’il fuit dans le sac ? <span>+</span></summary><p>Correctement fermé, BIBEON est hermétique. Le toit plat du capuchon comprime la tétine dans sa base et obture son orifice.</p></details>
+        <details><summary>Puis-je changer la tétine ? <span>+</span></summary><p>Oui. La seule condition est de choisir une tétine à col étroit, en silicone ou en caoutchouc selon votre préférence. Les modèles à col large ne conviennent pas.</p></details>
+        <details><summary>Comment transporter la poudre ? <span>+</span></summary><p>Verser la dose dans un flacon propre et parfaitement sec, puis refermer. L’eau s’ajoute séparément au moment du repas.</p></details>
+        <details><summary>Quand ma commande part-elle ? <span>+</span></summary><p>Les commandes passées avant midi sont préparées le jour même. Point relais Mondial Relay offert, livré en 3 jours ; domicile 3,50 €.</p></details>
+      </div>
+    </section>
+    <section class="shipping" aria-labelledby="ship-titre">
+      <p class="eyebrow">La livraison</p>
+      <h2 id="ship-titre">Commandé avant midi.<br><em>Parti le jour même.</em></h2>
+      <ul class="ship-points">
+        <li><b>Point relais</b><span>Mondial Relay offert · livré en 3 jours</span></li>
+        <li><b>À domicile</b><span>3,50 € · France métropolitaine</span></li>
+        <li><b>Retour</b><span>Offert sous 30 jours</span></li>
+      </ul>
+      <a class="bouton-principal" href="#composer">Composer mon BIBEON <span>↑</span></a>
+    </section>
+    <section class="closing"><div class="closing-duo"><figure class="closing-visuel"><img src="assets/flacon-deplie-sur-un-doigt.webp" loading="lazy" alt="Le flacon BIBEON entièrement déployé, 330 ml, tenu en équilibre au bout d’un doigt" onerror="this.onerror=null;this.closest('.closing').classList.add('closing--sans-image')"></figure><div class="closing-texte"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#composer">Composer mon BIBEON <span>↑</span></a></div></div></section>
+  </main>
+  <div class="cart-backdrop" hidden></div>
+  <aside class="cart" id="cart" aria-labelledby="cart-title" aria-hidden="true">
+    <header><div><p class="eyebrow">Votre sélection</p><h2 id="cart-title">Le panier</h2></div><button class="cart-close" type="button" aria-label="Fermer le panier">×</button></header>
+    <div class="cart-items"></div><div class="cart-empty"><p>Votre panier est encore vide.</p><a href="#composer">Choisir mon BIBEON</a></div>
+    <div class="cart-footer" hidden><div><span>Total</span><strong class="cart-total">0 €</strong></div><p>Point relais offert en France métropolitaine.</p><button class="checkout" type="button">Finaliser ma commande <span>→</span></button><small>Le paiement sera activé lors de la connexion de la boutique à PayPal.</small></div>
+  </aside>
+  <div class="toast" role="status" aria-live="polite"></div>
+<footer class="bb-pied">
+<div class="bb-pied-grille">
+ <div>
+  <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
+  <p class="bb-signature">Le bibe<i>r</i>on, l’R en moins.</p>
+  <a class="bb-pied-achat" href="boutique.html">Boutique</a>
+ </div>
+ <div><h3>BIBEON en détail</h3>
+  <a href="biberon-pratique.html">Le biberon pratique</a>
+  <a href="legerete.html">La légèreté</a>
+  <a href="mode-demploi.html">Mode d’emploi</a><a href="astuces-et-precautions.html">Astuces et précautions</a>
+  <a href="voyage.html">Voyager avec bébé</a>
+  <a href="notre-parti-pris.html">Notre parti pris</a></div>
+ <div><h3>Les preuves</h3>
+  <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
+  <a href="migration.html">Migration et contact alimentaire</a>
+  <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
+  <a href="conseils.html">Nos conseils</a></div>
+ <div><h3>La maison</h3>
+  <a href="qui-sommes-nous.html">Qui sommes-nous</a>
+  <a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a>
+  <a href="contact.html">Nous contacter</a>
+  <a href="livraison-et-retours.html">Livraison et retours</a>
+  <a href="cgv.html">Conditions générales de vente</a>
+  <a href="mentions-legales.html">Mentions légales</a>
+  <a href="confidentialite.html">Politique de confidentialité</a></div>
+</div>
+<div class="bb-copy">
+ <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
+</div>
+</footer>
+<script>
+const COLORS=[{name:'Menthe',className:'mint'},{name:'Abricot',className:'apricot'},{name:'Lilas',className:'lilac'},{name:'Rose',className:'rose'},{name:'Lin',className:'linen'}];
+// rose et lilas : stock presque épuisé, réservés au lot de cinq
+const COLORS_RARES=['Rose','Lin'];
+function colorsPourQuantite(q){return q===5?COLORS:COLORS.filter(c=>!COLORS_RARES.includes(c.name));}
+const state={qty:1,price:35,colors:['Menthe'],bibeoQty:1,bibeoPrice:45,bibeoColors:['Rose'],cart:[]};
+const composer=document.querySelector('.composer');
+const colorPickers=composer.querySelector('.color-pickers');
+const summaryName=composer.querySelector('.summary-name');
+const summaryPrice=composer.querySelector('.summary-price');
+const cart=document.querySelector('.cart');
+const cartBackdrop=document.querySelector('.cart-backdrop');
+const cartItems=document.querySelector('.cart-items');
+const cartEmpty=document.querySelector('.cart-empty');
+const cartFooter=document.querySelector('.cart-footer');
+const toast=document.querySelector('.toast');
+
+function renderColorPickers(){
+  const dispo=colorsPourQuantite(state.qty);
+  const noms=dispo.map(c=>c.name);
+  state.colors=Array.from({length:state.qty},(_,index)=>{
+    const c=state.colors[index];
+    return noms.includes(c)?c:'Menthe';
+  });
+  colorPickers.innerHTML=state.colors.map((selected,index)=>`<div class="color-picker"><span>BIBEON ${index+1}</span><div class="swatches" role="radiogroup" aria-label="Coloris du BIBEON ${index+1}">${dispo.map(color=>`<button type="button" class="swatch ${color.className}" role="radio" aria-checked="${color.name===selected}" aria-label="${color.name}" data-slot="${index}" data-color="${color.name}"></button>`).join('')}</div><output>${selected}</output></div>`).join('')
+    + (state.qty===5?'':'<p class="coloris-note">Le rose et le lin sont réservés au lot de cinq — stock presque épuisé.</p>');
+  updateSummary();
+}
+function updateSummary(){const labels={1:'Un BIBEON',2:'Duo BIBEON',3:'Trois BIBEON',5:'Cinq BIBEON'};summaryName.textContent=`${labels[state.qty]} · ${state.colors.join(' + ')}`;summaryPrice.textContent=`${state.price} €`}
+
+document.querySelector('.pack-options').addEventListener('click',event=>{const button=event.target.closest('.pack-option');if(!button)return;document.querySelectorAll('.pack-option').forEach(item=>{item.classList.toggle('active',item===button);item.setAttribute('aria-checked',String(item===button))});state.qty=Number(button.dataset.qty);state.price=Number(button.dataset.price);renderColorPickers()});
+colorPickers.addEventListener('click',event=>{const button=event.target.closest('.swatch');if(!button)return;state.colors[Number(button.dataset.slot)]=button.dataset.color;renderColorPickers()});
+const bibeoColorPickers=document.querySelector('.bibeo-color-pickers');
+function renderBibeo(){while(state.bibeoColors.length<state.bibeoQty)state.bibeoColors.push(state.bibeoColors[state.bibeoColors.length-1]||'Rose');state.bibeoColors=state.bibeoColors.slice(0,state.bibeoQty);bibeoColorPickers.innerHTML=state.bibeoColors.map((selected,index)=>`<div class="color-picker"><span>BIBEO ${index+1}</span><div class="swatches" role="radiogroup" aria-label="Coloris du BIBEO ${index+1}">${['Rose','Menthe'].map(color=>`<button type="button" class="swatch ${color.toLowerCase()}" role="radio" aria-checked="${color===selected}" aria-label="${color}" data-bibeo-slot="${index}" data-bibeo-color="${color}"></button>`).join('')}</div><output>${selected}</output></div>`).join('');document.querySelector('.bibeo-summary-name').textContent=`${state.bibeoQty===1?'Un BIBEO':'Duo BIBEO'} · ${state.bibeoColors.join(' + ')}`;document.querySelector('.bibeo-summary-price').textContent=`${state.bibeoPrice} €`}
+document.querySelector('.bibeo-packs').addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;document.querySelectorAll('.bibeo-packs button').forEach(item=>{item.classList.toggle('active',item===button);item.setAttribute('aria-checked',String(item===button))});state.bibeoQty=Number(button.dataset.bibeoQty);state.bibeoPrice=Number(button.dataset.price);renderBibeo()});
+bibeoColorPickers.addEventListener('click',event=>{const button=event.target.closest('[data-bibeo-color]');if(!button)return;state.bibeoColors[Number(button.dataset.bibeoSlot)]=button.dataset.bibeoColor;renderBibeo()});
+
+function addItem(item){state.cart.push({...item,id:`${Date.now()}-${Math.random()}`});renderCart();showToast(`${item.name} ajouté au panier`);openCart()}
+composer.querySelector('.add-to-cart').addEventListener('click',()=>{const labels={1:'Un BIBEON',2:'Duo BIBEON',3:'Trois BIBEON',5:'Cinq BIBEON'};addItem({name:labels[state.qty],detail:state.colors.join(' + '),price:state.price,image:'images/gamme.jpg'})});
+document.querySelector('.add-bibeo').addEventListener('click',()=>addItem({name:state.bibeoQty===1?'Un BIBEO':'Duo BIBEO',detail:state.bibeoColors.join(' + '),price:state.bibeoPrice,image:'images/duo.jpg'}));
+renderBibeo();
+
+function renderCart(){cartItems.innerHTML=state.cart.map(item=>`<article class="cart-item" data-id="${item.id}"><img src="${item.image}" alt=""><div><h3>${item.name}</h3><p>${item.detail}</p><button type="button" data-remove="${item.id}">Retirer</button></div><strong>${item.price} €</strong></article>`).join('');const total=state.cart.reduce((sum,item)=>sum+item.price,0);document.querySelector('.cart-total').textContent=`${total} €`;const count=document.querySelector('.cart-count');count.textContent=state.cart.length;count.setAttribute('aria-label',`${state.cart.length} article${state.cart.length>1?'s':''}`);cartEmpty.hidden=state.cart.length>0;cartFooter.hidden=state.cart.length===0}
+cartItems.addEventListener('click',event=>{const button=event.target.closest('[data-remove]');if(!button)return;state.cart=state.cart.filter(item=>item.id!==button.dataset.remove);renderCart()});
+
+function openCart(){cart.classList.add('open');cart.setAttribute('aria-hidden','false');cartBackdrop.hidden=false;document.body.classList.add('cart-open');document.querySelector('.cart-button').setAttribute('aria-expanded','true');document.querySelector('.cart-close').focus()}
+function closeCart(){cart.classList.remove('open');cart.setAttribute('aria-hidden','true');cartBackdrop.hidden=true;document.body.classList.remove('cart-open');document.querySelector('.cart-button').setAttribute('aria-expanded','false')}
+document.querySelector('.cart-button').addEventListener('click',openCart);document.querySelector('.cart-close').addEventListener('click',closeCart);cartBackdrop.addEventListener('click',closeCart);document.addEventListener('keydown',event=>{if(event.key==='Escape')closeCart()});document.querySelector('.cart-empty a').addEventListener('click',closeCart);
+document.querySelector('.checkout').addEventListener('click',()=>showToast('Le paiement PayPal sera connecté avant la mise en vente.'));
+
+const menuButton=document.querySelector('.menu-button');const menu=document.querySelector('.site-menu');menuButton.addEventListener('click',()=>{const open=menu.hidden;menu.hidden=!open;menuButton.setAttribute('aria-expanded',String(open))});
+function showToast(message){toast.textContent=message;toast.classList.add('show');window.clearTimeout(showToast.timer);showToast.timer=window.setTimeout(()=>toast.classList.remove('show'),2400)}
+renderColorPickers();renderCart();
+
+</script>
+<script>
+(function(){
+ var e=document.getElementById('bb-entete'),o=document.getElementById('bb-ouvrir'),
+     f=document.getElementById('bb-fermer'),m=document.getElementById('bb-menu');
+ var a=document.getElementById('bb-annee'); if(a)a.textContent=new Date().getFullYear();
+ if(e&&e.dataset.hero==='oui'){
+   var maj=function(){var p=window.scrollY>60;
+     e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
+   maj(); window.addEventListener('scroll',maj,{passive:true});
+ }
+})();
+</script>
+<script>
+(function(){var v=document.querySelectorAll('video[data-geste]');
+ if(!v.length||!('IntersectionObserver' in window)) return;
+ var m=window.matchMedia('(max-width:900px)').matches;
+ var o=new IntersectionObserver(function(es){es.forEach(function(x){
+  var t=x.target;
+  if(x.isIntersecting){ if(m){v.forEach(function(y){if(y!==t)y.pause();});}
+   if(!t.dataset.pret){t.dataset.pret='1';t.load();} t.play().catch(function(){}); }
+  else{ t.pause(); }});},{threshold:.25,rootMargin:'140px'});
+ v.forEach(function(x){o.observe(x);});})();
+</script>
+<script>
+(function(){
+ var e=document.getElementById('livraison-date'); if(!e) return;
+ var JOURS=['dimanche','lundi','mardi','mercredi','jeudi','vendredi','samedi'];
+ var MOIS=['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+ var d=new Date(), avantMidi=d.getHours()<12;
+ // l'expédition part le jour même avant midi, sinon le lendemain ouvré
+ var depart=new Date(d); if(!avantMidi) depart.setDate(depart.getDate()+1);
+ while(depart.getDay()===0||depart.getDay()===6) depart.setDate(depart.getDate()+1);
+ var arrivee=new Date(depart), ouvres=0;
+ while(ouvres<3){ arrivee.setDate(arrivee.getDate()+1);
+  if(arrivee.getDay()!==0&&arrivee.getDay()!==6) ouvres++; }
+ e.innerHTML='<b>Livré le '+JOURS[arrivee.getDay()]+' '+arrivee.getDate()+' '+MOIS[arrivee.getMonth()]+'</b>'
+  +' <span>· commande avant midi, expédiée le jour même</span>';
+})();
+</script>
+<script>
+(function(){
+ var b=document.getElementById('bb-ouvrir'),
+     p=document.getElementById('bb-menu'),
+     v=document.getElementById('bb-voile');
+ if(!b||!p) return;
+ var ouvert=false;
+ function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
+   requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','false'); ouvert=false;
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
+ b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
+ if(v) v.addEventListener('click',function(){fermer();});
+ p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
+})();
+</script>
+</body>
+</html>
