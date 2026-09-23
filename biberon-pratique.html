@@ -392,6 +392,13 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 /* ── garde-fou : aucune image ne s'impose sa propre taille ── */
 main img,main video{max-height:88vh}
 @media(max-width:900px){main img,main video{max-height:80vh}}
+
+/* ── les vidéos remplissent leur cadre, comme les images ── */
+.demo video{width:100%;height:100%;object-fit:cover;display:block}
+.demo{min-height:clamp(480px,60vh,640px)}
+.chapter{min-height:clamp(520px,64vh,680px)}
+.hygiene__video video{width:100%;height:100%;object-fit:cover}
+@media(max-width:850px){.demo{min-height:clamp(340px,46vh,460px)}.chapter{min-height:0}}
 </style>
 </head>
 <body>
