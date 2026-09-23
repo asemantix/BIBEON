@@ -103,7 +103,7 @@
           "name": "Comment nettoyer un biberon en camping ou sur la route ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "À l’eau chaude savonneuse au goupillon, puis rinçage abondant. Le lave-vaisselle est réservé à la bague, à la tétine et au capuchon ; le flacon se lave à la main. Une fois sec, le biberon se replie et reprend la place d’un petit pot."
+            "text": "À l’eau chaude savonneuse au goupillon, puis rinçage abondant. Le lave-vaisselle est déconseillé. Une fois sec, le biberon se replie et reprend la place d’un petit pot."
           }
         },
         {
@@ -504,6 +504,15 @@ main img,main video{max-height:88vh}
 .destination__media--duo img{object-fit:cover!important;object-position:center 40%!important;
  width:100%!important;height:100%!important}
 @media(max-width:850px){.destination__media--duo{height:auto!important;aspect-ratio:8/5}}
+
+/* ── le train : les deux photos entières, jamais rognées ── */
+.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:12px!important;gap:12px}
+.destination__media--duo figure{display:grid;place-items:center}
+.destination__media--duo img{object-fit:contain!important;object-position:center!important;
+ width:100%!important;height:100%!important;max-height:none!important}
+@media(max-width:850px){
+ .destination__media--duo{height:auto!important;aspect-ratio:8/5;grid-template-columns:1fr 1fr}
+}
 </style>
 </head>
 <body>
