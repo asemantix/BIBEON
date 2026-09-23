@@ -426,6 +426,31 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 /* ── garde-fou : aucune image ne s'impose sa propre taille ── */
 main img,main video{max-height:88vh}
 @media(max-width:900px){main img,main video{max-height:80vh}}
+
+/* ── les étapes : texte plus large, vidéo plein cadre ── */
+.step{grid-template-columns:6% 44% 50%!important;min-height:clamp(540px,68vh,720px)!important}
+.step__media{padding:0!important;display:block!important;overflow:hidden}
+.steps video,.step__media img{width:100%!important;height:100%!important;max-height:none!important;
+ object-fit:cover!important;display:block}
+.step__media--double{padding:8px!important}
+.step__media--double video{height:100%!important;object-fit:cover!important}
+@media(max-width:900px){
+ .step{grid-template-columns:55px 1fr!important;min-height:0!important}
+ .step__media{aspect-ratio:4/5}
+}
+
+/* ── les étapes : le cadre impose sa hauteur, jamais la vidéo ── */
+.step{align-items:stretch}
+.step__media{height:clamp(540px,68vh,720px)!important;min-height:0!important;overflow:hidden;
+ display:block!important;padding:0!important}
+.steps video,.step__media img{width:100%!important;height:100%!important;max-height:none!important;
+ object-fit:cover!important;display:block}
+.step__media--double{display:grid!important;grid-template-rows:1fr 1fr;gap:8px;padding:8px!important;
+ height:clamp(540px,68vh,720px)!important}
+.step__media--double figure{margin:0;position:relative;overflow:hidden;min-height:0}
+@media(max-width:900px){
+ .step__media,.step__media--double{height:auto!important;aspect-ratio:4/5}
+}
 </style>
 </head>
 <body>
@@ -470,7 +495,7 @@ main img,main video{max-height:88vh}
 
       <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p><strong>Desserrez la bague.</strong> En fin de tétée, inclinez légèrement un soufflet : la forme s’adapte et la tétine reste alimentée. Resserrez ensuite.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Replier et fermer.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
+      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Refermer BIBEON.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
 
       <article class="step" id="nettoyage"><div class="step__number">09</div><div class="step__copy"><p class="label">Jusqu’au fond</p><h3>Nettoyer.</h3><p>Démontez les quatre pièces. Lavez-les à la main à l’eau chaude savonneuse. Repliez le flacon pour rapprocher le fond, puis remontez soufflet après soufflet.</p><aside>Lave-vaisselle interdit. Rincez abondamment et laissez sécher complètement à l’air libre.</aside></div><div class="step__media step__media--double"><figure><video muted loop playsinline preload="none" poster="assets/goupillon-dans-le-flacon.jpg" data-geste aria-label="Le goupillon tourne dans les soufflets du flacon déployé"><source src="assets/goupillon-dans-le-flacon.mp4" type="video/mp4"></video><figcaption>01 · Laver au goupillon</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/doigt-au-fond-replie.jpg" data-geste aria-label="Le doigt atteint le fond du flacon replié"><source src="assets/doigt-au-fond-replie.mp4" type="video/mp4"></video><figcaption>02 · Atteindre chaque pli</figcaption></figure></div></article>
 <article class="step" id="tetine"><div class="step__number">10</div><div class="step__copy"><p class="label">Tétine interchangeable</p><h3>Changer la tétine.</h3><p>La tétine se retire de la bague et se remplace par toute tétine à col étroit, en silicone ou en caoutchouc.</p><aside>Engagez-la bien droite : sa collerette doit être entièrement prise dans la bague.</aside></div><div class="step__media step__media--photo"><video muted loop playsinline preload="none" poster="assets/changer-la-tetine.jpg" data-geste aria-label="La tétine retirée de sa bague, puis remplacée"><source src="assets/changer-la-tetine.mp4" type="video/mp4"></video></div></article>
