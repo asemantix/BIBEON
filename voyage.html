@@ -464,6 +464,28 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 /* ── garde-fou : aucune image ne s'impose sa propre taille ── */
 main img,main video{max-height:88vh}
 @media(max-width:900px){main img,main video{max-height:80vh}}
+
+/* ── voyage : des cadres plus hauts, des cadrages justes ── */
+.travel-hero__film{height:clamp(460px,64vh,720px)!important}
+.destination__media{height:clamp(480px,58vh,660px)!important}
+.destination--large .destination__media,.destination--wide .destination__media{height:clamp(520px,64vh,720px)!important}
+.destination__media--duo{height:clamp(520px,64vh,720px)!important}
+.aa-banniere{height:clamp(420px,52vh,600px)!important}
+/* le train : garder les visages */
+.destination__media--duo img{object-position:center 22%!important}
+/* la voiture : montrer le flacon entier */
+.destination__media img[src*="voiture"]{object-fit:contain!important;background:#EEF1EA}
+@media(max-width:850px){
+ .travel-hero__film{height:clamp(320px,46vh,460px)!important}
+ .destination__media,.destination--large .destination__media,
+ .destination--wide .destination__media,.destination__media--duo{height:clamp(360px,48vh,500px)!important}
+}
+
+/* ── le hero : l'image occupe toute la hauteur du bloc ── */
+.travel-hero{align-items:stretch}
+.travel-hero__film{height:auto!important;min-height:clamp(460px,64vh,720px)!important;align-self:stretch}
+.travel-hero__film img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+@media(max-width:850px){.travel-hero__film{min-height:clamp(320px,46vh,460px)!important}}
 </style>
 </head>
 <body>
