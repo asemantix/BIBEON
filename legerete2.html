@@ -168,7 +168,7 @@ h1 em{color:var(--bb-terre-pale)}
 
 
 /* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;
  color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
 footer.bb-pied p{font:inherit}
 footer.bb-pied p span{text-decoration:none}
@@ -176,6 +176,100 @@ footer.bb-pied>a:last-child{justify-self:auto;font-size:inherit;text-transform:n
 footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
 @media(max-width:900px){footer.bb-pied{grid-template-columns:none!important;gap:0;text-align:left}
  footer.bb-pied>a:last-child{justify-self:auto}}
+
+/* ══ le panneau de navigation ══ */
+.bb-voile{position:fixed;inset:0;z-index:88;background:transparent}
+.bb-voile[hidden]{display:none}
+.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;
+ background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);
+ border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);
+ padding:46px 75px;display:flex;flex-direction:column;
+ opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
+.bb-panneau[hidden]{display:none}
+.bb-panneau.bb-ouvert{opacity:1;transform:none}
+.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;
+ text-decoration:none;text-align:left;
+ font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);
+ border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
+.bb-panneau a:last-child,.bb-panneau span:last-child{border-bottom:0}
+.bb-panneau a:hover{color:var(--bb-sauge-fonce)}
+.bb-panneau span[aria-current]{color:var(--bb-sauge-fonce);cursor:default}
+@media(max-width:640px){
+ .bb-panneau{width:100%;top:93px;padding:34px 26px}
+ .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
+}
+
+/* ── le bouton MENU : deux traits puis le mot, toujours visible ── */
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;
+ font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn{gap:12px}
+@media(max-width:640px){.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}}
+
+/* ── les titres de colonnes du pied gardent leur taille ── */
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
+ letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
+ margin:0 0 16px!important;line-height:1.4!important}
+
+/* ── le bouton Boutique du pied garde sa forme ── */
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
+ padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
+ font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
+ margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
+
+/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
+   fonds clairs  -> terre cuite foncée #96503F
+   fonds moyens  -> bleu nuit seul
+   fond bleu nuit-> terre claire ou sauge clair ══ */
+
+/* fonds clairs : beige, ivoire, papier, sauge clair */
+.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
+.departure h2 em,.checklist h2 em,.duration h2 em,
+.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
+.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
+.manual-close h2 em,.steps>header h2 em,.heating h2 em,
+.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
+.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
+.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
+
+/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
+.duration h2 em,.testimonials h2 em{color:#2F5E5C}
+
+/* fond bleu nuit : teintes claires uniquement */
+h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
+.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
+.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
+.travel-hero__copy h1 em{color:#96503F}
+
+/* ══ le bandeau reste visible, l'entête commence dessous ══ */
+.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
+ display:flex;align-items:center;justify-content:center;padding:0 16px}
+.bb-entete{top:30px!important}
+.bb-cale{height:104px!important}
+.bb-panneau{top:104px!important}
+@media(max-width:640px){
+ .bb-bandeau{height:28px}
+ .bb-entete{top:28px!important}
+ .bb-cale{height:92px!important}
+ .bb-panneau{top:92px!important}
+}
+
+/* ── la déclaration : l'avant en image, le texte à droite ── */
+.declaration__duo{display:grid;grid-template-columns:minmax(0,42%) minmax(0,58%);
+ gap:clamp(34px,4.5vw,80px);align-items:center;max-width:1240px;margin:0 auto}
+.declaration__image{margin:0;background:#FBF9F6;display:grid;place-items:center;aspect-ratio:1/1;overflow:hidden}
+.declaration__image img{display:block;width:100%;height:100%;object-fit:contain}
+.declaration .declaration__text{margin-left:0!important;max-width:none!important;grid-template-columns:1fr!important;gap:26px!important}
+@media(max-width:900px){.declaration__duo{grid-template-columns:1fr}}
+
+/* ── le pied : des liens lisibles ── */
+.bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
+.bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
+.bb-signature{font-size:1.12rem!important}
+.bb-pied-bas{font-size:.8rem!important}
+
 </style>
 </head>
 <body>
@@ -189,30 +283,8 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
     <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
   </div>
 </header>
-<nav class="bb-menu" id="bb-menu" aria-label="Navigation principale">
-  <div class="bb-menu-tete">
-    <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
-    <button class="bb-fermer" id="bb-fermer" type="button">Fermer ✕</button>
-  </div>
-  <div class="bb-grille"><div><h2>Le BIBEON</h2><a href="biberon-pratique.html">Le biberon pratique</a><span>La légèreté</span><a href="mode-demploi.html">Mode d’emploi</a><a href="notre-parti-pris.html">Notre parti pris</a></div><div><h2>L’expérience</h2><a href="voyage.html">Voyager avec bébé</a><a href="conseils.html">Nos conseils</a><a href="preparer-biberon-en-sortie.html">Préparer un biberon en sortie</a><a href="preparer-biberon-avion.html">Préparer un biberon en avion</a><a href="preparer-biberon-la-nuit.html">Préparer un biberon la nuit</a></div><div><h2>La preuve</h2><a href="tests-migration-lne-bibeon.html">Les essais du LNE</a><a href="migration.html">Migration et contact alimentaire</a><a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a><a href="qui-sommes-nous.html">Qui sommes-nous</a><a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a></div><div><h2>La boutique</h2><a href="boutique.html">Voir les BIBEON</a><a href="livraison-et-retours.html">Livraison et retours</a><a href="contact.html">Nous contacter</a></div></div>
-  <div class="bb-menu-pied">
-    <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
-    <a href="tel:+33611768407">06 11 76 84 07</a>
-    <span>Point relais offert · domicile 3,50 € · retour offert sous 30 jours</span>
-  </div>
-</nav>
-<nav class="bb-menu" id="bb-menu" aria-label="Navigation principale">
-  <div class="bb-menu-tete">
-    <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
-    <button class="bb-fermer" id="bb-fermer" type="button">Fermer ✕</button>
-  </div>
-  <div class="bb-grille"><div><h2>Le BIBEON</h2><a href="biberon-pratique.html">Le biberon pratique</a><span>La légèreté</span><a href="mode-demploi.html">Mode d’emploi</a><a href="notre-parti-pris.html">Notre parti pris</a></div><div><h2>L’expérience</h2><a href="voyage.html">Voyager avec bébé</a><a href="conseils.html">Nos conseils</a><a href="preparer-biberon-en-sortie.html">Préparer un biberon en sortie</a><a href="preparer-biberon-avion.html">Préparer un biberon en avion</a><a href="preparer-biberon-la-nuit.html">Préparer un biberon la nuit</a></div><div><h2>La preuve</h2><a href="tests-migration-lne-bibeon.html">Les essais du LNE</a><a href="migration.html">Migration et contact alimentaire</a><a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a><a href="qui-sommes-nous.html">Qui sommes-nous</a><a href="suzanne-de-begon-histoire-bibeon.html">L’histoire de l’inventrice</a></div><div><h2>La boutique</h2><a href="boutique.html">Voir les BIBEON</a><a href="livraison-et-retours.html">Livraison et retours</a><a href="contact.html">Nous contacter</a></div></div>
-  <div class="bb-menu-pied">
-    <a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a>
-    <a href="tel:+33611768407">06 11 76 84 07</a>
-    <span>Point relais offert · domicile 3,50 € · retour offert sous 30 jours</span>
-  </div>
-</nav>
+<div class="bb-voile" id="bb-voile" hidden></div>
+<nav class="bb-panneau" id="bb-menu" aria-label="Navigation principale" hidden><a href="index.html">Accueil</a><a href="biberon-pratique.html">Le biberon pratique</a><a href="mode-demploi.html">Mode d’emploi</a><a href="voyage.html">Voyager avec bébé</a><span aria-current="page">La légèreté</span><a href="boutique.html">La boutique</a></nav>
 <div class="bb-cale"></div>
 
   <main>
@@ -233,7 +305,7 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
     <section class="declaration">
       <p>Ce n’est pas peu de produit.</p>
       <h2>C’est beaucoup de poids<br><em>que l’on ne porte plus.</em></h2>
-      <div class="declaration__text"><p>Dans le sac, la différence ne vient pas seulement du chiffre. Propre, sec et replié, BIBEON peut déjà contenir la dose de poudre&nbsp;: le biberon vide et la boîte doseuse restent à la maison.</p><p>Dans les petites mains, son faible poids demande moins d’effort. Les creux entre les soufflets offrent naturellement une prise aux doigts.</p></div>
+      <div class="declaration__duo"><figure class="declaration__image"><img src="assets/biberons-classiques-et-dosettes.webp" alt="Un biberon classique et sa boîte doseuse remplie de lait en poudre" loading="lazy" onerror="this.onerror=null;this.src='assets/boite-doseuse-classique.webp'"></figure><div class="declaration__text"><p>Dans le sac, la différence ne vient pas seulement du chiffre. Propre, sec et replié, BIBEON peut déjà contenir la dose de poudre&nbsp;: le biberon vide et la boîte doseuse restent à la maison.</p><p>Dans les petites mains, son faible poids demande moins d’effort. Les creux entre les soufflets offrent naturellement une prise aux doigts.</p></div></div>
     </section>
 
     <section class="paradox" id="paradoxe">
@@ -246,10 +318,7 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
       <p class="paradox__answer">Il fallait trouver une fenêtre très précise dans laquelle <strong>légèreté, pliage et fiabilité du volume</strong> fonctionnent ensemble.</p>
     </section>
 
-    <section class="architecture" id="architecture">
-      <div class="architecture__visual"><img src="assets/bibeon-etats-de-pliage.webp" alt="BIBEON déplié et replié, montrant son architecture à soufflets"><p>Une même architecture.<br>Deux volumes.</p></div>
-      <div class="architecture__copy"><p class="kicker">L’architecture plutôt que l’épaisseur</p><h2>Le flacon retrouve<br><em>sa juste mesure.</em></h2><p>Le polypropylène satisfait les exigences du contact alimentaire et du pliage. Mais une fois comprimé, il tend naturellement à perdre une partie de sa hauteur.</p><p>Le dessin des soufflets a donc été conçu pour rendre au flacon sa cote exacte après dépliage. Cette géométrie permet aux graduations de rester utiles et au volume de rester fiable.</p><blockquote>Les quelque 35 grammes sont le point de rencontre entre une intention — alléger — et une contrainte — tenir, se replier et retrouver son volume.</blockquote></div>
-    </section>
+    
 
     <section class="functions">
       <header><p class="kicker">Rien d’utile n’a disparu</p><h2>Léger.<br><em>Pas simpliste.</em></h2></header>
@@ -273,7 +342,7 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
  <div><h3>BIBEON en détail</h3>
   <a href="biberon-pratique.html">Le biberon pratique</a>
   <a href="legerete.html">La légèreté</a>
-  <a href="mode-demploi.html">Mode d’emploi</a>
+  <a href="mode-demploi.html">Mode d’emploi</a><a href="astuces-et-precautions.html">Astuces et précautions</a>
   <a href="voyage.html">Voyager avec bébé</a>
   <a href="notre-parti-pris.html">Notre parti pris</a></div>
  <div><h3>Les preuves</h3>
@@ -292,7 +361,6 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
 </div>
 <div class="bb-copy">
  <span>© <span id="bb-annee"></span> BIBEON — Tous droits réservés. Modèles déposés.</span>
- <span>Biberon vendu vide. Lait en poudre et eau non fournis.</span>
 </div>
 </footer>
 <script>
@@ -305,15 +373,28 @@ footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
      e.classList.toggle('bb-fige',p); e.classList.toggle('bb-clair',!p);};
    maj(); window.addEventListener('scroll',maj,{passive:true});
  }
- if(!o||!m) return;
- function etat(v){ m.classList.toggle('bb-ouvert',v);
-   o.setAttribute('aria-expanded',String(v));
-   document.body.classList.toggle('bb-bloque',v);
-   if(v){var p=m.querySelector('a'); if(p)p.focus();} else o.focus(); }
- o.addEventListener('click',function(){etat(!m.classList.contains('bb-ouvert'));});
- if(f)f.addEventListener('click',function(){etat(false);});
- m.querySelectorAll('a').forEach(function(x){x.addEventListener('click',function(){etat(false);});});
- document.addEventListener('keydown',function(ev){if(ev.key==='Escape')etat(false);});
+})();
+</script>
+<script>
+(function(){
+ var b=document.getElementById('bb-ouvrir'),
+     p=document.getElementById('bb-menu'),
+     v=document.getElementById('bb-voile');
+ if(!b||!p) return;
+ var ouvert=false;
+ function ouvrir(){ p.hidden=false; if(v) v.hidden=false;
+   requestAnimationFrame(function(){p.classList.add('bb-ouvert');});
+   b.setAttribute('aria-expanded','true'); ouvert=true;
+   var l=p.querySelector('a'); if(l) setTimeout(function(){l.focus();},60); }
+ function fermer(rendre){ if(!ouvert) return; p.classList.remove('bb-ouvert');
+   b.setAttribute('aria-expanded','false'); ouvert=false;
+   setTimeout(function(){ if(!ouvert){ p.hidden=true; if(v) v.hidden=true; } },260);
+   if(rendre!==false) b.focus(); }
+ b.addEventListener('click',function(e){ e.stopPropagation(); ouvert?fermer():ouvrir(); });
+ if(v) v.addEventListener('click',function(){fermer();});
+ p.addEventListener('click',function(e){ e.stopPropagation(); });
+ p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
+ document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
 </script>
 </body>
