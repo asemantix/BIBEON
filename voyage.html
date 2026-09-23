@@ -486,6 +486,18 @@ main img,main video{max-height:88vh}
 .travel-hero__film{height:auto!important;min-height:clamp(460px,64vh,720px)!important;align-self:stretch}
 .travel-hero__film img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
 @media(max-width:850px){.travel-hero__film{min-height:clamp(320px,46vh,460px)!important}}
+
+/* ── le train : les deux photos entières, la maman et sa tablette ── */
+.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:12px!important;gap:12px}
+.destination__media--duo img{object-fit:contain!important;object-position:center!important;
+ width:100%!important;height:100%!important}
+/* ── la voiture : le cadre est vertical, l'image le remplit ── */
+.destination__media img[src*="voiture"]{object-fit:cover!important;object-position:center 45%!important;background:none}
+.destination--wide .destination__media{height:clamp(520px,66vh,720px)!important}
+@media(max-width:850px){
+ .destination__media--duo{height:auto!important;grid-template-columns:1fr 1fr;aspect-ratio:8/5}
+ .destination--wide .destination__media{height:clamp(380px,50vh,520px)!important}
+}
 </style>
 </head>
 <body>
