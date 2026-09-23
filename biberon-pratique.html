@@ -399,6 +399,17 @@ main img,main video{max-height:88vh}
 .chapter{min-height:clamp(520px,64vh,680px)}
 .hygiene__video video{width:100%;height:100%;object-fit:cover}
 @media(max-width:850px){.demo{min-height:clamp(340px,46vh,460px)}.chapter{min-height:0}}
+
+/* ── sans faire fragile : le cadre suit l'image, pas l'inverse ── */
+.weight{min-height:0!important;grid-template-columns:54% 46%!important;align-items:center!important;
+ gap:clamp(40px,5vw,90px)!important;padding:clamp(70px,9vh,120px) 6vw!important}
+.weight__visuel{margin:0;display:block;height:auto!important}
+.weight__visuel img{display:block;width:100%;height:auto!important;max-height:none!important;object-fit:contain}
+.weight__visuel figcaption{margin-top:24px;text-align:center}
+.weight>div:last-child{padding-left:0!important;align-self:center}
+@media(max-width:850px){
+ .weight{grid-template-columns:1fr!important;gap:44px!important;padding:70px 24px!important}
+}
 </style>
 </head>
 <body>
