@@ -498,6 +498,12 @@ main img,main video{max-height:88vh}
  .destination__media--duo{height:auto!important;grid-template-columns:1fr 1fr;aspect-ratio:8/5}
  .destination--wide .destination__media{height:clamp(380px,50vh,520px)!important}
 }
+
+/* ── le train : chaque photo remplit sa moitié ── */
+.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:10px!important;gap:10px}
+.destination__media--duo img{object-fit:cover!important;object-position:center 40%!important;
+ width:100%!important;height:100%!important}
+@media(max-width:850px){.destination__media--duo{height:auto!important;aspect-ratio:8/5}}
 </style>
 </head>
 <body>
