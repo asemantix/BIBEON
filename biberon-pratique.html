@@ -259,7 +259,7 @@ h1 em{color:var(--bb-terre-pale)}
 
 
 /* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;
  color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
 footer.bb-pied p{font:inherit}
 footer.bb-pied p span{text-decoration:none}
@@ -382,6 +382,12 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
  .bb-cale{height:92px!important}
  .bb-panneau{top:92px!important}
 }
+
+/* ── le pied : des liens lisibles ── */
+.bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
+.bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
+.bb-signature{font-size:1.12rem!important}
+.bb-pied-bas{font-size:.8rem!important}
 </style>
 </head>
 <body>

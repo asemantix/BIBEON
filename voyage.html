@@ -226,7 +226,7 @@ h1 em{color:var(--bb-terre-pale)}
 
 
 /* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block!important;padding:0!important;background:var(--bb-navy)!important;
+footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;
  color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
 footer.bb-pied p{font:inherit}
 footer.bb-pied p span{text-decoration:none}
@@ -355,54 +355,63 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .travel-hero__copy h1 em{color:#96503F}
 
 
-/* ── les destinations : cadres d'origine, images plus grandes ── */
-.destination__media{height:clamp(380px,46vh,520px)!important;position:relative;overflow:hidden}
-.destination--large .destination__media,.destination--wide .destination__media{height:clamp(520px,62vh,700px)!important}
+
+/* ── les destinations : cadres pleins, images généreuses ── */
+.destination__media{height:clamp(460px,58vh,640px)!important;position:relative;overflow:hidden}
+.destination--large .destination__media,.destination--wide .destination__media{height:clamp(560px,70vh,780px)!important}
 .destination__media img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
 .destination__media:after{background:linear-gradient(0deg,rgba(14,28,53,.34),transparent 45%)}
-.destination__media--duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#EEF1EA;padding:10px;
- height:clamp(520px,62vh,700px)!important}
+
+/* le train : ses deux visuels sur toute la largeur, le texte dessous */
+.destination--large:has(.destination__media--duo){display:block!important}
+.destination--large:has(.destination__media--duo)>div:last-child{padding:clamp(30px,3.4vw,52px)}
+.destination__media--duo{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;
+ background:#EEF1EA;padding:10px;height:clamp(520px,66vh,760px)!important}
 .destination__media--duo figure{margin:0;position:relative;overflow:hidden;min-height:0}
-.destination__media--duo video,.destination__media--duo img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
+.destination__media--duo img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
 .destination__media--duo:after{content:none}
 @media(max-width:900px){
- .destination__media{height:clamp(300px,42vh,420px)!important}
- .destination--large .destination__media,.destination--wide .destination__media{height:clamp(360px,48vh,480px)!important}
- .destination__media--duo{height:clamp(360px,48vh,480px)!important}
+ .destination__media{height:clamp(340px,46vh,460px)!important}
+ .destination--large .destination__media,.destination--wide .destination__media{height:clamp(380px,52vh,520px)!important}
+ .destination__media--duo{height:clamp(380px,52vh,520px)!important}
 }
 
-/* ══ AVANT ET APRÈS : le titre sur la bande, les deux moments dessous ══ */
-.avant-apres{padding:clamp(70px,9vh,120px) 6vw}
-.aa-banniere{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;
- height:clamp(340px,44vh,480px);background:#EEF1EA}
-.aa-banniere img{width:100%;height:100%;object-fit:cover;display:block}
-.aa-banniere:after{content:"";position:absolute;inset:0;
- background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.9) 34%,rgba(251,249,246,.35) 58%,rgba(251,249,246,0) 78%)}
-.aa-titre{position:absolute;z-index:1;left:clamp(26px,4vw,64px);top:50%;transform:translateY(-50%);max-width:46%}
-.aa-titre .kicker{margin:0 0 16px;color:#647466}
-.aa-titre h2{font:500 clamp(2.4rem,4.4vw,4.6rem)/.95 "Playfair Display",Georgia,serif;
- letter-spacing:-.04em;margin:0;color:#0E1C35}
-.aa-titre h2 em{font-style:italic;color:#96503F}
+/* ── les deux moments : à la taille des autres sections ── */
+.aa-banniere{height:clamp(420px,52vh,600px)}
+.aa-titre h2{font-size:clamp(3rem,5.2vw,5.6rem)!important}
+.aa-titre .kicker{font-size:.7rem!important;letter-spacing:.2em}
+.aa-moment{font-size:.76rem!important;letter-spacing:.22em;margin-bottom:24px!important}
+.aa-col li{grid-template-columns:62px 1fr;padding:26px 0}
+.aa-col b{font-size:.72rem!important}
+.aa-col h3{font-size:clamp(1.6rem,2.4vw,2.2rem)!important;margin-bottom:12px!important}
+.aa-col p{font-size:1rem!important;line-height:1.7!important}
+.aa-lien{font-size:.72rem!important;margin-top:34px}
+@media(max-width:900px){.aa-col h3{font-size:1.5rem!important}.aa-col p{font-size:.95rem!important}}
 
-.aa-colonnes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);
- max-width:1380px;margin:clamp(44px,6vh,72px) auto 0}
-.aa-moment{margin:0 0 18px;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.2em;
- text-transform:uppercase;color:#96503F}
-.aa-col ol{list-style:none;margin:0;padding:0;border-top:1px solid rgba(14,28,53,.14)}
-.aa-col li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:baseline;
- padding:20px 0;border-bottom:1px solid rgba(14,28,53,.14)}
-.aa-col b{font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:#647466}
-.aa-col h3{margin:0 0 8px;font:500 1.25rem/1.2 "Playfair Display",Georgia,serif;color:#0E1C35}
-.aa-col p{margin:0;font-size:.9rem;line-height:1.65;color:#4f4c48}
-.aa-lien{display:inline-flex;gap:24px;align-items:center;margin-top:26px;border-bottom:1px solid;
- padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;
- font:600 .62rem/1 "DM Sans",sans-serif;color:#0E1C35}
-.aa-lien:hover{color:#96503F}
+/* ══ toute la page : des textes lisibles ══ */
+.destination>div:last-child>p:last-child{font-size:1rem!important;line-height:1.72!important;color:#3f3c38!important}
+.destination h3{font-size:clamp(2.1rem,3.2vw,2.9rem)!important;margin:26px 0 16px!important}
+.destination .number{font-size:.72rem!important;letter-spacing:.2em}
+.destination__media span{font-size:.7rem!important;letter-spacing:.18em;left:28px;bottom:26px}
+.duration__cards h3{font-size:clamp(1.9rem,2.8vw,2.4rem)!important}
+.duration__cards>article>span{font-size:.72rem!important;letter-spacing:.2em}
+.duration li{font-size:.98rem!important;padding:14px 0!important;line-height:1.6}
+.duration>div>p,.duration p{font-size:1rem;line-height:1.72}
+.checklist li{font-size:1rem!important;padding:24px 0!important;gap:18px}
+.checklist>div>p,.checklist p:not(.kicker){font-size:1rem;line-height:1.72}
+.travel-close p:not(.kicker){font-size:1rem;line-height:1.72}
+.onsite p,.destinations>header p{font-size:1rem!important;line-height:1.72!important}
+.kicker{font-size:.7rem!important;letter-spacing:.2em}
 @media(max-width:900px){
- .aa-colonnes{grid-template-columns:1fr;gap:44px}
- .aa-titre{max-width:78%}
- .aa-banniere:after{background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.88) 58%,rgba(251,249,246,.25) 86%,rgba(251,249,246,0) 100%)}
+ .destination h3{font-size:1.9rem!important}
+ .destination>div:last-child>p:last-child,.checklist li,.duration li{font-size:.96rem!important}
 }
+
+/* ── le pied : des liens lisibles ── */
+.bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
+.bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
+.bb-signature{font-size:1.12rem!important}
+.bb-pied-bas{font-size:.8rem!important}
 </style>
 </head>
 <body>
