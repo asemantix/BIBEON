@@ -412,9 +412,59 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
 .bb-signature{font-size:1.12rem!important}
 .bb-pied-bas{font-size:.8rem!important}
-/* ── ramener les hauteurs d'écran à une taille raisonnable ── */
-.destination__media,.destination--large .destination__media,.destination--wide .destination__media,.destination__media--duo,.aa-banniere{height:clamp(320px,42vh,520px)!important}
- </style>
+
+/* ══ AVANT ET APRÈS : le titre sur la bande, les deux moments dessous ══ */
+.avant-apres{padding:clamp(70px,9vh,120px) 6vw}
+.aa-banniere{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;
+ height:clamp(420px,52vh,600px);background:#EEF1EA}
+.aa-banniere img{width:100%;height:100%;object-fit:cover;display:block}
+.aa-banniere:after{content:"";position:absolute;inset:0;
+ background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.9) 34%,rgba(251,249,246,.35) 58%,rgba(251,249,246,0) 78%)}
+.aa-titre{position:absolute;z-index:1;left:clamp(26px,4vw,64px);top:50%;transform:translateY(-50%);max-width:46%}
+.aa-titre .kicker{margin:0 0 16px;color:#647466}
+.aa-titre h2{font:500 clamp(3rem,5.2vw,5.6rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0;color:#0E1C35}
+.aa-titre h2 em{font-style:italic;color:#96503F}
+.aa-colonnes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);
+ max-width:1380px;margin:clamp(44px,6vh,72px) auto 0}
+.aa-moment{margin:0 0 24px;font:600 .76rem/1 "DM Sans",sans-serif;letter-spacing:.22em;
+ text-transform:uppercase;color:#96503F}
+.aa-col ol{list-style:none;margin:0;padding:0;border-top:1px solid rgba(14,28,53,.14)}
+.aa-col li{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:baseline;
+ padding:26px 0;border-bottom:1px solid rgba(14,28,53,.14)}
+.aa-col b{font:600 .72rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:#647466}
+.aa-col h3{margin:0 0 12px;font:500 clamp(1.6rem,2.4vw,2.2rem)/1.2 "Playfair Display",Georgia,serif;color:#0E1C35}
+.aa-col p{margin:0;font-size:1rem;line-height:1.7;color:#3f3c38}
+.aa-lien{display:inline-flex;gap:24px;align-items:center;margin-top:34px;border-bottom:1px solid;
+ padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;
+ font:600 .72rem/1 "DM Sans",sans-serif;color:#0E1C35}
+.aa-lien:hover{color:#96503F}
+@media(max-width:900px){
+ .aa-colonnes{grid-template-columns:1fr;gap:44px}
+ .aa-titre{max-width:78%}
+ .aa-col h3{font-size:1.5rem}
+ .aa-col p{font-size:.95rem}
+ .aa-banniere:after{background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.88) 58%,rgba(251,249,246,.25) 86%,rgba(251,249,246,0) 100%)}
+}
+
+/* ── des hauteurs raisonnables ── */
+.destination__media,.destination--large .destination__media,.destination--wide .destination__media,
+.destination__media--duo,.aa-banniere{height:clamp(320px,42vh,520px)!important}
+/* le hero : son cadre commande, pas la taille du fichier */
+.travel-hero{min-height:0!important}
+.travel-hero__film{height:clamp(380px,56vh,620px)!important;min-height:0!important;overflow:hidden}
+.travel-hero__film img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 35%}
+.travel-hero__copy{padding:clamp(56px,7vh,92px) clamp(26px,5vw,64px)!important}
+@media(max-width:850px){
+ .travel-hero__film{height:clamp(300px,44vh,440px)!important}
+ .destination__media,.destination--large .destination__media,.destination--wide .destination__media,
+ .destination__media--duo,.aa-banniere{height:clamp(280px,38vh,420px)!important}
+}
+
+/* ── garde-fou : aucune image ne s'impose sa propre taille ── */
+main img,main video{max-height:88vh}
+@media(max-width:900px){main img,main video{max-height:80vh}}
+</style>
 </head>
 <body>
 <div class="bb-bandeau">Fabriqué en France</div>

@@ -697,6 +697,10 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
 .bb-signature{font-size:1.12rem!important}
 .bb-pied-bas{font-size:.8rem!important}
+
+/* ── garde-fou : aucune image ne s'impose sa propre taille ── */
+main img,main video{max-height:88vh}
+@media(max-width:900px){main img,main video{max-height:80vh}}
 </style>
 </head>
 <body>

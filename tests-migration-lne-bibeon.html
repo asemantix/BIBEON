@@ -321,6 +321,10 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
 .bb-signature{font-size:1.12rem!important}
 .bb-pied-bas{font-size:.8rem!important}
+
+/* ── garde-fou : aucune image ne s'impose sa propre taille ── */
+main img,main video{max-height:88vh}
+@media(max-width:900px){main img,main video{max-height:80vh}}
 </style>
 </head>
 <body>
@@ -350,7 +354,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <p><b>3</b><span>simulants alimentaires</span></p>
     <p><b>7 pièces</b><span>cinq corps, la bague et le capuchon</span></p>
   </section>
-  <p class="lne-perimetre">Ces essais portent sur les cinq corps de biberon, la bague et le capuchon. La tétine, en silicone alimentaire, n’en fait pas partie.</p>
+  <p class="lne-perimetre">Ces essais portent sur les cinq corps de biberon, la bague et le capuchon.</p>
 
   <section class="lne-rapport">
     <div class="lne-rapport-texte">
