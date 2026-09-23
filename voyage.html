@@ -282,20 +282,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 .departure__flow p{font-size:.95rem!important;line-height:1.7!important;color:#4f4c48!important}
 .departure__flow article{padding-top:32px}
 
-/* ── la légende de l'image revient sous elle ── */
-.departure__visual>p{position:static!important;color:var(--bb-navy)!important;
- margin:22px 0 0!important;text-align:center;font-size:1.25rem!important;left:auto;bottom:auto}
-.departure__visual>span{position:static!important;display:block!important;color:#5d5a55!important;
- margin:10px 0 24px!important;text-align:center;right:auto;bottom:auto}
-@media(max-width:900px){.departure__visual img{max-height:56vh}}
-
-/* ── chaque visuel garde son format, aucun recadrage ── */
-.destinations figure,.destinations .destination__visual{background:#EEF1EA;display:grid;place-items:center;
- height:auto!important;min-height:0!important;overflow:hidden}
-.destinations img{display:block;width:100%;height:auto!important;object-fit:contain!important;
- max-height:64vh}
-@media(max-width:900px){.destinations img{max-height:54vh}}
-
 /* ── les avis : ConsoBaby doit se voir ── */
 .testimonials{background:#B9D8D7}
 .testimonials h2,.testimonials .kicker{color:var(--bb-navy)}
@@ -323,16 +309,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 .travel-hero__copy .bb-accroche{margin:26px 0 34px;max-width:42ch;
  font:400 clamp(1.05rem,1.5vw,1.35rem)/1.5 "Playfair Display",Georgia,serif;color:#5d554f}
 
-/* ── le train : deux visuels côte à côte, pleine largeur ── */
-.destination--large{grid-template-columns:62% 38%}
-.destination__media--duo{display:grid;grid-template-columns:1fr 1fr;gap:12px;
- background:#EEF1EA;padding:12px;height:auto!important}
-.destination__media--duo figure{margin:0;display:grid;place-items:center;position:relative}
-.destination__media--duo img{width:100%;height:auto!important;max-height:52vh;
- object-fit:contain!important;display:block}
-.destination__media--duo figcaption{margin-top:10px;text-align:center;
- font:600 .56rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#5d5a55}
-.destination__media--duo:after{content:none}
 /* ── voiture et avion : deux petites cases ── */
 .destination:not(.destination--large):not(.destination--wide) .destination__media{height:auto!important;
  background:#EEF1EA;display:grid;place-items:center}
@@ -343,32 +319,6 @@ footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
 @media(max-width:900px){
  .destination__media--duo{grid-template-columns:1fr}
  .destination__media--duo img{max-height:44vh}
-}
-
-/* ── chaque thème occupe toute la largeur ── */
-.destination-grid{grid-template-columns:1fr;gap:clamp(16px,2.4vw,30px)}
-.destination,.destination--large,.destination--wide{grid-column:1/-1;
- display:grid;grid-template-columns:58% 42%;align-items:center}
-.destination--wide{grid-template-columns:42% 58%}
-.destination--wide>div:last-child{order:-1}
-.destination>div:last-child{padding:clamp(34px,4vw,60px)}
-.destination h3{font-size:clamp(2.2rem,3.4vw,3.2rem)!important;margin:22px 0 16px!important}
-.destination>div:last-child>p:last-child{font-size:.95rem!important;line-height:1.7!important}
-.destination .number{font:600 .64rem/1 "DM Sans",sans-serif;letter-spacing:.2em;color:var(--bb-terre)}
-@media(max-width:900px){
- .destination,.destination--large,.destination--wide{grid-template-columns:1fr}
- .destination--wide>div:last-child{order:0}
-}
-
-/* ── le train : deux visuels pleine largeur, texte dessous ── */
-.destination--large:has(.destination__media--duo){display:block}
-.destination__media--duo{grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,22px);
- padding:clamp(12px,1.6vw,22px)}
-.destination__media--duo img{max-height:none;aspect-ratio:4/5;object-fit:cover!important}
-.destination--large:has(.destination__media--duo)>div:last-child{padding:clamp(30px,3.4vw,52px)}
-@media(max-width:900px){
- .destination__media--duo{grid-template-columns:1fr 1fr;gap:10px}
- .destination__media--duo img{aspect-ratio:3/4}
 }
 
 /* ── le bouton Boutique du pied garde sa forme ── */
@@ -404,25 +354,54 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
 .travel-hero__copy h1 em{color:#96503F}
 
-/* ── la section du départ : le visuel occupe sa largeur ── */
-.departure__visual{background:#EEF1EA;padding:clamp(14px,2vw,26px)}
-.departure__visual img{width:100%!important;max-width:none!important;max-height:62vh!important;
- object-fit:cover!important;aspect-ratio:16/9}
-@media(max-width:900px){.departure__visual img{aspect-ratio:4/3;max-height:52vh!important}}
 
-.travel-hero__film img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+/* ── les destinations : cadres d'origine, images plus grandes ── */
+.destination__media{height:clamp(380px,46vh,520px)!important;position:relative;overflow:hidden}
+.destination--large .destination__media,.destination--wide .destination__media{height:clamp(520px,62vh,700px)!important}
+.destination__media img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
+.destination__media:after{background:linear-gradient(0deg,rgba(14,28,53,.34),transparent 45%)}
+.destination__media--duo{display:grid;grid-template-columns:1fr 1fr;gap:10px;background:#EEF1EA;padding:10px;
+ height:clamp(520px,62vh,700px)!important}
+.destination__media--duo figure{margin:0;position:relative;overflow:hidden;min-height:0}
+.destination__media--duo video,.destination__media--duo img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
+.destination__media--duo:after{content:none}
+@media(max-width:900px){
+ .destination__media{height:clamp(300px,42vh,420px)!important}
+ .destination--large .destination__media,.destination--wide .destination__media{height:clamp(360px,48vh,480px)!important}
+ .destination__media--duo{height:clamp(360px,48vh,480px)!important}
+}
 
-/* ══ le bandeau reste visible, l'entête commence dessous ══ */
-.bb-bandeau{position:fixed;top:0;left:0;right:0;z-index:91;height:30px;
- display:flex;align-items:center;justify-content:center;padding:0 16px}
-.bb-entete{top:30px!important}
-.bb-cale{height:104px!important}
-.bb-panneau{top:104px!important}
-@media(max-width:640px){
- .bb-bandeau{height:28px}
- .bb-entete{top:28px!important}
- .bb-cale{height:92px!important}
- .bb-panneau{top:92px!important}
+/* ══ AVANT ET APRÈS : le titre sur la bande, les deux moments dessous ══ */
+.avant-apres{padding:clamp(70px,9vh,120px) 6vw}
+.aa-banniere{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;
+ height:clamp(340px,44vh,480px);background:#EEF1EA}
+.aa-banniere img{width:100%;height:100%;object-fit:cover;display:block}
+.aa-banniere:after{content:"";position:absolute;inset:0;
+ background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.9) 34%,rgba(251,249,246,.35) 58%,rgba(251,249,246,0) 78%)}
+.aa-titre{position:absolute;z-index:1;left:clamp(26px,4vw,64px);top:50%;transform:translateY(-50%);max-width:46%}
+.aa-titre .kicker{margin:0 0 16px;color:#647466}
+.aa-titre h2{font:500 clamp(2.4rem,4.4vw,4.6rem)/.95 "Playfair Display",Georgia,serif;
+ letter-spacing:-.04em;margin:0;color:#0E1C35}
+.aa-titre h2 em{font-style:italic;color:#96503F}
+
+.aa-colonnes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);
+ max-width:1380px;margin:clamp(44px,6vh,72px) auto 0}
+.aa-moment{margin:0 0 18px;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.2em;
+ text-transform:uppercase;color:#96503F}
+.aa-col ol{list-style:none;margin:0;padding:0;border-top:1px solid rgba(14,28,53,.14)}
+.aa-col li{display:grid;grid-template-columns:52px 1fr;gap:14px;align-items:baseline;
+ padding:20px 0;border-bottom:1px solid rgba(14,28,53,.14)}
+.aa-col b{font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:#647466}
+.aa-col h3{margin:0 0 8px;font:500 1.25rem/1.2 "Playfair Display",Georgia,serif;color:#0E1C35}
+.aa-col p{margin:0;font-size:.9rem;line-height:1.65;color:#4f4c48}
+.aa-lien{display:inline-flex;gap:24px;align-items:center;margin-top:26px;border-bottom:1px solid;
+ padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;
+ font:600 .62rem/1 "DM Sans",sans-serif;color:#0E1C35}
+.aa-lien:hover{color:#96503F}
+@media(max-width:900px){
+ .aa-colonnes{grid-template-columns:1fr;gap:44px}
+ .aa-titre{max-width:78%}
+ .aa-banniere:after{background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.88) 58%,rgba(251,249,246,.25) 86%,rgba(251,249,246,0) 100%)}
 }
 </style>
 </head>
@@ -450,16 +429,31 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 
     <section class="travel-facts" aria-label="Les gestes sur place"><p><b>Déplier</b><span>le volume nécessaire</span></p><p><b>Remplir</b><span>ce que bébé boit ce jour-là</span></p><p><b>Donner</b><span>la tétine reste pleine</span></p><p><b>330 ml</b><span>pour tous les appétits</span></p></section>
 
-    <section class="departure" id="depart">
-      <div class="departure__title"><p class="kicker">Si bébé prend encore du lait en poudre</p><h2>Préparez ici.<br><em>Respirez dehors.</em></h2></div>
-      <div class="departure__flow"><article><span>01</span><h3>Pré-doser</h3><p>Versez chaque dose de poudre dans un BIBEON propre et parfaitement sec.</p></article><article><span>02</span><h3>Refermer</h3><p>La poudre reste protégée dans le flacon replié jusqu’au moment du repas.</p></article><article><span>03</span><h3>Emporter l’eau</h3><p>Ajoutez séparément la quantité d’eau nécessaire. Rien n’est encore mélangé.</p></article></div>
-      <div class="departure__visual"><img src="assets/cinq-bibeon-pre-doses.webp" width="1792" height="1008" loading="lazy" alt="Cinq BIBEON repliés et pré-dosés, alignés, prêts à partir"><p>Les repas sont pré-dosés.<br><strong>Le sac reste léger.</strong></p></div>
-    </section>
-
-    <section class="onsite">
-      <div class="onsite__copy"><p class="kicker">Sur place</p><h2>Trois gestes<br><em>suffisent.</em></h2><p>Peu de place, peu de pièces, peu de manipulations. Le repas se prépare juste avant la tétée.</p><a href="biberon-pratique.html">Voir le fonctionnement complet →</a></div>
-      <ol><li><span>1</span><div><h3>Déplier</h3><p>Ouvrez chaque soufflet en accordéon.</p></div></li><li><span>2</span><div><h3>Mélanger</h3><p>Ajoutez un peu d’eau, refermez et agitez.</p></div></li><li><span>3</span><div><h3>Compléter</h3><p>Ajoutez le reste de l’eau jusqu’au niveau prévu.</p></div></li></ol>
-    </section>
+    <section class="avant-apres" id="depart">
+  <div class="aa-banniere">
+    <img src="assets/cinq-bibeon-pre-doses.webp" width="1792" height="1008" loading="lazy"
+     alt="Cinq BIBEON repliés et pré-dosés, alignés, prêts à partir">
+    <div class="aa-titre">
+      <p class="kicker">Si bébé prend encore du lait en poudre</p>
+      <h2>Chez vous.<br><em>Puis sur place.</em></h2>
+    </div>
+  </div>
+  <div class="aa-colonnes">
+    <div class="aa-col">
+      <p class="aa-moment">Chez vous</p>
+      <ol><li><b>01</b><div><h3>Pré-doser</h3><p>Versez chaque dose de poudre dans un BIBEON propre et parfaitement sec.</p></div></li>
+      <li><b>02</b><div><h3>Refermer</h3><p>La poudre reste protégée dans le flacon replié jusqu’au moment du repas.</p></div></li>
+      <li><b>03</b><div><h3>Emporter l’eau</h3><p>Ajoutez séparément la quantité d’eau nécessaire. Rien n’est encore mélangé.</p></div></li></ol>
+    </div>
+    <div class="aa-col aa-col--place">
+      <p class="aa-moment">Sur place</p>
+      <ol><li><b>01</b><div><h3>Déplier</h3><p>Ouvrez chaque soufflet en accordéon.</p></div></li>
+      <li><b>02</b><div><h3>Mélanger</h3><p>Ajoutez un peu d’eau, refermez et agitez.</p></div></li>
+      <li><b>03</b><div><h3>Compléter</h3><p>Ajoutez le reste de l’eau jusqu’au niveau prévu.</p></div></li></ol>
+      <a class="aa-lien" href="biberon-pratique.html">Voir le fonctionnement complet <span>→</span></a>
+    </div>
+  </div>
+</section>
 
     <section class="destinations" id="destinations">
       <header><p class="kicker">Selon le déplacement</p><h2>Le même principe.<br><em>Où que vous alliez.</em></h2></header>
