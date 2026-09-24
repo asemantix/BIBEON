@@ -634,11 +634,9 @@ main img,main video{max-height:88vh}
  var v=[].slice.call(document.querySelectorAll('video[data-geste]'));
  if(!v.length||!('IntersectionObserver' in window)) return;
  var vis={};
- function choisir(){
-  var mieux=null,best=0;
-  v.forEach(function(x,i){ if((vis[i]||0)>best){best=vis[i];mieux=x;} });
-  v.forEach(function(x){
-   if(x===mieux&&best>.35){ if(!x.dataset.pret){x.dataset.pret='1';x.load();} x.play().catch(function(){}); }
+  function choisir(){
+  v.forEach(function(x,i){
+   if((vis[i]||0)>.35){ if(!x.dataset.pret){x.dataset.pret='1';x.load();} x.play().catch(function(){}); }
    else x.pause();
   });
  }
