@@ -503,7 +503,7 @@ main img,main video{max-height:88vh}
 .anatomie__liste li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:17px 0;border-top:1px solid var(--line)}
 .anatomie__liste li:before{content:counter(a,decimal-leading-zero);font-size:.62rem;letter-spacing:.15em;padding-top:5px;color:#8f5b56}
 .anatomie__liste b{font-weight:500;font-size:.92rem}
-.anatomie__liste span{display:block;font-size:.78rem;line-height:1.55;color:#675f5a;margin-top:5px}
+.anatomie__liste span{grid-column:2;display:block;font-size:.78rem;line-height:1.55;color:#675f5a;margin-top:5px}
 .anatomie__film{position:relative;overflow:hidden;border-radius:14px;justify-self:center;height:clamp(480px,70vh,760px);aspect-ratio:9/16;width:auto;background:none}
 .anatomie__film video{display:block;width:100%;height:100%;object-fit:cover}
 .anatomie__film:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(14,28,53,.45),transparent 42%)}
