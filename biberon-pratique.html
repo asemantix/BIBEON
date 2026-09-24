@@ -410,6 +410,19 @@ main img,main video{max-height:88vh}
 @media(max-width:850px){
  .weight{grid-template-columns:1fr!important;gap:44px!important;padding:70px 24px!important}
 }
+
+/* ═══ CADRES VIDÉO — remis au propre le 24 septembre 2026 ═══
+   Le cadre prend la forme de la vidéo (9/16). Elle le remplit bord à
+   bord : rien de coupé, aucune bande de couleur autour. */
+.chapter{--cadre-h:clamp(480px,62vh,660px)}
+.demo{
+  position:relative;overflow:hidden;border-radius:14px;background:none;
+  height:var(--cadre-h);aspect-ratio:9/16;width:auto;min-height:0;
+  margin-inline:auto;
+}
+.demo video,.demo img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:850px){.chapter{--cadre-h:clamp(380px,52vh,500px)}}
+@media (max-width:520px){.chapter{--cadre-h:clamp(320px,46vh,420px)}}
 </style>
 </head>
 <body>
