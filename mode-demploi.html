@@ -496,6 +496,21 @@ main img,main video{max-height:88vh}
 @media (max-width:560px){
   .steps{--cadre-h:clamp(360px,52vh,460px)}
 }
+.anatomie{padding:110px 6vw;display:grid;grid-template-columns:44% 56%;gap:5vw;align-items:center;background:var(--paper)}
+.anatomie h2{font-size:clamp(3.3rem,5.8vw,6.8rem);line-height:.9;letter-spacing:-.05em;margin:0}
+.anatomie__copy>p:last-of-type{line-height:1.7;color:#675f5a;max-width:460px;margin:34px 0 0}
+.anatomie__liste{list-style:none;margin:44px 0 0;padding:0;counter-reset:a}
+.anatomie__liste li{counter-increment:a;display:grid;grid-template-columns:34px 1fr;gap:14px;padding:17px 0;border-top:1px solid var(--line)}
+.anatomie__liste li:before{content:counter(a,decimal-leading-zero);font-size:.62rem;letter-spacing:.15em;padding-top:5px;color:#8f5b56}
+.anatomie__liste b{font-weight:500;font-size:.92rem}
+.anatomie__liste span{display:block;font-size:.78rem;line-height:1.55;color:#675f5a;margin-top:5px}
+.anatomie__film{position:relative;overflow:hidden;border-radius:14px;justify-self:center;height:clamp(480px,70vh,760px);aspect-ratio:9/16;width:auto;background:none}
+.anatomie__film video{display:block;width:100%;height:100%;object-fit:cover}
+.anatomie__film:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(14,28,53,.45),transparent 42%)}
+.anatomie__film span{position:absolute;z-index:1;left:24px;bottom:22px;color:#fff;text-transform:uppercase;font-size:.6rem;letter-spacing:.14em}
+@media(max-width:900px){.anatomie{grid-template-columns:1fr;padding:80px 24px;gap:48px}.anatomie__film{height:clamp(400px,58vh,560px)}}
+@media(max-width:560px){.anatomie__film{height:clamp(340px,50vh,460px)}}
+
 </style>
 </head>
 <body>
@@ -520,7 +535,24 @@ main img,main video{max-height:88vh}
     </section>
 
     <section class="film-intro"><div><p class="kicker">Le film</p><h2>Une minute.<br><em>Tout est dit.</em></h2><p>Du pré-dosage au nettoyage, tous les gestes à la suite.</p></div><div class="film-placeholder"><video controls playsinline preload="none" poster="assets/le-biberon-nomade.jpg"><source src="assets/le-biberon-nomade.mp4" type="video/mp4"></video><span>Le film complet · 2 min 35</span></div></section>
-
+    <section class="anatomie">
+      <div class="anatomie__copy">
+        <p class="kicker">Anatomie</p>
+        <h2>Quatre pièces.<br><em>Rien de plus.</em></h2>
+        <p>Tout se sépare à la main, sans outil, et se remonte dans le même ordre. C’est ce démontage qui rend le nettoyage complet et la tétine remplaçable.</p>
+        <ol class="anatomie__liste">
+          <li><b>Le flacon</b><span>Les soufflets, qui donnent et reprennent le volume</span></li>
+          <li><b>La tétine</b><span>Col étroit, engagée par sa collerette</span></li>
+          <li><b>La bague</b><span>Elle retient la tétine et visse sur le flacon</span></li>
+          <li><b>Le capuchon</b><span>Il obture la tétine, pré-dosage compris</span></li>
+        </ol>
+      </div>
+      <div class="anatomie__film">
+        <video muted loop playsinline preload="none" poster="assets/anatomie-bibeon.jpg" data-geste aria-label="La tétine engagée dans la bague, le capuchon posé, le bloc revissé sur le flacon"><source src="assets/anatomie-bibeon.mp4" type="video/mp4"></video>
+        <span>Le remontage, pièce par pièce</span>
+      </div>
+    </section>
+    
     <section class="steps" id="gestes">
       <header><p class="kicker">Les gestes</p><h2>Dans l’ordre.<br><em>Sans hésiter.</em></h2></header>
 
