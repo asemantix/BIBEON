@@ -514,6 +514,15 @@ main img,main video{max-height:88vh}
 #nettoyage .step__media--double{grid-template-rows:none;grid-template-columns:1fr 1fr;gap:16px;align-items:center}
 #nettoyage .step__media--double figure{height:var(--cadre-h);width:auto;max-width:100%}
 @media(max-width:900px){#nettoyage{grid-template-columns:55px 1fr!important}}
+.steps .step__media video,.steps .step__media img{
+  height:var(--cadre-h)!important;width:auto!important;max-width:100%!important;
+  aspect-ratio:9/16!important;object-fit:cover!important}
+.steps .step__media--double video{height:100%!important;width:100%!important;aspect-ratio:auto!important}
+.step{grid-template-columns:6% 44% 50%!important}
+@media(max-width:900px){.step{grid-template-columns:55px 1fr!important}}
+@media(min-width:901px){
+  .manual-hero{grid-template-columns:64% 36%!important}
+  .manual-hero__visual{min-height:clamp(420px,72vh,760px)!important}}  
 </style>
 </head>
 <body>
