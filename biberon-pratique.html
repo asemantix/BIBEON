@@ -197,7 +197,9 @@ h2 em,h3 em{font-weight:500;color:#A46661}
 .compare__cards article>p{margin-top:auto;max-width:450px;line-height:1.6;font-size:.86rem}
 .before{background:#ece6df}
 .objects{margin:auto 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.objects i{font:italic 1.2rem "Playfair Display",serif;padding:28px;border:1px solid #bfb6ae;text-decoration:line-through;text-decoration-color:var(--rose)}
+.objects i{display:flex;flex-direction:column;align-items:center;gap:8px;padding:16px 10px;border:1px solid #bfb6ae}
+.objects i img{display:block;width:100%;max-width:148px;height:auto;mix-blend-mode:multiply}
+.objects i b{font:italic 1.05rem/1.2 "Playfair Display",serif;text-align:center;text-decoration:line-through;text-decoration-color:var(--rose)}
 .after{background:#c7d9d5}
 .after img{display:block;width:100%;height:auto;margin:26px 0}
 .weight{background:#d9cbc0;display:grid}
@@ -249,7 +251,7 @@ footer{grid-template-columns:1fr;gap:18px;text-align:center}
 .manifesto{grid-template-columns:1fr}
 .practical-hero__film{min-height:390px}
 .compare__cards{grid-template-columns:1fr}
-.objects i{padding:18px}
+.objects i{padding:12px 8px}
 .chapter{min-height:0}
 .demo{min-height:320px}
 .stamp{left:20px;bottom:24px}
@@ -417,8 +419,6 @@ main img,main video{max-height:80vh}
 .integre .kicker:before{display:none}
 .integre h2{font-size:clamp(2.6rem,4.6vw,5rem);line-height:.95;letter-spacing:-.04em;margin:0 auto;max-width:22ch}
 .integre__lead{margin:26px auto 0;max-width:46ch;font-size:.94rem;line-height:1.7;color:#5d554f}
-.compare__dessin{margin:clamp(48px,6vh,76px) auto 0;max-width:1120px}
-.compare__dessin img{display:block;width:100%;height:auto;margin:0 auto}
 .integre .cta{margin-top:clamp(48px,6vh,76px)}
 @media(max-width:820px){
 }
@@ -455,12 +455,7 @@ main img,main video{max-height:80vh}
 
     <section class="compare" id="principe">
       <div class="compare__head"><p class="kicker">01 · Le transport</p><h2>Tout ce qui<br><em>ne part plus.</em></h2></div>
-      <div class="compare__cards"><article class="before"><span>Avant</span><div class="objects"><i>Biberon rigide</i><i>Boîte doseuse</i><i>Mélangeur</i><i>Obturateur</i></div><p>Quatre objets pour un seul repas. À transporter, chercher, manipuler, laver et sécher.</p></article><article class="after"><span>Avec BIBEON</span><img src="assets/quatre-bibeon-contre-quatre-biberons.webp" width="1568" height="1264" alt="À gauche un petit sac contenant quatre BIBEON repliés et leurs doses de poudre ; à droite un sac à langer et quatre biberons rigides avec leurs accessoires" loading="lazy"><p>Un seul objet. La dose de poudre voyage déjà dedans.</p></article></div>
-    
-      <figure class="compare__dessin">
-        <img src="assets/accessoires-integres-sans-titre.webp" width="1672" height="444" loading="lazy"
-             alt="Les quatre accessoires que BIBEON remplace : la boîte doseuse, l’obturateur, la valve et le mélangeur anti-grumeaux">
-      </figure>
+      <div class="compare__cards"><article class="before"><span>Avant</span><div class="objects"><i><img src="assets/bibeon-icone-boite-doseuse.webp" width="512" height="512" loading="lazy" alt="Une boîte doseuse et sa mesurette versant la poudre"><b>Boîte doseuse</b></i><i><img src="assets/bibeon-icone-melangeur.webp" width="512" height="512" loading="lazy" alt="Un mélangeur anti-grumeaux plongé dans le flacon"><b>Mélangeur</b></i><i><img src="assets/bibeon-icone-obturateur.webp" width="512" height="512" loading="lazy" alt="Un obturateur que l’on pose sur le goulot"><b>Obturateur</b></i><i><img src="assets/bibeon-icone-valve.webp" width="512" height="512" loading="lazy" alt="Une valve anti-colique vue de dessus"><b>Valve</b></i></div><p>Quatre objets pour un seul repas. À transporter, chercher, manipuler, laver et sécher.</p></article><article class="after"><span>Avec BIBEON</span><img src="assets/quatre-bibeon-contre-quatre-biberons.webp" width="1568" height="1264" alt="À gauche un petit sac contenant quatre BIBEON repliés et leurs doses de poudre ; à droite un sac à langer et quatre biberons rigides avec leurs accessoires" loading="lazy"><p>Un seul objet. La dose de poudre voyage déjà dedans.</p></article></div>
     </section>
 
     <section class="weight"><figure class="weight__visuel"><img src="assets/bibeon-35-g-sur-la-balance.webp" width="1408" height="1408" alt="Le BIBEON replié, capuchon en place, posé sur une balance de cuisine qui affiche 35 g" loading="lazy"><figcaption><b>≈ 35 g</b><span>tétine et capuchon compris</span></figcaption></figure><div><p class="kicker">02 · La légèreté</p><h2>Sans faire<br><em>fragile.</em></h2><p>Environ 35 grammes, tétine et capuchon compris. Peu de masse à tenir, un corps étroit et 9,5 cm une fois replié.</p><p class="quiet">Léger ne veut pas dire moins conçu.</p></div></section>
