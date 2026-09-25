@@ -413,11 +413,19 @@ main img,main video{max-height:80vh}
 .manual-hero__copy{background:none!important;padding:clamp(64px,8vh,110px) 6vw clamp(28px,4vh,48px)!important;display:block!important;max-width:1280px;margin:0 auto}
 .manual-hero__copy h1{font-size:clamp(2.6rem,5.2vw,5.6rem)!important;line-height:.95!important}
 .manual-hero__copy>p:not(.kicker){max-width:560px;line-height:1.7;margin:34px 0}
-.manual-hero__eclate{margin:0;padding:0 0 clamp(40px,6vh,72px)}
-.manual-hero__eclate img{display:block;width:100%;height:auto;max-width:1600px;max-height:none!important;margin:0 auto}
-.manual-hero__eclate figcaption{max-width:1280px;margin:18px auto 0;padding:0 6vw;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 22px}
-.manual-hero__eclate b{font:500 1.5rem/1 "Playfair Display",Georgia,serif;color:var(--ink)}
-.manual-hero__eclate span{font-size:.64rem;text-transform:uppercase;letter-spacing:.14em;color:#647466}
+.manual-hero__eclate{margin:0;padding:0 0 clamp(44px,6vh,76px)}
+.eclate-cadre{position:relative;max-width:1600px;margin:0 auto}
+.manual-hero__eclate img{display:block;width:100%;height:auto;max-height:none!important}
+.manual-hero__eclate figcaption{position:relative;height:38px;margin-top:14px}
+.manual-hero__eclate figcaption span{position:absolute;top:0;transform:translateX(-50%);white-space:nowrap;
+  padding-top:16px;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.17em;
+  text-transform:uppercase;color:#647466}
+.manual-hero__eclate figcaption span:before{content:"";position:absolute;top:0;left:50%;
+  width:1px;height:10px;background:#AEBCAF}
+@media(max-width:700px){
+  .manual-hero__eclate figcaption{height:auto;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 18px;padding:0 24px}
+  .manual-hero__eclate figcaption span{position:static;transform:none;padding-top:0}
+  .manual-hero__eclate figcaption span:before{display:none}}
 @media(max-width:640px){.manual-hero__copy{padding:56px 24px 24px!important}}
 </style>
 </head>
@@ -440,9 +448,16 @@ main img,main video{max-height:80vh}
     <section class="manual-hero">
 <div class="manual-hero__copy"><p class="kicker">Mode d’emploi</p><h1>Petit dans le sac.<br><em>Simple dans les gestes.</em></h1><p>BIBEON ne simplifie pas seulement ce que l’on emporte. Ses quatre pièces rendent aussi chaque geste plus simple : assembler, déployer, abaisser, couder et nettoyer.</p><a class="cta" href="#gestes">Découvrir les gestes <span>↓</span></a></div>
 <figure class="manual-hero__eclate">
-        <img src="assets/quatre-pieces.webp" width="1792" height="767" decoding="async"
-             alt="Les quatre pièces du BIBEON alignées : la tétine, la bague, le flacon et le capuchon">
-        <figcaption><b>Quatre pièces. Rien de plus.</b><span>Tétine · Bague · Flacon · Capuchon</span></figcaption>
+        <div class="eclate-cadre">
+          <img src="assets/quatre-pieces.webp" width="1792" height="767" decoding="async"
+               alt="Les quatre pièces du BIBEON alignées : la tétine, la bague, le flacon et le capuchon">
+          <figcaption aria-hidden="true">
+            <span style="left:18%">Tétine</span>
+            <span style="left:34.5%">Bague</span>
+            <span style="left:56%">Flacon</span>
+            <span style="left:80%">Capuchon</span>
+          </figcaption>
+        </div>
       </figure>
 </section>
 
@@ -484,7 +499,7 @@ main img,main video{max-height:80vh}
 
       <article class="step"><div class="step__number">07</div><div class="step__copy"><p class="label">Pour garder la tétine pleine</p><h3>Couder.</h3><p><strong>Desserrez la bague.</strong> En fin de tétée, inclinez légèrement un soufflet : la forme s’adapte et la tétine reste alimentée. Resserrez ensuite.</p><aside>Moins d’espace d’air au-dessus du liquide.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-se-coude-avec-le-lait.jpg" data-geste aria-label="Le flacon coudé, la tétine reste pleine"><source src="assets/bibeon-se-coude-avec-le-lait.mp4" type="video/mp4"></video></div></article>
 
-      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Refermer.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
+      <article class="step"><div class="step__number">08</div><div class="step__copy"><p class="label">Après le repas</p><h3>Refermer BIBEON.</h3><p><strong>Retirez ou desserrez la bague.</strong> Repliez les soufflets un à un, puis posez le capuchon bien droit sur la tétine. Appuyez verticalement jusqu’à fermeture complète.</p><aside>Vérifiez que la tétine descend droite dans son axe. <a href="biberon-pratique.html">Le bloc solidaire en détail <span>→</span></a></aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/replier-les-soufflets.jpg" data-geste aria-label="Le flacon replié puis fermé par son capuchon"><source src="assets/replier-les-soufflets.mp4" type="video/mp4"></video></div></article>
 
       <article class="step" id="nettoyage"><div class="step__number">09</div><div class="step__copy"><p class="label">Jusqu’au fond</p><h3>Nettoyer.</h3><p>Démontez les quatre pièces. Lavez-les à la main à l’eau chaude savonneuse. Repliez le flacon pour rapprocher le fond, puis remontez soufflet après soufflet.</p><aside>Rincez abondamment et laissez sécher complètement à l’air libre. Quatre pièces, deux minutes à la main : Le lave-vaisselle est déconseillé.</aside></div><div class="step__media step__media--double"><figure><video muted loop playsinline preload="none" poster="assets/goupillon-dans-le-flacon.jpg" data-geste aria-label="Le goupillon tourne dans les soufflets du flacon déployé"><source src="assets/goupillon-dans-le-flacon.mp4" type="video/mp4"></video><figcaption>01 · Laver au goupillon</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/doigt-au-fond-replie.jpg" data-geste aria-label="Le doigt atteint le fond du flacon replié"><source src="assets/doigt-au-fond-replie.mp4" type="video/mp4"></video><figcaption>02 · Atteindre chaque pli</figcaption></figure></div></article>
       <article class="step" id="sechage"><div class="step__number">10</div><div class="step__copy"><p class="label">En déplacement</p><h3>Sécher vite.</h3><p>À l’hôtel ou chez des amis, un linge très propre suffit. Abaissez les soufflets un à un : les gouttelettes prises dans les plis viennent au contact du tissu.</p><aside>Un séchage à l’air libre reste préférable dès que vous en avez le temps.</aside></div><div class="step__media"><video muted loop playsinline preload="none" poster="assets/bibeon-sechage-sopalin.jpg" data-geste aria-label="Le flacon séché pli par pli avec un linge propre"><source src="assets/bibeon-sechage-sopalin.mp4" type="video/mp4"></video></div></article>
