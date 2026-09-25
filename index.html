@@ -592,17 +592,30 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 @media(max-width:900px){
 .palette__visual{height:clamp(460px,62vh,620px)!important}
 }
-.rmoins{min-height:0!important;height:auto!important;align-items:center}
-.rmoins figure{height:auto;min-height:0;align-self:center;overflow:visible}
+.rmoins{min-height:0!important;height:auto!important;align-items:stretch}
+.rmoins figure{height:auto;min-height:0;overflow:hidden}
 .rmoins figure img{display:block;width:100%;height:auto;object-fit:contain}
 .rmoins>div{align-self:center;padding:clamp(48px,5vw,90px) clamp(26px,6vw,80px)!important;overflow:visible}
 .rmoins>div>p:not(.home-kicker){margin:28px 0!important}
 @media(max-width:900px){
 .rmoins{height:auto!important}
-.rmoins figure,.rmoins--bag figure{height:auto;min-height:0}
+.rmoins figure,.rmoins--bag figure{height:auto;min-height:0;aspect-ratio:auto!important}
 }
 .bb-geste{background:none}
 .bb-geste video{display:block;width:100%;height:auto;aspect-ratio:9/16;object-fit:cover;background:none}
+
+/* ── les trois bandes : même hauteur, images entières ──
+   Chaque cadre prend la forme de SA photo. Comme la hauteur de bande est
+   la même pour les trois, leurs largeurs diffèrent — et rien n'est rogné. */
+@media(min-width:901px){
+  .rmoins{height:clamp(600px,74vh,780px)!important;align-items:stretch!important;
+    grid-template-columns:auto minmax(360px,1fr)!important}
+  .rmoins figure{height:100%!important;width:auto!important;overflow:hidden}
+  .rmoins--inside figure{aspect-ratio:1408/1408}
+  .rmoins--bag figure{aspect-ratio:1728/1152}
+  .rmoins--around figure{aspect-ratio:1600/1643}
+  .rmoins figure img{width:100%!important;height:100%!important;object-fit:contain!important}
+}
 </style>
 </head>
 <body>
