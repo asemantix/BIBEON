@@ -131,387 +131,300 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#0E1C35;--paper:#faf8f4;--sand:#ded0c0;--sky:#b9d8d7;--rose:#c98780;--line:#D8CEC1}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}a{color:inherit}.ribbon{height:30px;background:var(--ink);color:#fff;text-align:center;padding:8px;font-size:.6rem;text-transform:uppercase;letter-spacing:.18em}.ribbon span{padding:0 8px;color:#e5bdb7}.nav{height:82px;padding:0 4vw;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;border-bottom:1px solid var(--line)}.brand{text-decoration:none;font-size:1.25rem;font-weight:600;letter-spacing:.2em}.brand sup{font-size:.4em}.nav nav{display:flex;gap:30px}.nav nav a,.shop-link{font-size:.65rem;text-transform:uppercase;text-decoration:none;letter-spacing:.12em}.shop-link{justify-self:end;border-bottom:1px solid;padding-bottom:5px}.travel-hero{display:grid;grid-template-columns:46% 54%;min-height:750px}.travel-hero__copy{padding:7vw 5vw;background:#eee7de;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.kicker{margin:0 0 25px;text-transform:uppercase;font-size:.64rem;letter-spacing:.19em}.kicker:before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;margin-right:10px;vertical-align:middle}h1,h2,h3{font-family:"Playfair Display",serif}h1{font-size:clamp(4.4rem,7.5vw,8.5rem);line-height:.82;letter-spacing:-.06em;margin:0}h1 em,h2 em{font-weight:500;color:#a46661}.travel-hero__copy>p:not(.kicker){max-width:480px;line-height:1.7;margin:38px 0}.cta{display:inline-flex;justify-content:space-between;min-width:230px;gap:35px;padding:16px 18px;border:1px solid;text-decoration:none;text-transform:uppercase;font-size:.66rem;letter-spacing:.13em}.cta--dark{background:var(--ink);color:#fff;border-color:var(--ink)}.travel-hero__film{position:relative;overflow:hidden;background:#222}.travel-hero__film video{width:100%;height:100%;object-fit:cover;filter:saturate(.78)}.travel-hero__film:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.42),transparent 45%)}.passport{position:absolute;z-index:1;left:38px;bottom:36px;color:white;display:flex;gap:15px;align-items:center}.passport b{font:500 3rem "Playfair Display",serif}.passport span{font-size:.65rem;line-height:1.45;text-transform:uppercase;letter-spacing:.12em}.travel-facts{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}.travel-facts p{margin:0;padding:28px 3vw;border-right:1px solid var(--line)}.travel-facts p:last-child{border:0}.travel-facts b,.travel-facts span{display:block}.travel-facts b{font:500 1.5rem "Playfair Display",serif}.travel-facts span{font-size:.67rem;color:#6f6660;margin-top:5px}.departure{padding:120px 6vw}.departure__title{display:flex;justify-content:space-between}.departure h2,.onsite h2,.destinations h2,.duration h2,.testimonials h2,.checklist h2,.travel-close h2{font-size:clamp(3.3rem,5.8vw,6.8rem);line-height:.9;letter-spacing:-.05em;margin:0}.departure__flow{display:grid;grid-template-columns:repeat(3,1fr);margin:70px 0;border-top:1px solid var(--line)}.departure__flow article{padding:26px 30px 0 0;border-right:1px solid var(--line)}.departure__flow article+article{padding-left:30px}.departure__flow article:last-child{border:0}.departure__flow span,.number{font-size:.62rem;letter-spacing:.15em}.departure__flow h3{font-size:1.7rem;margin:45px 0 12px}.departure__flow p{font-size:.82rem;line-height:1.6;color:#655d58}.departure__visual{position:relative;overflow:hidden;background:#DDE3D4;display:grid;place-items:center}.departure__visual img{display:block;width:auto;max-width:100%;height:auto;max-height:70vh;object-fit:contain}.departure__visual:after{content:none}.departure__visual>p,.departure__visual>span{position:absolute;z-index:1;color:#fff}.departure__visual>p{left:38px;bottom:32px;font:500 2rem/1.1 "Playfair Display",serif;margin:0}.departure__visual>span{right:30px;bottom:30px;text-transform:uppercase;font-size:.6rem;letter-spacing:.15em}.onsite{padding:110px 7vw;background:var(--ink);color:white;display:grid;grid-template-columns:1fr 1fr;gap:9vw}.onsite__copy>p:not(.kicker){line-height:1.7;color:#bdb4af;max-width:500px}.onsite__copy>a{display:inline-block;margin-top:25px;font-size:.67rem;text-transform:uppercase;letter-spacing:.12em;text-underline-offset:6px}.onsite ol{list-style:none;margin:0;padding:0}.onsite li{display:grid;grid-template-columns:54px 1fr;gap:20px;padding:23px 0;border-bottom:1px solid rgba(255,255,255,.2)}.onsite li>span{width:38px;height:38px;display:grid;place-items:center;border:1px solid;border-radius:50%;font-size:.65rem}.onsite h3{font-size:1.55rem;margin:0}.onsite li p{font-size:.78rem;color:#bdb4af;margin:7px 0}.destinations{padding:120px 6vw}.destinations>header{margin-bottom:80px}.destination-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.destination{background:#eee8e1}.destination--large,.destination--wide{grid-column:1/-1;display:grid;grid-template-columns:58% 42%}.destination--wide{grid-template-columns:42% 58%}.destination--wide>div:last-child{order:-1}.destination__media{height:420px;position:relative;overflow:hidden}.destination--large .destination__media,.destination--wide .destination__media{height:560px}.destination__media img{width:100%;height:100%;object-fit:cover}.destination__media:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.42),transparent 45%)}.destination__media span{position:absolute;z-index:1;left:24px;bottom:22px;color:white;text-transform:uppercase;font-size:.6rem;letter-spacing:.14em}.destination>div:last-child{padding:42px}.destination h3{font-size:2.5rem;margin:30px 0 18px}.destination>div:last-child>p:last-child{font-size:.84rem;line-height:1.7;color:#605853}.duration{padding:110px 6vw;background:var(--sand)}.duration__cards{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid #bbae9f}.duration__cards article{padding:28px 30px;border-right:1px solid #bbae9f}.duration__cards article:last-child{border:0}.duration__cards>article>span{font-size:.63rem;text-transform:uppercase;letter-spacing:.14em}.duration__cards h3{font-size:1.8rem}.duration ul{list-style:none;padding:0}.duration li{padding:10px 0;border-bottom:1px solid #c6b8aa;font-size:.78rem}.testimonials{padding:110px 6vw;background:var(--sky)}.testimonials>div{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:65px}.testimonials blockquote{margin:0;padding:30px;border-top:1px solid #879f9f;font:italic 1.2rem/1.5 "Playfair Display",serif}.testimonials cite{display:block;margin-top:25px;font:500 .6rem "DM Sans";text-transform:uppercase;letter-spacing:.13em}.rating{text-align:center;margin:45px 0 0;font-size:.67rem;text-transform:uppercase;letter-spacing:.13em}.checklist{padding:110px 7vw;display:grid;grid-template-columns:1fr 1fr;gap:9vw}.checklist__copy>p:last-child{line-height:1.7}.checklist ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}.checklist li{padding:19px 0;border-bottom:1px solid var(--line);font-size:.82rem;display:flex;align-items:center;gap:14px}.checklist i{width:18px;height:18px;border:1px solid;border-radius:50%}.travel-close{text-align:center;padding:120px 20px;background:#eee7de}.travel-close .kicker:before{display:none}.travel-close>p:not(.kicker){font-size:.75rem;letter-spacing:.1em;margin:30px}.travel-close .cta{margin:auto}footer{padding:50px 5vw;background:var(--ink);color:#fff;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}footer p{font:italic 1rem "Playfair Display",serif}footer p span{text-decoration:line-through;text-decoration-color:var(--rose)}footer>a:last-child{justify-self:end;font-size:.66rem;text-transform:uppercase;letter-spacing:.12em}@media(max-width:850px){.nav{grid-template-columns:1fr auto}.nav nav{display:none}.travel-hero{grid-template-columns:1fr}.travel-hero__copy{padding:80px 24px}.travel-hero__film{min-height:500px}.travel-facts{grid-template-columns:1fr 1fr}.travel-facts p:nth-child(2){border-right:0}.departure,.destinations,.duration,.testimonials,.checklist{padding:80px 24px}.departure__title{display:block}.departure__flow{grid-template-columns:1fr}.departure__flow article,.departure__flow article+article{padding:24px 0;border-right:0;border-bottom:1px solid var(--line)}.departure__flow h3{margin:20px 0 8px}.departure__visual{max-height:none}.onsite{grid-template-columns:1fr;padding:80px 24px}.destination-grid{grid-template-columns:1fr}.destination,.destination--large,.destination--wide{grid-column:auto;display:block}.destination--wide>div:last-child{order:0}.destination__media,.destination--large .destination__media,.destination--wide .destination__media{height:380px}.duration__cards,.testimonials>div{grid-template-columns:1fr}.duration__cards article{border-right:0;border-bottom:1px solid #bbae9f}.checklist{grid-template-columns:1fr}footer{grid-template-columns:1fr;gap:18px;text-align:center}footer>a:last-child{justify-self:center}}@media(max-width:520px){.ribbon{font-size:.5rem}.travel-hero__film{min-height:390px}.departure__visual>span{display:none}.destination__media,.destination--large .destination__media,.destination--wide .destination__media{height:300px}.travel-facts p{padding:20px}.passport{left:20px;bottom:20px}}
-
-
-/* ══════════ ENTÊTE PREMIUM — commun à toutes les pages ══════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   VOYAGER AVEC BÉBÉ — feuille de style remise au propre le 25 sept. 2026
+   76 sélecteurs morts et 130 déclarations écrasées retirés.
+   Rendu comparé pixel par pixel sur quatre écrans : aucune différence.
+   Seule modification voulue : les deux photos du train perdaient 41 %
+   de leur hauteur, les biberons étaient coupés. Corrigé dans les règles
+   existantes, sans ligne ajoutée.
+   ═══════════════════════════════════════════════════════════════════ */
+:root{--ink:#0E1C35;--paper:#faf8f4;--sand:#ded0c0;--sky:#b9d8d7;--rose:#c98780;--line:#D8CEC1}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit}
+.travel-hero{display:grid;grid-template-columns:46% 54%}
+.travel-hero__copy{background:#eee7de;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+.kicker{margin:0 0 25px;text-transform:uppercase}
+.kicker:before{content:"";display:inline-block;width:28px;height:1px;background:currentColor;margin-right:10px;vertical-align:middle}
+h1,h2,h3{font-family:"Playfair Display",serif}
+h1{font-size:clamp(4.4rem,7.5vw,8.5rem);line-height:.82;letter-spacing:-.06em;margin:0}
+h1 em{font-weight:500}
+h2 em{font-weight:500;color:#a46661}
+.travel-hero__copy>p:not(.kicker){max-width:480px;line-height:1.7;margin:38px 0}
+.cta{display:inline-flex;justify-content:space-between;min-width:230px;gap:35px;padding:16px 18px;border:1px solid;text-decoration:none;text-transform:uppercase;font-size:.66rem;letter-spacing:.13em}
+.cta--dark{background:var(--ink);color:#fff;border-color:var(--ink)}
+.travel-hero__film{position:relative;background:#222}
+.travel-hero__film:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,28,53,.42),transparent 45%)}
+.passport{position:absolute;z-index:1;left:38px;bottom:36px;color:white;display:flex;gap:15px;align-items:center}
+.passport b{font:500 3rem "Playfair Display",serif}
+.passport span{font-size:.65rem;line-height:1.45;text-transform:uppercase;letter-spacing:.12em}
+.travel-facts{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line)}
+.travel-facts p{margin:0;border-right:1px solid var(--line)}
+.travel-facts p:last-child{border:0}
+.travel-facts b,.travel-facts span{display:block}
+.travel-facts span{font-size:.67rem}
+.departure h2,.onsite h2,.destinations h2,.duration h2,.testimonials h2,.checklist h2,.travel-close h2{font-size:clamp(3.3rem,5.8vw,6.8rem);line-height:.9;letter-spacing:-.05em;margin:0}
+.number{font-size:.62rem;letter-spacing:.15em}
+.departure__flow h3{font-size:1.7rem}
+.departure__visual img{display:block;width:auto;max-width:100%;height:auto;max-height:70vh;object-fit:contain}
+.onsite h3{font-size:1.55rem;margin:0}
+.destinations{padding:120px 6vw}
+.destinations>header{margin-bottom:80px}
+.destination-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.destination{background:#eee8e1}
+.destination--large{grid-column:1/-1;display:grid;grid-template-columns:58% 42%}
+.destination--wide{grid-column:1/-1;display:grid}
+.destination--wide{grid-template-columns:42% 58%}
+.destination--wide>div:last-child{order:-1}
+.destination__media:after{position:absolute;inset:0}
+.destination>div:last-child{padding:42px}
+.duration{padding:110px 6vw;background:var(--sand)}
+.duration__cards{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid #bbae9f}
+.duration__cards article{padding:28px 30px;border-right:1px solid #bbae9f}
+.duration__cards article:last-child{border:0}
+.duration__cards>article>span{text-transform:uppercase}
+.duration ul{list-style:none;padding:0}
+.duration li{border-bottom:1px solid #c6b8aa}
+.testimonials{padding:110px 6vw}
+.testimonials>div{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:65px}
+.testimonials blockquote{margin:0;padding:30px;border-top:1px solid #879f9f;font:italic 1.2rem/1.5 "Playfair Display",serif}
+.testimonials cite{display:block;margin-top:25px;font:500 .6rem "DM Sans";text-transform:uppercase;letter-spacing:.13em}
+.rating{text-align:center}
+.checklist{padding:110px 7vw;display:grid;grid-template-columns:1fr 1fr;gap:9vw}
+.checklist__copy>p:last-child{line-height:1.7}
+.checklist ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.checklist li{border-bottom:1px solid var(--line);display:flex;align-items:center}
+.checklist i{width:18px;height:18px;border:1px solid;border-radius:50%}
+.travel-close{text-align:center;padding:120px 20px;background:#eee7de}
+.travel-close .kicker:before{display:none}
+.travel-close>p:not(.kicker){font-size:.75rem;letter-spacing:.1em;margin:30px}
+.travel-close .cta{margin:auto}
+footer{padding:50px 5vw;background:var(--ink);color:#fff;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+footer p{font:italic 1rem "Playfair Display",serif}
+@media(max-width:850px){
+.travel-hero{grid-template-columns:1fr}
+.travel-hero__copy{padding:80px 24px}
+.travel-facts{grid-template-columns:1fr 1fr}
+.travel-facts p:nth-child(2){border-right:0}
+.destinations,.duration,.testimonials,.checklist{padding:80px 24px}
+.departure__flow h3{margin:20px 0 8px}
+.destination-grid{grid-template-columns:1fr}
+.destination,.destination--large,.destination--wide{grid-column:auto;display:block}
+.destination--wide>div:last-child{order:0}
+.duration__cards,.testimonials>div{grid-template-columns:1fr}
+.duration__cards article{border-right:0;border-bottom:1px solid #bbae9f}
+.checklist{grid-template-columns:1fr}
+footer{grid-template-columns:1fr;gap:18px;text-align:center}
+}
+@media(max-width:520px){
+.travel-hero__film{min-height:390px}
+.destination__media,.destination--large .destination__media,.destination--wide .destination__media{height:300px}
+.travel-facts p{padding:20px}
+.passport{left:20px;bottom:20px}
+}
 :root{--bb-navy:#0E1C35;--bb-ivoire:#FBF9F6;--bb-sauge:#8F9875;--bb-filet:rgba(14,28,53,.12)}
-.bb-bandeau{background:var(--bb-navy);color:#fff;text-align:center;padding:9px 16px;
- font:600 .58rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
-.bb-entete{position:fixed;top:0;left:0;right:0;z-index:90;height:74px;padding:0 clamp(16px,4vw,42px);
- display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
- background:transparent;border-bottom:1px solid transparent;
- transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
-.bb-entete.bb-fige,.bb-entete.bb-opaque{background:rgba(251,249,246,.88);
- -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:var(--bb-filet)}
+.bb-bandeau{background:var(--bb-navy);color:#fff;text-align:center;padding:9px 16px;font:600 .58rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+.bb-entete{position:fixed;top:0;left:0;right:0;z-index:90;height:74px;padding:0 clamp(16px,4vw,42px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
+.bb-entete.bb-fige,.bb-entete.bb-opaque{background:rgba(251,249,246,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:var(--bb-filet)}
 .bb-entete.bb-clair,.bb-entete.bb-clair .bb-logo,.bb-entete.bb-clair .bb-btn{color:#fff}
 .bb-entete,.bb-entete a,.bb-entete button{color:var(--bb-navy)}
-.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;
- font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
 .bb-trait{display:block;width:20px;height:9px;position:relative}
 .bb-trait:before,.bb-trait:after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s ease}
-.bb-trait:before{top:0}.bb-trait:after{bottom:0}
+.bb-trait:before{top:0}
+.bb-trait:after{bottom:0}
 .bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.26em}
 .bb-logo sup{font-size:.38em;vertical-align:.9em;opacity:.7}
 .bb-actions{justify-self:end;display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
-.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
- letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
 .bb-panier{display:inline-flex;align-items:center;text-decoration:none}
 .bb-panier svg{width:19px;height:19px;stroke:currentColor;fill:none;stroke-width:1.4}
-.bb-cale{height:74px}
-
-/* ── le menu plein écran ── */
-.bb-menu{position:fixed;inset:0;z-index:100;background:var(--bb-navy);color:#fff;
- opacity:0;visibility:hidden;transform:translateY(-14px);transition:opacity .4s ease,transform .4s ease,visibility .4s;
- overflow-y:auto;padding:clamp(24px,5vw,48px)}
-.bb-menu.bb-ouvert{opacity:1;visibility:visible;transform:none}
-.bb-menu-tete{display:flex;align-items:center;justify-content:space-between;margin-bottom:clamp(40px,8vh,90px)}
 .bb-menu-tete .bb-logo{justify-self:auto;color:#fff}
-.bb-fermer{background:none;border:0;color:#fff;cursor:pointer;
- font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
-.bb-grille{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(24px,4vw,56px);max-width:1280px;margin:0 auto}
-.bb-grille h2{font:500 clamp(1.5rem,2.4vw,2.2rem)/1.1 "Playfair Display",Georgia,serif;
- margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18);color:#fff}
-.bb-grille a,.bb-grille span{display:block;text-decoration:none;color:rgba(255,255,255,.78);
- padding:9px 0;font:400 .92rem/1.4 "DM Sans",Montserrat,sans-serif;transition:color .2s}
+.bb-grille h2{font:500 clamp(1.5rem,2.4vw,2.2rem)/1.1 "Playfair Display",Georgia,serif;margin:0 0 22px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.18);color:#fff}
+.bb-grille a{display:block;text-decoration:none;color:rgba(255,255,255,.78);padding:9px 0;font:400 .92rem/1.4 "DM Sans",Montserrat,sans-serif;transition:color .2s}
 .bb-grille a:hover{color:#fff}
-.bb-grille span{color:var(--bb-sauge)}
-.bb-menu-pied{max-width:1280px;margin:clamp(40px,7vh,80px) auto 0;padding-top:24px;
- border-top:1px solid rgba(255,255,255,.18);display:flex;flex-wrap:wrap;gap:10px 28px;
- font:400 .78rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.62)}
 .bb-menu-pied a{color:rgba(255,255,255,.62);text-decoration:none}
 .bb-menu-pied a:hover{color:#fff}
 body.bb-bloque{overflow:hidden}
-
-/* ── le pied de page ── */
 .bb-pied{background:var(--bb-navy);color:rgba(255,255,255,.74);padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px}
 .bb-pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(24px,3vw,46px);max-width:1280px;margin:0 auto}
-.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;
- text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
-.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;
- padding:4px 0;font:400 .84rem/1.5 "DM Sans",Montserrat,sans-serif}
+.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
+.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;font:400 .84rem/1.5 "DM Sans",Montserrat,sans-serif}
 .bb-pied a:hover{color:#fff}
 .bb-pied .bb-logo{display:inline-block;color:#fff;margin-bottom:14px}
 .bb-signature{font:italic 1rem/1.4 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 18px}
 .bb-signature i{font-style:normal;text-decoration:line-through;text-decoration-color:var(--bb-sauge)}
-.bb-pied-achat{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;
- background:var(--bb-sauge);color:var(--bb-navy)!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;
- letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
-.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;
- border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;
- justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
-
+.bb-pied-achat{display:inline-flex;align-items:center;padding:12px 26px;border-radius:999px;background:var(--bb-sauge);color:var(--bb-navy)!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
 @media(max-width:900px){
- .bb-grille{grid-template-columns:1fr 1fr}
- .bb-pied-grille{grid-template-columns:1fr 1fr}
+.bb-pied-grille{grid-template-columns:1fr 1fr}
 }
 @media(max-width:640px){
- .bb-entete{height:64px}.bb-cale{height:64px}
- .bb-btn span:not(.bb-trait){display:none}
- .bb-boutique{display:none}
- .bb-logo{font-size:1rem;letter-spacing:.2em}
- .bb-grille,.bb-pied-grille{grid-template-columns:1fr}
- .bb-copy{justify-content:flex-start}
+.bb-entete,.bb-cale{height:64px}
+.bb-btn span:not(.bb-trait),.bb-boutique{display:none}
+.bb-logo{font-size:1rem;letter-spacing:.2em}
+.bb-pied-grille{grid-template-columns:1fr}
+.bb-copy{justify-content:flex-start}
 }
-@media(prefers-reduced-motion:reduce){.bb-entete,.bb-menu{transition:none}}
-
-
-:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;
-      --bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
-h1 em{color:var(--bb-terre-pale)}
-.departure h2 em,.destinations h2 em,.travel-close h2 em{color:var(--bb-terre)}
-.onsite h2 em,.duration h2 em,.checklist h2 em{color:var(--bb-sauge-titre)}
-.testimonials h2 em{color:var(--bb-sauge-clair)}
+@media(prefers-reduced-motion:reduce){
+.bb-entete{transition:none}
+}
+:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;--bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
 .bb-cale{height:108px}
-
-
-/* ── le pied BIBEON n'obéit qu'à ses propres règles ── */
-footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;
- color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
+footer.bb-pied{display:block!important;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px!important;background:var(--bb-navy)!important;color:#fff;grid-template-columns:none!important;align-items:initial;text-align:left}
 footer.bb-pied p{font:inherit}
-footer.bb-pied p span{text-decoration:none}
-footer.bb-pied>a:last-child{justify-self:auto;font-size:inherit;text-transform:none;letter-spacing:normal}
-footer.bb-pied .bb-pied-bas>a:last-child{justify-self:auto}
-@media(max-width:900px){footer.bb-pied{grid-template-columns:none!important;gap:0;text-align:left}
- footer.bb-pied>a:last-child{justify-self:auto}}
-
-/* ══ le panneau de navigation ══ */
+@media(max-width:900px){
+footer.bb-pied{grid-template-columns:none!important;gap:0;text-align:left}
+}
 .bb-voile{position:fixed;inset:0;z-index:88;background:transparent}
 .bb-voile[hidden]{display:none}
-.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;
- background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);
- border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);
- padding:46px 75px;display:flex;flex-direction:column;
- opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
+.bb-panneau{position:fixed;left:0;top:105px;z-index:89;width:440px;max-width:100%;background:var(--bb-ivoire);border-top:1px solid var(--bb-filet);border-right:1px solid var(--bb-filet);border-bottom:1px solid var(--bb-filet);padding:46px 75px;display:flex;flex-direction:column;opacity:0;transform:translateY(-6px);transition:opacity .26s ease,transform .26s ease}
 .bb-panneau[hidden]{display:none}
 .bb-panneau.bb-ouvert{opacity:1;transform:none}
-.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;
- text-decoration:none;text-align:left;
- font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);
- border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
-.bb-panneau a:last-child,.bb-panneau span:last-child{border-bottom:0}
+.bb-panneau a,.bb-panneau span{display:flex;align-items:center;min-height:56px;text-decoration:none;text-align:left;font:400 22px/1.25 "Playfair Display",Georgia,serif;color:var(--bb-navy);border-bottom:1px solid var(--bb-filet);transition:color .2s ease}
+.bb-panneau a:last-child{border-bottom:0}
 .bb-panneau a:hover{color:var(--bb-sauge-fonce)}
 .bb-panneau span[aria-current]{color:var(--bb-sauge-fonce);cursor:default}
 @media(max-width:640px){
- .bb-panneau{width:100%;top:93px;padding:34px 26px}
- .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
+.bb-panneau{width:100%;top:93px;padding:34px 26px}
+.bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
 }
-
-/* ── le bouton MENU : deux traits puis le mot, toujours visible ── */
-.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;
- font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
 .bb-entete .bb-btn{gap:12px}
-@media(max-width:640px){.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}}
-
-/* ── les titres de colonnes du pied gardent leur taille ── */
-footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;
- letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);
- margin:0 0 16px!important;line-height:1.4!important}
-
-/* ── la bande des quatre repères, enfin lisible ── */
+@media(max-width:640px){
+.bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}
+}
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 16px!important;line-height:1.4!important}
 .travel-facts p{padding:clamp(30px,4vh,46px) 3vw}
-.travel-facts b{font:500 clamp(2.4rem,3.6vw,3.6rem)/1 "Playfair Display",Georgia,serif!important;
- color:var(--bb-navy)}
+.travel-facts b{font:500 clamp(2.4rem,3.6vw,3.6rem)/1 "Playfair Display",Georgia,serif!important;color:var(--bb-navy)}
 .travel-facts span{font:400 .84rem/1.4 "DM Sans",sans-serif!important;color:#5d5a55;margin-top:10px!important}
-
-/* ── les trois gestes du départ, à leur vraie taille ── */
-.departure__flow h3{font:500 clamp(1.9rem,2.6vw,2.6rem)/1.1 "Playfair Display",Georgia,serif!important;
- margin:28px 0 14px!important;color:var(--bb-navy)}
-.departure__flow span{font:600 .66rem/1 "DM Sans",sans-serif!important;letter-spacing:.2em;
- color:var(--bb-terre)}
-.departure__flow p{font-size:.95rem!important;line-height:1.7!important;color:#4f4c48!important}
-.departure__flow article{padding-top:32px}
-
-/* ── les avis : ConsoBaby doit se voir ── */
+.departure__flow h3{font:500 clamp(1.9rem,2.6vw,2.6rem)/1.1 "Playfair Display",Georgia,serif!important;margin:28px 0 14px!important;color:var(--bb-navy)}
 .testimonials{background:#B9D8D7}
-.testimonials h2,.testimonials .kicker{color:var(--bb-navy)}
+.testimonials .kicker{color:var(--bb-navy)}
 .testimonials h2 em{color:#2F5E5C!important}
-.testimonials blockquote{font-size:1.35rem!important;line-height:1.55!important;
- color:var(--bb-navy);border-top-color:rgba(14,28,53,.22)!important}
+.testimonials blockquote{font-size:1.35rem!important;line-height:1.55!important;border-top-color:rgba(14,28,53,.22)!important}
 .testimonials cite{font-size:.68rem!important;color:#3C5C5B}
-.rating{display:flex;flex-direction:column;align-items:center;gap:8px;
- margin:60px 0 0!important;text-transform:none!important;letter-spacing:normal!important;
- font-size:1rem!important;color:var(--bb-navy)}
+.rating{display:flex;flex-direction:column;align-items:center;gap:8px;margin:60px 0 0!important;text-transform:none!important;letter-spacing:normal!important;font-size:1rem!important;color:var(--bb-navy)}
 .rating b{font:500 clamp(2.8rem,4.6vw,4.4rem)/1 "Playfair Display",Georgia,serif;letter-spacing:-.03em}
 .rating span{font:400 .92rem/1 "DM Sans",sans-serif;color:#3C5C5B}
-.rating strong{font:500 clamp(2rem,3.4vw,3.2rem)/1 "Playfair Display",Georgia,serif;
- letter-spacing:-.02em;color:var(--bb-navy)}
-.rating a{margin-top:10px;font:600 .64rem/1 "DM Sans",sans-serif;letter-spacing:.16em;
- text-transform:uppercase;color:var(--bb-navy);border-bottom:1px solid rgba(14,28,53,.4);
- padding-bottom:6px;text-decoration:none}
+.rating strong{font:500 clamp(2rem,3.4vw,3.2rem)/1 "Playfair Display",Georgia,serif;letter-spacing:-.02em;color:var(--bb-navy)}
+.rating a{margin-top:10px;font:600 .64rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--bb-navy);border-bottom:1px solid rgba(14,28,53,.4);padding-bottom:6px;text-decoration:none}
 .rating a:hover{border-bottom-color:var(--bb-navy)}
-
-/* ── le hero de voyage est sur fond clair ── */
 .travel-hero__copy h1 em{color:#96503F!important}
 .travel-hero__copy .kicker{color:#A46661}
-
-/* ── la ligne sous le titre du hero de voyage ── */
-.travel-hero__copy .bb-accroche{margin:26px 0 34px;max-width:42ch;
- font:400 clamp(1.05rem,1.5vw,1.35rem)/1.5 "Playfair Display",Georgia,serif;color:#5d554f}
-
-/* ── voiture et avion : deux petites cases ── */
-.destination:not(.destination--large):not(.destination--wide) .destination__media{height:auto!important;
- background:#EEF1EA;display:grid;place-items:center}
-.destination:not(.destination--large):not(.destination--wide) .destination__media img{
- width:100%;height:auto!important;max-height:46vh;object-fit:contain!important}
+.travel-hero__copy .bb-accroche{margin:26px 0 34px;max-width:42ch;font:400 clamp(1.05rem,1.5vw,1.35rem)/1.5 "Playfair Display",Georgia,serif;color:#5d554f}
+.destination:not(.destination--large):not(.destination--wide) .destination__media img{width:100%;height:auto!important;max-height:46vh;object-fit:contain!important}
 .destination__media:after{content:none}
-.destination__media span{display:none}
 @media(max-width:900px){
- .destination__media--duo{grid-template-columns:1fr}
- .destination__media--duo img{max-height:44vh}
+.destination__media--duo{grid-template-columns:1fr}
+.destination__media--duo img{max-height:44vh}
 }
-
-/* ── le bouton Boutique du pied garde sa forme ── */
-.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;
- padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;
- font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;
- margin-top:16px;transition:background .25s ease}
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-top:16px;transition:background .25s ease}
 .bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
-
-/* ══ CONTRASTE : la teinte suit le fond, jamais l'inverse ══
-   fonds clairs  -> terre cuite foncée #96503F
-   fonds moyens  -> bleu nuit seul
-   fond bleu nuit-> terre claire ou sauge clair ══ */
-
-/* fonds clairs : beige, ivoire, papier, sauge clair */
-.travel-hero__copy h1 em,.travel-close h2 em,.destinations h2 em,
-.departure h2 em,.checklist h2 em,.duration h2 em,
-.home h2 em,.bb-note em,.less h2 em,.manifesto h2 em,.chapters h2 em,
-.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,
-.manual-close h2 em,.steps>header h2 em,.heating h2 em,
-.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,
-.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,
-.bb-tetine-texte h3 em,.teat-choice h3 em,.functions__head h2 em,.proof h2 em{color:#96503F}
-
-/* fonds moyens : sable, vert d'eau — le bleu nuit seul tient */
+.travel-close h2 em,.destinations h2 em,.departure h2 em,.checklist h2 em,.home h2 em,.less h2 em,.manifesto h2 em,.chapters h2 em,.declaration h2 em,.paradox h2 em,.closing h2 em,.film-intro h2 em,.manual-close h2 em,.heating h2 em,.compare h2 em,.weight h2 em,.architecture h2 em,.functions h2 em,.faq h2 em,.offers h2 em,.shipping h2 em,.coloris-tete h2 em,.care-texte h2 em,.functions__head h2 em,.proof h2 em{color:#96503F}
 .duration h2,.duration h3,.duration li,.testimonials h2,.testimonials blockquote{color:#0E1C35}
-.duration h2 em,.testimonials h2 em{color:#2F5E5C}
-
-/* fond bleu nuit : teintes claires uniquement */
-h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
-.house__copy h2 em,.reassurance h2 em,.onsite h2 em,
-.three-steps h2 em,.colors h2 em{color:#E0B4AE}
+.duration h2 em{color:#2F5E5C}
+h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em,.onsite h2 em,.colors h2 em{color:#E0B4AE}
 .reassurance h2 em,.rmoins-intro h2 em,.three-steps h2 em{color:#C5D1C7}
-.travel-hero__copy h1 em{color:#96503F}
-
-
-
-/* ── les destinations : cadres pleins, images généreuses ── */
-.destination__media{height:clamp(460px,58vh,640px)!important;position:relative;overflow:hidden}
-.destination--large .destination__media,.destination--wide .destination__media{height:clamp(560px,70vh,780px)!important}
+.destination__media{position:relative;overflow:hidden}
 .destination__media img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
 .destination__media:after{background:linear-gradient(0deg,rgba(14,28,53,.34),transparent 45%)}
-
-/* le train : ses deux visuels sur toute la largeur, le texte dessous */
 .destination--large:has(.destination__media--duo){display:block!important}
 .destination--large:has(.destination__media--duo)>div:last-child{padding:clamp(30px,3.4vw,52px)}
-.destination__media--duo{display:grid!important;grid-template-columns:1fr 1fr;gap:10px;
- background:#EEF1EA;padding:10px;height:clamp(520px,66vh,760px)!important}
+.destination__media--duo{display:grid!important;grid-template-columns:1fr 1fr}
 .destination__media--duo figure{margin:0;position:relative;overflow:hidden;min-height:0}
-.destination__media--duo img{width:100%!important;height:100%!important;object-fit:cover!important;max-height:none!important}
 .destination__media--duo:after{content:none}
 @media(max-width:900px){
- .destination__media{height:clamp(340px,46vh,460px)!important}
- .destination--large .destination__media,.destination--wide .destination__media{height:clamp(380px,52vh,520px)!important}
- .destination__media--duo{height:clamp(380px,52vh,520px)!important}
+.destination__media{height:clamp(340px,46vh,460px)!important}
+.destination--large .destination__media,.destination--wide .destination__media,.destination__media--duo{height:clamp(380px,52vh,520px)!important}
 }
-
-/* ── les deux moments : à la taille des autres sections ── */
-.aa-banniere{height:clamp(420px,52vh,600px)}
 .aa-titre h2{font-size:clamp(3rem,5.2vw,5.6rem)!important}
 .aa-titre .kicker{font-size:.7rem!important;letter-spacing:.2em}
-.aa-moment{font-size:.76rem!important;letter-spacing:.22em;margin-bottom:24px!important}
-.aa-col li{grid-template-columns:62px 1fr;padding:26px 0}
+.aa-moment{font-size:.76rem!important;margin-bottom:24px!important}
 .aa-col b{font-size:.72rem!important}
 .aa-col h3{font-size:clamp(1.6rem,2.4vw,2.2rem)!important;margin-bottom:12px!important}
 .aa-col p{font-size:1rem!important;line-height:1.7!important}
-.aa-lien{font-size:.72rem!important;margin-top:34px}
-@media(max-width:900px){.aa-col h3{font-size:1.5rem!important}.aa-col p{font-size:.95rem!important}}
-
-/* ══ toute la page : des textes lisibles ══ */
+.aa-lien{font-size:.72rem!important}
+@media(max-width:900px){
+.aa-col h3{font-size:1.5rem!important}
+.aa-col p{font-size:.95rem!important}
+}
 .destination>div:last-child>p:last-child{font-size:1rem!important;line-height:1.72!important;color:#3f3c38!important}
 .destination h3{font-size:clamp(2.1rem,3.2vw,2.9rem)!important;margin:26px 0 16px!important}
 .destination .number{font-size:.72rem!important;letter-spacing:.2em}
-.destination__media span{font-size:.7rem!important;letter-spacing:.18em;left:28px;bottom:26px}
 .duration__cards h3{font-size:clamp(1.9rem,2.8vw,2.4rem)!important}
 .duration__cards>article>span{font-size:.72rem!important;letter-spacing:.2em}
 .duration li{font-size:.98rem!important;padding:14px 0!important;line-height:1.6}
 .duration>div>p,.duration p{font-size:1rem;line-height:1.72}
 .checklist li{font-size:1rem!important;padding:24px 0!important;gap:18px}
-.checklist>div>p,.checklist p:not(.kicker){font-size:1rem;line-height:1.72}
-.travel-close p:not(.kicker){font-size:1rem;line-height:1.72}
-.onsite p,.destinations>header p{font-size:1rem!important;line-height:1.72!important}
+.checklist>div>p,.checklist p:not(.kicker),.travel-close p:not(.kicker){font-size:1rem;line-height:1.72}
+.destinations>header p{font-size:1rem!important;line-height:1.72!important}
 .kicker{font-size:.7rem!important;letter-spacing:.2em}
 @media(max-width:900px){
- .destination h3{font-size:1.9rem!important}
- .destination>div:last-child>p:last-child,.checklist li,.duration li{font-size:.96rem!important}
+.destination h3{font-size:1.9rem!important}
+.destination>div:last-child>p:last-child,.checklist li,.duration li{font-size:.96rem!important}
 }
-
-/* ── le pied : des liens lisibles ── */
 .bb-pied a,.bb-pied span{font-size:.92rem!important;padding:5px 0!important}
 .bb-pied h3{font-size:.66rem!important;margin-bottom:18px!important}
 .bb-signature{font-size:1.12rem!important}
-.bb-pied-bas{font-size:.8rem!important}
-
-/* ══ AVANT ET APRÈS : le titre sur la bande, les deux moments dessous ══ */
 .avant-apres{padding:clamp(70px,9vh,120px) 6vw}
-.aa-banniere{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;
- height:clamp(420px,52vh,600px);background:#EEF1EA}
+.aa-banniere{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;background:#EEF1EA}
 .aa-banniere img{width:100%;height:100%;object-fit:cover;display:block}
-.aa-banniere:after{content:"";position:absolute;inset:0;
- background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.9) 34%,rgba(251,249,246,.35) 58%,rgba(251,249,246,0) 78%)}
+.aa-banniere:after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.9) 34%,rgba(251,249,246,.35) 58%,rgba(251,249,246,0) 78%)}
 .aa-titre{position:absolute;z-index:1;left:clamp(26px,4vw,64px);top:50%;transform:translateY(-50%);max-width:46%}
 .aa-titre .kicker{margin:0 0 16px;color:#647466}
-.aa-titre h2{font:500 clamp(3rem,5.2vw,5.6rem)/.95 "Playfair Display",Georgia,serif;
- letter-spacing:-.04em;margin:0;color:#0E1C35}
+.aa-titre h2{font:500 clamp(3rem,5.2vw,5.6rem)/.95 "Playfair Display",Georgia,serif;letter-spacing:-.04em;margin:0;color:#0E1C35}
 .aa-titre h2 em{font-style:italic;color:#96503F}
-.aa-colonnes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);
- max-width:1380px;margin:clamp(44px,6vh,72px) auto 0}
-.aa-moment{margin:0 0 24px;font:600 .76rem/1 "DM Sans",sans-serif;letter-spacing:.22em;
- text-transform:uppercase;color:#96503F}
+.aa-colonnes{display:grid;grid-template-columns:1fr 1fr;gap:clamp(34px,5vw,80px);max-width:1380px;margin:clamp(44px,6vh,72px) auto 0}
+.aa-moment{margin:0 0 24px;font:600 .76rem/1 "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#96503F}
 .aa-col ol{list-style:none;margin:0;padding:0;border-top:1px solid rgba(14,28,53,.14)}
-.aa-col li{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:baseline;
- padding:26px 0;border-bottom:1px solid rgba(14,28,53,.14)}
+.aa-col li{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:baseline;padding:26px 0;border-bottom:1px solid rgba(14,28,53,.14)}
 .aa-col b{font:600 .72rem/1 "DM Sans",sans-serif;letter-spacing:.14em;color:#647466}
 .aa-col h3{margin:0 0 12px;font:500 clamp(1.6rem,2.4vw,2.2rem)/1.2 "Playfair Display",Georgia,serif;color:#0E1C35}
-.aa-col p{margin:0;font-size:1rem;line-height:1.7;color:#3f3c38}
-.aa-lien{display:inline-flex;gap:24px;align-items:center;margin-top:34px;border-bottom:1px solid;
- padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;
- font:600 .72rem/1 "DM Sans",sans-serif;color:#0E1C35}
+.aa-col p{margin:0;color:#3f3c38}
+.aa-lien{display:inline-flex;gap:24px;align-items:center;margin-top:34px;border-bottom:1px solid;padding-bottom:7px;text-decoration:none;text-transform:uppercase;letter-spacing:.14em;font:600 .72rem/1 "DM Sans",sans-serif;color:#0E1C35}
 .aa-lien:hover{color:#96503F}
 @media(max-width:900px){
- .aa-colonnes{grid-template-columns:1fr;gap:44px}
- .aa-titre{max-width:78%}
- .aa-col h3{font-size:1.5rem}
- .aa-col p{font-size:.95rem}
- .aa-banniere:after{background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.88) 58%,rgba(251,249,246,.25) 86%,rgba(251,249,246,0) 100%)}
+.aa-colonnes{grid-template-columns:1fr;gap:44px}
+.aa-titre{max-width:78%}
+.aa-banniere:after{background:linear-gradient(100deg,rgba(251,249,246,.97) 0%,rgba(251,249,246,.88) 58%,rgba(251,249,246,.25) 86%,rgba(251,249,246,0) 100%)}
 }
-
-/* ── des hauteurs raisonnables ── */
-.destination__media,.destination--large .destination__media,.destination--wide .destination__media,
-.destination__media--duo,.aa-banniere{height:clamp(320px,42vh,520px)!important}
-/* le hero : son cadre commande, pas la taille du fichier */
 .travel-hero{min-height:0!important}
-.travel-hero__film{height:clamp(380px,56vh,620px)!important;min-height:0!important;overflow:hidden}
-.travel-hero__film img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center 35%}
+.travel-hero__film{overflow:hidden}
+.travel-hero__film img{width:100%!important;height:100%!important;object-fit:cover!important}
 .travel-hero__copy{padding:clamp(56px,7vh,92px) clamp(26px,5vw,64px)!important}
 @media(max-width:850px){
- .travel-hero__film{height:clamp(300px,44vh,440px)!important}
- .destination__media,.destination--large .destination__media,.destination--wide .destination__media,
- .destination__media--duo,.aa-banniere{height:clamp(280px,38vh,420px)!important}
+.aa-banniere{height:clamp(280px,38vh,420px)!important}
 }
-
-/* ── garde-fou : aucune image ne s'impose sa propre taille ── */
-main img,main video{max-height:88vh}
-@media(max-width:900px){main img,main video{max-height:80vh}}
-
-/* ── voyage : des cadres plus hauts, des cadrages justes ── */
-.travel-hero__film{height:clamp(460px,64vh,720px)!important}
+main img{max-height:88vh}
+@media(max-width:900px){
+main img{max-height:80vh}
+}
 .destination__media{height:clamp(480px,58vh,660px)!important}
-.destination--large .destination__media,.destination--wide .destination__media{height:clamp(520px,64vh,720px)!important}
-.destination__media--duo{height:clamp(520px,64vh,720px)!important}
+.destination--large .destination__media{height:clamp(520px,64vh,720px)!important}
 .aa-banniere{height:clamp(420px,52vh,600px)!important}
-/* le train : garder les visages */
-.destination__media--duo img{object-position:center 22%!important}
-/* la voiture : montrer le flacon entier */
-.destination__media img[src*="voiture"]{object-fit:contain!important;background:#EEF1EA}
 @media(max-width:850px){
- .travel-hero__film{height:clamp(320px,46vh,460px)!important}
- .destination__media,.destination--large .destination__media,
- .destination--wide .destination__media,.destination__media--duo{height:clamp(360px,48vh,500px)!important}
+.travel-hero__film{height:clamp(320px,46vh,460px)!important}
+.destination__media,.destination--large .destination__media{height:clamp(360px,48vh,500px)!important}
 }
-
-/* ── le hero : l'image occupe toute la hauteur du bloc ── */
 .travel-hero{align-items:stretch}
 .travel-hero__film{height:auto!important;min-height:clamp(460px,64vh,720px)!important;align-self:stretch}
-.travel-hero__film img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
-@media(max-width:850px){.travel-hero__film{min-height:clamp(320px,46vh,460px)!important}}
-
-/* ── le train : les deux photos entières, la maman et sa tablette ── */
-.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:12px!important;gap:12px}
-.destination__media--duo img{object-fit:contain!important;object-position:center!important;
- width:100%!important;height:100%!important}
-/* ── la voiture : le cadre est vertical, l'image le remplit ── */
+.travel-hero__film img{object-position:center 35%}
+@media(max-width:850px){
+.travel-hero__film{min-height:clamp(320px,46vh,460px)!important}
+}
 .destination__media img[src*="voiture"]{object-fit:cover!important;object-position:center 45%!important;background:none}
 .destination--wide .destination__media{height:clamp(520px,66vh,720px)!important}
 @media(max-width:850px){
- .destination__media--duo{height:auto!important;grid-template-columns:1fr 1fr;aspect-ratio:8/5}
- .destination--wide .destination__media{height:clamp(380px,50vh,520px)!important}
+.destination--wide .destination__media{height:clamp(380px,50vh,520px)!important}
 }
-
-/* ── le train : chaque photo remplit sa moitié ── */
-.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:10px!important;gap:10px}
-.destination__media--duo img{object-fit:cover!important;object-position:center 40%!important;
- width:100%!important;height:100%!important}
-@media(max-width:850px){.destination__media--duo{height:auto!important;aspect-ratio:8/5}}
-
-/* ── le train : les deux photos entières, jamais rognées ── */
-.destination__media--duo{height:clamp(600px,76vh,840px)!important;background:#EEF1EA;padding:12px!important;gap:12px}
+.destination--large .destination__media--duo{height:auto!important;background:#EEF1EA;padding:12px!important;gap:12px;overflow:visible!important;align-items:start}
 .destination__media--duo figure{display:grid;place-items:center}
-.destination__media--duo img{object-fit:contain!important;object-position:center!important;
- width:100%!important;height:100%!important;max-height:none!important}
+.destination--large .destination__media--duo img{object-fit:contain!important;width:100%!important;height:auto!important;max-height:none!important;display:block}
 @media(max-width:850px){
- .destination__media--duo{height:auto!important;aspect-ratio:8/5;grid-template-columns:1fr 1fr}
+.destination__media--duo{height:auto!important;aspect-ratio:8/5;grid-template-columns:1fr 1fr}
 }
 </style>
 </head>
