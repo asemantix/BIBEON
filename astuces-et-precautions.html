@@ -239,8 +239,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .ast-texte strong{color:#0E1C35;font-weight:600}
 .ast-media{margin:0;display:grid;place-items:center;background:#EEF1EA;padding:clamp(12px,1.4vw,20px)}
 .ast-media video{display:block;width:auto;max-width:100%;height:78vh;max-height:78vh;object-fit:contain}
-.ast-schema{margin:24px 0 0;max-width:520px}
-.ast-schema img{display:block;width:100%;height:auto}
 
 .ast-fin{text-align:center;padding:clamp(60px,8vh,100px) 5vw;border-top:1px solid rgba(14,28,53,.12)}
 .ast-fin p{font:italic 1.3rem/1.4 "Playfair Display",Georgia,serif;color:#0E1C35;margin:0 0 24px}
@@ -293,7 +291,16 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bb-signature{font-size:1.12rem!important}
 .bb-pied-bas{font-size:.8rem!important}
 
-</style>
+
+.ast-paire{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:26px 0 0;max-width:520px}
+.ast-paire figure{margin:0}
+.ast-paire img{display:block;width:100%;height:auto}
+.ast-paire figcaption{margin-top:8px;font:600 .6rem/1.3 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#4f4c48;text-align:center}
+.ast-media--duo{grid-template-columns:1fr 1fr;align-items:start;gap:14px;place-items:stretch}
+.ast-media--duo figure{margin:0}
+.ast-media--duo video{display:block;width:auto;max-width:100%;height:clamp(240px,44vh,460px)!important;max-height:none!important;margin:0 auto}
+.ast-media--duo figcaption{margin-top:10px;font:600 .58rem/1.3 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4f4c48;text-align:center}
+@media(max-width:620px){.ast-paire{gap:12px}.ast-media--duo{gap:10px}}</style>
 </head>
 <body>
 <div class="bb-bandeau">Fabriqué en France</div>
@@ -339,7 +346,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <div class="ast-texte">
       <p class="kicker">03 · Soufflet par soufflet</p>
       <h2>Étirer <em>en deux temps.</em></h2>
-      <p>Tenez le flacon par ses deux extrémités et procédez en deux temps : faites basculer le soufflet d’un côté, puis de l’autre. Basculé d’un seul côté il reste à demi déplié, ce qui sert à couder le flacon ; dans chaque position il tient seul et ne se referme que si vous le décidez.</p>
+      <p>Tenez le flacon par ses deux extrémités et procédez en deux temps : faites basculer le soufflet d’un côté, puis de l’autre. Ce n’est pas un essorage — rien ne se tord sur toute la longueur, chaque soufflet bascule à son tour. Basculé d’un seul côté il reste à demi déplié, ce qui sert à couder le flacon ; dans chaque position il tient seul et ne se referme que si vous le décidez.</p>
     </div>
     <figure class="ast-media"><video muted loop playsinline preload="none" poster="assets/concept-eleve.jpg" data-geste aria-label="Chaque soufflet basculé d’un côté puis de l’autre, en deux temps"><source src="assets/concept-eleve.mp4" type="video/mp4"></video></figure>
   </section>
@@ -350,17 +357,17 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <div class="ast-texte">
       <p class="kicker">04 · Zéro fuite</p>
       <h2>La tétine bien assise.<br><em>Vérifiée d’un coup d’œil.</em></h2>
-      <p><strong>Regarder.</strong> Retournez le bloc : bien entrée dans sa base, la tétine laisse voir un orifice rond et dégagé. Repliée sur le côté, un trait le traverse.</p>
-      <p><strong>Corriger.</strong> Posez le capuchon bien droit et pressez verticalement, jusqu’au bout. Si la tétine résiste, faites-la entrer dans sa base avec des doigts propres.</p>
-      <figure class="ast-schema"><img src="assets/tetine-vue-de-dessous.svg" width="720" height="400" loading="lazy" alt="Vue de dessous : à gauche un orifice rond et dégagé, tétine bien assise ; à droite un orifice traversé d’un trait, tétine à reprendre"></figure>
+      <p><strong>Regarder.</strong> Retournez le bloc et regardez par en dessous : bien descendue dans sa base, la tétine laisse un orifice rond et parfaitement dégagé. Mal enfoncée, elle se couche à l’intérieur et vient obstruer l’ouverture.</p>
+      <p><strong>Corriger.</strong> Posez le capuchon bien droit sur la tétine et pressez verticalement, jusqu’au bout : c’est lui qui la fait descendre dans sa base. Si elle résiste, aidez-la avec des doigts propres.</p>
+      <div class="ast-paire"><figure><img src="assets/tetine-bien-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine bien descendue : l’orifice central est rond et dégagé"><figcaption>Bien assise</figcaption></figure><figure><img src="assets/tetine-mal-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine mal enfoncée : couchée à l’intérieur, elle obstrue l’orifice"><figcaption>À reprendre</figcaption></figure></div>
     </div>
-    <figure class="ast-media"><video muted loop playsinline preload="none" poster="assets/ferme-retourne-rouvert-sec.jpg" data-geste aria-label="Le biberon fermé, retourné puis rouvert : le capuchon est sec"><source src="assets/ferme-retourne-rouvert-sec.mp4" type="video/mp4"></video></figure>
+    <div class="ast-media ast-media--duo"><figure><video muted loop playsinline preload="none" poster="assets/capuchon-enfonce-la-tetine.jpg" data-geste aria-label="Le capuchon posé bien droit fait descendre la tétine dans sa base"><source src="assets/capuchon-enfonce-la-tetine.mp4" type="video/mp4"></video><figcaption>01 · Le capuchon la fait descendre</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/ferme-retourne-rouvert-sec.jpg" data-geste aria-label="Le biberon fermé, retourné puis rouvert : le capuchon est sec"><source src="assets/ferme-retourne-rouvert-sec.mp4" type="video/mp4"></video><figcaption>02 · Retourné puis rouvert : sec</figcaption></figure></div>
   </section>
 
   <section class="ast-partie" id="lait-en-poudre">
     <p class="kicker">Si bébé prend du lait en poudre</p>
-    <h2>De 6 à 12 mois.<br><em>Préparé d’avance.</em></h2>
-    <p>Avec sa tétine à débit 6 mois, BIBEON accompagne le lait en poudre de 6 à 12 mois. Pour un bébé plus jeune, remplacez-la par une tétine à col étroit adaptée à son âge.</p>
+    <h2>Du premier lait<br><em>au lait de croissance.</em></h2>
+    <p>Livré avec une tétine à débit 6 mois, BIBEON accompagne le lait en poudre jusqu’au lait de croissance. Pour un bébé plus jeune, remplacez-la par une tétine à col étroit adaptée à son âge.</p>
   </section>
 
   <section class="ast" id="sechage">
