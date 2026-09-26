@@ -300,7 +300,17 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .ast-media--duo figure{margin:0}
 .ast-media--duo video{display:block;width:auto;max-width:100%;height:clamp(240px,44vh,460px)!important;max-height:none!important;margin:0 auto}
 .ast-media--duo figcaption{margin-top:10px;font:600 .58rem/1.3 "DM Sans",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#4f4c48;text-align:center}
-@media(max-width:620px){.ast-paire{gap:12px}.ast-media--duo{gap:10px}}</style>
+@media(max-width:620px){.ast-paire{gap:12px}.ast-media--duo{gap:10px}}
+.ast-defaut{grid-column:1/-1;order:3;margin-top:clamp(40px,5vh,70px);padding-top:clamp(32px,4vh,48px);border-top:1px solid rgba(14,28,53,.14)}
+.ast-defaut__tete{margin:0 0 26px;font:600 .62rem/1.4 "DM Sans",sans-serif;letter-spacing:.17em;text-transform:uppercase;color:#96503F}
+.ast-defaut__suite{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,30px);align-items:end}
+.ast-defaut__suite li{display:flex;flex-direction:column;gap:14px}
+.ast-defaut__suite img{display:block;width:100%;height:auto}
+.ast-defaut__suite p{margin:0;font:600 .72rem/1.45 "DM Sans",sans-serif;color:#0E1C35}
+.ast-defaut__suite b{display:block;font:500 1.5rem/1 "Playfair Display",Georgia,serif;color:#96503F;margin-bottom:8px}
+.ast-defaut__suite span{display:block;margin-top:5px;font-weight:400;color:#4f4c48}
+.ast-defaut__pied{margin:30px 0 0;font:italic 1.02rem/1.5 "Playfair Display",Georgia,serif;color:#0E1C35}
+@media(max-width:760px){.ast-defaut__suite{grid-template-columns:1fr 1fr;row-gap:26px}}</style>
 </head>
 <body>
 <div class="bb-bandeau">Fabriqué en France</div>
@@ -362,6 +372,8 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="ast-paire"><figure><img src="assets/tetine-bien-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine bien descendue : l’orifice central est rond et dégagé"><figcaption>Bien assise</figcaption></figure><figure><img src="assets/tetine-mal-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine mal enfoncée : couchée à l’intérieur, elle obstrue l’orifice"><figcaption>À reprendre</figcaption></figure></div>
     </div>
     <div class="ast-media ast-media--duo"><figure><video muted loop playsinline preload="none" poster="assets/capuchon-enfonce-la-tetine.jpg" data-geste aria-label="Le capuchon posé bien droit fait descendre la tétine dans sa base"><source src="assets/capuchon-enfonce-la-tetine.mp4" type="video/mp4"></video><figcaption>01 · Le capuchon la fait descendre</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/ferme-retourne-rouvert-sec.jpg" data-geste aria-label="Le biberon fermé, retourné puis rouvert : le capuchon est sec"><source src="assets/ferme-retourne-rouvert-sec.mp4" type="video/mp4"></video><figcaption>02 · Retourné puis rouvert : sec</figcaption></figure></div>
+  
+    <div class="ast-defaut"><p class="ast-defaut__tete">Ce qui arrive quand le capuchon n’est pas posé droit</p><ol class="ast-defaut__suite"><li><img src="assets/tetine-mal-fermee-01-position-de-depart.webp" width="300" height="574" loading="lazy" alt="La tétine dressée, plus haute que le capuchon posé à côté"><p><b>01</b> Position de départ<span>La tétine dépasse la hauteur du capuchon.</span></p></li><li><img src="assets/tetine-mal-fermee-02-le-capuchon-descend.webp" width="300" height="574" loading="lazy" alt="Le capuchon qui descend de biais sur la tétine"><p><b>02</b> Le capuchon descend<span>Il n’est pas maintenu dans l’axe de la tétine.</span></p></li><li><img src="assets/tetine-mal-fermee-03-la-tetine-se-plie.webp" width="300" height="574" loading="lazy" alt="La tétine qui se couche progressivement sous le capuchon"><p><b>03</b> La tétine se plie<span>Elle bascule peu à peu sur le côté.</span></p></li><li><img src="assets/tetine-mal-fermee-04-fermeture-incorrecte.webp" width="300" height="574" loading="lazy" alt="Le capuchon fermé sur une tétine couchée sur le côté, marqué d’une croix rouge"><p><b>04</b> Fermeture incorrecte<span>La tétine est couchée, l’orifice est obstrué.</span></p></li></ol><p class="ast-defaut__pied">C’est cette tétine couchée que l’on retrouve, vue de dessous, sur la photo « à reprendre ».</p></div>
   </section>
 
   <section class="ast-partie" id="lait-en-poudre">
