@@ -1052,6 +1052,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .lots-pied{max-width:1280px;margin:clamp(26px,3vh,38px) auto 0;font:400 .82rem/1.6 "DM Sans",sans-serif;color:var(--muted)}
 @media(max-width:900px){.lots-grille{grid-template-columns:1fr 1fr}}
 @media(max-width:520px){.lots-grille{grid-template-columns:1fr}}</style>
+
+<!-- PayPal · partie 1 : le panier, une seule fois par page -->
+<script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="FSYQHD6LCGE42"></script>
 </head>
 <body>
 <div class="bb-bandeau">Livraison offerte · Retour offert sous 30 jours</div>
@@ -1062,6 +1065,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
   <div class="bb-actions">
 <span class="bb-boutique bb-ici">Boutique</span>
 <button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>
+<!-- PayPal · partie 2 : afficher le panier -->
+<paypal-cart-button data-id="pp-view-cart"></paypal-cart-button>
+<script>cartPaypal.Cart({ id: "pp-view-cart" })</script>
 </div>
 </header>
 <div class="bb-voile" id="bb-voile" hidden></div>
@@ -1097,6 +1103,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
           <div class="color-pickers" aria-live="polite"></div>
           <div class="selection-summary"><div><span>Votre sélection</span><strong class="summary-name">Un BIBEON · Menthe</strong></div><div><span>Total</span><strong class="summary-price">35 €</strong></div></div>
           <button class="add-to-cart" type="button">Ajouter au panier <span>→</span></button>
+          <!-- PayPal · essai : 1 BIBEON, 35 €, coloris au choix -->
+          <paypal-add-to-cart-button data-id="M3PTCD9U3FRS8"></paypal-add-to-cart-button>
+          <script>cartPaypal.AddToCart({ id: "M3PTCD9U3FRS8" })</script>
           <p class="livraison-date" id="livraison-date"></p>
         <p class="buy-note">Paiement sécurisé au moment de finaliser la commande</p>
         </section>
