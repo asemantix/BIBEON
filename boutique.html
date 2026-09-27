@@ -1051,7 +1051,13 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .lots-grille small{display:block;font:400 .78rem/1.4 "DM Sans",sans-serif;color:var(--muted)}
 .lots-pied{max-width:1280px;margin:clamp(26px,3vh,38px) auto 0;font:400 .82rem/1.6 "DM Sans",sans-serif;color:var(--muted)}
 @media(max-width:900px){.lots-grille{grid-template-columns:1fr 1fr}}
-@media(max-width:520px){.lots-grille{grid-template-columns:1fr}}</style>
+@media(max-width:520px){.lots-grille{grid-template-columns:1fr}}
+/* ── l’achat passe par PayPal : l’appareil maison est masqué ── */
+.composer,.cart,.cart-button,.bibeo-packs,.bibeo-color-pickers,.bibeo-sum,.add-bibeo,
+.bibeo-copy .step-label{display:none!important}
+.lots-grille .lot{display:block;background:#e8eee4;padding:clamp(18px,2.2vw,30px)}
+.lots-grille paypal-add-to-cart-button{display:block;margin-top:16px}
+.lots-grille em{display:block;margin-top:8px;font:italic .76rem/1.4 "Playfair Display",Georgia,serif;color:#96503F}</style>
 
 <!-- PayPal · partie 1 : le panier, une seule fois par page -->
 <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="FSYQHD6LCGE42"></script>
@@ -1103,9 +1109,6 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
           <div class="color-pickers" aria-live="polite"></div>
           <div class="selection-summary"><div><span>Votre sélection</span><strong class="summary-name">Un BIBEON · Menthe</strong></div><div><span>Total</span><strong class="summary-price">35 €</strong></div></div>
           <button class="add-to-cart" type="button">Ajouter au panier <span>→</span></button>
-          <!-- PayPal · essai : 1 BIBEON, 35 €, coloris au choix -->
-          <paypal-add-to-cart-button data-id="M3PTCD9U3FRS8"></paypal-add-to-cart-button>
-          <script>cartPaypal.AddToCart({ id: "M3PTCD9U3FRS8" })</script>
           <p class="livraison-date" id="livraison-date"></p>
         <p class="buy-note">Paiement sécurisé au moment de finaliser la commande</p>
         </section>
@@ -1116,9 +1119,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="lots-tete">
         <p class="eyebrow">Les lots</p>
         <h2 id="lots-titre">Un pour chaque<br><em>sortie.</em></h2>
-        <p>Teintés dans la masse. Testés par le LNE. Cliquez pour les configurer.</p>
+        <p>Teintés dans la masse. Testés par le LNE. Le coloris se choisit au moment d’ajouter au panier.</p>
       </div>
-      <ul class="lots-grille"><li><a href="#composer" data-lot="1"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>La petite course</span><b>1 BIBEON</b><small>35 € · 35 € l’unité</small></a></li><li><a href="#composer" data-lot="2"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><span>L’après-midi</span><b>2 BIBEON</b><small>62 € · 31 € l’unité</small></a></li><li><a href="#composer" data-lot="3"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>Le week-end</span><b>3 BIBEON</b><small>87 € · 29 € l’unité</small></a></li><li><a href="#composer" data-lot="5"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><span>Les voyages</span><b>5 BIBEON</b><small>125 € · 25 € l’unité</small></a></li></ul>
+      <ul class="lots-grille"><li><div class="lot"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>La petite course</span><b>1 BIBEON</b><small>35 € · 35 € l’unité</small><em>À deux, le duo est moins cher.</em><paypal-add-to-cart-button data-id="M3PTCD9U3FRS8"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "M3PTCD9U3FRS8" })</script></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><span>L’après-midi</span><b>2 BIBEON</b><small>62 € · 31 € l’unité</small><em>À trois, le lot de trois est moins cher.</em><paypal-add-to-cart-button data-id="46GHRE89RLJQ8"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "46GHRE89RLJQ8" })</script></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>Le week-end</span><b>3 BIBEON</b><small>87 € · 29 € l’unité</small><!-- PayPal : bouton du lot de 3 à coller ici --></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><span>Les voyages</span><b>5 BIBEON</b><small>125 € · 25 € l’unité</small><!-- PayPal : bouton du lot de 5 à coller ici --></div></li></ul>
       <p class="lots-pied">Cinq coloris : menthe, abricot et lilas à l’unité — le rose et le lin dans le lot de cinq.</p>
     </section>
 
@@ -1348,14 +1351,6 @@ renderColorPickers();renderCart();
  p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
 })();
-</script>
-<script>
-document.querySelectorAll(".lots-grille a[data-lot]").forEach(function(lien){
-  lien.addEventListener("click",function(){
-    var choix=document.querySelector('.pack-option[data-qty="'+lien.dataset.lot+'"]');
-    if(choix) choix.click();
-  });
-});
 </script>
 </body>
 </html>
