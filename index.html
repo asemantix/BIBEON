@@ -615,7 +615,16 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
   .rmoins--around figure{aspect-ratio:1600/1643}
   .rmoins figure img{width:100%!important;height:100%!important;object-fit:contain!important}
 }
-</style>
+
+/* ── il ne se replie pas pendant la tétée ── */
+.tenue{margin:clamp(56px,7vh,86px) auto 0;max-width:880px;padding:clamp(40px,5vh,62px) clamp(28px,4vw,56px);background:var(--paper);text-align:center}
+.tenue .home-kicker:before{display:none}
+.tenue h2{font-size:clamp(2.2rem,3.6vw,3.6rem);line-height:.98;letter-spacing:-.035em;margin:0 0 26px}
+.tenue h2 em{font-style:italic;color:#96503F}
+.tenue>p:not(.home-kicker){max-width:62ch;margin:0 auto 14px;font-size:.96rem;line-height:1.78;color:#4f4c48}
+.tenue>p:last-child{margin-bottom:0}
+.tenue strong{color:#0E1C35;font-weight:600}
+@media(max-width:700px){.tenue{padding:36px 22px}}</style>
 </head>
 <body>
 <div class="bb-haut" id="bb-haut"><div class="bb-bandeau">Fabriqué en France</div>
@@ -667,7 +676,13 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
         <a href="mode-demploi.html"><span>02</span><figure class="bb-geste"><video muted loop playsinline preload="none" poster="assets/concept-abaisse.jpg" data-geste aria-label="Les soufflets redescendent au niveau du lait pendant la tétée."><source src="assets/concept-abaisse.mp4" type="video/mp4"></video></figure><h3>Il s’abaisse.</h3><p>Le volume suit le lait pendant la tétée.</p><i>Réduire l’air →</i></a>
         <a href="mode-demploi.html"><span>03</span><figure class="bb-geste"><video muted loop playsinline preload="none" poster="assets/concept-coude.jpg" data-geste aria-label="Le flacon se plie légèrement, la tétine reste pleine."><source src="assets/concept-coude.mp4" type="video/mp4"></video></figure><h3>Il se coude.</h3><p>La tétine reste pleine jusqu’à la dernière gorgée.</p><i>Voir le geste →</i></a>
       </div>
-      <div class="volume"><div class="volume__copy"><p class="home-kicker">Évolutif</p><h2>Un seul biberon.<br><em>Toutes les tailles.</em></h2><p>Dépliez seulement ce dont bébé a besoin. Puis repliez-le quand le repas est terminé.</p><a class="home-link" href="mode-demploi.html">Découvrir le mode d’emploi <span>→</span></a></div><div class="volume__visual bb-curseur">
+      <div class="tenue">
+        <p class="home-kicker">Pendant la tétée</p>
+        <h2>Fermé, il ne bouge pas.<br><em>Même dans les mains de bébé.</em></h2>
+        <p><strong>Les soufflets se bloquent d’eux-mêmes.</strong> Pour en faire monter ou descendre un, il faut le basculer d’un côté puis de l’autre : un seul mouvement ne suffit pas, et basculé à moitié il garde sa position — c’est ainsi que le flacon se coude, et qu’il y reste.</p>
+        <p>Une seconde condition s’ajoute : l’air doit pouvoir entrer ou sortir, et c’est pourquoi on desserre la bague avant de déplier, d’abaisser ou de couder. Pendant le repas, le bloc est vissé et le flacon est clos — aucun passage pour l’air, aucun mouvement possible.</p>
+      </div>
+      <div class="volume"><div class="volume__copy"><p class="home-kicker">Évolutif</p><h2>Un seul biberon.<br><em>Toutes les tailles.</em></h2><p>De 30 à 300 ml, c’est le même flacon. Vous lui donnez la taille dont bébé a besoin, repas après repas.</p><a class="home-link" href="mode-demploi.html">Découvrir le mode d’emploi <span>→</span></a></div><div class="volume__visual bb-curseur">
         <div class="bb-sprite" id="bibSprite" role="img" aria-label="Le biberon BIBEON qui s’élève et s’abaisse au fil du curseur, de 30 à 300 ml"></div>
         <p class="bb-lecture"><span id="bibVol">150</span> <small>ml</small></p>
         <p class="bb-etat" id="bibNb">4 soufflets dépliés</p>
