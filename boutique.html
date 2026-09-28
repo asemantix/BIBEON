@@ -1090,10 +1090,21 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bibeo-copy .step-label{display:none!important}
 .lots-grille .lot{display:block;background:#e8eee4;padding:clamp(18px,2.2vw,30px)}
 /* Le contexte d'usage passe devant : c'est lui qui fait choisir le lot */
-.lots-grille .lot>span{font:italic 1.12rem/1.25 "Playfair Display",Georgia,serif;
+.lots-grille a>span:not(.lot-lien),.lots-grille .lot>span{font:italic 1.12rem/1.25 "Playfair Display",Georgia,serif;
   letter-spacing:0;text-transform:none;color:var(--terracotta-dark);margin:0 0 4px}
-.lots-grille .lot>b{font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.16em;
+.lots-grille a>b,.lots-grille .lot>b{font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.16em;
   text-transform:uppercase;color:var(--navy);margin:8px 0 6px}
+.lots-grille a{display:block;height:100%}
+.lot-lien{display:block;margin-top:16px;font:600 .62rem/1 "DM Sans",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta)}
+.lot-lien i{font-style:normal;margin-left:10px}
+.lots-grille em.lot-note{display:block;margin-top:8px;
+  font:italic .76rem/1.4 "Playfair Display",Georgia,serif;color:#96503F}
+.lien-offre{display:inline-flex;align-items:center;gap:14px;text-decoration:none;
+  font:500 1.25rem/1.2 "Playfair Display",Georgia,serif;color:var(--navy);
+  border-bottom:1px solid currentColor;padding-bottom:8px;transition:color .25s ease}
+.lien-offre:hover{color:var(--terracotta-dark)}
+.lien-offre i{font-style:normal;font-size:.9em}
 .lots-grille paypal-add-to-cart-button{display:block;margin-top:16px}
 .lots-grille em{display:block;margin-top:8px;font:italic .76rem/1.4 "Playfair Display",Georgia,serif;color:#96503F}
 .bibeo{display:block;min-height:0;padding:clamp(70px,9vh,110px) 5vw}
@@ -1166,21 +1177,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <div class="lots-tete">
         <p class="eyebrow">Les lots</p>
         <h2 id="lots-titre">Un pour chaque<br><em>sortie.</em></h2>
-        <p>Teintés dans la masse. Testés par le LNE. Le coloris se choisit au moment d’ajouter au panier.</p>
+        <p>Teintés dans la masse. Testés par le LNE. Le coloris se choisit sur la page de l’offre.</p>
       </div>
-      <div class="relais" id="relais">
-        <div class="relais-mot">
-          <p class="relais-titre">Livraison en point relais</p>
-          <p class="relais-texte">Choisissez le vôtre maintenant : son adresse vous sera demandée au moment du paiement.</p>
-        </div>
-        <button type="button" class="relais-lien" id="relais-ouvrir">Choisir mon point relais <span aria-hidden="true">↗</span></button>
-        <div class="relais-choix" id="relais-choix" hidden>
-          <p class="relais-choix-titre">Votre point relais</p>
-          <p class="relais-choix-adresse" id="relais-adresse"></p>
-          <button type="button" class="relais-copier" id="relais-copier">Copier</button>
-        </div>
-      </div>
-      <ul class="lots-grille"><li><div class="lot"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>La petite course</span><b>1 BIBEON</b><small>35 € · 35 € l’unité</small><em>À deux, le duo est moins cher.</em><paypal-add-to-cart-button data-id="M3PTCD9U3FRS8"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "M3PTCD9U3FRS8" })</script></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><span>L’après-midi</span><b>2 BIBEON</b><small>62 € · 31 € l’unité</small><em>À trois, le lot de trois est moins cher.</em><paypal-add-to-cart-button data-id="46GHRE89RLJQ8"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "46GHRE89RLJQ8" })</script></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>Le week-end</span><b>3 BIBEON</b><small>87 € · 29 € l’unité</small><paypal-add-to-cart-button data-id="5VVKHMS5GADUQ"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "5VVKHMS5GADUQ" })</script></div></li><li><div class="lot"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><span>Les voyages</span><b>5 BIBEON</b><small>125 € · 25 € l’unité</small><paypal-add-to-cart-button data-id="4E5ULATXFHQA8"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "4E5ULATXFHQA8" })</script></div></li></ul>
+      <ul class="lots-grille"><li><a href="bibeon-1.html"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>La petite course</span><b>1 BIBEON</b><small>35 € · 35 € l’unité</small><em class="lot-note">À deux, le duo est moins cher.</em><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-2.html"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><span>L’après-midi</span><b>2 BIBEON</b><small>62 € · 31 € l’unité</small><em class="lot-note">À trois, le lot de trois est moins cher.</em><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-3.html"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>Le week-end</span><b>3 BIBEON</b><small>87 € · 29 € l’unité</small><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-5.html"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><span>Les voyages</span><b>5 BIBEON</b><small>125 € · 25 € l’unité</small><span class="lot-lien">Voir cette offre <i>→</i></span></a></li></ul>
       <p class="lots-pied">Cinq coloris : menthe, abricot et lilas à l’unité — le rose et le lin dans le lot de cinq.</p>
     </section>
 
@@ -1203,7 +1202,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
     <section class="bibeo" id="bibeo">
       <div class="bibeo-copy"><p class="eyebrow">Une autre proposition</p><h2>BIBEO</h2><p class="signature">Le même principe, dans deux accords colorés.</p><p>BIBEO est proposé à l’unité en rose ou en menthe, ou en duo rose et menthe. Même flacon pliable, même capacité, mêmes gestes. Son capuchon se clipse sur la bague.</p>
         <div class="bibeo-media"><img src="assets/bibeon-banniere-sortie-bureau.webp" width="1080" height="1440" loading="lazy" alt="Une femme en trench, sac matelassé à l’épaule, un BIBEO menthe à la main dans une rue de Paris"></div>
-        <div class="bibeo-achat"><div class="bibeo-offre"><paypal-add-to-cart-button data-id="C6FNUEKLQRV6J"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "C6FNUEKLQRV6J" })</script><em>Un seul par commande. À deux, le duo est moins cher.</em></div><div class="bibeo-offre"><paypal-add-to-cart-button data-id="WFHQVKK5NKWS6"></paypal-add-to-cart-button><script>cartPaypal.AddToCart({ id: "WFHQVKK5NKWS6" })</script><em>39,50 € l’unité. Livraison offerte.</em></div></div>
+        <div class="bibeo-achat"><div class="bibeo-offre"><a class="lien-offre" href="bibeo-1.html">1 BIBEO · 45 € <i>→</i></a><em>Rose ou menthe. Point relais offert.</em></div><div class="bibeo-offre"><a class="lien-offre" href="bibeo-duo.html">Duo BIBEO · 79 € <i>→</i></a><em>39,50 € l’unité. Livraison offerte.</em></div></div>
         <p class="step-label">Choisir l’offre</p>
         <div class="bibeo-packs" role="radiogroup" aria-label="Choisir une offre BIBEO"><button type="button" class="active" data-bibeo-qty="1" data-price="45" aria-checked="true" role="radio"><span>1 BIBEO</span><b>45 €</b></button><button type="button" data-bibeo-qty="2" data-price="79" aria-checked="false" role="radio"><span>Duo BIBEO</span><b>79 €</b></button></div>
         <div class="bibeo-color-pickers" aria-live="polite"></div>
@@ -1254,7 +1253,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
         <li><b>À domicile</b><span>3,50 € · France métropolitaine</span></li>
         <li><b>Retour</b><span>Offert sous 30 jours</span></li>
       </ul>
-      <p class="ship-relais">Votre point relais vous est demandé dans le formulaire de paiement. <a href="#relais">Sélectionnez-le plus haut</a>, copiez l’adresse, collez-la dans la case prévue.</p>
+      <p class="ship-relais">Votre point relais vous est demandé dans le formulaire de paiement. Choisissez-le sur la page de l’offre, avant de payer.</p>
       <a class="bouton-principal" href="#composer">Composer mon BIBEON <span>↑</span></a>
     </section>
     <section class="closing"><p class="eyebrow">BIBEON</p><h2>Comprendre.<br><em>Choisir.</em><br>Partir léger.</h2><a href="#composer">Composer mon BIBEON <span>↑</span></a></section>
@@ -1411,51 +1410,6 @@ renderColorPickers();renderCart();
  p.addEventListener('click',function(e){ e.stopPropagation(); });
  p.querySelectorAll('a').forEach(function(x){ x.addEventListener('click',function(){fermer(false);}); });
  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ouvert) fermer(); });
-})();
-</script>
-<script src="https://embed.sendcloud.sc/spp/1.0.0/api.min.js"></script>
-<script>
-(function(){
-  var CLE = 'VOTRE_CLE_PUBLIQUE_SENDCLOUD';
-  var CARTE_SECOURS = 'https://www.mondialrelay.fr/trouver-le-point-relais-le-plus-proche-de-chez-moi/';
-  var ouvrir = document.getElementById('relais-ouvrir');
-  if (!ouvrir) return;
-  var boite = document.getElementById('relais-choix');
-  var adresse = document.getElementById('relais-adresse');
-  var copier = document.getElementById('relais-copier');
-
-  function libelle(p){
-    var voie = [p.street, p.house_number].filter(Boolean).join(' ');
-    var ville = [p.postal_code, p.city].filter(Boolean).join(' ');
-    return [p.name, voie, ville].filter(Boolean).join(' \u00b7 ');
-  }
-  ouvrir.addEventListener('click', function(){
-    if (!window.sendcloud || !sendcloud.servicePoints || CLE.indexOf('VOTRE_CLE') === 0) {
-      window.open(CARTE_SECOURS, '_blank', 'noopener'); return;
-    }
-    sendcloud.servicePoints.open(
-      { apiKey: CLE, country: 'fr', language: 'fr-fr' },
-      function(point){
-        var texte = libelle(point);
-        if (!texte) { window.open(CARTE_SECOURS, '_blank', 'noopener'); return; }
-        adresse.textContent = texte; boite.hidden = false; copier.textContent = 'Copier';
-      },
-      function(){ window.open(CARTE_SECOURS, '_blank', 'noopener'); }
-    );
-  });
-  copier.addEventListener('click', function(){
-    var texte = adresse.textContent; if (!texte) return;
-    var fini = function(){ copier.textContent = 'Copi\u00e9';
-      setTimeout(function(){ copier.textContent = 'Copier'; }, 2000); };
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(texte).then(fini, function(){});
-    } else {
-      var z = document.createElement('textarea'); z.value = texte;
-      document.body.appendChild(z); z.select();
-      try { document.execCommand('copy'); fini(); } catch(e){}
-      document.body.removeChild(z);
-    }
-  });
 })();
 </script>
 </body>
