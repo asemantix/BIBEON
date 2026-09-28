@@ -561,6 +561,9 @@ paypal-add-to-cart-button button.addToCartButtonContainer:hover{
 .product-media:after{display:none}
 .achat{padding-top:34px;border-top:1px solid var(--line);margin-top:34px}
 .achat paypal-add-to-cart-button{display:block}
+.achat .relais{max-width:none!important;margin:0 0 26px!important;padding:22px clamp(18px,2.4vw,26px)!important}
+.achat .relais-texte{margin:0 0 16px!important}
+.achat .relais-choix{max-width:none!important}
 .achat-note{margin:16px 0 0;font:italic .84rem/1.5 "Playfair Display",Georgia,serif;color:var(--terracotta-dark)}
 .achat-note a{color:inherit}
 .relais-bande{padding:clamp(40px,5vh,64px) 5vw;background:var(--paper)}
@@ -576,6 +579,14 @@ paypal-add-to-cart-button button.addToCartButtonContainer:hover{
 .autres-grille b{display:block;margin:8px 0 6px;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--navy)}
 .autres-grille small{display:block;font:400 .78rem/1.4 "DM Sans",sans-serif;color:var(--muted)}
 @media(max-width:900px){.autres-grille{grid-template-columns:1fr}}
+/* --- Pied de page : le sélecteur générique « footer » le mettait en grille --- */
+footer.bb-pied{display:block}
+footer.bb-pied p,footer.bb-pied a,footer.bb-pied span,footer.bb-pied h3{justify-self:auto}
+footer.bb-pied .bb-signature{width:auto;max-width:none}
+.bb-copy span{display:inline}
+.bb-copy{max-width:1280px;margin:clamp(30px,4vh,48px) auto 0;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.16);
+  font:400 .72rem/1.6 "DM Sans",sans-serif;color:rgba(255,255,255,.62)}
 </style>
 </head>
 <body>
@@ -615,23 +626,21 @@ paypal-add-to-cart-button button.addToCartButtonContainer:hover{
           <details><summary>La fin de vie <span>+</span></summary><p>Séparez les quatre pièces. Le flacon, la bague et le capuchon rejoignent le tri des emballages.</p><p><strong>La tétine va aux ordures ménagères : le silicone ne se recycle pas.</strong> Aucune filière ne le reprend — c’est vrai de toutes les tétines, quelle qu’en soit la marque. Une raison de plus pour qu’elle dure.</p><p>Les consignes pouvant varier selon la commune, vérifiez le guide de tri de votre collectivité.</p></details>
         <div class="achat">
           <p class="step-label">Votre commande</p>
+          <div class="relais" id="relais">
+            <div class="relais-mot">
+              <p class="relais-titre">Livraison en point relais</p>
+              <p class="relais-texte">Choisissez le vôtre maintenant : son adresse vous sera demandée au moment du paiement.</p>
+            </div>
+            <button type="button" class="relais-lien" id="relais-ouvrir">Choisir mon point relais <span aria-hidden="true">↗</span></button>
+            <div class="relais-choix" id="relais-choix" hidden>
+              <p class="relais-choix-titre">Votre point relais</p>
+              <p class="relais-choix-adresse" id="relais-adresse"></p>
+              <button type="button" class="relais-copier" id="relais-copier">Copier</button>
+            </div>
+          </div>
           <paypal-add-to-cart-button data-id="5VVKHMS5GADUQ"></paypal-add-to-cart-button>
           <script>cartPaypal.AddToCart({ id: "5VVKHMS5GADUQ" })</script>
           <p class="achat-note">Pour partir plus longtemps, la dotation de cinq — <a href="bibeon-5.html">voir le lot de cinq</a>.</p>
-        </div>
-      </div>
-    </section>
-    <section class="relais-bande">
-      <div class="relais" id="relais">
-        <div class="relais-mot">
-          <p class="relais-titre">Livraison en point relais</p>
-          <p class="relais-texte">Choisissez le vôtre maintenant : son adresse vous sera demandée au moment du paiement.</p>
-        </div>
-        <button type="button" class="relais-lien" id="relais-ouvrir">Choisir mon point relais <span aria-hidden="true">↗</span></button>
-        <div class="relais-choix" id="relais-choix" hidden>
-          <p class="relais-choix-titre">Votre point relais</p>
-          <p class="relais-choix-adresse" id="relais-adresse"></p>
-          <button type="button" class="relais-copier" id="relais-copier">Copier</button>
         </div>
       </div>
     </section>
