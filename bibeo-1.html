@@ -498,6 +498,64 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 
 <style>
 /* --- Page produit --- */
+/* --- Bloc PayPal habillé à la charte --- */
+paypal-add-to-cart-button .item-header{display:none!important}
+
+paypal-add-to-cart-button .input-label{
+  display:block!important;margin:0 0 9px!important;
+  font:600 .6rem/1.4 "DM Sans",sans-serif!important;
+  letter-spacing:.16em!important;text-transform:uppercase!important;
+  color:var(--terracotta-dark)!important}
+
+paypal-add-to-cart-button #memo-label,
+paypal-add-to-cart-button #memo2-label{
+  text-transform:none!important;letter-spacing:0!important;
+  font:400 .82rem/1.5 "DM Sans",sans-serif!important;
+  color:var(--muted)!important;margin:0 0 9px!important}
+
+paypal-add-to-cart-button .variantContainer .fullWidth{margin:0 0 4px!important}
+paypal-add-to-cart-button .selectContainer{margin:0 0 22px!important}
+
+paypal-add-to-cart-button select{
+  width:100%!important;box-sizing:border-box!important;
+  appearance:none!important;-webkit-appearance:none!important;
+  background-color:#fff!important;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%230E1C35' stroke-width='1.6'/></svg>")!important;
+  background-repeat:no-repeat!important;
+  background-position:right 16px center!important;
+  border:1px solid var(--line)!important;border-radius:0!important;
+  padding:15px 44px 15px 16px!important;
+  font:400 .9rem/1.2 "DM Sans",sans-serif!important;color:var(--navy)!important;
+  cursor:pointer!important}
+
+paypal-add-to-cart-button textarea{
+  width:100%!important;box-sizing:border-box!important;
+  height:78px!important;min-height:78px!important;
+  background:#fff!important;
+  border:1px solid var(--line)!important;border-radius:0!important;
+  padding:14px 16px!important;margin:0 0 22px!important;
+  font:400 .9rem/1.5 "DM Sans",sans-serif!important;color:var(--navy)!important;
+  resize:vertical!important}
+
+paypal-add-to-cart-button select:focus,
+paypal-add-to-cart-button textarea:focus{
+  outline:2px solid var(--terracotta)!important;outline-offset:1px!important}
+
+paypal-add-to-cart-button .error-label{
+  margin:-14px 0 18px!important;
+  font:400 .74rem/1.45 "DM Sans",sans-serif!important;color:#b3261e!important}
+paypal-add-to-cart-button .error-label.hidden,
+paypal-add-to-cart-button .hidden{display:none!important}
+
+paypal-add-to-cart-button button.addToCartButtonContainer{
+  width:100%!important;border:0!important;border-radius:0!important;
+  background:var(--terracotta)!important;color:#fff!important;
+  padding:19px 21px!important;
+  font:600 .69rem/1 "DM Sans",sans-serif!important;
+  letter-spacing:.13em!important;text-transform:uppercase!important;
+  cursor:pointer!important;box-shadow:none!important;transition:background .2s!important}
+paypal-add-to-cart-button button.addToCartButtonContainer:hover{
+  background:var(--terracotta-dark)!important}
 .product-media{background:#fff}
 .product-media img{object-fit:contain;padding:clamp(24px,4vw,60px)}
 .product-media:after{display:none}
