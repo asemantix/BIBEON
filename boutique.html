@@ -1115,7 +1115,45 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bibeo-offre{display:flex;flex-direction:column}
 .bibeo-achat paypal-add-to-cart-button{display:block}
 .bibeo-achat em{display:block;margin-top:10px;font:italic .76rem/1.4 "Playfair Display",Georgia,serif;color:var(--terracotta-dark)}
-@media(max-width:900px){.bibeo-achat{grid-template-columns:1fr}}</style>
+@media(max-width:900px){.bibeo-achat{grid-template-columns:1fr}}/* --- Pied de page : le sélecteur générique « footer » le mettait en grille --- */
+footer.bb-pied{display:block}
+footer.bb-pied p,footer.bb-pied a,footer.bb-pied span,footer.bb-pied h3{justify-self:auto}
+footer.bb-pied .bb-signature{width:auto;max-width:none}
+.bb-copy span{display:inline}
+.bb-copy{max-width:1280px;margin:clamp(30px,4vh,48px) auto 0;padding-top:20px;
+  border-top:1px solid rgba(255,255,255,.16);
+  font:400 .72rem/1.6 "DM Sans",sans-serif;color:rgba(255,255,255,.62)}
+/* ============ VITRINE : table de présentation ============ */
+.lots{background:var(--paper)}
+.lots-grille{gap:clamp(20px,3vw,52px)}
+.lots-grille li{list-style:none}
+.lots-grille a{display:block;background:none!important;padding:0!important;
+  text-decoration:none;color:inherit;transform:none!important;transition:none}
+.lots-grille a:hover{background:none!important}
+.lots-grille img{display:block;width:100%;height:auto;aspect-ratio:1/1;
+  object-fit:contain;background:none;margin:0 0 22px;
+  mix-blend-mode:multiply;transition:transform .35s ease}
+.lots-grille a:hover img{transform:scale(1.035)}
+
+.lots-grille a>b{display:block;margin:0 0 4px;
+  font:500 clamp(1.5rem,1.9vw,1.9rem)/1.05 "Playfair Display",Georgia,serif;
+  letter-spacing:-.02em;text-transform:none;color:var(--navy)}
+.lots-grille .lot-sous{display:block;margin:0 0 14px;
+  font:italic 1rem/1.3 "Playfair Display",Georgia,serif;color:var(--muted);
+  letter-spacing:0;text-transform:none}
+.lots-grille .lot-prix{margin:0 0 4px;
+  font:500 1.5rem/1.1 "Playfair Display",Georgia,serif;color:var(--navy)}
+.lots-grille .lot-unite{margin:0 0 22px;
+  font:400 .82rem/1.4 "DM Sans",sans-serif;color:var(--muted)}
+.lots-grille .lot-lien{display:inline-flex;align-items:center;gap:12px;
+  padding-bottom:6px;border-bottom:1px solid var(--navy);
+  font:600 .64rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--navy);transition:color .25s ease,border-color .25s ease}
+.lots-grille .lot-lien i{font-style:normal}
+.lots-grille a:hover .lot-lien{color:var(--terracotta-dark);border-color:var(--terracotta-dark)}
+@media(max-width:900px){.lots-grille{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.lots-grille{grid-template-columns:1fr}}
+</style>
 
 <!-- PayPal · partie 1 : le panier, une seule fois par page -->
 <script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="FSYQHD6LCGE42"></script>
@@ -1179,7 +1217,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
         <h2 id="lots-titre">Un pour chaque<br><em>sortie.</em></h2>
         <p>Teintés dans la masse. Testés par le LNE. Le coloris se choisit sur la page de l’offre.</p>
       </div>
-      <ul class="lots-grille"><li><a href="bibeon-1.html"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><span>La petite course</span><b>1 BIBEON</b><small>35 € · 35 € l’unité</small><em class="lot-note">À deux, le duo est moins cher.</em><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-2.html"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><span>L’après-midi</span><b>2 BIBEON</b><small>62 € · 31 € l’unité</small><em class="lot-note">À trois, le lot de trois est moins cher.</em><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-3.html"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><span>Le week-end</span><b>3 BIBEON</b><small>87 € · 29 € l’unité</small><span class="lot-lien">Voir cette offre <i>→</i></span></a></li><li><a href="bibeon-5.html"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><span>Les voyages</span><b>5 BIBEON</b><small>125 € · 25 € l’unité</small><span class="lot-lien">Voir cette offre <i>→</i></span></a></li></ul>
+      <ul class="lots-grille"><li><a href="bibeon-1.html"><img src="assets/bibeon-biberon-pliable-menthe.webp" alt="Un biberon nomade BIBEON replié, coloris menthe" loading="lazy"><b>1 BIBEON</b><span class="lot-sous">La petite course</span><p class="lot-prix">35 €</p><p class="lot-unite">35 € l’unité</p><span class="lot-lien">Choisir ce lot <i>→</i></span></a></li><li><a href="bibeon-2.html"><img src="assets/bibeon-biberon-pliable-duo-menthe-abricot.webp" alt="Deux biberons nomades BIBEON repliés, menthe et abricot" loading="lazy"><b>2 BIBEON</b><span class="lot-sous">L’après-midi</span><p class="lot-prix">62 €</p><p class="lot-unite">31 € l’unité</p><span class="lot-lien">Choisir ce lot <i>→</i></span></a></li><li><a href="bibeon-3.html"><img src="assets/bibeon-biberon-pliable-trio.webp" alt="Trois biberons nomades BIBEON repliés" loading="lazy"><b>3 BIBEON</b><span class="lot-sous">Le week-end</span><p class="lot-prix">87 €</p><p class="lot-unite">29 € l’unité</p><span class="lot-lien">Choisir ce lot <i>→</i></span></a></li><li><a href="bibeon-5.html"><img src="assets/bibeon-biberon-pliable-5-coloris.webp" alt="Les cinq biberons nomades BIBEON repliés, un par coloris" loading="lazy"><b>5 BIBEON</b><span class="lot-sous">Les voyages</span><p class="lot-prix">125 €</p><p class="lot-unite">25 € l’unité</p><span class="lot-lien">Choisir ce lot <i>→</i></span></a></li></ul>
       <p class="lots-pied">Cinq coloris : menthe, abricot et lilas à l’unité — le rose et le lin dans le lot de cinq.</p>
     </section>
 
