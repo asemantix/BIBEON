@@ -15,16 +15,16 @@
   .cadre{border:2px dashed #c00;padding:0;margin:0 0 28px}
   .cadre>legend{margin-left:12px;padding:0 6px;color:#c00;font-size:.72rem;
        letter-spacing:.08em;text-transform:uppercase}
+  #verdict{font-weight:700;font-size:1.05rem;padding:12px 14px;border:2px solid #999;margin:0 0 16px}
   pre{background:#f4f4f4;border:1px solid #ddd;padding:14px;overflow:auto;
       font:12px/1.45 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;
       word-break:break-all;max-height:520px}
-  .verdict{font-weight:600;color:#0a5}
 </style>
 </head>
 <body>
 <main>
   <h1>Test 2 — de quoi le bloc est-il fait&nbsp;?</h1>
-  <p class="note">Cette page ne change rien. Elle regarde l’intérieur du bloc PayPal et l’écrit ci-dessous, pour savoir si on peut le masquer avec notre feuille de style.</p>
+  <p class="note">Cette page ne change rien. Elle regarde l’intérieur du bloc PayPal et l’écrit ci-dessous. Attendez que la ligne encadrée passe au vert ou au rouge&nbsp;: elle se met à jour pendant dix secondes.</p>
 
   <fieldset class="cadre">
     <legend>bloc PayPal</legend>
@@ -32,30 +32,55 @@
     <script>cartPaypal.AddToCart({ id: "XWRU956TPLXD4" })</script>
   </fieldset>
 
-  <p id="verdict" class="verdict">Analyse en cours…</p>
+  <p id="verdict">Analyse… (patientez)</p>
   <pre id="sortie">…</pre>
 </main>
 
 <script>
-setTimeout(function(){
-  var el = document.querySelector('paypal-add-to-cart-button');
-  var v  = document.getElementById('verdict');
-  var s  = document.getElementById('sortie');
-  if (!el) { v.textContent = 'Élément introuvable.'; return; }
+(function(){
+  var v = document.getElementById('verdict');
+  var s = document.getElementById('sortie');
+  var n = 0;
 
-  var ombre = !!el.shadowRoot;
-  var iframe = el.querySelector('iframe') || (ombre && el.shadowRoot.querySelector('iframe'));
+  function regarde(){
+    n++;
+    try {
+      var el = document.querySelector('paypal-add-to-cart-button');
+      if (!el) { v.textContent = 'Élément introuvable — ' + n; return false; }
 
-  v.textContent = 'Shadow DOM : ' + (ombre ? 'OUI' : 'non')
-                + '   ·   iframe : ' + (iframe ? 'OUI' : 'non')
-                + '   ·   ' + ((ombre || iframe)
-                    ? 'le contenu NE PEUT PAS être masqué par notre CSS'
-                    : 'le contenu PEUT être masqué par notre CSS');
-  v.style.color = (ombre || iframe) ? '#c00' : '#0a5';
+      var ombre  = !!el.shadowRoot;
+      var racine = ombre ? el.shadowRoot : el;
+      var html   = racine.innerHTML || '';
+      var iframe = !!racine.querySelector('iframe');
+      var prete  = html.length > 0;
 
-  var src = ombre ? el.shadowRoot.innerHTML : el.innerHTML;
-  s.textContent = (src || '(vide)').slice(0, 4000);
-}, 3000);
+      s.textContent = 'shadowRoot : ' + (ombre ? 'oui' : 'non')
+        + '\niframe : ' + (iframe ? 'oui' : 'non')
+        + '\nlongueur du contenu : ' + html.length
+        + '\nenfants directs : ' + racine.childElementCount
+        + '\n\n' + (html ? html.slice(0, 3500) : '(vide)');
+
+      if (!prete && n < 20) { v.textContent = 'Analyse… essai ' + n; return false; }
+
+      if (ombre || iframe) {
+        v.textContent = 'ROUGE — contenu enfermé (' + (ombre ? 'shadow DOM' : 'iframe') + '). Notre CSS ne peut pas le masquer.';
+        v.style.cssText += ';color:#c00;border-color:#c00';
+      } else {
+        v.textContent = 'VERT — contenu ouvert. Notre CSS peut masquer le nom et le prix.';
+        v.style.cssText += ';color:#0a5;border-color:#0a5';
+      }
+      return true;
+    } catch (e) {
+      v.textContent = 'Erreur : ' + e.message;
+      v.style.cssText += ';color:#c00;border-color:#c00';
+      return true;
+    }
+  }
+
+  var t = setInterval(function(){
+    if (regarde() || n >= 20) clearInterval(t);
+  }, 500);
+})();
 </script>
 </body>
 </html>
