@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Test bouton PayPal — structure</title>
+<script src="https://www.paypalobjects.com/ncp/cart/cart.js" data-merchant-id="FSYQHD6LCGE42"></script>
+<style>
+  body{margin:0;padding:40px 20px;background:#fff;
+       font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#222}
+  main{max-width:820px;margin:0 auto}
+  h1{font-size:1.1rem;font-weight:600;margin:0 0 6px}
+  p.note{margin:0 0 24px;color:#666;font-size:.9rem}
+  .cadre{border:2px dashed #c00;padding:0;margin:0 0 28px}
+  .cadre>legend{margin-left:12px;padding:0 6px;color:#c00;font-size:.72rem;
+       letter-spacing:.08em;text-transform:uppercase}
+  pre{background:#f4f4f4;border:1px solid #ddd;padding:14px;overflow:auto;
+      font:12px/1.45 ui-monospace,Menlo,Consolas,monospace;white-space:pre-wrap;
+      word-break:break-all;max-height:520px}
+  .verdict{font-weight:600;color:#0a5}
+</style>
+</head>
+<body>
+<main>
+  <h1>Test 2 — de quoi le bloc est-il fait&nbsp;?</h1>
+  <p class="note">Cette page ne change rien. Elle regarde l’intérieur du bloc PayPal et l’écrit ci-dessous, pour savoir si on peut le masquer avec notre feuille de style.</p>
+
+  <fieldset class="cadre">
+    <legend>bloc PayPal</legend>
+    <paypal-add-to-cart-button data-id="XWRU956TPLXD4"></paypal-add-to-cart-button>
+    <script>cartPaypal.AddToCart({ id: "XWRU956TPLXD4" })</script>
+  </fieldset>
+
+  <p id="verdict" class="verdict">Analyse en cours…</p>
+  <pre id="sortie">…</pre>
+</main>
+
+<script>
+setTimeout(function(){
+  var el = document.querySelector('paypal-add-to-cart-button');
+  var v  = document.getElementById('verdict');
+  var s  = document.getElementById('sortie');
+  if (!el) { v.textContent = 'Élément introuvable.'; return; }
+
+  var ombre = !!el.shadowRoot;
+  var iframe = el.querySelector('iframe') || (ombre && el.shadowRoot.querySelector('iframe'));
+
+  v.textContent = 'Shadow DOM : ' + (ombre ? 'OUI' : 'non')
+                + '   ·   iframe : ' + (iframe ? 'OUI' : 'non')
+                + '   ·   ' + ((ombre || iframe)
+                    ? 'le contenu NE PEUT PAS être masqué par notre CSS'
+                    : 'le contenu PEUT être masqué par notre CSS');
+  v.style.color = (ombre || iframe) ? '#c00' : '#0a5';
+
+  var src = ombre ? el.shadowRoot.innerHTML : el.innerHTML;
+  s.textContent = (src || '(vide)').slice(0, 4000);
+}, 3000);
+</script>
+</body>
+</html>
