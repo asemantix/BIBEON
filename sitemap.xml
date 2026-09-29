@@ -227,6 +227,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bibeon.fr/biberon-vegetal.html</loc>
+    <lastmod>2026-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://bibeon.fr/matieres-et-essais.html</loc>
     <lastmod>2026-09-29</lastmod>
     <changefreq>monthly</changefreq>
