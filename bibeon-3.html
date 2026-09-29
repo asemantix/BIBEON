@@ -670,7 +670,7 @@ paypal-cart-button svg{fill:#fff!important;stroke:#fff!important}
           </div>
           <paypal-add-to-cart-button data-id="5VVKHMS5GADUQ"></paypal-add-to-cart-button>
           <script>cartPaypal.AddToCart({ id: "5VVKHMS5GADUQ" })</script>
-          <p class="achat-note">Pour partir plus longtemps, la dotation de cinq — <a href="bibeon-5.html">voir le lot de cinq</a>.</p>
+          <p class="achat-note">Cinq BIBEON — 25 € l’unité. <a href="bibeon-5.html">Découvrir la dotation →</a></p>
         </div>
       </div>
     </section>
@@ -894,6 +894,21 @@ renderColorPickers();renderCart();
       document.body.removeChild(z);
     }
   });
+})();
+</script>
+<script>
+/* « Quantité » devient « Nombre de lots » : le libellé vit dans la page */
+(function(){
+  var n=0, t=setInterval(function(){
+    n++;
+    var ls=document.querySelectorAll('paypal-add-to-cart-button label.input-label');
+    for (var i=0;i<ls.length;i++){
+      if ((ls[i].textContent||'').trim()==='Quantité'){
+        ls[i].textContent='Nombre de lots'; clearInterval(t); return;
+      }
+    }
+    if (n>=24) clearInterval(t);
+  },500);
 })();
 </script>
 </body>
