@@ -646,6 +646,15 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 .bb-logo-img img.bb-logo-clair{display:none}
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
+/* --- « Une seule condition » : section resserrée sur la photo utile --- */
+.teat-choice{min-height:0!important;height:clamp(620px,61.5vw,930px)}
+.bb-tetine-photo{position:relative;min-height:0!important}
+.bb-tetine-photo img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:50% 64%}
+@media(max-width:900px){
+  .teat-choice{height:auto}
+  .bb-tetine-photo{min-height:420px!important}
+}
 </style>
 </head>
 <body>
