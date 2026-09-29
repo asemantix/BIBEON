@@ -287,6 +287,10 @@ h1{font-size:clamp(3.9rem,18vw,6.2rem);line-height:.79}
 .bb-trait:after{bottom:0}
 .bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.26em}
 .bb-logo sup{font-size:.38em;vertical-align:.9em;opacity:.7}
+/* --- Logotype véritable dans l'entête (fonds inchangés) --- */
+.bb-logo-img{display:block;line-height:0;letter-spacing:0}
+.bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
+@media(max-width:700px){.bb-logo-img img{height:18px}}
 .bb-actions{justify-self:end;display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
 .bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
 .bb-menu-tete .bb-logo{justify-self:auto;color:#fff}
@@ -629,6 +633,9 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 .hero-monogramme{display:block;width:clamp(44px,3.4vw,62px);height:auto;margin:0 0 22px;
  opacity:.95;filter:drop-shadow(0 1px 6px rgba(8,17,31,.45))}
 @media(max-width:900px){.hero-monogramme{width:40px;margin-bottom:16px}}
+/* --- Section « Cinq couleurs » : bande vidéo plus haute --- */
+.palette__visual{height:clamp(720px,92vh,1040px)!important}
+@media(max-width:560px){.palette__visual{height:clamp(500px,70vh,680px)!important}}
 </style>
 </head>
 <body>
@@ -636,7 +643,7 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 <header class="bb-entete bb-clair" id="bb-entete" data-hero="oui">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
-  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-logo-img" href="/" aria-label="BIBEON, accueil"><img src="assets/logo-bibeon.svg" alt="BIBEON" width="338" height="108"></a>
   <div class="bb-actions">
     <a class="bb-boutique" href="boutique.html">Boutique</a>
     <a class="bb-panier-txt" href="boutique.html" aria-label="Panier, 0 article">Panier <span class="cart-count">0</span></a>
