@@ -647,13 +647,19 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
 /* --- « Une seule condition » : section resserrée sur la photo utile --- */
-.teat-choice{min-height:0!important;height:clamp(620px,61.5vw,930px)}
+.teat-choice{min-height:0!important;height:clamp(620px,54vw,1040px)}
 .bb-tetine-photo{position:relative;min-height:0!important}
 .bb-tetine-photo img{position:absolute;inset:0;width:100%;height:100%;
-  object-fit:cover;object-position:50% 12%}
+  object-fit:cover;object-position:50% 66%}
 @media(max-width:900px){
   .teat-choice{height:auto}
-  .bb-tetine-photo{min-height:420px!important}
+  .bb-tetine-photo{min-height:0!important;aspect-ratio:1200/1280}
+}
+/* --- la signature seule sur le navy --- */
+.rmoins-intro{padding-top:clamp(110px,14vh,185px)!important;
+  padding-bottom:clamp(110px,14vh,185px)!important}
+@media(max-width:700px){
+  .rmoins-intro{padding-top:92px!important;padding-bottom:92px!important}
 }
 </style>
 </head>
@@ -723,7 +729,7 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
       </div></div>
     </section>
 
-    <section class="rmoins-intro"><p class="home-kicker">La signature</p><h2>BIBEON, le BIBE<span>R</span>ON,<br><em>l’R en moins.</em></h2><p>Moins d’air dedans. Moins d’air dehors. Moins d’air autour.</p></section>
+    <section class="rmoins-intro"><h2>BIBEON, le BIBE<span>R</span>ON,<br><em>l’R en moins.</em></h2></section>
 
     <section class="rmoins rmoins--inside">
       <figure><img src="assets/biberon-main.webp" alt="Un BIBEON abaissé au niveau du lait, tenu d’une main" loading="lazy"></figure>
