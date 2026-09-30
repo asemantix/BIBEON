@@ -427,6 +427,23 @@ main img,main video{max-height:80vh}
   .manual-hero__eclate figcaption span{position:static;transform:none;padding-top:0}
   .manual-hero__eclate figcaption span:before{display:none}}
 @media(max-width:640px){.manual-hero__copy{padding:56px 24px 24px!important}}
+
+/* --- Le geste zéro : le capuchon posé à l’envers --- */
+.geste-zero{padding:clamp(80px,9vw,130px) 6vw;background:var(--paper);
+  display:grid;grid-template-columns:50% 50%;gap:clamp(40px,5vw,80px);align-items:center}
+.geste-zero h2{margin:14px 0 0;font-size:clamp(2.4rem,4.2vw,4.4rem);line-height:.96;letter-spacing:-.045em}
+.geste-zero h2 em{font-style:normal;font-weight:500;color:var(--rose)}
+.geste-zero p{margin:22px 0 0;font-size:1rem;line-height:1.8;max-width:50ch}
+.geste-zero .gz-lead{margin-top:30px}
+.geste-zero .gz-chute{margin-top:30px;padding-top:22px;border-top:1px solid var(--line);
+  font-size:.92rem;line-height:1.75;color:#5f5c57}
+.gz-vue{margin:0}
+.gz-vue video{width:100%;height:auto;display:block;background:var(--cream)}
+.gz-vue figcaption{margin-top:16px;font-size:.8rem;line-height:1.6;color:#6e6a64}
+@media(max-width:900px){
+  .geste-zero{grid-template-columns:1fr;padding:70px 24px;gap:34px}
+  .geste-zero h2{font-size:2.3rem}
+}
 </style>
 </head>
 <body>
@@ -480,6 +497,22 @@ main img,main video{max-height:80vh}
     </section>
     <section class="film-intro"><div><p class="kicker">Le film</p><h2>Une minute.<br><em>Tout est dit.</em></h2><p>Du pré-dosage au nettoyage, tous les gestes à la suite.</p></div><div class="film-placeholder"><video controls playsinline preload="none" poster="assets/le-biberon-nomade.jpg"><source src="assets/le-biberon-nomade.mp4" type="video/mp4"></video><span>Le film complet · 2 min 35</span></div></section>
     
+
+    <section class="geste-zero" id="poser-a-lenvers">
+      <div class="gz-mot">
+        <p class="kicker">Le geste zéro</p>
+        <h2>Le capuchon<br><em>se pose à l’envers.</em></h2>
+        <p class="gz-lead">Doser, déplier, ajouter l’eau, replier&nbsp;: chacune de ces opérations commence par ouvrir BIBEON. Le capuchon quitte alors la tétine — et son toit plat est fait pour qu’il attende retourné, posé sur sa face extérieure.</p>
+        <p>Seule cette face touche la table. L’intérieur du capuchon, la tétine et la bague ne touchent rien.</p>
+        <p>Le geste vaut dans les deux cas&nbsp;: le capuchon seul, ou le bloc entier lorsque la bague et la tétine sont restées avec lui.</p>
+        <p class="gz-chute">Cette fonction ne dépend d’aucune autre&nbsp;: ni des soufflets, ni de la tétine, ni de la fermeture.</p>
+      </div>
+      <figure class="gz-vue">
+        <video muted loop playsinline preload="none" data-geste aria-label="Le bloc bague, tétine et capuchon posé à l’envers sur sa face plate"><source src="assets/bloc-a-lenvers-dehors.mp4" type="video/mp4"></video>
+        <figcaption>Posé à l’envers, dehors&nbsp;: rien de ce qui touche le lait ne touche la table.</figcaption>
+      </figure>
+    </section>
+
     <section class="steps" id="gestes">
       <header><p class="kicker">Les gestes</p><h2>Dans l’ordre.<br><em>Sans hésiter.</em></h2></header>
 
