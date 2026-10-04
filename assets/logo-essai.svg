@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 390" role="img" aria-labelledby="title desc">
+  <title id="title">BIBEON</title>
+  <desc id="desc">Logo BIBEON premium aux lettres fines de hauteurs alternées, bleu navy, avec feuille sauge.</desc>
+  <g fill="#11253A"
+     font-family="'Playfair Display', 'Times New Roman', serif"
+     font-style="normal"
+     font-weight="400">
+    <text x="20"  y="315" font-size="250">B</text>
+    <text x="205" y="315" font-size="190">I</text>
+    <text x="282" y="315" font-size="282">B</text>
+    <text x="495" y="315" font-size="205">E</text>
+    <text x="642" y="315" font-size="258">O</text>
+    <text x="855" y="315" font-size="232">N</text>
+  </g>
+
+  <!-- Geste vegetal abstrait, place comme un accent au-dessus du E. -->
+  <g fill="#A9B79C" transform="translate(552 72) rotate(-18)">
+    <path d="M0 46 C22 8 72 -3 113 7 C104 47 73 78 31 82 C17 74 7 62 0 46 Z"/>
+    <path d="M16 68 C5 82 -2 98 -5 116 C8 96 25 81 49 66 C36 67 25 68 16 68 Z"/>
+  </g>
+</svg>
