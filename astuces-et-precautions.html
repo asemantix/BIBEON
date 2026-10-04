@@ -310,14 +310,23 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .ast-defaut__suite b{display:block;font:500 1.5rem/1 "Playfair Display",Georgia,serif;color:#96503F;margin-bottom:8px}
 .ast-defaut__suite span{display:block;margin-top:5px;font-weight:400;color:#4f4c48}
 .ast-defaut__pied{margin:30px 0 0;font:italic 1.02rem/1.5 "Playfair Display",Georgia,serif;color:#0E1C35}
-@media(max-width:760px){.ast-defaut__suite{grid-template-columns:1fr 1fr;row-gap:26px}}</style>
+@media(max-width:760px){.ast-defaut__suite{grid-template-columns:1fr 1fr;row-gap:26px}}
+/* --- Logotype véritable dans l'entête --- */
+.bb-logo-img{display:block;line-height:0;letter-spacing:0}
+.bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
+@media(max-width:700px){.bb-logo-img img{height:18px}}
+.bb-logo-img img.bb-logo-sombre{display:block}
+.bb-logo-img img.bb-logo-clair{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
+</style>
 </head>
 <body>
 <div class="bb-bandeau">Fabriqué en France</div>
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
-  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-logo-img" href="/" aria-label="BIBEON, accueil"><img class="bb-logo-sombre" src="assets/logo-bibeon.svg" alt="BIBEON" width="338" height="108"><img class="bb-logo-clair" src="assets/logo-bibeon-blanc.svg" alt="" aria-hidden="true" width="338" height="108"></a>
   <div class="bb-actions">
     <a class="bb-boutique" href="boutique.html">Boutique</a>
     <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>

@@ -345,6 +345,15 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .mig-sources{margin:38px 0 10px!important;font-size:.88rem!important;color:#5d5a55!important;line-height:1.7!important}
 .mig-sources b{font:600 .64rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#647466}
 .mig-note{font-size:.84rem!important;color:#6f6c67!important;margin:0 0 26px!important}
+
+/* --- Logotype véritable dans l'entête --- */
+.bb-logo-img{display:block;line-height:0;letter-spacing:0}
+.bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
+@media(max-width:700px){.bb-logo-img img{height:18px}}
+.bb-logo-img img.bb-logo-sombre{display:block}
+.bb-logo-img img.bb-logo-clair{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
 </style>
 </head>
 <body>
@@ -352,7 +361,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
-  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-logo-img" href="/" aria-label="BIBEON, accueil"><img class="bb-logo-sombre" src="assets/logo-bibeon.svg" alt="BIBEON" width="338" height="108"><img class="bb-logo-clair" src="assets/logo-bibeon-blanc.svg" alt="" aria-hidden="true" width="338" height="108"></a>
   <div class="bb-actions">
     <a class="bb-boutique" href="boutique.html">Boutique</a>
     <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>

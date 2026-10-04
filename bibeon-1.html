@@ -617,6 +617,15 @@ paypal-cart-button svg{fill:#fff!important;stroke:#fff!important}
   font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;
   color:var(--navy);transition:color .25s ease,border-color .25s ease}
 .autres-grille a:hover .autres-lien{color:var(--terracotta-dark);border-color:var(--terracotta-dark)}
+
+/* --- Logotype véritable dans l'entête --- */
+.bb-logo-img{display:block;line-height:0;letter-spacing:0}
+.bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
+@media(max-width:700px){.bb-logo-img img{height:18px}}
+.bb-logo-img img.bb-logo-sombre{display:block}
+.bb-logo-img img.bb-logo-clair{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
 </style>
 </head>
 <body>
@@ -624,7 +633,7 @@ paypal-cart-button svg{fill:#fff!important;stroke:#fff!important}
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
-  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-logo-img" href="/" aria-label="BIBEON, accueil"><img class="bb-logo-sombre" src="assets/logo-bibeon.svg" alt="BIBEON" width="338" height="108"><img class="bb-logo-clair" src="assets/logo-bibeon-blanc.svg" alt="" aria-hidden="true" width="338" height="108"></a>
   <div class="bb-actions">
 <a class="bb-boutique" href="boutique.html">Boutique</a>
 <button class="cart-button bb-panier-txt" type="button" aria-controls="cart" aria-expanded="false">Panier <span class="cart-count" aria-label="0 article">0</span></button>

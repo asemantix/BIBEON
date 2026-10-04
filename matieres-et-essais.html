@@ -377,6 +377,15 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
   border-top:1px solid rgba(255,255,255,.16);font:400 .72rem/1.6 "DM Sans",sans-serif;
   color:rgba(255,255,255,.62)}
 .mx-lne .mx-traduit{max-width:50ch;margin:22px auto 0;font-size:.9rem;line-height:1.75;color:#C5D1C7}
+
+/* --- Logotype véritable dans l'entête --- */
+.bb-logo-img{display:block;line-height:0;letter-spacing:0}
+.bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
+@media(max-width:700px){.bb-logo-img img{height:18px}}
+.bb-logo-img img.bb-logo-sombre{display:block}
+.bb-logo-img img.bb-logo-clair{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
+.bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
 </style>
 </head>
 <body>
@@ -384,7 +393,7 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
 <header class="bb-entete bb-opaque" id="bb-entete" data-hero="non">
   <button class="bb-btn" id="bb-ouvrir" type="button" aria-controls="bb-menu" aria-expanded="false" aria-label="Ouvrir le menu">
     <span class="bb-trait" aria-hidden="true"></span><span>Menu</span></button>
-  <a class="bb-logo" href="/" aria-label="BIBEON, accueil">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-logo-img" href="/" aria-label="BIBEON, accueil"><img class="bb-logo-sombre" src="assets/logo-bibeon.svg" alt="BIBEON" width="338" height="108"><img class="bb-logo-clair" src="assets/logo-bibeon-blanc.svg" alt="" aria-hidden="true" width="338" height="108"></a>
   <div class="bb-actions">
     <a class="bb-boutique" href="boutique.html">Boutique</a>
     <a class="bb-panier" href="boutique.html" aria-label="Panier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l-1 12H7L6 8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></a>
