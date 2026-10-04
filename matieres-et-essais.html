@@ -273,6 +273,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .mx-duo__vue{margin:0;background:var(--ivory);display:grid;place-items:center}
 .mx-duo__vue img{width:100%;height:auto;display:block}
 .mx-duo__vue--fondu img{mix-blend-mode:multiply}
+.mx-duo__vue figcaption{margin-top:18px;font-size:.72rem;letter-spacing:.06em;color:#6e6a64}
 
 .mx-chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:clamp(60px,7vw,96px);
   border-top:1px solid #D8CEC1;border-bottom:1px solid #D8CEC1}
@@ -282,6 +283,21 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .mx-chiffres b{display:block;font:500 clamp(1.7rem,2.6vw,2.7rem)/1.05 "Playfair Display",serif;letter-spacing:-.03em}
 .mx-chiffres span{display:block;margin-top:12px;font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:#6e6a64}
 
+/* --- fusion du végétal --- */
+.mx-paire{display:grid;grid-template-columns:1fr 1fr;gap:clamp(44px,5vw,96px);
+  margin-top:clamp(52px,6vw,84px);border-top:1px solid #D8CEC1}
+.mx-paire article{padding:38px 0 0}
+.mx-paire figure{margin:0 0 26px;background:var(--ivory)}
+.mx-paire figure img{width:100%;height:auto;display:block;mix-blend-mode:multiply}
+.mx-paire h3{font:500 2rem/1.1 "Playfair Display",serif;letter-spacing:-.025em;margin:0 0 16px}
+.mx-paire p{margin:0;font-size:.89rem;line-height:1.75;max-width:38ch}
+.mx-bloc .mx-signe{max-width:none;margin:clamp(44px,5vw,62px) 0 0;padding-top:26px;border-top:1px solid #D8CEC1;
+  font:600 .64rem/1.8 "DM Sans",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#6e6a64}
+.mx-bloc .mx-chute,.mx-pli .mx-chute{max-width:46ch;margin:clamp(38px,4vw,54px) 0 0;
+  font:500 clamp(1.2rem,1.8vw,1.65rem)/1.5 "Playfair Display",Georgia,serif;color:#172027}
+@media(max-width:900px){.mx-paire{grid-template-columns:1fr;gap:38px}
+  .mx-paire article{padding-top:30px}
+  .mx-paire article+article{border-top:1px solid #D8CEC1}}
 .mx-pli{padding:clamp(90px,10vw,150px) 7vw clamp(60px,7vw,90px)}
 .mx-pli__mot{max-width:1100px}
 .mx-pli__mot p{margin:34px 0 0}
@@ -394,7 +410,7 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
       </figure>
     </section>
 
-    <section class="mx-bloc">
+    <section class="mx-bloc" id="vegetal">
       <div class="mx-duo">
         <div class="mx-duo__mot">
           <p class="kicker">La part végétale</p>
@@ -403,7 +419,7 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
           <p>À eux deux, ils représentent environ la moitié du BIBEON.</p>
         </div>
         <figure class="mx-duo__vue mx-duo__vue--fondu">
-          <img src="assets/quatre-pieces-tetine.webp" alt="La bague et le capuchon du BIBEON posés près du flacon" width="1200" height="1600" loading="lazy">
+          <img src="assets/bague-et-capuchon-vegetaux.webp" alt="La bague et le capuchon du BIBEON, les deux pièces en matière 100 % d’origine végétale" width="1200" height="1600" loading="lazy">
         </figure>
       </div>
       <div class="mx-chiffres">
@@ -414,6 +430,25 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
     </section>
 
     <section class="mx-bloc">
+      <p class="kicker">Là où la rigidité compte</p>
+      <h2>Deux pièces.<br><em>Deux rôles.</em></h2>
+      <p>La matière végétale a trouvé sa juste place dans les éléments qui exigent de la rigidité&nbsp;: la bague et le capuchon.</p>
+      <div class="mx-paire">
+        <article>
+          <figure><img src="assets/bague-vegetale.webp" alt="La bague du BIBEON, posée sur la tranche" width="1200" height="1600" loading="lazy"></figure>
+          <h3>La bague</h3>
+          <p>Elle maintient la tétine et la visse sur le flacon. Son balcon reçoit le capuchon&nbsp;: bague, tétine et capuchon ne forment plus qu’une seule pièce à manipuler.</p>
+        </article>
+        <article>
+          <figure><img src="assets/capuchon-vegetal.webp" alt="Le capuchon du BIBEON, posé sur la tranche" width="1200" height="1600" loading="lazy"></figure>
+          <h3>Le capuchon</h3>
+          <p>Son toit plat obture l’orifice de la tétine. Retourné, il repose d’aplomb sur n’importe quel support et met la bague et la tétine à l’abri des souillures.</p>
+        </article>
+      </div>
+      <p class="mx-signe">Deux pièces 100&nbsp;% d’origine végétale · Sans OGM · Sans gluten</p>
+    </section>
+
+    <section class="mx-bloc">
       <div class="mx-duo mx-duo--inverse">
         <div class="mx-duo__mot">
           <p class="kicker">Au plus près de la bouche</p>
@@ -421,9 +456,11 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
           <p>La bague maintient la tétine. Le capuchon la protège et son toit plat vient obturer son orifice.</p>
           <p>Ces deux pièces entourent la tétine pendant le transport et l’utilisation. Leur matière n’est donc pas accessoire&nbsp;: elle se trouve au plus près de ce que bébé portera à sa bouche.</p>
           <p>Rigides, précises et solidaires, elles forment avec la tétine un seul bloc à manipuler.</p>
+          <p class="mx-chute">À eux trois, ils se réduisent à un bloc protecteur de la tétine.</p>
         </div>
         <figure class="mx-duo__vue">
-          <img src="assets/tetine-bien-assise-vue-de-dessous.webp" alt="La tétine BIBEON vue de dessous, marquée SILICONE et MADE IN FRANCE" width="1302" height="1302" loading="lazy">
+          <img src="assets/bloc-solidaire-transparence.webp" alt="Vue en transparence du bloc BIBEON : le capuchon recouvre la tétine portée par la bague" width="1024" height="1024" loading="lazy">
+          <figcaption>Vue en transparence. Le capuchon est en réalité blanc opaque.</figcaption>
         </figure>
       </div>
     </section>
@@ -432,9 +469,11 @@ footer.bb-pied .bb-signature{width:auto;max-width:none}
       <div class="mx-pli__mot">
         <p class="kicker">Le flacon</p>
         <h2 class="mx-h2-pli">Le flacon devait<br><em>rester libre de plier.</em></h2>
-        <p>La matière végétale retenue pour les pièces rigides ne permettait pas d’obtenir la souplesse nécessaire au flacon sans modifier sa formulation.</p>
-        <p>BIBEON conserve donc un flacon en polypropylène alimentaire, naturellement exempt de bisphénols. Sa géométrie forme les soufflets qui lui permettent de s’élever, de s’abaisser et de se couder.</p>
+        <p>L’intention de départ était simple&nbsp;: concevoir toutes les pièces de BIBEON dans une matière issue du végétal. Mais le flacon devait se plier, se déployer et se couder. <strong>Le plastique végétal ne se plie pas.</strong> Il aurait fallu lui ajouter un assouplissant.</p>
+        <p>BIBEON conserve donc un flacon en polypropylène alimentaire, naturellement exempt de bisphénols. Sa géométrie forme les soufflets qui lui permettent de s’élever, de s’abaisser, de se couder — et de se bloquer.</p>
+        <p>Chaque soufflet se bloque dans deux positions&nbsp;: <strong>semi-déplié</strong>, puis <strong>replié</strong>. Il faut donc deux gestes pour le faire descendre, jamais un seul&nbsp;: un choc ou une main qui serre ne suffit pas à l’abaisser, ni à projeter du lait dans la bouche de l’enfant. C’est cette position semi-dépliée qui permet aussi au flacon de se couder et de garder son angle.</p>
         <p>La matière sert le mouvement. Le mouvement évite d’ajouter des pièces.</p>
+        <p class="mx-chute">Nous avons choisi de ne pas ajouter une matière pour pouvoir en revendiquer une autre.</p>
       </div>
       <figure class="mx-pli__vue">
         <img src="assets/bibeon-etats-de-pliage.webp" alt="Le flacon BIBEON dans ses différents états de pliage, du plus déplié au plus replié" width="2000" height="1006" loading="lazy">
