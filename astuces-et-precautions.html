@@ -319,6 +319,11 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .bb-logo-img img.bb-logo-clair{display:none}
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-sombre{display:none}
 .bb-entete.bb-clair .bb-logo-img img.bb-logo-clair{display:block}
+
+/* --- Logotype dans le pied de page --- */
+.bb-pied .bb-pied-logo{display:block;line-height:0;letter-spacing:0;margin-bottom:18px}
+.bb-pied .bb-pied-logo img{display:block;width:auto;height:30px}
+@media(max-width:700px){.bb-pied .bb-pied-logo img{height:26px}}
 </style>
 </head>
 <body>
@@ -436,7 +441,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 <footer class="bb-pied">
 <div class="bb-pied-grille">
  <div>
-  <a class="bb-logo" href="/">BIBEON<sup>®</sup></a>
+  <a class="bb-logo bb-pied-logo" href="/" aria-label="BIBEON, accueil"><img src="assets/logo-bibeon-blanc.svg" alt="BIBEON" width="338" height="108"></a>
   <p class="bb-signature">Le bibe<i>r</i>on, l’R en moins.</p>
   <a class="bb-pied-achat" href="boutique.html">Boutique</a>
  </div>
@@ -447,6 +452,7 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
   <a href="voyage.html">Voyager avec bébé</a>
   <a href="notre-parti-pris.html">Notre parti pris</a></div>
  <div><h3>Les preuves</h3>
+  <a href="matieres-et-essais.html">Les matières</a>
   <a href="tests-migration-lne-bibeon.html">Les essais du LNE</a>
   <a href="migration.html">Migration et contact alimentaire</a>
   <a href="silicone-medical-alimentaire-biberon.html">Silicone alimentaire ou médical</a>
