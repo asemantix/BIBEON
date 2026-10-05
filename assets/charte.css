@@ -1,0 +1,210 @@
+/* ==========================================================================
+   BIBEON — CHARTE GRAPHIQUE
+   Source unique de vérité. Arbitrage du 5 octobre 2026.
+   Fichier : assets/charte.css
+   Se branche en tête de chaque page :
+       <link rel="stylesheet" href="assets/charte.css">
+   ... puis on supprime le bloc :root local de la page.
+   Aucune règle de mise en page ici : des couleurs et des polices, rien d'autre.
+   ========================================================================== */
+
+:root{
+
+/* ──────────────────────────────────────────────────────────────────────────
+   1 — LES QUATRE RÉFÉRENCES MAÎTRESSES
+   Ce sont celles du fichier logo. Elles s'emploient SANS MODIFICATION
+   pour le logo, le monogramme, le packaging et les imprimés.
+   ────────────────────────────────────────────────────────────────────────── */
+
+  --bibeon-navy   : #002445;   /* bleu BIBEON */
+  --bibeon-sauge  : #A9B79C;   /* sauge BIBEON — doux, grisé, contemporain */
+  --bibeon-terre  : #B66E62;   /* terre cuite d'accent */
+  --bibeon-ivoire : #FBF9F6;   /* ivoire de référence (écran) */
+
+/* ABANDONNÉ le 5 octobre 2026 : le sauge #AAAF87, plus jaune et plus terne.
+   Il ne doit plus apparaître nulle part, afin qu'il n'existe pas deux sauges
+   concurrents. Le sauge officiel est #A9B79C, y compris pour le point
+   fonctionnel des cartes.
+
+   ABANDONNÉS dans le même mouvement, pour la même raison : la terre cuite
+   #A46661 (charte du 29 septembre) et #B66F63 (carte 01). La terre cuite
+   officielle est #B66E62.
+
+   IMPRESSION : l'ivoire n'est PAS un aplat. C'est la couleur naturelle du
+   papier. On n'imprime pas de fond ivoire — on choisit le papier.
+   Les équivalents CMJN se valident sur une épreuve tirée sur le papier réel,
+   jamais sur un couché. Le ® s'imprime en aplat plein, jamais en trame. */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   2 — LES DÉCLINAISONS D'INTERFACE
+   Le navy maître est une couleur de marque, pas une couleur de texte.
+   À l'écran, le site emploie un navy légèrement plus froid et plus dense,
+   et des sauges éclaircis ou assombris selon leur fonction.
+   Ces nuances sont des ADAPTATIONS : elles ne modifient jamais le logo.
+   ────────────────────────────────────────────────────────────────────────── */
+
+  /* bleus */
+  --navy          : #0E1C35;   /* fonds navy et texte courant — 16,2:1 sur ivoire */
+  --navy-encre    : #172027;   /* encre des pages premium, plus neutre */
+
+  /* sauges */
+  --sauge         : var(--bibeon-sauge);          /* #A9B79C — aplats, points, pastilles */
+  --sauge-titre   : #647466;   /* sur-titres et liens sauge — 4,7:1 sur ivoire */
+  --sauge-filet   : #AEBCAF;   /* filets, bordures, séparateurs */
+  --sauge-clair   : #C5D1C7;   /* sauge sur fond navy — 10:1 */
+  --sauge-tendre  : #DDE3D4;   /* grands aplats de page — le sauge le plus doux,
+                                  retenu le 5 octobre 2026 pour l'univers bébé */
+  --sauge-voile   : #EEF1EA;   /* fond de section très pâle */
+  --sauge-fonce   : #55614B;   /* sauge d'appui */
+
+  /* terres cuites */
+  --terre         : var(--bibeon-terre);          /* #B66E62 — aplats, filets, gros titres */
+  --terre-texte   : #96503F;   /* terre cuite de TEXTE — 5,7:1 sur ivoire */
+  --terre-clair   : #E0B4AE;   /* terre cuite sur fond navy — 9,2:1 */
+  --terre-pale    : #F0CFC8;   /* fond d'alerte douce */
+
+  /* neutres */
+  --ivoire        : var(--bibeon-ivoire);         /* #FBF9F6 — fond général */
+  --papier        : #FCFAF6;   /* fond de carte, à peine plus chaud */
+  --blanc         : #FFFFFF;
+  --filet         : #D8CEC1;   /* filet neutre */
+  --filet-voile   : rgba(14,28,53,.12);
+  --gris          : #6E6A64;   /* légendes et mentions — 5,1:1 sur ivoire */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   3 — LES COULEURS DE COLORIS PRODUIT
+   Elles désignent un objet réel : elles ne sont pas décoratives et ne
+   doivent jamais servir de couleur d'interface.
+   ────────────────────────────────────────────────────────────────────────── */
+
+  --coloris-ivoire   : #F7F3EC;
+  --coloris-lin      : #AAC7E6;
+  --coloris-menthe   : #B9DFE4;
+  --coloris-rose     : #EFB4C7;
+  --coloris-abricot  : #EFB88D;
+  --coloris-lilas    : #C9B9DC;
+  --coloris-sauge    : #AEBF96;
+  --coloris-ciel     : #B9D8D7;
+  --coloris-bleu     : #C6DCDB;
+  --coloris-sable    : #DED0C0;
+
+/* ──────────────────────────────────────────────────────────────────────────
+   4 — CONTRASTES MESURÉS
+   Pour ne plus avoir à deviner. Mesures WCAG sur ivoire #FBF9F6
+   et sur navy #0E1C35.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/*  SUR IVOIRE                       SUR NAVY
+    #0E1C35  16,2:1  AAA             #FBF9F6  16,2:1  AAA
+    #002445  14,9:1  AAA             #C5D1C7   9,9:1  AAA
+    #96503F   5,7:1  AA              #E0B4AE   9,2:1  AAA
+    #6E6A64   5,1:1  AA              #A9B79C   8,0:1  AAA
+    #647466   4,7:1  AA              #B66E62   4,0:1  AA grand titre
+    #B66E62   3,7:1  AA grand titre
+    #A9B79C   2,0:1  JAMAIS de texte — aplat seulement
+
+    Règle : le sauge #A9B79C ne porte pas de texte. Pour écrire en sauge,
+    c'est --sauge-titre. Pour écrire en terre cuite, c'est --terre-texte. */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   5 — TYPOGRAPHIE
+   ────────────────────────────────────────────────────────────────────────── */
+
+  --titre : "Playfair Display", Georgia, serif;   /* 500 · 700 · 500 italique */
+  --texte : "DM Sans", system-ui, sans-serif;     /* 400 · 500 · 600 · 700 */
+
+/* Le mot BIBEON hors logo s'écrit en Playfair Display, capitales,
+   interlettrage ouvert. Le logo dessiné ne se recompose jamais en police. */
+
+/* ──────────────────────────────────────────────────────────────────────────
+   6 — RAYONS ET OMBRES
+   ────────────────────────────────────────────────────────────────────────── */
+
+  --rayon    : 26px;
+  --ombre-s  : 0 6px 18px rgba(14,28,53,.05);
+  --ombre-m  : 0 18px 44px rgba(14,28,53,.09);
+
+/* ──────────────────────────────────────────────────────────────────────────
+   7 — ÉQUIVALENCES
+   Les noms employés aujourd'hui dans les pages, redirigés vers la charte.
+   Ils permettent de brancher ce fichier SANS toucher au reste du CSS
+   d'une page. À retirer le jour où toutes les pages parleront la charte.
+   ────────────────────────────────────────────────────────────────────────── */
+
+  --ink              : var(--navy);
+  --ivory            : var(--ivoire);
+  --paper            : var(--papier);
+  --cream            : var(--papier);
+  --white            : var(--blanc);
+  --sage-soft        : var(--sauge);
+  --sage-light       : var(--sauge-tendre);
+  --sage-dark        : var(--sauge-fonce);
+  --sage-tint        : var(--sauge-voile);
+  --line             : var(--filet);
+  --muted            : var(--gris);
+  --text             : var(--gris);
+  --terracotta       : var(--terre);
+  --terracotta-dark  : var(--terre-texte);
+  --radius           : var(--rayon);
+  --shadow-s         : var(--ombre-s);
+  --shadow-m         : var(--ombre-m);
+
+  --beige            : #F9F4EF;
+  --beige-2          : #F6F1EA;
+  --cream-deep       : #F6F1EA;
+  --card             : var(--blanc);
+
+  --mint             : var(--coloris-menthe);
+  --rose             : var(--coloris-rose);
+  --apricot          : var(--coloris-abricot);
+  --lilac            : var(--coloris-lilas);
+  --sky              : var(--coloris-ciel);
+  --blue             : var(--coloris-bleu);
+  --sand             : var(--coloris-sable);
+
+  /* en-têtes et pieds premium — déjà homogènes sur 17 pages */
+  --bb-navy          : var(--navy);
+  --bb-ivoire        : var(--ivoire);
+  --bb-sauge         : var(--sauge-titre);
+  --bb-sauge-clair   : var(--sauge-clair);
+  --bb-sauge-filet   : var(--sauge-filet);
+  --bb-sauge-titre   : var(--sauge-titre);
+  --bb-terre         : var(--terre);
+  --bb-terre-clair   : var(--terre-clair);
+  --bb-terre-pale    : var(--terre-pale);
+  --bb-filet         : var(--filet-voile);
+}
+
+/* ──────────────────────────────────────────────────────────────────────────
+   8 — LES DEUX NOMS QUI NE SE REDIRIGENT PAS : --sage ET --linen
+   Ces deux noms désignent des choses différentes selon les pages. Ils ne
+   peuvent donc PAS être redirigés d'un seul geste, et ne sont volontairement
+   pas définis ci-dessus. Chaque page déclare le sien, une ligne :
+
+   • 22 pages classiques    --sage:#6E7E61  porte du TEXTE (29 usages/page)
+                            → remplacer par  --sage:var(--sauge-titre);
+                            #A9B79C donnerait 2,0:1 — illisible.
+
+   • 7 pages produit        --sage:#AEBF96  texte ET aplats
+                            → remplacer par  --sage:var(--sauge-titre);
+                              et les aplats par  var(--sauge);
+
+   • 6 pages premium        --sage:#AEBCAF  filets et soulignements seulement
+                            → remplacer par  --sage:var(--sauge-filet);
+                            (valeur identique : aucun changement visible)
+
+   Même situation pour --linen, pour la même raison :
+
+   • 7 pages produit        --linen:#9EAFD1  la PASTILLE du coloris Lin
+                            → remplacer par  --linen:var(--coloris-lin);
+                              (#AAC7E6, le bleu arrêté pour la pastille)
+
+   • 6 pages premium        --linen:#D8CEC1  le FOND beige de la section
+                            « paradoxe » — ce n'est pas le coloris Lin
+                            → remplacer par  --linen:var(--filet);
+                              (valeur identique : aucun changement visible)
+
+   Le sauge officiel #A9B79C reste disponible partout sous --sauge
+   (et son ancien nom --sage-soft). C'est lui, et lui seul, qui sert
+   au point fonctionnel des cartes.
+   ────────────────────────────────────────────────────────────────────────── */
