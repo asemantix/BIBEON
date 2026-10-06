@@ -147,8 +147,9 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/charte.css">
 <style>
-:root{--paper:#f7f2ed;--ink:#0E1C35;--rose:#C98780;--mint:#afd9d4}
+:root{--rose:#C98780;--mint:#afd9d4}
 *{box-sizing:border-box}
 html,body{margin:0;background:#0E1C35;color:var(--paper);font-family:"DM Sans",sans-serif}
 .hero{position:relative;min-height:100svh;overflow:hidden;background:#0E1C35;isolation:isolate}
@@ -274,37 +275,37 @@ h1{font-size:clamp(3.9rem,18vw,6.2rem);line-height:.79}
 .volume__visual,.outside__film,.parents__visual,.house__visual{min-height:390px}
 .palette__visual{height:380px}
 }
-:root{--bb-navy:#0E1C35;--bb-ivoire:#FBF9F6;--bb-sauge:#8F9875;--bb-filet:rgba(14,28,53,.12)}
-.bb-bandeau{text-align:center;padding:9px 16px;font:600 .58rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+:root{}
+.bb-bandeau{text-align:center;padding:9px 16px;font:600 .58rem/1 "DM Sans",sans-serif;letter-spacing:.22em;text-transform:uppercase}
 .bb-entete{position:fixed;top:0;left:0;right:0;z-index:90;height:74px;padding:0 clamp(16px,4vw,42px);display:grid;grid-template-columns:1fr auto 1fr;align-items:center;background:transparent;border-bottom:1px solid transparent;transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
 .bb-entete.bb-fige,.bb-entete.bb-opaque{background:rgba(251,249,246,.88);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom-color:var(--bb-filet)}
 .bb-entete.bb-clair,.bb-entete.bb-clair .bb-logo,.bb-entete.bb-clair .bb-btn{color:#fff}
 .bb-entete,.bb-entete a,.bb-entete button{color:var(--bb-navy)}
-.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
+.bb-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:0;padding:8px 0;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase;cursor:pointer}
 .bb-trait{display:block;width:20px;height:9px;position:relative}
 .bb-trait:before,.bb-trait:after{content:"";position:absolute;left:0;right:0;height:1px;background:currentColor;transition:transform .3s ease}
 .bb-trait:before{top:0}
 .bb-trait:after{bottom:0}
-.bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.26em}
+.bb-logo{justify-self:center;text-decoration:none;font:600 1.15rem/1 "DM Sans",sans-serif;letter-spacing:.26em}
 .bb-logo sup{font-size:.38em;vertical-align:.9em;opacity:.7}
 /* --- Logotype véritable dans l'entête (fonds inchangés) --- */
 .bb-logo-img{display:block;line-height:0;letter-spacing:0}
 .bb-logo-img img{display:block;width:auto;height:clamp(20px,2.2vw,28px)}
 @media(max-width:700px){.bb-logo-img img{height:18px}}
 .bb-actions{justify-self:end;display:flex;align-items:center;gap:clamp(12px,2vw,26px)}
-.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
+.bb-boutique{text-decoration:none;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid currentColor;padding-bottom:4px}
 .bb-menu-tete .bb-logo{justify-self:auto;color:#fff}
 body.bb-bloque{overflow:hidden}
 .bb-pied{background:var(--bb-navy);color:rgba(255,255,255,.74);padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) 26px}
 .bb-pied-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:clamp(24px,3vw,46px);max-width:1280px;margin:0 auto}
-.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
-.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;font:400 .84rem/1.5 "DM Sans",Montserrat,sans-serif}
+.bb-pied h3{font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 16px}
+.bb-pied a,.bb-pied span{display:block;color:rgba(255,255,255,.74);text-decoration:none;font:400 .84rem/1.5 "DM Sans",sans-serif}
 .bb-pied a:hover{color:#fff}
 .bb-pied .bb-logo{display:inline-block;color:#fff;margin-bottom:14px}
 .bb-signature{font:italic 1rem/1.4 "Playfair Display",Georgia,serif;color:#fff;margin:0 0 18px}
 .bb-signature i{font-style:normal;text-decoration:line-through;text-decoration-color:var(--bb-sauge)}
 .bb-pied a.bb-pied-achat:hover{transform:translateY(-1px)}
-.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between;font:400 .74rem/1.5 "DM Sans",Montserrat,sans-serif;color:rgba(255,255,255,.5)}
+.bb-copy{max-width:1280px;margin:clamp(34px,5vh,56px) auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;flex-wrap:wrap;gap:8px 26px;justify-content:space-between;font:400 .74rem/1.5 "DM Sans",sans-serif;color:rgba(255,255,255,.5)}
 @media(max-width:900px){
 .bb-pied-grille{grid-template-columns:1fr 1fr}
 }
@@ -540,7 +541,7 @@ body.bb-bloque{overflow:hidden}
 .teat-choice .home-link,.bb-tetine-texte .home-link{color:#0E1C35;border-bottom:1px solid rgba(14,28,53,.4)}
 .teat-choice .home-link:hover{border-bottom-color:#0E1C35}
 .teat-choice .home-link span{color:#0E1C35}
-:root{--bb-terre:#A46661;--bb-terre-clair:#E0B4AE;--bb-terre-pale:#F0CFC8;--bb-sauge-titre:#647466;--bb-sauge-clair:#C5D1C7;--bb-sauge-filet:#AEBCAF}
+:root{}
 .timeline-label span{text-decoration-color:var(--bb-terre-pale)}
 .rmoins--inside .home-kicker{color:var(--bb-terre-clair)}
 .rmoins--inside .home-kicker:before{background:var(--bb-terre-clair)}
@@ -556,7 +557,7 @@ body.bb-bloque{overflow:hidden}
 .proofs i{color:var(--bb-sauge-filet)}
 .home-cta{background:var(--bb-terre);color:#fff!important}
 .home-cta:hover{background:#8E5450}
-.bb-actions .bb-panier-txt{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+.bb-actions .bb-panier-txt{display:inline-flex;align-items:center;gap:10px;text-decoration:none;color:inherit;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase}
 .bb-actions .cart-count{display:inline-grid;place-items:center;width:21px;height:21px;border-radius:50%;border:1px solid currentColor;font:600 .6rem/1 "DM Sans",sans-serif;letter-spacing:0}
 @media(max-width:640px){
 .bb-actions .bb-panier-txt{font-size:.58rem;gap:8px}
@@ -575,13 +576,13 @@ body.bb-bloque{overflow:hidden}
 .bb-panneau{width:100%;top:93px;padding:34px 26px}
 .bb-panneau a,.bb-panneau span{min-height:52px;font-size:20px}
 }
-.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;font:600 .62rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+.bb-entete .bb-btn span:not(.bb-trait){display:inline!important;font:600 .62rem/1 "DM Sans",sans-serif;letter-spacing:.2em;text-transform:uppercase}
 .bb-entete .bb-btn{gap:12px}
 @media(max-width:640px){
 .bb-entete .bb-btn span:not(.bb-trait){font-size:.56rem;letter-spacing:.14em}
 }
-footer.bb-pied h3{font:600 .6rem/1 "DM Sans",Montserrat,sans-serif!important;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 16px!important;line-height:1.4!important}
-.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;font:600 .66rem/1 "DM Sans",Montserrat,sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-top:16px;transition:background .25s ease}
+footer.bb-pied h3{font:600 .6rem/1 "DM Sans",sans-serif!important;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.55);margin:0 0 16px!important;line-height:1.4!important}
+.bb-pied a.bb-pied-achat{display:inline-flex!important;align-items:center;width:auto!important;padding:14px 30px!important;border-radius:999px;background:#A46661!important;color:#fff!important;font:600 .66rem/1 "DM Sans",sans-serif;letter-spacing:.18em;text-transform:uppercase;margin-top:16px;transition:background .25s ease}
 .bb-pied a.bb-pied-achat:hover{background:#96503F!important;color:#fff!important}
 .home h2 em,.bb-note em,.bb-tetine-texte h3 em,.teat-choice h3 em{color:#96503F}
 h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4AE}
@@ -670,6 +671,16 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 .bb-pied .bb-pied-logo{display:block;justify-self:start;line-height:0;letter-spacing:0;margin-bottom:18px}
 .bb-pied .bb-pied-logo img{display:block;width:auto;height:30px}
 @media(max-width:700px){.bb-pied .bb-pied-logo img{height:26px}}
+
+/* — nous joindre, dans le pied — */
+.bb-pied .bb-joindre{margin:26px 0 0}
+.bb-pied .bb-joindre a{display:block;color:#fff;font:500 .92rem/1.7 "DM Sans",sans-serif;padding:0!important}
+.bb-pied .bb-joindre a:hover{text-decoration:underline;text-underline-offset:3px}
+.bb-pied .bb-joindre span{display:block;margin-top:5px;color:rgba(255,255,255,.55);font-size:.78rem!important;padding:0!important}
+/* — corrections du pied — */
+.bb-pied{border-top:0}
+.bb-pied .bb-pied-logo{display:block;justify-self:start;line-height:0;letter-spacing:0;margin-bottom:18px}
+.bb-pied .bb-copy span{display:inline!important;padding:0!important}
 </style>
 </head>
 <body>
@@ -742,7 +753,7 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
 
     <section class="rmoins rmoins--inside">
       <figure><img src="assets/biberon-main.webp" alt="Un BIBEON abaissé au niveau du lait, tenu d’une main" loading="lazy"></figure>
-      <div><p class="home-kicker">L’R en moins · Dedans</p><h2>Il s’abaisse<br><em>au niveau du lait.</em></h2><p>Moins d’air dans le biberon, moins d’air à avaler.</p><a class="home-link" href="mode-demploi.html">Voir le geste <span>→</span></a></div>
+      <div><p class="home-kicker">L’R en moins · Dedans</p><h2>Il s’abaisse<br><em>au niveau du lait.</em></h2><p>Moins d’air dans le biberon, moins d’air à avaler.</p><a class="home-link" href="reduire-air-avale-biberon.html">Voir le geste <span>→</span></a></div>
     </section>
 
     <section class="rmoins rmoins--bag">
@@ -832,7 +843,7 @@ h1 em,.rmoins--inside h2 em,.rmoins--around h2 em,.house__copy h2 em{color:#E0B4
  <div>
   <a class="bb-logo bb-pied-logo" href="/" aria-label="BIBEON, accueil"><img src="assets/logo-bibeon-blanc.svg" alt="BIBEON" width="338" height="108"></a>
   <p class="bb-signature">Le bibe<i>r</i>on, l’R en moins.</p>
-  <a class="bb-pied-achat" href="boutique.html">Boutique</a>
+  <a class="bb-pied-achat" href="boutique.html">Boutique</a><p class="bb-joindre"><a href="mailto:contact@bibeon.fr">contact@bibeon.fr</a><a href="tel:+33611768407">06 11 76 84 07</a><span>Du lundi au vendredi, 9 h – 18 h</span></p>
  </div>
  <div><h3>BIBEON en détail</h3>
   <a href="biberon-pratique.html">Le biberon pratique</a>
