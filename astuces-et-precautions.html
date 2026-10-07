@@ -342,6 +342,23 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
 .ast-vers a:hover{border-bottom-color:var(--bb-sauge-titre)}
 .ast-vers span{margin-left:6px}
 </style>
+
+<style>
+/* 7 octobre 2026 — la vidéo « retourné puis rouvert : sec » passe dans la colonne de droite */
+#zero-fuite{align-items:start}
+.ast-media--solo{place-items:start center}
+.ast-media--solo figure{margin:0;width:100%}
+.ast-media--solo video{display:block;width:auto;max-width:100%;
+  height:clamp(300px,54vh,560px)!important;max-height:none!important;margin:0 auto}
+.ast-media--solo figcaption{margin-top:10px;font:600 .58rem/1.3 "DM Sans",sans-serif;
+  letter-spacing:.14em;text-transform:uppercase;color:#4f4c48;text-align:center}
+.ast-sec{margin:24px 0 0;max-width:520px;background:#EEF1EA;padding:14px}
+.ast-sec{display:grid;place-items:center}
+.ast-sec video{display:block;width:auto;max-width:100%;height:clamp(260px,42vh,440px);margin:0 auto}
+.ast-sec figcaption{margin-top:10px;font:600 .6rem/1.3 "DM Sans",sans-serif;
+  letter-spacing:.16em;text-transform:uppercase;color:#4f4c48;text-align:center}
+@media(max-width:900px){.ast-sec{padding:10px}}
+</style>
 </head>
 <body>
 <div class="bb-bandeau">Fabriqué en France</div>
@@ -400,9 +417,9 @@ h1 em,.rmoins-intro h2 em,.rmoins--inside h2 em,.rmoins--around h2 em,
       <h2>La tétine bien assise.<br><em>Vérifiée d’un coup d’œil.</em></h2>
       <p><strong>Regarder.</strong> Retournez le bloc et regardez par en dessous : bien descendue dans sa base, la tétine laisse un orifice rond et parfaitement dégagé. Mal enfoncée, elle se couche en travers de la bague : le capuchon ne la comprime plus, son orifice reste ouvert.</p>
       <p><strong>Corriger.</strong> Posez le capuchon bien droit sur la tétine et pressez verticalement, jusqu’au bout : c’est lui qui la fait descendre dans sa base. Si elle résiste, aidez-la avec des doigts propres.</p>
-      <div class="ast-paire"><figure><img src="assets/tetine-bien-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine bien descendue : l’orifice central est rond et dégagé"><figcaption>Bien assise</figcaption></figure><figure><img src="assets/tetine-mal-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine mal enfoncée : couchée en travers, elle n’est plus comprimée par le capuchon"><figcaption>À reprendre</figcaption></figure></div>
+      <div class="ast-paire"><figure><img src="assets/tetine-bien-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine bien descendue : l’orifice central est rond et dégagé"><figcaption>Bien assise</figcaption></figure><figure><img src="assets/tetine-mal-assise-vue-de-dessous.webp" width="1302" height="1302" loading="lazy" alt="Vue de dessous d’une tétine mal enfoncée : couchée en travers, elle n’est plus comprimée par le capuchon"><figcaption>À reprendre</figcaption></figure></div><figure class="ast-sec"><video muted loop playsinline preload="none" poster="assets/ferme-retourne-rouvert-sec.jpg" data-geste aria-label="Le biberon fermé, retourné puis rouvert : le capuchon est sec"><source src="assets/ferme-retourne-rouvert-sec.mp4" type="video/mp4"></video><figcaption>02 · Retourné puis rouvert : sec</figcaption></figure>
     </div>
-    <div class="ast-media ast-media--duo"><figure><video muted loop playsinline preload="none" poster="assets/capuchon-enfonce-la-tetine.jpg" data-geste aria-label="Le capuchon posé bien droit fait descendre la tétine dans sa base"><source src="assets/capuchon-enfonce-la-tetine.mp4" type="video/mp4"></video><figcaption>01 · Le capuchon la fait descendre</figcaption></figure><figure><video muted loop playsinline preload="none" poster="assets/ferme-retourne-rouvert-sec.jpg" data-geste aria-label="Le biberon fermé, retourné puis rouvert : le capuchon est sec"><source src="assets/ferme-retourne-rouvert-sec.mp4" type="video/mp4"></video><figcaption>02 · Retourné puis rouvert : sec</figcaption></figure></div>
+    <div class="ast-media ast-media--solo"><figure><video muted loop playsinline preload="none" poster="assets/capuchon-enfonce-la-tetine.jpg" data-geste aria-label="Le capuchon posé bien droit fait descendre la tétine dans sa base"><source src="assets/capuchon-enfonce-la-tetine.mp4" type="video/mp4"></video><figcaption>01 · Le capuchon la fait descendre</figcaption></figure></div>
   
     <div class="ast-defaut"><p class="ast-defaut__tete">Ce qui arrive quand le capuchon n’est pas posé droit</p><ol class="ast-defaut__suite"><li><img src="assets/tetine-mal-fermee-01-position-de-depart.webp" width="300" height="574" loading="lazy" alt="La tétine dressée, plus haute que le capuchon posé à côté"><p><b>01</b> Position de départ<span>La tétine dépasse la hauteur du capuchon.</span></p></li><li><img src="assets/tetine-mal-fermee-02-le-capuchon-descend.webp" width="300" height="574" loading="lazy" alt="Le capuchon qui descend de biais sur la tétine"><p><b>02</b> Le capuchon descend<span>Il n’est pas maintenu dans l’axe de la tétine.</span></p></li><li><img src="assets/tetine-mal-fermee-03-la-tetine-se-plie.webp" width="300" height="574" loading="lazy" alt="La tétine qui se couche progressivement sous le capuchon"><p><b>03</b> La tétine se plie<span>Elle bascule peu à peu sur le côté.</span></p></li><li><img src="assets/tetine-mal-fermee-04-fermeture-incorrecte.webp" width="300" height="574" loading="lazy" alt="Le capuchon fermé sur une tétine couchée sur le côté, marqué d’une croix rouge"><p><b>04</b> Fermeture incorrecte<span>La tétine est couchée : son orifice reste libre, l’air entre et le lait peut fuir.</span></p></li></ol><p class="ast-defaut__pied">C’est cette tétine couchée que l’on retrouve, vue de dessous, sur la photo « à reprendre ».</p></div>
   </section>
