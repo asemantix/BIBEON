@@ -998,7 +998,9 @@ if (hero && 'IntersectionObserver' in window) {
      var t=e.target;
      if(e.isIntersecting){
        if(mobile){ v.forEach(function(x){ if(x!==t){x.pause();} }); }
-       if(!t.getAttribute('src')&&!t.dataset.pret){ t.dataset.pret='1'; t.load(); }
+             if(!t.getAttribute('src')&&!t.dataset.pret){ t.dataset.pret='1'; t.load(); }
+       var vite=parseFloat(t.dataset.vite||0);
+       if(vite>0){ t.defaultPlaybackRate=vite; t.playbackRate=vite; }
        t.play().catch(function(){});
      } else { t.pause(); }
    });
